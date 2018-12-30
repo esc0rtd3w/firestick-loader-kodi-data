@@ -2,6 +2,7 @@
     <setting id="bandwidth" value="2500000" />
     <setting id="blacklist_confirm_toggle" value="true" />
     <setting id="cache_expire_time" value="3" />
+    <setting id="framerate_limit" value="false" />
     <setting id="irc_enable" value="false" />
     <setting id="items_per_page" value="25" />
     <setting id="live_notify" value="false" />
