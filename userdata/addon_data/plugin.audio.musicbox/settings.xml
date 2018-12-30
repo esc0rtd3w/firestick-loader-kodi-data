@@ -1,0 +1,24 @@
+<settings>
+    <setting id="8tracks_email" value="" />
+    <setting id="8tracks_password" value="" />
+    <setting id="8tracks_token" value="" />
+    <setting id="digster_country" value="0" />
+    <setting id="display_artistinfo_cmenu" value="true" />
+    <setting id="display_songinfo_cmenu" value="false" />
+    <setting id="downloads_folder" value="" />
+    <setting id="get_artist_fanart" value="false" />
+    <setting id="hide_8tracks" value="false" />
+    <setting id="hide_soundtrack" value="false" />
+    <setting id="items_per_page" value="20" />
+    <setting id="lastfm_email" value="" />
+    <setting id="lastfm_password" value="" />
+    <setting id="lastfm_token" value="" />
+    <setting id="library_folder" value="" />
+    <setting id="playing_type" value="1" />
+    <setting id="save_library_tbn" value="true" />
+    <setting id="track_resolver_method" value="0" />
+    <setting id="vk_auth_email" value="" />
+    <setting id="vk_auth_password" value="" />
+    <setting id="vk_email" value="" />
+    <setting id="vk_password" value="" />
+</settings>

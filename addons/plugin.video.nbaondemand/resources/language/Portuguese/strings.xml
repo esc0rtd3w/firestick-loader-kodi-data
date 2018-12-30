@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">Geral</string>
+	<string id="30001">Qualidade HD quando disponível</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302">Activo por defeito</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">Stream não encontrada</string>
+	<!-- Misc -->
+	<string id="30361">Próxima página</string>
+	<string id="30362">Procurar</string>
+	<!-- ContextMenu -->
+	<string id="30401">Reproduzir</string>
+	<string id="30402">Reprodução aleatória</string>
+	<string id="30403">Colocar item em fila</string>
+	<string id="30404">A reproduzir neste momento...</string>
+	<string id="30405">Definições do addon</string>
+	<string id="30406">Definir tipo de vista Vídeos</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Últimos</string>
+	<string id="30502">Jogos</string>
+	<string id="30503">Resumos</string>
+	<string id="30504">Equipas</string>
+</strings>

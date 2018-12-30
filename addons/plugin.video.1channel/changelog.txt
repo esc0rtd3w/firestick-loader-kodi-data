@@ -1,0 +1,362 @@
+[B]Version 4.0.06[/B]
+- Error fix
+
+[B]Version 4.0.05[/B]
+- Default url change
+
+[B]Version 4.0.04[/B]
+- New Repo
+
+[B]Version 4.0.03[/B]
+- Cosmetic Fix
+
+[B]Version 4.0.02[/B]
+- Cosmetic Fix
+
+[B]Version 4.0.01[/B]
+- Change Default Site
+
+[B]Version 4.0.00[/B]
+- Resurrection
+
+[B]Version 2.5.78[/B]
+- Add pop-up code back
+- Improve Group By
+- Cleanup Code
+
+[B]Version 2.5.72[/B]
+Sigh. Cat & Mouse begins. :(
+
+[B]Version 2.5.71[/B]
+Strip scheme is present on base_url
+
+[B]Version 2.5.70[/B]
+- Fix URL decode for website change
+- Require login for all profile base lists
+- Krypton Changes
+    - Remove upgrade pop-up (freezes Krypton)
+    - Remove help menu pop-up (doesn't work on Krypton)
+    - Add support for https for the pw_scraper
+    - Fix My Schedule for Krypton
+    - Fix dialogs for Krypton
+    
+
+[B]Version 2.5.69[/B]
+- Add debrid indicators
+
+[B]Version 2.5.68[/B]
+- Minor Code Fixes
+
+[B]Version 2.5.67[/B]
+- Fix library playback
+- Fix translated string
+
+[B]Version 2.5.66[/B]
+- Migrate addon to use po files
+- Move all strings to strings.po in preparation for translation
+- Code cleanup
+
+[B]Version 2.5.65[/B]
+- Add notification on failed streams
+- Fix proxy captchas
+
+[B]Version 2.5.64[/B]
+- Various bug fixes when metadata is off
+
+[B]Version 2.5.63[/B]
+- Add Firestorm Theme
+
+[B]Version 2.5.62[/B]
+- Fix urls that start with //
+- Set playlists to default view
+- Fix playlist images
+
+[B]Version 2.5.61[/B]
+- Fix url update to work on all versions of sqlite
+
+[B]Version 2.5.59[/B]
+- Add new filter for promo hosts
+- Fix new PW urls to match old ones
+- Improve host header parsing
+
+[B]Version 2.5.58[/B]
+- Added PW Schedule to TV Section
+- Removed PREPARE_ZIP from metahandlers
+- Allow more chars into filename
+
+[B]Version 2.5.57[/B]
+- Fix User Agent string
+- Make season.contents a blob
+- Fix set default view
+
+[B]Version 2.5.56[/B]
+- Fix login for pw site changes
+- Fix utf-8 in pages with mysql
+
+[B]Version 2.5.55[/B]
+- Fix browse by genre defaulting to alphabetic
+- add dialog background to project
+- Add better algorithm to get DBID (thanks jhavens)
+- Fix script error on empty searches
+- Make empty searches cancel search
+- Update code for season page change
+- Add optional axel downloader import
+- Improve unicode conversions for PW site to avoid occasional errors
+
+[B]Version 2.5.2[/B]
+[B]Major[/B]
+Added PW playlists functionality:
+- ***Note: Personal playlists are only available when Website Integration is turned on***
+- Browse public & personal playlists
+- Play media from public & personal playlists
+- Add and Remove items from personal playlists
+- Specify a personal PW playlist as the source for subscriptions
+Rewrote subscription days function to be more usable and actually provide a meaningful function (i.e. the days of the week a subscription should be run on)
+Add a performance option to allow users to selectively paginate most result sets.
+Added ability to export and import the onechannel db to and from a csv file.
+Added function to schedule a db export to serve as a scheduled onechannel DB backup
+Rewrote the DB upgrade code such that db's on each addon version should be more consistent.
+Added function to browse and set PW's watched list
+Added function to browse and set PW's ToWatch list
+Added option for the ToWatch list to serve as a movie subscription list (i.e. added to the user's library)
+Added a context menu option on playable items to manually select a source when auto-play is turned on.
+Added [COLOR red]EXPERIMENTAL[/COLOR] support for Axel Download Accelerator.
+Moved themes to separate addon to reduce size of main addon (was 4.3MB; now 600K)
+
+[B]Minor[/B]
+Added ability to add most menu items to XBMC's favorites.
+More code unification/refactors to make the addon easier to maintain.
+Unified startup and scheduled task function to allow code sharing between all scheduled tasks
+Allow user to specify their first day of the week for schedule days presentation
+Dynamically pull genres from PW site (at most once every 24 hours)
+Replaced query parsing and massive if/elif statement with generic plugin url dispatcher
+Fixed PlayTrailer if trailer is using YouTube
+Add settings function to delete & recreate DB to make it easier for some people
+
+[B]Version 2.4.2[/B]
+[B]Minor[/B]
+Fixed problem with website favorites hanging XBMC when not logged in
+Worked around infinite redirect problem when logging into site 
+
+[B]Version 2.4.1[/B]
+[B]Minor[/B]
+Added retry on http requests to recover more gracefully from transient server errors (e.g. HTTP Error 503)
+
+[B]Version 2.4.0[/B]
+[B]Major[/B]
+Replaced resume code with code that works better and more consistently.
+Unified all website code in a single class for better maintainability
+Unified all DB code into a single class for better maintainability
+Added skin integration to allow skins to show 1CH movie categories on the home screen
+Replaced multiple advanced search keyboards with one search dialog with error checking
+Add function to add all local or web favorites to library with one click
+Add subscription update on start up option
+Reorganized settings dialog to be more logically grouped
+Add performance options including cached directory listings and unfiltered source dirs/dialogs
+Compressed the pngs in all the themes to reduce the size of the addon by over 50%.
+
+[B]Minor[/B]
+Fixed movies not playing from certain results sets (i.e. the ".." bug)
+Make source list only process once using auto-play
+Fixed occasional bug where video totalTime = 0
+Several fixes to uploading favorites to website
+Fixed "unplayable" error on update subscriptions
+Fixed genre and a-z icons not showing up
+Fixed website favorites to paginate to support lists larger than 40.
+
+[B]Version 2.3.0[/B]
+- Corrected bug in SQLite bookmarks table, improper index was being created
+- Fix duplicate bookmarks/resumes
+- Fix for native bookmarks/resumes
+- Fixed autoplay stopping when a link fails
+
+[B]Version 2.2.0[/B]
+- Code cleanup
+- Clean up source sorting
+- Fix trailers
+- Mark library items as watched (jded76 and lambda)
+- Use library meta when playing from a stream
+- Update resume dialog
+- Fix MySQL connection arguments
+- Changed MySQL column url_cache.response to a MEDIUMBLOB to handle larger pages
+- Switched from t0mm0.common to addon.common
+
+[B]Version 2.1.1[/B]
+- Bump python version to 2.1.0 for Gotham support - No longer works on Eden
+- Various small bug fixes
+
+[B]Version 2.1.0[/B]
+- New version courtesy Highway99 and XBMCHUB.com
+- Highway99 is credited with all the fixes below:
+    - | try: xbmcvfs.mkdirs #Frodo/Gotham/Python(v2.1.0) | except: os.path.mkdir #Eden |
+    - Custom Domain Enable and Text Box Field in Addon Settings.
+    - \waldo\indexes\1Channel_index.py (waldo) | \waldo\providers\1Channel_provider.py
+
+    ## Domain(s) Handling.
+    - Moved Misc. Tab in Addon Settings to the be the first tab, so that it would be easier for those on devices with a harder time scrolling sideways.
+    - Removed Orange Chat-Bubble graphics in PrimeWire theme to save filesize space due to Github FileSize Limitations.
+    - Added "|http://primewireproxy.co.uk|http://1channel.occupyuk.co.uk" to domain setting in settings.xml.
+    - Error handling on Play Trailer url(s). ~line 2385: UnicodeEncodeError: 'ascii' codec can't encode character u'\u200e' in position 11
+    - Monday through Sunday (and ALL) Sub-Menu Listings for Subscriptions.
+    - "Subscription Day" ContextMenuItem to update the day to the current day of the week.
+    - "Remove Day" ContextMenuItem to remove the day from a subscription.
+    - ALL is displayed in all Subscription menus, while Monday through Sunday are displayed only if Monday through Sunday are not chosen.
+    - Addon-Settings's Label Formatting area now includes Subscription Day and Brackets editable coding, so you can configure it as you like.
+    - Fix to add_subscription
+    - title to name-only in contextmenuitems
+    - "else: sorting = []" added to get_sources() function to solve a rare bug.  Thanks goes out to crzen for pointing this one out.
+    - Additional Function: filename_filter_out_year, Filtering of name-only without color and bold coding.
+    - ContextMenuItems: SolarMovie.so (Search & Find AirDates)
+    - PrimeWire Name-changes in "some" locations.
+    - Temp-Fix for Handling the Additional Function when upgrading the database from an older version.  I'd like to find a better method if someone knows SQL well enough.
+    - Day-of-The-Week value added to Subscriptions table and list menu.
+    - Things should run smoother with less errors due to unhandled text when logging data to xbmc.log.
+
+    - Changes to default.py
+    ### error handling on imports for metahandlers & metacontainers
+    ### EXTREME error handling on Log commands
+    ### error handling on TextBox command for Help Window in 2 locations
+    ### Addition of PrimeWire Theme
+    ### Additional Modes and Functions for Search Methods: GetSearchQueryTag, GetSearchQueryAdvanced, GetSearchQueryDesc
+    ### Additional Functions for Search Methods: SearchAdvanced, SearchDesc
+    ### A temp-fix for the Lag issue thats been noticed of late with the if-handled check of host's on long lists of hosts.
+
+    - Changes to service.py
+    ### Log command error handling
+    ### PrimeWire name changed in Log commands
+    ### "'1Ch." text left alone
+    ### "onechannelcache.db" filename left alone
+
+    - Changes to utils.py
+    ### for PrimeWire name
+    ### Log command error handling
+
+    - Changes to 1Channel_provider.py
+    ### for PrimeWire name
+    ### Log command error handling
+    ### "'1Ch'" text left alone
+
+    - Changes to 1Channel_index.py
+    ### for error handling on Log commands.
+    ### for PrimeWire.ag
+    - PrimeWire Graphics and Custom Theme
+
+    - Changes to settings.xml
+    ### PrimeWire Theme
+    ### Default Domain: http://www.primewire.ag
+
+[B]Version 2.0.2[/B]
+- 
+
+[B]Version 1.0.0[/B]
+- Fixed problems deleting favorites
+- Fixed Error in listing search results
+- Fixed error when saving long decimal values for playback resume
+- Subscriptions now only write to files if they don't already exist
+- Selecting items in subscriptions view now redirects to their season lists (instead of doing nothing)
+- Metadata now correctly populated in subscriptions view
+- Playback no longer creates a playlist, just plays the resolved source directly
+- Minor internal code clean up
+
+[B]Version 0.1.6[/B] (Not released)
+- Added option to disable Fanart
+- Added option to use banners for TV shows
+- Made falling back to posters optional if no banner is found
+- Merged mr_blobby's changes to set info_labels for subtitles plugin
+- Merged ZPAnderson's changes to add auto-watched support
+- Added selectable themes
+- Converted mikey1234's graphics to theme
+- Added Glossy_Black theme by union1mc
+- Fixed Season level not showing fanart
+- If we fail to find episode information, fall back to the website label
+- Show season/episode numbers in episode view and playback
+- Updated internal code to use t0mm0.common libraries
+- Implemented watched/unwatched support
+- Added 'Add to Library' option
+- Added subscribe option for TV shows
+- B1 - Implemented bookmarking and resuming
+- B1 - Fixed path validation
+- B2 - Proper unicode support
+- B2 - Next Page now looks for theme icon and uses theme fanart
+- B2 - Movies now create individual folders when added to library
+- B3 - Fixed bookmarked resume asking twice
+- B3 - Implemented source sorting
+- B3 - Fixed bad default value in theme setting
+- B3 - Sources now show in list instead of dialog
+- B3 - Verified sources now highlight in yellow
+- B3 - Implemented auto-play
+- B4 - Implemented page skipping in Next Page context menu
+- B4 - Added temporary workaround for conflict between t0mm0.common and metahandlers
+- B4 - Implemented 8hr url cache
+- B4 - Added option to install locally downloaded metapack
+- B4 - Auto-play now tries the next source on error
+- B4 - Playback now raises an error when XBMC silently fails to start playback
+- B5 - Implemented customized labeling
+- B5 - Fixed search function caching keys
+- B6 - Moved Subscriptions menu to inside TV Shows menu
+- B7 - Merge Prono's patch to fix bookmark resuming
+- B7 - Merge Prono's patch to wait for subscriptions to finish updating before updating library
+- B7 - Unified metadata handling
+- B7 - Only mark TV Shows as watched if both season and episode are set
+- B7 - Fixed issues with metadata being turned off
+- B7 - Added option to execute SQL from search
+- B7 - Added support for remote MySQL databases
+- B7 - Made library update after subscription run optional
+
+[B]Version 0.1.5[/B]
+- Fixed year missing from search results
+- Added option to delete favorites
+- Implemented Metadata
+- Updates to ensure compatability with latest libraries
+- Reverted Genre browsing from A-Z to page by page
+- Order favorites alphabetically
+- Added context menu option to play movie trailer if available
+- Fixed issue with sources showing as "UNKNOWN" quality
+- Added fanart and icons by mikey1234
+- Added support for multi-part sources
+- Remember last search
+- Made log message from resolver exceptions slightly more useful
+- RC1 - Fixed issue with last_search not being set on first run
+- RC1 - Fixed script error on startup due to meta path not being translated during make_dirs()
+- RC1 - Viewing sources for a movie or seasons for a tv show now updates metadata if it wasn't found when searching by title
+- RC1 - Upgrade favorites db if necessary
+- RC2 - Fix stupid mistake in save favorites code
+- RC2 - Merged Rogerthis' autoview pull request
+- RC3 - Fix image not being passed in when playing movie (caused script error during playback)
+- RC3 - Movie results were still passing year as part of title during meta lookup
+- RC3 - Fixed problem with db upgrade code
+- RC3 - Fixed adding favorites multiple times created multiple entries
+- RC3 - Added Notification when saving favorites
+- RC3 - Fix sources lost by implementing multi-part...
+- RC3 - Fix script error when canceling sources dialog
+- RC3 - Fix title display during playback (was all lower case)
+
+[B]Version 0.1.4[/B]
+- Fixed issue with weird encoding causing script errors
+- Implemented Favorites list
+
+[B]Version 0.1.3[/B]
+- Sources dialog now drops any sources that URLReslover can't resolve
+- Added year to browse listings
+- Added quality to sources dialog
+- Added access to URL Resolver settings
+- Added option to browse by featured
+- Implemented pagination for all browsing modes
+
+[B]Version 0.1.2[/B]
+- Added icon created by mikey1234 (Thanks!)
+- Genres can now be narrowed by A-Z
+- Content types set to enable different views
+- Processing dialogs now reflect results returned (respecting max results setting) instead of all results
+- Added more logging entries
+- Results now display alphabetically (again)
+- Removed dependency on script.common.plugin.cache to (hopefully) fix atv2/ipad issues
+
+[B]Version 0.1.1[/B]
+- Added search function
+- Fixed Number/Symbol option in A-Z menu
+- Added script.common.plugin.cache dependency
+
+[B]Version 0.1.0[/B]
+- Initial version
+- Re-write and update of t0mm0's letmewatchthis.ch plugin

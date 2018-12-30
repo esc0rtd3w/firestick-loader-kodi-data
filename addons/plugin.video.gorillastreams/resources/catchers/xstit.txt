@@ -1,0 +1,37 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Xstit - %s
+
+item_info_name=pageUrl.tmp
+item_info_from=@PARAM1@
+item_info_build=http://www.xstit.me/channel.php?file=%s&width=640&height=460&autostart=true
+
+item_info_name=pageUrl
+item_info_from=pageUrl.tmp
+item_info_convert=getInfo('%s','.*<iframe src="([^"]+)".*','@CURRENT_URL@')
+item_info_convert=getInfo('%s','.*function getURL03.*?var sUrl.*?'([^']+)'.*?cod1.*?'([^']+)'.*?cod2.*?'([^']+)'.*','','sUrl|cod1|cod2')
+item_info_build=%s
+
+item_info_name=unixTS
+item_info_from=@PARAM1@
+item_info_convert=unixTimestamp
+item_info_build=%s
+
+item_info_name=query
+item_info_from=sUrl + '?callback=jQuery17039323633074989195_1330025601577&v_cod1=' + cod1 + '&v_cod2=' + cod2 + '&_=' + unixTS
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=test
+item_info_from=query
+item_info_convert=getInfo('%s','.*(rtmp).*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'([^']*.swf)'.*?'file',\s*'([^']+)'.*?'streamer',\s*'(rtmp://[^']+).*','','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from='rtmp://xstit.me:1935/vod/ playpath='+ file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl 
+item_info_build=%s

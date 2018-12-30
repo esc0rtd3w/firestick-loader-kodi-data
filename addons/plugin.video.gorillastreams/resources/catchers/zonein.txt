@@ -1,0 +1,54 @@
+
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ZoneIn - %s
+
+item_info_name=decoded
+item_info_from=@PARAM1@
+item_info_convert=decodeBase64
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=decoded
+item_info_convert=getInfo('http://embed.zonein.tv/aa.js?id=%s&h=450&w=650&player=old','.*unescape.*?'([^']+)'.*','@CURRENT_URL@')
+item_info_convert=unquote(%s)
+item_info_convert=debug
+item_info_convert=parseText('%s','.*(http://embed.zonein.tv/p\d+.php.*?)['" ].*')
+item_info_build=%swww.firstrowsports.eu
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*FlashVars.*?file=(rtmp[^&]+)&.*?"movie"\s*value="(http://cdn[^"]+\.swf)".*','@CURRENT_URL@','rtmpTmp|swfFirst')
+item_info_build=%s
+
+item_info_name=ks
+item_info_from='Hallo: ' + rtmpTmp
+item_info_convert=debug
+item_info_build=%s
+
+#item_info_name=swfAlt
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*(.*?).*','@CURRENT_URL@')
+#item_info_build=http://cdnn.zonein1.com/moma_j.swf
+
+item_info_name=swf
+#item_info_from=swfFirst || swfAlt
+#item_info_build=%s
+item_info_build=http://www.zonein.tv/12652879980.swf
+
+item_info_name=fileTmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*okok\s*[^;]+id=([^\']+).*')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=fileTmp || decoded
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_build=rtmp://188.122.91.45:1935
+#rtmp://208.53.158.92:1935
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + '?doPlay=a/ playpath=zonein live=true swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

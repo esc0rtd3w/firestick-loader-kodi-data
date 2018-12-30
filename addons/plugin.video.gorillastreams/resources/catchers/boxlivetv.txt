@@ -1,0 +1,59 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=BoxLiveTV - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.boxlivetv.eu/channel.php?file=%s&width=640&height=490&autostart=true
+
+item_info_name=pageUrl.tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*<iframe src="([^"]+)".*','@REFERER@')
+item_info_convert=quote('%s')
+item_info_convert=getInfo('%s','.*function getURL03.*?sUrl.*?'([^']+)'.*?cod1.*?'([^']+)'.*?cod2.*?'([^']+)'.*?cod4.*?'([^']+)'.*?SWFObject\('([^']+)'.*','@pageUrl@','sUrl|cod1.tmp|cod2.tmp|cod4.tmp|swf')
+item_info_build=%s
+
+item_info_name=cod1
+item_info_from=cod1.tmp
+item_info_convert=quote('%s')
+item_info_build=%s
+
+item_info_name=cod2
+item_info_from=cod2.tmp
+item_info_convert=quote('%s')
+item_info_build=%s
+
+item_info_name=cod4
+item_info_from=cod4.tmp
+item_info_convert=quote('%s')
+item_info_build=%s
+
+item_info_name=unixTS
+item_info_from=@PARAM1@
+item_info_convert=unixTimestamp
+item_info_build=%s
+
+item_info_name=query
+item_info_from=sUrl + '?callback=jQuery17039323633074989195_1330025601577&v_cod1=' + cod1 + '&v_cod2=' + cod2 + '&v_cod4=' + cod4 + '&_=' + unixTS
+item_info_build=%s
+
+
+item_info_name=tmp
+item_info_from=query
+item_info_convert=getInfo('@query@','.*"result1":"([^\"]+)","result2":"([^\"]+)".*','','file|rtmp.tmp)
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_convert=replace('%s','\','')
+item_info_convert=replace('%s','/redirect','/vod')
+item_info_build=%s
+
+item_info_name=pageUrl3
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*<iframe src="([^"]+)".*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath='+ file + ' swfUrl=' + swf + ' live=true token=#ro%g0#r@1 swfVfy=true timeout=15 pageUrl=' + pageUrl3 
+item_info_build=%s

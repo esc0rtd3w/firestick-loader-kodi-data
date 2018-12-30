@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.speedway" name="SPEEDWAY PORTAL" version="1.0.8" provider-name="MetalKettle / @SpeedwayPortal">
+  <requires>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="script.module.urlresolver"  version="2.1.2"/>
+    <import addon="script.common.plugin.cache" version="2.5.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SPEEDWAY PORTAL is an add-on full of various videos and podcasts relating to all things Speedway from around the world.  It has been put together by the fans, for the fans.  At no point has, nor will there be any fee required by the user to access SPEEDWAY PORTAL.  It will remain free of charge.</summary>
+    <description lang="en">SPEEDWAY PORTAL is an add-on full of various videos and podcasts relating to all things Speedway from around the world.  It has been put together by the fans, for the fans.  At no point has, nor will there be any fee required by the user to access SPEEDWAY PORTAL.  It will remain free of charge.</description>
+    <platform>all</platform>
+  </extension>
+</addon>

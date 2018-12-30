@@ -1,0 +1,18 @@
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','(.*?)@@@(.*?)','','token|id')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=id
+item_info_build=Livebox.cz - %s
+
+item_info_name=url
+item_info_from=id + '?h=' + token
+item_info_build=http://gambrinusliga.bcast.livebox.cz/%s
+
+# http://gambrinusliga.bcast.livebox.cz/S-Ostrava?h=a1fcc66e-fd41-4927-a748-0d42679a8c71|CC91E860E699F3783893D2C94BDC948DE399B7CB
+# mmsh://gambrinusliga.bcast.livebox.cz/S-Ostrava?h=a1fcc66e-fd41-4927-a748-0d42679a8c71%7CCC91E860E699F3783893D2C94BDC948DE399B7CB&MSWMExt=.asf
+
+

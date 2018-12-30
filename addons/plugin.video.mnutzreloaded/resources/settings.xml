@@ -1,0 +1,10 @@
+<settings>
+<category label="Settings">
+	<setting id="enable_meta" type="bool" label="Enable Metadata" default="true"/>
+	<setting id="auto-view" type="bool" label="Enable Auto View" default="true" enable="!eq(-1,false)"/>
+	<setting id="MAIN" type="number" label="Auto View Default" default="503" enable="!eq(-1,false)+!eq(-2,false)"/>
+	<setting id="namestore" type="text"label="namestore" default="" visible="false" option="hidden" />
+	<setting id="iconstore" type="text"label="iconstore" default="" visible="false" option="hidden" />
+
+</category>
+</settings>

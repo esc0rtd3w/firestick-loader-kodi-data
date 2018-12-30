@@ -1,0 +1,10 @@
+
+name="Authorization "
+url="none"
+img=" "
+fanart=" "
+description="[COLOR gold]Visit [COLOR blue]http://trakt.tv/pin/7558 [COLOR gold] enter pin found at that address in the box below to authorize.[/COLOR][CR]
+[CR]
+[CR]
+                                    [COLOR white]You may now close this window to continue. [/COLOR]"
+type="status"

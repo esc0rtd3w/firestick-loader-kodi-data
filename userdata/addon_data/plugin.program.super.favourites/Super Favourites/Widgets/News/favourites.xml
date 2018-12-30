@@ -1,0 +1,3 @@
+<favourites>
+	<favourite name="Latest Video" thumb="special://home/addons\plugin.video.fox.news\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.fox.news/?mode=get_videolist&amp;name=Latest%20Video&amp;url=http%3a%2f%2fvideo.foxbusiness.com%2fplaylist%2flatest-video-latest-video&amp;sf_options=meta%3Dcastandrole%253D%25255B%25255D%2526label%253DLatest%252BVideo%26_options_sf&quot;,return)</favourite>
+</favourites>

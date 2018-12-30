@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>$INFO[Window(Home).Property(update_background)]</texture>
+		</control>
+		<control type="image">
+			<description>Update Circle</description>
+			<posx>200</posx>
+			<posy>130</posy>
+			<width>250</width>
+			<height>250</height>
+			<texture>$INFO[Window(Home).Property(update_icon)]</texture>
+			<animation effect="rotate" start="0" end="360" center="auto" time="3000" loop="true" condition="!IsEmpty(Window(Home).Property(update_spinner))">Conditional</animation>
+		</control>
+		<control type="label">
+			<description>Percent Text</description>
+			<posx>240</posx>
+			<posy>480</posy>
+			<width>800</width>
+			<height>50</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font13</font>
+			<label>Status: $INFO[Window(Home).Property(update_percent)] %</label>
+			<textcolor>$INFO[Window(Home).Property(update_percent_color)]</textcolor>
+			<visible>!IsEmpty(Window(Home).Property(update_percent))</visible>
+		</control>
+		<control type="image">
+			<posx>240</posx>
+			<posy>530</posy>
+			<width>800</width>
+			<height>75</height>
+			<texture>transparent_box.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>8</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_1))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>16</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_2))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>24</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_3))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>32</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_4))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>40</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_5))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>48</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_6))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>56</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_7))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>64</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_8))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>72</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_9))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>80</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_10))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>88</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_11))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>96</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_12))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>104</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_13))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>112</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_14))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>120</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_15))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>128</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_16))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>136</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_17))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>144</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_18))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>152</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_19))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>160</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_20))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>168</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_21))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>176</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_22))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>184</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_23))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>192</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_24))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>200</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_25))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>208</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_26))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>216</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_27))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>224</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_28))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>232</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_29))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>240</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_30))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>248</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_31))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>256</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_32))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>264</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_33))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>272</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_34))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>280</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_35))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>288</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_36))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>296</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_37))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>304</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_38))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>312</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_39))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>320</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_40))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>328</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_41))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>336</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_42))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>344</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_43))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>352</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_44))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>360</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_45))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>368</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_46))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>376</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_47))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>384</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_48))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>392</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_49))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>400</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_50))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>408</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_51))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>416</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_52))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>424</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_53))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>432</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_54))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>440</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_55))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>448</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_56))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>456</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_57))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>464</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_58))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>472</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_59))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>480</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_60))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>488</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_61))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>496</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_62))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>504</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_63))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>512</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_64))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>520</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_65))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>528</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_66))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>536</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_67))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>544</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_68))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>552</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_69))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>560</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_70))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>568</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_71))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>576</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_72))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>584</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_73))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>592</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_74))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>600</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_75))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>608</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_76))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>616</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_77))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>624</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_78))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>632</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_79))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>640</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_80))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>648</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_81))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>656</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_82))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>664</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_83))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>672</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_84))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>680</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_85))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>688</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_86))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>696</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_87))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>704</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_88))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>712</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_89))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>720</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_90))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>728</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_91))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>736</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_92))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>744</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_93))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>752</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_94))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>760</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_95))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>768</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_96))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>776</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_97))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>784</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_98))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>792</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_99))</visible>
+		</control>
+		<control type="image">
+			<posx>243</posx>
+			<posy>533</posy>
+			<width>794</width>
+			<height>69</height>
+			<texture colordiffuse="$INFO[Window(Home).Property(update_bar_color)]">progress.png</texture>
+			<visible>!IsEmpty(Window(Home).Property(update_percent_100))</visible>
+		</control>
+		<control type="label">
+			<description>update header</description>
+			<left>500</left>
+			<top>150</top>
+			<width>550</width>
+			<height>300</height>
+			<font>font13</font>
+			<label>$INFO[Window(Home).Property(update_header)]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<textcolor>$INFO[Window(Home).Property(update_header_color)]</textcolor>
+		</control>
+		<control type="label">
+			<description>update text</description>
+			<left>500</left>
+			<top>200</top>
+			<width>550</width>
+			<height>300</height>
+			<font>font13</font>
+			<label>$INFO[Window(Home).Property(update_main_text)]</label>
+			<align>left</align>
+			<aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>
+			<textcolor>$INFO[Window(Home).Property(update_main_color)]</textcolor>
+		</control>
+	</controls>
+</window>

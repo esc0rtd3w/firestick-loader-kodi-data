@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">Γενικά</string>
+	<string id="30001">Ποιότητα HD όταν είναι διαθέσιμη</string>
+	<string id="30002">Μνήμη</string>
+	<string id="30003">Καθαρισμός προσωρινής μνήμης</string>
+	<!-- Info -->
+	<string id="30301">Η </string>
+	<string id="30302"> είναι πλέον προεπιλεγμένη</string>
+	<string id="30303">Έγινε εκκαθάριση προσωρινής μνήμης</string>
+	<string id="30304">Δεν υπάρχει διαθέσιμη ροή</string>
+	<!-- Misc -->
+	<string id="30361">Επόμενη σελίδα</string>
+	<string id="30362">Αναζήτηση</string>
+	<!-- ContextMenu -->
+	<string id="30401">Αναπαραγωγή</string>
+	<string id="30402">Τυχαία Αναπαραγωγή</string>
+	<string id="30403">Αντικείμενο σε αναμονή</string>
+	<string id="30404">Τώρα εκτελείται...</string>
+	<string id="30405">Ρυθμίσεις πρόσθετου</string>
+	<string id="30406">Ορισμός θέασης βίντεο</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Πρόσφατα</string>
+	<string id="30502">Αγώνες</string>
+	<string id="30503">Στιγμιότυπα</string>
+	<string id="30504">Ομάδες</string>
+</strings>

@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=WatchJsc - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://cdn.watchjsc.us/embed.php?u=%s&vw=640&vh=460&domain=hdfoots.com
+
+item_info_name=tmp6
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*swfobject.embedSWF\(['"]([^'"]+)['"].*','@REFERER@','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 token=Fo5_n0w?U.rA6l3-70w47ch timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

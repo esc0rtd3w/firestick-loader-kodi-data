@@ -1,0 +1,22 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=New.Livestream - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=%s
+
+item_info_name=svr
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','rtsp://([^']*)1_198','@REFERER@')
+item_info_build=%s
+
+item_info_name=path
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','198@(.+?)"','@REFERER@')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=http://' + svr + '1_678@' + path + '/master.m3u8
+item_info_build=%s

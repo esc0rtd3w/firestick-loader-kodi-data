@@ -1,0 +1,8 @@
+<settings>
+<category label="About">
+<setting label="[B]About iSTREAM[/B]" type="lsep" />
+<setting label="[COLOR white]Name:[/COLOR] [B][COLOR yellow]iSTREAM[/COLOR][/B]" type="lsep" />
+<setting label="[COLOR white]Version:[/COLOR] [B][COLOR yellow]1.0.0.61[/COLOR][/B]" type="lsep" />
+<setting label="[COLOR white]Support:[/COLOR] [COLOR yellow]www.[B]XUNITY[/B].tv[/COLOR]" type="lsep" />
+</category>
+</settings>

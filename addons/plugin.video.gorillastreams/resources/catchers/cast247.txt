@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Cast247 - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.cast247.tv/embed.php?channel=%s&width=474&height=350&domain=www.hdstreams.tv
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?sURL\s*=\s*['"]([^'"]+)['"].*?flashplayer:\s*["']([^'"]+).*?file:\s*["']([^'"]+).*?streamer[:,]\s*['"]([^'"]+)['"].*','@REFERER@','key|swf|file|rtmp)
+item_info_build=%s
+
+item_info_name=dummy
+item_info_from=http://www.cast247.tv/' + key
+item_info_convert=getInfo('%s','([?])','@REFERER@','dummy')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.cast247.tv/' + swf + ' live=1 timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

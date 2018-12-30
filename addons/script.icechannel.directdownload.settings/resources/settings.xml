@@ -1,0 +1,5 @@
+<settings>
+<category label="Account">
+<setting id="tv_user" type="text" label="Username" default="xunity" />
+<setting id="tv_pwd" type="text" option="hidden" label="Password" default="xunity" /></category>
+</settings>

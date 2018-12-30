@@ -1,0 +1,8 @@
+
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ABClive - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://origin.abclive.tv:1935/redirect/%s swfUrl=http://www.udemy.com/static/flash/player5.9.swf live=true timeout=15 swfVfy=1 pageUrl=http://www.abclive.tv

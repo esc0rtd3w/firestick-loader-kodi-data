@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=tvbay - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://109.201.133.38/liverepeater/%s swfUrl=http://static.4shared.com/flash/player/5.6/player.swf pageUrl=http://tvbay.org live=true swfVfy=1

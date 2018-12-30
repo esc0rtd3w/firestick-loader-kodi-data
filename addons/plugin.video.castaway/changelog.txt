@@ -1,0 +1,197 @@
+====================================================================
+Castaway sports addon by [COLOR yellow]@natko1412[/COLOR]
+====================================================================
+
+v0.2.8 [19-Jul-2016]
+-add streamhd.eu
+-add arconaitv.me
+-add streamgaroo.com
+-remove usachannels.tv
+-remove crichd
+
+v0.2.7 [16-Jul-2016]
+-add vaughnlive.tv (login in addon settings to view followed channels)
+-add racing4everyone.eu
+-remove vipbox
+-update MyLists API
+
+v0.2.6.1 [7-Jul-2016]
+-fix some bugs
+-fix arenavision
+-remove addon.common from source modules
+-fix fullmatchtv
+-fix lmshows
+
+v0.2.5 [25-Jun-2016]
+-fix userscloud resolver
+-fix livefootballol p2p
+-update serbiaplus url
+-fix streamlive schedule
+-fix stream2watch
+-add fromhot
+-update MyLists API
+-support for m3u playlists in MyLists
+-module updates
+-update antenasport url (antenasport.info)
+-fix motolinks
+
+v0.2.4 [13-Jun-2016]
+-improve ourmatch.net
+-fix NBA GO
+-bug fixes
+
+v0.2.3 [9-Jun-2016]
+-add motolinks.info
+-parse userscloud torrents in tvrex
+-update available resolvers
+-support for multiple parts in fullmatchtv
+-improve ourmatch.net
+-improve sport torrent scraper
+-code cosmetics
+
+
+v0.2.2 [5-Jun-2016]
+-add Quasar to possible torrent players (change in settings)
+-add more torrent indexers in "Others sports" section
+-add parsing of alternative links in NBA GO
+-improve common links finding in demand section
+-fix fullmatchesandshows
+-add schedule to streamlive.to
+-add zoptv.com
+-remove tvone1 & iptvlinks
+
+v0.2.1 [2-Jun-2016]
+-add Reddit login
+-update modules
+
+
+v0.2.0 [2-Jun-2016]
+-add "Subreddits" section
+-add "My Lists" under "My Castaway"
+-add Live section to wizhdsports
+-fix Zunox (new domain)
+-improve fullmatchtv
+-add MLB,rugby and motorsports fullmatchtv in "on demand/other"
+-add ourmatch.net (football highlights)
+-add laola1.tv
+-remove sport2life
+-improve tvrex/nbafull link finding and resolving
+-improve antena sport + add base url setting for it + add schedule
+-add f1fullraces.com
+-fix fullmatchesandshows
+
+v0.1.7.1 [27-Apr-2016]
+-fix fullmatchesandshows
+-fix NBA GO
+
+v0.1.6 [27-Apr-2016]
+-fix footballtarget
+-fix dimsports
+-add usachannels.tv
+-add schedule to ibrod.tv
+-add streamking.cc
+-remove footballcouch
+-add fullmatchesandshows
+-fix antenasport
+
+
+v0.1.5 [4-Apr-2016]
+-fix pbareplays
+-improve/fix tvrex/nbafull link finding and resolving
+-move iptvlinks.eu to p2p corner
+-add wizhdsports
+-add NBA GO (full game replays)
+
+v0.1.4 [24-Mar-2016]
+-improve/fix tvrex/nbafull link finding and resolving
+-fix iptvlinks.eu
+-add pbafullreplays.com
+-add 2 rutube playlists in /on demand/other section
+
+v0.1.3 [19-Mar-2016]
+-add schedule to sports-x
+-fix tvone1 opening bug
+-fix tvrex and nbafull
+-fix P2P streams video title bug
+-add antenasport.com
+-fix streamlive
+
+v0.1.2 [15-Mar-2016]
+-add account support for streamlive.to
+-add iptvlinks.eu
+-add ustvnow.com
+-add batmanstream.com
+-add reddit soccerstreams
+-improve caching and playback handling
+-fix hdfree.tv
+-fix sports-x.tv
+-fix nbafull
+-fix tvrex
+-remove tugoleada
+-remove nbahd
+
+v0.1.1 [29-Feb-2016]
+-fix tvone
+
+v0.1.0 [28-Feb-2016]
+-add tvrex.net (NBA full matches)
+-add hdfree.tv (sport tv)
+-add parental control
+-add sports-x.net (sport tv)
+-add tugoleada.com (spanish football streams)
+-add thefootballcouch.com (football highlights/shows/matches)
+-add livefootballvideo.com (full matches)
+-add livetv.sx NBA archive (full matches)
+-add rutube NHL (full matches)
+-add livefootballol channel list (p2p)
+-add nbafull.com
+-add cache to liveresolver
+-add sport2life
+-add ifirstrow.eu
+-fix fullmatchtv.com
+-fix rutube videos (nhl)
+-fix serbiaplus.club
+-fix livetc.sx regex
+-remove nba & nhlstream.net
+-remove time4tv
+-remove zonasports.in
+
+
+v0.0.9 [07-Feb-2016]
+-fix livetv.sx custom base url
+-fix streamlive pagination
+-fix nbahd.com
+
+v0.0.8 [06-Feb-2016]
+-fix zonasports.in
+-add custom base url settings
+-remove torula.com (went premium)
+-add usachannels.tv
+-add filmon.com
+-improve livetv.ru regex (now displays language, bitrate and health where possible)
+-remove hdfree.tv (went offline)
+-add crichd.tv
+-add changelog prompt when addon updated
+-add external addons installer
+-add option to open sites via Chrome Launcher (Windows, Linux & OSX only)
+-add livefootballol.com
+-add torrent sport on demand sites (install YATP from Tools->External addons)
+-add zizo.entejsites.com
+-fix tvone1
+-add fullmatchtv.com
+-rework streamlive.to to be categorized
+-add shadownet.ro
+-split serbiaplus.com (TV & P2P)
+
+
+
+v0.0.7 [18-Jan-2016]
+-improve atdhe regex
+-fix on-demand
+-add lmshows.com
+-add nba.com
+-enable autoplay on VK links (quality can be set in settings)
+-move zonasports.in to LiveTV section
+
+v0.0.6
+-initial repo release

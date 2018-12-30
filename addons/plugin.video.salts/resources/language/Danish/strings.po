@@ -1,0 +1,698 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Michael, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: Danish (http://www.transifex.com/tv-addons/salts/language/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filmliste"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV Serier"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV Serie"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Indstillinger"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Scraper Rækkefølge"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "Url Resolver Indstillinger"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Add-on Indstillinger"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Auto-konfigurér SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Autorisér SALTS til at tilgå min trakt.tv konto"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Indstil Default Visning"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Fjern Cachede Url(s)"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "Trending %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Populær %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Nylig Opdateret %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Anbefalet %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Min %s Samling"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Mine Favoritter"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Mine Abonnementer"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Min Skal-se Liste"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Min Liste"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Andre Lister"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Mine Næste Episoder"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Min Kalender"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Hoved kalender"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Premiere Kalender"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Søg"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Seneste Søgninger"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Gemte Søgninger"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Tving Genopfrisk "
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Tøm alt %s"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Gennemtving Refresh"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Gennemtvunget Refresh Komplet"
+
+msgctxt "#30033"
+msgid "Enable All Scrapers"
+msgstr "Tænd alle Scrapers"
+
+msgctxt "#30034"
+msgid "Disable All Scrapers"
+msgstr "Sluk Alle Scrapers"
+
+msgctxt "#30035"
+msgid "Enable Scraper"
+msgstr "Tænd Scraper"
+
+msgctxt "#30036"
+msgid "Disable Scraper"
+msgstr "Sluk Scraper"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Flyt Op"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Flyt Ned"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Flyt Til..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Indsæt Ny Position (1 - %s)"
+
+msgctxt "#30041"
+msgid "Set Default %s View"
+msgstr "Indstil Standard %s View"
+
+msgctxt "#30042"
+msgid "Set a view then select this item to set the default %s view"
+msgstr "Indstil View og vælg dette emne for at indstille default %s View"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Import"
+
+msgctxt "#30044"
+msgid "%s View Set to: %s"
+msgstr "%s View Sat Til: %s"
+
+msgctxt "#30045"
+msgid "Delete [B][COLOR red]ENTIRE[/COLOR][/B] Url Cache"
+msgstr "Slet [B][COLOR red]HELE[/COLOR][/B] Url Cachen"
+
+msgctxt "#30046"
+msgid "This will set some settings to values that have been found to"
+msgstr "Dette vil indstille værdier som har vist sig at være"
+
+msgctxt "#30047"
+msgid "be effective. The following settings will be changed:"
+msgstr "effektive. Følgende indstillinger vil ændres:"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Tilbage"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Fortsæt"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Auto-konfigurer Færdig"
+
+msgctxt "#30052"
+msgid "Set as Favorites List"
+msgstr "Indstil som Favoritliste"
+
+msgctxt "#30053"
+msgid "Set as Subscription List"
+msgstr "Indstil som abonnement liste"
+
+msgctxt "#30054"
+msgid "Import from Collection"
+msgstr "Import fra Samling"
+
+msgctxt "#30055"
+msgid "Add another user's list"
+msgstr "Tilføj en anden brugers liste"
+
+msgctxt "#30056"
+msgid "Copy to My List"
+msgstr "Kopier til Min Liste"
+
+msgctxt "#30057"
+msgid "Add more from %s"
+msgstr "Tilføj mere fra %s"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Fjern Liste"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Omdøb Liste"
+
+msgctxt "#30060"
+msgid "Enter the new name (blank to reset)"
+msgstr "Skriv det nye navn (ingenting for nulstil)"
+
+msgctxt "#30061"
+msgid "Enter username of list owner"
+msgstr "Skriv brugernavn for ejer af liste"
+
+msgctxt "#30062"
+msgid "List Does Not Exist: %s"
+msgstr "Liste eksistere Ikke: %s"
+
+msgctxt "#30063"
+msgid "Progress Timeouts: %s/%s"
+msgstr "Forløb Timeouts: %s/%s"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Gennemgå Sæsoner"
+
+msgctxt "#30065"
+msgid "Update Subscriptions: (Next Run: [COLOR %s]%s[/COLOR])"
+msgstr "Opdater Abonnementer : (Næste kørsel: [COLOR %s]%s[/COLOR])"
+
+msgctxt "#30066"
+msgid "Clean-Up Subscriptions"
+msgstr "Rens Abonnementer"
+
+msgctxt "#30067"
+msgid "Pick a list to use for Subscriptions"
+msgstr "Find en liste til brug som Abonnementer"
+
+msgctxt "#30068"
+msgid "Pick a list to use for Favorites"
+msgstr "Find en liste til brug som Favoritter"
+
+msgctxt "#30069"
+msgid "Blank Searches are not allowed"
+msgstr "Blank Søgning er ikke tilladt"
+
+msgctxt "#30070"
+msgid "Save Search"
+msgstr "Gem Søgning"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Fjern fra seneste"
+
+msgctxt "#30072"
+msgid "Delete Search"
+msgstr "Slet Søgning"
+
+msgctxt "#30073"
+msgid "Recent %s Searches Cleared"
+msgstr "Recent %s Searches Cleared"
+
+msgctxt "#30074"
+msgid "Saved %s Searches Cleared"
+msgstr "Gemte %s Søgninger Slettet"
+
+msgctxt "#30075"
+msgid "Scraper Timeouts: %s/%s"
+msgstr "Scraper udfald: %s/%s"
+
+msgctxt "#30076"
+msgid "No Useable Sources Found%s"
+msgstr "Ingen Brugbare kilder Fundet%s"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Vælg at hente en undertekst "
+
+msgctxt "#30078"
+msgid "Link Resolve Failed: %s"
+msgstr "Links der Fejlede: %s"
+
+msgctxt "#30079"
+msgid "All sources failed to play"
+msgstr "Alle kilder kunne ikke afspilles"
+
+msgctxt "#30080"
+msgid "Choose your stream"
+msgstr "Vælg din stream"
+
+msgctxt "#30081"
+msgid "Set Related Url"
+msgstr "Sæt tilknyttede Url"
+
+msgctxt "#30082"
+msgid "Received result from: %s"
+msgstr "Modtaget resultat fra: %s"
+
+msgctxt "#30083"
+msgid "Url To Change (%s)"
+msgstr "Url Til Ændring (%s)"
+
+msgctxt "#30084"
+msgid "Related %s url at %s"
+msgstr "Tilknyttet %s url på %s"
+
+msgctxt "#30085"
+msgid "[COLOR blue]%s[/COLOR] Related Url Set"
+msgstr "[COLOR blue]%s[/COLOR] Tilknyttet Url Sæt"
+
+msgctxt "#30086"
+msgid "Manual Search"
+msgstr "Manuel Søgning"
+
+msgctxt "#30087"
+msgid "Select Related"
+msgstr "Vælg Relateret"
+
+msgctxt "#30088"
+msgid "Enter Search"
+msgstr "Skriv Søgning"
+
+msgctxt "#30089"
+msgid "Scraper does not support searching"
+msgstr "Scraper understøtter ikke søgning"
+
+msgctxt "#30090"
+msgid "Enter Rating (unrate, or 1-10)"
+msgstr "Skriv Vurdering (unrate, or 1-10)"
+
+msgctxt "#30091"
+msgid "Input TVShow ID"
+msgstr "Skriv TVShow ID"
+
+msgctxt "#30092"
+msgid "Item Added to Collection"
+msgstr "Item indlagt i Samlingen"
+
+msgctxt "#30093"
+msgid "Item Removed from Collection"
+msgstr "Item Fjernet fra Samlingen"
+
+msgctxt "#30094"
+msgid "Item Added to List"
+msgstr "Item indlagt i Listen"
+
+msgctxt "#30095"
+msgid "List Copied: (A:%s/E:%s/S:%s)"
+msgstr "Listen Kopieret : (A:%s/E:%s/S:%s)"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#30097"
+msgid "Marked as %s"
+msgstr "Markeret som %s"
+
+msgctxt "#30098"
+msgid "Updating Subscriptions..."
+msgstr "Opdaterer Subscriptions..."
+
+msgctxt "#30099"
+msgid "Next Update in %0.1f hours"
+msgstr "Næste Opdatering  om %0.1f timer"
+
+msgctxt "#30100"
+msgid "Are you sure you want to delete the url cache?"
+msgstr "Er du sikker på du vil slette url cache?"
+
+msgctxt "#30101"
+msgid "This will slow things down until all urls are re-cached"
+msgstr "Dette vil sløve systemet indtil alle urls er genindlæst"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Behold"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Slette"
+
+msgctxt "#30104"
+msgid "Flush web cache"
+msgstr "Rens web cache"
+
+msgctxt "#30105"
+msgid "DB Reset Successful"
+msgstr "DB Successfuldt Nulstillet"
+
+msgctxt "#30106"
+msgid "Reset only allowed on sqlite DBs"
+msgstr "Nulstil kun tilladt på sqlite DBs"
+
+msgctxt "#30107"
+msgid "Select Export Directory"
+msgstr "Vælg Eksport Folder"
+
+msgctxt "#30108"
+msgid "Enter Export Filename"
+msgstr "Skriv Eksport Filnavn"
+
+msgctxt "#30109"
+msgid "Export Successful"
+msgstr "Eksport fuldendt"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Eksporteret til %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Eksport"
+
+msgctxt "#30112"
+msgid "Export Failed"
+msgstr "Eksport Mislykkedes"
+
+msgctxt "#30113"
+msgid "Select Import File"
+msgstr "Vælg Import Fil"
+
+msgctxt "#30114"
+msgid "Import Success"
+msgstr "Import Succes"
+
+msgctxt "#30115"
+msgid "Imported from %s"
+msgstr "Importeret fra %s"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "Import"
+
+msgctxt "#30117"
+msgid "Import Failed"
+msgstr "Import Mislykkedes"
+
+msgctxt "#30118"
+msgid "Remove from List"
+msgstr "Fjern fra Listen"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Abonner"
+
+msgctxt "#30120"
+msgid "Require Aired Only?"
+msgstr "Ønsk udelukkende Viste?"
+
+msgctxt "#30121"
+msgid "Require Page Only?"
+msgstr "Ønsk udelukkende Side?"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr "Næste Side"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Forrige Uge"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Næste Uge"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Vurder på trakt.tv"
+
+msgctxt "#30128"
+msgid "Set as Season View"
+msgstr "Sæt som Sæson Layout"
+
+msgctxt "#30129"
+msgid "Unavailable"
+msgstr "Utilgængelig"
+
+msgctxt "#30130"
+msgid "Select Source"
+msgstr "Vælg Kilde"
+
+msgctxt "#30131"
+msgid "Download Source"
+msgstr "Hent Kilde"
+
+msgctxt "#30132"
+msgid "Show Information"
+msgstr "Vis Information"
+
+msgctxt "#30133"
+msgid "Add Show to List"
+msgstr "Læg Serie til Liste"
+
+msgctxt "#30134"
+msgid "Set Related Show Url (Search)"
+msgstr "Sæt Aktuel Serie URL (Søg)"
+
+msgctxt "#30135"
+msgid "Set Related Url (Manual)"
+msgstr "Sæt Relateret Url (Manuel)"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Fjern fra Samling"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Læg til Samling"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Læg til Liste"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Add til Bibliotek"
+
+msgctxt "#30140"
+msgid "Set Addic7ed TVShowID"
+msgstr "Sæt Addic7ed TVShowID"
+
+msgctxt "#30141"
+msgid "Use Default episode matching"
+msgstr "Benyt Standard afsnit matching"
+
+msgctxt "#30142"
+msgid "Use Episode Title matching"
+msgstr "Benyt Titel Afsnit matching"
+
+msgctxt "#30143"
+msgid "Set Related Url (Search)"
+msgstr "Sæt Relateret Url (Søg)"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Afspil Trailer"
+
+msgctxt "#30145"
+msgid "Pick a list"
+msgstr "Vælg en liste"
+
+msgctxt "#30146"
+msgid "No Lists exist for user: %s"
+msgstr "Liste findes ikke for bruger: %s"
+
+msgctxt "#30147"
+msgid "Scraper Automatically Disabled"
+msgstr "Scraper Automatisk Slået fra"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Fortsat tændt"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Slukke den"
+
+msgctxt "#30153"
+msgid "Trakt Bookmark Exists"
+msgstr "Trakt Bogmærke findes"
+
+msgctxt "#30154"
+msgid "Local Bookmark Exists"
+msgstr "Lokalt Bogmærke findes"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Fortsæt fra %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Start fra begyndelsen"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Fortsæt"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Downloader: %s..."
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Download Komplet: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "fejl (%s) under download: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Trakt Konto Autorisering"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Slået til"
+
+msgctxt "#30175"
+msgid "Base Url"
+msgstr "Basis Url"
+
+msgctxt "#30177"
+msgid "Username"
+msgstr "Brugernavn"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Password"
+
+msgctxt "#30180"
+msgid "Automatically Select"
+msgstr "Vælg Automatisk"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Sæson"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Søg"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Set"
+
+msgctxt "#30188"
+msgid "Unwatched"
+msgstr "Ikke Set"
+
+msgctxt "#30189"
+msgid "Updating"
+msgstr "Opdaterer"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "År"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Generelt"
+
+msgctxt "#30612"
+msgid "Base Url"
+msgstr "Basis Url"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Undertekster"
+

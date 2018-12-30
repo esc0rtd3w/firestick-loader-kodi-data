@@ -1,0 +1,49 @@
+{
+ "name"         : "UKTV Now [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.metalkettle",
+ "plugin"       : "plugin.video.uktvnow",
+ "priority"     : 800,
+ "id"           : "q.uktvnow.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.uktvnow/",
+    "steps"     : [
+     ".*all channels.*",
+     "{name}"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.uktvnow/",
+    "steps"     : [
+     ".*all channels.*",
+     ".*{name}.*"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.uktvnow/",
+    "steps"     : [
+     ".*all channels.*",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+    ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.uktvnow/",
+    "steps"     : [
+     ".*all channels.*",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+    ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

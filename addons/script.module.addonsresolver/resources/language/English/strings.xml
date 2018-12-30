@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="30000">Predefined Addon</string>
+	<string id="30001">Enable</string>
+	<string id="30002">Play on %s</string>
+	<string id="30003">No compatible Addons Activated or Installed</string>
+	<string id="30004">Select addon</string>
+	<string id="30005">Select quality</string>
+	<string id="30006">%s (Seeds: %s Peers: %s Size: %s)</string>
+	<string id="30007">Predefined Source</string>
+	<string id="30008">Order</string>
+	<string id="30100">Library</string>
+	<string id="30102">Movies</string>
+	<string id="30107">Update Kodi library after adding content</string>
+	<string id="30108">Avoid creating duplicate content</string>
+	<string id="30309">Added to Movie folder of Addons Resolver</string>
+</strings>

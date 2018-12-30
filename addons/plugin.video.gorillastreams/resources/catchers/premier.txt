@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=PremierStreams - %s
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://player.premier--streams.info/stream.php?id=%s','.*?id='([^'"]+)'.*','@REFERER@')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=tmp
+item_info_build=http://aljazeerasport.asia/stream.php?id=%s
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?file=([^&]+).*?streamer=([^&]+).*?src="([^"]+\.swf)".*','http://player.premier--streams.info','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp://rtmp.aljazeerasport.asia:1935/liverepeater/ playpath=' + file + ' swfUrl=' + swf + ' live=true token=#n00bD155a110w# timeout=15 swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s

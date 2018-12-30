@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="DEVELOPER">
+        <setting id="dev_resolver" type="bool" label="[COLOR white]Disable Resolver Check:[/COLOR]" default="false"/>
+    </category>
+</settings>

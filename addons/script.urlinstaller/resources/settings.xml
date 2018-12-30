@@ -1,0 +1,5 @@
+<settings>
+<category label="Settings">
+    <setting id="profile" type="text" label="Profile Name (Default is Master user)" default="Master user" visible="true"/>
+</category> 	
+</settings>

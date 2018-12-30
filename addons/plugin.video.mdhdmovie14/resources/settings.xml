@@ -1,0 +1,32 @@
+<settings>
+	
+	<category label="AutoView">
+		<setting id="auto-view" type="bool" label="Enable Automatic View" default="true"/>
+		<setting id="show-view" type="labelenum" label="TV Show View" values="Default View|Info|Info2|Info3|Fanart|Big list|Low List|Poster Wrap" default="Info3" enable="!eq(-1,false)+!eq(-2,false)"/>
+		<setting id="movie-view" type="labelenum" label="Movies View" values="Default View|Info|Info2|Info3|Fanart|Big list|Low List|Poster Wrap" default="Info3" enable="!eq(-1,false)+!eq(-2,false)+!eq(-3,false)"/>
+		<setting type="lsep" label="The number set for each View Types above are based"/>
+		<setting type="lsep" label="on Confluence/Xonfluence if using a different"/>
+		<setting type="lsep" label="skin these numbers maybe wrong in that case"/>
+		<setting type="lsep" label="you can set View to Default View and then set"/>
+		<setting type="lsep" label="the number for the View Type you would like below"/>
+		<setting id="default-view" type="number" label="Default View" default="500" enable="!eq(-3,false)"/>
+		<setting type="lsep" label="If you have SuperFavourites installed you can find"/>
+		<setting type="lsep" label="the correct number for the view you want by opening SF"/>
+		<setting type="lsep" label="and choosing the view you want in the side menu."/>
+		<setting type="lsep" label="Then open the context menu in SF and choose Remember View Type."/>
+		<setting type="lsep" label="Now go into SF settings, select the Display Settings tab and the last"/>
+		<setting type="lsep" label="setting will show you the number you want (Set view list type)."/>
+	</category>
+	
+	<category label="Metadata">
+		<setting id="enable_meta" type="bool" label="Enable Metadata" default="true"/>
+	</category>
+	
+	<category label="Update">
+		<setting type="lsep" label="When You Click Check For Updates It will Appear As"/>
+		<setting type="lsep" label="If Nothing Happened If Their Is Any Available"/>
+		<setting type="lsep" label="Updates You Will See The Appropriate Notifications"/>
+		<setting label="  [COLOR red]Click Here To Check For Updates For All Your Addons&Repos[/COLOR]" type="action" action="UpdateAddonRepos"/>
+	</category>
+	
+</settings>

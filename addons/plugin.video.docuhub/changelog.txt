@@ -1,0 +1,23 @@
+
+V1.2.1
+Quick Fix
+
+V1.2.0
+Major Update 
+Re-wrote Code for directory structure "Speed"
+Corrected Script Error/Play bug
+Added Resolver Settings from within Addon
+Repaired "most"video failed bugs
+
+
+V1.1.0
+Moved "Next" links to bottom of menus
+
+V1.0.5
+Added "Next Page"option to allow full site inclusions
+Added main menu Artwork
+
+V1.0.0
+Initial Release
+Has a few dead links due to the sources used
+Please report dead links/films to me via PM at XBMChub.com

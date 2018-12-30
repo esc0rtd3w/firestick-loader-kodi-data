@@ -1,0 +1,884 @@
+[COLOR RED][B]*DO NOT POST THIS CHANGE LOG ON SOCIAL MEDIA OR BLOGS*[B][/COLOR]
+
+[B]Version 6.1.1[/B]
+- fixed mvl
+
+-
+- PLEASE REMOVE THIS ADDON FROM BEST OF YOUTUBE VIDEOS & ADDON OF THE MONTH BALLSHIT BLOG POSTS.
+- SHOW SOME RESPECT & ASK THE ADDON DEV IF THEY WOULD LIKE THE ADDON TO BE IN VIDS OR BLOGS.
+- MORE INFO AT www.entertainmentrepo.com
+- *DO NOT POST THIS CHANGE LOG ON SOCIAL MEDIA OR BLOGS*
+
+[B]Version 6.1.0[/B]
+- new fanart
+- new icon
+
+[B]Version 6.0.7[/B]
+- fix MVL
+- fix 2ddl
+- temp url fix for scene-rls
+
+[B]Version 6.0.6[/B]
+- 
+- testing more sport sites
+- code clean up
+- search clean up
+
+[B]Version 6.0.5[/B]
+- 
+- fixed MVL
+- clean code
+
+[B]Version 6.0.4[/B]
+- 
+- fix rlsbb
+
+[B]Version 6.0.2[/B]
+- 
+- small fix to xl release movies
+- clean up
+
+[B]Version 6.0.1[/B]
+- 
+- small fix to xl release movies
+- clean up
+
+[B]Version 6.0.0[/B]
+- 
+- loads updated
+- loads removed
+- loads added
+- New Sites
+- New searches
+- Remember to pass by www.entertainmentrepo.com and smash a couple different ads, helps keep the site up... Thanks
+- Have A Happy New Year
+
+[B]Version 5.7.8[/B]
+- 
+- MERRY CHRISTMAS 
+
+[B]Version 5.7.7[/B]
+- TEMP fix on Rlsbb search
+- New Backup Rlsbb site movies/tv shows
+- fixed scene down
+
+[B]Version 5.7.4[/B]
+- fixed MVL
+- fixed scenehdtv but some of there site still not working
+- fixed wrzcraft
+- fixed rls archive
+- done some work on searches 
+- scene rls release search is still down on there site 
+
+
+[B]Version 5.7.2[/B]
+- fixed scene rls next page
+- scene rls site search is working
+- scene rls release search is still down on there site 
+
+[B]Version 5.7.1[/B]
+- fixed 2ddl
+- fixed scene rls 
+- scene rls search is still down on there site 
+
+[B]Version 5.7.0[/B]
+- removed watchseries
+- fixed MVL
+- fixed fullmatch
+
+[B]Version 5.6.5[/B]
+- fixed sportsone and primelinks next page
+- fixed scene-rls tv packs links
+
+
+[B]Version 5.6.4[/B]
+- fixed sportsone and primelinks
+
+[B]Version 5.6.2[/B]
+- fixed removed dead sites
+- some fixes to searches
+
+[B]Version 5.6.1[/B]
+- fixed DX-TV
+
+[B]Version 5.6.0[/B]
+- removed dead sites
+
+[B]Version 5.5.12[/B]
+- fixed rlsbb search
+- fixed MVL
+
+[B]Version 5.5.11[/B]
+- fixed MVL
+- removed some dead sites
+- some small fixes
+
+[B]Version 5.5.10[/B]
+- fixed rlsbb search
+- fixed myseriesonline
+- fixes to search
+- code clean up
+
+[B]Version 5.5.9[/B]
+- small fixes
+- fixed fanart not showing in 2ddl, rapidmovies & wrzcraft
+
+[B]Version 5.5.8[/B]
+- work done on searches
+- new sites
+- multiup links added in ddlvalley
+- removed music
+- code clean up
+
+[B]Version 5.5.7[/B]
+- fixed mvl
+
+[B]Version 5.5.6[/B]
+- Fixed myseriesonline (new site)
+- Fixed SceneHDTV (new site)
+- Added new sites 
+- Code clean up
+
+[B]Version 5.5.5[/B]
+- fixed 2ddl
+- fixed WMO
+
+[B]Version 5.5.4[/B]
+- fixed Rapidmovies
+- added seriescr (Krypton Only)
+- added myseriesonline
+- fixed MVL
+- fixed release movies next page
+- more work done on tv search
+- scene-rls was/is under a ddos attack 
+- some code clean up
+
+
+[B]Version 5.5.1[/B]
+- added wrelease
+- fixed dtd
+- some code clean up
+
+[B]Version 5.5.0[/B]
+- fixed tvshows.me - new site
+- fixed superseriale
+- fixed myseriesonline - new site
+- fixed wrzko - new site
+- working on tv search
+- working on sport search
+- testing new rlsbb search
+- removed loads of dead code
+
+[B]Version 5.4.9[/B]
+- fixed 2ddl url
+
+[B]Version 5.4.8[/B]
+- fixes for friends and family
+- some sites do not work with some isps
+- added new sites
+
+[B]Version 5.4.7[/B]
+- fixes for friends and family
+- small fix to 2ddl movies
+- code clean up
+- removed dead sites
+- added new site
+
+[B]Version 5.4.6[/B]
+- fixes for friends and family
+- small fixes
+- scene-rls was/is under a ddos attack PLEASE CHECK THERE FB PAGE & SITE 
+
+[B]Version 5.4.5[/B]
+- fixes for friends and family
+- fixed some sites
+
+[B]Version 5.4.4[/B]
+- rlsbb was/is under a ddos attack PLEASE CHECK THERE FB PAGE & SITE 
+
+[B]Version 5.4.2[/B]
+- fixed 2ddl
+- rlsbb was/is under a ddos attack PLEASE CHECK THERE FB PAGE & SITE 
+
+[B]Version 5.4.1[/B]
+- fixed newvideolinks
+- fixed ganool
+- added tvplex
+
+[B]Version 5.4.0[/B]
+- playing with search
+
+[B]Version 5.2.9[/B]
+- fixes for friends and family
+- fixed rlsbb to there new url
+- fixed some sites
+- added more sites
+
+
+[B]Version 5.2.8[/B]
+- fixes for friends and family
+- fixed 2ddl
+- fixed my rls
+- fixed myvideolinks
+
+
+[B]Version 5.2.7[/B]
+- new site added
+- Re-added/Testing MyRls, still testing
+- I will be fixing all Index Searches soon
+
+[B]Version 5.2.6[/B]
+- added rlsbb temp search via google
+- fixed dx-tv
+- Re-added/Testing MyRls, still testing
+- I will be fixing all Index Searches soon
+
+[B]Version 5.2.5[/B]
+- Re-added/Testing MyRls, shows with (S00E00) do not have links untill the show has been released
+- cleaned some code
+- I will be fixing all Index Searches soon
+
+[B]Version 5.2.4[/B]
+- added WMO
+- cleaned some code
+- I will be fixing all Index Searches soon
+
+[B]Version 5.2.2[/B]
+- added superseriale
+- fixed DX-TV
+- added PrimeLinks tv show packs
+- added more sites to searches
+- cleaned some code
+- I will be fixing all Index Searches soon
+
+[B]Version 5.2.1[/B]
+- fixed wrzcraft (testing) in search
+- fixed 2ddl in search
+- fixed DX-TV
+- added warezmovies
+
+[B]Version 5.2.0[/B]
+- added wrzcraft (testing)
+- fixed 2ddl
+
+[B]Version 5.1.9[/B]
+- fixed rapidbit
+- fixed tvshows hdtv
+- cleaned code up
+- removed dead sites
+
+[B]Version 5.1.8[/B]
+- fixed 2ddl
+
+[B]Version 5.1.7[/B]
+- ive started to fix searches 
+
+[B]Version 5.1.6[/B]
+- removed dead sites
+- fixed tvshow.me
+- fixed ganool
+- fixed iconvid
+- added WSO (testing)
+- added warez-cc (testing)
+- i will work on phpbb next update
+- i will work on searches next update
+
+[B]Version 5.1.5[/B]
+- Fixed 2ddl & that is it for now
+
+[B]Version 5.1.4[/B]
+- added megamovie release lists, release lists have loads of rar files thay are there to see whats been released
+- added bollyrulez (testing)
+- fixed rapidbit (fixed for now)
+- added MyRls
+
+[B]Version 5.1.2[/B]
+- added dtd in tv shows
+- added street fights in sports one
+- fixed wrzko
+- fixed veverel
+- fixed next page on scnlog
+- code clean up
+- will check out & fix searches next update
+
+[B]Version 5.1.1[/B]
+- added more to sports one
+
+[B]Version 5.1.0[/B]
+- small fix
+
+[B]Version 5.0.8[/B]
+- added freehdtv site same as rlsblog but with more links
+
+[B]Version 5.0.7[/B]
+- fixed links not showing in m4a
+- added more set views beta
+- fixed ddlseries
+
+[B]Version 5.0.6[/B]
+- small fixes
+- fixed ddlseries
+
+[B]Version 5.0.5[/B]
+- added documentary in SportsOne
+
+[B]Version 5.0.4[/B]
+- re-added ddlseries will not be updating the single addon anymore.
+- cleaned up search
+- cleaned up code
+- testing some set view, main-view
+
+[B]Version 5.0.2[/B]
+- fixed some stuff i missed
+- changed searches in tv shows and moves, now takes you to the search main page
+- Please try using single site searches
+
+[B]Version 5.0.1[/B]
+- code clean up
+- added scene-rls release pages
+- removed some sites from searches
+- added new sites to searches
+- fixed movie index searches
+- added more single site searches in searches on release hub main screen
+
+[B]Version 5.0.0[/B]
+- code clean up
+- updated onesports (combat & motorsports)
+- added some new sites to test
+- added primelinks 3d in 1080p zone
+- removed dead sites
+- temp fix on tv calendar search (more work to be done)
+- added more single site searches in searches on release hub main screen
+
+[B]Version 4.2.2[/B]
+- code clean up
+- fixed some index searches
+- removed dead sites
+
+[B]Version 4.2.1[/B]
+- code clean up
+- new scene-rls search, any file over 2GB will be a rar file (testing)
+
+[B]Version 4.2.0[/B]
+- added scene-rls release search
+
+[B]Version 4.1.9[/B]
+- small fix to a url
+- fixed rapidbit 1080p shows
+
+[B]Version 4.1.8[/B]
+- added mkvcage, tv shows and movies (in movies if no rapidgator link shows then uploaded link is are rar file)
+- added crazy4u, tv shows and tv packs
+- added more sites in tv packs and added tv packs A/Z with SD HD 480p 720p 1080p 4k shows
+- cleaned searches
+
+[B]Version 4.1.7[/B]
+- added couple new icons
+- fix rapidbit
+- added prime links 4k tv shows in test zone
+
+[B]Version 4.1.6[/B]
+- added wwe2day as a backup to dx-tv
+
+[B]Version 4.1.5[/B]
+- small fixes
+- fixed ganool
+- fixed openload links in phpbb
+
+[B]Version 4.1.4[/B]
+- added tvshow.me
+- added tvshows-hdtv (beta)
+- removed dead sites
+
+[B]Version 4.1.1[/B]
+- added sportszaade to sports for f1 fans, watch out for RAR files most are blocked
+
+[B]Version 4.1.0[/B]
+- fixed scene source unblock URL
+- changed https to http on all sites needed
+
+[B]Version 4.0.9[/B]
+- added phpBB to movies, for all SHERiF releases should be no rar files
+- watch out in iconvid they have been posting RAR files.
+
+[B]Version 4.0.8[/B]
+- small fixes to search
+
+[B]Version 4.0.7[/B]
+- added sports one
+- small fixes
+
+[B]Version 4.0.6[/B]
+- temp sites change for tv a/z
+- code clean up
+
+[B]Version 4.0.5[/B]
+- testing Genres in iconvid
+- testing shaanig forum (loads of .RAR files so some links pages will be empty you can use the context menu to search)
+- fixed israbox in music
+- code clean up
+
+[B]Version 4.0.4[/B]
+- added new site 
+- code clean up
+
+[B]Version 4.0.2[/B]
+- fix to 1080p zone
+
+[B]Version 4.0.1[/B]
+- search clean up
+- code clean up
+- added some new sites
+- ganool.uk
+
+[B]Version 4.0.0[/B]
+- search clean up
+- code clean up
+- added some new sites
+- iconvid
+- wrzko
+
+[B]Version 2.9.5[/B]
+- added Scene-Rls Tag search 
+
+[B]Version 2.9.4[/B]
+- added Scene-Rls Tag search in searches 
+- added scenesource
+- removed dailyddl 
+
+[B]Version 2.9.1[/B]
+- added more sport
+
+[B]Version 2.9.0[/B]
+- fixed 2ddl
+
+[B]Version 2.8.9[/B]
+- new site in 4k test zone
+
+[B]Version 2.8.8[/B]
+- code clean up
+
+[B]Version 2.8.7[/B]
+- fixed rls-tv
+- fixed all index searches
+- added more in sport
+
+[B]Version 2.8.6[/B]
+- small code fix
+- readded rapidbit bigger & better, may go up & down due to new set up
+
+[B]Version 2.8.5[/B]
+- added sites to search
+
+[B]Version 2.8.4[/B]
+- added sites to search
+- code clean up
+- added scene-rls boxing in sport
+
+[B]Version 2.8.2[/B]
+- added sites to search
+
+[B]Version 2.8.1[/B]
+- changed 2ddl URL
+- calendar search clean up
+
+[B]Version 2.7.9[/B]
+- fixed next page on new prime links
+
+[B]Version 2.7.8[/B]
+- added veverel got some nice tv packs (not in search)
+- code clean up
+
+[B]Version 2.7.7[/B]
+- added new prime links site 1080p 4k (not in search)
+
+[B]Version 2.7.6[/B]
+- removed more dead sites
+- code clean up
+- working on Movie Genres search
+
+[B]Version 2.7.5[/B]
+- removed dead sites
+- code clean up
+- added Movie Genres search
+
+[B]Version 2.7.4[/B]
+- removed dead sites
+- code clean up
+
+[B]Version 2.7.2[/B]
+- added some good streaming sites to movie search
+- added bluray movies site
+
+[B]Version 2.7.1[/B]
+- small fixes
+- code clean up
+- cleaned up searches 
+
+[B]Version 2.7.0[/B]
+- small fixes
+- code clean up
+- test gif removed for now
+
+[B]Version 2.6.9[/B]
+- removed help & news 
+- code clean up
+
+[B]Version 2.6.8[/B]
+- added uksoapshare
+
+[B]Version 2.6.7[/B]
+- gif test for users on kodi jarvis 16 and 17
+
+[B]Version 2.6.4[/B]
+- new index movie search
+- fixed dx-tv in sport
+-
+
+[B]Version 2.6.2[/B]
+- fixed dailyddl pics not showing in movies
+- fixed dailyddl next page
+- added xtremeLi site
+- small code fixes
+
+[B]Version 2.6.1[/B]
+- small fix
+
+[B]Version 2.6.0[/B]
+- added more sites to dvdscr & 1080p zone
+
+[B]Version 2.5.9[/B]
+- added more sites to dvdscr & 1080p zone
+
+[B]Version 2.5.8[/B]
+- testing some stuff in scene-rls
+
+[B]Version 2.5.7[/B]scene-rls
+- added more into sports
+- added more into 1080p zone
+
+[B]Version 2.5.6[/B]
+- small fix
+- added rlsarchive
+
+[B]Version 2.5.5[/B]
+- fixed 300mbmovies
+- added mypopcorntime
+- added scene groups in 1080p zone
+- fixed featured now index search
+- code clean up
+
+[B]Version 2.5.4[/B]
+- 
+
+[B]Version 2.5.2[/B]
+- testing tv packs zone in tv shows
+
+[B]Version 2.5.0[/B]
+- added DVDScr zone in movies
+
+[B]Version 2.5.0[/B]
+- added test zone 4K tv packs
+
+[B]Version 2.4.0[/B]
+- added coolxvid (NITROFLARE links only)
+
+[B]Version 2.2.9[/B]
+- 
+
+[B]Version 2.2.8[/B]
+- 
+
+[B]Version 2.2.7[/B]
+- added new sites
+- code clean up
+
+[B]Version 2.2.6[/B]
+- added new sites
+- code clean up
+
+[B]Version 2.2.5[/B]
+- added new sites
+- code clean up
+
+[B]Version 2.2.4[/B]
+- small fixes
+
+[B]Version 2.2.3[/B]
+- changed some URL's
+
+[B]Version 2.2.2[/B]
+- fix
+
+[B]Version 2.2.1[/B]
+- removed tv rls
+
+[B]Version 2.2.0[/B]
+- fixes
+
+[B]Version 1.9.9[/B]
+- fixed episodes-tv search index
+
+[B]Version 1.9.8[/B]
+- fixed rlslog 
+
+[B]Version 1.9.7[/B]
+- fixed scnlog hot showing any links in search
+
+[B]Version 1.9.6[/B]
+- code clean up
+
+[B]Version 1.9.5[/B]
+- code clean up
+- updated TV Calendar index search but still in beta
+- updated tv a/z search
+
+[B]Version 1.9.4[/B]
+- code clean up
+- added TV Calendar index search but still in beta
+
+[B]Version 1.9.2[/B]
+- added TV Calendar index search but still in beta
+- added TV show a/z index search but still in beta
+
+[B]Version 1.9.1[/B]
+- 
+
+[B]Version 1.9.0[/B]
+- new index search
+- fixes to code
+
+[B]Version 1.8.4[/B]
+- fixes
+
+[B]Version 1.8.2[/B]
+- fixed Rlsblog
+
+[B]Version 1.8.0[/B]
+- some fixes 
+- new icon and fanart
+
+[B]Version 1.7.9[/B] 11/6/15
+- some fixes 
+- new icon and fanart
+
+
+[B]Version 1.7.8[/B] 4/5/15
+- DXTV is back in sport
+- fixed rlsblog
+- Index searches fixed
+-
+
+[B]Version 1.7.7[/B]
+- added freesharelink in sport for all the latest Wrestling MMA & Boxing  
+
+[B]Version 1.7.6[/B]
+- fixed Rlsblog
+- removed DXTV in sports
+- added uptwo to sports search
+
+[B]Version 1.7.5[/B]
+- 
+
+[B]Version 1.7.4[/B]
+- testing new tv index search
+
+[B]Version 1.7.2[/B]
+- addon clean up
+
+[B]Version 1.7.1[/B]
+- fixed Dx-tv
+
+[B]Version 1.7.0[/B]
+- new site in search ReleaseFree
+- added uptwo to tv shows
+- added 0dayreleases to tv shows & movies
+
+[B]Version 1.6.9[/B]
+- fixed rlsbb search
+- removed 300mblinks
+
+[B]Version 1.6.8[/B]
+- fixed
+- 300mbmovies4u
+- index search
+
+[B]Version 1.6.7[/B]
+- small fixes
+
+[B]Version 1.6.6[/B]
+- small fixes
+
+[B]Version 1.6.5[/B]
+- scene source url changer in settings
+- added discovery360.net
+- added music
+- added israbox to music
+
+[B]Version 1.6.4[/B]
+- search will continue if a site in the list is down
+- fixed 300mbmovies4u
+- added 300mblinks site
+
+[B]Version 1.6.2[/B]
+- small fix
+
+[B]Version 1.6.1[/B]
+- fixed ddl2 movies and sport
+
+[B]Version 1.6.0[/B]
+- fixed dx-tv.com 
+- added ddl2 movies and sport
+
+[B]Version 1.5.9[/B]
+- code clean up
+- fixed rlstv
+- added tvshows-hdtv index search
+
+[B]Version 1.5.8[/B]
+- more 1080p tv show links in search
+- added 2ddl to tv shows
+- fixed searches 
+
+[B]Version 1.5.7[/B]
+- small fix
+
+[B]Version 1.5.6[/B]
+- New index search
+
+[B]Version 1.5.5[/B]
+- code clean up
+- check in news and help, this addon has been out 1 year and is still going strong 
+
+[B]Version 1.5.4[/B]
+- added 2ddl.link to search
+
+[B]Version 1.5.1[/B]2ddl.link
+- Release1click is back
+
+[B]Version 1.5.0[/B]
+- Kodi Helix 14 ready all thanks go out to Poegloom for the fix 
+
+[B]Version 1.4.9[/B]
+- removed OCW from searches
+
+[B]Version 1.4.8[/B]
+- added moviedetector in movie search great for 1080p and removed fullxtreme.net to many rar
+
+[B]Version 1.4.7[/B]
+- added fullxtreme.net in movie search great for 1080p
+
+
+[B]Version 1.4.6[/B]
+- fixes 
+
+[B]Version 1.4.5[/B]
+- added more searches
+
+[B]Version 1.4.4[/B]
+- fixed 
+* scnrls
+- added
+* new fanart
+
+[B]Version 1.4.2[/B]
+- added new site
+- icons clean out
+- some small fixes
+
+[B]Version 1.4.1[/B]
+- code clean up & fixes
+
+[B]Version 1.4.0[/B]
+- code clean up
+- fixed scnlog.eu
+- fixed irweb-dl.com tv
+- removed sites not working
+
+[B]Version 1.2.9[/B]
+- code clean up
+
+[B]Version 1.2.8[/B]
+- removed www.wrzko.eu site got taken down
+
+[B]Version 1.2.7[/B]
+- fixed irweb-dl.com
+
+[B]Version 1.2.6[/B]
+- small fix
+
+[B]Version 1.2.5[/B]
+- added filetube to search
+
+[B]Version 1.2.4[/B]
+- clean up and fixes
+
+[B]Version 1.2.2[/B]
+- clean up and fixes
+
+[B]Version 1.2.1[/B]
+- more index searches added
+- more sites added to search
+- some new art work for searches
+
+[B]Version 1.2.0[/B]
+- new help vids
+
+[B]Version 1.1.9[/B]
+- more work on the search
+
+B]Version 1.1.8[/B]
+- tv show index search
+
+[B]Version 1.1.7[/B]
+- small fix
+
+[B]Version 1.1.6[/B]
+- new box office index search
+
+[B]Version 1.1.5[/B]
+- fixes and addno clean up
+
+[B]Version 1.1.4[/B]
+- fixes 
+
+[B]Version 1.1.2[/B]
+- fixes 
+
+[B]Version 1.1.1[/B]
+- fixes to searches
+
+[B]Version 1.1.0[/B]
+- Mega search (BETA)
+- Release search (BETA)
+- added dx-tv.com
+- updated icon
+- fixes and code clean up
+
+[B]Version 1.0.7[/B]
+- added binflix more 1080p
+
+[B]Version 1.0.6[/B]
+- small fixes
+* rls tv fixed
+
+[B]Version 1.0.5[/B]
+- added 
+* irweb-dl 1080p tv shows and movies
+
+[B]Version 1.0.4[/B]
+- added 
+* Rls1Click
+
+[B]Version 1.0.2[/B]
+- added 
+* TheYids news
+* movie4download
+
+[B]Version 1.0.1[/B]
+- clean code
+
+[B]Version 1.0.0[/B]
+- Full Release of [COLOR dodgerblue][B]HUB[/B][/COLOR] v-1.0.0
+
+

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="81000">
+	<defaultcontrol>80050</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="100">WindowClose</animation>
+	<coordinates>
+		<posX>200</posX>
+		<posY>100</posY>
+	</coordinates>
+	<controls>
+		<control type="image" id="85000">
+			<description>Background</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>background.jpg</texture>
+		</control>
+
+		<control type="image">
+			<description>Logo</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>30</width>
+			<height>30</height>
+			<texture>trakt.png</texture>
+		</control>
+		<control type="label">
+			<posx>55</posx>
+			<posy>12</posy>
+			<width>200</width>
+			<height>22</height>
+			<font>font11</font>
+			<aligny>center</aligny>
+			<align>left</align>
+			<label>What's Next on Trakt</label>
+		</control>
+		<control type="button" id="82000">
+			<posx>1200</posx>
+			<posy>2</posy>
+			<width>60</width>
+			<height>32</height>
+			<label></label>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texturefocus>window/close_focus.png</texturefocus>
+			<texturenofocus>window/close.png</texturenofocus>
+			<pulseonselect>true</pulseonselect>
+		</control>
+		<control type="list" id="80050">
+			<description>Lists</description>
+			<posx>40</posx>
+			<posy>50</posy>
+			<width>1150</width>
+			<height>600</height>
+			<visible>true</visible>
+			<viewtype label="3D list">list</viewtype>
+			<orientation>vertical</orientation>
+			<onright>80051</onright>
+			<scrolltime tween="sine" easing="out">200</scrolltime>
+			<autoscroll>false</autoscroll>
+			<pagecontrol>80051</pagecontrol>
+			<scrolltime tween="sine" easing="out">200</scrolltime>
+			<itemlayout width="1150" height="150">
+				<control type="image">
+					<width>1150</width>
+					<height>150</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<texture>List/focus_dim.png</texture>
+				</control>
+				<control type="image">
+					<width>100%</width>
+					<height>3</height>
+					<posx>0</posx>
+					<posy>145</posy>
+					<texture>progress/background.png</texture>
+				</control>
+				<control type="image">
+					<height>140</height>
+					<width>248</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>100%</width>
+					<height>3</height>
+					<posx>0</posx>
+					<posy>145</posy>
+					<info>ListItem.Property(percent)</info>
+				</control>
+				<control type="label">
+					<posx>255</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>255</posx>
+					<posy>22</posy>
+					<width>550</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Property(next)</info>
+				</control>
+				<control type="textbox">
+					<posx>255</posx>
+					<posy>44</posy>
+					<width>900</width>
+					<height>100</height>
+					<font>font11</font>
+					<aligny>top</aligny>
+					<align>left</align>
+					<wrapmultiline>true</wrapmultiline>
+					<info>ListItem.Property(description)</info>
+				</control>
+				<control type="label">
+					<posx>1000</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Property(progress)</info>
+				</control>
+				<control type="label">
+					<posx>1000</posx>
+					<posy>22</posy>
+					<width>150</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Property(seasons)</info>
+				</control>
+
+			</itemlayout>
+			
+			<focusedlayout height="150" width="1150">
+				<control type="image">
+					<width>1150</width>
+					<height>150</height>
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Control.HasFocus(80050)</visible>
+					<texture>List/focus_light.png</texture>
+				</control>
+				<control type="image">
+					<width>100%</width>
+					<height>3</height>
+					<posx>0</posx>
+					<posy>145</posy>
+					<texture>progress/background.png</texture>
+				</control>
+				<control type="image">
+					<height>140</height>
+					<width>248</width>
+					<posx>0</posx>
+					<posy>0</posy>
+					<info>ListItem.Icon</info>
+				</control>
+				<control type="image">
+					<width>100%</width>
+					<height>3</height>
+					<posx>0</posx>
+					<posy>145</posy>
+					<info>ListItem.Property(percent)</info>
+				</control>
+				<control type="label">
+					<posx>255</posx>
+					<posy>0</posy>
+					<width>450</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<textcolor>yellow</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>255</posx>
+					<posy>22</posy>
+					<width>550</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<textcolor>yellow</textcolor>
+					<info>ListItem.Property(next)</info>
+				</control>
+				<control type="textbox">
+					<posx>255</posx>
+					<posy>44</posy>
+					<width>900</width>
+					<height>100</height>
+					<font>font11</font>
+					<aligny>top</aligny>
+					<align>left</align>
+					<wrapmultiline>true</wrapmultiline>
+					<info>ListItem.Property(description)</info>
+				</control>
+				<control type="label">
+					<posx>1000</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Property(progress)</info>
+				</control>
+				<control type="label">
+					<posx>1000</posx>
+					<posy>22</posy>
+					<width>150</width>
+					<height>22</height>
+					<font>font11</font>
+					<aligny>center</aligny>
+					<align>right</align>
+					<info>ListItem.Property(seasons)</info>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="scrollbar" id="80051">
+			<description>Queue Scroll</description>
+			<posx>1250</posx>
+			<posy>50</posy>
+			<width>25</width>
+			<height>600</height>
+			<visible>true</visible>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="0,14,0,14">ScrollBarRV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<colordiffuse>FFCCCCCC</colordiffuse>
+			<pulseonselect>True</pulseonselect>
+			<orientation>vertical</orientation>
+			<showonepage>true</showonepage>
+			<onleft>80050</onleft>
+		</control>
+
+		<control type="label" id="85002">
+			<posx>0</posx>
+			<posy>670</posy>
+			<width>1280</width>
+			<height>22</height>
+			<font>font11</font>
+			<aligny>center</aligny>
+			<align>center</align>
+			<label></label>
+		</control>
+
+		<control type="image" id="85001">
+			<description>working</description>
+			<posx>515</posx>
+			<posy>235</posy>
+			<width>250</width>
+			<height>250</height>
+			<texture>trakt.gif</texture>
+		</control>	
+	</controls>
+</window>

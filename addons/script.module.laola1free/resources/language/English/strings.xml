@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="30200">General</string>
+	<string id="30204">Location</string>
+	<string id="30205">International</string>
+	<string id="30206">Germany</string>
+	<string id="30207">Austria</string>
+
+	<string id="30211">Language</string>
+	<string id="30212">English</string>
+	<string id="30213">German</string>
+
+	<string id="30300">Live Stream Filter</string>
+	<string id="30301">Show all sports</string>
+	<string id="30302">Icehockey</string>
+	<string id="30303">Tabletennis</string>
+	<string id="30304">Basketball</string>
+	<string id="30305">Volleyball</string>
+	<string id="30306">Beachvolleyball</string>
+	<string id="30307">Handball</string>
+	<string id="30308">Football</string>
+
+	<string id="30400">Live Listing Limit</string>
+	<string id="30401">No limit</string>
+	<string id="30402">3 days</string>
+	<string id="30403">7 days</string>
+	<string id="30404">14 days</string>
+
+	<string id="31101">Debug</string>
+
+	<string id="40200">Experimental</string>
+	<string id="40201">Strip HTML (faster processing)</string>
+</strings>

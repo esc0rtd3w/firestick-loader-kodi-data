@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Flashi - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.flashi.tv/embed.php?v=%s&vw=640&vh=490&typeplayer=0&domain=f1-tv.info
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?SWFObject\('([^']+)'.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@','swf|file|rtmp.tmp')
+item_info_build=%s
+
+#item_info_name=rtmp
+#item_info_from=rtmp.tmp
+#item_info_convert=replace('%s','/app1',':1935/app1')
+#item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp.tmp + ' playpath=' + file + ' swfUrl=http://www.flashi.tv/' + swf + ' live=true timeout=15 swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s

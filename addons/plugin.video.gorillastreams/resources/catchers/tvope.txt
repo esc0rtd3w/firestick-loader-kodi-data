@@ -1,0 +1,18 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=TVOpe - %s
+
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://tvope.com/emb/player.php?c=%s&w=700&h=480&d=www8.livetv.ru
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*\{src:\s'([^']+)'.*clip: {\s.*?url:\s'([^']+)'.*\s*'(rtmp://[^']+)'.*','@CURRENT_URL@','swf|file|rtmp')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' live=true swfVfy=1 swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

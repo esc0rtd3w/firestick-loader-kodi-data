@@ -1,0 +1,19 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Wii-Stream - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.wii-stream.com/embed.php?v=%s&vw=640&vh=385&domain=www.livescorehunter.ro
+
+item_info_name=swf
+item_info_build=http://wii-stream.com/player/player.swf
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*\'streamer\':\s*\'(rtmp[^\']+)\'.*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + @PARAM1@ + ' swfUrl=' + swf + ' swfVfy=1 live=true pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.moviedb" version="3.0.5" name="Cliq!" provider-name="Blazetamer">
+<requires>
+<import addon="xbmc.python" version="2.1.0"/>
+<import addon="script.module.simplejson" version="3.3.0"/>
+<import addon="script.module.t0mm0.common" version="2.0.0"/>
+<import addon="script.module.urlresolver"  version="2.1.2"/>
+<import addon="script.module.metahandler" version="2.3.1" />
+<import addon="script.common.plugin.cache" version="2.5.2"/>
+<import addon="script.module.addon.common" version="2.0.0"/>
+<import addon="script.module.simple.downloader" version="1.9.4" />
+
+
+</requires>
+
+<extension point="xbmc.python.pluginsource" library="default.py">
+<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary>Cliq! Live Streams Movies/TV</summary>
+<description> "Cliq" Includes iLive Streams, Movies, Tv Shows, Cartoons and Sports from several source websites. Content is updated daily. Download Movies and Shows to your library with a Queue!! Has add-on Wide Favorites! If you want it all Just Cliq!!!</description>
+<disclaimer>The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.</disclaimer>
+
+<forum>http://www.xbmchub.com/forums/blazetamers-repository/17959-%5Brelease%5D-mdb-ultra-video-addon.html</forum>
+<website>http://www.cliqaddon.com/</website>
+
+<platform>all</platform>
+</extension>
+</addon>

@@ -1,0 +1,3 @@
+<settings>
+	<setting id="xml_folder" type="folder" label="Custom Progress Dialog XML Folder" visible="true" default=""/>
+</settings>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<window>
+    <controls>
+        <control type="image">
+            <description>Black Background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <texture>background.png</texture>
+        </control>
+	 <control type="image" id="1">
+            <description>Hour 1</description>
+            <posx>187.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="2">
+            <description>Hour 1</description>
+            <posx>325</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="7">
+            <description>Separator</description>
+            <posx>412.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="3">
+            <description>Minute 1</description>
+            <posx>507.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="4">
+            <description>Minute 2</description>
+            <posx>647.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="8">
+            <description>Separator</description>
+            <posx>737.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="5">
+            <description>Second 1</description>
+            <posx>832.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="6">
+            <description>Second 2</description>
+            <posx>972.5</posx>
+            <posy>270</posy>
+            <width>120</width>
+            <height>180</height>
+            <texture></texture>
+        </control>
+	<control type="image" id="9">
+            <description>AMPM</description>
+            <posx>1120</posx>
+            <posy>30</posy>
+            <width>100</width>
+            <height>120</height>
+            <texture></texture>
+        </control>
+    </controls>
+</window>

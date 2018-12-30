@@ -1,0 +1,31 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=SikeTV - %s
+
+item_info_name=tmpPageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.sike.tv/channel.php?file=%s&width=664&height=415&autostart=true
+
+item_info_name=pageUrl
+item_info_from=tmpPageUrl
+item_info_convert=getInfo('%s','.*iframe src=\"([^\"]+)\".*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.sike.tv/embed.php?c=%s','.*SWFObject\(\'([^\']+)\'.*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.sike.tv/embed.php?c=%s','.*?\'file\',\s*\'([^\']+)\'.*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.sike.tv/embed.php?c=%s','.*?\'streamer\',\s*\'([^\']+)\'.*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playPath=' + file + ' swfUrl=' + swf + ' swfVfy=1 live=true pageUrl=' + pageUrl
+item_info_build=%s

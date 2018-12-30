@@ -1,0 +1,25 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=FootyCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.footycast.tv/embed.php?pType=1&u=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?SWFObject\(['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=rtmpe://178.18.31.43/redirect playpath=' + @PARAM1@ + ' swfUrl=' + swf + ' live=1 timeout=15 swfVfy=1 pageUrl=http://www.footycast.tv
+item_info_build=%s
+
+#rtmpe://188.0.226.130/redirect
+#rtmpe://strm.ukcast.tv/redirect

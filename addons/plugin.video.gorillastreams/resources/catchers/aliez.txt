@@ -1,0 +1,22 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Aliez - %s 
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://emb.aliez.tv/player/live.php?id=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*"file":\s."([^"]+)".*','@REFERER@')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*swfobject.embedSWF\("([^"]+)".*','@REFERER@')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=rtmp + ' live=true swfVfy=1 swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

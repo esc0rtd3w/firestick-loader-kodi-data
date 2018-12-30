@@ -1,0 +1,21 @@
+<settings>
+	<category label="Settings">
+        <setting id="session_id" type="text" label="Session ID" default="" visible="false"/>
+        <setting id="keep_session_flag" type="text" label="Keep Session Flag" default="" visible="false"/>
+        <setting id="filmon_account" type="bool" label="10001" default="false" />
+        <setting id="filmon_user" type="text" label="10002" default="" enable="!eq(-1,false"/>
+        <setting id="filmon_pass" type="text" label="10003" default="" enable="!eq(-2,false"/>
+        <setting id="filmon_quality" type="enum" values="High|Low" label="10004" default="0"/>
+        <setting id="stream_type" type="enum" values="HLS|RTMP" label="10011" default="0" visible="false" />
+        <setting id="auto_switch" type="bool" label="10010" default="true" visible="false"/>
+        <setting id="download_path" type="folder" label="10005" default="notset"/>
+        <setting id="movie_directory" type="folder" label="10020" default="set" visible="false"/>
+        <setting id="show_ch_id" type="bool" label="10025" default="true" />
+        <setting id="root_channel" type="number" label="10026" default="689" />
+        <setting id="separator" type="lsep" label="10006"/>
+        <setting id="my_videos" type="bool" label="10007" default="true" visible="false" />
+        <setting id="my_audio" type="bool" label="10008" default="true" visible="false" />
+        <setting id="other_menu" type="bool" label="10009" default="true" visible="false" />
+        <setting id="sort_alpha" type="bool" label="10019" default="true" />
+	</category>
+</settings>

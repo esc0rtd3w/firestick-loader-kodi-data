@@ -1,0 +1,17 @@
+Usage example:
+
+url = 'http://www.zunox.hk/zunox2.html'
+
+#import the module
+import liveresolver
+
+#resolve the item
+resolved = liveresolver.resolve(url)
+
+#play the resolved item in xbmc player
+xbmc.Player().play(resolved)
+
+
+
+#just find the link but don't resolve it
+link = liveresolver.find_link(url)

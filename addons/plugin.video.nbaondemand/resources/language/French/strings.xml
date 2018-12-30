@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">Général</string>
+	<string id="30001">Qualité HD si disponible</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302"> est actif par défaut</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">Pas de source du média disponible</string>
+	<!-- Misc -->
+	<string id="30361">Page Suivante</string>
+	<string id="30362">Recherche</string>
+	<!-- ContextMenu -->
+	<string id="30401">Lecture</string>
+	<string id="30402">Lecture Aléatoire</string>
+	<string id="30403">Ajouter</string>
+	<string id="30404">Liste de lecture...</string>
+	<string id="30405">Paramètres de l'extension</string>
+	<string id="30406">Vue Globale</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Les plus récents</string>
+	<string id="30502">Les matchs</string>
+	<string id="30503">Les temps forts</string>
+	<string id="30504">Les équipes</string>
+</strings>

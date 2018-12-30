@@ -1,0 +1,6 @@
+﻿<settings>
+  <category label="General">
+	<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
+	<setting id="add_playlist" type="bool" label="Add items with multiple links as play lists" default="false"/>
+  </category>
+</settings>

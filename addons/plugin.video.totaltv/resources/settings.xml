@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="tv_directory" type="folder" label="Folder" default="special://userdata/addon_data/plugin.video.totaltv/tvshows"/>
+    <category label="General">
+    <setting type="sep"/>
+    <setting label="Delete favourites" type="action" action="RunPlugin(plugin://plugin.video.totaltv/?mode=del_tv_all)" enable="true" option="close"/>
+    <setting label="Delete search history" type="action" action="RunPlugin(plugin://plugin.video.totaltv/?mode=del_his_tv)" enable="true" option="close"/>
+    </category>
+    <category label="Metadata">
+    <setting id="tv_metadata" type="bool" label="Enable Metadata" default="true"/> 
+    <setting id="limit_shows" type="bool" label="Paginate shows/episodes while metadata is ON" default="true"  visible="!eq(-1,false)"/>  
+    <setting id="results_number" type="slider" default="5" range="1,1,100" option="int" label="Number of items per page" visible="!eq(-2,false)" enable="!eq(-1,false)"/>
+    <setting label="" type="lsep"/> 
+    </category>
+	<category label="Autoplay">
+    <setting id="listplay" type="bool" label="Disable Autoplay" default="false"/>
+    <setting id="autoplay" type="bool" label="Autoplay random sources" default="true" visible="eq(-1,false)"/>
+	</category>
+
+</settings>

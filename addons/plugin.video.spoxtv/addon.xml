@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.spoxtv"
+  version="1.1.7"
+  name="SPOX TV"
+  provider-name="Jin">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Videos aus der Welt des Sports - SPOX.com</summary>
+    <description>NBA, NFL und Fussball im LIVESTREAM FOR FREE bei SPOX</description>
+    <platform>all</platform>
+    <forum>http://kodinerds.net</forum>
+  </extension>
+</addon>

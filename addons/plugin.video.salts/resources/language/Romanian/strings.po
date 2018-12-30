@@ -1,0 +1,178 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Calin Gabriel Mihai, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: Romanian (http://www.transifex.com/tv-addons/salts/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filme"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "Seriale"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "Serial"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Setari"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Ordine de sortare"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "Setari URL Resolver"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Setari supliment"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Auto-configurare SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Autorizati SALTS sa acceseze contul trakt.tv"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Seteaza vizualizarile predefinite"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Inlatura URL-urile din Cache"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "La moda %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Popular %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Actualizate recent %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Recomandate %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Colectia mea %s"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Favoritele mele"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Abonarile mele"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Lista mea de vazut"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Listele mele"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Alte liste"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Episoadele mele viitoare"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Calendarul meu"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Calendar general"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Calendar premiere"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Cautare"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Cautari recente"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Cautari salvate"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Reimprospatare fortata"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Sterge tot %s"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Se forteaza reimprospatarea"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Reimprospatare fortata completa"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Muta in sus"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Muta in jos"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Muta la..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Introduce pozitie npia (1 - %s)"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Rasfoieste Sezoanele"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Activ"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Sezon"
+

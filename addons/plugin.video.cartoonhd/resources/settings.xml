@@ -1,0 +1,9 @@
+<settings>
+<category label="Settings">
+	<setting id="parental" type="bool" label="Dont Show 14+" default="true"/>
+	<setting id="sort" type="bool" label="Sort Alphabetically" default="false"/>
+	<setting id="auto-view" type="bool" label="Enable Automatic View" default="false"/>
+	<setting id="default" type="number" label="Default" default="50" enable="!eq(-1,false)"/>
+	<setting id="movies" type="number" label="Movie Link View" default="500" enable="!eq(-1,false)"/>
+</category>
+</settings>

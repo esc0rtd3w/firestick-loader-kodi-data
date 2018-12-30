@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="9998">
+    <defaultcontrol always="false">200</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>385</posx>
+        <posy>35</posy>
+    </coordinates>
+    <controls>
+        <control type="group">
+            <control type="image">
+                <description>Background Image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>510</width>
+                <height>650</height>
+                <texture border="40">DialogBack2.png</texture>
+            </control>
+            <control type="image">
+                <description>Dialog Header image</description>
+                <posx>40</posx>
+                <posy>16</posy>
+                <width>450</width>
+                <height>40</height>
+                <texture>dialogheader.png</texture>
+            </control>
+            <control type="label" id="100">
+                <description>header label</description>
+                <posx>40</posx>
+                <posy>20</posy>
+                <width>450</width>
+                <height>30</height>
+                <font>font13_title</font>
+                <label>$ADDON[plugin.video.salts 30666]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>darkorange</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="button">
+                <description>Close Window button</description>
+                <posx>420</posx>
+                <posy>15</posy>
+                <width>64</width>
+                <height>32</height>
+                <label>-</label>
+                <font>-</font>
+                <onclick>PreviousMenu</onclick>
+                <texturefocus>DialogCloseButton-focus.png</texturefocus>
+                <texturenofocus>DialogCloseButton.png</texturenofocus>
+                <visible>system.getbool(input.enablemouse)</visible>
+            </control>
+        </control>
+        <control type="grouplist" id="9000">
+            <left>20</left>
+            <top>60</top>
+            <width>470</width>
+            <height>570</height>
+            <itemgap>-5</itemgap>
+            <align>top</align>
+            <orientation>vertical</orientation>
+            <ondown>200</ondown>
+            <onleft>200</onleft>
+            <onup>201</onup>
+            <onleft>201</onleft>
+            <control type="radiobutton" id="302">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30232]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="303">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30233]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="304">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30234]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="305">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30235]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="306">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30236]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="307">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30237]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="308">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30238]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="309">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30239]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="310">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <radioposx>380</radioposx>
+                <label>$ADDON[plugin.video.salts 30240]</label>
+                <font>font12</font>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="311">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <label>$ADDON[plugin.video.salts 30241]</label>
+                <font>font12</font>
+                <radioposx>380</radioposx>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="312">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <label>$ADDON[plugin.video.salts 30242]</label>
+                <font>font12</font>
+                <radioposx>380</radioposx>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="313">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <label>$ADDON[plugin.video.salts 30243]</label>
+                <font>font12</font>
+                <radioposx>380</radioposx>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="314">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <label>$ADDON[plugin.video.salts 30280]</label>
+                <font>font12</font>
+                <radioposx>380</radioposx>
+                <include>DefaultSettingButton</include>
+            </control>
+            <control type="radiobutton" id="315">
+                <width>470</width>
+                <height>40</height>
+                <textwidth>470</textwidth>
+                <textoffsetx>10</textoffsetx>
+                <radioheight>45</radioheight>
+                <label>$ADDON[plugin.video.salts 30244]</label>
+                <font>font12</font>
+                <radioposx>380</radioposx>
+                <include>DefaultSettingButton</include>
+            </control>
+        </control>
+        <control type="group" id="9001">
+            <control type="button" id="200">
+                <description>Continue Button (Krypton)</description>
+                <posx>30</posx>
+                <posy>550</posy>
+                <width>220</width>
+                <height>90</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$ADDON[plugin.video.salts 30667]</label>
+                <font>font12_title</font>
+                <textoffsetx>10</textoffsetx>
+                <onup>9000</onup>
+                <ondown>201</ondown>
+                <onright>201</onright>
+                <onleft>900</onleft>
+                <visible>String.StartsWith(System.BuildVersion, 17)|String.StartsWith(System.BuildVersion, 18)</visible>
+            </control>
+            <control type="button" id="200">
+                <description>Continue Button (Jarvis)</description>
+                <posx>30</posx>
+                <posy>575</posy>
+                <width>220</width>
+                <height>45</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$ADDON[plugin.video.salts 30667]</label>
+                <font>font12_title</font>
+                <textoffsetx>10</textoffsetx>
+                <onup>9000</onup>
+                <ondown>201</ondown>
+                <onright>201</onright>
+                <onleft>900</onleft>
+                <visible>![SubString(System.BuildVersion,17,left)|SubString(System.BuildVersion,18,left)]</visible>
+            </control>
+            <control type="button" id="201">
+                <description>Cancel Button (Krypton)</description>
+                <posx>260</posx>
+                <posy>550</posy>
+                <width>220</width>
+                <height>90</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$ADDON[plugin.video.salts 30668]</label>
+                <font>font12_title</font>
+                <textoffsetx>10</textoffsetx>
+                <onup>200</onup>
+                <onleft>200</onleft>
+                <ondown>9000</ondown>
+                <onright>9000</onright>
+                <visible>String.StartsWith(System.BuildVersion, 17)|String.StartsWith(System.BuildVersion, 18)</visible>
+            </control>
+            <control type="button" id="201">
+                <description>Cancel Button (Jarvis)</description>
+                <posx>260</posx>
+                <posy>575</posy>
+                <width>220</width>
+                <height>45</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$ADDON[plugin.video.salts 30668]</label>
+                <font>font12_title</font>
+                <textoffsetx>10</textoffsetx>
+                <onup>200</onup>
+                <onleft>200</onleft>
+                <ondown>9000</ondown>
+                <onright>9000</onright>
+                <visible>![SubString(System.BuildVersion,17,left)|SubString(System.BuildVersion,18,left)]</visible>
+            </control>
+        </control>
+    </controls>
+</window>

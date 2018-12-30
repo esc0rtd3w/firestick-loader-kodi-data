@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Main Settings">
+		<setting id="Adult" type="text" label="Adult Password:" default="" visible="true"/>
+		<setting id="Intro_Vid" type="bool" label="Intro Video after update" default="true"/>
+		<setting id="View_Type" type="select" label="View Type" values="Classic|Menu|IMDB|TV Shows|Movies|Sport|Music|Kids|24/7|Docs|Live|Adult" default="Menu" />
+		<setting id="type_select" type="select" label="TV Guide Type" values="Select|Popular|Freeview|Sky|Virgin XL|Freesat|BT" default="Select" />
+		<setting id="cat_select" type="select" label="TV Guide Category" values="Show Menu|All|Comedy|Sports|Music|Film|Soap|Kids|Drama|Talk show|Game show|Sci-fi|Documentary|Motor|Horror" default="All" />
+		<setting id="Porn_Pass" type="text" default="analbleaching" visible="false"/>
+    </category>
+    <category label="Personalise Main Menu">
+		<setting id="Quantum" type="bool" label="Quantum" default="true"/>
+		<setting id="apprentice" type="bool" label="Apprentice" default="true"/>
+		<setting id="Pandoras_Box" type="bool" label="Pandoras Box" default="false"/>
+		<setting id="Pyramid" type="bool" label="Pyramid" default="true"/>
+		<setting id="Freeview" type="bool" label="Freeview" default="true"/>
+		<setting id="Brettus_Anime" type="bool" label="Brettus Anime" default="true"/>
+		<setting id="Oblivion" type="bool" label="Oblivion" default="false"/>
+		<setting id="Tigen's_World" type="bool" label="Tigen's World" default="false"/>
+		<setting id="Supremacy" type="bool" label="Supremacy" default="true"/>
+		<setting id="Freedom" type="bool" label="Freedom" default="true"/>
+		<setting id="Renegades" type="bool" label="Renegades" default="true"/>
+		<setting id="Just_For_Him" type="bool" label="Just for him" default="true"/>
+		<setting id="BAMF" type="bool" label="BAMF" default="true"/>
+		<setting id="Quicksilver" type="bool" label="Quicksilver" default="true"/>
+		<setting id="Rays_Ravers" type="bool" label="Rays Ravers" default="false"/>
+		<setting id="Silent_Hunter" type="bool" label="Silent Hunter" default="true"/>
+		<setting id="Dojo" type="bool" label="Dojo Streams" default="true"/>
+		<setting id="Cerberus" type="bool" label="Cerberus" default="true"/>
+		<setting id="Ultra" type="bool" label="Ultra" default="true"/>
+		<setting id="Fido" type="bool" label="Fido" default="true"/>
+		<setting id="Midnight" type="bool" label="Midnight Society" default="true"/>
+		<setting id="Deliverance" type="bool" label="Deliverance" default="true"/>
+		<setting id="TV_Guide" type="bool" label="TV Guide" default="true"/>
+		<setting id="Today's_Football" type="bool" label="Today's Football" default="true"/>
+		<setting id="Latest_Episodes" type="bool" label="Latest Episodes" default="true"/>
+		<setting id="Recent_Movies" type="bool" label="Recent Movies" default="true"/>
+		<setting id="Favourites" type="bool" label="Favourites" default="true"/>
+		<setting id="Search" type="bool" label="Search" default="true"/>
+    </category>
+    <category label="Select Search Sources">
+		<setting id="Origin_Search" type="bool" label="Quantum Search" default="true"/>
+		<setting id="Pandoras_Box_Search" type="bool" label="Pandoras Box Search" default="false"/>
+		<setting id="Pyramid_Search" type="bool" label="Pyramid Search" default="true"/>
+		<setting id="Freeview_Search" type="bool" label="Freeview Search" default="true"/>
+		<setting id="Brettus_Anime_Search" type="bool" label="Brettus Anime Search" default="true"/>
+		<setting id="Oblivion_Search" type="bool" label="Oblivion Search" default="false"/>
+		<setting id="Tigen's_World_Search" type="bool" label="Tigen's World Search" default="false"/>
+		<setting id="Cold_As_Ice_Search" type="bool" label="Cold as Ice Search" default="true"/>
+		<setting id="Supremacy_Search" type="bool" label="Supremacy Search" default="true"/>
+		<setting id="BAMF_Search" type="bool" label="BAMF Search" default="true"/>
+		<setting id="Quicksilver_Search" type="bool" label="Quicksilver Search" default="true"/>
+		<setting id="Silent_Hunter_Search" type="bool" label="Silent Hunter" default="true"/>
+		<setting id="Dojo_Search" type="bool" label="Dojo Streams" default="false"/>
+		<setting id="Reaper_Search" type="bool" label="Reaper" default="true"/>
+		<setting id="Ultra_Search" type="bool" label="Ultra" default="true"/>
+		<setting id="Vendetta_Search" type="bool" label="Vendetta" default="true"/>
+    </category>	
+	<category label="Vendetta Sources">
+        <setting label="Max stream results timeout" type="slider" id="Results" subsetting="true" default="50" range="5,5,2000" option="int" />
+        <setting label="Max Ingenious lists checked" type="slider" id="Sources" subsetting="true" default="30" range="5,5,150" option="int" />
+		<setting id="Freeview" type="bool" label="Freeview" default="true"/>
+		<setting id="Ingenious" type="bool" label="Ingenious" default="true"/>
+		<setting id="Mama_HD" type="bool" label="Mama HD" default="true"/>
+		<setting id="Live_Online" type="bool" label="Live Online" default="true"/>
+		<setting id="Shadow" type="bool" label="Shadow" default="true"/>
+		<setting id="IPTVsat" type="bool" label="IPTVsat" default="true"/>
+		<setting id="IPTVUrl" type="bool" label="IPTVUrl" default="true"/>
+		<setting id="Freeworld" type="bool" label="Freeworld" default="true"/>
+    </category>	
+	<category label="Freeview General">
+		<setting id="list_all" type="bool" label="List All Possible Sources" default="true"/>
+		<setting id="Only_Film" type="bool" label="Select all available Film On Source" default="false"/>
+	</category>
+	<category label="FreeView Preferred Sources">
+		<setting id="four_music" type="labelenum" label="4Music" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="five_star" type="labelenum" label="5*" values="FilmOn|Off" default="FilmOn" />
+		<setting id="five_usa" type="labelenum" label="5USA" values="FilmOn|Off" default="FilmOn" />
+		<setting id="al_jazeera" type="labelenum" label="Al Jazeera" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="bbc_four" type="labelenum" label="BBC Four" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_news" type="labelenum" label="BBC News" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_one" type="labelenum" label="BBC One" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_par" type="labelenum" label="BBC Parliament" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_two" type="labelenum" label="BBC Two" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="blaze" type="labelenum" label="Blaze" values="Direct|Off" default="Direct" />
+		<setting id="bloomberg" type="labelenum" label="Bloomberg" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="the_box" type="labelenum" label="The Box" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="box_hits" type="labelenum" label="Box Hits" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="box_up" type="labelenum" label="Box Upfront" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="capital" type="labelenum" label="Capital TV" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="cbbc" type="labelenum" label="CBBC" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="cbeebies" type="labelenum" label="CBeebies" values="BBC iPlayer|TVPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="cbs_a" type="labelenum" label="CBS Action" values="FilmOn|Off" default="FilmOn" />
+		<setting id="cbs_d" type="labelenum" label="CBS Drama" values="FilmOn|Off" default="FilmOn" />
+		<setting id="cbs_r" type="labelenum" label="CBS Reality" values="FilmOn|Off" default="FilmOn" />
+		<setting id="cbs_r+1" type="labelenum" label="CBS Reality+1" values="FilmOn|Off" default="FilmOn" />
+		<setting id="channel_4" type="labelenum" label="Channel 4" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="channel_5" type="labelenum" label="Channel 5" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="channel_aka" type="labelenum" label="Channel AKA" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="chilled" type="labelenum" label="Chilled" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="citv" type="labelenum" label="CITV" values="ITV Hub|Off" default="ITV Hub" />
+		<setting id="clubbingtv" type="labelenum" label="Clubbing TV" values="FilmOn|Off" default="FilmOn" />
+		<setting id="clubland" type="labelenum" label="Clubland" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="cnn" type="labelenum" label="CNN International" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="community" type="labelenum" label="Community Channel" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="craft_chan" type="labelenum" label="The Craft Channel" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="dave" type="labelenum" label="Dave" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="dave_ja_vu" type="labelenum" label="Dave ja vu" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="drama" type="labelenum" label="Drama" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="e4" type="labelenum" label="E4" values="FilmOn|Off" default="FilmOn" />
+		<setting id="film4" type="labelenum" label="Film4" values="FilmOn|Off" default="FilmOn" />
+		<setting id="food_net" type="labelenum" label="Food Network" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="food_net+1" type="labelenum" label="Food Network+1" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="forces_tv" type="labelenum" label="Forces TV" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="heart" type="labelenum" label="Heart TV" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="home" type="labelenum" label="Home" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="horror_ch" type="labelenum" label="Horror Channel" values="FilmOn|Off" default="FilmOn" />
+		<setting id="itv1" type="labelenum" label="ITV1" values="ITV Hub|TVPlayer|FilmOn|Off" default="ITV Hub" />
+		<setting id="itv1+1" type="labelenum" label="ITV1+1" values="FilmOn|Off" default="FilmOn" />
+		<setting id="itv2" type="labelenum" label="ITV2" values="ITV Hub|FilmOn|Off" default="ITV Hub" />
+		<setting id="itv2+1" type="labelenum" label="ITV2+1" values="FilmOn|Off" default="FilmOn" />
+		<setting id="itv3" type="labelenum" label="ITV3" values="ITV Hub|FilmOn|Off" default="ITV Hub" />
+		<setting id="itv3+1" type="labelenum" label="ITV3+1" values="FilmOn|Off" default="FilmOn" />
+		<setting id="itv4" type="labelenum" label="ITV4" values="ITV Hub|FilmOn|Off" default="ITV Hub" />
+		<setting id="itv4+1" type="labelenum" label="ITV4+1" values="FilmOn|Off" default="FilmOn" />
+		<setting id="itvbe" type="labelenum" label="ITVBe" values="ITV Hub|FilmOn|Off" default="ITV Hub" />
+		<setting id="tjc" type="labelenum" label="The Jewllery Channel" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="kic" type="labelenum" label="Keep It Country" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="kerrang" type="labelenum" label="Kerrang!" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="kiss" type="labelenum" label="Kiss" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="kix" type="labelenum" label="Kix!" values="FilmOn|Off" default="FilmOn" />
+		<setting id="london_live" type="labelenum" label="London Live" values="Direct|Off" default="Direct" />
+		<setting id="magic" type="labelenum" label="Magic" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="more4" type="labelenum" label="More4" values="FilmOn|Off" default="FilmOn" />
+		<setting id="now" type="labelenum" label="Magic" values="Direct|TVPlayer|Off" default="Direct" />
+		<setting id="pick" type="labelenum" label="Pick" values="FilmOn|Off" default="FilmOn" />
+		<setting id="pop" type="labelenum" label="POP" values="FilmOn|Off" default="FilmOn" />
+		<setting id="quest" type="labelenum" label="QUEST" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="quest+1" type="labelenum" label="QUEST+1" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="qvc" type="labelenum" label="QVC" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="qvc_b" type="labelenum" label="QVC Beauty" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="qvc_e" type="labelenum" label="QVC Extra" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="qvc_p" type="labelenum" label="QVC Plus" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="qvc_s" type="labelenum" label="QVC Style" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="really" type="labelenum" label="Really" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="sky_news" type="labelenum" label="Sky News" values="YouTube|Off" default="YouTube" />
+		<setting id="tiny_pop" type="labelenum" label="Tiny Pop" values="FilmOn|Off" default="FilmOn" />
+		<setting id="travel" type="labelenum" label="Travel Channel" values="TVPlayer|Off" default="TVPlayer" />
+		<setting id="travel+1" type="labelenum" label="Travel Channel+1" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="trutv" type="labelenum" label="truTV" values="Direct|TVPlayer|FilmOn|Off" default="Direct" />
+		<setting id="yesterday" type="labelenum" label="Yesterday" values="TVPlayer|FilmOn|Off" default="TVPlayer" />
+		<setting id="yesterday+1" type="labelenum" label="Yesterday+1" values="TVPlayer|Off" default="TVPlayer" />
+	</category>
+	<category label=" FreeView Regional">
+		<setting id="bbc_alba" type="labelenum" label="BBC Alba" values="BBC iPlayer|TVPlayer|Off" default="BBC iPlayer" />
+		<setting id="bbc_one_scotland" type="labelenum" label="BBC One Scotland" values="BBC iPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_one_wales" type="labelenum" label="BBC One Wales" values="BBC iPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_one_ni" type="labelenum" label="BBC One Northern Ireland" values="BBC iPlayer|FilmOn|Off" default="BBC iPlayer" />
+		<setting id="bbc_two_scotland" type="labelenum" label="BBC Two Scotland" values="BBC iPlayer|Off" default="BBC iPlayer" />
+		<setting id="bbc_two_wales" type="labelenum" label="BBC Two Wales" values="BBC iPlayer|Off" default="BBC iPlayer" />
+		<setting id="bbc_two_ni" type="labelenum" label="BBC Two Northern Ireland" values="BBC iPlayer|Off" default="BBC iPlayer" />
+		<setting id="s4c" type="labelenum" label="S4C" values="BBC iPlayer|TVPlayer|Off" default="BBC iPlayer" />
+	</category>
+	<category label="Auto-View">
+		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
+		<setting id="MAIN" type="number" label="MAIN" default="500" enable="!eq(-1,false)"/>
+		<setting id="INFO" type="number" label="INFO" default="515" enable="!eq(-1,false)"/>
+		<setting id="INFO2" type="number" label="INFO2" default="503" enable="!eq(-1,false)"/>
+        <setting id="message" type="bool" label="for messages" default="false" visible="false"/>
+        <setting id="pop_time" type="text" label="For POP UP" default="2000-01-01 00:00:00" visible="false"/>
+        <setting id="ga_time" type="text" label="GA Called" default="2000-01-01 00:00:00" visible="false"/>
+        <setting id="visitor_ga" type="text" label="GA visitor" default="" visible="false"/>
+   	</category>
+</settings>

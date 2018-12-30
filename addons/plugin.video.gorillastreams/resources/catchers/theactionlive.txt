@@ -1,0 +1,22 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=TheActionLive - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://theactionlive.com/livegamecr.php?id=%s&width=620&height=490&stretching=
+
+item_info_name=playUrl
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*id=['"]([^"']+).*','@REFERER@','id')
+item_info_build=http://biggestplayer.me/streamcr.php?id=%s&width=620&height=490
+
+item_info_name=file
+item_info_from=playUrl
+item_info_convert=getInfo('%s','.*(http[^"']+\.m3u8[^"']*).*','@pageUrl@')
+item_info_convert=resolve
+item_info_build=%s
+
+item_info_name=url
+item_info_from=file+'|Referer=http://p.jwpcdn.com/6/12/jwplayer.flash.swf&User-Agent=Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36
+item_info_build=%s

@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=SoccerJumboTV - %s
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://up4free.com/streamn.php?id=000%s','.*?id='([^'"]+)'.*','@REFERER@')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=tmp
+item_info_build=http://goodcast.pw/streamn.php?id=%s&width=640&height=460
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*"([^"]+\.swf)".*?['"]file=([^&]+).*?streamer=([^&]+).*','http://up4free.com/','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 token=Fo5_n0w?U.rA6l3-70w47ch timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

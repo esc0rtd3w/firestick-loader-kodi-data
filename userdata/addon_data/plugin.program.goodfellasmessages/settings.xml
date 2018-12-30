@@ -1,0 +1,6 @@
+<settings>
+    <setting id="noteImage" value="5" />
+    <setting id="noteMessage" value="[B][COLOR orange]Update 9-28-2016[/COLOR] [COLOR red]Goodfellas Build and Addon Updated 9-26-2016[/COLOR][/B]&#x0A;[B][COLOR yellow]Donations Can be Made @www.paypal.me/GFDonation[/COLOR][/B]&#x0A;Get the Build http://www.goodfellasteam.com/wizard &#x0A;Get The Goodfellas Add on http://www.goodfellasteam.com/Repository&#x0A;[B][COLOR yellow]LIVE.TEAMGOODFELLAS.COM 7PM ET. 9-28-2016[/COLOR][/B]&#x0A;Join us Ask Questions and Get Live help&#x0A;[B][COLOR white]JOIN OUR FACEBOOK GROUP www.bit.do/goodfellasfacebook[/COLOR][/B]&#x0A;[B][COLOR green]WWW.TEAMGOODFELLAS.COM[/COLOR][/B]&#x0A;[COLOR red] 404 errors using Goodfellas Build please update build to fix this issue, If you get this error using a different Build then you need the build maker to update their build.&#x0A;[COLOR white]Thank you [COLOR gold]THE GOODFELLAS[/COLOR]" />
+    <setting id="noteType" value="t" />
+    <setting id="notifications-on-startup" value="false" />
+</settings>

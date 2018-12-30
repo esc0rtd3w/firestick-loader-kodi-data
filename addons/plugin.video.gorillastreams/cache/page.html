@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang= "en" >
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="pragma" content="no-cache" />
+<title>Watch Live TV online, Live Sport online, Live USA TV channels, Live UK TV channels  </title>
+<meta name="keywords" content="Watch Live TV online, Live Sport online, Live USA TV channels, Live UK TV channels  " />
+<meta name="description" content="Watch Live TV online, Live Sport online, Live USA TV channels, Live UK TV channels  " />
+<meta property="fb:app_id" content="177032239011605" />
+<link href="/style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" / >
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>     
+<script type="text/javascript">
+$.ajaxSetup({
+    // Disable caching of AJAX responses
+    cache: false
+})
+
+function rateIt(id, rating) {
+    $.post('rating.php', {'id': id, 'rating':rating}, function(html) {
+        var newrating = html*25;
+        $('#currentrating'+id).css('width',newrating+'px');
+	alert("Thank you for your rating.");
+    });
+    return false;
+}
+
+function addParameter(url, param, value) {
+    var val = new RegExp('(\\?|\\&)' + param + '=.*?(?=(;|&|$))'),
+       qstring = /\?.+$/;
+    if (val.test(url)) {
+       return url.replace(val, '$1' + param + '=' + value);
+    }
+    else if (qstring.test(url)) {
+       return url + '&' + param + '=' + value;
+    }
+    else {
+       return url + '?' + param + '=' + value;
+    }
+}
+</script>
+
+
+</head>
+<body>
+<div id="wrapper">
+<table border="0" style="width:100%;">
+<tr>
+<td>        <center>
+                <div id="adsHeader">
+                                </div>
+                </center>
+</td>
+<td style="position:relative;top:0px;right:25px;"></td>
+</tr>
+</table>
+	<div id="header">
+		<div id="logo"></div>
+<center>
+
+<div id="loginform" style="padding-top:10px;border:1px solid white;width:600px;float:right;">
+<form action="/login.php" method="post" id="frm">
+<table border="0">
+<tr>
+<td>
+<input type="text" name="username" placeholder="Username" required="required" width="20px" />
+</td>
+<td>
+<input type="password" name="password" placeholder="Password" required="required" width="20px"  />
+</td>
+<td>
+<input type="hidden" name="accessed_by" value="web" />
+<input type="hidden" name="submit" value="Login" />
+<input type="image" src="/images/login.png" />
+<a href="/fbreglog.php"><img src="/images/facebook.png" style="margin-bottom:2px;" /></a>
+<a href="/twreglog.php"><img src="/images/twitter.png" style="margin-bottom:2px;" /></a>
+<a href="/register.php"><img src="/images/sign-up.png" /></a>
+</td>
+</tr>
+</table>
+</form>
+</div>
+
+<div style="padding-top: 10px;font-style:bold;float:right;">
+Watch Live TV online, Live Sport online, Live USA TV channels, Live UK TV channels.
+</div>
+
+
+
+</center>	
+</div>
+	<div id="nav">
+																			
+		<ul class="menu">
+			<li><a href="http://www.streamlive.to" title="StreamLive.to"><span>Home</span></a></li>
+<li><a href="http://www.streamlive.to/tv-guide" title="StreamLive.to's TV guide"><span>TV Guide</span></a></li>
+<li><a href="http://www.streamlive.to/broadcast" title="Broadcast Live Channels"><span>Broadcast</span></a></li>
+
+<li><a href="http://www.streamlive.to/premium" title="Upgrade to Premium Account to Watch Live Internet TV"><span>Premium</span></a></li>
+<li><a href="http://forum.streamlive.to" title="StreamLive.to's Forum"><span>Forum</span></a></li>
+<li><a href="http://forum.streamlive.to/resources/" title="Download Apps"><span>Downloads</span></a></li>
+
+<li><a href="http://www.streamlive.to/login" title="Log in"><span></span></a></li>
+<li><a href="http://www.streamlive.to/register" title="Register a free account"><span></span></a></li>
+		</ul>
+		<div id="search">
+			<form method="get" action="http://www.streamlive.to/">
+				<input type="text" name="q" value="Find a channel" onFocus="if (this.value=='Find a channel') this.value=''"/> <input type="submit" value="" />
+			</form>
+		</div>
+	</div>
+	<div id="content">
+
+<div id="fb-root"></div>
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1%26appId=272857196139616";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+<div id="MarketGidScriptRootC28436" style="min-height:215px;"> <div id="MarketGidPreloadC28436"> <a href="http://mgid.com/" target="_blank">Loading...</a> </div> <script> window.MGWidgetTitle28436 = "Promoted Content"; (function(){ var D=new Date(),d=document,b='body',ce='createElement',ac='appendChild',st='style',ds='display',n='none',gi='getElementById'; var i=d[ce]('iframe');i[st][ds]=n;d[gi]("MarketGidScriptRootC28436")[ac](i);try{var iw=i.contentWindow.document;iw.open();iw.writeln("<ht"+"ml><bo"+"dy></bo"+"dy></ht"+"ml>");iw.close();var c=iw[b];} catch(e){var iw=d;var c=d[gi]("MarketGidScriptRootC28436");}var dv=iw[ce]('div');dv.id="MG_ID";dv[st][ds]=n;dv.innerHTML=28436;c[ac](dv); var s=iw[ce]('script');s.async='async';s.defer='defer';s.charset='utf-8';s.src="//jsc.mgid.com/s/t/streamlive.to.28436.js?t="+D.getYear()+D.getMonth()+D.getDate()+D.getHours();c[ac](s);})(); </script> </div> 
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("body").on("click", "#fav_img", function() {
+				  if($(this).attr("style") === "cursor:pointer; padding-left: 21px; background:url(\'/images/favorite_off.png\') left center no-repeat; margin-right: 15px;")
+					{ 
+						$.ajax({
+							type: "POST",
+							url: "/favorite_add.php",
+							data: "cid=" + $(this).attr("data-id") + "&cmd=add",
+							success: function(msg){
+								//alert( "Data Saved: " + msg );
+							}
+						});
+						summa = parseInt($(this).text());
+						summa = summa+1;
+						src = "cursor:pointer; padding-left: 21px; background:url(\'/images/favorite_on.png\') left center no-repeat; margin-right: 15px;";
+					}else{
+						$.ajax({
+							type: "POST",
+							url: "/favorite_add.php",
+							data: "cid=" + $(this).attr("data-id") + "&cmd=del",
+							success: function(msg){
+								//alert( "Data Saved: " + msg );
+							}
+						});
+						summa = parseInt($(this).text());
+						summa = summa-1;
+						src = "cursor:pointer; padding-left: 21px; background:url(\'/images/favorite_off.png\') left center no-repeat; margin-right: 15px;";
+					}
+
+				  $(this).attr("style", src);
+				  $(this).text(summa);
+				});
+			});
+		</script>
+		
+		<div id="main">
+			<div class="leftcol">
+								<h1 style="margin-bottom:15px">
+
+
+					Live TV & Sport Channel
+														</h1>
+				
+				<div style="float:left;">Public (265)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private (17)</div>				<div style="float:right;text-align:right;margin-top:15px;">
+					<label>Category:&nbsp;</label>
+					<select name="category" style="width:120px" onchange="document.location='http://www.streamlive.to/'+this.options[this.selectedIndex].value+'?q=&sort=1'">
+						<option value="">All</option>
+						<option value="Live Sport">Live Sport</option><option value="Entertainment">Entertainment</option><option value="Animation">Animation</option><option value="Lifecaster">Lifecaster</option><option value="Gaming">Gaming</option><option value="General">General</option><option value="News">News</option><option value="Music">Music</option><option value="Mobile">Mobile</option><option value="Family">Family</option><option value="Religion">Religion</option><option value="Radio">Radio</option><option value="Movies">Movies</option>					</select>
+					<label style="margin-left:10px">Language:&nbsp;</label>
+					<select name="language" style="width:120px" onchange="document.location=addParameter('http://www.streamlive.to/?q=&sort=1', 'lang', this.options[this.selectedIndex].value)">
+						<option value="">All</option>
+						<option value="1">English</option><option value="2">Spanish</option><option value="3">Portuguese</option><option value="4">French</option><option value="5">German</option><option value="6">Russian</option><option value="7">Vietnamese</option><option value="8">Italian</option><option value="9">Filipino</option><option value="10">Thai</option><option value="11">Chinese</option><option value="12">Indian</option><option value="13">Japanese</option><option value="14">Greek</option><option value="15">Dutch</option><option value="16">Swedish</option><option value="17">Unknown</option><option value="18">Korean</option><option value="19">Brazilian</option><option value="20">Indian</option><option value="21">Romanian</option><option value="22">Norwegian</option><option value="23">Arab</option>					</select>				
+					<label style="margin-left:10px">Sort by:&nbsp;</label>
+					<select name="sort" style="width:120px" onchange="document.location=addParameter('http://www.streamlive.to/?q=&sort=1', 'sort', this.options[this.selectedIndex].value)">
+						<option value="0">Default</option>
+						<option value="1" selected="selected">Current Viewers</option>
+						<option value="2">Total Views</option>
+					</select>
+				</div>
+				<br class="clear" />
+				
+				<div style="display:none">18</div>					<ul class="clist clearfix">
+													<li class="firstcol">
+								<a href="http://www.streamlive.to/view/71731/Sky_Scifi-Horror_%28HD%29" title="Sky_Scifi-Horror_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/wk4658qcki1imla_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Sky Scifi-Horror (HD)" title="Sky_Scifi-Horror_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/wk4658qcki1imla_snapshot.jpg" alt="Sky_Scifi-Horror_%28HD%29" /></noscript>
+																	</a>
+								<a href="http://www.streamlive.to/view/71731/Sky_Scifi-Horror_%28HD%29"><strong>Sky Scifi-Horror (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">9</span>
+								<span class="totalviews">491,535</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/52479/Spike_TV_%28HD%29" title="Spike_TV_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/sax2mq2alpirnww_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Spike TV (HD)" title="Spike_TV_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/sax2mq2alpirnww_snapshot.jpg" alt="Spike_TV_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/52479/Spike_TV_%28HD%29"><strong>Spike TV (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">8</span>
+								<span class="totalviews">1,659,180</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/38449/Fox_Movie_Channel" title="Fox_Movie_Channel" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/hc992q7x7cz86t9_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Fox Movie Channel" title="Fox_Movie_Channel" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/hc992q7x7cz86t9_snapshot.jpg" alt="Fox_Movie_Channel" /></noscript>
+																	</a>
+								<a href="http://www.streamlive.to/view/38449/Fox_Movie_Channel"><strong>Fox Movie Channel 
+									
+								</strong></a><br/>
+								<span class="viewers">7</span>
+								<span class="totalviews">1,618,454</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Movies">Movies</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li class="firstcol">
+								<a href="http://www.streamlive.to/view/73440/Discovery_Science_UK_%28HD%29" title="Discovery_Science_UK_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/smdxq0zsxxncn1d_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Discovery Science UK (HD)" title="Discovery_Science_UK_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/smdxq0zsxxncn1d_snapshot.jpg" alt="Discovery_Science_UK_%28HD%29" /></noscript>
+																	</a>
+								<a href="http://www.streamlive.to/view/73440/Discovery_Science_UK_%28HD%29"><strong>Discovery Science UK (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">6</span>
+								<span class="totalviews">20,118</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/46476/ABC_%28HD%29" title="ABC_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/nz7l9vc5nv1og7b_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="ABC (HD)" title="ABC_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/nz7l9vc5nv1og7b_snapshot.jpg" alt="ABC_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/46476/ABC_%28HD%29"><strong>ABC (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">6</span>
+								<span class="totalviews">794,949</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/57973/TNT_%28HD%29" title="TNT_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/7uz4als3nigi0j3_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="TNT (HD)" title="TNT_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/7uz4als3nigi0j3_snapshot.jpg" alt="TNT_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/57973/TNT_%28HD%29"><strong>TNT (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">6</span>
+								<span class="totalviews">618,046</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li class="firstcol">
+								<a href="http://www.streamlive.to/view/69109/TLC" title="TLC" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/iugceoy4o6ljhck_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="TLC" title="TLC" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/iugceoy4o6ljhck_snapshot.jpg" alt="TLC" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/69109/TLC"><strong>TLC 
+									
+								</strong></a><br/>
+								<span class="viewers">6</span>
+								<span class="totalviews">252,371</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/57956/NBC_%28HD%29" title="NBC_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/kjgkefh6la1di6g_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="NBC (HD)" title="NBC_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/kjgkefh6la1di6g_snapshot.jpg" alt="NBC_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/57956/NBC_%28HD%29"><strong>NBC (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">6</span>
+								<span class="totalviews">589,252</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/57846/Lifetime_%28HD%29" title="Lifetime_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/7b2gr554gyyth8e_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Lifetime (HD)" title="Lifetime_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/7b2gr554gyyth8e_snapshot.jpg" alt="Lifetime_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/57846/Lifetime_%28HD%29"><strong>Lifetime (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">537,174</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li class="firstcol">
+								<a href="http://www.streamlive.to/view/65833/Travel_channel_%28HD%29" title="Travel_channel_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/4aiufk0o430qt0d_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Travel channel (HD)" title="Travel_channel_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/4aiufk0o430qt0d_snapshot.jpg" alt="Travel_channel_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/65833/Travel_channel_%28HD%29"><strong>Travel channel (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">144,889</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/52506/Food_Network_%28HD%29" title="Food_Network_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/ibnnu7537h3ax6e_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Food Network (HD)" title="Food_Network_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/ibnnu7537h3ax6e_snapshot.jpg" alt="Food_Network_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/52506/Food_Network_%28HD%29"><strong>Food Network (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">215,043</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/46454/Syfy_%28HD%29" title="Syfy_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/x7uii7mll2b7lh4_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="Syfy (HD)" title="Syfy_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/x7uii7mll2b7lh4_snapshot.jpg" alt="Syfy_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/46454/Syfy_%28HD%29"><strong>Syfy (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">207,409</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li class="firstcol">
+								<a href="http://www.streamlive.to/view/57976/CBS_%28HD%29" title="CBS_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/vp4q2gonwzh2dku_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="CBS (HD)" title="CBS_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/vp4q2gonwzh2dku_snapshot.jpg" alt="CBS_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/57976/CBS_%28HD%29"><strong>CBS (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">460,924</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Entertainment">Entertainment</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/39949/History_%28HD%29" title="History_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/dhp0rpd116qyyj6_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="History (HD)" title="History_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/dhp0rpd116qyyj6_snapshot.jpg" alt="History_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/39949/History_%28HD%29"><strong>History (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">1,567,007</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/52053/HGTV_%28HD%29" title="HGTV_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/gj65q2rg18tpmut_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="HGTV (HD)" title="HGTV_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/gj65q2rg18tpmut_snapshot.jpg" alt="HGTV_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/52053/HGTV_%28HD%29"><strong>HGTV (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">341,138</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li class="firstcol">
+								<a href="http://www.streamlive.to/view/30303/ABC_Family_-_Mttvmario" title="ABC_Family_-_Mttvmario" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/vx63a0c7mxk2jt8_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="ABC Family - Mttvmario" title="ABC_Family_-_Mttvmario" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/vx63a0c7mxk2jt8_snapshot.jpg" alt="ABC_Family_-_Mttvmario" /></noscript>
+																	</a>
+								<a href="http://www.streamlive.to/view/30303/ABC_Family_-_Mttvmario"><strong>ABC Family - Mttvmario 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">1,968,113</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/General">General</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/68875/NFL_Network%28HD%29" title="NFL_Network%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/zvwjh9ctt0vdlbe_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="NFL Network(HD)" title="NFL_Network%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/zvwjh9ctt0vdlbe_snapshot.jpg" alt="NFL_Network%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/68875/NFL_Network%28HD%29"><strong>NFL Network(HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">2,014,289</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Live Sport">Live Sport</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+														<li>
+								<a href="http://www.streamlive.to/view/57977/ESPN_2_%28HD%29" title="ESPN_2_%28HD%29" class="clist-thumb">
+									<img width="200" height="128" src="//snapshots.streamlive.to/snapshots/rgyus7ao2ullmbt_snapshot.jpg" src="http://www.streamlive.to/images/1x1.trans.gif" alt="ESPN 2 (HD)" title="ESPN_2_%28HD%29" />
+									<noscript><img width="200" height="128" src="//snapshots.streamlive.to/snapshots/rgyus7ao2ullmbt_snapshot.jpg" alt="ESPN_2_%28HD%29" /></noscript>
+									<span class="premium_only">Premium Only</span>								</a>
+								<a href="http://www.streamlive.to/view/57977/ESPN_2_%28HD%29"><strong>ESPN 2 (HD) 
+									
+								</strong></a><br/>
+								<span class="viewers">5</span>
+								<span class="totalviews">493,722</span>
+								<br/>
+								<a href="http://www.streamlive.to/channels/Live Sport">Live Sport</a>&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="http://www.streamlive.to/channels?lang=1">English</a>				
+							</li>
+								
+					</ul>
+					<p align="center" class="pages"><strong>Page: </strong><span style="font-size:13px"><a href="http://www.streamlive.to/?q=&sort=1">1</a> 2 <a href="http://www.streamlive.to/?p=3&q=&sort=1">3</a> <a href="http://www.streamlive.to/?p=4&q=&sort=1">4</a> <a href="http://www.streamlive.to/?p=5&q=&sort=1">5</a> <a href="http://www.streamlive.to/?p=6&q=&sort=1">6</a> <a href="http://www.streamlive.to/?p=7&q=&sort=1">7</a> <a href="http://www.streamlive.to/?p=8&q=&sort=1">8</a> <a href="http://www.streamlive.to/?p=9&q=&sort=1">9</a> <a href="http://www.streamlive.to/?p=10&q=&sort=1">10</a> <a href="http://www.streamlive.to/?p=11&q=&sort=1">11</a> <a href="http://www.streamlive.to/?p=12&q=&sort=1">12</a> <a href="http://www.streamlive.to/?p=13&q=&sort=1">13</a> <a href="http://www.streamlive.to/?p=14&q=&sort=1">14</a> <a href="http://www.streamlive.to/?p=15&q=&sort=1">15</a></span></p>			</div>
+			<div class="rightcol">
+
+				
+<script type="text/javascript">  
+	function redirect()  {    
+		//Below you can change the redirect Link    
+		var url = "http://www.streamlive.to/premium";
+		window.open(url,'_top');  
+	}  
+	function hide(id)  {    
+		document.getElementById(id).style.display = "none";  
+	}
+</script>
+
+
+<div id="WarningCodec">
+  <div id="WarningCodecBanner" style="z-index: 99999; position: fixed; width: 100%; background-color: rgb(251, 236, 173); overflow: hidden; border-bottom: 1px solid rgb(112, 112, 112); top: 0px; left: 0px; margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana, Geneva, sans-serif; background-position: initial initial; background-repeat: initial initial;">
+    <div style="padding-top:5px;float:left;width:100%;font-size:13px;line-height:26px;height:31px;top: 12px;z-index:9999;text-align:left">
+     <span style="background-color:CadetBlue;color:white;padding:3px 3px 3px 3px;border-radius:3px;">Premium Membership</span> &nbsp;
+      
+      NO ADS, NO LAG, NO POP UPs, PRIVATE DEDICATED SERVERS, HD CHANNELS.
+      
+      <input id="ClickHere" type="button" style="padding-left:3px;" name="submit" value="Upgrade to Premium for $15.99/month or $99.88/year" onclick="redirect()">
+      <div class="close" style="float:right;margin-right:10px;color:#000;cursor:pointer;" onclick="hide('WarningCodec')">X</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-transform:uppercase;margin-bottom:5px;font-size:xx-large;">Upgrade to Premium</div><br />
+<div style="height:auto;margin-bottom:10px;font-size:18px;">
+<p>NO ADS, NO POP UP, PRIVATE DEDICATED SERVERS, HD CHANNELS. </p>
+<p>Enjoy real TV with all HD channels on Private servers, so no lag at all</p>
+<p><a href="//www.streamlive.to/account">Uprade to a Premium account for $15.99/month, or $99.88/year</a></p><br />
+</div>
+
+
+
+<script type='text/javascript' src='//propellerpops.com/apu.php?zoneid=2751&lim=12'></script>
+
+
+
+
+<script type="text/javascript">
+  var _pop = _pop || [];
+  _pop.push(['siteId', 465781]);
+  _pop.push(['minBid', 0.000000]);
+  _pop.push(['popundersPerIP', 0]);
+  _pop.push(['delayBetween', 0]);
+  _pop.push(['default', false]);
+  _pop.push(['defaultPerDay', 0]);
+  _pop.push(['topmostLayer', false]);
+  (function() {
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    var s = document.getElementsByTagName('script')[0]; 
+    pa.src = '//c1.popads.net/pop.js';
+    pa.onerror = function() {
+      var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+      sa.src = '//c2.popads.net/pop.js';
+      s.parentNode.insertBefore(sa, s);
+    };
+    s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+
+
+<div class="sli" style="position:fixed;z-index:-10000;">
+<div class="pub_300x250 pub_300x250m pub_728x90 text-ad textAd text_ad text_ads text-ads text-ad-links">
+<div style="z-index:-10000;height:300px; width:250px;"></div>
+</div>
+</div>
+
+<div class="pp"></div>
+
+<script type="text/javascript" src="<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /d.php was not found on this server.</p>
+</body></html>
+"></script>
+
+
+
+
+
+<div class="nn"></div>
+		
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/black-tie/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+<span class="logged_user_id" id=""></span>
+
+<h2 style="margin-left: 10px">Live Sport Schedule Today. US Eastern Time</h2>
+
+<div id="sportmain" style="margin-left: 10px;">
+
+<div style="text-align: center" id="sport-options">
+	Events: 	<select name="ev_filter" id="ev_filter">
+					<option value="all"> All </option>
+					<option value="live"> Live </option>
+					<option value="today" selected="selected"> Today </option>
+					<option value="upcoming"> Upcoming </option>
+					</select> &nbsp;&nbsp;
+	Category: 	<select name="s_cat" id="s_cat">
+					<option name="s_cat" value=""> All </option><option value="6"> Baseball </option><option value="7"> Basketball </option><option value="8"> Boxing </option><option value="17"> Cricket </option><option value="9"> Darts </option><option value="10"> Football </option><option value="11"> Golf </option><option value="12"> Hockey </option><option value="13"> Motor </option><option value="16"> Others </option><option value="14"> Racing </option><option value="1"> Soccer </option><option value="15"> Tennis </option><option value="3"> Wrestling </option>				</select> &nbsp;&nbsp;
+	Sort By:		<select name="s_order" id="s_order">
+					<option value="name_asc"> Name ASC </option>
+					<option value="name_desc"> Name DESC </option>
+					<option value="date_asc" selected="selected"> Time ASC </option>
+					<option value="date_desc"> Time DESC </option>
+				</select>
+</div>
+
+<div id="sportlinks" style="margin-top: 35px">
+
+		<div style="float: left">
+	<img height="32" width="32" src="http://www.streamlive.to/images/sport/Boxing.png" />
+	</div>
+	<div id="single-sport" style="margin-left: 40px; margin-bottom: 20px">
+	(Jul 11) 12:00 PM: Boxing | Sergey Kovalev vs. Isaac Chilemba	<br />
+	<a href="http://www.streamlive.to/view/68719/Box_Nation_%28HD%29" />Box Nation (HD)</a></div>	
+		<div style="float: left">
+	<img height="32" width="32" src="http://www.streamlive.to/images/sport/Boxing.png" />
+	</div>
+	<div id="single-sport" style="margin-left: 40px; margin-bottom: 20px">
+	(Jul 11) 08:00 PM: UFC/Fighting | WWE Monday Night Raw	<br />
+	<a href="http://www.streamlive.to/view/73734/Sky_Sport_5" />Sky Sport 5</a> | <a href="http://www.streamlive.to/view/68716/Sky_Sport_5_%28HD%29" />Sky Sport 5 (HD)</a> | <a href="http://www.streamlive.to/view/73724/USA_Network" />USA Network</a> | <a href="http://www.streamlive.to/view/38768/USA_Network_%28HD%29" />USA Network (HD)</a><br /></div>	
+		<div style="float: left">
+	<img height="32" width="32" src="http://www.streamlive.to/images/sport/Basketball.png" />
+	</div>
+	<div id="single-sport" style="margin-left: 40px; margin-bottom: 20px">
+	(Jul 11) 08:00 PM: NBA | NBA Summer League 2016	<br />
+	<a href="http://www.streamlive.to/view/73716/ESPN_2" />ESPN 2</a> | <a href="http://www.streamlive.to/view/57977/ESPN_2_%28HD%29" />ESPN 2 (HD)</a></div>		
+	</div>
+</div>
+
+<div id="add-link-dialog" title="Add Channel">
+		Select channel(s) below and click submit.
+</div>
+
+<script>
+	$(document).ready(function(){
+		$("#ev_filter,#s_cat,#s_order").live('change', function() { 
+			var paramName = $(this).attr('id');
+			var paramValue = $(this).val();
+			var url = window.location.href;
+			url = url.replace("#", "");
+			
+			if (url.indexOf(paramName + "=") >= 0)
+			{
+				var prefix = url.substring(0, url.indexOf(paramName));
+				var suffix = url.substring(url.indexOf(paramName));
+				suffix = suffix.substring(suffix.indexOf("=") + 1);
+				suffix = (suffix.indexOf("&") >= 0) ? suffix.substring(suffix.indexOf("&")) : "";
+				url = prefix + paramName + "=" + paramValue + suffix;
+			}
+			else
+			{
+			if (url.indexOf("?") < 0)
+				url += "?" + paramName + "=" + paramValue;
+			else
+				url += "&" + paramName + "=" + paramValue;
+			}
+			window.location.href = url;
+
+		});
+	});
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("select[id^=preset_]").live('change', function() { 
+			var id = $(this).attr('id');
+			var num = id.replace("preset_", "");
+			var preset_id = $('#'+id).val();
+			
+			if(preset_id != 0)
+			{
+				$.ajax({
+					type:'post',
+					url:'sports_ajax_fetch_preset_channels.php',
+					data:{id:preset_id},
+					cache:false,
+					success: function(returndata){
+						$('#event_links_'+num).html(returndata);
+					}
+				});
+			}
+		});
+	});
+</script>
+
+ <script>
+	 $(document).ready(function() {
+		$( "#add-link-dialog" ).dialog({
+			autoOpen: false, 
+			modal: true,
+			height: 'auto',
+			width: 'auto',
+			//position: 'top'
+		});
+		
+		$( ".add-link" ).click(function() {
+		   $("#add-link-dialog").dialog( "open" );
+		   
+		   var event_id = $(this).attr('id');
+			var user_id = $('.logged_user_id').attr('id');
+		   
+			$.ajax({
+				type:'get',
+				url:'/ajax/user-channels-form.php?user_id='+user_id+'&event_id='+event_id,
+				cache:false,
+				success: function(returndata){
+					$('#add-link-dialog').html(returndata);
+				}
+			});
+			return false;
+		});
+		
+
+	 });
+  </script>
+  
+ <script>
+ $(document).ready(function() {
+	 $('#remove-user-link').live('click', function() {
+		 
+		var event_id = $(this).data('evid');
+		var user_url = $(this).data('url');
+		user_url = encodeURIComponent(user_url);
+		var user_id = $('.logged_user_id').attr('id');
+		var removeURL = '/ajax/user-channels-form.php?action=delete&user_url='+user_url+'&event_id='+event_id+'&user_id='+user_id;
+		
+		$.ajax({
+					type:'get',
+					url: removeURL,
+					cache:false,
+					success: function(){
+						alert('Channel has been removed.');
+						curl = location.href;
+						curl = curl.replace("#", "");
+						
+						if(curl.indexOf("=") > -1)
+							location.href = curl + '&' + Math.random();
+						else if(curl.indexOf("?") > -1)
+							location.href = curl + '?' + Math.random();
+						else
+							location.href = curl + '?&' + Math.random();
+					}
+		});
+		return false;
+	});
+});
+ </script>
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fstreamlive.to%2F&tabs=timeline&width=550&height=450&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="550" height="450" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+				<br/><br/>
+				
+
+		
+			</div>
+        </div>
+<script>
+jQuery(document).ready(function($) {
+	$(window).load(function() {	
+		$( 'img[data-lazy-src]' ).each(function() {
+			this.src = $(this).attr('data-lazy-src');
+			$(this).fadeIn();
+		});
+	});
+});
+</script>
+
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div id="footer">
+<p>Copyright 2012 - <a href="http://www.streamlive.to/term-of-service">Term of Service</a> | <a href="http://www.streamlive.to/privacy-notice">Privacy Notice</a> | <a href="http://www.streamlive.to/DMCA-guidelines">DMCA</a> | <a href="http://www.streamlive.to/reward">Rewards</a> | <a href="http://www.streamlive.to/forgot-password">Forgot Password</a> | <a href="http://www.streamlive.to/advertise">Advertise</a> | <a href="http://www.streamlive.to/partner">Partner Program</a> | <a href="http://www.streamlive.to/apps" title="Android Application, XBMC (Kodi) plug in">Apps</a> | <a href="http://www.streamlive.to/affiliate" title="Earn 35% recurring passive income for a lifetime">Affiliate</a> | <a href="http://www.streamlive.to/reseller" title="Reseller Account - Buy Premium Memberships in Bulk">Reseller</a> |  <a href="http://www.streamlive.to/reseller/index.php" title="Log in your reseller portal">Reseller Portal</a> | <a href="http://forum.streamlive.to" target="_blank" title="Help">Help Forum</a> </p>
+<p>Streamlive.to - Watch Live TV online, Live Sport online, Live USA TV channels, Live UK TV channels. Here you can find live channels like ABC, NBC, CBS, Fox Network, Fox Sport 1, USA Network, Fox News, CNN, CNBC, MSNBC, OWN, TBS, Disney, Cartoon Network, E! Entertainment, NBC Sport Network, CW, Discovery, A&E, AMC, BET, ESPN, ESPN 2, Food Network, Golf channel, Hallmark, Lifetime, HGTV, MTV, National Geographic, NFL Network, Science, Showtime, HBO, StarZ, Travel, TNT, TLC, Bravo, Spike, Oxygen, TruTV, TVLand, VH1, History, Investigation Discovery (ID), Bein Sport, Bein Sport France, 1,2,3, Sky Sport 1,2,3,4,5, Sport 1 USA, Animal Planet, Sky movies, Canal+, Canal+ Sport, Canal+ Cinema, Canal+ Futbol, Canal+ Liga, TF1, Euro Sport 1,2, Sky Bundesliga. Most live tv channels are free and you can upgrade to Premium to watch HD channels with no lag. Live TV online at streamlive.to offers great way to watch live Internet TV. </p>
+</div>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71052604-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>

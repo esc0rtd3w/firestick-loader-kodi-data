@@ -1,0 +1,574 @@
+Navi-X Changelog:
+
+V4.0.1
+- updated code to work with Kodi 17
+- updated resolutions to work with Kodi 17 default skin
+- changed to only have Navi-X availible from programs menu because of restrictions of the new Kodi 17 default skin
+- changed menu selection to remove player select for kodi 17 that is no longer available
+-- while keeping menu player select is still available for older versions of kodi
+- fixed list view and menu alignments for 1080i
+- brought back updated status in list views for all lists and resolutions
+- fixed the text window to enable scrolling for list and movie description
+- more work on thumbnail view to get it to operate correctly
+- added show and list description to context menu so they are available in all views
+-- more work on viewer for further updates
+- made view changes save in settings now that thumbnailview seems operational
+- Some other bug fixes
+
+-------------------------------------------------------------------------------
+V4.0
+Starting with this version you can view all update and change info in the Updates section of the Navi-X add-on
+
+-------------------------------------------------------------------------------
+3.8.4bcd
+- fixed bug in CDownLoader for bad urls in the queue
+- restated variable assignment in CBackgroundLoader to fix crashing in thumbview
+3.8.4b
+- 'Green' set back to default color scheme.
+- NAVI icon set back to original artwork.
+- Domain selection removed from addon settings.
+3.8.3
+- version up for testing.
+3.8.2.035
+- Fixed mistakes on the skin coding adjustments for default values.
+3.8.2.034
+- Setup for 1080i to make use of the colordiffusion method that 720p uses.
+- Adjusted 1080i\skin2.xml for versions of xbmc/kodi before helix that took a different posX number.
+- Adjusted 1080i\skin2h.xml from 1280x720 to 1920x1080.
+- Re-flushed 1080i folder of skin files off to 720p version.
+3.8.2.033
+- Prep for Testing of possible release version.
+- settings.py (?)Code clean-up.
+- settings.py (?) and CPlayList.py (?) and navix.py (?): PlayList variable name adjustments.
+- settings.py (?): Domain / home2.plx changes.
+- service.py (?): Code clean-up and message changed.
+3.8.2.032
+- 1080i skin attempt.  May still need some modifications.
+3.8.2.031
+- ...
+3.8.2.030
+- Third Teir failsafe to myxbmc.plx for home page.
+- Removal of GoogleCode and OffShoreGit domains.
+3.8.2.029
+- CDialogBrowse.py (?): Allowed for more than 42 digit folders.  Allowed 'http://' and 'ftp://' urls via browse.
+3.8.2.028
+- Testing xbmc.gui requirement values.  No requirement.
+3.8.2.027
+- Testing xbmc.gui requirement values.  With requirement.
+3.8.2.026
+- Testing xbmc.gui requirement values.  With optional requirement.
+3.8.2.025
+- default.py (?) and resources/settings.xml (?): Skin Option(s).
+- ...
+- Tester's Password identifier prompt cloaking.
+3.8.2.024
+- Search History issue fixed.
+- Testing on Kodi 14-RC1 (Helix).  Seems to still skin2h.xml(s).
+3.8.2.023
+- Testing: Another alternative method for tester's password usage.
+- CPlayList.py (?): local playlist files additions for: xml, php, html, htm.
+- Testing: Sahara server php tester's password passing system coding for alternative method for testers.
+- ...
+3.8.2.022
+- navix.py (?) and CPlayList.py (?): import error handling for playlists for urlresolver (host plugins and t0mm0 module).
+3.8.2.021
+- navix.py (~755+): Auto-refreshing page upon error.
+- navix.py (~291+): Added sub-function doPageBack().
+- navix.py (~718): print statement to check for an problem's location.
+* *** Note to self to look into this at a later time.
+- navix.py (~1082,~1227): #'d out some busy state commands. to allow addon not to be held up upon page not found.
+- ...
+3.8.2.020
+- Removal of tmp.icon=value for <thumbnail>'s.
+* *** Hopefull fix for linux.
+- ...
+3.8.2.019
+- CPlaylist.py(?) and navix.py(?): Additional error handling.
+3.8.2.018
+- CDownLoader.py (~179+): Addeded check to make sure that playlist-type files downloaded will be given a .plx so that they'll be usable locally without changing the filename.
+- ... busy state checking and error handling in several files.
+3.8.2.017
+- navix.py (?): error handling for info labels @ bottom.
+3.8.2.016
+- CPlayList.py (?): playlist error handling.
+3.8.2.015
+- CFileLoader.py (?): playlist fixes.
+3.8.2.014
+- CFileLoader.py (~288+) and settings.py (?): Default navix page expires for special overrealmly used pages. Put the CachedPagesAndTimes array in settings.py.
+- CBackgroundLoader.py (~115): Fixed to check for "sort" in item's name and that item's thumb is currently set to either "default" or is empty.
+3.8.2.013
+- Adjusted Protocol Label and added ItemUrl Label.
+- Made Playlist fixes for XML playlists and image errors.
+3.8.2.012
+- CPlayList.py: <sublink> added, with checks to make sure URL isn't already filled and value is resolvable via urlresolver.
+3.8.2.011
+- Preparing for Staff Testing.
+- Some code/spacing clean-up in settings.py.
+- settings.xml and settings.py: Making options adjustable.
+- CFileLoader.py (~346-349): Setup the timeout to use the setting from settings.py.
+- settings.py: adding a default string option for SettingsG(settings,d) function.
+- settings.py: setting DebugForTesting to False.
+- default.py: Adding some print statements for testing.
+- default.py: XBMCHUB Repository installer set for v1.0.5.
+- Preparing for Staff Testing.
+- Rewrite protocol image addition.
+- Trying out a new icon.png
+3.8.2.010
+- Testing.
+- ...
+- Testing.
+- ...pulled navix.py from crzen, blank/partial page fix.
+- Setup for use of xml playlists.
+- Using the Protocol image to show rather stuff is being gotten locally, remotely, from cache, exc.
+- Added a protocol image, image-type, object to 720 and pal169 skin file(s).
+- Cleaned up code/spacing in skin.py.
+- ...
+- thumb_download_local.png and item in myxbmc.plx
+- ... more work and fixes by crzen.
+- Testing
+* *** src/libs2.py (~288+): cookies.
+- user_id: str() and .strip()
+* *** src/CServer.py (~85,~149)
+* *** src/CFileLoader.py (~254)
+* *** src/libs2.py (~290)
+3.8.2.009
+- addon.xml (?)
+- services.py (?): text message changed.
+- src/navix.py (ALL):
+* *** A bit of code cleanup throughout.
+- Merging TheHighway's src/navix.py (~180+:__init__) with CRZEN's src/navix.py (~291+:__init__)
+* *** code to resetting one home playlist to another when changing in settings.
+...
+- init/* (?) and init/My Downloads/* (?) and init/My Playlists/* (?): ....
+- downlmenu.plx (?) and myxbmc.plx (?): ....
+- src/CFileLoader.py (?) and src/CDownloader.py (?) and src/navix.py (?): ....
+...
+- default.py (~357+):
+* *** Changed the text for the splash message on version change.
+- src/navix.py (~180+:__init__) and settings.py (~152):
+* *** code to resetting one home playlist to another when changing in settings.
+- src/settings.py (~247,~251) and CPlaylist.py (~155):
+* *** Adjustments to Sahara domain url path.
+- Edited downlmenu.plx and myxbmc.plx.
+- src/settings.py (~35+:UrlDoGet,~45+UrlDoPost) and src/ CServer.py (~115+:nxLogin,~63+:login,~147+is_user_logged_in)
+* *** Fixed Navi-X Login in Login functions and is logged in check function.
+* *** Error handling added for get and post url functions in settings.py
+* *** Added post url function in settings.py
+3.8.2.008
+- src/settings.py (~303+) and default.py (~272+) and resources/settings.xml (~4):
+* *** Additional Color Schemes.
+- src/settings.py (~230,~234,~242-253) and resources/settings.xml (~3) and CPlaylist.py (~155,~158):
+* *** Testers versions of navi-x updates page fixes for use on new server.
+* *** HomePlaylist/ parsing adjustments.
+* *** Sahara url as Sahara and Default options for Domain.
+- Some added Error Handling for Login functionality.
+- Additoinal Graphics and Graphic Change(s).
+3.8.2.007
+- URL=addon://plugin.video.addonname/... usage in playlists
+* *** extra coded added around that line.
+* *** src/CFileLoader.py (~132): elif 'addons://' in URL: ... some lines of code attitions.
+3.8.2.006
+- Setup for type=addon in playlists to goto an already installed addon.
+* *** Example 2: type=addon URL=plugin.video.1channel?mode=GetFilteredResults&section=tv&sort=date
+* *** Example 1: type=addon URL=plugin.video.1channel
+* *** src/navix.py (~1534): InstallApp(): elif type == 'addon':... some lines of code additions.
+* *** src/navix.py (~1119): type=='addon'
+- Startup fixes / tweaks.
+* *** default.py (~26): merged some of the imports.
+* *** default.py (~320): added a makedir if not exist for profile folder.
+- Fixed path issue for when installing an addon from a playlist.
+* *** Example: type=plugin URL=http://...url...address.../filename.zip
+* *** This has to do with type=plugin in playlists for installing an addon to special://home/addons/.
+* *** src/CInstaller.py (~line 219): unzip_file_into_dir(): dir=xbmc.translatePath(dir)
+3.8.2.005
+- Sort By Users image.
+- Graphic and Skin changes.
+- Adjustments to Skin alignments for Gotham/Helix.
+- Merging recent changes from TheHighway and CRZEN.
+3.8.2.004
+- added a previous arrow and sort icon for thumbnail view
+- fixed thunbnail view for playlists so that they show correctly
+- added some support for downloading button art from certain sources in thumbnail view
+...
+- changed My Downloads entry in My XBMC to be downloads menu
+- added My Favorites directory and My Downloads entries to myxbmc.plx 
+- changed \ to / in My Playlists.plx for the readme.plx so the file can be read
+- removed CDownLoader.py from Navi-X folder because of a conflict with CDownLoader,py in Navi-X/src
+- added readme entry to /init/downloads.plx
+- put MY Downloads folder back into Navi-X folder for the new readme to work
+*	*** may want to move to profile directory so its not lost while up/down grading ***
+- created readme.txt in Navi-X/My Downloads
+- changed the example .plx's to .txt's in Navi-X/examples so that they can be read (for new installs)
+- Added example entries to My Playlist.plx (for new installs)
+- prevented a possible double server hit when the server is up (may not actually be occurring)
+- split off timeout for searches to give them more time to complete
+- redid timeout assignment to get it working right for different file types
+- fixed download for files including files of unknown size and playlists					
+*	 **** comes up with cannot download file error if server is down **** 
+*	 - changed/fixed first time downloads of known sized files.    
+*	 - changed/fixed appended downloads of known sized files.
+*	 - fixed first time downloads of unknown sized files.   
+*	 - created a way of appending downloads of unknown sized files.
+*	 - created a new function to:
+*		  get the file size and/or
+*		  format the outputs of the reported download sizes to (Unknown or 0.0)
+*	 - change location popup and bottom status to (Unknown, Bytes,KB,MB,GB,TB)
+*	 - handled url.open error which fixes a lockup situation when appending files that would require navi restart.
+*	 - renamed add_queue function  to add_list and added support for new incomplete download feature
+*		  Added the removal of duplicate entries in downloadqueue,plx and incdownloads.plx
+- created incomplete downloads (incdownloads.plx) to keep track of partial downloaded files
+*		*** may want to move to profile directory so its not lost while up/down grading ***
+*		- created incdownloads.plx in the init folder
+*        - created sub menu items for new incomplete download file menu in navix.py
+- fixed a bug where download enties/files were not being removed in completed downloads list
+- created an output for reporting which file failed to download
+- cleaned up the code a little
+*	- removed unneeded commented out section in CDownLoader.py
+*	- removed duplicate code block in navix.py
+...
+3.8.2.003
+- Skin files setup to use appropriate skin setup dependant upon XBMC major version number.
+* skin2.xml for < 14 and skin2h.xml for 14+.
+- Text Label for Thumbview posx position adjusted from 115 to 15 for items.
+...
+3.8.2.002
+- Select Menu ListItems Text Color.
+- List Icons Diffusing.
+* skin #'s 112, 120.
+- Right-MENU Add to Favorites has been fixed.  The list # needed updated.
+3.8.2.001
+- Skin coloring.
+- usage in playlist path lines.
+* root/ or root\ .
+* dev site's path.
+* dev site's \Playlists\ path.
+
+-------------------------------------------------------------------------------
+3.8.2
+- src/navix.py line 621'ish
+* use of non-SmartCache method.
+- version up for public release.
+- Userdata Location instead of Root Addon Location.
+3.8.1.001
+- Misc. stuff....
+- removed old skin files
+- resources/settings.xml, src/settings.py, src/navix.py
+* Home Page option in Addon Settings.  Set as Default for custom url.
+- default.py
+* try/except on XBMCHUB.com Repository installer.  This is for sake of xbox and devices that have path issues.
+
+-------------------------------------------------------------------------------
+3.8.1
+- version up for public release.
+3.8.0.003
+- put 2 on end of each .xml files to deal with SiOS and other skins trying to use their name and id to force a dif look.
+3.8.0.002
+- changes to the 2 PAL skin folders.
+3.8.0.001
+- try/except for previous skin additions.
+
+-------------------------------------------------------------------------------
+3.8.0
+
+- src/CPlayList.py, src/CFileLoader.py, resources/settings.xml
+  * Always live pulls for updates list.
+  * Updates List for Testers.
+- src/CURLLoader.py
+  * UrlResolver usage attempt by default first, before processor.
+- src/CBackgroundLoader.py, src/navix.py, .../skin.xml, src/skin.py
+  * A second info label for selected items to show the (protocol):// such as HTTP or RTSP.
+- src/CFileLoader.py
+  * Code fix for when pages come up less than 300 bytes and .old cached version is atleast 200bytes larger.  Title header only pages @ the blank page point.
+- Play with UrlResolver option in context menu.
+- list-focus2.png to list-focus2g.png
+- panel-focus1.png to panel-focus1g.png
+- ColorDifuse added to new TextWindow method and main screen.
+- TextWindow Changed.
+- XBMCHUB Repo Auto Installer.
+- addon.xml, splash_highway.py, service.py
+  * One Time Splash at Navi-X run or XBMC Startup time after version update of Navi-X.
+- src/CURLLoader.py, src/settings.py, resources/settings.xml
+  * Optional Local UrlResolver usage for in case the site can't be connected to or doesn't have a host supported.
+  *  ~ This option is in addon settings, enable it to use local UrlResolver, or disable it to use site processors.
+- src/navix.py
+  * Non-Existent Control 0 runetime error handling try/except usage for list3 and list4
+- default.py, splash_highway.py
+  * Added splash screen system by TheHighway.
+  * setup a version update informational text/bg splash message.
+- src/navix.py, src/skin.py, resources/skins/Default/720p/skin.xml
+  * Added Exit button using the NAVIX X-icon, navi-x3.png.  This is for easy exits without use of side menu.
+- addon.xml adjustments:
+  * Python Version
+  * Category to both Program addons and Video addons
+- Editing in Fixes by CRZEN for navix.py, CFileLoader.py, and CPlayList.py
+  * Reference For navix.py and CFileLoader.py:  http://www.xbmchub.com/forums/threads/12025-Navi-X-quot-please-wait-quot-freeze
+  *  ~ access to cached search favs and history when server is down.
+  *  ~ stopped lockup on the portal and when trying to open playlists.
+  * Seems to be just spacing issues in CPlayList.py
+
+
+-------------------------------------------------------------------------------
+3.7.8
+
+-modified CFileLoader.py; readMetaData was throwing syntax error on XBMC4Xbox
+-NIPL interpreter modifications
+  * normalized line parsing
+  * rebuilt flow control engine from ground up (if/elseif/else/endif/while/endwhile logic)
+
+-------------------------------------------------------------------------------
+3.7.5
+
+Moved primary portal domain to navixtreme.com
+
+-------------------------------------------------------------------------------
+3.7.4
+
+NIPL updates:
+-added "literal_eval" function for safely converting strings into dictionary objects
+-added "data" property to lists and entries - to be used for python dictionaries
+-nested "if" statements now supported in NIPL
+-fixed issue with "None" type values returned by regex captures with alternation
+
+Downloader updates:
+-eliminated multiple server queries for megaupload / megavideo entries
+-implemented XBMC-style custom headers - URL|header1=val1&header2=val2&...
+-improved extension detection
+  * accurately determines extension from processed Youtube videos
+  * added a "safety net" which will fall back to an ".avi" extension if the parsed extension is too long
+
+General:
+-replaced deprecated os.getcwd() with xbmcaddon.Addon.getAddonInfo('path') for upcoming XBMC eden release
+
+-------------------------------------------------------------------------------
+3.7.3
+
+New:
+-multiple conditions per if/elseif statement
+-"error" method accepts a variable as an argument
+-CURLLoader.urlopen, CPlayer.play, and CPlayer.play_URL return an object instead of a single integer as their result.
+ This enables the following (so far - infinitely more flexible setup):
+    processors can produce custom error messages
+    processors can redirect to a playlist from a type=video/audio (will allow captcha-handling processors)
+
+-------------------------------------------------------------------------------
+3.7.2
+
+-"countdown" method added to NIPL interpreter
+-bug fix in elseif logic
+
+-------------------------------------------------------------------------------
+3.7.1
+
+-Backspace fixed for XBMC 11.
+-RSS parsing fix.
+
+-------------------------------------------------------------------------------
+3.7
+
+CREATE FOLDERS INSIDE THE FAVORITE LIST:
+Navi-X 3.7 allows you to create new folders inside the favorite list. You can e.g. 
+create different folders for movies, music, podcasts, etc.
+Folders can be created by selecting the option menu inside the favorite list. 
+Items can be moved between folders using cut and paste.
+
+IMPROVED DATE INFORMATION TAG:
+Playlists entries can have an optional date= information tag. In previous versions
+of Navi-X only the date could be indicated. In Navi-X 3.7 also the time can be indicated.
+Navi-X 3.7 will show the NEW information tag using hour accuracy (e.g. NEW 3 hours ago).
+date=yyy-mm-dd hh:mm:ss
+
+NEW PLAYLIST ATTRIBUTE "infotag":
+Navi-X 3.7 supports a new playlist attribute called "infotag". The info tag is a short string
+which is displayed at the right side of the list. The info tag e.g. can be used to indicate 
+the duration of a video or the bitrate of an audio stream. 
+
+RSS FEED DATE INFORMATION:
+In Navi-X 3.7 the publication date of each entry is displayed on the right side of the screen.
+The date is no longer displayed as part of the entry title.
+
+NAVI-XTREME SIGNING IN:
+The sign in dialog for Navi-Xtreme has been removed due to a number of reported problems.
+The sign in now uses standard XBMC text keyboard input fields.
+
+OTHER MINOR IMPROVEMENTS:
+-New "add favorite option" in right side screen menu.
+-If items are blocked using parental control then Navi-X automatically asks to enter a 
+new password in case no password has been set before.
+-New default background image.
+
+-------------------------------------------------------------------------------
+3.6
+
+-Panel view support (not for xbox).
+-Moved the Navi-X media portal to the Navi-Xtreme website. Visit Navi-Xtreme at http://navix.turner3d.net/.
+-Added play and download option to right side menu.
+-Minor bug fixes.
+
+-------------------------------------------------------------------------------
+3.5.4
+
+-New processor features to access more content (thanks to Turner3D);
+-Download Apple movie trailers support;
+-Set background properties (see Background context menu);
+-Minor bug fixes.
+
+-------------------------------------------------------------------------------
+3.5.1
+
+-Fixed creating of shortcut in XBMC Dharma
+-NEW: Download Speed Test. New option in the Download menu to test the 
+download/stream speed of the current selected media item.
+-NEW: Download speed indication during download.
+
+-------------------------------------------------------------------------------
+3.5
+
+-Youtube update. Fixed searching option. Added selection of next page.
+-File download improvements. Added retry option after download fails.
+-Continue downloading at start-up if download queue is not empty.
+-A number of UI improvements.
+
+-------------------------------------------------------------------------------
+3.4.3
+
+-Youtube fix.
+-Display the media source of a selected mediaitem.
+-Display download file size in Browse window.
+-Use video as background image when video is still playing.
+-Updated the installer to support XBMC Dharma.
+-Small Updates to the 720p XML file.
+
+-------------------------------------------------------------------------------
+3.4.2
+
+-Dharma Addon support.
+
+-------------------------------------------------------------------------------
+3.3
+
+-(NEW) FTP support: 
+  FTP URL according RFC 1738: ftp://user:password@host:port/path
+  Use 'type=directory' to browse a FTP-directory. 
+  Use e.g. 'type=video', type=audio' to point to a single FTP file.
+  Downloading of FTP files is also supported.
+
+-URLLoader update (credits to turner)
+-Fixed the HTTP download resume option.
+-Fixed issue with saving Navi-X settings at shutdown.
+-Added processor support in html_youtube playlists.
+
+-------------------------------------------------------------------------------
+3.2.1
+
+-URLLoader update (credits to turner)
+-Fixed the download resume option.
+-Fixed issue with saving Navi-X settings at shutdown.
+-Added processor support in html_youtube playlists.
+-Stability fix: Modified setting of the socket default timeout. Race condition.
+
+-------------------------------------------------------------------------------
+3.1.2
+
+-Fixed Youtube parser (next page select issue);
+-Added new media type 'window' that allows activation of XBMC windows while Navi-X
+is running in the background;
+-Minor fixes RSS parser;
+
+-------------------------------------------------------------------------------
+3.1
+
+-A complete new Navi-X skin based on XBMC Transparency
+ skin;
+
+-New URL loader to support the new Navi-X Instructional Processor Language, NIPL. (credits to Turner);
+-Fixed overlapping text in twitter feeds;
+-Improved text viewer. Added spinner controls for faster browsing;
+-Added scrollbar on right side of the screen.
+-Other minor fixes.
+
+-------------------------------------------------------------------------------
+3.0.1
+
+-Fixed RSS parser.
+-Fix for Apple movie trailers and XBMC 9.11. Added user agent support.
+
+-------------------------------------------------------------------------------
+2.9.3
+
+-Number of GUI changes;
+-Added cut/paste support in favorite list to make organising easier;
+-Fixed parser for flick daily interesting foto;
+-Improved exception handling for improve Navi-X stability;
+
+-------------------------------------------------------------------------------
+2.9
+
+-Improved the shoutcast parser. A auto retry mechanism has been added.
+-RSS: The link attribute is used in case the processor is set.
+-Processor: Updated the processor code. The processor now also works for file download.
+-Textview: Implemented text scrolling using up/down keys.  
+-Added skin media type. Allows installation of skins.
+-Added setting of the media type for rss feed files.
+-Added setting of the processor for plx and rss feed files.
+-Solved browse button failure.
+-Player: Solved play autonext in XBMC 9.04
+-Installer: Solved script/plugin installer in XBMC 9.04
+
+-------------------------------------------------------------------------------
+2.3
+
+-Added new playlist "description=" element. Description can be multiple lines.
+ The description shall be put in the header field above the playlist entries.
+ Description shall start with text "description=".
+ Description SHALL end with text "/description=". 
+-Youtube parser: added Youtube playlists support.
+-Youtube parser fix.
+-Youtube long video name display.
+-Improved caching for a better user experience.
+-Apple movie trailer parser fix.
+-Other minor improvements.
+
+-------------------------------------------------------------------------------
+2.0.1
+
+- Fixed Youtube parser according site changes.
+
+-------------------------------------------------------------------------------
+2.0
+
+- Youtube: Switched to high resolution mode. Also download possible.
+- Added search history. Remembers last searches.
+- Updated context menu options (Play... and View...).
+- Added view mode option in menu: Ascencding/Descencing
+- Play using menu accessible via Y-button.
+- Move items up and down the favorite list.
+- New playlist option called 'playmode. Example: 
+   playmode=autonext #plays all entries in playlist
+
+-------------------------------------------------------------------------------
+1.9.3
+- Started development again.
+- Added download resume support.
+- Added Apple movie trailer support.
+- Added new media type called 'directory'. This type retrieves all PLX-files
+  from a given local directory including sub-directories.
+- Added parsing of RSS new feeds. Link to HTML file cannot be opened.
+- Extended youtube search. Added sorting option.
+
+-------------------------------------------------------------------------------
+1.9.2
+
+- Improved caching of playlists and images to improve UI performance.
+- Slightly increased the top left user logo.
+- Moved to new server www.navi-x.nl
+
+-------------------------------------------------------------------------------
+1.9
+
+- New default skin based on Mayhem III.
+- QuickSilverScreen support.
+- Shoutcast support including search function.
+- All skinning is now handled in new skin.py file.
+  Makes the skin independent of the core functionality. 
+
+-------------------------------------------------------------------------------

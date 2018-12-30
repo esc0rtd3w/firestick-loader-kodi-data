@@ -1,0 +1,8 @@
+<strings>
+	<!-- Settings -->
+    <string id="10000">Custom Music Directory</string>
+    <string id="10001">Music Directory</string>
+    <string id="10002">Queue songs on selection</string>
+    <string id="10003">Queue albums on selection</string>
+    <string id="10006">Hide fanart when playing</string>
+</strings>

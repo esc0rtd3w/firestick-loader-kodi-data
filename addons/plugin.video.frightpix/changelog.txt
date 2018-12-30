@@ -1,0 +1,13 @@
+V2.1.0
+Updated entire add-on
+
+
+V1.2.0
+Change Layout FIxed URL incompatability
+
+V1.1.0
+Fixed Menu Bug
+Added New menu Options
+
+V1.0.0
+Initial Release

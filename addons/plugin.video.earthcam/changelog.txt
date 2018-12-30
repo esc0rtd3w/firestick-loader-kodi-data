@@ -1,0 +1,33 @@
+v1.2.0
+(2017, Sept)   
+added HLS support: enable it in add-on's configuration if no cam is shown.
+patched some errors getting submenus and navigating
+
+v1.1.0
+(2017, Sept)   
+patched for new earthcam web site
+
+v1.0.12
+(2017, Aug)   
+patched https urls
+
+v1.0.11
+(2017, Feb)   
+adapted to last Kodi versions   
+background image changed to www.flickr.com/photos/49511010@N08/11122805655/
+
+v1.0.10
+(2015, Mar)   
+background images (fanart) visible while browsing cameras
+
+v1.0.7.3
+(2014, Oct)      
+more cameras available
+
+v1.0.7.1
+(2014, 20 Oct)   
+forked [from](http://addons.tvaddons.ag/show/plugin.video.earthcam/) official-xbmc-hub-repo [v1.0.7](https://github.com/idleloop-github/xbmc-earthcam/tree/3e263215a4a3ea9ccba0092bf097939f8b25ff58)
+
+v1.0.7   
+Code updated by Blazetamer   
+to fix no items in USA & Worldwide

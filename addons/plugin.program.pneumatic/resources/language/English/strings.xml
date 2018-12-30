@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Plugin settings strings -->
+    <string id="30000">General</string>
+    <string id="30003">Auto play videos</string>
+    <string id="30050">Enable debug logging</string>
+    <!-- SABnzbd -->
+    <string id="30004">SABnzbd</string>
+    <string id="30005">SABnzbd Category</string>
+    <string id="30016">Always use defined category</string>
+    <string id="30017">Always ask for category</string>
+    <string id="30007">SABnzbd incomplete folder</string>
+    <!-- the_end -->
+    <string id="30020">Post-processing</string>
+    <string id="30027">SABnzbd post-processing</string>
+    <string id="30025">General Streaming Nfo</string>
+    <string id="30026">Library Nfo</string>
+    <string id="30021">Save movie.nfo</string>
+    <string id="30022">Save episode.nfo</string>
+    <string id="30023">Save poster</string>
+    <string id="30024">Save fanart</string>
+    <string id="30028">Save nzb to cache when saving strm</string>
+    <string id="30042">NZB cache</string>
+    <!-- .strm -->
+    <string id="30033">Strm Storage</string>
+    <string id="30031">Movies</string>
+    <string id="30032">Tv-shows</string>
+    <string id="30030">Library</string>
+    <!-- .strm -->
+    <string id="30040">NZB</string>
+    <string id="30041">Cache</string>
+    <string id="30042">NZB cache</string>
+</strings>

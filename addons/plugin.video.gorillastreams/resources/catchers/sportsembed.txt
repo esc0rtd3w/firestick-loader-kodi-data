@@ -1,0 +1,33 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=SportsEmbed - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://sportsembed.com/embed.php?v=%s&vw=600&vh=450&typeplayer=0&domain=pogotv.eu
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?SWFObject\(['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+).flv['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+
+#item_info_name=token
+#item_info_from=@PARAM1@
+#item_info_convert=getInfo('http://www.sportsembed.com/player_config.php?video=%s','.*?<token>([^<]+).*','http://www.sportsembed.com')
+#item_info_build=%s
+
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' token=%X886(nPK@#. live=1 timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

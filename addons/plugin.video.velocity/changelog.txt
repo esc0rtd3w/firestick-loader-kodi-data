@@ -1,0 +1,156 @@
+Official Velocity addon For Kodi
+
+V1.1.2
+Improved Sourcing methods
+Removed Ability to Download
+Bug Fixes
+Added Screenshots to Info Pane
+Added News to Info Pane
+Added New Providers
+
+V1.1.1
+Bug fix in Providers
+
+V1.1.0
+Added Source Sorting
+Extra Providers
+Code Cleanup
+Dialog Progress on source searches
+Other code cleanup
+
+V1.0.9
+Added Device Autorization
+Code Cleanup
+Faster searching
+
+V1.0.8
+Slimmed down addon size
+Removed "Dead" scrapers
+Implemented class type scrapers
+to increase spedd on larger returns
+Repaired Scrapers
+Added iWatchonline
+K17 Updates
+
+
+V1.0.7
+Added Add to Collection from TV Search
+Small bug fixes
+This is a partial update only
+
+
+V1.0.6
+Added Basic Sorting
+Added logic to fix quotes causing Download error (aksaks)
+Updated Network Shows List
+Collected Episodes not Watched Bug Fix
+Other code fixes
+
+V1.0.5
+Better Error notification
+Adjusted cache to deal with Trakt Timeouts
+Added SantaSeries TV
+Added Putlocker Movies/TV
+Temporarily Removed TwoMovies From Functions
+
+V1.0.4
+Bug fixes galore
+Watched list marks auto update
+Add to lists fixed
+Prepare for more TV Scrapers next update
+Sync for Velocity for Kids
+For sync to work you MUST make a custom List named "Kids" no quotes
+
+
+V1.0.3
+Bug fix
+Added ability to add to custom created lists
+in preperation for the upcoming Companion addon "Velocity for Kids"
+
+
+V1.0.2
+Improved Premium Hoster Tagging
+Added Custom Lists
+Added Special List Sections
+Added Ability to find other users lists
+Added IceFilms Movies & TV
+Added Caching to speed up results
+Better Meta information
+Trailers playable from Info Menu
+Other speed and Trakt Improvements
+Watched Checkmarks added (Requires Initialization)
+Optimized Download Functions
+Fixed Trakt Connection Login Dialog
+Bug Fixes
+
+
+V1.0.1
+Added Downloads
+Added download Status in context menu of download section
+You can now download more than one video at a time (still a bit slow)
+Added RD Tagging in sources
+Fixed “Loop” playback and failures due to
+incorrect playable status being passed to player
+Added a stable notification for Trakt Authorization
+Added Custom Domain naming
+added 123Movies to scraper list
+Other bug fixes
+
+
+v1.0.0
+Initial Release
+
+
+
+
+
+Velocity BETA addon for Kodi
+
+V1.0.1k
+Added MultiThreading to Tv Scrapers
+Fixed remaining context menus
+Added Auto Views
+
+V1.0.1j
+Added multiThreading to speed up Source returns
+Bug Fix on some returns
+
+V1.0.1i
+Added "On Deck" Tv Shows,  works with Collected series
+More Context menu additions
+Increased speed of addon
+Real Debrid works now
+
+
+V1.0.1h
+Bug fixes 
+Watched history context adds and deletes for movies
+
+
+V1.0.1g
+Added Notifications,
+Mute Notifications from settings
+Global Scraper Timeout added
+Added 9Movies for HD Movie Support
+Other fixes
+
+V1.0.1f
+Beta
+Added Watchlist Support for TV
+Add/Remove Items from Watchlists
+Added Calendar Support
+Added Anticipated Shows
+Added Debug Printing for failures andf Errors
+Added Manual Refesh Authorization button in case Refresh token fails
+Added Movie Watch History
+
+V1.0.1e
+Beta
+Added Afdah movie scrape
+
+V1.0.1d
+Beta
+Added first Primewire TV Scrapers and resolvers
+
+V1.0.0
+Initial Beta Release

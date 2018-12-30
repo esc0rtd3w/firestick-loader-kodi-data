@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="General">
+        <setting label="TMDB id:" type="text" id="tmdb_id" default=""/>
+    </category>
+</settings>

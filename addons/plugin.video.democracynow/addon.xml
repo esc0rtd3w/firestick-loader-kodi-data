@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.democracynow"
+  version="2.1.1"
+  name="Democracy Now!"
+  provider-name="queeup">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+    <import addon="script.module.requests"
+            version="2.2.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Democracy Now! video add-on</summary>
+    <summary lang="tr">Democracy Now! video add-on</summary>
+    <description>Democracy Now! is a syndicated program of news, analysis, and opinion aired by more than 700 radio and television, satellite and cable TV networks in North America. Democracy Now! serves as the flagship program for the Pacifica Radio network.</description>
+    <description lang="tr">Democracy Now! is a syndicated program of news, analysis, and opinion aired by more than 700 radio and television, satellite and cable TV networks in North America. Democracy Now! serves as the flagship program for the Pacifica Radio network.</description>
+    <disclaimer>I do not host any of the online video, audio, and photo files that some of the add-ons link to stored on third-party websites, nor do they upload such files themselves. They are not responsible for what other people upload to any third-party sites. Therefore we urge all copyright owners, to recognize that the links contained within these add-ons are located somewhere else on the web. The scraped embedded links point to the location of each video on the web. Please direct all copyright infringement issues to the companies that host these files :- Google, Dailymotion, Veoh, and so forth.</disclaimer>
+    <disclaimer lang="tr">I do not host any of the online video, audio, and photo files that some of the add-ons link to stored on third-party websites, nor do they upload such files themselves. They are not responsible for what other people upload to any third-party sites. Therefore we urge all copyright owners, to recognize that the links contained within these add-ons are located somewhere else on the web. The scraped embedded links point to the location of each video on the web. Please direct all copyright infringement issues to the companies that host these files :- Google, Dailymotion, Veoh, and so forth.</disclaimer>
+    <language>en</language>
+    <platform>all</platform>
+    <license>WTFPL</license>
+    <forum>http://forum.xbmc.org/showthread.php?tid=59931</forum>
+    <website>http://www.democracynow.org</website>
+    <source>https://github.com/queeup/plugin.video.democracynow</source>
+  </extension>
+</addon>

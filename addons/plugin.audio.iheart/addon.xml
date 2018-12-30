@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.iheart"
+       name="iHeartRadio"
+       version="0.0.2"
+       provider-name="divingmule">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.0"/>
+    <import addon="script.common.plugin.cache" version="2.5.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Live radio over the internet</summary>
+    <description>
+    Listen to more than 1,500 live radio stations from coast-to-coast including pop, country, urban, rock, talk, and college.[CR] 
+    Browse radio stations by music genre and location.[CR] 
+    Read more: http://news.iheart.com/about/
+    </description>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <source>https://github.com/divingmule/plugin.audio.iheart</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=170721</forum>
+    <disclaimer>These Streams will only work from a U.S. IP address.</disclaimer>
+  </extension>
+</addon>

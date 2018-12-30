@@ -1,0 +1,9 @@
+<settings>
+    <setting id="country" value="US" />
+    <setting id="country_already_set" value="1" />
+    <setting id="force_viewmode_items" value="true" />
+    <setting id="force_viewmode_podcasts" value="true" />
+    <setting id="num_podcasts_list" value="100" />
+    <setting id="num_podcasts_search" value="100" />
+    <setting id="show_subgenres" value="true" />
+</settings>

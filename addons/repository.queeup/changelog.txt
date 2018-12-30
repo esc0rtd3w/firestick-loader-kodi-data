@@ -1,0 +1,23 @@
+repository.queeup:
+------------------
+v4.0.0:
+-jarvis repo
+
+v3.0.0:
+-isengard repo
+
+v2.0.3:
+-gotham repo
+
+v2.0.2:
+-cosmetic and translation
+-no hashes
+
+v2.0.1:
+-frodo repo
+
+v2.0.0:
+-eden repo
+
+v1.0.3:
+-Change googlecode to github

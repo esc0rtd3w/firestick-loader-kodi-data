@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>	
+	<!--Labels-->
+	<string id="1000">Favoriten</string>
+	<string id="1001">neuste Sender</string>
+	<string id="1002">Durchsuchen</string>
+	<string id="1003">Suche</string>
+	<string id="1004">Sender hinzufügen</string>
+	<string id="1005">Sender entfernen</string>
+	<string id="1006">Benutzerdefinierte URL</string>
+	<string id="1009">Sendung hinzufügen</string>
+	<string id="1010">Sendung entfernen</string>
+	<string id="1011">Aktualisieren</string>
+	<string id="1012">Nach oben</string>
+	<string id="1013">Nach unten</string>
+	<string id="1014">Sendung entfernen</string>
+	<string id="1015">Downloads</string>
+	<string id="1016">Download entfernen</string>
+	<string id="1017">Benutzerdefinierte URL entfernen</string>
+	<string id="1018">Zu globalen Favoriten hinzufügen</string>
+
+	<!--Settings-->
+	<string id="2000">Benutzername</string>
+	<string id="2001">Passwort</string>
+	<string id="2003">Debug Level</string>
+	<string id="2004">Aus</string>
+	<string id="2005">Niedrig</string>
+	<string id="2006">Mittel</string>
+	<string id="2007">Hoch</string>
+	<string id="2008">Icon-Farbe</string>
+	<string id="2009">Weiß</string>
+	<string id="2010">Schwarz</string>
+	<string id="2011">Anzahl der neusten Sender</string>
+	<string id="2012">Beim Senderwechsel fragen</string>
+	<string id="2013">HTTPS</string>
+	<string id="2014">Download Pfad</string>
+	<string id="2015">empfohlene TuneIn Sender anzeigen</string>
+	<string id="2016">lokale TuneIn Sender anzeigen</string>
+	<string id="2017">Fanart anzeigen</string>
+	<string id="2018">Im Hintergrund Herunterladen</string>
+	<string id="2019">AAC/AAC+</string>
+	<string id="2024">AM (Broadcast)</string>
+	<string id="2025">DAB (Broadcast)</string>
+	<string id="2026">FM (Broadcast)</string>
+	<string id="2027">HD (Broadcast)</string>
+	<string id="2028">HTML Web Page</string>
+	<string id="2020">MP3</string>
+	<string id="2021">OGG</string>
+	<string id="2029">QuickTime</string>
+	<string id="2022">RealMedia</string>
+	<string id="2030">RTMP Flash</string>
+	<string id="2031">Satellite (Broadcast)</string>
+	<string id="2023">Windows Media</string>
+	<string id="2032">Windows Media Professional</string>
+	<string id="2033">Windows Media Video</string>
+	<string id="2034">Windows Media Voice</string>
+	<string id="2035">Downloads aktivieren</string>
+	<string id="2036">Cache-Update-Intervall (h)</string>
+	<string id="2037">Geografische Länge/Breite</string>
+	<string id="2038">Sprache</string>
+	<string id="2039">Rot</string>
+	<string id="2040">nur TuneIn Favoriten zeigen</string>
+
+	<!-- Settings Titles -->
+	<string id="2050">TuneIn</string>
+	<string id="2051">Oberfläche</string>
+	<string id="2052">Downloads</string>
+	<string id="2053">Formate</string>
+	<string id="2054">Erweitert</string>
+
+	<!--Dialogs-->
+	<string id="3000">Sender, Sendungsname oder Musiker eingeben</string>
+	<string id="3001">Für diese Aktion wird ein TuneIn Account benötigt</string>
+	<string id="3002">Besuche tunein.com - um dich kostenlos anzumelden</string>
+	<string id="3003">Anmeldung mit diesem Account nicht möglich</string>
+	<string id="3004">Prüfen Sie ob der Benutzername und das Passwort richtig ist</string>
+	<string id="3005">Wollen Sie diesen Stream abspielen?</string>
+	<string id="3006">Geben Sie die URL ein</string>
+	<string id="3007">'%s' ist bei TuneIn hinterlegt.</string>
+	<string id="3008">Wollen Sie es zu den Favoriten hinzufügen?</string>
+	<string id="3009">Netzwerk-Fehler.</string>
+	<string id="3010">Für mehr Informationen, schauen Sie bitte in das xbmc.log.</string>
+	<string id="3011">TuneIn Radio-Fehler.</string>
+	<string id="3012">Dieser Stream ist nicht bei TuneIn hinterlegt.</string>
+	<string id="3013">Wollen Sie ihn als "Benutzerdefinierte URL" ins eigene Profil aufnehmen?</string>
+	<string id="3014">Geben Sie einen Namen ein</string>
+	<string id="3015">Herunterladen der Sendung gescheitert.</string>
+	<string id="3016">Download-Link der Sendung ist leer, versuchen Sie die Sendung abzuspielen.</string>
+	<string id="3017">Nicht möglich den Sender zu den globalen Favoriten hinzufügen.</string>
+	
+	<!--Download Dialogs-->
+	<string id="4000">TuneIn Radio</string>
+	<string id="4001">Beginne das Herunterladen.</string>
+	<string id="4002">%d von %d Bytes heruntergeladen.</string>
+	<string id="4003">Datei %s existiert bereits.</string>
+	<string id="4004">%s wurde erfolgreich heruntergeladen.</string>
+	<string id="4005">Herunterladen fehlgeschlagen: %s</string>
+	<string id="4006">Überschreiben?</string>
+</strings>

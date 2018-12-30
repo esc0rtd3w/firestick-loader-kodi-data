@@ -1,0 +1,276 @@
+v4.4.9
+Fixed Tv Episodes Loading Slow
+
+v4.4.8
+Fixed Tv Episodes
+
+v4.4.7
+Fixed WTF search
+
+v4.4.2
+Added AKAS to imdb
+
+v4.4.0
+Quick Title Fix
+
+v4.3d
+Fixed On DVD not showing 50 Films On other pages
+
+v4.3c
+Fixed Url Not Playing
+
+v4.3b
+Fixed Pop Up
+
+v4.3a
+More Returned Links
+Added Actor/Actress Search (thanks for the idea kinkin)
+
+v4.3
+Fixed No Links Being Retrieved
+
+v4.2a
+Fixed Easy Boost Issues
+
+v4.1
+Quick Fix
+
+v4.0d
+Added in Settings Show No Dialog (which will use your preffered settings)
+Got Rid Dialog.ok telling you how many links found
+
+v4.0c
+Fixed Context Menu Search
+Fixed IMDB LIST
+
+v4.0b
+Fixed Context Menu Search
+
+v4.0
+Added POP UP
+
+v3.8a
+Fixed WTF
+
+v3.8
+Fixed Movie Search
+
+v3.7k
+Sorry Guys All This Time I wasnt Using There "BETA" Properly now you should get more results on everything !!(test it with something you new you didn't get results with)
+
+v3.7j
+Better GA
+
+v3.7h
+Added GA
+
+v3.7e
+Quick Fix
+
+v3.7d
+Fixed Watchlist (Thank You Unreal For Pointing It Oout)
+
+v3.7c
+Fixed Seasons Results
+
+v3.7b
+Quick Fix
+Added Choose Your Own Download Path
+
+v3.7a
+Bug Fix
+
+v3.7
+Fixed Tv Search
+Added Search 1Channel In context Menu Aswell
+
+v3.6a
+Fix Again
+
+v3.5a
+Quick Fix
+
+v3.5
+Added WTF Search Integration In context Menu
+
+v3.4
+Fixed Search
+Moved Images Locally Repo Being Hounded
+
+v3.3
+Fixed Search Movies
+
+v3.2
+Compatible with Frodo
+
+v3.1
+Added Download Option Enable in Settings
+Added Delete Download
+
+v3.0b
+Fixed Bugs
+Tidied Code Loads (Man i was a novice back then 2200 lines down to 1200)
+
+v3.0a
+Fixed LoveFilm
+
+v3.0
+Fixed Season Loading Slowly
+
+v2.7c
+Fixed "the" not returning much results
+
+v2.7b
+Added Any Reslotuion Back
+
+v2.7a
+Added More IMDb Lists In Movies As Lovefilm Is Crap
+
+v2.6b
+Changed where it looks for icon images
+Changed Settings For "Up to 720p" bring more results
+
+v2.6
+Added Option To Use SSL
+
+v2.5b
+Fixed Imdb list not showing some thumbails
+Changed Blue To Yellow
+Added Trakt Tv
+Please enable IMDB or Trakt In Addon Settings
+
+v2.4a
+Fixed Watchlist Hanging On Shows That Have No Description
+Fixed Not Being Able To Watch The Avengers
+
+v2.4
+Added XBMC Account Login
+Added Logs for users
+
+V2.3.1e
+Sorted Some Episodes Not Listing
+Added Enable Fanart
+Added Color to gui for navigation
+Added "IM NOT HAPPY WITH THE RESULTS PLEASE SEARCH AGAIN" to tv shows if links are zero
+Added Tv Release Date For Phishboy
+fixed error
+Added General Search Settings
+Got rid of resoultion exclusions and added prefered resolution which was better way of getting
+the actual resolution you want
+Atleast now the plugin is completely customisable
+
+v2.3
+Added more custom addon settings
+min filesize: Self explanatory
+max filesize: Self explanatory
+exclude languages: (Just enter i.e german french italian) remember though lots of mkvs has multiple audio so if there is an mkv with german in the 
+title but has english audio aswell it will not return that mkv see how you get on
+exclude resolution: ( just enter i.e 1080 ignore p's or i's)this is my personal favourite
+newsgroups: (if you are a hardcore easynews man you will know what this does you can just define what newsgroup
+you search from you can add all favourites online so you dont get any porn or languages you dont like i.e if
+you only want results form alt.binaries.movies just enter movies or for your favourites just enter "favs" you get me!!
+remove duplicates as standard keep this on!
+spam filter as standard keep on too!
+also added group exclusions which you can add in your preferences online and add i.e "erotic" and when exclusions 
+is enabled it will filter all that crap out
+
+
+v2.2.3
+Added Exit EasyNews ShortCuts To Video Links 
+So When You Have Finished Your Movie You can Exit Straight Away
+Fixed IMDb Crashing (When Adding A Movie Or Tv To Your List When It Didnt Have A Thumbnail)
+More Bug Fixes
+
+v2.2.2
+Added GUI ok Krankie!!
+Added Custom IMDB List
+Sorted Better Music Search
+Album Name Now In Description
+
+v2.2.1
+Added More Movis thanks to "next Page" Finally
+Added Back menu button to bottom of lists when you in too may pages
+so you dont keep having to select back back back
+Added IMDB watchList Thank you KinKin didnt even no one existed
+Added Billboard Album Charts Huge lists
+Cleaned Plugin Directory up
+
+v2.2
+Added More Movie Directories
+Sorted on dvd not pulling all 50 movies
+cleaned up code where tv shows loaded really slow
+
+v2.1.3
+Movie
+Added Showing File Extension (saves Waiting for filename to scroll and find out its not an mkv)
+
+Music
+Removes Multiple File Names
+
+v2.1.2
+Added Sort Method
+Quicker Playback On music no need to download first
+
+v2.1.1
+fixed playlist
+
+v2.1
+security fix
+
+V2.0
+Music
+Added Complete iTunes Charts For Music
+Aded Choice To Add Album To Playlist 
+
+Movies
+Added How Many Links Found
+
+V1.9
+Added Better Music Search Funcionality
+Added HMV Best Selling Directory
+Fanart in Music
+
+V1.8
+Added Music Search
+Added iTunes Top Charts
+
+V1.7
+Added EasyBoost To settings
+If you have problems streaming on one change the easyboost number UK Normally is EasyBoost4
+Defaults is EasyBoost4
+
+
+V1.6
+Added Better Search Results Based on your spam filter
+removed fanart as loading times on tv was slow
+
+
+
+V1.5
+Added New This Week
+
+
+V1.4
+Added Option to search "Any" or "Custom"
+
+V1.3
+Better search results
+
+V1.2
+Added "Found Languages" In Easynews Search
+Added "OUT ON DVD AND BLURAY"
+Added some ratings unsure if it works
+Added Plot to Movies 
+
+V1.1
+09/08/2012
+Added Auto Views
+Added Minimum File Size In Settings
+Added Choose File Extension (MKV,AVI,blah blah blah)
+Fanart in Movies
+Better image control in Tv Shows
+Added Plot to Episodes
+
+
+v1.0
+Initial Release

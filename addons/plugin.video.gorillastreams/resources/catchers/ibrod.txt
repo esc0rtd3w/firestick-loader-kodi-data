@@ -1,0 +1,11 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ibrod - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=http://ibrod.tv/embed.php?chan=%s&width=580&height=400
+
+item_info_name=type
+item_info_build=streams
+item_url_build=%s

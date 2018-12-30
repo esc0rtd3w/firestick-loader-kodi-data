@@ -1,0 +1,183 @@
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+    <allowoverlays>false</allowoverlays>
+	<controls>
+ 
+     <control type="image" id="140">
+        <description>bg</description>
+        <posx>200</posx>
+        <posy>200</posy>
+        <width>350</width>
+        <height>250</height>
+        <texture>dialog-panel.png</texture>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>
+ 
+    <control type="label" id="141">
+        <description>label_title</description>
+        <posx>230</posx>
+        <posy>220</posy>
+        <width>200</width>
+        <height>32</height>
+        <label>Select a Star to Rate:</label>
+        <textcolor>fff5f5f5</textcolor>
+        <font>special13</font>
+    </control>
+ 
+      <control type="image" id="142">
+        <description>rating</description>
+        <posx>280</posx>
+        <posy>280</posy>
+        <width>170</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texture>rating3.png</texture>
+    </control> 
+
+    <control type="button" id="150">
+        <description>rate0</description>
+        <posx>245</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown> 
+        <onright>143</onright>         
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control> 
+
+ 
+    <control type="button" id="143">
+        <description>rate1</description>
+        <posx>280</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown> 
+        <onleft>150</onleft>
+        <onright>144</onright>         
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control> 
+
+    <control type="button" id="144">
+        <description>rate2</description>
+        <posx>315</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown>  
+        <onleft>143</onleft> 
+        <onright>145</onright>    
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control> 
+
+    <control type="button" id="145">
+        <description>rate3</description>
+        <posx>350</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown> 
+        <onleft>144</onleft>         
+        <onright>146</onright>         
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>
+    
+    <control type="button" id="146">
+        <description>rate4</description>
+        <posx>385</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown>   
+        <onleft>145</onleft>         
+        <onright>147</onright>       
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>    
+ 
+    <control type="button" id="147">
+        <description>rate5</description>
+        <posx>420</posx>
+        <posy>280</posy>
+        <width>30</width>
+        <height>40</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <ondown>148</ondown>   
+        <onleft>146</onleft>       
+        <!--label>User Name</label-->
+        <!--aspectratio>keep</aspectratio-->
+        <texturenofocus></texturenofocus>
+        <texturefocus></texturefocus>
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>  
+
+    <control type="button" id="148">
+        <description>rate</description>
+        <posx>255</posx>
+        <posy>370</posy>
+        <width>120</width>
+        <height>32</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>Rate</label>
+        <onup>143</onup>         
+        <onright>149</onright>
+        <ondown>148</ondown>  
+        <textcolor>FFFFFFFF</textcolor>
+        <font>special13</font>        
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>  
+
+     <control type="button" id="149">
+        <description>no thanks</description>
+        <posx>380</posx>
+        <posy>370</posy>
+        <width>120</width>
+        <height>32</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>No Thanks</label>
+        <onup>143</onup> 
+        <onleft>148</onleft>  
+        <ondown>149</ondown>  
+        <textcolor>FFFFFFFF</textcolor>
+        <font>special13</font>          
+        <colordiffuse>0xfff5f5f5</colordiffuse>
+    </control>  
+     
+    </controls>
+</window>
+

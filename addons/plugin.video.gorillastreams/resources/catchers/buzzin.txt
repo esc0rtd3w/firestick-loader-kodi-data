@@ -1,0 +1,20 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Buzzin - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://buzzin.tv/embed.php?v=%s&vw=650&vh=450&domain=www.vipbox.tv
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'flashplayer':\s*'(.*?)'.*?'file':\s*'(.*?)'.*?'streamer':\s*'rtmp://[^/]+/redirect\?u=(.*?)'.*','@CURRENT_URL@','swf|file|rtmp.tmp')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_build=rtmp://178.33.230.21:1935/cdnlive?u=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfVfy=1 swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s

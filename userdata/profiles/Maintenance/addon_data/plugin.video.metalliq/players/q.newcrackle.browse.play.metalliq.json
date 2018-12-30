@@ -1,0 +1,35 @@
+{
+ "name"         : "Crackle [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "na",
+ "plugin"       : "plugin.video.newcrackle",
+ "priority"     : 800,
+ "id"           : "q.newcrackle.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.newcrackle/?foldername=Movies&mode=movies_folder",
+    "steps"     : [
+     ".*{shorttitle}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.newcrackle/?foldername=TV&mode=tv_folder",
+    "steps"     : [
+     ".*{shortname}.*",
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : []
+}

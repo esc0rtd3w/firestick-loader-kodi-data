@@ -1,0 +1,16 @@
+V3.2
+Added directory support for comms
+
+V3.1
+Updated https
+
+V2.9
+Returned to GitHub
+
+V2.8
+Moved due to GitHub Malfunction
+
+V2.7
+Correct Typo in Repo
+V 2.6
+Official Repo Initial Version

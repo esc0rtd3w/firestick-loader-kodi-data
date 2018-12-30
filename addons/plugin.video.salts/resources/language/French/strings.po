@@ -1,0 +1,179 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Luc Mcdermott, 2017
+# Pierre-Luc Filiatrault, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: French (http://www.transifex.com/tv-addons/salts/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Films"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "Téléséries"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Films"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "Téléséries"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Paramètres"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Ordre de tri de la liste de lecture"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "Paramètre Url Resolver"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Paramètre de l'Add-on"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Auto-Configaration de SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Autoriser SALTS à accèder a mon compte Trakt.tv"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Vue par Défault"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Supprimer les Url(s) en cache"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "Tendance"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Populaire"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Plus Récent"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Recommandé"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Ma Collection"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Mes Favories"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Mes Subscription"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Mes Émissions à voirs"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Ma Liste"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Autre Liste"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Mon prochain épissode"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Mon Calendrier"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Calendrier Général "
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Calendrier de Première"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Recherche"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Recherche Récente"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Recherche Sauvegarder"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Rafraichir forcé"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Éffacer Tout"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Rafraîchissement forcé en cours"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Rafraîchissement Forcé Complété"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Monté"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Décendre"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Déplacer Vers"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Consulter les saisons"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Activé"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Saison"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Canceller"
+

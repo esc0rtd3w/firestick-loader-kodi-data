@@ -1,0 +1,22 @@
+
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Hogy - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.hogy.tv/embed2.php?c=%s&id=&width=640&height=385&autostart=true
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?file\',\s*\'([^\']+)\'.*?streamer\',\s*\'([^\']+)\'.*','@CURRENT_URL@','swf|file|rtmpTmp')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmpTmp
+item_info_convert=replace('%s','redirect','live')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

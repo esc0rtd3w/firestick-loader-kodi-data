@@ -1,0 +1,11 @@
+<settings>
+    <setting id="active" value="0" />
+    <setting id="autobuf" value="false" />
+    <setting id="autoexit" value="false" />
+    <setting id="cache" value="252420" />
+    <setting id="ip_addr" value="127.0.0.1" />
+    <setting id="pausable" value="false" />
+    <setting id="pcook" value="852020836" />
+    <setting id="prog" value="" />
+    <setting id="save" value="false" />
+</settings>

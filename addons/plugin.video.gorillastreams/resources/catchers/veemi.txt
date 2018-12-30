@@ -1,0 +1,12 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Veemi - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://live.veemi.com:1935/vlb/%s swfUrl=http://www.veemi.com/player/player-licensed.swf live=1 timeout=15 swfVfy=1 pageUrl=http://www.veemi.com/
+
+
+#item_info_name=url
+#item_info_from=@PARAM1@
+#item_info_build=http://live.veemi.com:1935/live/_definst_/%s/playlist.m3u8

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.binkytv" name="Binky TV" version="1.1.5" provider-name="Dandymedia">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.addon.common" version="0.0.1"/>
+    <import addon="plugin.video.youtube" version="5.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Tots TV and Learning</summary>
+    <description lang="en">Channels for kids from Youtube.</description>
+    <platform>all</platform>
+    <forum>sfsfsfsfsf</forum>
+    <website>fdssfs</website>
+  </extension>
+</addon>

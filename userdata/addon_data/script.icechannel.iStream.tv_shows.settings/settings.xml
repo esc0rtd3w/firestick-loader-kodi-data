@@ -1,0 +1,57 @@
+<settings>
+    <setting id="autoplay" value="false" />
+    <setting id="autoplay_host_sel_dialog" value="true" />
+    <setting id="autoplay_skip_interval" value="300" />
+    <setting id="metadata_tv_shows" value="true" />
+    <setting id="sort" value="true" />
+    <setting id="sort_hosts_1" value="GOOGLEVIDEO.COM,CARTOONHD,MOVREEL,ICEFILMS,PRIMEWIRE,SIMPLYMOVIES.NET,NITER.TV" />
+    <setting id="sort_hosts_2" value="LEMUPLOADS.COM,PUTLOCKER.COM,SOCKSHARE.COM,PLAYED.TO" />
+    <setting id="sort_hosts_3" value="PROMPTFILE.COM,MIGHTYUPLOAD.COM,GORILLAVID.IN,VIDHOG.COM" />
+    <setting id="sort_hosts_4" value="NOWVIDEO.CH,NOWVIDEO.SX,NOWVIDEO.EU" />
+    <setting id="sort_hosts_5" value="SHARESIX.COM,ZALAA.COM,FILENUKE.COM" />
+    <setting id="sort_quality" value="1080P,720P,HD,DVD,SD,NA,TS,CAM" />
+    <setting id="tv_shows_123Movies_source_enabled" value="true" />
+    <setting id="tv_shows_9Movies_source_enabled" value="true" />
+    <setting id="tv_shows_CARTOONEXTRA_source_enabled" value="false" />
+    <setting id="tv_shows_Cartoon HD_source_enabled" value="false" />
+    <setting id="tv_shows_EasyNews_source_enabled" value="false" />
+    <setting id="tv_shows_Furk.Net_source_enabled" value="false" />
+    <setting id="tv_shows_HDMovie_source_enabled" value="true" />
+    <setting id="tv_shows_HDTVSHOWS_source_enabled" value="true" />
+    <setting id="tv_shows_IMDb_indexer_enabled" value="true" />
+    <setting id="tv_shows_IceFilms_indexer_enabled" value="false" />
+    <setting id="tv_shows_IceFilms_source_enabled" value="true" />
+    <setting id="tv_shows_Kissdrama_source_enabled" value="true" />
+    <setting id="tv_shows_MovieStorm_source_enabled" value="true" />
+    <setting id="tv_shows_PlayBoxHD_source_enabled" value="true" />
+    <setting id="tv_shows_Plex_source_enabled" value="false" />
+    <setting id="tv_shows_PrimeWire_indexer_enabled" value="false" />
+    <setting id="tv_shows_PrimeWire_source_enabled" value="true" />
+    <setting id="tv_shows_Showbox_source_enabled" value="true" />
+    <setting id="tv_shows_Streamlord_source_enabled" value="true" />
+    <setting id="tv_shows_Tvrelease_source_enabled" value="true" />
+    <setting id="tv_shows_Watch Tv Series_source_enabled" value="true" />
+    <setting id="tv_shows_XMovies8_source_enabled" value="true" />
+    <setting id="tv_shows_animeultima_indexer_enabled" value="false" />
+    <setting id="tv_shows_animeultima_source_enabled" value="false" />
+    <setting id="tv_shows_clickplay_source_enabled" value="true" />
+    <setting id="tv_shows_directdownload_source_enabled" value="false" />
+    <setting id="tv_shows_g2g_indexer_enabled" value="false" />
+    <setting id="tv_shows_g2g_source_enabled" value="true" />
+    <setting id="tv_shows_iStream_source_enabled" value="false" />
+    <setting id="tv_shows_movie.to_source_enabled" value="true" />
+    <setting id="tv_shows_movie4u_source_enabled" value="true" />
+    <setting id="tv_shows_myvideolinks_source_enabled" value="true" />
+    <setting id="tv_shows_o2tvseries_source_enabled" value="true" />
+    <setting id="tv_shows_oneclickwatch_source_enabled" value="true" />
+    <setting id="tv_shows_ororo_source_enabled" value="false" />
+    <setting id="tv_shows_projectfreetv_indexer_enabled" value="false" />
+    <setting id="tv_shows_projectfreetv_source_enabled" value="true" />
+    <setting id="tv_shows_sermov_source_enabled" value="true" />
+    <setting id="tv_shows_sezonlukdizi_source_enabled" value="true" />
+    <setting id="tv_shows_superchillin_indexer_enabled" value="false" />
+    <setting id="tv_shows_superchillin_source_enabled" value="false" />
+    <setting id="tv_shows_trakt_indexer_enabled" value="false" />
+    <setting id="tv_shows_tvrage_indexer_enabled" value="false" />
+    <setting id="tv_shows_vidic.ch_source_enabled" value="true" />
+</settings>

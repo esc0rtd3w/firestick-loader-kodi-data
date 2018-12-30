@@ -1,0 +1,17 @@
+<strings>
+	<!-- General -->
+	<string id="30300">General</string>
+	<string id="30303">Universal Settings...</string>	
+	
+    <!-- Meta Data -->
+    <string id="30600">Enable MetaData</string>
+	<string id="30601">       MetaData Settings...</string>
+	<string id="30602">       Movie Poster</string>
+	<string id="30603">       Movie Fanart</string>
+	
+	<!-- Auto View -->
+    <string id="30400">Enable Automatic View</string>
+    <string id="30401">       Movies View</string>
+    <string id="30405">       Default View</string>
+
+</strings>

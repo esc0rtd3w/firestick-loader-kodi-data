@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+    <setting id="theme" type="enum" label="Theme" values="Blue|Maccharm|Classic|Simple" default="0"/>
+    
+    <setting id="episodes_action" type="enum" label="Default action on 'Latest episodes'" values="Host selection|Browse older episodes"/>
+    <setting id="calendar_type" type="enum" label="Calendar type" values="Folders by date|Single folder"/>
+    <setting id="search_type" type="enum" label="Tv Search" values="TV Shows|Episodes"/>
+
+    <setting label="
+            " type="lsep"/>
+    <setting type="sep"/>
+    <setting label="Delete all favourites" type="action" action="RunPlugin(plugin://plugin.video.pftvso/?mode=erase_all)" enable="true" option="close"/>
+    <setting label="Delete search history" type="action" action="RunPlugin(plugin://plugin.video.pftvso/?mode=erase_history)" enable="true" option="close"/>
+
+
+    </category>
+
+    <category label="Metadata">
+    <setting id="movie_metadata" type="bool" label="Enable Movie metadata" default="false"/>
+    <setting id="tv_metadata" type="bool" label="Enable TV metadata" default="false"/>  
+    </category>
+
+    
+	<category label="Sources">
+    <setting id="autoplay" type="bool" label="Enable autoplay" default="false"/>
+    <setting id="axel" type="bool" label="Use axel accelerator ([COLOR red]experimental[/COLOR])" default="false"/>
+
+    <setting label="Source blacklist (comma separated e.g.: vidzi.tv,vodlocker.com)" type="lsep"/>
+
+    <setting label="" type="text" id="source_blacklist" default="vodlocker.club"/>
+    
+    <setting label="Show only these links (comma separated e.g.: vidzi.tv,vodlocker.com)" type="lsep"/>
+
+    <setting label="" type="text" id="source_whitelist" default=""/>
+    
+    
+
+    <setting id="enable_sorting" type="bool" label="Enable source sorting" default="false"/>
+    <setting label="Source order (comma separated e.g.: vidzi.tv,vodlocker.com)" type="lsep" visible="!eq(-1,false)"/>
+    <setting id="sort" type="text" label="" default="" visible="!eq(-2,false)"/>
+
+    
+    </category>
+
+    
+
+    <category label="Downloads">
+    <setting id="download_folder" type="folder" label="Downloads folder" default=""/>
+    <setting id="autodownload" type="bool" label="Auto select download source" default="false"/>
+    <setting id="down_sort" type="bool" label="Use source sorting" default="false"/>
+
+    </category>
+
+
+
+</settings>

@@ -1,0 +1,19 @@
+v1.1.1
+Tweaks
+v1.1.0
+Switched to Alluc database
+-bump
+v1.0.6
+Added Search
+Added "All"-section
+v1.0.5
+Code changes  + meta fixv1.0.4
+added meta
+v1.0.3
+Changed base code 
+v1.0.2
+Updated
+v1.0.1
+Updated added art new code
+v1.0.0
+Initial Release

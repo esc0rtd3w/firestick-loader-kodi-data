@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+  <!-- General -->
+  <category label="30400">
+    <setting id="page_limit" type="enum" label="30401" values="10|20|30|40|50" default="1" />
+    <setting id="thumb_size" type="enum" label="30402" values="very small|small|medium|large|extra large" default="2" />
+    <setting id="resolver" type="enum" label="30405" values="auto|local|offliberty|m4a|mixcloud-downloader 1|mixcloud-downloader 2" default="0" />
+    <setting id="ext_info" type="bool" label="30404" default="false" />
+    <setting type="sep" />
+    <setting id="debug" type="bool" label="30403" default="false" />
+  </category>
+
+  <!-- History -->
+  <category label="30500">
+    <setting id="play_history_max" type="enum" label="30501" values="10|20|30|40|50" default="0"/>
+    <setting id="search_history_max" type="enum" label="30502" values="10|20|30|40|50" default="0" enable="false"/>
+  </category>
+
+</settings>

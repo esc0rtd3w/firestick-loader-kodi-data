@@ -1,0 +1,168 @@
+######## v1.3.3 ########
+ 
+- Updated md_request as was failing on some sites that use cloudflare
+
+######## v1.3.2 ########
+ 
+- Added jsunfuck from tknorrois s.a.l.t.s modules
+
+######## v1.3.1 ########
+ 
+- Another addon updated and added to duck hunt
+
+- Updated securi request in md_request
+
+######## v1.3.0 ########
+ 
+- Another addon updated and added to duck hunt
+
+######## v1.2.9 ########
+ 
+- Fixed syntax error
+
+######## v1.2.8 ########
+ 
+- Add two more addons to duck hunt
+
+######## v1.2.7 ########
+ 
+- Updated Licence
+
+
+######## v1.2.6 ########
+ 
+- More work done to md_tools
+
+
+######## v1.2.5 ########
+ 
+- More work done to md_tools
+
+
+
+######## v1.2.4 ########
+ 
+- Code added to remove the anonymous repo and addons 
+- as they keep shouting about opensource yet dont abide by it themselves
+- if you dont like this then please dont use my addons
+
+######## v1.2.3 ########
+ 
+- More work done to md_tools
+
+
+######## v1.2.2 ########
+ 
+- More work done to md_tools
+
+- Code clean up on fetch_favs now shows info and fanart when seleting episodes from a tv show
+
+######## v1.2.1 ########
+ 
+- More work done to md_tools
+
+- Added Duck Hunt
+
+######## v1.2.0 ########
+ 
+- More work done to md_tools
+
+######## v1.1.9 ########
+ 
+- More work done to md_tools
+
+######## v1.1.8 ########
+ 
+- More work done to md_tools
+- Fixed error with favs noot opening from context menu
+
+######## v1.1.7 ########
+ 
+- More work done to md_tools
+- Added search and my favs to the context menu for mucky ducks addons 
+
+######## v1.1.6 ########
+ 
+- More work done to md_tools
+
+######## v1.1.5 ########
+ 
+- Fixed the problenm in md_tools that was stopping search from working
+
+######## v1.1.4 ########
+ 
+- More work done to md_tools
+
+######## v1.1.2 ########
+
+######## v1.1.3 ########
+ 
+- Fixed bug on android with invalid syntax for a with statement in md_tools
+
+######## v1.1.2 ########
+ 
+- More work done to md_tools
+
+- Removed print statements from md_view as was causing a bad descriptor error every now and then
+
+######## v1.1.1 ########
+ 
+- More work done to md_tools added favs
+
+######## v1.1.0 ########
+ 
+ - Added the changes Metal_Kettle made to the empty values in the incapsula module which was stopping it working on python 2.6
+ - Changed the now_in_seconds function in the incapsula module as .total_seconds() does not exist in python 2.6
+ - More work done to md_tools
+
+ ######## v1.0.9 ########
+ 
+ - More work done to md_tools  
+
+######## v1.0.8 ########
+
+- Added md_view a simple script for adding views
+- Added md_tools a script with common methods used in Mucky Ducks addons 
+- Added the Addon script from the common module
+
+######## v1.0.7 ########
+
+- Fixed a decode error with incapsula on android devices
+ 
+######## v1.0.6 ########
+
+- Added requests v2.12.4 from https://github.com/kennethreitz/requests
+
+######## v1.0.5 ########
+
+- Added beautifulsoup3 v3.2.1 from https://www.crummy.com/software/BeautifulSoup
+- Added incapsula-cracker v0.1.3 from https://github.com/ziplokk1/incapsula-cracker
+- More work done to md_request 
+
+######## v1.0.4 ########
+
+- More work done to md_request
+
+######## v1.0.3 ########
+
+- More work done to md_request added class sucuri from lambdas client module
+
+######## v1.0.2 ########
+
+- Added unshortenit v0.3.0 from https://github.com/jkehler/unshortenit
+- Added md_request a simple script for making web requests
+- Added jsunpack from urlresolver which is a modified script from jsbeautifier
+
+######## v1.0.1 ########
+
+- Made some changes to Js2Py to get it working on android
+
+######## v1.0.0 ########
+
+- Initial Release
+- Added beautifulsoup4 v4.5.1 from https://www.crummy.com/software/BeautifulSoup
+- Added jsbeautifier v1.6.4 from https://pypi.python.org/pypi/jsbeautifier
+- Added cfscrape 1.6.8 from https://github.com/Anorov/cloudflare-scrape
+- Added Js2Py v0.40 from https://github.com/PiotrDabkowski/Js2Py
+- Added six v1.10.0 from https://pypi.python.org/pypi/six
+

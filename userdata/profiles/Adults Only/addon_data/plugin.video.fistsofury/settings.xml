@@ -1,0 +1,9 @@
+<settings>
+    <setting id="MAIN" value="500" />
+    <setting id="ask" value="true" />
+    <setting id="auto-view" value="true" />
+    <setting id="ga_time" value="2000-01-01 00:00:00" />
+    <setting id="message" value="false" />
+    <setting id="pop_time" value="2000-01-01 00:00:00" />
+    <setting id="visitor_ga" value="" />
+</settings>

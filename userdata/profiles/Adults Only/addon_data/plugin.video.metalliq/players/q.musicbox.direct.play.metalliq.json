@@ -1,0 +1,30 @@
+{
+ "name"         : "Music Box [COLOR FF0084FF]-[/COLOR] Direct Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.techdealer",
+ "plugin"       : "plugin.audio.musicbox",
+ "priority"     : 500,
+ "id"           : "q.musicbox.direct.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.audio.musicbox/?url=&mode=37&name=&iconimage=&fanart&album={album}&track_name={track}&type=song&artist={artist}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.audio.musicbox/?url=&mode=39&name=&iconimage=&fanart&album={album}&track_name={track}&type=song&artist={artist}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

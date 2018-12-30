@@ -1,0 +1,47 @@
+{
+ "name"         : "VidTime [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.VinManJSV",
+ "plugin"       : "plugin.video.VidTime",
+ "priority"     : 800,
+ "id"           : "q.vidtime.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.VidTime",
+    "steps": [
+     ".*VT TV.*",
+     "{name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.VidTime",
+    "steps": [
+     ".*VT TV.*",
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.VidTime",
+    "steps": [
+     ".*VT TV.*",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.VidTime",
+    "steps": [
+     ".*VT TV.*",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY" 
+   }
+  ]
+ ]
+}

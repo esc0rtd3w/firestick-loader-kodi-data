@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=VipLive - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://embed.vip-live.tv/jwplayer.php?c=%s&vwidth=640&vheight=385&domain=www.lshunter.tv
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?\'file\',\s*\'([^\']+)\'.*?\'streamer\',\s*\'([^\']+)\'.*','','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true swfVfy=1 swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

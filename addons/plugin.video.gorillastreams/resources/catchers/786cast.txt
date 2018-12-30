@@ -1,0 +1,17 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=786Cast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.786cast.tv/embed2.php?u=%s&vw=600&vh=430
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file:\s*"([^"]+)".*?flashplayer:\s*"([^"]+)".*?streamer:\s*"([^"]+)".*','%s','file|swf|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true swfVfy=1 swfUrl=http://www.786cast.tv/' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s
+

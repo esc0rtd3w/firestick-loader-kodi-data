@@ -1,0 +1,189 @@
+3.0.5
+Code Cleanup  
+Removed iLive temporarily 
+
+V2.5.7
+Code Clean up and 
+NEW AutoUpdate Functions
+
+V2.5.6
+Return to Repo after Attack
+Fixed to many sources to name 
+Added Featured Playlist Makers
+
+V2.5.2
+Added VIP Playlist Sections
+
+V2.5.1
+iLive domain fix
+Fixed iLive Search
+Speed Fixes
+
+V2.5.0
+Auto Repo installer set up Complete to 
+avert failure to launch on Android Device 
+
+V2.4.7
+Reduced  Loading times for iLive Menus
+and added redundencies  
+
+
+V2.4.6
+ALL KINDS OF REPAIRS
+Testing new iLive playables
+
+V 2.4.4
+Quick Fix
+
+V2.4.2
+Added FrightPix to Movie Section
+
+V2.4.1
+Added Custom Skin BETA USE AT YOUR OWN RISK
+Added Sublink routine to User Streams
+Code Clean up
+
+V2.4.0
+Activated PopcornFlix as internal addon
+Prep for Skinning  "No idea when it will be ready"
+
+V2.3.9
+Added Sublink capabilities to User Submissions
+Fixed Iwatchonline Movies
+
+V2.3.8
+Additional Tools and Playlist Submission fixes
+
+V2.3.7
+You can now submit playlists from the web Visit www.cliqaddon.com
+
+V2.3.6
+Added Automatic Database Inclusion
+
+V2.3.5
+Added ability for user streams to be in a Menu Format
+
+V2.3.2
+Adds ability for end user to add LOCAL stream files
+that need resolver or not
+Also prep for More User submitted streams and Box Sets 
+
+
+V2.3.1
+Added Series Gate Movie Section
+Added Source Name to "most" titles in Playable sections
+
+V2.3.0
+Added Afdah Movie Source
+
+
+V2.2.9
+Added ability to add your own Custom Stream list
+
+V2.2.5
+More Favorites fixes and "Useless" Submenu Removal "HAHA" 
+
+V2.2.4
+Ability to add iLive Streams to XBMC Favs
+
+V2.2.3
+Added Several Music Sources Including Big Radio and 
+Stream Licensing Radio
+Code Cosmetics 
+
+V2.1.8 - V2.2.2
+Bug Fixes and Prep for Music Aditions
+
+V2.1.7
+Added Host File Icons and adjusted stream call strings 
+
+V2.1.6
+Fixes Episode meta data error in fanart container
+
+V2.1.5
+MDB is now Cliq!!
+
+V2.1.0
+Ilive bug fix 
+
+V2.0.9
+Fixed iLive....AGAIN!
+
+V2.0.8
+More iLive Sources
+
+V2.0.7
+Added Global Favorites toLive Streams and User Submitted
+ 
+V2.0.6
+Small Bug Fixes & Quicker Sync to live streams 
+
+V2.0.5
+Added ability to stream movies encoded for any url resolver
+capable url
+Added more code enhancements for speed improvement  
+
+V2.0.4
+Bug Fix to Merdb TV SHow page 2 display
+
+V2.0.3
+Added ability to upload errors "directly to Blazetamer"
+
+V2.0.2
+Deals with iLive changes again
+
+V2.0.0
+Added iLive Favorites management system
+Added Auto Update systemforminor "on the fly" updates
+
+V1.8.5
+Cleaned  Code
+Added more user friendly Announcement console
+Repaired and added a better way to stream from iLive
+Various bug fixes 
+
+V1.8.0
+Added Search to iLive Streams
+
+
+ V1.7.5
+Added automatically updating iLive Streams
+
+
+V1.7.0a
+Cosmetic Enhancements
+Added Ability to turn off extras in Settings
+
+
+V1.7.0
+Added LIVE Streams Section
+Contact Blazetamer to submit Streams
+Added SUPERTOONS toCartoon Section
+
+V1.6.0
+Added Cartoon Section
+Added Sport Section
+Added UFC to Sport Section
+Improved Announcments 
+Added Special Menus Section
+Added Adult Section "Enable in Settings"
+
+V1.5.0
+(1)Added Interactive Announcements
+Announcements will pop up during first launch
+After that, you may go to Addon Settings, and enter an interval at 
+which the announcement pop up will display, or Disable them all together "ITS YOUR CHOICE"
+If you wish to recieve Announcement PopUps at lauch every 5 days, Then enter 5 in the Interval Settings. IF you do not wish to recieve any pop
+ups, simply Disable them in the Settings. 
+If Announcements are turned off in settings, you may still view them via the main menu.
+
+(2) Added Ability to install any of my other addons and /or My repo from within the addon itself.
+
+
+
+V1.1.0
+Added DataCenter Movies and SeriesGate Tv Shows
+
+V1.0.0
+Initial Release
+

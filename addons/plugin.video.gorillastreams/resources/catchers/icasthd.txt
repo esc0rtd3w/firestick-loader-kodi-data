@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=iCastHD - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.kbps.tv/embed.php?s=%s&width=600&height=450&domain=pogotv.eu
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?file:\s*["']([^'"]+).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?streamer[:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.kbps.tv/jl/player.swf live=true swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

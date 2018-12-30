@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <setting id="firstrun" type="bool" label="" default="false" visible="false" />
+    <category label="General">
+        <setting label="General" type="lsep" />
+        <setting id="dlpath" type="folder" label="Download Path" source="auto" option="writeable" />
+        <setting id="keep_files" type="bool" label="Keep files after playback/download stops" default="false" />
+
+        <setting label="Content" type="lsep"/>
+        <setting id="immunicity" type="bool" label="Auto-unblocking via Immunicity" default="false" />
+        <setting id="porn" type="bool" label="Adult Content" default="true" />
+
+        <setting label="BitTorrent" type="lsep"/>
+        <setting id="torrent_engine" label="Torrent Engine" type="enum" values="torrent2http|AceEngine" default="0"/>
+        <setting id="max_download_rate" label="Max Download Rate (kB/s)" type="number" default="" />
+        <setting id="encryption" label="Encryption" type="enum" values="Forced|Enabled|Disabled" default="1" />
+        <setting id="ace_keep_encripted" label="Keep encripted files" type="bool" default="false" enable="eq(-9,true)"/>
+        <setting id="ace_host" label="AceEngine remote host" type="ipaddress" default="127.0.0.1" enable="eq(-5,1)"/>
+        <setting id="ace_port" label="AceEngine remote port" type="number" default="62062" enable="eq(-6,1)"/>
+    </category>
+    <category label="Scrapers">
+        <setting label="LostFilm.TV" type="lsep"/>
+        <setting id="lostfilm_enabled" type="bool" label="Enable" default="true" />
+        <setting id="lostfilm_login" type="text" label="Login" default="" />
+        <setting id="lostfilm_passw" type="text" label="Password" option="hidden" default="" />
+        <setting id="lostfilm_qlt" type="enum" label="Quality" default="0" values="Ask|WebDL|1080p|720p" />
+
+        <setting label="RuTor.org" type="lsep"/>
+        <setting id="rutor_enabled" type="bool" label="Enable" default="true" />
+        <setting id="rutor_usesearch" type="bool" label="Search movie info at internet" default="false" />
+
+        <setting label="Torrents3D.ru" type="lsep"/>
+        <setting id="t3d_enabled" type="bool" label="Enable" default="true" />
+        <setting id="t3d_login" type="text" label="Login" default="" />
+        <setting id="t3d_passw" type="text" label="Password" option="hidden" default="" />
+
+        <setting label="RuTracker.org" type="lsep"/>
+        <setting id="rutracker_enabled" type="bool" label="Enable" default="true" />
+        <setting id="rutracker_usesearch" type="bool" label="Search movie info at internet" default="false" />
+        <setting id="rutracker_login" type="text" label="Login" default="" />
+        <setting id="rutracker_passw" type="text" label="Password" option="hidden" default="" />
+    </category>
+    <category label="Advanced">
+        <setting label="XBMC Library Integration" type="lsep"/>
+        <setting type="action" label="Install" action="RunPlugin(plugin://plugin.video.xbmctorrent/library/install)" />
+        <setting type="action" label="Uninstall" action="RunPlugin(plugin://plugin.video.xbmctorrent/library/uninstall)" />
+
+        <setting label="Maintenance" type="lsep"/>
+        <setting type="action" label="Clear cache" action="RunPlugin(plugin://plugin.video.xbmctorrent/cmd/clear_cache)" />
+
+        <setting label="Custom Domains" type="lsep"/>
+        <setting id="base_rutor" type="text" label="RuTor.org" default="http://rutor.info" />
+        <setting id="base_rutracker" type="text" label="RuTracker.org" default="http://rutracker.org/forum/" />
+    </category>
+</settings>

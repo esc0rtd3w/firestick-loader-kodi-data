@@ -1,0 +1,36 @@
+[B]v0.0.1[/B]
+Initial Release
+
+[B]v0.0.2[/B]
+Added Sections, Categories, and Types of Match
+
+[B]v0.0.3[/B]
+Code Cleanup
+
+[B]v0.0.4[/B]
+Minor bug fixes
+Added GA
+
+[B]v0.0.5[/B]
+Added support for My Watch History
+
+[B]v0.0.6[/B]
+Moved watch history to module
+
+[B]v0.0.7[/B]
+Added support for play-back-engine
+
+[B]v0.0.8[/B]
+Fixed bug with play-back-engine
+
+[B]v0.0.9[/B]
+Switched to Universal Watch History and Playback Engine
+
+[B]v0.1.0[/B]
+Now-Video Fix
+
+[B]v0.1.1[/B]
+Removed GA
+
+[B]v0.1.2[/B]
+NA

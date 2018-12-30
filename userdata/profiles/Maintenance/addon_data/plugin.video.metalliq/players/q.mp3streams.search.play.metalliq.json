@@ -1,0 +1,73 @@
+{
+ "name"         : "MP3 Streams [COLOR FF0084FF]-[/COLOR] Direct Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.Kinkin",
+ "plugin"       : "plugin.audio.mp3streams",
+ "priority"     : 900,
+ "id"           : "q.mp3streams.search.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     "{clearartist} - {album} - {cleartrack}"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     ".*{clearartist} - {album} - {cleartrack}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     "{clearartist} - .* - {cleartrack}"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     ".*{clearartist} - .* - {cleartrack}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     "{clearartist} - {cleartrack}"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     ".*{clearartist} - {cleartrack}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     "{cleartrack}"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.audio.mp3streams/?mode=26&name={cleartrack}&url=url",
+    "steps"     : [
+     ".*{cleartrack}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "live"         : []
+}

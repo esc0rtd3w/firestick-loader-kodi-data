@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30002">
+		<setting label="30003" type="action" action="RunPlugin(plugin://plugin.video.nbaondemand/?action=cache_clear_list)"/>
+	</category>
+</settings>

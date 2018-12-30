@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category label="Auto-View  Settings">
+   	<setting id="auto-view" type="bool" label="Enable Automatic View" default="true"/>
+   	<setting id="tvshows-view" type="number" label="Movie View" default="500" enable="!eq(-2,false)"/>
+   	<setting id="default-view" type="number" label="Default View" default="50" enable="!eq(-3,false)"/>
+    </category>
+    <category label="Update Check">
+    <setting type="lsep" label="If Updates are Available You Will See The Appropriate Notifications"/>
+    <setting label="  [COLOR red]Click Here To Check For Updates For All Your Addons/Repos[/COLOR]" type="action" action="UpdateAddonRepos"/>
+    </category>
+</settings>

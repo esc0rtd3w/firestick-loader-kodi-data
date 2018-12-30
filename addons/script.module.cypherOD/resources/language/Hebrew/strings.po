@@ -1,0 +1,822 @@
+# Addon Name: Jen
+# Addon id: plugin.video.jen
+# Addon Provider: Team Jen
+msgid ""
+msgstr ""
+"Project-Id-Version: Jen\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-11-04 18:56+0200\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30401"
+msgid "[COLOR teal]Are You Sure?[/COLOR]"
+msgstr "[COLOR teal]האם אתה בטוח?[/COLOR]"
+
+msgctxt "#30402"
+msgid "[COLOR teal]Process Complete[/COLOR]"
+msgstr "[COLOR teal]התהליך הסתיים[/COLOR]"
+
+msgctxt "#30491"
+msgid "This View is Now Default"
+msgstr "הצפייה היא ברירת המחדל"
+
+msgctxt "#30500"
+msgid "[I]Next Page[/I]"
+msgstr "[I]לדף הבא[/I]"
+
+msgctxt "#30701"
+msgid "[COLOR blue]Settings[/COLOR]"
+msgstr "[COLOR blue]הגדרות[/COLOR]"
+
+msgctxt "#30702"
+msgid "[COLOR orange]Search[/COLOR]"
+msgstr "[COLOR orange]חיפוש[/COLOR]"
+
+msgctxt "#30703"
+msgid "[COLOR purple]Clear History[/COLOR]"
+msgstr "[COLOR purple]נקה היסטוריה[/COLOR]"
+
+msgctxt "#30704"
+msgid "Link"
+msgstr "קישור"
+
+msgctxt "#30705"
+msgid "[COLOR red]Unplayable Stream[/COLOR]"
+msgstr "[COLOR red]ההזרמה לא ניתנת לניגון[/COLOR]"
+
+msgctxt "#30706"
+msgid "Discover Great Streaming Playlists!"
+msgstr "גלה הזרמת רשימות ניגון מעולות!"
+
+msgctxt "#30707"
+msgid "[COLOR orange]Trailer[/COLOR]"
+msgstr "[COLOR orange]קדימון[/COLOR]"
+
+msgctxt "#30708"
+msgid "Information"
+msgstr "מידע"
+
+msgctxt "#30711"
+msgid "Set Movies view"
+msgstr "הגדר תצוגת סרטים"
+
+msgctxt "#30712"
+msgid "Set TV Shows view"
+msgstr "הגדר תצוגת סדרות"
+
+msgctxt "#30713"
+msgid "Set Seasons view"
+msgstr "הגדר תצוגת עונות"
+
+msgctxt "#30714"
+msgid "Set Episodes view"
+msgstr "הגדר תצוגת פרקים"
+
+msgctxt "#30715"
+msgid "General"
+msgstr "כללי"
+
+msgctxt "#30716"
+msgid "Metadata"
+msgstr "מידע-מטא"
+
+msgctxt "#30717"
+msgid "Enable Metadata"
+msgstr "אפשר מידע-מטא"
+
+msgctxt "#30718"
+msgid "Cache"
+msgstr "מטמון"
+
+msgctxt "#30719"
+msgid "Clear Cache"
+msgstr "נקה מטמון"
+
+msgctxt "#30720"
+msgid "Path"
+msgstr "נתיב"
+
+msgctxt "#30721"
+msgid "Downloads"
+msgstr "הורדות"
+
+msgctxt "#30722"
+msgid "Download item"
+msgstr "הורד פריט"
+
+msgctxt "#30723"
+msgid "Credits"
+msgstr "תודות"
+
+msgctxt "#30724"
+msgid "Show credits"
+msgstr "הצג תודות"
+
+msgctxt "#30725"
+msgid "Add-on settings"
+msgstr "הגדרות ההרחבה"
+
+msgctxt "#30726"
+msgid "[COLOR teal]Opening Stream[/COLOR]"
+msgstr "[COLOR teal]פותח הזרמה[/COLOR]"
+
+msgctxt "#30727"
+msgid "Accounts"
+msgstr "חשבונות"
+
+msgctxt "#30728"
+msgid "User"
+msgstr "שם משתמש"
+
+msgctxt "#30729"
+msgid "Email"
+msgstr "אי-מייל"
+
+msgctxt "#30730"
+msgid "Password"
+msgstr "סיסמה"
+
+msgctxt "#30731"
+msgid "[COLOR orange]Please Wait...[/COLOR]"
+msgstr "[COLOR orange]אנא המתן...[/COLOR]"
+
+msgctxt "#30732"
+msgid "Opening image"
+msgstr "תמונת פתיחה"
+
+msgctxt "#30733"
+msgid "Scraper Settings"
+msgstr "הגדרות סקראפר"
+
+msgctxt "#30734"
+msgid "Open Scraper Settings"
+msgstr "פתח את הגדרות סקראפר"
+
+msgctxt "#30735"
+msgid "Filtering Options"
+msgstr "אפשרויות סינון"
+
+msgctxt "#30736"
+msgid "Allow openload links"
+msgstr "אפשר קישורים מ-openload"
+
+msgctxt "#30737"
+msgid "Allow thevideo.me links"
+msgstr "אפשר קישורים מ-thevideo.me"
+
+msgctxt "#30738"
+msgid "Allow vidup.me links"
+msgstr "אפשר קישורים מ-vidup.me"
+
+msgctxt "#30739"
+msgid "Try searching for alternate spelling if present (slower)"
+msgstr "נסה לחפש איות חלופי אם קיים (איטי יותר)"
+
+msgctxt "#30740"
+msgid "Third Party"
+msgstr "צד שלישי"
+
+msgctxt "#30741"
+msgid "Resolver Settings"
+msgstr "הגדרות Resolver"
+
+msgctxt "#30742"
+msgid "Open Resolver Settings"
+msgstr "פתח את הגדרות Resolver"
+
+msgctxt "#30743"
+msgid "Enable Debrid"
+msgstr "אפשר Debrid"
+
+msgctxt "#30744"
+msgid "Enable Link Selection Dialog"
+msgstr "אפשר תיבת דו שיח לבחירת קישור"
+
+msgctxt "#30745"
+msgid "Enable Link Selection Fallthrough"
+msgstr "אפשר ביטול לבחירת קישור"
+
+msgctxt "#30751"
+msgid "Scoreboard"
+msgstr "לוח התוצאות"
+
+msgctxt "#30752"
+msgid "Archived Games"
+msgstr "משחקים בארכיון"
+
+msgctxt "#30753"
+msgid "Live Games , Requires some modifications to get working visit forum."
+msgstr "משחקים חיים, דורש מספר שינויים. כדי להפעיל בקר בפורום."
+
+msgctxt "#30754"
+msgid "If list returns BLANK, Feed is not up yet."
+msgstr "אם הרשימה מחזירה ערך ריק, ההזנה עדיין לא עולה."
+
+msgctxt "#30755"
+msgid "Feed not available yet"
+msgstr "ההזנה עדיין לא זמינה"
+
+msgctxt "#30756"
+msgid "Pick A Bandwidth"
+msgstr "בחר את רוחב הפס"
+
+msgctxt "#30757"
+msgid "Offer to install required 3rd party repositories"
+msgstr "אפשר להציע התקנת מאדרי הרחבות צד 3"
+
+msgctxt "#30758"
+msgid "Enable debugging mode"
+msgstr "אפשר איתור באגים"
+
+msgctxt "#30760"
+msgid "Message options"
+msgstr "אפשרויות הודעה"
+
+msgctxt "#30761"
+msgid "Enable possibly offensive messages"
+msgstr "אפשר הודעות שייתכן ומכילות תוכן פוגע"
+
+msgctxt "#30762"
+msgid "Parts of this addon may rely on certain[CR]third party addons."
+msgstr "חלקים בהרחבה הזו יכולים להסתמך על[CR]הרחבות צד 3 של ספקים אחרים."
+
+msgctxt "#30763"
+msgid "[CR]"
+msgstr "[CR]"
+
+msgctxt "#30764"
+msgid "You can choose whether or not to install[CR]the relevant repos."
+msgstr "באפשרותך לבחור אם ברצונך להתקין[CR]את המאגרים הרלוונטיים."
+
+msgctxt "#30765"
+msgid ""
+"We recommend installing the relevant repos[CR]to ensure your addons auto-"
+"update."
+msgstr ""
+"אנו ממליצים להתקין את המאגרים הרלוונטיים[CR]כדי להבטיח עדכון אוטומטי "
+"להרחבות שלך."
+
+msgctxt "#30766"
+msgid "Offer to install required 3rd party addons"
+msgstr "הצעה להתקין הרחבות צד 3 נדרשות"
+
+msgctxt "#30767"
+msgid "Disable all loading messages"
+msgstr "בטל את טעינת כל ההודעות"
+
+msgctxt "#30770"
+msgid "Dev Mode"
+msgstr "מצב מפתח"
+
+msgctxt "#30807"
+msgid "Please wait..."
+msgstr "נא להמתין..."
+
+msgctxt "#30808"
+msgid "Checking login details and update files"
+msgstr "בודק את פרטי ההתחברות ומעדכן קבצים"
+
+msgctxt "#30825"
+msgid "Wrong Password"
+msgstr "סיסמה שגויה"
+
+msgctxt "#30826"
+msgid ""
+"You have entered an incorrect password for this account, please check "
+"settings and try again."
+msgstr "אתה הזנת סיסמה שגויה עבור החשבון הזה, נא בדוק את הגדרות ונסה שוב."
+
+msgctxt "#30827"
+msgid "Wrong Username"
+msgstr "שם משתמש שגוי"
+
+msgctxt "#30828"
+msgid ""
+"You have not entered a valid username, please either correct your login "
+"details or register for FREE at www.noobsandnerds.com."
+msgstr ""
+"אתה לא הזנת שם משתמש חוקי, אנא תקן את פרטי ההתחברות שלך או תירשם בחינם ב "
+"www.noobsandnerds.com."
+
+msgctxt "#30829"
+msgid "Account Restricted"
+msgstr "חשבון מוגבל"
+
+msgctxt "#30830"
+msgid ""
+"There is a ban on your account, the most likely cause for this is account "
+"sharing. Please make sure you haven't accidentally left your login details "
+"on a shared computer."
+msgstr ""
+"החשנון שלך מושעה. הגורם הסביר ביותר לכך הוא חשבון ששותף. אנא ודא שבטעות לא "
+"השארת את פרטי ההתחברות שלך במחשב משותף."
+
+msgctxt "#30831"
+msgid "Re-Activate Account"
+msgstr "הפעל מחדש את החשבון"
+
+msgctxt "#30832"
+msgid ""
+"You need to re-activate your account on the new forum. Simply visit the "
+"forum at www.noobsandnerds.com and login with your existing credentials."
+msgstr ""
+"עליך להפעיל מחדש את החשבון שלך בפורום החדש. פשוט בקר את הפורום-www."
+"noobsandnerds.com ותתחבר עם האישורים הקיימים שלך."
+
+msgctxt "#30833"
+msgid "Servers Busy"
+msgstr "השרתים עסוקים"
+
+msgctxt "#30834"
+msgid ""
+"Sorry the servers appear to be struggling with demand, please try again. "
+"Sorry for any inconvenience, we are currently working on improving the "
+"speeds."
+msgstr ""
+"מצטער. נראה שהשרתים עמוסים מאד, אנא נסה שנית. סליחה על אי הנוחות, אנחנו "
+"כרגע עובדים על שיפור המהירויות."
+
+msgctxt "#30835"
+msgid "No Login Details"
+msgstr "אין פרטי התחברות"
+
+msgctxt "#30836"
+msgid ""
+"You have enabled the login feature but not entered any details. Please add "
+"your login details or disable the option."
+msgstr ""
+"איפשרת את תכונת החיבור, אך לא הכנסת פרטים. נא הוסף את פרטי ההתחברות שלך או "
+"בטל את האפשרות."
+
+msgctxt "#30843"
+msgid "Login (For Playlisters Only)"
+msgstr "כניסה (עבור Playlisters בלבד)"
+
+msgctxt "#30844"
+msgid "Forum to use for login"
+msgstr "הפורום לשימוש עבור התחברות"
+
+msgctxt "#30845"
+msgid "Username"
+msgstr "שם משתמש"
+
+msgctxt "#30846"
+msgid "Password"
+msgstr "סיסמה"
+
+msgctxt "#30897"
+msgid ""
+"[COLOR=gold]----------------------------------------------------[/COLOR]"
+msgstr ""
+"[COLOR=gold]----------------------------------------------------[/COLOR]"
+
+msgctxt "#30900"
+msgid "[COLOR=gold]Use latest test version (donators only)[/COLOR]"
+msgstr "[COLOR=gold]תשתמש בגרסת הבדיקה האחרונה (לתורמים בלבד)[/COLOR]"
+
+msgctxt "#30901"
+msgid "Check Login Details"
+msgstr "בדוק את פרטי ההתחברות"
+
+msgctxt "#30902"
+msgid ""
+"Please double check your login credentials, once entered correctly try "
+"running the add-on to activate the test version then come back and try "
+"again."
+msgstr ""
+"בדוק שוב את פרטי הכניסה שלך, כשתכניס פרטים נכונים, נסה להפעיל את ההרחבה כדי "
+"להפעיל את גירסת הבדיקה ואז לחזור ולנסות שוב."
+
+msgctxt "#30903"
+msgid "Log Options - Add an email to receive a link to your log"
+msgstr "אפשרויות יומן - הוסף אי-מייל כדי לקבל קישור ליומן שלך"
+
+msgctxt "#30904"
+msgid "Enable Debug Mode (enable if asking for help on forum)"
+msgstr "אפשר הפעלת מצב איתור באגים (עליך להפוך לזמין אם אתה מבקש עזרה בפורום)"
+
+msgctxt "#30905"
+msgid "Always skip Kodi.old.log (log from previous run)"
+msgstr "דלג תמיד על Kodi.old.log (יומן של הפעלה קודמות)"
+
+msgctxt "#30906"
+msgid "Email address"
+msgstr "כתובת אי-מייל"
+
+msgctxt "#30907"
+msgid "[COLOR=gold]Click to upload log[/COLOR]"
+msgstr "[COLOR=gold]לחץ כדי להעלות את היומן[/COLOR]"
+
+msgctxt "#30933"
+msgid "-- Open Test Settings"
+msgstr "--פתח הגדרות בדיקה"
+
+msgctxt "#30962"
+msgid ""
+"You need to enable the login option to use the test version. This feature "
+"is only available to members who have donated towards the noobsandnerds "
+"development fund. You can disable this option to continue using the "
+"standard version."
+msgstr ""
+"עליך להפעיל את אפשרות ההתחברות כדי להשתמש בגירסת הבדיקה. תכונה זו זמינה רק "
+"לחברים אשר תרמו את הקרן לפיתוח noobsandnerds. תוכל להשבית אפשרות זו כדי "
+"להמשיך להשתמש בגירסה הרגילה."
+
+msgctxt "#30963"
+msgid "No test version available"
+msgstr "גירסת הבדיקה לא זמינה"
+
+msgctxt "#30964"
+msgid "There is no test version available for this add-on at this time."
+msgstr "גירסת הבדיקה לא זמינה להרחבהה זו בזמן הזה."
+
+msgctxt "#30965"
+msgid "Error"
+msgstr "שגיאה"
+
+msgctxt "#30966"
+msgid ""
+"Sorry there was an error trying to retrieve the latest test version, the "
+"developer may be working on pushing a new update."
+msgstr ""
+"מצטער, אירעה שגיאה בעת ניסיון לאחזר את גירסת הבדיקה האחרונה. , ייתכן שהמפתח "
+"עובד על עדכון חדש."
+
+msgctxt "#30967"
+msgid "REPOSITORY REQUIRED"
+msgstr "נדרשת התקנת מאגר הרחבות"
+
+msgctxt "#30968"
+msgid ""
+"One of the addons required are hosted on a third party repository. If you "
+"don't have this installed you may miss out on important updates from the "
+"developer. Do you want to install:"
+msgstr ""
+"אחת ההרחבות הנדרשות מתארחת במאגר הרחבות של צד שלישי. אם המאגר לא יותקן, אתה "
+"עלול להחמיץ עדכונים חשובים מהמפתח. האם ברצונך להתקין את:"
+
+msgctxt "#30969"
+msgid "INSTALLING REPOSITORY"
+msgstr "מתקין מאגר הרחבות"
+
+msgctxt "#30970"
+msgid "Please wait..."
+msgstr "נא להמתין..."
+
+msgctxt "#30971"
+msgid "CHECKING UPDATES"
+msgstr "בדיקת עדכונים"
+
+msgctxt "#30972"
+msgid "Just checking for any updates on the repo."
+msgstr "רק בדקתי אם כל העדכונים נמצאים במאגר."
+
+msgctxt "#30973"
+msgid "UNABLE TO INSTALL REPO"
+msgstr "אין אפשרות להתקין את המאגר"
+
+msgctxt "#30974"
+msgid ""
+"Sorry there was an error trying to install this repository, please let the "
+"team at noobsandnerds.com know so they can update the Add-on Portal. Thank "
+"you."
+msgstr ""
+"מצטער אירעה שגיאה במהלך הניסיון להתקין את המאגר הזה, אנא הודע לצוות "
+"noobsandnerds.com שיעדכנו את פורטל הרחבה. תודה."
+
+msgctxt "#30975"
+msgid "UPDATE AVAILABLE"
+msgstr "עידכון זמין"
+
+msgctxt "#30976"
+msgid ""
+"The noobsandnerds Add-on Portal is showing a newer version of "
+"[COLOR=gold]%s[/COLOR] is available. Would you like to update to version: "
+"[COLOR=dodgerblue]%s[/COLOR]"
+msgstr ""
+"פורטל ההרחבות של noobsandnerds מראה שקיימת גרסה חדשה יותר של "
+"[COLOR=gold]%s[/COLOR] זמינה. האם ברצונך לעדכן גרסה: [COLOR=dodgerblue]%s[/"
+"COLOR]"
+
+msgctxt "#30977"
+msgid "ADDON REQUIRED"
+msgstr "נדרשת התקנת הרחבה"
+
+msgctxt "#30978"
+msgid ""
+"The following third party add-on is required, if you don't have this "
+"installed you may find certain features fail to work. Do you want to "
+"install?"
+msgstr ""
+"יש צורך בהתקנת הרחבה של צד 3. אם לא תתקין את ההרחבה, אתה עלול למצוא שתכונות "
+"מסוימות לא יפעלו. האם ברצונך להתקין?"
+
+msgctxt "#30979"
+msgid "INSTALLING UPDATES"
+msgstr "מתקין עדכונים"
+
+msgctxt "#32501"
+msgid "Start From Beginning"
+msgstr "מתחיל מההתחלה"
+
+msgctxt "#32502"
+msgid "Resume from %s"
+msgstr "חדש ניגון מ- %s"
+
+msgctxt "#32503"
+msgid "Resume"
+msgstr "חדש ניגון"
+
+msgctxt "#32504"
+msgid "EIMify Your Jen"
+msgstr "EIMify את ה-Jen שלך"
+
+msgctxt "#32505"
+msgid "Meta Info Language"
+msgstr "שפת מידע מטא"
+
+msgctxt "#32506"
+msgid "Select Language"
+msgstr "בחר שפה"
+
+msgctxt "#32507"
+msgid "Metadata Provider"
+msgstr "ספק מידע-מטא"
+
+msgctxt "#32508"
+msgid "Movie Metadata Provider"
+msgstr "ספק מידע-מטא לסרט"
+
+msgctxt "#32509"
+msgid "TV Metadata Provider"
+msgstr "ספק מידע-מטא לטלוויזיה"
+
+msgctxt "#32510"
+msgid "Choose Default Link"
+msgstr "בחר קישור ברירת המחדל"
+
+msgctxt "#32511"
+msgid "Select Link"
+msgstr "בחר קישור"
+
+msgctxt "#32512"
+msgid "Choose Jen Theme"
+msgstr "בחר ערכת נושא Jen"
+
+msgctxt "#32513"
+msgid "Select Theme"
+msgstr "בחר ערכת עיצוב"
+
+msgctxt "#32514"
+msgid "GIFS"
+msgstr "קבצי GIF"
+
+msgctxt "#32515"
+msgid "Enable gifs"
+msgstr "אפשר קבצי gif"
+
+msgctxt "#30000"
+msgid "choose tv metadata provider"
+msgstr "בחר ספק מידע-מטא של הטלוויזיה"
+
+msgctxt "#30001"
+msgid "Run Setup Wizard?"
+msgstr "להפעיל את אשף ההתקנה?"
+
+msgctxt "#30002"
+msgid "Enable GIF support?\\n"
+msgstr "לאפשר תמיכה ב-GIF?\\n"
+
+msgctxt "#30003"
+msgid "Clear Scraper Cache?"
+msgstr "נקה את המטמון הסקראפר?"
+
+msgctxt "#30004"
+msgid "HD"
+msgstr "‫הודעה"
+
+msgctxt "#30005"
+msgid "BOTH"
+msgstr "שניהם"
+
+msgctxt "#30006"
+msgid "returned empty for "
+msgstr "חזר ריק עבור "
+
+msgctxt "#30007"
+msgid "choose Selector type"
+msgstr "בחר סוג בורר"
+
+msgctxt "#30008"
+msgid "Sorry, server is down"
+msgstr "מצטער, השרת לא פעיל כעת"
+
+msgctxt "#30009"
+msgid "May cause issues on lower end devices"
+msgstr "עלול לגרום לבעיות במכשירים ישנים או חלשים"
+
+msgctxt "#30010"
+msgid "Testings"
+msgstr "בדיקות"
+
+msgctxt "#30011"
+msgid "Search"
+msgstr "חיפוש"
+
+msgctxt "#30012"
+msgid "TMDB"
+msgstr "TMDB"
+
+msgctxt "#30013"
+msgid "processing lists"
+msgstr "מעבד רשימות"
+
+msgctxt "#30014"
+msgid "Clear GIF Cache?"
+msgstr "נקה את מטמון GIF?"
+
+msgctxt "#30015"
+msgid "Message"
+msgstr "הודעה"
+
+msgctxt "#30016"
+msgid "choose theme"
+msgstr "בחר ערכת עיצוב"
+
+msgctxt "#30017"
+msgid "HD/SD"
+msgstr "HD/SD"
+
+msgctxt "#30018"
+msgid "TVDB"
+msgstr "TVDB"
+
+msgctxt "#30019"
+msgid "Clear XML cache?"
+msgstr "נקה זיכרון מטמון XML?"
+
+msgctxt "#30020"
+msgid "Clear Metadata?"
+msgstr "לנקות מידע-מטא?"
+
+msgctxt "#30021"
+msgid "%s of %s"
+msgstr "%s מתוך %s"
+
+msgctxt "#30022"
+msgid "TRAKT"
+msgstr "TRAKT"
+
+msgctxt "#30023"
+msgid "Loading items"
+msgstr "טוען פריטים"
+
+msgctxt "#30024"
+msgid "Link Selector"
+msgstr "בורר קישורים"
+
+msgctxt "#30025"
+msgid "SD"
+msgstr "SD"
+
+msgctxt "#30026"
+msgid "Remove Search"
+msgstr "הסר חיפוש"
+
+msgctxt "#30027"
+msgid "no local file found, and server seems down"
+msgstr "אין קובץ מקומי ונראה שהשרת לא פעיל"
+
+msgctxt "#30028"
+msgid "Clear Queue"
+msgstr "נקה תור"
+
+msgctxt "#30029"
+msgid "Queue Season"
+msgstr "הכנס עונה לתור"
+
+msgctxt "#30030"
+msgid "Queue Episode"
+msgstr "הכנס פרק לתור"
+
+msgctxt "#30031"
+msgid "Set Episode View"
+msgstr "הגדר תצוגת פרק"
+
+msgctxt "#30032"
+msgid "Please Wait"
+msgstr "אנא המתן"
+
+msgctxt "#30033"
+msgid "Processing Link"
+msgstr "מעבד קישור"
+
+msgctxt "#30034"
+msgid "Set Movie View"
+msgstr "הגדר תצוגת סרט"
+
+msgctxt "#30035"
+msgid "gif not found: "
+msgstr "לא נמצא gif "
+
+msgctxt "#30036"
+msgid "Queue TV Show"
+msgstr "הכנס סדרה לתור"
+
+msgctxt "#30037"
+msgid "Previous playback detected"
+msgstr "זוהתה הפעלה קודמת"
+
+msgctxt "#30038"
+msgid "Restart"
+msgstr "הפעלה מחדש"
+
+msgctxt "#30039"
+msgid "Extended info"
+msgstr "‎מידע מורחב"
+
+msgctxt "#30040"
+msgid "Queue cleared"
+msgstr "התור מנוקה"
+
+msgctxt "#30041"
+msgid "Settings"
+msgstr "הגדרות"
+
+msgctxt "#30042"
+msgid "Finished Queueing"
+msgstr "סיום תורים"
+
+msgctxt "#30043"
+msgid "processing item"
+msgstr "מעבד פריט"
+
+msgctxt "#30044"
+msgid "Queue is empty"
+msgstr "התור ריק"
+
+msgctxt "#30045"
+msgid "Set TV Show View"
+msgstr "הגדר תצוגת סדרות"
+
+msgctxt "#30046"
+msgid "Set View"
+msgstr "הגדר תצוגה"
+
+msgctxt "#30047"
+msgid "Queue Movie"
+msgstr "הכנס סרט לתור"
+
+msgctxt "#30048"
+msgid "View set for %s"
+msgstr "תצוגהמוגדרת עבור %s"
+
+msgctxt "#30049"
+msgid "Trailer"
+msgstr "קדימון"
+
+msgctxt "#30050"
+msgid "Play Queue"
+msgstr "נגן תור"
+
+msgctxt "#30051"
+msgid "Loading database file"
+msgstr "טעינת קובץ מסד הנתונים"
+
+msgctxt "#30052"
+msgid "Show Queue"
+msgstr "הצג תור"
+
+msgctxt "#30053"
+msgid "Enter search term"
+msgstr "הזן מונח לחיפוש"
+
+msgctxt "#30054"
+msgid "Add Search"
+msgstr "הוסף חיפוש"
+
+msgctxt "#30055"
+msgid "Try Uncached"
+msgstr "נסו ללא זיכרון מטמון"
+
+msgctxt "#30056"
+msgid "Queue Item"
+msgstr "הכנס פריט לתור"
+
+msgctxt "#30057"
+msgid "processing metadata"
+msgstr "מעבד מידע-מטא"
+
+msgctxt "#30058"
+msgid "Set Season View"
+msgstr "הגדר תצוגת עונה"
+
+msgctxt "#30059"
+msgid "All Episodes"
+msgstr "כל הפרקים"

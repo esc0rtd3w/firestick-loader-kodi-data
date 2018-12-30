@@ -1,0 +1,11 @@
+*.lwp
+*.pyc
+*.pyo
+*.bak
+.settings
+pysrc/
+cache/*
+.project
+.pydevproject
+.vscode/
+*xbmcstubs*

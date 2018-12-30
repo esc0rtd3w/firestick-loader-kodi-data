@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.communityrepo" name="[COLOR darkorange][B]The Community Repository[/B][/COLOR]" version="9.9.3" provider-name="@CommunityRepo">
+	<extension point="xbmc.addon.repository" name="The Community Repository">
+	<dir>
+		<info compressed="false">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml</info>
+		<checksum>https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/zips/</datadir>
+	</dir>
+	        <dir>
+            <info compressed="false">https://offshoregit.com/unofficialsportsdevil/addons.xml</info>
+            <checksum>https://offshoregit.com/unofficialsportsdevil/addons.xml.md5</checksum>
+            <datadir zip="true">https://offshoregit.com/unofficialsportsdevil/</datadir>
+        </dir>
+		<info compressed="false">http://thecommunityrepo.netai.net/RepoPlugins/addons.xml</info>
+		<checksum>http://thecommunityrepo.netai.net/RepoPlugins/addons.xml.md5</checksum>
+		<datadir zip="true">http://thecommunityrepo.netai.net/RepoPlugins/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>@communityrepo Repository</summary>
+		<description>" "The Community Repository" addon, skin and wizard host, contact for details on how to add your content @communityrepo</description>
+		<platform>all</platform>
+	</extension>
+</addon>

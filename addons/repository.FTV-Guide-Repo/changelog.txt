@@ -1,0 +1,5 @@
+[B]Version 1.1[/B]
+- Altered Github URL
+
+[B]Version 1.0[/B]
+- Initial release

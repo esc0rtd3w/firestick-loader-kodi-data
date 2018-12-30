@@ -1,0 +1,70 @@
+{
+ "name"         : "[COLOR lime]lihattv[/COLOR] [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "na",
+ "plugin"       : "plugin.video.lihattv",
+ "priority"     : 800,
+ "id"           : "q.lihattv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.lihattv/",
+    "steps"     : [
+     ".*live.*",
+     ".*movies.*",
+     ".*all.*",
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }   
+  ]  
+ ],
+ "tvshows"      : [],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.lihattv/",
+    "steps"     : [
+     ".*live.*",
+     ".*tv.*",
+     ".*all.*",
+     ".*$${name}$$.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.lihattv/",
+    "steps"     : [
+     ".*live.*",
+     ".*tv.*",
+     ".*all.*",
+     ".*$$.*{name}.*$$.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.lihattv/",
+    "steps"     : [
+     ".*live.*",
+     ".*tv.*",
+     ".*all.*",
+     ".*$${basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})$$.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.lihattv/",
+    "steps"     : [
+     ".*live.*",
+     ".*tv.*",
+     ".*all.*",
+     ".*$$.*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*$$.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

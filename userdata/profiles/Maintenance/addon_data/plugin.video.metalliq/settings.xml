@@ -1,0 +1,41 @@
+<settings>
+    <setting id="auto_hide_dialogs" value="true" />
+    <setting id="auto_hide_dialogs_info" value="true" />
+    <setting id="auto_hide_dialogs_keyboard" value="true" />
+    <setting id="auto_hide_dialogs_progress" value="true" />
+    <setting id="live_default_player" value="selector" />
+    <setting id="live_enabled_players" value='[&quot;q.adriansports.browse.play&quot;, &quot;q.ccloudtv.browse.play&quot;, &quot;q.channelpear.browse.play&quot;, &quot;q.evolve.browse.play&quot;, &quot;q.ftv.browse.play&quot;, &quot;q.phoenix.browse.play&quot;, &quot;q.projectcypher.browse.play&quot;, &quot;q.ukturk.browse.play&quot;, &quot;q.vidtime.browse.play&quot;]' />
+    <setting id="movies_default_player" value="selector" />
+    <setting id="movies_default_player_from_context" value="selector" />
+    <setting id="movies_default_player_from_library" value="selector" />
+    <setting id="movies_enabled_players" value='[&quot;q.istream.direct.play&quot;, &quot;q.phoenix.direct.play&quot;, &quot;q.specto.direct.play&quot;, &quot;q.theroyalwe.direct.activate&quot;, &quot;q.ump.imtvdb.direct.activate&quot;, &quot;provider.q.velocity.direct.play&quot;, &quot;q.extendedinfomod_yt.browse.play&quot;, &quot;q.crackler.browse.play&quot;, &quot;q.projectcypher.browse.play&quot;, &quot;q.pftvso.browse.play&quot;, &quot;q.ukturk.browse.play&quot;, &quot;m.123movies.search.play&quot;, &quot;m.1channel.search.play&quot;, &quot;m.amazonvod.search.play&quot;, &quot;q.cartoons8.search.play&quot;, &quot;q.niter.search.play&quot;, &quot;q.pubfilm.search.play&quot;]' />
+    <setting id="movies_library_folder" value="special://profile/addon_data/plugin.video.metalliq/Movies/" />
+    <setting id="movies_played_by_add" value="true" />
+    <setting id="movies_playlist_folder" value="special://profile/playlists/video/MetalliQ/Movies/" />
+    <setting id="music_default_player" value="selector" />
+    <setting id="music_default_player_from_context" value="selector" />
+    <setting id="music_default_player_from_library" value="selector" />
+    <setting id="music_enabled_players" value='[&quot;q.extendedinfomod_yt.browse.play&quot;, &quot;q.mixcloud.search.play&quot;, &quot;q.soundcloud.search.play&quot;]' />
+    <setting id="music_library_folder" value="special://profile/addon_data/plugin.video.metalliq/Music/" />
+    <setting id="music_playlist_folder" value="special://profile/playlists/audio/MetalliQ/Music/" />
+    <setting id="musicvideo_default_player" value="selector" />
+    <setting id="musicvideo_default_player_from_context" value="selector" />
+    <setting id="musicvideo_default_player_from_library" value="selector" />
+    <setting id="musicvideos_enabled_players" value='[&quot;q.extendedinfomod_yt.browse.play&quot;, &quot;q.projectcypher.browse.play&quot;]' />
+    <setting id="musicvideos_library_folder" value="special://profile/addon_data/plugin.video.metalliq/Musicvideos/" />
+    <setting id="musicvideos_playlist_folder" value="special://profile/playlists/video/MetalliQ/Musicvideos/" />
+    <setting id="players_update_url" value="https://api.github.com/repos/OpenELEQ/verified-metalliq-players/zipball" />
+    <setting id="pool_size" value="15" />
+    <setting id="preferred_music_type" value="audio" />
+    <setting id="style" value="Default" />
+    <setting id="total_setup_done" value="true" />
+    <setting id="tv_default_auto_add" value="true" />
+    <setting id="tv_default_player" value="selector" />
+    <setting id="tv_default_player_from_context" value="selector" />
+    <setting id="tv_default_player_from_library" value="selector" />
+    <setting id="tv_enabled_players" value='[&quot;q.exodus.direct.play&quot;, &quot;q.istream.direct.play&quot;, &quot;q.phoenix.direct.play&quot;, &quot;q.specto.direct.play&quot;, &quot;q.theroyalwe.direct.activate&quot;, &quot;q.ump.imtvdb.direct.activate&quot;, &quot;provider.q.velocity.direct.play&quot;, &quot;q.extendedinfomod_yt.browse.play&quot;, &quot;q.crackler.browse.play&quot;, &quot;q.pftvso.browse.play&quot;, &quot;q.teevee.browse.play&quot;, &quot;q.ukturk.browse.play&quot;, &quot;m.123movies.search.play&quot;, &quot;m.1channel.search.play&quot;, &quot;m.amazonvod.search.play&quot;, &quot;q.cartoons8.search.play&quot;, &quot;q.pubfilm.search.play&quot;]' />
+    <setting id="tv_library_folder" value="special://profile/addon_data/plugin.video.metalliq/TVShows/" />
+    <setting id="tv_playlist_folder" value="special://profile/playlists/video/MetalliQ/TVShows/" />
+    <setting id="tvshows_played_by_add" value="true" />
+    <setting id="use_simple_selector" value="false" />
+</settings>

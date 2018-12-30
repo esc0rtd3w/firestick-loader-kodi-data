@@ -1,0 +1,24 @@
+<addon id="plugin.audio.jango"
+       name="Jango"
+       version="0.8.8"
+       provider-name="kinkin, art by jokster">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.t0mm0.common" version="1.1.0"/>
+        <import addon="script.module.requests" version="1.1.0"/>
+    </requires>
+	
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>audio</provides>
+    </extension>
+	
+	<extension point="xbmc.service" library="playerMP3.py" start="startup" />
+	
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Free Internet Radio that plays music you'll love!</summary>
+        <description>Free internet radio. Listen to hundreds of genre stations or create your own with your favorite music.</description>
+    </extension>
+	
+</addon>

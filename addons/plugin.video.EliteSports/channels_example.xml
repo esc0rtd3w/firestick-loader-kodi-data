@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<channels>
+    <channels_info> <!-- this is opitonal -->
+      <title>Testing XML</title> <!-- if channels_info, a title is required, other elements are optional -->
+      <genre>News</genre>
+      <description>this is the descripton string</description>
+      <thumbnail>http://community-links.googlecode.com/svn/icons/news-icon.png</thumbnail>
+      <fanart>http://community-links.googlecode.com/svn/icons/news-fanart.jpg</fanart>
+      <date>04.01.2013</date>
+      <credits>divingmule, Johnny Cache</credits>
+    </channels_info>
+    
+    <channel>
+    <name>News</name>
+    <thumbnail>http://community-links.googlecode.com/svn/icons/news-icon.png</thumbnail>
+    <fanart>http://community-links.googlecode.com/svn/icons/news-fanart.jpg</fanart>
+        <items>
+            <item>
+                <title>POKER CHANNEL</title>
+                <link>mms://some/place/pokerchannel</link>
+                <thumbnail>http://channel.png</thumbnail>
+                <genre>Poker</genre>
+                <info>The Poker Channel – Europe’s largest dedicated gaming TV network is available online to a global audience, and to more than 30 million cable and satellite homes in Europe and Latin America.</info>
+                <date>07.12.2011</date>  <!-- format - dd.mm.yyyy -->
+                <epg></epg>  <!-- See daschacka's post - http://forum.xbmc.org/showpost.php?p=936228&postcount=1076 -->
+                <fanart>http://fanart.jpg</fanart>
+            </item>
+            
+            <item>
+                <title>News 4</title>         
+                <link>rtmp://some/place playpath=some_place swfUrl="http://player.swf pageUrl=http://nhkworld/r/movie/ swfVfy=true live=true</link>
+                <thumbnail>C:\my_thumbs\news.png</thumbnail>
+            </item>
+        </items>
+    </channel>
+
+    <channel>
+    <name>Television</name>
+    <thumbnail>http://television.png</thumbnail>
+    <fanart>http://fanart.jpg</fanart>
+    <subchannel>
+        <name>Tv 1</name>
+        <thumbnail>http://television.png</thumbnail>
+        <fanart>http://fanart.jpg</fanart>
+            <subitems>
+                <subitem>
+                <title>tv1-1</title>
+                <link>mms://some/place</link>
+                <thumbnail>http://thumb.png </thumbnail>
+                </subitem>
+
+                <subitem>
+                <title>tv1-2</title>
+                <link>http://some/place/channel_4.mp4</link>
+                <thumbnail>http://thumb.png</thumbnail>
+                </subitem>
+            </subitems>	
+        </channel>
+    </subchannel>
+    
+    <items>
+        <item>
+        <title>FILM 4</title>
+        <link>mms://some/place</link>
+        <thumbnail>http://thumb.png </thumbnail>
+        </item>
+
+        <item>
+        <title>CHANNEL 4</title>
+        <link>http://some/place/channel_4.mp4</link>
+        <thumbnail>http://thumb.png</thumbnail>
+        </item>
+    </items>	
+    </channel>
+
+</channels>	

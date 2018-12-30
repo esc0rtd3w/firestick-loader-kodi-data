@@ -1,0 +1,77 @@
+[B]Version 0.3.3[/B]
+- Refactored how streams are pulled from YouTube
+- Added check for the MPEG-DASH setting in the YouTube addon
+
+[B]Version 0.3.2[/B]
+- Minor server update
+
+[B]Version 0.3.1[/B]
+- Updated branding
+
+[B]Version 0.3.0[/B]
+- Updated branding
+
+[B]Version 0.2.9[/B]
+- Updated branding
+
+[B]Version 0.2.8[/B]
+- Updated branding
+
+[B]Version 0.2.7[/B]
+- Fix for SPMC
+
+[B]Version 0.2.6[/B]
+- Code tweaks
+
+[B]Version 0.2.5[/B]
+- Code tweaks
+
+[B]Version 0.2.4[/B]
+- Removed dependency on liveresolver
+
+[B]Version 0.2.3[/B]
+- Updated graphics
+
+[B]Version 0.2.2[/B]
+- Updated forum link in addon.xml
+
+[B]Version 0.2.1[/B]
+- Cleaned up description
+- Update branding
+
+[B]Version 0.2.0[/B]
+- Fixed typos
+
+[B]Version 0.1.9[/B]
+- Added branding dialog
+
+[B]Version 0.1.8[/B]
+- Fixed typos
+
+[B]Version 0.1.7[/B]
+- Refactored to make things much more efficient
+
+[B]Version 0.1.6[/B]
+- Added checks if service is offline
+
+[B]Version 0.1.5[/B]
+- Updated to show "offline" message when stream is down
+- New graphics! Thanks jokster!
+
+[B]Version 0.1.4[/B]
+- Added logo to fanart
+- Updated addon.xml with branding
+
+[B]Version 0.1.3[/B]
+- Updated icon to have a background looks better on many skins
+- Fixed setcontent issue with Estuary skin
+
+[B]Version 0.1.2[/B]
+- Updated to use liveresolver
+
+[B]Version 0.1.1[/B]
+- Added more channels
+- updated info
+
+[B]Version 0.1.0[/B]
+- Initial version

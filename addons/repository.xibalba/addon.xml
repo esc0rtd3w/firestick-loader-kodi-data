@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.xibalba" name="Xibalba Repository" version="1.01" provider-name="Xibalba">
+    <extension point="xbmc.addon.repository" name="Xibalba Repository">
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/</datadir>
+    </dir>
+        <info compressed="false">https://github.com/xibalba10/repository.xibalba/raw/master/addons.xml</info>
+        <checksum>https://github.com/xibalba10/repository.xibalba/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/xibalba10/repository.xibalba/raw/master/zips/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Unofficial Kodi Addons from Xibalba</summary>
+        <description>Download and install unofficial Kodi add-ons from the Xibalba add-on repository.
+
+Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <forum>https://github.com/xibalba10</forum>
+        <website>https://github.com/xibalba10</website>
+    </extension>
+</addon>

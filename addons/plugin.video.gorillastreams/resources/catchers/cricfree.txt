@@ -1,0 +1,31 @@
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','.*fid='([^"' ]+).*src='([^"' ]+).*','fid|js')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=fid
+item_info_build=ZonyTV - %s
+
+item_info_name=tmp2
+item_info_from=js
+item_info_convert=getInfo('%s','.*?src="([^"' ]+).*','http://zonytvcom.info')
+item_info_build=%s
+
+
+item_info_name=pageUrl
+item_info_from=tmp2 + fid + '&vw=600&vh=430
+item_info_build=%s
+
+
+item_info_name=tmp3
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?SWFObject\('([^']+)'.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','http://zonytvcom.info','swf|file|rtmp')
+item_info_build=%s
+
+
+
+item_info_name=url
+item_info_from=rtmp + ' playpath='+ file + ' swfUrl=' + swf + ' live=true swfVfy=true timeout=14 token=9op0b5@7n1s5ip1 pageUrl=' + pageUrl
+item_info_build=%s

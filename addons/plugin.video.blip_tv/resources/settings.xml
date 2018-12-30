@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <setting id="maxVideoQuality" type="enum" label="30101" values="SD|720p|Source" default="1"/>
+   <setting type="sep" />
+   <setting id="showSubtitles" type="bool" label="30106" default="false"/>
+   <setting type="sep" />
+   <setting id="useThumbAsFanart" type="bool" label="30102" default="true"/>
+   <setting type="sep" />
+   <setting id="showNotConverted" type="bool" label="30107" default="true"/>
+   <setting type="sep" />
+   <setting id="forceView" type="bool" label="30103" default="true"/>
+   <setting id="viewIDShows" type="number" label="30104" enable="eq(-1,true)" default="501"/>
+   <setting id="viewIDEpisodes" type="number" label="30105" enable="eq(-2,true)" default="51"/>
+</settings>

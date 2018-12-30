@@ -1,0 +1,4 @@
+[B]Version 1.0.0[/B]
+December 2015 - This is the first versions of my Comedy youtube playlists addon
+
+

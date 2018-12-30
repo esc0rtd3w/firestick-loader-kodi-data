@@ -1,0 +1,5 @@
+<settings>
+<category label="Settings">
+   <setting id="maxVideoQuality" type="enum" label="Daily Motion Quality" values="480p|720p|1080p" default="2"/>
+</category>
+</settings>

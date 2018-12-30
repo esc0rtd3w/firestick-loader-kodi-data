@@ -1,0 +1,7 @@
+<settings>
+    <setting id="beta" value="" />
+    <setting id="checkupdates" value="false" />
+    <setting id="https" value="true" />
+    <setting id="updaterepos" value="true" />
+    <setting id="zip" value="special://home/backupdir" />
+</settings>

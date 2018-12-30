@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.youtube.3d"
+	name="YouTube 3D"
+	version="0.0.6"
+	provider-name="xbmc_now">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="plugin.video.youtube" version="4.4.8" />
+	</requires>
+	<extension library="default.py" point="xbmc.python.pluginsource">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+			<summary lang="ja">Youtube 3D</summary>
+			<description lang="ja">youtubeにアップされた映像を3D化して表示します。</description>
+			<platform>all</platform>
+	</extension>
+</addon>

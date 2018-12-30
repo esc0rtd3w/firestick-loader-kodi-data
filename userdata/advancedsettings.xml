@@ -1,0 +1,119 @@
+<advancedsettings>
+
+	<splash>false</splash>
+	
+	<fullscreen>true</fullscreen>
+	
+	<!-- Globally Hide or Show the Exit Button -->
+	<!-- <showexitbutton>true</showexitbutton> -->
+	
+    <loglevel hide="true">0</loglevel>
+	
+	<!-- Path substitutions are for use for redirecting file paths -->
+	<!-- <pathsubstitution>
+	  <substitute>
+		<from>G:\dvds\</from>
+		<to>smb://somecomputer/g-share/dvds/</to>
+	  </substitute>
+	</pathsubstitution> -->
+	
+	<!-- Set deadzone for joysticks and gamepads -->
+	<!-- <controllerdeadzone>0.2</controllerdeadzone> -->
+	
+	<!-- Repeat delay for a LIRC remote control -->
+	<!-- <remotedelay>10</remotedelay> -->
+	
+	<!-- Adjust the amount of time in milliseconds between repeated keystrokes -->
+	<!-- <remoterepeat>800</remoterepeat> -->
+	
+	<!-- Storage of zipped add-ons in MB in the path /addons/packages/ -->
+	<packagefoldersize>420</packagefoldersize>
+	
+	<!-- Network Settings -->
+	
+	<!-- <hosts>
+		<entry name="HOSTNAME">IPADDRESS</entry>
+	</hosts> -->
+	
+	<!-- <samba>
+	  <doscodepage></doscodepage> 
+	  <clienttimeout>10</clienttimeout>
+	  <statfiles>true</statfiles>
+	</samba> -->
+	
+    <network>
+		<!-- <curlclienttimeout>10</curlclienttimeout> -->
+	    <!-- <curllowspeedtime>20</curllowspeedtime> -->
+	    <!-- <curlretries>2</curlretries> -->
+	    <!-- <httpproxyusername></httpproxyusername> -->
+	    <!-- <httpproxypassword></httpproxypassword> -->
+        <buffermode>1</buffermode>
+        <readbufferfactor>10</readbufferfactor>
+		
+		<!-- Based off Memory Available After Amazon Stuff Disable -->
+        <!-- <cachemembuffersize>69904384</cachemembuffersize> -->
+		
+		<!-- Old Based off Memory Available After Amazon Stuff Disable -->
+        <cachemembuffersize>96119466</cachemembuffersize>
+		
+		<!-- Default Optimized Cache -->
+        <!-- <cachemembuffersize>104857600</cachemembuffersize> -->
+		
+		<!-- 150MB Cache -->
+        <!-- <cachemembuffersize>157286400</cachemembuffersize> -->
+		
+		<!-- 256MB Cache -->
+        <!-- <cachemembuffersize>262144000</cachemembuffersize> -->
+    </network> 
+	
+	<!-- Frame Skip For FireStick/FireTV (8) -->
+	<skiploopfilter>8</skiploopfilter>
+	
+	<!-- Art Resolutions -->
+	<imageres>540</imageres>
+	<fanartres>720</fanartres>
+	
+	<!-- Clean Video Library -->
+	<!-- <videolibrary> -->
+		<!-- <cleanonupdate>true</cleanonupdate> -->
+		<!-- <recentlyaddeditems>20</recentlyaddeditems> -->
+	<!-- </videolibrary> -->
+	
+	<!-- Video Play Tweaks -->
+	<!-- <video> -->
+		<!-- <playcountminimumpercent>85</playcountminimumpercent> -->
+		<!-- <ignoresecondsatstart>120</ignoresecondsatstart> -->
+		<!-- <ignorepercentatend>10</ignorepercentatend> -->
+	<!-- </video> -->
+	
+	<!-- The number of retries attempted if a source is offline -->
+	<!-- <playlistretries>100</playlistretries> -->
+	
+	<!-- The timeout, in seconds, before item failure -->
+	<!-- <playlisttimeout>20</playlisttimeout> -->
+	
+	<!-- Specify the image scaling algorithm for image resizing/caching -->
+	<!-- Available: fast_bilinear, bilinear, bicubic, experimental, nearest_neighbor -->
+	<!-- averaging_area, bicublin, gaussian, sinc, lanczos, bicubic_spline -->
+	<!-- <imagescalingalgorithm>fast_bilinear</imagescalingalgorithm> -->
+	
+	<!-- GUI Tweaks -->
+	<gui>
+		<algorithmdirtyregions>3</algorithmdirtyregions>
+		<nofliptimeout>0</nofliptimeout>
+	</gui>
+	
+	<!-- Video Misc Tweaks -->
+	<videoscanner>
+		<ignoreerrors>true</ignoreerrors>
+	</videoscanner>
+	
+	<!-- DEBUG ONLY -->
+    <!-- <loglevel hide="false">2</loglevel>
+	<debug>
+        <extralogging>true</extralogging>
+        <setextraloglevel>32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536</setextraloglevel>
+        <showloginfo>true</showloginfo>
+    </debug> -->
+	
+</advancedsettings>

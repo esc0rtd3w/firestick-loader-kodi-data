@@ -1,0 +1,22 @@
+version 1.4
+
+  * fix <datadir>
+
+version 1.3
+
+  * moved to GitHub
+  * added repository as depot
+
+version 1.2
+
+  * fixed common issues
+  * smaller add-on file size resulting in faster downloads and less space / bandwidth used on the repository
+  * ability to "roll back" add-on updates in XBMC to previous versions
+
+version 1.1
+
+  * critical failure fix
+
+version 1.0
+
+  * Initial version

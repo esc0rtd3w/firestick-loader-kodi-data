@@ -1,0 +1,32 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=MovieTrailers - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://movietrailers.yt/player2.php?id=%s&width=620&height=490
+
+
+item_info_name=url
+item_info_from=rtmp://46.246.124.19:1935/redirect/ playpath=' + @PARAM1@ + ' swfUrl=http://97ff0e7e610f20512dbe-483e6ce63d68aeb3d05af6c054efb801.r29.cf1.rackcdn.com/cacarola.swf pageUrl=http://movietrailers.yt live=1 token=$t0nl%$@#q timeout=15 swfvfy=1
+item_info_build=%s
+
+
+#item_info_name=file
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+#item_info_build=%s
+
+#item_info_name=rtmp
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+#item_info_build=%s
+
+#item_info_name=swf
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*?swfobject.embedSWF\(['"]([^'"]+)['"].*','@REFERER@')
+#item_info_build=%s
+
+#item_info_name=url
+#item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 token=$t0nl%$@#q timeout=15 swfVfy=1 pageUrl=' + pageUrl
+#item_info_build=%s

@@ -1,0 +1,11 @@
+<settings>
+    <setting id="_last_run_version" value="1.0-beta5" />
+    <setting id="_legal_warning_shown" value="true" />
+    <setting id="audio_hide_unplayable" value="true" />
+    <setting id="audio_normalize" value="true" />
+    <setting id="audio_quality" value="1" />
+    <setting id="general_cache_enable" value="true" />
+    <setting id="general_cache_management" value="0" />
+    <setting id="general_cache_size" value="1" />
+    <setting id="misc_startup_screen" value="0" />
+</settings>

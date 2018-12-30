@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="30008">Suchen</string>
+  <string id="30012">Nächste Seite</string>
+  <string id="30013">In Abspielliste einreihen</string>
+  <string id="30014">Zu Addon Favoriten hinzufügen</string>
+  <string id="30015">Aus Favoriten entfernen</string>
+  <string id="30018">Video wurde noch nicht umgewandelt. Spiele Quelldatei...</string>
+  <string id="30101">Maximale Videoqualität</string>
+  <string id="30102">Thumb als Fanart nutzen</string>
+  <string id="30103">View erzwingen</string>
+  <string id="30106">Untertitel anzeigen</string>
+  <string id="30107">"Noch nicht umgewandelt" Nachricht anzeigen</string>
+</strings>

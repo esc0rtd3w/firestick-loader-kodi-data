@@ -1,0 +1,6 @@
+<settings>
+<category label="">
+<setting id="version" type="bool" label="[COLOR blue]Version: 0.1[/COLOR]" />
+<setting type="sep"/>
+</category>
+</settings>

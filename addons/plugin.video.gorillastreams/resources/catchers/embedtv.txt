@@ -1,0 +1,27 @@
+item_info_name=tmp1
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.v-watch.me/live.php?id=%s','.*fid="([^"]+)','http://mylivetv.me')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=tmp1
+item_info_build=EmbedTV - %s
+
+item_info_name=pageUrl
+item_info_from=tmp1
+item_info_build=http://www.castup.tv/embed_2.php?channel=%s&vw=640&vh=440
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?SWFObject\(['"]([^'"]+)['"].*','http://www.v-watch.me/live.php')
+item_info_build=%s
+
+item_info_name=params
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?getJSON\("([^'"]+).*','http://www.v-watch.me/live.php')
+item_info_convert=getInfo('%s','.*rtmp":"([^'"]+).*streamname":"([^'"]+).*','http://www.v-watch.me/live.php','rtmp|file')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 timeout=15 token=#@8x12pX@!x@# swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

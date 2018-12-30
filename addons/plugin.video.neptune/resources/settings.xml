@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="32310">
+		<setting id="appearance.alt" type="action" label="32311" default="-" option="close" action="RunPlugin(plugin://plugin.video.neptune/?action=artwork)" visible="!System.HasAddon(script.neptune.artwork)" />
+		<setting id="appearance.1" type="select" label="32311" values="-Neptune" default="Neptune" visible="System.HasAddon(script.neptune.artwork)" />
+		<setting id="scrapers.timeout.1" type="slider" label="32312" default="30" range="10,60" option="int" />
+		<setting id="trakt.user" type="text" default="" visible="false" />
+		<setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-1,)" />
+		<setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-2,)" />
+		<setting id="api.language" type="select" label="32316" values="AUTO|Bulgarian|Chinese|Croatian|Czech|Danish|Dutch|English|Finnish|French|German|Greek|Hebrew|Hungarian|Italian|Japanese|Korean|Norwegian|Polish|Portuguese|Romanian|Russian|Serbian|Slovak|Slovenian|Spanish|Swedish|Thai|Turkish|Ukrainian|Lithuanian" default="AUTO" />
+		<setting id="providers.lang" type="select" label="32360" values="English" default="English" />
+		<setting id="flatten.tvshows" type="bool" label="32317" default="false" />
+		<setting id="fanart" type="bool" label="32318" default="true" />
+		<setting type="lsep" label="32319" />
+		<setting id="movie.widget" type="enum" label="32320" lvalues="32302|32321|32322|32323|32324" default="1" />
+		<setting id="tv.widget.alt" type="enum" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-9,)+eq(-8,1)" />
+		<setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-10,)|eq(-9,0)" />
+		<setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" />
+	</category>
+	<category label="32330">
+		<setting id="hosts.mode" type="enum" label="32331" values="Dialog|Directory|Autoplay|Real Time|Dialog+" default="1" />
+		<setting id="progress.dialog" type="enum" label="32335" lvalues="32336|32337" default="0" />
+		<setting type="lsep" label="32338" />
+		<setting id="hosts.quality" type="enum" label="32339" values="4K|1440p|1080p|720p|480p" default="0" />
+		<setting id="autoplay.sd" type="bool" label="32340" default="false" />
+		<setting id="sources.extrainfo" type="bool" label="32587" default="true" />
+        <setting id="HEVC" type="bool" label="32363" default="true" />
+		<setting id="hosts.captcha" type="bool" label="32341" default="true" />
+		<setting id="hosts.sort.provider" type="bool" label="32342" default="false" />
+		<setting type="lsep" label="32343" />
+		<setting id="bookmarks" type="bool" label="32344" default="true" />
+		<setting type="lsep" label="32372" />
+        <setting id="crefresh" type="bool" label="32373" default="false" />
+	</category>
+	<category label="32345">
+		<setting id="debridsources" type="bool" label="Enable Debrid Providers" default="false" />
+		<setting id="nanscraper" type="action" label="NanScraper Settings" option="close" action="RunPlugin(plugin://plugin.video.neptune/?action=nanscrapersettings)"/>
+      <setting label="30733" type="lsep"/>
+	</category>
+	<category label="32346">
+		<setting type="lsep" label="FANART.TV" />
+		<setting type="lsep" label="Personal API keys provide quicker API responses." />
+		<setting type="lsep" label="Become a VIP member for many benefits at: https://fanart.tv/vip" />
+		<setting id="fanart.tv.user" type="text" option="hidden" label="32309" default="" />
+		<setting type="sep" />
+		<setting type="lsep" label="TMDb" />
+		<setting id="tm.user" type="text" option="hidden" label="32309" default="" />
+		<setting type="sep" />
+		<setting type="lsep" label="Trakt" />
+		<setting id="trakt.user" type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.neptune/?action=authTrakt)" />
+		<setting id="trakt.token" type="text" option="hidden" visible="false" label="" default="" />
+		<setting id="trakt.refresh" type="text" option="hidden" visible="false" label="" default="" />
+		<setting type="sep" />
+		<setting type="lsep" label="IMDb" />
+		<setting id="imdb.user" type="text" label="32303" default="" />
+		<setting type="sep" />
+		<setting type="lsep" label="32538" />
+		<setting type="lsep" label="32539" />
+		<setting id="open_smu_settings" type="action" label="32540" enable="true" option="close" action="RunPlugin(plugin://plugin.video.neptune/?action=smuSettings)" />
+		<setting type="sep" />
+
+	</category>
+	<category label="32541">
+		<setting id="library.movie" type="folder" label="32543" default="special://userdata/addon_data/plugin.video.neptune/Movies" />
+		<setting id="library.tv" type="folder" label="32544" default="special://userdata/addon_data/plugin.video.neptune/TVShows" />
+		<setting type="lsep" label="32542" />
+		<setting type="sep" />
+		<setting id="library.service.update" type="bool" label="32545" default="true" />
+		<setting id="library.service.notification" type="bool" label="32546" default="true" />
+		<setting type="sep" />
+		<setting id="library.update" type="bool" label="32547" default="true" />
+		<setting id="library.check" type="bool" label="32548" default="true" />
+		<setting type="sep" />
+		<setting id="library.check_movie" type="bool" label="32549" default="false" />
+		<setting id="library.check_episode" type="bool" label="32550" default="false" />
+		<setting id="library.include_unknown" type="bool" label="32565" default="true" />
+	</category>
+	<category label="32347">
+		<setting id="downloads" type="bool" label="32348" default="false" />
+		<setting type="sep" />
+		<setting id="movie.download.path" type="folder" label="32349" enable="!eq(-2,false)" default="" />
+		<setting id="tv.download.path" type="folder" label="32350" enable="!eq(-3,false)" default="" />
+		<setting type="lsep" label="[CR]" />
+		<setting type="lsep" label="32351" />
+		<setting type="lsep" label="32352" />
+	</category>
+	<category label="32353">
+		<setting id="subtitles" type="bool" label="32354" default="false" />
+		<setting type="sep" />
+		<setting id="subtitles.utf" type="bool" label="32355" enable="!eq(-2,false)" default="false" />
+		<setting type="sep" />
+		<setting id="subtitles.lang.1" type="select" label="32356" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" enable="!eq(-4,false)" default="English" />
+		<setting id="subtitles.lang.2" type="select" label="32357" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" enable="!eq(-5,false)" default="English" />
+		<setting type="lsep" label="[CR]" />
+		<setting type="lsep" label="32358" />
+		<setting type="lsep" label="32359" />
+	</category>
+</settings>

@@ -1,0 +1,211 @@
+ver. 0.1:
+	- initial commit
+	
+ver 0.2:
+	- added nhl archive
+	
+ver 0.3:
+	- fixed streamup links
+	
+ver 0.4:
+	- added p2pcast suport
+	
+ver 0.5:
+	- added Turner stream suport for NBA. Works only in external player (e.x. MXPlayer on android)
+	- small bugfixes
+	
+ver 0.6:
+	- Fixed Turner (aka Rawsports) stream suport for NBA. Works only in external player (e.x. MXPlayer on android)
+	
+ver 0.7:
+	- added more streamers
+	- bugfixes
+	
+ver 0.8:
+	- fixed search game on reddit issue
+	
+ver 0.9:
+	- fixed 101livesports and gstream.tv streams
+	
+ver 0.10:
+	- removed Rawsports
+	
+ver 0.11:
+	- bugfixes
+	
+ver 0.12:
+	- bugfixes
+	
+ver 0.14:
+	- fix ducking streaming
+	
+ver 0.15:
+	- Gerikss has halted developement of this addon. I'm gonna try and keep it going :)
+	- added code for upcoming MLB support. Cosmetic changes... added folder logos, status changes, etc
+	
+ver 0.16:
+	- added rawstreams to NBA
+	
+ver 0.17:
+	- fixed rawstreams
+	- fixed streamup streams
+	- added streamup to 101livesports streams
+
+ver 0.18:
+	- fixed rawstreams home/away bug
+	- fixed blabseal streams
+	- added Postponed game status
+	
+ver 0.19:
+	- fixed rawstreams
+	- fixed bug finding games on reddit
+	
+ver 0.20:
+	- fixed rawstreams
+	
+ver 0.21:
+	- fixed gsrteam
+	- fixed streamarena
+	- added rawstreams donation link
+	
+ver 0.22:
+	- fixed rawstreams
+	- added sd streams (can be disabled in settings). Thanks to Phoenix for code example!
+	- other bugfixes
+	
+ver 0.23:
+	- removed rawstreams (site is closed and just delays streams finding)
+	- fixed fake m3u link appears in streams
+
+ver 0.24:
+	- fixed nbastream.net and nhlstream.net
+	- added hehestream.tk for nba (plays only in external player)
+	- added zone more SD stream source
+	
+ver 0.25:
+	- fixed hehestreams domain
+	
+ver 0.26:
+	- added another stream source from hehestreams
+	
+ver 0.27:
+	- fixed Hehestreams (Turner HD (plays only in external player) and Neulion streams for NBA)
+	
+ver 0.28:
+	- added expiration time to neulion in hehestreams
+	
+ver 0.29:
+	- added praw for reddit parsing (thanks to rsummers618!!!)
+	- fixed nbastream, nhlstream links 
+	
+ver 0.30:
+	- added MLB
+	
+ver 0.31:
+	- fixed MLB
+	
+ver 0.32:
+	- ability to add new subreddits
+	
+ver 0.33:
+	- added more SD streams
+	- added caststreams for nhl (can be disabled in addon settings)
+	
+ver 0.34:
+	- more SD streams
+	
+ver 0.35:
+	- bugfixes
+	
+ver 0.36:
+	- added more sd streams
+	- added xrxs.net for nhl
+	
+ver 0.37:
+	- added login for reddit (enter in addon settings)
+	- added different quality for xrxs.net streams
+	- added xrxs.net nhl archive
+	- fixed nba archive
+	
+ver 0.38:
+	- checking main reddit post for links
+	- fixed neulion streams
+
+ver 0.39:
+	- bugfixes
+	
+ver 0.40:
+	- fix nba
+	
+ver 0.41:
+	- fix windows issue
+	
+ver 0.42:
+	- bugfixes
+	
+ver 0.43:
+	- bugfixes
+	
+ver 0.44:
+	- fixed xrxs
+	
+ver 0.45:
+	- fixed xrxs
+	
+ver 0.46:
+	- fixed xrxs archive
+	- fixed sd streams
+	
+ver 0.47:
+	- fixed some streams
+	
+ver 0.48:
+	- fixed some streams
+	
+ver 0.49:
+	- one more attempt to fix MLB
+	
+ver 0.50:
+	- one more attempt to fix MLB
+	
+ver 0.50e:
+	- fixed some streams
+	- removed archive (not working)
+	
+ver 0.51:
+	- fixed streamer
+	
+ver 0.52:
+	- hopefully fixed sawlive
+	- fixed NFL archive
+	
+ver 0.53:
+	-fixed streams
+	
+ver 0.54:
+	-fixed streams
+	
+ver 0.55:
+	-fixed streams
+	
+ver 0.56:
+	-fixed streams
+
+ver 0.57:
+	- fixed some streams
+	- added sopcast/acestream support (plexus has to be installed)
+	
+ver 0.58:
+	- fixed streams
+	- fixed redzone had no links
+	
+ver 0.59:
+	- fixed streams
+	- fixed redzone had no links
+	
+ver 0.60:
+	- fixed streams
+	- xrxs is back
+	
+ver 0.61:
+	- fixed streams

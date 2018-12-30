@@ -1,0 +1,30 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=HDmyTV - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.hdmytv.com/channel.php?file=%s&width=640&height=460&autostart=true
+
+item_info_name=pageUrl.tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*<iframe src="([^"]+)".*','@REFERER@')
+item_info_convert=quote('%s')
+item_info_convert=getInfo('%s','.*?id="ssx1" value="([^'"]+).*?id="ssx4" value="([^'"]+).*?SWFObject\('([^']+)'.*','@pageUrl@','ssx1|ssx4|swf')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=ssx1
+item_info_convert=decodeBase64
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=ssx4
+item_info_convert=decodeBase64
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath='+ file + ' swfUrl=' + swf + ' live=true app=vod token=#ro%g0#r@1 buffer=30000 timeout=15 pageUrl=http://www.hdmytv.com 
+item_info_build=%s

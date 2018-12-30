@@ -1,0 +1,15 @@
+<settings>
+    <setting id="add_to_lib_when_sub" value="true" />
+    <setting id="auto_update_interval" value="24" />
+    <setting id="auto_update_subscriptions" value="true" />
+    <setting id="clean_up_while_update_subs" value="true" />
+    <setting id="movies_lib_folder" value="special://profile/addon_data/script.icechannel/Movies" />
+    <setting id="show_sub_update_progress" value="true" />
+    <setting id="sync_watched_status_with_lib" value="true" />
+    <setting id="tv_shows_lib_folder" value="special://profile/addon_data/script.icechannel/TVShows" />
+    <setting id="update_lib_after_add" value="true" />
+    <setting id="update_lib_after_sub" value="true" />
+    <setting id="update_lib_after_sub_update" value="true" />
+    <setting id="update_subs_level" value="2" />
+    <setting id="update_suscription_timestamp" value="2018-12-29 15:32:09" />
+</settings>

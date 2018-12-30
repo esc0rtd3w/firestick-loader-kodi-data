@@ -1,0 +1,17 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=DittoTV - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://dittotv.com/channels/%s
+
+item_info_name=url
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file":"([^"]+)"}]}}\s*
+item_info_convert=replace('%s','\u0026','&')
+item_info_build=%s
+
+ 
+
+

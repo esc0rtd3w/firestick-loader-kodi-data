@@ -1,0 +1,7 @@
+1.12.0
+------
+DNS Python - https://github.com/rthalley/dnspython
+
+1.11.1
+------
+DNS Python - https://github.com/rthalley/dnspython

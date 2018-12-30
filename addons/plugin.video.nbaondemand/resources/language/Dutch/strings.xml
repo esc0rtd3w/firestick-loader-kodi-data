@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">Algemeen</string>
+	<string id="30001">HD kwaliteit (indien beschikbaar)</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302"> is als standaard ingesteld</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">Stream niet beschikbaar</string>
+	<!-- Misc -->
+	<string id="30361">Volgende pagina</string>
+	<string id="30362">Zoeken</string>
+	<!-- ContextMenu -->
+	<string id="30401">Afspelen</string>
+	<string id="30402">Willekeurig afspelen</string>
+	<string id="30403">Aan afspeellijst toevoegen</string>
+	<string id="30404">Speel nu...</string>
+	<string id="30405">Add-on instellingen</string>
+	<string id="30406">Stel video-weergave in</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Meest recent</string>
+	<string id="30502">Wedstrijden</string>
+	<string id="30503">Hoogtepunten</string>
+	<string id="30504">Teams</string>
+</strings>

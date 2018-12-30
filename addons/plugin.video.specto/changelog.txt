@@ -1,0 +1,17 @@
+2017.04.03.1 - fix putlocker, fmovies
+2017.01.28.1 - added gvideo hosts from Exodus.
+2017.01.20.2 - small fix movieshd, putlocker, in trakt episodes fix posters and fanart.
+    Chcecking corect date and time setup on tv box
+2016.11.20.3 small fix putlocker
+2016.11.18.3 - fix movieshd, putlocker, fmovies. Remove changelog
+2016.11.1.2 - fix calendar and last episodes, yesmoviesscanScope($scope.model, 'Fred');
+2016.10.28.2 - rename urlresolver to urlresolver9
+2016.10.20.2 - add source yesmovies, fix cancel button while loading sources, fix fmovies,
+2016.10.18.02 - fix - Latest Movies and Latest Episodes
+2016.10.06.02 - add - Added Documentaries as Genre, Trakt.tv - API Images will be removed on Oct 31, 2016. - added images from filmkodi
+2016.10.04.02 - small fix - muchmovies, watchseriesfree, fmovies
+2016.09.20.1 - fix - wsonline, fix - sd hosts now are showing
+2016.09.20.1 - fix - putlocker, movieshd, xmovies, add - hevcbluray
+2016.09.01.1 - fix - fmovie, sezonlukdizi
+2016.08.29.1 - fix cache, and iwatchonline, muchmovies, todo: fmovies
+

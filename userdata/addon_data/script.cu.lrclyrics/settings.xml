@@ -1,0 +1,24 @@
+<settings>
+    <setting id="baidu" value="true" />
+    <setting id="clean_title" value="false" />
+    <setting id="darklyrics" value="true" />
+    <setting id="genius" value="true" />
+    <setting id="gomaudio" value="true" />
+    <setting id="log_enabled" value="false" />
+    <setting id="lyricsmode" value="true" />
+    <setting id="lyricwiki" value="true" />
+    <setting id="read_filename" value="false" />
+    <setting id="read_filename_format" value="0" />
+    <setting id="save_filename_format" value="0" />
+    <setting id="save_lyrics1" value="true" />
+    <setting id="save_lyrics2" value="false" />
+    <setting id="save_lyrics_path" value="C:\Users\hacker\AppData\Roaming\Kodi\userdata\addon_data\script.cu.lrclyrics\lyrics" />
+    <setting id="save_subfolder" value="false" />
+    <setting id="save_subfolder_path" value="lyrics" />
+    <setting id="search_embedded" value="true" />
+    <setting id="search_file" value="true" />
+    <setting id="service" value="true" />
+    <setting id="silent" value="false" />
+    <setting id="strip" value="false" />
+    <setting id="ttplayer" value="true" />
+</settings>

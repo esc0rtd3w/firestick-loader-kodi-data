@@ -1,0 +1,18 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=KBCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.kbcast.com/embed.php?live=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?write\(\s*unescape\(\s*['"]([^"']+).*','@REFERER@')
+item_info_convert=unquote('%s')
+item_info_convert=parseText('%s','.*?file:\s*["']([^'"]+).*')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=http://tags.kbcast.com/jwplayer/jwplayer.flash.swf live=true token=%PK92(nK110. swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,122 @@
+2.4.1
+- fixed offliberty resolver
+- fixed mixcloud-downloader resolver
+
+2.4.0
+- fixed local resolver
+- removed broken resolvers
+
+2.3.0
+- added logoff functionality
+- modified login procedure
+
+2.2.1
+- added mixcloud-downloader resolver
+- removed broken resolvers
+- migration to po language files
+- removed german language (out of date)
+
+2.2.0
+- added low quality m4a resolver
+- fixed french localisation (tnx to gordielachance)
+
+2.1.3
+- Add to and remove from listen later
+- Additional context menu items only visible when logged in
+
+2.1.2
+- Modified login procedure
+- Tested on Jarvis
+
+2.1.1
+- Added listen later
+- Renamed "hot" to "trending"
+
+2.1.0
+- Replaced print by xbmc.log
+- Version bump for helix, insengard
+
+2.0.3
+- Fixed authentication exception
+- Fixed getting cloudcast exception 404 NOT FOUND
+
+2.0.2
+- Added uploads
+- Added playlists
+
+2.0.1
+- Fixed bug in authentication code landing page
+
+2.0.0
+- Added user authentication (tnx to Bochi)
+- Added followings
+- Added followers
+- Added favorites
+- Added listens
+- Added (un)favoriting cloucasts
+- Added (un)following users
+- Added thumbnails to main menu
+- Added extended cloudcast info (comment)
+- Fixed Unknown Music Info Key "thumbnail"
+
+1.1.5
+- Fixed local resolver
+- Added shameless plug for jackyNIX's own cloudcasts 
+  (hey, I was a dj too a couple of lifetimes ago :p)
+
+1.1.4
+- Auto change resolver in case of failure
+- Update local resolver regex (tnx to SilentException)
+
+1.1.3
+- Added local resolver (tnx to SilentException)
+
+1.1.2
+- Fixed playback of incorrect tracks (tnx to SilentException)
+
+1.1.1
+- Modified getstream url
+
+1.1.0
+- Added German localisation
+- Added compatibility to frodo python engine
+
+1.0.1
+- Added French localisation
+
+1.0.0
+- Fixed streaming (tnx to Bochi)
+- Added debug option (disabled by default)
+- Added localisation (English, Dutch)
+- Added to official dharma repository
+- Added compatibility to eden python engine
+
+0.4.1
+- Some bugfixes
+
+0.4.0
+- Added history played cloudcasts
+- Added history searches
+
+0.3.3
+- Added configurable download thumbnail size
+- Added search users
+
+0.3.2
+- Added configurable max cloudcasts on page
+- Some code cleaning
+
+0.3.1
+- Bugfix migr. -> urllib2
+
+0.3.0
+- Added search cloudcast
+
+0.2.0
+- Added categories
+
+0.1.0
+- Initial beta
+- Added hot cloudcasts
+- Added new cloudcasts
+- Added popular cloudcast.

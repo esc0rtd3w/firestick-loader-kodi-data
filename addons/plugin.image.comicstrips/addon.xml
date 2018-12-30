@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.image.comicstrips" name="Comic Strips" version="1.0.4" provider-name="spoyser">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>image video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>100s of Comic Strips to choose from.</summary>
+    <description lang="en">100s of Comic Strips to choose from.</description>
+     <platform>all</platform>
+  </extension>
+</addon>

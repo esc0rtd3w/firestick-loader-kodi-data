@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=PvtServerZ - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmpe://62.210.131.34/redirect/%s swfUrl=http://www.pvtserverz.com/player/player.swf timeout=15 live=1 swfVfy=1 pageUrl=http://www.pvtserverz.com

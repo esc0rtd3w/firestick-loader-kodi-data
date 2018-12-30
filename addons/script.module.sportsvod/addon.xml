@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.sportsvod" name="[COLOR ffff0000][B]Cyphers Sports VOD[/B][/COLOR]" version="1.0" Eprovider-name="Cypher">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+	<import addon="script.module.urlresolver" />
+    <import addon="script.module.beautifulsoup4" />
+	<import addon="script.video.F4mProxy" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>all</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Dependency Addon for Project Cypher</summary>
+    <description lang="en">Dependency Addon Project Cypher</description>
+	<disclaimer lang="en">Dependency Addon Project Cypher</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>		
+	<category label="Main">
+		<setting label="[B]Network[/B]" type="lsep" />
+		<setting id="serviceport" label="Select service port [8100-8199]" type="number" default="8181"/>
+		<setting label="[B]Playback[/B]" type="lsep" />
+		<setting id="playbackqual" label="Video quality" type="enum" default="0" lvalues="30001|30002|30003"/>
+		<setting id="playbacktype" label="On new video request" type="enum" default="0" lvalues="30011|30012|30013"/>
+	</category>
+	<setting id="ga_time" type="text" label="GA Called" default="2000-01-01 00:00:00" visible="false"/>
+    <setting id="ga_visitor" type="text" label="GA visitor" default="" visible="false"/>
+</settings>

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol always="false">101</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+
+    <controls>
+        <control type="label" id="100">
+            <description>tabs visibility marker</description>
+            <visible>false</visible>
+        </control>
+		
+		<control type="image">
+            <posx>1280</posx>
+            <posy>720</posy>
+            <width>-346</width>
+            <height>-203</height>
+            <texture>video-mask.png</texture>
+        </control>
+		<control type="image">
+            <posx>1280</posx>
+            <posy>720</posy>
+            <width>-346</width>
+            <height>-203</height>
+            <texture>video-mask.png</texture>
+        </control>
+		
+		<control type="image" id="4023">
+            <description>Program logo / Source logo</description>
+            <posx>930</posx>
+            <posy>515</posy>
+            <width>320</width>
+            <height>160</height>
+            <aspectratio>keep</aspectratio>
+            <fadetime>500</fadetime>
+            <texture>tvguide-logo-epg.png</texture>
+        </control>
+
+        <control type="image">
+            <posx>150</posx>
+            <posy>100</posy>
+            <width>1010</width>
+            <height>510</height>
+            <texture>menu-stream.png</texture>
+        </control>
+        <control type="image">
+            <posx>150</posx>
+            <posy>100</posy>
+            <width>1010</width>
+            <height>510</height>
+            <texture>menu-stream.png</texture>
+        </control>
+
+        <control type="label"><!-- Set Up Stream Text -->
+            <posx>180</posx>
+            <posy>105</posy>
+            <width>174</width>
+            <height>40</height>
+            <label>$ADDON[script.ftvguide 30600]</label>
+            <align>center</align>
+        </control>
+
+        <control type="button" id="101">
+            <posx>360</posx>
+            <posy>110</posy>
+            <width>173</width>
+            <height>40</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ftvguide 30601]</label>
+            <texturefocus>menu-grey-focus.png</texturefocus>
+            <texturenofocus>menu-grey.png</texturenofocus>
+            <onleft>103</onleft>
+            <onright>102</onright>
+            <ondown>1001</ondown>
+        </control>
+        <control type="button" id="102">
+            <posx>534</posx>
+            <posy>110</posy>
+            <width>174</width>
+            <height>40</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ftvguide 30602]</label>
+            <texturefocus>menu-grey-focus.png</texturefocus>
+            <texturenofocus>menu-grey.png</texturenofocus>
+            <onleft>101</onleft>
+            <onright>103</onright>
+            <ondown>2001</ondown>
+        </control>
+        <control type="button" id="103">
+            <posx>709</posx>
+            <posy>110</posy>
+            <width>173</width>
+            <height>40</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ftvguide 30603]</label>
+            <texturefocus>menu-grey-focus.png</texturefocus>
+            <texturenofocus>menu-grey.png</texturenofocus>
+            <onleft>102</onleft>
+            <onright>101</onright>
+            <ondown>3001</ondown>
+        </control>
+
+        <control type="videowindow">
+            <posx>200</posx>
+            <posy>360</posy>
+            <width>300</width>
+            <height>165</height>
+        </control>
+
+        <control type="group" id="1000">
+            <posx>40</posx>
+            <posy>120</posy>
+            <width>800</width>
+            <height>340</height>
+            <visible>StringCompare(Control.GetLabel(100),strm)</visible>
+
+            <control type="textbox">
+                <posx>140</posx>
+                <posy>60</posy>
+                <width>560</width>
+                <height>80</height>
+				<align>justify</align>
+                <label>$ADDON[script.ftvguide 30611]</label>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
+
+            <control type="button" id="1001">
+                <posx>140</posx>
+                <posy>160</posy>
+                <width>173</width>
+                <height>40</height>
+                <label>$ADDON[script.ftvguide 30610]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>101</onup>
+                <onright>1002</onright>
+                <ondown>1002</ondown>
+            </control>
+
+            <control type="textbox" id="1005">
+                <posx>20</posx>
+                <posy>160</posy>
+                <width>560</width>
+                <height>80</height>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
+
+
+            <control type="button" id="1002">
+                <posx>518</posx>
+                <posy>430</posy>
+                <width>240</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30604]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>101</onup>
+                <onleft>1001</onleft>
+                <onright>1003</onright>
+            </control>
+            <control type="button" id="1003">
+                <posx>759</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30605]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>101</onup>
+                <onleft>1002</onleft>
+                <onright>1004</onright>
+            </control>
+            <control type="button" id="1004">
+                <posx>930</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30606]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>101</onup>
+                <onleft>1003</onleft>
+            </control>
+
+        </control>
+
+        <control type="group" id="2000"><!-- Favourites -->
+            <posx>40</posx>
+            <posy>120</posy>
+            <width>800</width>
+            <height>340</height>
+            <visible>StringCompare(Control.GetLabel(100),favourites)</visible>
+
+            <control type="textbox">
+                <posx>140</posx>
+                <posy>60</posy>
+                <width>350</width>
+                <height>80</height>
+				<align>justify</align>
+                <label>$ADDON[script.ftvguide 30620]</label>
+                <wrapmultiline>true</wrapmultiline>
+            </control>
+
+            <control type="list" id="2001">
+                <posx>550</posx>
+                <posy>50</posy>
+                <width>500</width>
+                <height>354</height>
+                <viewtype label="list">list</viewtype>
+                <orientation>vertical</orientation>
+                <focusposition>7</focusposition>
+                <onleft>102</onleft>
+                <onright>2002</onright>
+
+                <itemlayout width="560" height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>16</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <aligny>center</aligny>
+                        <font>font13</font>
+                        <textcolor>ffffffff</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="560" height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey.png</texture>
+                        <visible>!Control.HasFocus(2001)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey-focus.png</texture>
+                        <visible>Control.HasFocus(2001)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>16</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <aligny>center</aligny>
+                        <font>font13</font>
+                        <textcolor>ffffffff</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="image">
+                        <posx>465</posx>
+                        <posy>9</posy>
+                        <width>20</width>
+                        <height>20</height>
+                        <texture>tvguide-bullet.png</texture>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="button" id="2002">
+                <posx>518</posx>
+                <posy>430</posy>
+                <width>240</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30604]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>102</onup>
+                <onleft>2001</onleft>
+                <onright>2003</onright>
+            </control>
+            <control type="button" id="2003">
+                <posx>759</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30605]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>102</onup>
+                <onleft>2002</onleft>
+                <onright>2004</onright>
+            </control>
+            <control type="button" id="2004">
+                <posx>930</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30606]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>102</onup>
+                <onleft>2003</onleft>
+            </control>
+
+        </control>
+
+
+        <control type="group" id="3000"><!-- Addons -->
+            <posx>40</posx>
+            <posy>120</posy>
+            <width>1280</width>
+            <height>600</height>
+            <visible>StringCompare(Control.GetLabel(100),addons)</visible>
+
+            <control type="image">
+                <posx>190</posx>
+                <posy>50</posy>
+                <width>40</width>
+                <height>12</height>
+                <texture>tvguide-channel-arrow.png</texture>
+            </control>
+			
+			<control type="image">
+                <posx>190</posx>
+                <posy>230</posy>
+                <width>40</width>
+                <height>-12</height>
+                <texture>tvguide-channel-arrow.png</texture>
+            </control>
+
+            <control type="wraplist" id="3001">
+                <posx>140</posx>
+                <posy>65</posy>
+                <width>150</width>
+                <height>150</height>
+				<aspectratio>keep</aspectratio>
+                <viewtype label="list">list</viewtype>
+                <orientation>vertical</orientation>
+                <focusposition>0</focusposition>
+                <onleft>103</onleft>
+                <onright>3002</onright>
+
+                <itemlayout width="212" height="212">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>150</width>
+                        <height>150</height>
+                        <texture>menu-grey.png</texture>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>130</width>
+                        <height>130</height>
+                        <info>ListItem.Icon</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="150" height="150">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>150</width>
+                        <height>150</height>
+                        <texture>menu-grey.png</texture>
+                        <visible>!Control.HasFocus(3001)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>150</width>
+                        <height>150</height>
+                        <texture>menu-grey-focus.png</texture>
+                        <visible>Control.HasFocus(3001)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>130</width>
+                        <height>130</height>
+                        <info>ListItem.Icon</info>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="label" id="3003">
+                <posx>300</posx>
+                <posy>60</posy>
+                <width>230</width>
+                <height>40</height>
+                <label>[B]plugin.video.xxx[/B]</label>
+            </control>
+            <control type="textbox" id="3004">
+                <posx>300</posx>
+                <posy>100</posy>
+                <width>230</width>
+                <height>120</height>
+                <label>description...</label>
+				<align>justify</align>
+                <wrapmultiline>true</wrapmultiline>
+                <autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+            </control>
+
+            <control type="list" id="3002">
+                <posx>550</posx>
+                <posy>50</posy>
+                <width>500</width>
+                <height>354</height>
+                <viewtype label="list">list</viewtype>
+                <orientation>vertical</orientation>
+                <focusposition>7</focusposition>
+                <onleft>3001</onleft>
+                <onright>3005</onright>
+
+                <itemlayout width="560" height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey.png</texture>
+                    </control>
+                    <control type="label">
+                        <posx>16</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <aligny>center</aligny>
+                        <font>font13</font>
+                        <textcolor>ffffffff</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="560" height="40">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey.png</texture>
+                        <visible>!Control.HasFocus(3002)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <texture>menu-grey-focus.png</texture>
+                        <visible>Control.HasFocus(3002)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>16</posx>
+                        <posy>0</posy>
+                        <width>560</width>
+                        <height>38</height>
+                        <aligny>center</aligny>
+                        <font>font13</font>
+                        <textcolor>ffffffff</textcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                    <control type="image">
+                        <posx>465</posx>
+                        <posy>9</posy>
+                        <width>20</width>
+                        <height>20</height>
+                        <texture>tvguide-bullet.png</texture>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="button" id="3005">
+                <posx>518</posx>
+                <posy>430</posy>
+                <width>240</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30604]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>103</onup>
+                <onleft>3002</onleft>
+                <onright>3006</onright>
+            </control>
+            <control type="button" id="3006">
+                <posx>759</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30605]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>103</onup>
+                <onleft>3005</onleft>
+                <onright>3007</onright>
+            </control>
+            <control type="button" id="3007">
+                <posx>930</posx>
+                <posy>430</posy>
+                <width>170</width>
+                <height>40</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>ffffffff</textcolor>
+                <label>$ADDON[script.ftvguide 30606]</label>
+                <texturefocus>menu-grey-focus.png</texturefocus>
+                <texturenofocus>menu-grey.png</texturenofocus>
+                <onup>103</onup>
+                <onleft>3006</onleft>
+            </control>
+
+        </control>
+
+
+    </controls>
+</window>

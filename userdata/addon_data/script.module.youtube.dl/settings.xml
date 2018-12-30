@@ -1,0 +1,8 @@
+<settings>
+    <setting id="confirm_download_path" value="true" />
+    <setting id="core_version" value="2016.06.27" />
+    <setting id="debug" value="false" />
+    <setting id="disable_dash_video" value="true" />
+    <setting id="video_quality" value="1" />
+    <setting id="ytdl_debug" value="false" />
+</settings>

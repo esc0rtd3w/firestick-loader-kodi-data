@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=yocast - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://cdn.yocast.tv:1935/yocast/%s swfUrl=http://www.yocast.tv/player/player-licensed.swf pageUrl=http://www.yocast.tv

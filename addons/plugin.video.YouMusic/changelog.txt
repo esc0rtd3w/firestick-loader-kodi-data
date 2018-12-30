@@ -1,0 +1,7 @@
+v.1.0.3 = list updated
+
+v1.0.2 = list updated & code changes.
+
+v1.0.1 = new art added (thank,s to jokstergfx) and list updated.
+
+v1.0.0 = Initial release

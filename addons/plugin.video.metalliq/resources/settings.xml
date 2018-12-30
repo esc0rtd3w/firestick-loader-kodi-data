@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+        <setting label="30013" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/all)"/>
+        <setting label="30824" id="library_updates" type="bool" default="true" />
+        <setting label="30303" type="action" action="RunPlugin(plugin://plugin.video.metalliq/update_library)" visible="eq(-1,true)" />
+        <setting label="30305" type="bool" id="library_set_date" default="false"/>
+        <setting label="30902" id="library_sync_collection" type="bool" default="false" />
+        <setting label="30903" id="library_sync_watchlist" type="bool" default="false" />
+        <setting label="Library update interval" id="update_library_interval" type="slider" range="4,4,48" default="8" option="int" />
+        <setting label="Include episode with unknown air-date?" id="aired_unknown" type="bool" default="false"/>
+        <setting label="Add tags to filenames" id="library_tags" type="text" default="" />
+        <setting label="Episode-aired-offset in days (airdate = today - offset)" id="airdate_offset" type="slider" range="-2,1,2" default="0" option="int" />
+        <setting label="Include specials" id="include_specials" type="bool" default="false"/>
+        <setting label="TotalSetup Done" id="total_setup_done" type="bool" default="false" visible="false"/>
+        <setting label="TotalSetup" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/setup/total)" visible="eq(-1,false)" />
+        <setting label="Rerun TotalSetup" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/setup/total)" visible="eq(-2,true)" />
+        <setting label="Players Setup" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/setup/player)" visible="eq(-3,true)"/>
+        <setting label="Sources Setup" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/setup/sources)" visible="eq(-4,true)"/>
+        <setting label="30010" id="players_update_url" type="text" default="https://api.github.com/repos/OpenELEQ/verified-metalliq-players/zipball" />
+        <setting subsetting="true" option="close" label="30012" type="action" action="RunPlugin(plugin://plugin.video.metalliq/update_players)"/>
+        <setting subsetting="true" label="Install custom players from https://api.github.com/repos/OpenELEQ/custom-metalliq-players/zipball" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/update_players/https%3a%2f%2fapi.github.com%2frepos%2fOpenELEQ%2fcustom-metalliq-players%2fzipball)"/>
+        <setting option="close" label="Clear Trakt account settings" type="action" action="RunPlugin(plugin://plugin.video.metalliq/cleartrakt)"/>
+        <!--<setting label = "30417" type="action" action="RunPlugin(plugin://plugin.video.metalliq/authenticate_trakt)" />-->
+        <setting label="trakt access token" id="trakt_access_token" type="text" visible="false" />
+        <setting label="trakt refresh token" id="trakt_refresh_token" type="text" visible="false" />
+        <setting label="trakt refresh token" id="trakt_expires_at" type="text" visible="false" />
+    </category>
+    <category label="30100">
+        <setting label="30101" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/movies)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="movies_enabled_players" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.dandyboxset.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.hd-movie14.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.m4u.m&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.tromachannel.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.afdah.q&quot;, &quot;search.cartoons8.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.fineanddandy.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.genvideos.q&quot;, &quot;search.hdbox.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.moviemadness.q&quot;, &quot;search.niter.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.scenepeeper.m&quot;, &quot;search.solarmoviegw.q&quot;, &quot;search.watch32hd.q&quot;, &quot;search.wewatchwrestling.q&quot;]' />
+        <setting label="30110" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player" default="default_main" />
+        <setting label="30111" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromlib/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player_from_library" default="default_library" />
+        <setting label="30112" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromcontext/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player_from_context" default="default_context" />
+        <setting label="30302" id="movies_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/Movies/" visible="true" />
+        <setting label="30312" id="movies_playlist_folder" type="folder" default="special://profile/playlists/video/Movies/" visible="false" />
+        <setting label="30834" id="movies_default_auto_add" type="bool" default="true"/>
+        <setting label="30820" id="movies_played_by_add" type="bool" default="false" />
+        <setting label="Movies Batch Add File Path" id="movies_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.metalliq/movies_to_add.txt" visible= "false"/>
+    </category>
+    <category label="30200">
+        <setting label="30201" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/tvshows)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="tv_enabled_players" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.crackler.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.teevee.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.cartoons8.q&quot;, &quot;search.dizibox.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.hevcvideoclub.q&quot;, &quot;search.jafma.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.seriesaddicts.q&quot;, &quot;search.watch32hd.q&quot;]'/>
+        <setting label="30210" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player" default="default_main" />
+        <setting label="30211" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromlib/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player_from_library" default="default_library" />
+        <setting label="30212" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromcontext/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player_from_context" default="default_context" />
+        <setting label="30302" id="tv_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/TVShows/" visible="false" />
+        <setting label="30312" id="tv_playlist_folder" type="folder" default="special://profile/playlists/video/TVShows" visible="false" />
+        <setting label="30818" id="tv_default_auto_add" type="bool" default="true"/>
+        <setting label="30821" id="tv_played_by_add" type="bool" default="false" />
+        <setting label="TV Shows Batch Add File Path" id="tv_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.metalliq/shows_to_add.txt" visible= "false"/>
+    </category>
+    <category label="30800">
+        <setting label="30699" id="preferred_music_type" type="select" values="audio|video" default="audio" visible="true"/>
+        <setting label="30801" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/music)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="music_enabled_players" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.musicbox.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;search.hypem_com.q&quot;, &quot;search.mixcloud.q&quot;, &quot;search.mp3streams.q&quot;, &quot;search.soundcloud.q&quot;]' />
+        <setting label="30701" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/musicvideos)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="musicvideos_enabled_players" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.musicbox.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;search.mtvuk.q&quot;]' />
+        <setting label="30810" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player/music)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="music_default_player" default="default_main" />
+        <setting label="30710" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player/musicvideos)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="musicvideos_default_player" default="default_main" />
+        <setting label="30811" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromlib/music)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="music_default_player_from_library" default="default_library" />
+        <setting label="30711" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromlib/musicvideos)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="musicvideos_default_player_from_library" default="default_library" />
+        <setting label="30812" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromcontext/music)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="music_default_player_from_context" default="default_context" />
+        <setting label="30712" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromcontext/musicvideos)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="musicvideos_default_player_from_context" default="default_context" />
+        <setting label="30302" id="music_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/Music/" visible="false" />
+        <setting label="30302" id="musicvideos_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/Musicvideos/" visible="false" />
+        <setting label="30312" id="music_playlist_folder" type="folder" default="special://profile/playlists/music/Artist/" visible="false" />
+        <setting label="30312" id="musicvideos_playlist_folder" type="folder" default="special://profile/playlists/video/MusicVideos" visible="false" />
+    </category>
+    <category label="30500">
+        <setting label="30501" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/players/live)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="live_enabled_players" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.itv.m&quot;, &quot;explore.jericho.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.adriansports.q&quot;, &quot;navigate.ccloudtv.q&quot;, &quot;navigate.channelpear.q&quot;, &quot;navigate.dnatv.q&quot;, &quot;navigate.evolve.q&quot;, &quot;navigate.ftv.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.notfilmon.q&quot;, &quot;navigate.phoenix.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;navigate.uktvagain.q&quot;, &quot;navigate.ustvnow.q&quot;, &quot;search.vidtime.c&quot;]' />
+        <setting label="30510" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player/live)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="live_default_player" default="default_main" />
+        <setting label="30511" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromlib/live)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="live_default_player_from_library" default="default_library" />
+        <setting label="30512" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/settings/default_player_fromcontext/live)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="live_default_player_from_context" default="default_context" />
+        <setting label="30302" id="live_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/Live/" visible="false" />
+        <setting label="30312" id="live_playlist_folder" type="folder" default="special://profile/playlists/mixed/Channels/" visible="false" />
+        <setting label="Add channels to library using library player?" id="live_default_auto_add" type="bool" default="true"/>
+    </category>
+    <category label="30400">
+        <setting label="30401" type="action" action="RunPlugin(plugin://plugin.video.metalliq/clear_cache)"/>
+        <setting label="Export MetalliQ movie and tvshow libraries as list" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/export)" />
+        <setting label="Batch Add lists" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/movies/batch_add_to_library)" />
+        <setting label="Toggle context toggle" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/toggle/preferred_toggle)" />
+        <setting label="Toggle context player" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/toggle/context_player)" />
+        <setting label="Preferred toggle" type="select" values="acceleration|skin" id="preferred_toggle" default="skin"/>
+        <setting label="Primary skin" type="text" id="primary_skin" />
+        <setting label="Alternate skin" type="text" id="alternate_skin" />
+        <setting label="30901" id="random_pages" type="number" default="1"/>
+        <setting label="30402" type="bool" id="use_simple_selector" default="false"/>
+        <setting label="30410" type="bool" id="auto_hide_dialogs" default="true" enable="eq(-1,false)"/>
+            <setting subsetting="true" label="30411" type="bool" id="auto_hide_dialogs_progress" default="true" enable="eq(-1,true)"/>
+            <setting subsetting="true" label="30412" type="bool" id="auto_hide_dialogs_info" default="true" enable="eq(-2,true)"/>
+            <setting subsetting="true" label="30413" type="bool" id="auto_hide_dialogs_keyboard" default="true" enable="eq(-3,true)"/>
+        <setting label="30404" type="slider" id="pool_size" default="10" range="1,20" option="int" />
+    </category>
+    <category label="30825">
+        <setting label="30005" id="style" type="select" values="Azure|Custom|Clear|Default|Elegant|Embossed|Emerald|Glass|Golden|Inverted|Meta" default="Default" />
+        <setting label="30016" id="style_custom_folder" type="folder" default="https://raw.githubusercontent.com/OpenELEQ/Style/master/MetalliQ/default/" visible="eq(-1,Custom)" />
+        <setting label="30015" id="background" type="select" values="Azure|Custom|Clear|Default|Elegant|Embossed|Emerald|Glass|Inverted|Meta" default="Default" />
+        <setting label="30017" id="background_custom_folder" type="folder" default="https://raw.githubusercontent.com/OpenELEQ/Style/master/MetalliQ/default/" visible="eq(-1,Custom)" />
+        <setting label="30827" type="select" values="system|bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh" id="language_id" default="system"/>
+        <setting label="30720" id="trakt_period" type="select" values="weekly|monthly|yearly|all" default="monthly"/>
+        <setting label="30721" id="items_per_page" type="slider" range="20,20,200" default="20" option="int" />
+        <!--<setting label="30722" id="trakt_days" type="slider" range="1,31" default="1" option="int" />-->
+        <setting label="30826" type="lsep"/>
+        <setting label="30828" id="force_view" type="bool" default="false" />
+        <setting label="30000" id="main_view" type="number" default="50" visible="eq(-1,true)" />
+        <setting label="30100" id="movies_view" type="number" default="50" visible="eq(-2,true)" />
+        <setting label="30200" id="tvshows_view" type="number" default="50" visible="eq(-3,true)" />
+        <setting label="Seasons" id="seasons_view" type="number" default="50" visible="eq(-4,true)" />
+        <setting label="Episodes" id="episodes_view" type="number" default="50" visible="eq(-5,true)" />
+        <setting label="30800" id="music_view" type="number" default="50" visible="eq(-6,true)" />
+        <setting label="30500" id="live_view" type="number" default="50" visible="eq(-7,true)" />
+        <setting label="30815" id="list_view" type="number" default="50" visible="eq(-8,true)" />
+        <setting label="Guide channelers" type="lsep" visible="false" />
+        <setting subsetting="true" enable="false" type="text" id="movies_enabled_channelers" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.dandyboxset.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.hd-movie14.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.m4u.m&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.tromachannel.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.afdah.q&quot;, &quot;search.cartoons8.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.fineanddandy.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.genvideos.q&quot;, &quot;search.hdbox.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.moviemadness.q&quot;, &quot;search.niter.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.scenepeeper.m&quot;, &quot;search.solarmoviegw.q&quot;, &quot;search.watch32hd.q&quot;, &quot;search.wewatchwrestling.q&quot;]' visible="false" />
+        <setting subsetting="true" type="text" id="movies_default_channeler" default="default_guide" visible="false" />
+        <setting subsetting="true" type="text" id="tv_enabled_channelers" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.crackler.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.teevee.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.cartoons8.q&quot;, &quot;search.dizibox.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.hevcvideoclub.q&quot;, &quot;search.jafma.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.seriesaddicts.q&quot;, &quot;search.watch32hd.q&quot;]' visible="false" />
+        <setting subsetting="true" type="text" id="tv_default_channeler" default="default_guide" visible="false" />
+        <setting subsetting="true" type="text" id="live_enabled_channelers" default='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.itv.m&quot;, &quot;explore.jericho.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.adriansports.q&quot;, &quot;navigate.ccloudtv.q&quot;, &quot;navigate.channelpear.q&quot;, &quot;navigate.dnatv.q&quot;, &quot;navigate.evolve.q&quot;, &quot;navigate.ftv.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.notfilmon.q&quot;, &quot;navigate.phoenix.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;navigate.uktvagain.q&quot;, &quot;navigate.ustvnow.q&quot;, &quot;search.vidtime.c&quot;]' visible="false" />
+        <setting subsetting="true" type="text" id="live_default_channeler" default="default_guide" visible="false" />
+        <setting label="Library: Use titles instead of IDs" id="library_titles" type="bool" default="true" hidden="true" visible="false"/>
+        <setting label="Sync Folder" id="sync_folder" type="folder" default="special://profile/addon_data/plugin.video.metalliq/Sync/" visible="false" />
+    </category>
+    <category label="$LOCALIZE[636]">
+        <setting label="$LOCALIZE[21435] [LOWERCASE]$LOCALIZE[20342] $LOCALIZE[14022] $LOCALIZE[16003][/LOWERCASE]" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/manage/library/movies)"/>
+        <setting label="$LOCALIZE[21435] [LOWERCASE]$LOCALIZE[20343] $LOCALIZE[14022] $LOCALIZE[16003][/LOWERCASE]" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/manage/library/tvshows)"/>
+        <setting label="$LOCALIZE[14061] patch [LOWERCASE]$LOCALIZE[24001][/LOWERCASE]" id="autopatch" type="bool" default="false" />
+        <setting label="$LOCALIZE[636] patches" id="autopatches" type="text" default="[[], [&quot;plugin.video.bennu&quot;, &quot;plugin.video.boxsetkings&quot;, &quot;plugin.video.covenant&quot;, &quot;plugin.video.exodus&quot;, &quot;plugin.video.flixnet&quot;, &quot;plugin.video.genesisreborn&quot;, &quot;plugin.video.gurzil&quot;, &quot;plugin.video.poseidon&quot;, &quot;plugin.video.redpill&quot;, &quot;plugin.video.sedundnes&quot;, &quot;plugin.video.showboxarize&quot;, &quot;plugin.video.tinklepad&quot;], [&quot;plugin.video.salts&quot;], [&quot;script.module.dudehere.routines&quot;]]" />
+        <setting label="Patch" option="close" type="action" action="RunPlugin(plugin://plugin.video.metalliq/patch/all)"/>
+        <setting label="Trakt API client id" id="trakt_api_client_id" type="text" default="" />
+        <setting label="Trakt API client secret" id="trakt_api_client_secret" subsetting="true" type="text" default="" visible="!eq(-1,)" />
+        <setting label="TMDb API" id="tmdb_api" type="text" default="" />
+        <setting label="TVDb API" id="tvdb_api" type="text" default="" />
+        <setting label="LastFM API key" id="lastfm_api_key" type="text" default="" />
+        <setting label="LastFM API shared secret" id="lastfm_api_shared_secret" subsetting="true" type="text" default="" visible="!eq(-1,)" />
+    </category>
+</settings>

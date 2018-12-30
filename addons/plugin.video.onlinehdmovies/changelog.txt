@@ -1,0 +1,49 @@
+[B]Version 1.2.2[/B]
+- moved to new site
+
+[B]Version 1.2.1[/B]
+- fixed img not showing
+
+[B]Version 1.2.0[/B]
+- fixed changes to the site
+
+[B]Version 1.1.9[/B]
+- code clean up
+- added tv show but only new stuff has links
+
+[B]Version 1.1.8[/B]
+- temp fix 030216
+
+[B]Version 1.1.7[/B]
+- temp fix 1
+
+[B]Version 1.1.6[/B]
+- temp fix for now
+
+[B]Version 1.1.5[/B]
+- small fix
+
+[B]Version 1.1.4[/B]
+- small fix
+
+[B]Version 1.1.2[/B]
+- added more hosts that was hidden
+- fixed openload to work with r-debrid
+
+[B]Version 1.1.1[/B]
+- small fixes
+
+[B]Version 1.1.0[/B]
+- changed site
+
+[B]Version 1.0.6[/B]
+- Fixed links
+
+[B]Version 1.0.5[/B]
+- Fixed icon
+
+[B]Version 1.0.4[/B]
+- Fixed openload links
+
+[B]Version 1.0.2[/B]
+- Full release ofonline hd movies plugin

@@ -1,0 +1,78 @@
+------------------------
+NBA On-demand v2.0.7 (01-Apr-17)
+------------------------
+
+- Fix Teams list
+
+------------------------
+NBA On-demand v2.0.0 (24-Nov-14)
+------------------------
+
+- Complete re-work of the addon.
+
+
+------------------------
+NBA On-demand v1.1.6 (29-Mar-14)
+------------------------
+
+- Tweaked video listings.
+- Fixed "play from here".
+- Tweaked cache.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.5 (2-Mar-14)
+------------------------
+
+- Tweaked page listings.
+- Update all existing translations.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.4 (25-Feb-14)
+------------------------
+
+- Tweaked resolvers.
+- Updated French translation.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.3 (19-Feb-14)
+------------------------
+
+- Fixed issues with video listings.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.2 (17-Feb-14)
+------------------------
+
+- Added Portuguese translation.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.1 (15-Feb-14)
+------------------------
+
+- Added Dutch and French translation.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.1.0 (12-Feb-14)
+------------------------
+
+- Re-work of addon.
+- Code cosmetics.
+
+
+------------------------
+NBA On-demand v1.0.0
+------------------------
+
+- Initial version

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="30000">SportsDevil</string>
+  <string id="30001">קודי- מרכז מדיה</string>
+  <string id="30002">השבת כתב ויתור</string>
+  <string id="30003">סוג נגן</string>
+  <string id="30004">כללי</string>
+  <string id="30005">עדכונים</string>
+  <string id="30007">שמור וידאו</string>
+  <string id="30008">נתיב הורדה</string>
+  <string id="30009">בקש הורדה לפני הפעלת הווידאו</string>
+  <string id="30010">הוסף קיצור דרך</string>
+  <string id="30011">הסר קיצור דרך</string>
+  <string id="30012">איכות וידאו (אם זמין)</string>
+  <string id="30013">שאל אותי</string>
+  <string id="30014">נמוכה</string>
+  <string id="30015">רגילה</string>
+  <string id="30016">גבוהה</string>
+  <string id="30017">בחר נתיב הורדה:</string>
+        
+  <string id="30050">מוריד וידאו...</string>
+  <string id="30051">אנא המתן.</string>
+  <string id="30052">האם ברצונך להוריד את הסרטון הזה?</string>
+  <string id="30053">הורדת הווידאו נכשלה. מנסה להזרים וידאו...</string>
+  <string id="30054">האם אתה באמת רוצה להסיר את קיצור הדרך הזה?</string>
+  <string id="30055">מקורות וידאו רבים זמינים. בחר אחד:</string>
+  <string id="30056">איכות נמוכה</string>
+  <string id="30057">איכות רגילה</string>
+  <string id="30058">איכות גבוהה</string>
+  <string id="30059">עדכון</string>
+  <string id="30060">VideoDevil עודכן בהצלחה</string>
+  <string id="30061">אזהרה: תוסף זה מכיל חומר למבוגרים בלבד.</string>
+  <string id="30062">באפשרותך להיכנס רק אם אתה בן 18 לפחות</string>
+  <string id="30063">או לפחות הגיל החוקי שבתחום השיפוט שבו</string>
+  <string id="30064">אתה מתגורר או שממנו אתה מגיע לתוכן זה.</string>
+  <string id="30065">יציאה</string>
+  <string id="30066">כניסה</string>
+  <string id="30100">קטגוריות</string>
+  <string id="30101">תת קטגוריות</string>
+  <string id="30102">חיפוש</string>
+  <string id="30103">אל הדף הבא</string>
+  <string id="30104">עוד</string>
+  <string id="30105">סגנון</string>
+  <string id="30106">עכשיווי</string>
+  <string id="30107">אמן</string>
+  <string id="30108">וידאו</string>
+  <string id="30109">מיון</string>
+  <string id="30110">הצעה</string>
+  <string id="30111">צמצם</string>
+  <string id="30112">אזור</string>
+  <string id="30113">טווח זמן</string>
+  <string id="30114">ספורט</string>
+  <string id="30115">ילדים</string>
+  <string id="30116">מוזיקה</string>
+  <string id="30117">סרטונים קשורים</string>
+  
+  <string id="30200">שפה</string>
+  <string id="30251">en</string>
+  <string id="30252">de</string>
+  <string id="30252">Heb</string>
+  
+  <string id="30270">ניגון אוטומטי</string>  
+  <string id="30271">עדכון אוטומטית באיתחול</string>
+  <string id="30272">מחפש עדכונים</string>
+  <string id="30273">אין עדכונים זמינים</string>
+  <string id="30274">העדכון נכשל</string>
+  <string id="30275">מחפש עדכונים...</string>
+  <string id="30276">עדכון זמין</string>
+  <string id="30277">עדכונים זמינים</string>  
+  <string id="30278">להתקין כעת?</string> 
+  <string id="30279">מתקין...</string>
+  <string id="30280">נכשל</string>
+  
+  
+  <string id="30351">פוטבול אמריקאי</string>
+  <string id="30352">פוטבול</string>
+  <string id="30353">כדורסל</string>
+  <string id="30354">הוקי קרח</string>
+  <string id="30355">בייסבול</string>
+  <string id="30356">טניס</string>
+  <string id="30357">ספורט מוטורי</string>
+  <string id="30358">רוגבי</string>
+  <string id="30359">הטלת חץ</string>
+  <string id="30360">סנוקר</string>
+  <string id="30361">גולף</string>
+  <string id="30362">כדור יד</string>
+  <string id="30363">אחר</string>
+  <string id="30364">רכיבה</string>
+  <string id="30365">קריקט</string>
+</strings>

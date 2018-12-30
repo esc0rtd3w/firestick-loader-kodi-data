@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.ts80k" version="0.2.0" name="80's kids" provider-name="Mr Entertainment">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.TheYid.common" version="0.1.1"/>
+        <import addon="script.module.urlresolver"  version="2.0.9"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>The Best 80s show when i was a kid</summary>
+        <description>The Best 80s show when i was a kid</description>
+        <platform>all</platform>
+        <disclaimer lang="en"></disclaimer>
+    </extension>
+</addon>

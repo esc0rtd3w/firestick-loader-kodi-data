@@ -1,0 +1,2100 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# breaksrmine, 2017
+# Viper2k4, 2016-2017
+# eidermar, 2016
+# eidermar, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: German (http://www.transifex.com/tv-addons/salts/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filme"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV-Serien"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV-Serie"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Sortierung Indexseiten"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "URL Resolver Einstellungen"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Add-on Einstellungen"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "SALTS automatisch einstellen"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "SALTS für Zugriff auf trakt.tv Konto berechtigen"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Standardansichten einstellen"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Gespeicherte URLs löschen (Cache)"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "%s - Gerade im Trend"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "%s - Populär"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "%s - Kürzlich aktualisiert"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "%s - Empfohlen"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Meine %s Sammlung"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Meine Favoriten"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Meine Abos"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Meine Merkliste"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Meine Listen"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Andere Listen"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Meine nächsten Episoden"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Mein Kalender"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Allgemeiner Kalender"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Premieren Kalender"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Suche"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Vor kurzem gesucht"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Gespeicherte Suchen"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Aktualisierung erzwingen"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Alle %s löschen"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Erzwinge Aktualisierung"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Erzwinge komplette Aktualisierung"
+
+msgctxt "#30033"
+msgid "Enable All Scrapers"
+msgstr "Alle Index Seiten aktivieren"
+
+msgctxt "#30034"
+msgid "Disable All Scrapers"
+msgstr "Alle Index Seiten deaktivieren"
+
+msgctxt "#30035"
+msgid "Enable Scraper"
+msgstr "Index Seite aktivieren"
+
+msgctxt "#30036"
+msgid "Disable Scraper"
+msgstr "Index Seite deaktivieren"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Nach oben bewegen"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Nach unten bewegen"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Bewegen nach..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Neue Position eingeben (1 - %s)"
+
+msgctxt "#30041"
+msgid "Set Default %s View"
+msgstr "Standardansicht für %s einstellen"
+
+msgctxt "#30042"
+msgid "Set a view then select this item to set the default %s view"
+msgstr "Gewünschte Ansicht eingeben und diesen Punkt auswählen um die Standardansicht für % einzustellen"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Importieren"
+
+msgctxt "#30044"
+msgid "%s View Set to: %s"
+msgstr "Ansicht für %s eingestellt auf: %s"
+
+msgctxt "#30045"
+msgid "Delete [B][COLOR red]ENTIRE[/COLOR][/B] Url Cache"
+msgstr "[B][COLOR red]GESAMTEN[/COLOR][/B] URL Cache löschen"
+
+msgctxt "#30046"
+msgid "This will set some settings to values that have been found to"
+msgstr "Hiermit werden einige Einstellungen auf Werte gesetzt, die sich als  "
+
+msgctxt "#30047"
+msgid "be effective. The following settings will be changed:"
+msgstr "Effektive erwiesen haben. Folgende Werte werden angepasst:"
+
+msgctxt "#30048"
+msgid ""
+"[COLOR red]Scraper Sort Order, Source Sorting, Calendar Start Day, Trakt "
+"Timeout, Scraper Timeout, Watchlist in MNE, Test Direct[/COLOR]"
+msgstr "[COLOR red]Index Seiten Sortierung, Dateianbieter Sortierung, Kalender Start Tag, Trakt Zeitlimits, Index Seiten Zeitlimits, Merkliste in MNE, Test Direkt[/COLOR]"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Gehe zurück"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Fortsetzen"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Auto-Einstellungen vollständig"
+
+msgctxt "#30052"
+msgid "Set as Favorites List"
+msgstr "Als Favoriten-Liste speichern"
+
+msgctxt "#30053"
+msgid "Set as Subscription List"
+msgstr "Als Abo-Liste speichern"
+
+msgctxt "#30054"
+msgid "Import from Collection"
+msgstr "Von Sammlung importieren"
+
+msgctxt "#30055"
+msgid "Add another user's list"
+msgstr "Liste eines anderen Benutzers importieren"
+
+msgctxt "#30056"
+msgid "Copy to My List"
+msgstr "In meine Liste kopieren"
+
+msgctxt "#30057"
+msgid "Add more from %s"
+msgstr "Mehr %s hinzufügen"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Liste entfernen"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Liste umbenennen"
+
+msgctxt "#30060"
+msgid "Enter the new name (blank to reset)"
+msgstr "Den neuen Namen eingeben (leer lassen zum zurücksetzen)"
+
+msgctxt "#30061"
+msgid "Enter username of list owner"
+msgstr "Benutzername des Listen Besitzers eingeben"
+
+msgctxt "#30062"
+msgid "List Does Not Exist: %s"
+msgstr "Die Liste existiert nicht: "
+
+msgctxt "#30063"
+msgid "Progress Timeouts: %s/%s"
+msgstr "Fortschritt Zeitlimits: %s/%s"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Staffeln durchsuchen"
+
+msgctxt "#30065"
+msgid "Update Subscriptions: (Next Run: [COLOR %s]%s[/COLOR])"
+msgstr "Abos aktualisieren: (Nächster Termin: [COLOR %s]%s[/COLOR])"
+
+msgctxt "#30066"
+msgid "Clean-Up Subscriptions"
+msgstr "Abos bereinigen"
+
+msgctxt "#30067"
+msgid "Pick a list to use for Subscriptions"
+msgstr "Eine Liste für die Abos auswählen"
+
+msgctxt "#30068"
+msgid "Pick a list to use for Favorites"
+msgstr "Eine Liste für die Favoriten auswählen"
+
+msgctxt "#30069"
+msgid "Blank Searches are not allowed"
+msgstr "Leere Suchanfragen sind nicht erlaubt"
+
+msgctxt "#30070"
+msgid "Save Search"
+msgstr "Suche abspeichern"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Aus dem Verlauf löschen"
+
+msgctxt "#30072"
+msgid "Delete Search"
+msgstr "Suche löschen"
+
+msgctxt "#30073"
+msgid "Recent %s Searches Cleared"
+msgstr "Kürzliche Suchanfragen für %s bereinigt"
+
+msgctxt "#30074"
+msgid "Saved %s Searches Cleared"
+msgstr "Gespeicherte Suchanfragen für %s bereinigt"
+
+msgctxt "#30075"
+msgid "Scraper Timeouts: %s/%s"
+msgstr "Index Seiten Zeitlimits: %s/%s"
+
+msgctxt "#30076"
+msgid "No Useable Sources Found%s"
+msgstr "Keine brauchbaren Quellen gefunden%s"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Einen Untertitel zum herunterladen auswählen"
+
+msgctxt "#30078"
+msgid "Link Resolve Failed: %s"
+msgstr "Link Auflösung gescheitert: %s"
+
+msgctxt "#30079"
+msgid "All sources failed to play"
+msgstr "Das Abspielen aller Quellen ist gescheitert"
+
+msgctxt "#30080"
+msgid "Choose your stream"
+msgstr "Gewünschten Stream auswählen"
+
+msgctxt "#30081"
+msgid "Set Related Url"
+msgstr "Die zugehörige URL einstellen"
+
+msgctxt "#30082"
+msgid "Received result from: %s"
+msgstr "Ergebnise erhalten von: %s"
+
+msgctxt "#30083"
+msgid "Url To Change (%s)"
+msgstr "Die zu verändernde URL (%s)"
+
+msgctxt "#30084"
+msgid "Related %s url at %s"
+msgstr "Zugehörige %s URL bei %s"
+
+msgctxt "#30085"
+msgid "[COLOR blue]%s[/COLOR] Related Url Set"
+msgstr "[COLOR blue]%s[/COLOR] Zugehörige URL eingestellt"
+
+msgctxt "#30086"
+msgid "Manual Search"
+msgstr "Manuelle Suche"
+
+msgctxt "#30087"
+msgid "Select Related"
+msgstr "Zugehörige auswählen"
+
+msgctxt "#30088"
+msgid "Enter Search"
+msgstr "Suche eingeben"
+
+msgctxt "#30089"
+msgid "Scraper does not support searching"
+msgstr "Index Seite erlaubt keine Suche"
+
+msgctxt "#30090"
+msgid "Enter Rating (unrate, or 1-10)"
+msgstr "Bewertung eingeben (Bewertung entfernen, oder 1-10)"
+
+msgctxt "#30091"
+msgid "Input TVShow ID"
+msgstr "TV-Serien ID eingeben"
+
+msgctxt "#30092"
+msgid "Item Added to Collection"
+msgstr "Element zur Sammlung hinzugefügt"
+
+msgctxt "#30093"
+msgid "Item Removed from Collection"
+msgstr "Element aus der Sammlung entfernt"
+
+msgctxt "#30094"
+msgid "Item Added to List"
+msgstr "Element zur Liste hinzugefügt"
+
+msgctxt "#30095"
+msgid "List Copied: (A:%s/E:%s/S:%s)"
+msgstr "Liste kopiert: (A:%s/E:%s/S:%s)"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "TV-Serien"
+
+msgctxt "#30097"
+msgid "Marked as %s"
+msgstr "Markiert als %s"
+
+msgctxt "#30098"
+msgid "Updating Subscriptions..."
+msgstr "Aktualisiere Abos..."
+
+msgctxt "#30099"
+msgid "Next Update in %0.1f hours"
+msgstr "Nächste Aktualisierung in %0.1f Stunden"
+
+msgctxt "#30100"
+msgid "Are you sure you want to delete the url cache?"
+msgstr "Sind Sie sicher, dass Sie die den URL Speicher (Cache) löschen wollen?"
+
+msgctxt "#30101"
+msgid "This will slow things down until all urls are re-cached"
+msgstr "Das wird zu einer Verlangsamung der Prozesse führen bis alle URLs im Cache aktualisiert sind"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Behalten"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Löschen"
+
+msgctxt "#30104"
+msgid "Flush web cache"
+msgstr "Web Cache entleeren"
+
+msgctxt "#30105"
+msgid "DB Reset Successful"
+msgstr "DB Rücksetzung erfolgreich"
+
+msgctxt "#30106"
+msgid "Reset only allowed on sqlite DBs"
+msgstr "Zurücksetzen nur für sqlite Datenbanken erlaubt"
+
+msgctxt "#30107"
+msgid "Select Export Directory"
+msgstr "Export Verzeichnis wählen"
+
+msgctxt "#30108"
+msgid "Enter Export Filename"
+msgstr "Export Dateiname eingeben"
+
+msgctxt "#30109"
+msgid "Export Successful"
+msgstr "Export erfolgreich"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Exportiert nach %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Exportieren"
+
+msgctxt "#30112"
+msgid "Export Failed"
+msgstr "Export fehlgeschlagen"
+
+msgctxt "#30113"
+msgid "Select Import File"
+msgstr "Import Datei auswählen"
+
+msgctxt "#30114"
+msgid "Import Success"
+msgstr "Import erfolgreich"
+
+msgctxt "#30115"
+msgid "Imported from %s"
+msgstr "Importiert von %s"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "Importieren"
+
+msgctxt "#30117"
+msgid "Import Failed"
+msgstr "Import fehlgeschlagen"
+
+msgctxt "#30118"
+msgid "Remove from List"
+msgstr "Aus Liste entfernen"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+msgctxt "#30120"
+msgid "Require Aired Only?"
+msgstr "Nur ausgestrahlte gewünscht?"
+
+msgctxt "#30121"
+msgid "Require Page Only?"
+msgstr "Nur Seite gewünscht?"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr "Nächste Seite"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Vorige Woche"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Nächste Woche"
+
+msgctxt "#30125"
+msgid "Mark as Unwatched (SALTS)"
+msgstr "Als ungesehen markieren (SALTS)"
+
+msgctxt "#30126"
+msgid "Mark as Watched (SALTS)"
+msgstr "Als gesehen markieren (SALTS)"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Auf trakt.tv bewerten"
+
+msgctxt "#30128"
+msgid "Set as Season View"
+msgstr "Als Staffel-Ansicht einstellen"
+
+msgctxt "#30129"
+msgid "Unavailable"
+msgstr "Nicht verfügbar"
+
+msgctxt "#30130"
+msgid "Select Source"
+msgstr "Quelle auswählen"
+
+msgctxt "#30131"
+msgid "Download Source"
+msgstr "Download Quelle"
+
+msgctxt "#30132"
+msgid "Show Information"
+msgstr "TV-Serie Information"
+
+msgctxt "#30133"
+msgid "Add Show to List"
+msgstr "TV-Serie zur Liste hinzufügen"
+
+msgctxt "#30134"
+msgid "Set Related Show Url (Search)"
+msgstr "Zugehörige TV-Serien URL einstellen (Suche)"
+
+msgctxt "#30135"
+msgid "Set Related Url (Manual)"
+msgstr "Zugehörige URL einstellen (manuell)"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Aus Sammlung entfernen"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Zur Sammlung hinzufügen"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Zur Liste hinzufügen"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Zur Bibliothek hinzufügen"
+
+msgctxt "#30140"
+msgid "Set Addic7ed TVShowID"
+msgstr "Addic7ed ID eingeben"
+
+msgctxt "#30141"
+msgid "Use Default episode matching"
+msgstr "Verwende Standard Episoden Abgleichung"
+
+msgctxt "#30142"
+msgid "Use Episode Title matching"
+msgstr "Verwende Episoden Titel Abgleichung"
+
+msgctxt "#30143"
+msgid "Set Related Url (Search)"
+msgstr "Zugehörige URL einstellen (Suche)"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Trailer abspielen"
+
+msgctxt "#30145"
+msgid "Pick a list"
+msgstr "Eine Liste auswählen"
+
+msgctxt "#30146"
+msgid "No Lists exist for user: %s"
+msgstr "Es existiert keine Liste für den Benutzer: %s"
+
+msgctxt "#30147"
+msgid "Scraper Automatically Disabled"
+msgstr "Index Seite automatisch deaktiviert"
+
+msgctxt "#30148"
+msgid "[COLOR blue]%s[/COLOR]'s FL of %s is over your Failure Level threshold"
+msgstr "[COLOR blue]%s[/COLOR]'s FL von %s ist über Ihrer Fehler Level Schwelle"
+
+msgctxt "#30149"
+msgid "Disabling it avoids wasting time and resources"
+msgstr "Es zu deaktivieren verhindert Zeit und Ressourcen Verschwendung"
+
+msgctxt "#30150"
+msgid "([I]If you Keep Enabled, consider increasing scraper timeout[/I])"
+msgstr "([I]Wenn sie es aktiviert lassen, ziehen sie eine Erhöhung des Zeitlimits für Index Seiten in Betracht[/I])"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Aktiviert lassen"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Deaktivieren"
+
+msgctxt "#30153"
+msgid "Trakt Bookmark Exists"
+msgstr "Trakt Markierung existiert"
+
+msgctxt "#30154"
+msgid "Local Bookmark Exists"
+msgstr "Lokales Markierung existiert"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Fortsetzen von %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Vom Anfang abspielen"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Fortsetzen"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Herunterladen: %s"
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Herunterladen vollständig: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "Fehler (%s) während dem Herunterladen: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Trakt Konto Berechtigung"
+
+msgctxt "#30173"
+msgid "Trakt Authorization Complete"
+msgstr "Trakt Berechtigung vollständig"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Aktiviert"
+
+msgctxt "#30175"
+msgid "Base Url"
+msgstr "Basis URL"
+
+msgctxt "#30176"
+msgid "Include in Page Existence checks?"
+msgstr "Miteinbeziehen in Überprüfung der Seiten Existenz?"
+
+msgctxt "#30177"
+msgid "Username"
+msgstr "Benutzername"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Passwort"
+
+msgctxt "#30179"
+msgid "Filter results older than (0=No Filter) (days)"
+msgstr "Filtere Resultate älter als (0=Kein Filter) (Tage)"
+
+msgctxt "#30180"
+msgid "Automatically Select"
+msgstr "Automatisch auswählen"
+
+msgctxt "#30181"
+msgid "Include Premium"
+msgstr "Premium miteinbeziehen"
+
+msgctxt "#30182"
+msgid "Maximum Pages"
+msgstr "Maximale Seiten"
+
+msgctxt "#30183"
+msgid "No Sources Found"
+msgstr "Keine Quellen gefunden"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Staffel"
+
+msgctxt "#30185"
+msgid "DISABLED"
+msgstr "DEAKTIVIERT"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Suche"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Angesehen"
+
+msgctxt "#30188"
+msgid "Unwatched"
+msgstr "Ungesehen"
+
+msgctxt "#30189"
+msgid "Updating"
+msgstr "Aktualisiere"
+
+msgctxt "#30190"
+msgid "Failed to create directory"
+msgstr "Verzeichnis Erstellung fehlgeschlagen"
+
+msgctxt "#30191"
+msgid "Failed to write file"
+msgstr "Datei Schreiben fehlgeschlagen"
+
+msgctxt "#30192"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Alle Index Seiten Basis URLs auf Standard zurücksetzen"
+
+msgctxt "#30193"
+msgid "Base Url Reset Complete"
+msgstr "Basis URL Zurücksetzung erfolgreich"
+
+msgctxt "#30194"
+msgid "Requesting Url for: %s"
+msgstr "Fordere URL an für: %s"
+
+msgctxt "#30195"
+msgid "'%s' added to library"
+msgstr "'%s' zur Bibliothek hinzugefügt"
+
+msgctxt "#30196"
+msgid "Add to Section Menu"
+msgstr "Zum Abschnittsmenü hinzufügen"
+
+msgctxt "#30197"
+msgid "Remove from Section Menu"
+msgstr "Aus Abschnittsmenü entfernen"
+
+msgctxt "#30198"
+msgid "Liked Lists"
+msgstr "\"Liked\" Listen"
+
+msgctxt "#30199"
+msgid "%s Mosts"
+msgstr "%s Häufigste"
+
+msgctxt "#30200"
+msgid "Most Played This Week"
+msgstr "Am häufigsten gespielt - Diese Woche"
+
+msgctxt "#30201"
+msgid "Most Played This Month"
+msgstr "Am häufigsten gespielt - Diesen Monat"
+
+msgctxt "#30202"
+msgid "Most Played All Time"
+msgstr "Am häufigsten gespielt - Immer"
+
+msgctxt "#30203"
+msgid "Most Watched This Week"
+msgstr "Am häufigsten gesehen - Diese Woche"
+
+msgctxt "#30204"
+msgid "Most Watched This Month"
+msgstr "Am häufigsten gesehen - Diesen Monat"
+
+msgctxt "#30205"
+msgid "Most Watched All Time"
+msgstr "Am häufigsten gesehen - Immer"
+
+msgctxt "#30206"
+msgid "Most Collected This Week"
+msgstr "Am häufigsten gesammelt - Diese Woche"
+
+msgctxt "#30207"
+msgid "Most Collected This Month"
+msgstr "Am häufigsten gesammelt - Diesen Monat"
+
+msgctxt "#30208"
+msgid "Most Collected All Time"
+msgstr "Am häufigsten gesammelt - Immer"
+
+msgctxt "#30209"
+msgid "%s NOT added to library (%s)"
+msgstr "%s NICHT zur Bibliothek hinzugefügt (%s)"
+
+msgctxt "#30210"
+msgid "Local Exists"
+msgstr "Existiert lokal"
+
+msgctxt "#30211"
+msgid "Scraper Download Url"
+msgstr "Index Seiten URL zum Herunterladen"
+
+msgctxt "#30212"
+msgid "Scraper Decryption Key"
+msgstr "Index Seiten Entschlüsselungscode"
+
+msgctxt "#30213"
+msgid "Trakt On Deck"
+msgstr "Trakt \"On Deck\""
+
+msgctxt "#30214"
+msgid "on"
+msgstr "am"
+
+msgctxt "#30215"
+msgid "Delete Bookmark"
+msgstr "Markierung löschen"
+
+msgctxt "#30216"
+msgid "Bookmark Deleted"
+msgstr "Markierung gelöscht"
+
+msgctxt "#30217"
+msgid "Force No Match"
+msgstr "Erzwinge keinen Abgleich"
+
+msgctxt "#30218"
+msgid "Getting Sources"
+msgstr "Erhalte Quellen"
+
+msgctxt "#30219"
+msgid "Requested Sources from: %s"
+msgstr "Angeforderte Quellen von: %s"
+
+msgctxt "#30220"
+msgid "Received Sources: (%s / %s) from %s"
+msgstr "Quellen empfangen: (%s /%s) von %s "
+
+msgctxt "#30221"
+msgid "Applying Source Filters"
+msgstr "Quellen Filter anwenden"
+
+msgctxt "#30222"
+msgid "Include Links from Comments"
+msgstr "Links von Kommentaren miteinbeziehen"
+
+msgctxt "#30223"
+msgid "My Watched History"
+msgstr "Mein Verlauf"
+
+msgctxt "#30224"
+msgid "Trying Sources for Auto-Play"
+msgstr "Versuche Quellen für Auto-Play"
+
+msgctxt "#30225"
+msgid "Trying: [%s] %s from %s"
+msgstr "Versuche: [%s] %s von %s"
+
+msgctxt "#30226"
+msgid "Failed: [%s] %s from %s"
+msgstr "Fehlgeschlagen: [%s] %s von %s"
+
+msgctxt "#30227"
+msgid "Scraper Timeouts: [COLOR blue]%s[/COLOR]"
+msgstr "Index Seiten Zeitlimits: [COLOR blue]%s[/COLOR]"
+
+msgctxt "#30228"
+msgid "Reset Failures"
+msgstr "Fehler zurücksetzen"
+
+msgctxt "#30229"
+msgid "Maximum Source Results"
+msgstr "Maximale Quellen Resultate"
+
+msgctxt "#30230"
+msgid "Include in My Next Episodes"
+msgstr "Miteinbeziehen in: Meine Nächsten Epsioden"
+
+msgctxt "#30231"
+msgid "Auto-Play"
+msgstr "Auto-Play"
+
+msgctxt "#30232"
+msgid "Set Trakt.tv API timeout to 60 seconds"
+msgstr "Trakt.tv API Zeitlimit auf 60 sek. setzen"
+
+msgctxt "#30233"
+msgid "Set Calendar start day to Yesterday"
+msgstr "Kalender Start Tag auf Gestern setzen"
+
+msgctxt "#30234"
+msgid "Show Episode Airtime on Calendar"
+msgstr "Episoden Ausstrahlungszeit im Kalender anzeigen"
+
+msgctxt "#30235"
+msgid "Set Scraper timeout to 20 seconds"
+msgstr "Index Seiten Zeitlimit auf 20 sek. setzen"
+
+msgctxt "#30236"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Merkliste miteinbeziehen in: Meine nächsten Epsioden"
+
+msgctxt "#30237"
+msgid "Remove Deleted Direct sources from results"
+msgstr "Gelöschte direkte Quellen von den Ergebnissen entfernen"
+
+msgctxt "#30238"
+msgid "Remove Unusable Indirect sources from results"
+msgstr "Unbrauchbare indirekte Quellen von den Ergebnissen entfernen"
+
+msgctxt "#30239"
+msgid "Highlight Debrid Sources in results"
+msgstr "Debrid-Quellen in Ergebnissen hervorheben"
+
+msgctxt "#30240"
+msgid "No Limit on Maximum Source Results"
+msgstr "Kein Limit für maximale Quellen in Ergebnissen"
+
+msgctxt "#30241"
+msgid "Set Source Sort Keys to default"
+msgstr "Quellen Sortierungs-Schlüssel auf Standard zurücksetzen"
+
+msgctxt "#30242"
+msgid "Set Scraper Sort Order to default"
+msgstr "Index Seiten Sortierung auf Standard zurücksetzen"
+
+msgctxt "#30243"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Alle Index Seiten Basis URLs auf Standard zurücksetzen"
+
+msgctxt "#30244"
+msgid "Select All/None"
+msgstr "Wähle Alle/Keine"
+
+msgctxt "#30245"
+msgid "Automatically Select Best Source"
+msgstr "Automatisch beste Quelle wählen"
+
+msgctxt "#30246"
+msgid "SALTS Database Issue Recovery"
+msgstr "SALTS Datenbank Fehler Wiederherstellung"
+
+msgctxt "#30247"
+msgid ""
+"The SALTS DB has an issue that may be correctable by a forced DB migration."
+msgstr "Die SALTS Datenbank ist fehlerhaft. Eine Migration der DB könnte den Fehler eventuell beheben."
+
+msgctxt "#30248"
+msgid "Should SALTS attempt a DB migration?"
+msgstr "Soll SALTS ein Migration der DB versuchen?"
+
+msgctxt "#30249"
+msgid "DB Migration Failed but a DB reset may succeed."
+msgstr "DB Migration fehlgeschlagen. Aber das Zurücksetzen der DB könnte eventuell erfolgreich sein."
+
+msgctxt "#30250"
+msgid "Should SALTS attempt a DB reset?"
+msgstr "Soll SALTS versuchen die DB zurückzusetzen?"
+
+msgctxt "#30251"
+msgid "([COLOR red]***All DB data will be lost.***[/COLOR])"
+msgstr "([COLOR red]***AlleDaten in der DB werden verloren gehen***[/COLOR])"
+
+msgctxt "#30252"
+msgid "DB Reset Failed: %s"
+msgstr "Zurücksetzen der DB fehlgeschlagen: %s"
+
+msgctxt "#30253"
+msgid "No Streamable Url Found"
+msgstr "Keine abspielbare URL gefunden"
+
+msgctxt "#30254"
+msgid "Discovering Next Episodes"
+msgstr "Nächste Episode aufspüren"
+
+msgctxt "#30255"
+msgid "Retrieving Watched History"
+msgstr "Empfange Verlauf"
+
+msgctxt "#30256"
+msgid "Retrieving Watchlist"
+msgstr "Empfange Merkliste"
+
+msgctxt "#30257"
+msgid "Retrieving Hidden Progress List"
+msgstr "Empfange verborgene Fortschrittsliste"
+
+msgctxt "#30258"
+msgid "Requesting Progress for: %s"
+msgstr "Frage Fortschritt an für: %s"
+
+msgctxt "#30259"
+msgid "Received Progress for: %s"
+msgstr "Empfange Fortschritt für: %s"
+
+msgctxt "#30260"
+msgid "Reset Related Urls"
+msgstr "Zugehörige URLs zurücksetzen"
+
+msgctxt "#30261"
+msgid "Related Urls Cleared: %s"
+msgstr "Zugehörige URLs bereinigt: %s"
+
+msgctxt "#30262"
+msgid "Anticipated %s"
+msgstr "Voraussichtlich %s"
+
+msgctxt "#30263"
+msgid "Set as Sources View"
+msgstr "Als Quellen-Ansicht einstellen"
+
+msgctxt "#30264"
+msgid "Set Related Season Url (Search)"
+msgstr "Zugehörige Staffel URL einstellen (Suche)"
+
+msgctxt "#30265"
+msgid "Trakt API Offline Mode Enabled"
+msgstr "Trakt API Offline Modus aktiviert"
+
+msgctxt "#30266"
+msgid "On ANY device, visit: %s"
+msgstr "Auf IRGENDEINEM Gerät, gehen Sie zu: %s"
+
+msgctxt "#30267"
+msgid "When prompted, enter code: %s"
+msgstr "Wenn aufgefordert bitte Code eingeben: %s"
+
+msgctxt "#30268"
+msgid "Code expires in: %s seconds"
+msgstr "Code läuft ab in: %s Sekunden"
+
+msgctxt "#30269"
+msgid "Authorization was Rejected"
+msgstr "Berechtigung wurde abgelehnt"
+
+msgctxt "#30270"
+msgid "To watch this video scan the QR Code below or visit [COLOR blue]"
+msgstr "Um dieses Video anzusehen, QR code scannen oder [COLOR blue]"
+
+msgctxt "#30271"
+msgid "[/COLOR] from any device on the same network as this device."
+msgstr "[/COLOR] von irgendeinem Gerät im gleichen Netzwerk besuchen."
+
+msgctxt "#30272"
+msgid "Watch It Again"
+msgstr "Erneut ansehen"
+
+msgctxt "#30273"
+msgid "Pick a list to use for Watch It Again"
+msgstr "Eine Liste für \"Erneut Ansehen\" auswählen"
+
+msgctxt "#30274"
+msgid "Use Least Watched Method"
+msgstr "Verwende Methode: Am wenigsten gesehen"
+
+msgctxt "#30275"
+msgid "Use Most Watched Method"
+msgstr "Verwende Methode: Am häufigsten gesehen"
+
+msgctxt "#30276"
+msgid "Use Last Watched Method"
+msgstr "Verwende Methode: Als letztes gesehen"
+
+msgctxt "#30277"
+msgid "Set as Watch It Again List"
+msgstr "Als Liste für \"Erneut Ansehen\" speichern"
+
+msgctxt "#30278"
+msgid "Playback only allowed from Library & SALTS"
+msgstr "Wiedergabe nur von der Bibliothek und SALTS erlaubt"
+
+msgctxt "#30279"
+msgid "Maximum Allowed Size (GB) (0 = No Limit)"
+msgstr "Maximale Grösse (GB) (0 = Kein Limit)"
+
+msgctxt "#30280"
+msgid "Show Episode Airtime in My Next Episodes"
+msgstr "Zeige Episoden Ausstrahlungszeit in: Meine nächsten Episoden"
+
+msgctxt "#30281"
+msgid "Include Transodes"
+msgstr "Transodes miteinbeziehen"
+
+msgctxt "#30282"
+msgid "Next Episode"
+msgstr "Nächste Episode"
+
+msgctxt "#30283"
+msgid "Remaining: %s of %s"
+msgstr "Verbleibend: %s of %s"
+
+msgctxt "#30284"
+msgid "Remaining: %s"
+msgstr "Verbleibend: %s"
+
+msgctxt "#30285"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#30286"
+msgid "Retrieving Collection"
+msgstr "Empfange Sammlung"
+
+msgctxt "#30287"
+msgid "Adding Items to Directory"
+msgstr "Einträge zum Verzeichnis hinzufügen"
+
+msgctxt "#30288"
+msgid "Working..."
+msgstr "Arbeite..."
+
+msgctxt "#30289"
+msgid "Re-Scrape All"
+msgstr "Alles erneut auslesen"
+
+msgctxt "#30290"
+msgid "Manual Search (All Unmatched Only)"
+msgstr "Manuelle Suche (nur alle nicht übereinstimmenden)"
+
+msgctxt "#30291"
+msgid "Torba Account Authorization"
+msgstr "Torba-Account berechtigt"
+
+msgctxt "#30292"
+msgid "Torba Authorization Complete"
+msgstr "Torba-Berechtigung abgeschlossen"
+
+msgctxt "#30293"
+msgid "Torba Authorization Failed"
+msgstr "Torba-Berechtigung fehlgeschlagen"
+
+msgctxt "#30294"
+msgid "Authorize SALTS to access my torba account"
+msgstr "SALTS für Zugriff auf meine Torba Konto berechtigen"
+
+msgctxt "#30295"
+msgid "and login when prompted"
+msgstr "und anmelden wenn Sie dazu aufgefordert werden"
+
+msgctxt "#30296"
+msgid "Flush Image Cache"
+msgstr "Bilder Cache löschen"
+
+msgctxt "#30297"
+msgid "Are you sure you want to clear the image metadata cache?"
+msgstr "Sind Sie sicher, dass Sie den Bilder-Metadaten Cache löschen wollen?"
+
+msgctxt "#30298"
+msgid "The addon will be significantly slower until is is re-cached."
+msgstr "Das Addon wird bedeutend langsamer sein bis der Cache wiederherstellt ist."
+
+msgctxt "#30299"
+msgid "Flush Complete"
+msgstr "Löschen abgeschlossen"
+
+msgctxt "#30300"
+msgid "Refresh Images"
+msgstr "Bilder aktualisieren"
+
+msgctxt "#30301"
+msgid "Private Scraper Updated: "
+msgstr "Private Index-Seite aktualisiert:"
+
+msgctxt "#30302"
+msgid "Reset Torba Authorization"
+msgstr "Torba-Berechtigung zurücksetzen"
+
+msgctxt "#30303"
+msgid "Torba Authorization Reset"
+msgstr "Torba-Autorisierung zurückgesetzt"
+
+msgctxt "#30500"
+msgid "Addon Theme"
+msgstr "Add-on Thema"
+
+msgctxt "#30501"
+msgid "Authorized Trakt User"
+msgstr "Berechtigter Trakt Benutzer"
+
+msgctxt "#30502"
+msgid "Calendar Start Day (0=Today)"
+msgstr "Kalender Start (0=Heute)"
+
+msgctxt "#30503"
+msgid "Show air time on calendars"
+msgstr "Ausstrahlungszeit im Kalender anzeigen"
+
+msgctxt "#30504"
+msgid "My Collection Sort Order"
+msgstr "Sortierung für: Meine Sammlung"
+
+msgctxt "#30505"
+msgid "My Next Episodes Sort Order"
+msgstr "Sortierung für: Meine nächsten Episoden"
+
+msgctxt "#30506"
+msgid "Show unaired episodes in My Next Episodes"
+msgstr "Zeige unausgestrahlte Episoden in: Meine nächsten Episoden"
+
+msgctxt "#30507"
+msgid "Show Season 0 in Seasons View"
+msgstr "Zeige Staffel 0 in der Staffel Ansicht"
+
+msgctxt "#30508"
+msgid "Show unaired episodes in Seasons"
+msgstr "Zeige unausgestrahlte Episoden in Staffeln"
+
+msgctxt "#30509"
+msgid "    Show an Indicator on Unaired Episodes"
+msgstr "Markiere unausgestrahlte Episoden"
+
+msgctxt "#30510"
+msgid "    Show episodes with unknown air date"
+msgstr "Zeige Episoden mit unbekanntem Ausstrahlungsdatum"
+
+msgctxt "#30511"
+msgid "Off"
+msgstr "Aus"
+
+msgctxt "#30512"
+msgid "24 Hour"
+msgstr "24 Stunden"
+
+msgctxt "#30513"
+msgid "12 Hour"
+msgstr "12 Stunden"
+
+msgctxt "#30514"
+msgid "Previously Collected"
+msgstr "Bereits zur Sammlung hinzugefügt"
+
+msgctxt "#30515"
+msgid "Recently Collected"
+msgstr "Kürzlich zur Sammlung hinzugefügt"
+
+msgctxt "#30516"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "Jahr"
+
+msgctxt "#30518"
+msgid "Recent Activity"
+msgstr "Letzte Aktivität"
+
+msgctxt "#30519"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30520"
+msgid "Most Completed"
+msgstr "Größter Fortschritt"
+
+msgctxt "#30521"
+msgid "Least Completed"
+msgstr "Geringster Fortschritt"
+
+msgctxt "#30522"
+msgid "Recently Aired"
+msgstr "Kürzlich ausgestrahlt"
+
+msgctxt "#30523"
+msgid "Previously Aired"
+msgstr "Bereits ausgestrahlt"
+
+msgctxt "#30524"
+msgid "Show Trending"
+msgstr "Zeige - Gerade im Trend"
+
+msgctxt "#30525"
+msgid "Show Popular"
+msgstr "Zeige - Populär"
+
+msgctxt "#30526"
+msgid "Show Recently Updated"
+msgstr "Zeige - Kürzlich aktualisiert"
+
+msgctxt "#30527"
+msgid "Show Recommended"
+msgstr "Zeige - Empfohlen"
+
+msgctxt "#30528"
+msgid "Show My Collection"
+msgstr "Zeige - Meine Sammlung"
+
+msgctxt "#30529"
+msgid "Show My Favorites"
+msgstr "Zeige - Meine Favoriten"
+
+msgctxt "#30530"
+msgid "Show My Subscriptions"
+msgstr "Zeige - Meine Abos"
+
+msgctxt "#30531"
+msgid "Show My Watchlist"
+msgstr "Zeige - Meine Merkliste"
+
+msgctxt "#30532"
+msgid "Show My Lists"
+msgstr "Zeige - Meine Listen"
+
+msgctxt "#30533"
+msgid "Show Other Lists"
+msgstr "Zeige - Andere Listen"
+
+msgctxt "#30534"
+msgid "Show My Next Episodes"
+msgstr "Zeige - Meine nächsten Episoden"
+
+msgctxt "#30535"
+msgid "Show My Calendar"
+msgstr "Zeige - Mein Kalender"
+
+msgctxt "#30536"
+msgid "Show General Calendar"
+msgstr "Zeige - Allgemeiner Kalender"
+
+msgctxt "#30537"
+msgid "Show Premiere Calendar"
+msgstr "Zeige - Premieren Kalender"
+
+msgctxt "#30538"
+msgid "Show Friends"
+msgstr "Zeige - Friends"
+
+msgctxt "#30539"
+msgid "Show Search"
+msgstr "Zeige - Suche"
+
+msgctxt "#30540"
+msgid "Default Views"
+msgstr "Standard Ansichten"
+
+msgctxt "#30541"
+msgid "Default Movies View (0 = None)"
+msgstr "Standard Ansicht Filme (0=Keine)"
+
+msgctxt "#30542"
+msgid "Default TV Shows View (0 = None)"
+msgstr "Standard Ansicht TV-Serien (0=Keine)"
+
+msgctxt "#30543"
+msgid "Default Seasons View (0 = None)"
+msgstr "Standard Ansicht Staffeln (0=Keine)"
+
+msgctxt "#30544"
+msgid "Default Episodes View (0 = None)"
+msgstr "Standard Ansicht Episoden (0=Keine)"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Allgemein"
+
+msgctxt "#30546"
+msgid "User Interface"
+msgstr "Benutzeroberfläche"
+
+msgctxt "#30547"
+msgid "How do I authorize SALTS to access my trakt.tv account?"
+msgstr "Wie berechtige ich SALTS für den Zugriff auf mein trakt.tv Konto?"
+
+msgctxt "#30548"
+msgid "Use HTTPS"
+msgstr "Verwende HTTPS"
+
+msgctxt "#30549"
+msgid "Trakt Timeout (seconds) (0=No Limit)"
+msgstr "Trakt Zeitlimit (Sekunden) (0=Kein Limit)"
+
+msgctxt "#30550"
+msgid "Trakt Page Size"
+msgstr "Trakt Seitengrösse"
+
+msgctxt "#30551"
+msgid "Pre-Test All Direct Sources"
+msgstr "Voraustesten aller direkten Quellen"
+
+msgctxt "#30552"
+msgid "Use Trakt Bookmarks"
+msgstr "Verwende Trakt Markierungen"
+
+msgctxt "#30555"
+msgid "Include People"
+msgstr "Personen miteinbeziehen"
+
+msgctxt "#30556"
+msgid "Minimum Image Size"
+msgstr "Minimale Bildgröße"
+
+msgctxt "#30557"
+msgid "Library Integration"
+msgstr "Integration in die Bibliothek"
+
+msgctxt "#30558"
+msgid "TV Show Folder"
+msgstr "TV-Serien Ordner"
+
+msgctxt "#30559"
+msgid "Movie Folder"
+msgstr "Filme Ordner"
+
+msgctxt "#30560"
+msgid "Automatically Update Subscriptions"
+msgstr "Abos automatisch aktualisieren"
+
+msgctxt "#30561"
+msgid "     Update Interval (hours)"
+msgstr "Interval für Aktualisierungen (Stunden)"
+
+msgctxt "#30562"
+msgid "     During StartUp?"
+msgstr "Während Programmstart?"
+
+msgctxt "#30563"
+msgid "     During Playback?"
+msgstr "Während Wiedergabe?"
+
+msgctxt "#30564"
+msgid "Require Site Page for Movies?"
+msgstr "Film muss zumindest einen Link haben?"
+
+msgctxt "#30565"
+msgid "Include specials in library?"
+msgstr "Sondersendungen in die Bibliothek integrieren?"
+
+msgctxt "#30566"
+msgid "Include episodes with unknown air dates"
+msgstr "Episoden mit unbekanntem Ausstrahlungsdatum miteinbeziehen?"
+
+msgctxt "#30567"
+msgid "Update Library Afterward?"
+msgstr "Anschliessend Bibliothek aktualisieren?"
+
+msgctxt "#30568"
+msgid "Show Notifications?"
+msgstr "Zeige Benachrichtigungen?"
+
+msgctxt "#30569"
+msgid "Include Movies?"
+msgstr "Filme miteinbeziehen?"
+
+msgctxt "#30570"
+msgid "Prune Ended Shows?"
+msgstr "Abgeschlossene TV-Serien ausmustern?"
+
+msgctxt "#30571"
+msgid "Source Management"
+msgstr "Quellen Management"
+
+msgctxt "#30572"
+msgid "Auto-Play Sources"
+msgstr "Quellen Auto-Play"
+
+msgctxt "#30573"
+msgid "    Source Selection Method"
+msgstr "Methode für Quellen Auswahl"
+
+msgctxt "#30574"
+msgid "Show Download Option"
+msgstr "Zeige Download Optionen"
+
+msgctxt "#30575"
+msgid "    Show Download Progress"
+msgstr "Zeige Download Fortschritt"
+
+msgctxt "#30576"
+msgid "    TV Show Download Folder"
+msgstr "Ordner für TV-Serien Downloads"
+
+msgctxt "#30577"
+msgid "    Movie Download Folder"
+msgstr "Ordner für Film Downloads"
+
+msgctxt "#30578"
+msgid "Scraper Timeout (seconds) (0=No Limit)"
+msgstr "Index Seiten Zeitlimit (Sekunden) (0=Kein Limit)"
+
+msgctxt "#30579"
+msgid "Maximum Source Results (0=No Limit)"
+msgstr "Maximale Quellen Resultat (0=Kein Limit)"
+
+msgctxt "#30580"
+msgid "Filter Out Unusable Sources"
+msgstr "Unbrauchbare Quellen herausfiltern"
+
+msgctxt "#30581"
+msgid "Source Exclusion List"
+msgstr "Liste für auszuschliessende Quellen"
+
+msgctxt "#30582"
+msgid "Maximum Allowed TV Show Quality"
+msgstr "Maximal erlaubte TV-Serien Qualität"
+
+msgctxt "#30583"
+msgid "Maximum Allowed Movie Quality"
+msgstr "Maximal erlaubte Film Qualität"
+
+msgctxt "#30584"
+msgid "Match episode air date when season & episode fails"
+msgstr "Episoden Ausstrahlungsdatum angleichen wenn Staffel und Episode fehlschlagen"
+
+msgctxt "#30585"
+msgid "Match episode title when season & episode fails"
+msgstr "Episoden-Titel angleichen wenn Staffel und Episode fehlschlagen"
+
+msgctxt "#30586"
+msgid "Automatically disable ineffective scrapers"
+msgstr "Uneffektive Index Seiten automatisch deaktivieren"
+
+msgctxt "#30587"
+msgid "    Check Frequency (requests)"
+msgstr "Frequenz für Tests (Anforderung)"
+
+msgctxt "#30588"
+msgid "    Minimum Allowed Success Percentage"
+msgstr "Minimal erlaubter erfolgreicher Prozentsatz"
+
+msgctxt "#30589"
+msgid "Window"
+msgstr "Fenster"
+
+msgctxt "#30590"
+msgid "Background"
+msgstr "Hintergrund"
+
+msgctxt "#30591"
+msgid "Source Sorting"
+msgstr "Quellen Sortierung"
+
+msgctxt "#30592"
+msgid "Sort Sources"
+msgstr "Sortiere Quellen"
+
+msgctxt "#30594"
+msgid "1st Sort Key"
+msgstr "1er Sortierschlüßel"
+
+msgctxt "#30595"
+msgid "1st Sort Key Order"
+msgstr "1er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30596"
+msgid "2nd Sort Key"
+msgstr "2er Sortierschlüßel"
+
+msgctxt "#30597"
+msgid "2nd Sort Key Order"
+msgstr "2er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30598"
+msgid "3rd Sort Key"
+msgstr "3er Sortierschlüßel"
+
+msgctxt "#30599"
+msgid "3rd Sort Key Order"
+msgstr "3er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30600"
+msgid "4th Sort Key"
+msgstr "4er Sortierschlüßel"
+
+msgctxt "#30601"
+msgid "4th Sort Key Order"
+msgstr "4er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30602"
+msgid "5th Sort Key"
+msgstr "5er Sortierschlüßel"
+
+msgctxt "#30603"
+msgid "5th Sort Key Order"
+msgstr "5er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30604"
+msgid "None"
+msgstr "Keiner"
+
+msgctxt "#30605"
+msgid "Source"
+msgstr "Quelle"
+
+msgctxt "#30606"
+msgid "Quality"
+msgstr "Qualität"
+
+msgctxt "#30607"
+msgid "Views"
+msgstr "Gesehen"
+
+msgctxt "#30608"
+msgid "Rating"
+msgstr "Bewertung"
+
+msgctxt "#30609"
+msgid "Direct"
+msgstr "Direkt"
+
+msgctxt "#30610"
+msgid "Best to Worst"
+msgstr "Bester nach Schlechtester"
+
+msgctxt "#30611"
+msgid "Worst to Best"
+msgstr "Schlechtester nach Bester"
+
+msgctxt "#30612"
+msgid "Base Url"
+msgstr "Basis URL"
+
+msgctxt "#30613"
+msgid "Include in Page Existence checks?"
+msgstr "Miteinbeziehen in Überprüfung der Seiten Existenz"
+
+msgctxt "#30614"
+msgid "Subtitles work only for TV Shows currently"
+msgstr "Zur Zeit sind Untertitel nur für TV-Serien verfügbar"
+
+msgctxt "#30615"
+msgid "Enable Subtitles"
+msgstr "Untertitel aktivieren"
+
+msgctxt "#30616"
+msgid "Show subtitle indicators"
+msgstr "Zeige Untertitel Markierungen"
+
+msgctxt "#30617"
+msgid "Subtitle Language"
+msgstr "Untertitel Sprache"
+
+msgctxt "#30618"
+msgid "Require Hearing Impaired"
+msgstr "Service für Hörbeeinträchtigung anfordern"
+
+msgctxt "#30619"
+msgid "Require HD"
+msgstr "HD anfordern"
+
+msgctxt "#30620"
+msgid "Download Subtitles on playback"
+msgstr "Untertitel bei Wiedergabe herunterladen"
+
+msgctxt "#30621"
+msgid "Subtitle Download Folder"
+msgstr "Download Ordner für Untertitel"
+
+msgctxt "#30622"
+msgid "Show Subtitles on Playback"
+msgstr "Zeige Untertitel bei Wiedergabe"
+
+msgctxt "#30623"
+msgid "Use a MySQL DB"
+msgstr "Verwende eine MySQL Datenbank"
+
+msgctxt "#30624"
+msgid "    Address"
+msgstr "Adresse"
+
+msgctxt "#30625"
+msgid "    Port"
+msgstr "Port"
+
+msgctxt "#30626"
+msgid "    Username"
+msgstr "Benutzername"
+
+msgctxt "#30627"
+msgid "    Password"
+msgstr "Passwort"
+
+msgctxt "#30628"
+msgid "    Database"
+msgstr "Datenbank"
+
+msgctxt "#30629"
+msgid "    Upgrade DB during XBMC startup"
+msgstr "Aktualisiere Datenbank während Kodi Start"
+
+msgctxt "#30630"
+msgid "Flush webpage cache..."
+msgstr "Lösche Webseiten Speicher (Cache)..."
+
+msgctxt "#30631"
+msgid "Reset SALTS DB ([COLOR red]SQLITE Only[/COLOR])"
+msgstr "SALTS DB zurücksetzen  ([COLOR red]nur SQLITE[/COLOR])"
+
+msgctxt "#30632"
+msgid "Export data from SALTS DB"
+msgstr "Daten aus SALTS DB exportieren"
+
+msgctxt "#30633"
+msgid "Import data into SALTS DB"
+msgstr "Daten in SALTS DB importieren"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Untertitel"
+
+msgctxt "#30635"
+msgid "Database"
+msgstr "Datenbank"
+
+msgctxt "#30636"
+msgid "Most Recent"
+msgstr "Aktuellsten"
+
+msgctxt "#30637"
+msgid "Highest Quality"
+msgstr "Beste Qualität"
+
+msgctxt "#30638"
+msgid "Prompt"
+msgstr "Aufforderung"
+
+msgctxt "#30639"
+msgid "On"
+msgstr "An"
+
+msgctxt "#30640"
+msgid "Show Liked Lists"
+msgstr "Zeige beliebte Listen"
+
+msgctxt "#30641"
+msgid "Show Mosts"
+msgstr "Zeige häufigste"
+
+msgctxt "#30642"
+msgid "Watchlist Sort Order"
+msgstr "Merkliste Sortierung"
+
+msgctxt "#30643"
+msgid "Recently Added"
+msgstr "Kürzlich hinzugefügt"
+
+msgctxt "#30644"
+msgid "Previously Added"
+msgstr "Zuvor hinzugefügt"
+
+msgctxt "#30645"
+msgid "Skip movies/episodes that exist locally"
+msgstr "Titel, die lokal existieren überspringen"
+
+msgctxt "#30646"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Merkliste miteinbeziehen in: Meine nächsten Epsioden"
+
+msgctxt "#30647"
+msgid "Show Trakt On Deck"
+msgstr "Zeige - Trakt \"On Deck\""
+
+msgctxt "#30648"
+msgid "Show Custom Progress Dialog from Library"
+msgstr "Zeige - Benutzer Fortschrittsdialog von Bibliothek"
+
+msgctxt "#30649"
+msgid "Create tvshow/movie nfo file for?"
+msgstr "Erzeuge NFO Datei für?"
+
+msgctxt "#30650"
+msgid "Won't scrape"
+msgstr "Wird nicht indexiert"
+
+msgctxt "#30651"
+msgid "All"
+msgstr "Alles"
+
+msgctxt "#30652"
+msgid "Show Debrid Supported Sources in ..."
+msgstr "Zeige Debrid unterstützte Quellen in ..."
+
+msgctxt "#30653"
+msgid "6th Sort Key"
+msgstr "6er Sortierschlüßel"
+
+msgctxt "#30654"
+msgid "6th Sort Key Order"
+msgstr "6er Sortierschlüßel Reihenfolge"
+
+msgctxt "#30655"
+msgid "Debrid"
+msgstr "Debrid"
+
+msgctxt "#30656"
+msgid "Show My Watched History"
+msgstr "Zeige - Mein Verlauf"
+
+msgctxt "#30657"
+msgid "    Consecutive Failure Level Limit"
+msgstr "Fortlaufendes Fehler Level Limit"
+
+msgctxt "#30658"
+msgid "Mute Notifications"
+msgstr "Benachrichtigungen stumm schalten"
+
+msgctxt "#30659"
+msgid "Exclude Completed, Ended Shows from My Next Episodes"
+msgstr "Schliesse abgeschlossene/beendete TV-Serien aus: Meine nächsten Episoden"
+
+msgctxt "#30660"
+msgid "HD1080"
+msgstr "HD 1080"
+
+msgctxt "#30661"
+msgid "HD720"
+msgstr "HD 720"
+
+msgctxt "#30662"
+msgid "High"
+msgstr "Hohe Qualität"
+
+msgctxt "#30663"
+msgid "Medium"
+msgstr "Mittlere Qualität"
+
+msgctxt "#30664"
+msgid "Low"
+msgstr "Niedrige Qualität"
+
+msgctxt "#30665"
+msgid "Automatically pick first matching subtitle"
+msgstr "Automatisch 1. passenden Untertitel auswählen"
+
+msgctxt "#30666"
+msgid "SALTS Auto Configuration"
+msgstr "SALTS Auto-Einstellungen"
+
+msgctxt "#30667"
+msgid "Continue"
+msgstr "Fortsetzen"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgctxt "#30669"
+msgid "Select this item to Install the SALTS Themepak"
+msgstr "Diesen Eintrag auswählen um das SALTS Themenpaket zu installieren"
+
+msgctxt "#30670"
+msgid "Show Settings"
+msgstr "Zeige Einstellungen"
+
+msgctxt "#30671"
+msgid "Show Anticipated"
+msgstr "Zeige Voraussichtlich"
+
+msgctxt "#30672"
+msgid "Default Sources View (0 = None)"
+msgstr "Quellen Standardansicht (0=Keine)"
+
+msgctxt "#30673"
+msgid "Scraper Last Update"
+msgstr "Letzte Index Seiten Aktualisierung"
+
+msgctxt "#30674"
+msgid "Trakt API Offline Mode"
+msgstr "Trakt API Offline Modus"
+
+msgctxt "#30675"
+msgid "Torba IP Authorization"
+msgstr "Torba IP Berechtigung"
+
+msgctxt "#30676"
+msgid "Machine Speed"
+msgstr "Maschinen Geschwindigkeit"
+
+msgctxt "#30677"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "#30678"
+msgid "Very Slow"
+msgstr "Sehr langsam"
+
+msgctxt "#30679"
+msgid "Slow"
+msgstr "Langsam"
+
+msgctxt "#30680"
+msgid "Medium"
+msgstr "Mittel"
+
+msgctxt "#30681"
+msgid "Fast"
+msgstr "Schnell"
+
+msgctxt "#30682"
+msgid "Very Fast"
+msgstr "Sehr schnell"
+
+msgctxt "#30683"
+msgid "Show Watch It Again"
+msgstr "Zeige \"Erneut Ansehen\""
+
+msgctxt "#30684"
+msgid "Show air time in MNE"
+msgstr "Ausstrahlungszeit in MNE anzeigen"
+
+msgctxt "#30686"
+msgid "Show Next Episode Notification"
+msgstr "Zeige Benachrichtigungen für \"Nächste Episoden\""
+
+msgctxt "#30687"
+msgid "    Next Episode Delay (secs)"
+msgstr "Verzögerung für \"Nächste Episoden\" (secs)"
+
+msgctxt "#30688"
+msgid "    Show Next Episode on Unwatched"
+msgstr "Zeige \"Nächste Episoden\" in Ungesehen"
+
+msgctxt "#30689"
+msgid "    Show air time in Next Episode"
+msgstr "Zeige  Ausstrahlungszeit in \"Nächsten Episoden\""
+
+msgctxt "#30690"
+msgid "Show CF Site Protection Captchas"
+msgstr "Zeige CF Seiten Schutz Captchas"
+
+msgctxt "#30691"
+msgid "    Next Episode Duration (secs)"
+msgstr "\"Nächste Episode\" Dauer (sek)"
+
+msgctxt "#30692"
+msgid "Show Genres"
+msgstr "Zeige Genres"
+
+msgctxt "#30693"
+msgid "Movie Genre List"
+msgstr "Film Genres Liste"
+
+msgctxt "#30694"
+msgid "TV Genre List"
+msgstr "TV-Serien Genres Liste"
+
+msgctxt "#30695"
+msgid "Trending"
+msgstr "Im Trend"
+
+msgctxt "#30696"
+msgid "Popular"
+msgstr "Populär"
+
+msgctxt "#30697"
+msgid "Anticipated"
+msgstr "Antizipierte"
+
+msgctxt "#30698"
+msgid "Most Watched (Week)"
+msgstr "Am häufigsten gesehen (Woche)"
+
+msgctxt "#30699"
+msgid "Most Watched (Month)"
+msgstr "Am häufigsten gesehen (Monat)"
+
+msgctxt "#30700"
+msgid "Most Watched (All)"
+msgstr "Am häufigsten gesehen (Immer)"
+
+msgctxt "#30701"
+msgid "Most Played (Week)"
+msgstr "Am häufigsten gespielt (Woche)"
+
+msgctxt "#30702"
+msgid "Most Played (Month)"
+msgstr "Am häufigsten gespielt (Monat)"
+
+msgctxt "#30703"
+msgid "Most Played (All)"
+msgstr "Am häufigsten gespielt (Immer)"
+
+msgctxt "#30704"
+msgid "Most Collected (Week)"
+msgstr "Am häufigsten gesammelt (Woche)"
+
+msgctxt "#30705"
+msgid "Most Collected (Month)"
+msgstr "Am häufigsten gesammelt (Monat)"
+
+msgctxt "#30706"
+msgid "Most Collected (All)"
+msgstr "Am häufigsten gesammelt (Immer)"
+
+msgctxt "#30707"
+msgid "Date Format"
+msgstr "Datumsformat"
+
+msgctxt "#30708"
+msgid "Past Activity"
+msgstr "bisherige Aktivitäten"
+
+msgctxt "#30709"
+msgid "Always Show Custom Progress Dialogs"
+msgstr "Immer benutzerdefinierte Progressdialoge anzeigen"
+
+msgctxt "#30710"
+msgid "Image Metadata API Keys"
+msgstr "Bilder Metadaten API-Keys"
+
+msgctxt "#30711"
+msgid "Fanart.tv API Key (Blank = Disable)"
+msgstr "Fanart.tv API Key (Leer = Deaktiviert)"
+
+msgctxt "#30712"
+msgid "TMDB API Key (Blank = Disable)"
+msgstr "TMDB API Key (Leer = Deaktiviert)"
+
+msgctxt "#30713"
+msgid "TVDB API Key (Blank = Disable)"
+msgstr "TVDB API Key (Leer = Deaktiviert)"
+
+msgctxt "#30714"
+msgid "Enable OMDB Images"
+msgstr "Aktiviere OMDB Bilder"
+
+msgctxt "#30715"
+msgid "Enable TVMaze Images"
+msgstr "Aktiviere TVMaze Bilder"
+
+msgctxt "#30716"
+msgid "Flush Image Cache..."
+msgstr "Bilder Cache löschen..."
+
+msgctxt "#30717"
+msgid "Enable Fanart.tv Images"
+msgstr "Aktiviere Fanart.tv Bilder"
+
+msgctxt "#30718"
+msgid "Fanart.tv Personal API Key"
+msgstr "Fanart.tv persönlicher API Key"
+
+msgctxt "#30719"
+msgid "Enable Backgrounds/Fanart"
+msgstr "Aktiviere Hintergrund/Fanart"
+
+msgctxt "#30720"
+msgid "Enable Posters"
+msgstr "Aktiviere Poster"
+
+msgctxt "#30721"
+msgid "Enable Banners"
+msgstr "Aktiviere Banner"
+
+msgctxt "#30722"
+msgid "Enable Clearart"
+msgstr "Clearart aktivieren"
+
+msgctxt "#30723"
+msgid "Artwork Scraping"
+msgstr "Artwork auslesen"
+
+msgctxt "#30724"
+msgid "Enable Thumbnails"
+msgstr "Aktiviere Miniaturansichten"
+
+msgctxt "#30725"
+msgid "Artwork Types"
+msgstr " Artwort Typen"
+
+msgctxt "#30726"
+msgid "    Use animated posters when available"
+msgstr "Animierte Poster benutzen, wenn verfügbar"
+
+msgctxt "#30727"
+msgid "Enable Cast Thumbnails"
+msgstr "Aktiviere Besetzung Miniaturansichten"
+
+msgctxt "#30728"
+msgid "    *** Install TMDB API Cache ***"
+msgstr "*** Installiere TMDB API Cache ***"
+
+msgctxt "#30729"
+msgid "    Debrid Highlight Color"
+msgstr "Hervorhebungsfarbe für Debrid"
+

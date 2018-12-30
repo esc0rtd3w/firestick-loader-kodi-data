@@ -1,0 +1,31 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=CoolSport Lsh - %s
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_build=http://www.coolsport.tv/kiwi%s.html
+
+item_info_name=tmp2
+item_info_from=tmp
+item_info_convert=getInfo('%s','.*?javascript['"]>(f*id.*?<\/script><script.*?)</script>.*','@REFERER@')
+item_info_convert=parseText('%s','.*id=['"]([^"']+).*src=['"]([^"']+).*','id|js')
+item_info_build=%s
+
+item_info_name=tmp3
+item_info_from=js
+item_info_convert=getInfo('%s','.*?.*src=['"]([^']+).*','http://www.coolsport.tv')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=' + tmp3 + '' + id + '
+item_info_build=%s
+
+item_info_name=tmp4
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*swfobject.embedSWF\(['"]([^'"]+)['"].*','http://www.coolsport.tv','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 token=#atd%#$ZH timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,119 @@
+<settings>
+
+	<category label="Auto-View">
+		<setting id="auto-view" type="bool" label="[COLOR blue]Enable Autoview[/COLOR]" default="true"/>
+
+   	</category>
+
+
+<category label="Downloads ">>
+		<setting type="lsep" label="Downloads are no longer available" />
+		<setting id="download_folder" type="folder" label="Downloads Folder" default="" visible="false"/>
+</category>
+
+
+<category label="Trakt.tv">
+		<setting type="lsep" label="[COLOR red]Trakt Connection[/COLOR]" />
+		<setting id="trakt_authorized" type="bool" default="false" visible="false"/>
+		<setting id="get_pin" label="Click here to Authorize Trakt.tv " type="action" action="RunPlugin(plugin://plugin.video.velocity/?mode=get_pin)" option="close" enable="eq(-1,false)"/>
+		<setting id="trakt_username" type="text" label="Authorized User:" default="" enable="eq(-2,true)"/>
+		<setting type="lsep" label="Trakt Options" />
+		<setting id="use_https" type="bool" label="Use Https" default="false" visible="true"/>
+		<setting id="list_size" type="slider" label="Page Size" default="20" range="1,200" option="int"/>
+		<setting id="timeout" type="slider" label="Timeout" default="30" range="0,120" option="int"/>
+		<setting id="TV_sub_slug" type="text" visible="false"/>
+		<setting id="Movies_sub_slug" type="text" visible="false"/>
+		<setting id="TV_fav_slug" type="text" visible="false"/>
+		<setting id="Movies_fav_slug" type="text" visible="false"/>
+		<setting id="trakt_oauth_token" label="AO TOKEN" type="text" default="" visible="false"/>
+		<setting id="trakt_refresh_token" label="REFRESH TOKEN" type="text" default="" visible="false"/>
+</category>
+
+<category label="Sorting">
+		<setting id="sort_movies" type="enum" label="Movie Sorting" values="Default|Title|Year" default="0"/>
+		<setting id="sort_tv" type="enum" label="TV Sorting" values="Default|Title|Year" default="0"/>
+	    <setting id="enable_sort" type="bool" label="Enable Source Sorting" default="false"/>
+        <setting id="sort_field" type="enum" label="Sort By:" lvalues="Quality|Debrid First|Host" default="0" visible="eq(-1,true)"/>
+
+
+</category>
+
+
+<category label="Enable Providers">
+		<setting type="lsep" label="Provider Options" />
+        <setting id="show_debrid" type="bool" label="Tag Debrid Supported Sources in Listings" default="true"/>
+		<setting id="filter_debrid" type="bool" label="Remove Suspected Bad sources-[COLOR gold]Not Recomended[/COLOR]" default="false"/>
+		<setting id="scraper_timeout" type="slider" label="Provider Timeout" default="2" range="1,4" option="int" visible="false"/>
+	    <setting id="scraper2_timeout" type="slider" label="Movie Sourcing Timeout" default="30" range="1,60" option="int" visible="true"/>
+		<setting id="scraper3_timeout" type="slider" label="TV Sourcing Timeout" default="30" range="1,60" option="int" visible="true"/>
+		<setting type="lsep" label="Enable Providers" />
+		<setting id="ice_films" type="bool" label="IceFilms [Movies/TV]" default="true"/>
+		<setting id="icefilms_base_url" type="text" label="    Base Url" default="http://www.icefilms.info" visible="eq(-1,true)"/>
+		<setting id="primewire" type="bool" label="PrimeWire [Movies/TV]" default="true"/>
+		<setting id="primewire_base_url" type="text" label="    Base Url" default="http://www.primewire.ag/" visible="eq(-1,true)"/>
+		<setting id="afdah" type="bool" label="Afdah [Movies]" default="false"/>
+		<setting id="afdah_base_url" type="text" label="    Base Url" default="http://afdah.tv/" visible="eq(-1,true)"/>
+		<setting id="putlocker" type="bool" label="Putlocker [Movies/TV]" default="true"/>
+		<setting id="putlocker_base_url" type="text" label="    Base Url" default="http://putlocker9.is" visible="eq(-1,true)"/>
+	    <setting id="iwatchon" type="bool" label="IWatchOnline (Takes extended time) [Movies/TV]" default="true"/>
+		<setting id="iwatchon_base_url" type="text" label="    Base Url" default="https://www.iwatchonline.cr" visible="eq(-1,true)"/>
+		<setting id="real_movies" type="bool" label="RealMovies (Movies)" default="true"/>
+		<setting id="real_base_url" type="text" label="    Base Url" default="http://kodimadman.site88.net" visible="eq(-1,true)"/>
+		<setting id="swatch" type="bool" label="SeriesWatch (Movies)" default="true"/>
+		<setting id="swatch_base_url" type="text" label="    Base Url" default="http://dl.hastidownload.biz/2" visible="eq(-1,true)"/>
+	    <setting id="watchepi" type="bool" label="WatchEpisodes (TV Only)" default="true"/>
+		<setting id="watchepi_base_url" type="text" label="    Base Url" default="http://www.watchepisodes.com" visible="eq(-1,true)"/>
+		<setting id="2ddl" type="bool" label="2DDL" default="true" />
+		<setting id="2ddl_base_url" type="text" label="    Base Url" default="http://2ddl.io" visible="eq(-1,true)"/>
+	    <setting id="force_title_match" type="text" label="Shows forced to match only on title" enable="false" visible="false"/>
+
+</category>
+
+<category label="Cache Options">
+		<setting type="lsep" label="Cache Timing" />
+		<setting id="cache_set" type="bool" label="Use Cache (Boosts Speed)" default="true"/>
+		<setting id="cache_limit" type="slider" label="Cache Time in hrs 0=off" default="5" range=".1,10" option="int" visible="eq(-1,true)"/>
+		<setting id="flush_url_cache" label="Clear /Delete Url Cache " type="action" action="RunPlugin(plugin://plugin.video.velocity/?mode=flush_url_cache)" option="close" visable="true"/>
+</category>
+
+<category label="Advanced Options">
+		<setting type="lsep" label="Watched Item Controls" />
+		<setting id="reload_watched_cache" label="Repair Watched Item Lists [COLOR gold] Advanced Use Only[/COLOR] " type="action" action="RunPlugin(plugin://plugin.video.velocity/?mode=repair_watched_items)" option="close" visable="true"/>
+</category>
+
+	<category label="Artwork">
+        <setting type="lsep" label="Artwork Types"/>
+        <setting id="bg_enable" label="Enable Fanart" type="bool" default="true"/>
+        <setting id="poster_enable" label="Enable Posters" type="bool" default="true"/>
+        <setting id="gif_enable" label="Use animated posters if available" type="bool" default="false" visible="false"/>
+        <setting id="banner_enable" label="Enable Banners" type="bool" default="true"/>
+        <setting id="clearart_enable" label="Enable Clearart" type="bool" default="true"/>
+        <setting id="thumb_enable" label="Enable Thumbnails" type="bool" default="true"/>
+        <setting type="lsep" label="Your Image API Keys"/>
+        <setting id="fanart_enable" label="Enable Fanart.tv Images" type="bool" default="false"/>
+        <setting id="fanart_person_key" type="text" label="Fanart.tv Personal API Key" visible="eq(-1,true)" default=""/>
+        <setting id="omdb_enable" label="Enable OMDB Images" type="bool" default="true"/>
+        <setting id="tvmaze_enable" label="Enable TVMaze Images" type="bool" default="true"/>
+        <setting id="fanart_key" type="text" label="Fanart.tv API Key (Blank = Disable)" visible="false" default="b44dc19253dff6a11def0f7f80de697d"/>
+        <setting id="tmdb_key" type="text" label="TMDB API Key (Blank = Disable)" default="db124250ca38ec3f4a8ae10eb9d807f4"/>
+        <setting id="tvdb_key" type="text" label="TVDB API Key (Blank = Disable" default="B0409428B1B31C10"/>
+    </category>
+
+
+<category label="Personalization">
+		<setting type="lsep" label="Debugging" />
+		<setting id="debug" type="bool" label="Debugging" default="false"/>
+		<setting type="lsep" label="Notification Options" />
+		<setting id="error_notify" type="bool" label="Non Fatal Error Notifications" default="false"/>
+		<setting id="mute_notifications" type="bool" label="Mute Notifications" default="true"/>
+		<setting id="cf_captcha" type="bool" label="Captcha" visible="false" default="false"/>
+		<setting id="last_ua_create" type="number" default="0" visible="false"/>
+		<setting id="current_ua" type="text" visible="false"/>
+
+
+</category>
+
+</settings>
+
+
+

@@ -1,0 +1,12 @@
+<settings>
+	<category label="Resolver Settings">
+		<setting label="URLresolver" type="action" action="Addon.OpenSettings(script.module.urlresolver)" enable="System.HasAddon(script.module.urlresolver)"/>
+	</category>
+
+   <category label="Auto-View">
+   	<setting id="auto-view" type="bool" label="Enable Automatic View" default="true"/>
+   	<setting id="tvshows-view" type="number" label="Movie View" default="500" enable="!eq(-2,false)"/>
+   	<setting id="default-view" type="number" label="Default View" default="50" enable="!eq(-3,false)"/>
+   	<setting id="calendar-view" type="number" label="calendar View" default="51" enable="!eq(-2,false)"/>
+   </category>
+</settings>

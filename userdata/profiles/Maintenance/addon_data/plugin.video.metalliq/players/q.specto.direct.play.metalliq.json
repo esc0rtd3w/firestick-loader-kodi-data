@@ -1,0 +1,30 @@
+{
+ "name"         : "Specto [COLOR FF0084FF]-[/COLOR] Direct Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.filmkodi.com",
+ "plugin"       : "plugin.video.specto",
+ "priority"     : 500,
+ "id"           : "q.specto.direct.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.specto/?action=play&name={title}+%28{year}%29&title={title}&year={year}&imdb={imdb}&tmdb={tmdb}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.specto/?action=play&name={name}&title={title}&year={year}&imdb={imdb}&tmdb={tmdb}&tvdb={id}&tvrage=&season={season}&episode={episode}&tvshowtitle={showname}&alter=1&premiered={firstaired}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

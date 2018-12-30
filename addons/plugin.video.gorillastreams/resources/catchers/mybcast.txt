@@ -1,0 +1,29 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=MyBcast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://mybcast.com/show.php?id=%s&width=630&height=480
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file=([^&]+)&streamer=([^&]+)&.*?src="([^"]+\.swf)".*','','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=token
+item_info_from='AwAAAAYAAAAEAcw+AAAAAAAAu6uEyysBAAA='
+item_info_convert=decodeBase64
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=swfUrl
+item_info_from=swf
+item_info_convert=replace('%s','http://mybcast.com/','')
+item_info_build=%s
+
+item_info_name=url
+#item_info_from=rtmp + ' playpath=' + file + ' token=' + token + ' swfVfy=1 live=true swfUrl=http://mybcast.com/' + swfUrl + ' pageUrl=' + pageUrl 
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true timeout=15 swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s
+

@@ -1,0 +1,334 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Daniel Szurgot, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: Polish (http://www.transifex.com/tv-addons/salts/language/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filmy"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "Seriale"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "Serial"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Ustawienia"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Ustawienia dodatku"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Automatyczna konfiguracja SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Autoryzuj dostęp SALTS do mojego konta Trakt.tv"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Moje ulubione"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Moje subskrybcje"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Moje listy"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Inne listy"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Mój kalendarz"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Kalendarz premier"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Wyszukaj"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Ostatnie wyszukiwania"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Zapisane wyszukiwania"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Przenieś do góry"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Przenieś w dół"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Przenieś do..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Podaj nową pozycję (1 - %s)"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Importuj"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Wróć"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Kontynuuj"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Automatyczna konfiguracja zakończona"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Usuń listę"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Zmień nazwę listy"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Przeglądaj sezony"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Usuń z ostatnich"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Wybierz napisy do pobrania"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "Seriale"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Zachowaj"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Usuń"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Wyeksportowano do %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Eksportuj"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "Importuj"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Subskrybuj"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr "Następna strona"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Poprzedni tydzień"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Następny tydzień"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Oceń na trakt.tv"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Usuń z Kolekcji"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Dodaj do Kolekcji"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Dodaj do listy"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Dodaj do Biblioteki"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Odtwórz trailer"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Pozostaw włączony"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Wyłącz"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Wznów od %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Zacznij od początku"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Wznów"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Pobieranie: %s..."
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Pobieranie ukończone: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "Błąd (%s) podczas pobierania: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Autoryzacja konta Trakt"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Włączony"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Hasło"
+
+msgctxt "#30183"
+msgid "No Sources Found"
+msgstr "Nie znaleziono źródeł"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Sezon"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Wyszukaj"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Obejrzane"
+
+msgctxt "#30215"
+msgid "Delete Bookmark"
+msgstr "Usuń zakładkę"
+
+msgctxt "#30216"
+msgid "Bookmark Deleted"
+msgstr "Zakładka usunięta"
+
+msgctxt "#30231"
+msgid "Auto-Play"
+msgstr "Autoodtwarzanie"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "Rok"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Główne"
+
+msgctxt "#30589"
+msgid "Window"
+msgstr "Okno"
+
+msgctxt "#30604"
+msgid "None"
+msgstr "Żaden"
+
+msgctxt "#30606"
+msgid "Quality"
+msgstr "Jakość"
+
+msgctxt "#30608"
+msgid "Rating"
+msgstr "Oceny"
+
+msgctxt "#30615"
+msgid "Enable Subtitles"
+msgstr "Włącz napisy"
+
+msgctxt "#30617"
+msgid "Subtitle Language"
+msgstr "Język napisów"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Napisy"
+
+msgctxt "#30637"
+msgid "Highest Quality"
+msgstr "Najwyższa jakość"
+
+msgctxt "#30658"
+msgid "Mute Notifications"
+msgstr "Wycisz powiadomienia"
+
+msgctxt "#30660"
+msgid "HD1080"
+msgstr "HD1080"
+
+msgctxt "#30661"
+msgid "HD720"
+msgstr "HD720"
+
+msgctxt "#30667"
+msgid "Continue"
+msgstr "Kontynuuj"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Anuluj"
+

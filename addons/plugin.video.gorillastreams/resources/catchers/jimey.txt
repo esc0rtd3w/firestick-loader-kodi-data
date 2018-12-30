@@ -1,0 +1,39 @@
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','.*channel=['"]*([^&"' ]+).*?user=['"]*([^&"' ]+).*','channel|user')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=user + ' - ' + channel
+item_info_build=Jimey - %s
+
+item_info_name=token
+item_info_build=zyklPSak>3';CyUt%)'ONp
+
+item_info_name=pageUrl
+item_info_from='http://jimey.tv/player/embedplayer.php?channel=' + channel + '&user=' + user + '&width=640&height=490'
+item_info_build=%s
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*src=\'([^\']+)\'.*?flashvars=\'file=([^&]+)&streamer=([^&]+)&.*','@REFERER@','swf|file.tmp|rtmp.tmp')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_convert=replace('%s','/redirect',':1935/redirect')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=file.tmp
+item_info_convert=encryptJimey('%s')
+item_info_convert=quote('%s')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' token=' + token + ' swfUrl=http://jimey.tv/player/' + swf + ' live=true swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s
+
+#rtmp://77.247.178.10:1935/redirect

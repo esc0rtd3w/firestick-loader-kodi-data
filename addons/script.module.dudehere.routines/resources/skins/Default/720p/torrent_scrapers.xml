@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="90000">
+	<defaultcontrol>91050</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="100">WindowClose</animation>
+	<coordinates>
+		<posX>200</posX>
+		<posY>100</posY>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Background</description>
+			<posx>150</posx>
+			<posy>100</posy>
+			<width>980</width>
+			<height>500</height>
+			<texture>dialog.png</texture>
+		</control>
+		<control type="image">
+			<description>Title Bar</description>
+			<posx>50</posx>
+			<posy>102</posy>
+			<width>1180</width>
+			<height>40</height>
+			<texture>dialogheader.png</texture>
+		</control>
+		<control type="label">
+			<posx>50</posx>
+			<posy>108</posy>
+			<width>1180</width>
+			<height>40</height>
+			<font>font13_title</font>
+			<align>center</align>
+			<textcolor>cyan</textcolor>
+			<shadowcolor>dimgrey</shadowcolor>
+			<label>Torrent Source Manager</label>
+		</control>
+		<control type="button" id="82000">
+			<posx>1050</posx>
+			<posy>104</posy>
+			<width>60</width>
+			<height>32</height>
+			<label></label>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texturefocus>window/close_focus.png</texturefocus>
+			<texturenofocus>window/close.png</texturenofocus>
+			<pulseonselect>true</pulseonselect>
+		</control>
+		<control type="fadelabel">
+		      <left>180</left>
+		      <top>160</top>
+		      <width>800</width>
+		      <visible>true</visible>
+		      <scrollout>true</scrollout>
+		      <pauseatend>200</pauseatend>
+		      <label>Enable or disable scrapers by clicking.[CR]Move up by navigating Left, Move down by navigating right</label>
+		      <font>font14</font>
+		      <textcolor>FFB2D4F5</textcolor>
+		      <textoffsetx>20</textoffsetx>
+		      <scroll>true</scroll>
+		      <wrapmultiline>true</wrapmultiline>
+		</control>
+		
+		<control type="list" id="91050">
+		<description>Settings</description>
+		<left>180</left>
+		<top>230</top>
+		<width>920</width>
+		<height>280</height>
+		<visible>true</visible>
+		<viewtype label="3D list">list</viewtype>
+		<orientation>vertical</orientation>
+		<pagecontrol>25</pagecontrol>
+		<scrolltime tween="sine" easing="out">200</scrolltime>
+		<autoscroll>false</autoscroll>
+		<ondown>91056</ondown>
+		<itemlayout width="910" height="36">
+			<control type="image">
+					<width>910</width>
+					<height>36</height>
+					<left>0</left>
+					<top>0</top>
+					<texture>List/nofocus.png</texture>
+			</control>
+			<control type="image">
+					<left>25</left>
+					<top>6</top>
+					<width>20</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Property(movie)</info>
+			</control>
+			<control type="image">
+					<left>50</left>
+					<top>6</top>
+					<width>20</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Property(tv)</info>
+			</control>
+			<control type="label">
+					<left>85</left>
+					<top>2</top>
+					<width>800</width>
+					<height>30</height>
+					<font>font16</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+					<left>890</left>
+					<top>5</top>
+					<width>25</width>
+					<height>25</height>
+					<info>ListItem.Icon</info>
+			</control>
+		</itemlayout>
+		<focusedlayout height="36" width="280">
+			<control type="image">
+					<width>910</width>
+					<height>36</height>
+					<left>0</left>
+					<top>0</top>
+					<visible>Control.HasFocus(91050)</visible>
+					<texture>List/focus.png</texture>
+			</control>
+			<control type="image">
+					<left>25</left>
+					<top>6</top>
+					<width>20</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Property(movie)</info>
+			</control>
+			<control type="image">
+					<left>50</left>
+					<top>6</top>
+					<width>20</width>
+					<height>20</height>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Property(tv)</info>
+			</control>
+			<control type="label">
+					<left>85</left>
+					<top>2</top>
+					<width>800</width>
+					<height>30</height>
+					<font>font16</font>
+					<aligny>center</aligny>
+					<align>left</align>
+					<info>ListItem.Label</info>
+			</control>
+			<control type="image">
+					<left>890</left>
+					<top>5</top>
+					<width>25</width>
+					<height>25</height>
+					<info>ListItem.Icon</info>
+			</control>
+		</focusedlayout>
+	</control>
+
+	
+	</controls>
+</window>

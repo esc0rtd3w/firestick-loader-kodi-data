@@ -1,0 +1,5 @@
+V2.0.1
+Update for Resolver  and Log Printing errors
+
+V1.0.0
+Initial Release

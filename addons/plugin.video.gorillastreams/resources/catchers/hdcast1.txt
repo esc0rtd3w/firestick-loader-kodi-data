@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=HdCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://embeds.hdcast.org/stream2.php?id=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?file:\s*["']([^'"]+).*','@REFERER@','rtmp)
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp +' swfUrl=http://embeds.hdcast.org/jwplayer/jwplayer.flash.swf token=#yw%tt#w@kku live=1 timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

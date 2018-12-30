@@ -1,0 +1,22 @@
+version=1
+background=http://media.navi-x.org/images/backgrounds/bkg_navix_bh_plain.jpg
+title=User Lists
+
+# 893402
+type=playlist
+name=User media - full list
+thumb=http://media.navi-x.org/images/logos/users.png
+URL=http://www.navixtreme.com/playlist/all.plx
+player=default
+rating=2.50
+
+# 893403
+type=playlist
+name=User media - by user
+thumb=http://media.navi-x.org/images/logos/user.png
+URL=http://www.navixtreme.com/playlist/users.plx
+player=default
+rating=-1.00
+
+
+# cached

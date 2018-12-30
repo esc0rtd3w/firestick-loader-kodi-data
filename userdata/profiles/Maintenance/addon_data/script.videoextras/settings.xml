@@ -1,0 +1,25 @@
+<settings>
+    <setting id="custom_path" value="" />
+    <setting id="custom_path_enable" value="false" />
+    <setting id="custom_path_movies" value="Movies" />
+    <setting id="custom_path_musicvideos" value="MusicVideos" />
+    <setting id="custom_path_tvshows" value="TvShows" />
+    <setting id="detailedList" value="true" />
+    <setting id="detailedReturn" value="32007" />
+    <setting id="enableDB" value="true" />
+    <setting id="enableFileTag" value="false" />
+    <setting id="enableVimeoSearchSupport" value="false" />
+    <setting id="enableYouTubeSearchSupport" value="true" />
+    <setting id="excludeFilesRegex" value="\.(jpg|idx|srt|nfo|sub|db|txt)$" />
+    <setting id="extrasDirName" value="Extras" />
+    <setting id="extrasFileTag" value="-extras-" />
+    <setting id="extrasReturn" value="32007" />
+    <setting id="forceButtonDisplay" value="false" />
+    <setting id="listImage" value="C:\Users\hacker\AppData\Roaming\Kodi\addons\script.videoextras\resources\skins\icons\list1.png" />
+    <setting id="logEnabled" value="false" />
+    <setting id="overlayImage" value="C:\Users\hacker\AppData\Roaming\Kodi\addons\script.videoextras\resources\skins\icons\overlay1.png" />
+    <setting id="searchNested" value="true" />
+    <setting id="serviceEnabled" value="true" />
+    <setting id="showOnContextMenu" value="true" />
+    <setting id="useCustomImages" value="false" />
+</settings>

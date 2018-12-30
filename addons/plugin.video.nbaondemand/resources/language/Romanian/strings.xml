@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">General</string>
+	<string id="30001">Calitate HD când este disponibilă</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302"> este activat implicit</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">Nu există fluxuri disponibile</string>
+	<!-- Misc -->
+	<string id="30361">Următoarea pagină</string>
+	<string id="30362">Căutare</string>
+	<!-- ContextMenu -->
+	<string id="30401">Redare</string>
+	<string id="30402">Redare aleatorie</string>
+	<string id="30403">Adaugă la coadă</string>
+	<string id="30404">Rulează acum...</string>
+	<string id="30405">Configurare supliment</string>
+	<string id="30406">Setează vizualizarea clipurilor</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Ultimele</string>
+	<string id="30502">Meciuri</string>
+	<string id="30503">Cele mai bune momente</string>
+	<string id="30504">Echipe</string>
+</strings>

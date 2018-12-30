@@ -1,0 +1,32 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=CastASAP - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://castasap.com/embedhd.php?chname=%s&width=640&height=385
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*swfobject.embedSWF\(['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmptmp
+item_info_convert=replace('%s','/export',':1935/export')
+item_info_build=%s
+
+
+item_info_name=url
+item_info_from=file + ' swfUrl=http://castasap.com/' + swf + ' live=true timeout=15 swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <string id="30000">Veetle Error</string>
+    <string id="30001">Stream URL not available or offline.</string>
+    <string id="30100">Grab Schedules</string>
+	<string id="30101">Use Official Channel List</string>
+	<string id="40001">Categories</string>
+	<string id="40002">Schedules</string>
+	<string id="40003">All</string>
+	<string id="40004">Entertainment</string>
+	<string id="40005">Shows</string>
+	<string id="40006">Animation</string>
+	<string id="40007">Sports</string>
+	<string id="40008">Comedy</string>
+	<string id="40009">Music</string>
+	<string id="40010">Education</string>
+	<string id="40011">Gaming</string>
+	<string id="40012">News</string>
+	<string id="40013">Religion</string>
+	<string id="40014">Mobile</string>
+	<string id="40015">Not Available</string>
+	<string id="40016">watching</string>
+</strings>

@@ -1,0 +1,6 @@
+<settings>
+<category label="Settings">
+        <setting label="Skin Theme" type="labelenum" id="skin" values="Blue|Red|Mono" default="Red"/>
+	<setting id="secstore" type="text"label="secstore" default="1" visible="false"/>
+</category>
+</settings>

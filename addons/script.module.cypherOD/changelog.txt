@@ -1,0 +1,4 @@
+v 1.1 Change of Server
+
+v 1.0 initial release
+    - based on Just Sports addon, Plugins by Jen

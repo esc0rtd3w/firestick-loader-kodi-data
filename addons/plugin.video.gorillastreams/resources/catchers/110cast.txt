@@ -1,0 +1,20 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=110Cast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.110cast.com/embed.php?u=%s&vw=600&vh=430
+
+item_info_name=info.tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?\'streamer\',\s*\'([^\']+)\'.*?\'file\',\s*\'([^\']+)\'.*','@CURRENT_URL@','swf.tmp|rtmp|file')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=swf.tmp
+item_info_build=http://www.110cast.com/%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s

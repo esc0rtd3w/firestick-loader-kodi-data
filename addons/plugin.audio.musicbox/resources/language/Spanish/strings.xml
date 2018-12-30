@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+	<!-- Settings - Account -->
+	<string id="30000">Cuentas</string>
+	<string id="30001">Vk.com</string>
+	<string id="30002">Teléfono o correo electrónico</string>
+	<string id="30003">Contraseña</string>
+	<string id="30005">Código</string>
+	<string id="30006">Last.fm</string>
+	<string id="30007">Nombre de usuario</string>
+	<string id="30008">Contraseña</string>
+	<string id="30009">Código</string>
+	<string id="30010">8tracks</string>
+	<string id="30011">Correo electrónico</string>
+	<string id="30012">Contraseña</string>
+	<string id="30013">Código</string>
+
+	<!-- Settings - General Settings -->
+	<string id="30100">General</string>
+	<string id="30101">Fuente de medios</string>
+	<string id="30102">[B]Nota:[/B] Al elegir VK.com como fuente de medios, el complemento se comporta</string>
+	<string id="30103">como Liquid Bear. Al elegir YouTube, lo hace como Atraci.</string>
+	<string id="30104">Número de elementos por página</string>
+	<string id="30105">Resolver músicas</string>
+	<string id="30106">Automáticamente al reproducir tema</string>
+	<string id="30107">Manualmente</string>
+	<string id="30112">País de Digster</string>
+	<string id="30113">Descargar fanart del artista</string>
+	<string id="30114">Ocultar WhatSong Soundtracks</string>
+	<string id="30115">Mostrar opción "Información de la canción" en el menú contextual</string>
+	<string id="30116">Mostrar opción "Información del artista" en el menú contextual</string>
+	<string id="30117">Ocultar 8tracks</string>
+
+	<!-- Settings - Download -->
+	<string id="30200">Descargas</string>
+	<string id="30201">Carpeta de descargas</string>
+	
+	<!-- Settings - Library -->
+	<string id="30300">Colección</string>
+	<string id="30301">Carpeta de la colección</string>
+	<string id="30302">[B]Nota:[/B] Aquí se guardarán los elementos exportados como  archivos .m3u.</string>
+	<string id="30303">No se integrarán en la colección, pero estarán disponibles en "Archivos".</string>
+	<string id="30304">Guardar miniaturas de los elementos exportados</string>
+	
+	<!-- Main Menu & Recomendations -->
+	<string id="30400">Music Box</string>
+	<string id="30401">Recomendaciones</string>
+	<string id="30402">Digster</string>
+	<string id="30403">WhatSong Soundtrack</string>
+	<string id="30404">Listas de reproducción de 8tracks</string>
+	<string id="30405">Listas</string>
+	<string id="30406">Buscar...</string>
+	<string id="30407">Mi música</string>
+	<string id="30408">Favoritos</string>
+	<string id="30409">Zona de usuario</string>
+	<string id="30410">Audio fingerprint</string>
+	<string id="30411">Ajustes</string>
+	<string id="30412">[B]Página siguiente >>[/B]</string>
+	
+	<!-- Digster -->
+	<string id="30425">Secciones</string>
+	<string id="30426">Género</string>
+	<string id="30427">Estado de ánimo</string>
+	<string id="30428">Apropiado para</string>
+	
+	<!-- 8tracks playlists -->
+	<string id="30475">Populares</string>
+	<string id="30476">Elegidas por el personal de 8tracks</string>
+	<string id="30477">Destacadas</string>
+	<string id="30478">Tendencias</string>
+	<string id="30479">Más recientes</string>
+
+	<!-- Charts -->
+	<string id="30500">[B]iTunes[/B] - Top canciones por país</string>
+	<string id="30501">[B]iTunes[/B] - Top álbumes por país</string>
+	<string id="30502">[B]Deezer[/B] - Top temas</string>
+	<string id="30503">[B]Beatport[/B] - Top 100</string>
+	<string id="30504">[B]Official Charts UK[/B] - Varias listas</string>
+	<string id="30505">[B]Billboard[/B] - The Hot 100</string>
+	<string id="30506">[B]Billboard[/B] - 200</string>
+	<string id="30507">[B]Billboard[/B] - Heatseekers Songs</string>
+	<string id="30508">[B]Billboard[/B] - Heatseekers Albums</string>
+	<string id="30509">[B]Billboard[/B] - Hot Pop Songs</string>
+	<string id="30510">[B]Billboard[/B] - Hot Country Songs</string>
+	<string id="30511">[B]Billboard[/B] - Top Country Albums</string>
+	<string id="30512">[B]Billboard[/B] - Hot Rock Songs</string>
+	<string id="30513">[B]Billboard[/B] - Top Rock Albums</string>
+	<string id="30514">[B]Billboard[/B] - Hot R&amp;B/Hip-Hop Songs</string>
+	<string id="30515">[B]Billboard[/B] - Top R&amp;B/Hip-Hop Albums</string>
+	<string id="30516">[B]Billboard[/B] - Hot Dance/Electronic Songs</string>
+	<string id="30517">[B]Billboard[/B] - Dance/Electronic Albums</string>
+	<string id="30518">[B]Billboard[/B] - Hot Latin Songs</string>
+	<string id="30519">[B]Billboard[/B] - Top Latin Albums</string>
+	<string id="30520">Official Charts UK - Seleccionar:</string>
+	<string id="30521">Cambiar lista...</string>
+	<string id="30523">[B]Traxsource[/B] - Temas Top 100</string>
+	<string id="30524">[B]Traxsource[/B] - Sencillos Top 100</string>
+
+	<!-- Search and list content -->
+	<string id="30600">Buscar por artista, nombre de la canción, lista de reproducción...</string>
+	<string id="30601">Ver [B]</string>
+	<string id="30602">[/B] temas encontrados</string>
+	<string id="30603">Ver [B]</string>
+	<string id="30604">[/B] álbumes encontrados</string>
+	<string id="30605">Lista de [B]</string>
+	<string id="30606">[/B] temas más populares</string>
+	<string id="30607">Ver [B]</string>
+	<string id="30608">[/B] listas de canciones encontradas</string>
+	<string id="30609">Ver [B]</string>
+	<string id="30610">[/B] listas de reproducción encontradas</string>
+	<string id="30611">Ver [B]</string>
+	<string id="30612">[/B] bandas sonoras encontradas</string>
+	<string id="30613">Buscar por...</string>
+	<string id="30614">Espere mientras se carga la lista de reproducción...</string>
+	<string id="30615">Cargando tema</string>
+	<string id="30616"> de </string>
+	<string id="30617">Espere </string>
+	<string id="30618"> segundos...</string>
+	<string id="30619">Se ha producido un error...</string>
+	<string id="30620">Espere mientras se carga y almacena la lista de reproducción...</string>
+	<string id="30621">Se modificó la lista de reproducción. Es todo lo que se ha encontrado.</string>
+	<string id="30622">No se ha encontrado videoclip</string>
+
+	<!-- Favorites -->
+	<string id="30700">Añadido a Favoritos</string>
+	<string id="30701">Canciones</string>
+	<string id="30702">Álbumes</string>
+	<string id="30703">Listas de canciones</string>
+	<string id="30704">Listas de reproducción</string>
+	<string id="30705">Bandas sonoras</string>
+	
+	<!-- Downloads, resolvers, player and ContextMenuItems -->
+	<string id="30800">Para utilizar la función de descargas, debe establecer primero la carpeta de descargas en "Ajustes" del complemento...</string>
+	<string id="30801">Resolviendo...</string>
+	<string id="30802">No se encontró el tema...</string>
+	<string id="30803">Búsqueda manual...</string>
+	<string id="30804">Temas similares...</string>
+	<string id="30805">Descargar</string>
+	<string id="30806">Buscar videoclip</string>
+	<string id="30807">Añadir a "Favoritos"</string>
+	<string id="30808">Subir</string>
+	<string id="30809">Bajar</string>
+	<string id="30810">Eliminar de "Favoritos"</string>
+	<string id="30812">Información de la canción</string>
+	<string id="30813">No hay disponible información sobre este tema</string>
+	<string id="30814">Duración: </string>
+	<string id="30815">Tamaño: </string>
+	<string id="30816">Tasa de bits estimada: </string>
+	<string id="30817">Descargar álbum</string>
+	<string id="30818">El álbum se está descargando...</string>
+	<string id="30819">El tema se está descargando</string>
+	<string id="30820"> de </string>
+	<string id="30821">No se encontró el álbum...</string>
+	<string id="30822">Para exportar debe establecer primero la carpeta de exportación en "Ajustes" del complemento...</string>
+	<string id="30823">Exportar como archivo .m3u</string>
+	<string id="30824">Exportado correctamente</string>
+	<string id="30825">Fingerprint...</string>
+	<string id="30826">Información del artista</string>
+	<string id="30827">[COLOR green][B]Nombre:[/B][/COLOR] </string>
+	<string id="30828">[COLOR green][B]Años de actividad:[/B][/COLOR] </string>
+	<string id="30829">[COLOR green][B]Nacido/a:[/B][/COLOR] </string>
+	<string id="30830">[COLOR green][B]Fallecido/a:[/B][/COLOR] </string>
+	<string id="30831">[COLOR green][B]Formado:[/B][/COLOR] </string>
+	<string id="30832">[COLOR green][B]Disuelto:[/B][/COLOR] </string>
+	<string id="30833">[COLOR green][B]Género:[/B][/COLOR] </string>
+	<string id="30834">[COLOR green][B]Estilos:[/B][/COLOR] </string>
+	<string id="30835">[COLOR green][B]Miembros del grupo:[/B][/COLOR] </string>
+	<string id="30836">[COLOR green][B]También conocido/a como:[/B][/COLOR] </string>
+	<string id="30837">[COLOR green][B]Miembro de:[/B][/COLOR] </string>
+	<string id="30838">[COLOR green][B]Biografía:[/B][/COLOR] </string>
+	<string id="30839">[COLOR red][B]No se ha encontrado información de este artista.[/B][/COLOR]</string>
+	<string id="30840"> in </string>
+	
+	<!-- User space & accounts -->
+	<string id="30852">[B]Mi Last.fm[/B] - Temas favoritos</string>
+	<string id="30853">[B]Mi Last.fm[/B] - Temas escuchados recientemente</string>
+	<string id="30854">[B]Mi Last.fm[/B] - Temas más escuchados</string>
+	<string id="30855">[B]Mi Last.fm[/B] - Álbumes más escuchados</string>
+	<string id="30856">[B]Mi Last.fm[/B] - Mis listas de reproducción</string>
+	<string id="30857">[B]Mi 8tracks[/B] - Listas de reproducción favoritas</string>
+	<string id="30858">[B]Mi 8tracks[/B] - Historial de escuchas</string>
+	<string id="30859">[B]Mi 8tracks[/B] - Mis listas de reproducción</string>
+	<string id="30860">[B]Mi 8tracks[/B] - Mis recomendaciones</string>
+	<string id="30861">Vk.com</string>
+	<string id="30862">Last.fm</string>
+	<string id="30863">8tracks</string>
+	<string id="30864">[COLOR red]¡Credenciales erróneas![/COLOR]</string>
+	<string id="30865">Se ha iniciado sesión.</string>
+	<string id="30866">Error: El correo/teléfono y/o contraseña de Vk.com están en blanco</string>
+	<string id="30867">Error: Ha fallado la verificación en Vk.com</string>
+	<string id="30868">Error: Vk.com ha devuelto el siguiente error: </string>
+	<string id="30869">[B][COLOR red]Reproduciendo:[/COLOR][/B] </string>
+	<string id="30870">Elija un período de tiempo:</string>
+	<string id="30871">[COLOR blue][B]Período de tiempo:[/B][/COLOR] </string>
+	<string id="30872">Total</string>
+	<string id="30873">Siete días</string>
+	<string id="30874">Un mes</string>
+	<string id="30875">Tres meses</string>
+	<string id="30876">Seis meses</string>
+	<string id="30877">Doce meses</string>
+	<string id="30878">Nota: Para utilizar el complemento se necesita una cuenta en Vk.com (o cambiar a YouTube como "fuente de medios").</string>
+	
+	<!-- Audio fingerprint -->
+	<string id="30900">Seleccione el archivo de audio:</string>
+	<string id="30901">El archivo de audio proporcionado no es válido.</string>
+	<string id="30902">Escriba el resultado:</string>
+</strings>

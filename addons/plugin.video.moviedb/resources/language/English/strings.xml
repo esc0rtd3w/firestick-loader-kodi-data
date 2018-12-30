@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<strings>
+    <string id="90000">[B]That's it man, game over man, [I]Game over![/I][/B]</string>
+    <string id="90001">[B]You can't handle the truth![/B]</string>
+    <string id="90002">[B]Danger Will Robinson[/B]</string>
+    <string id="90003">[B]Why do you hurt me so?[/B]</string>
+    <string id="90004">[B]Houston, we have a problem...[/B]</string>
+    <string id="90005">[B]Help a brother out..[/B]</string>
+    <string id="90006">[B]Seriously? Ouch!![/B]</string>
+    <string id="90007">[B]Go ahead, make my day[/B] ~ Sudden Impact (1983)</string>
+    <string id="90008">[B]May the Force be with you[/B] ~ Star Wars (1977)</string>
+    <string id="90009">[B]Where there is smoke, there is fire![/B]</string>
+    <string id="90010">[B]Ok, Who mashed the potatoes?[/B]</string>
+    <string id="90011">[B]What did you do??!![/B]</string>
+    <string id="91000">Unfortunately an error occurred in the [B]%s[/B] addon.</string>
+    <string id="91001">Help fix the problem by submitting an error report [B]directly to Blazetamer[/B]. </string>
+    <string id="91002">Click [I]Show error report[/I] for details. No personal information will be sent.</string>
+    <string id="91003">Submit error report</string>
+    <string id="91004">Don't submit</string>
+    <string id="91005">Thank you for contributing!</string>
+    <string id="91006">Show error report</string>
+    <string id="91007">Hide error report</string>
+    <string id="91008">Unfortunately a problem occurred while showing the details...</string>
+    <string id="91009">Unable to send error report!</string>
+</strings>

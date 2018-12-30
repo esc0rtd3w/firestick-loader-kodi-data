@@ -1,0 +1,23 @@
+{
+ "name"         : "SoundCloud [COLOR FF0084FF]-[/COLOR] Search Play ([COLOR FF0084FF]Q[/COLOR])",
+ "plugin"       : "plugin.audio.soundcloud",
+ "priority"     : 900,
+ "id"           : "q.soundcloud.search.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.audio.soundcloud/search/query/?q={cleartrack}",
+    "steps"     : [
+     ".*{clearartist}.*{cleartrack}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

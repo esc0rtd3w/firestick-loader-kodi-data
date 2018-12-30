@@ -1,0 +1,820 @@
+# Addon Name: MetalliQ
+# Addon id: plugin.video.metalliq
+# Addon Provider: [COLOR ff0084ff]Q[/COLOR]
+msgid ""
+msgstr ""
+"Project-Id-Version: MetalliQ Addon for Kodi\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-03-27 14:00+0100\n"
+"Last-Translator: [COLOR ff0084ff]Q[/COLOR]\n"
+"Language-Team: Dutch\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgctxt "#30000"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "#30001"
+msgid "Move down"
+msgstr "Verplaats omlaag"
+
+msgctxt "#30002"
+msgid "Move up"
+msgstr "Verplaats omhoog"
+
+msgctxt "#30003"
+msgid "Clear channels"
+msgstr "Verwijder alle kanalen"
+
+msgctxt "#30004"
+msgid "Remove channel"
+msgstr "Verwijder kanaal"
+
+msgctxt "#30005"
+msgid "Style"
+msgstr "Stijl"
+
+msgctxt "#30006"
+msgid "Select stream..."
+msgstr "Selecteer stream..."
+
+msgctxt "#30007"
+msgid "Add to list"
+msgstr "Voeg toe aan lijst"
+
+msgctxt "#30008"
+msgid "Channel"
+msgstr "Kanaal"
+
+msgctxt "#30009"
+msgid "Channels"
+msgstr "Kanalen"
+
+msgctxt "#30010"
+msgid "Players URL"
+msgstr "Spelers URL"
+
+msgctxt "#30012"
+msgid "Install from URL"
+msgstr "Installeer van URL"
+
+msgctxt "#30013"
+msgid "Enable all players"
+msgstr "Activeer alle spelers"
+
+msgctxt "#30014"
+msgid "Failed to delete cache"
+msgstr "Cache niet verwijderd"
+
+msgctxt "#30015"
+msgid "Background"
+msgstr "Achtergrond"
+
+msgctxt "#30016"
+msgid "Custom style folder"
+msgstr "Eigen stijl map"
+
+msgctxt "#30017"
+msgid "Custom background folder"
+msgstr "Eigen achtergrond map"
+
+msgctxt "#30020"
+msgid "My channels"
+msgstr "Mijn kanalen"
+
+msgctxt "#30021"
+msgid "New channel"
+msgstr "Nieuw kanaal"
+
+msgctxt "#30022"
+msgid "Add all liked lists to library"
+msgstr "Voeg alle gelikete toe aan bibliotheek"
+
+msgctxt "#30023"
+msgid "Add my lists to library"
+msgstr "Voeg mijn lijsten toe aan bibliotheek"
+
+msgctxt "#30024"
+msgid "Remove from list"
+msgstr "Verwijder van lijst"
+
+msgctxt "#30025"
+msgid "Add liked lists to library"
+msgstr "Voeg gelikete lijsten toe aan bibliotheek"
+
+msgctxt "#30030"
+msgid "All movie players"
+msgstr "Alle film spelers"
+
+msgctxt "#30031"
+msgid "All tv show players"
+msgstr "Alle tv serie spelers"
+
+msgctxt "#30032"
+msgid "All musicvideo players"
+msgstr "Alle muziekvideo spelers"
+
+msgctxt "#30033"
+msgid "All music players"
+msgstr "Alle muziek spelers"
+
+msgctxt "#30034"
+msgid "All live players"
+msgstr "Alle live spelers"
+
+msgctxt "#30035"
+msgid "All players"
+msgstr "Alle spelers"
+
+msgctxt "#30036"
+msgid "Enabled"
+msgstr "Geactiveerd"
+
+msgctxt "#30037"
+msgid "Automated install"
+msgstr "Geautomatiseerde installatie"
+
+msgctxt "#30038"
+msgid "Started"
+msgstr "Gestart"
+
+msgctxt "#30039"
+msgid "Players"
+msgstr "Spelers"
+
+msgctxt "#30040"
+msgid "Updated"
+msgstr "Bijgewerkt"
+
+msgctxt "#30041"
+msgid "Movies library folder"
+msgstr "Films bibliotheek map"
+
+msgctxt "#30042"
+msgid "TV shows library folder"
+msgstr "TV series bibliotheek map "
+
+msgctxt "#30043"
+msgid "Music library folder"
+msgstr "Muziek bibliotheek map"
+
+msgctxt "#30044"
+msgid "Live library folder"
+msgstr "Live bibliotheek map"
+
+msgctxt "#30045"
+msgid "Setup done"
+msgstr "Setup gereed"
+
+msgctxt "#30046"
+msgid "Completed"
+msgstr "Voltooid"
+
+msgctxt "#30100"
+msgid "Movies"
+msgstr "Films"
+
+msgctxt "#30101"
+msgid "Enable movie players"
+msgstr "Activeer film spelers"
+
+msgctxt "#30102"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30110"
+msgid "Preferred movie player"
+msgstr "Voorkeurs film speler"
+
+msgctxt "#30111"
+msgid "Preferred movie player from library"
+msgstr "Voorkeurs film speler vanuit bibliotheek"
+
+msgctxt "#30112"
+msgid "Preferred movie player from context menu"
+msgstr "Voorkeurs speler vanuit context menu"
+
+msgctxt "#30113"
+msgid "Would you like to automatically set MetalliQ as a movie source?"
+msgstr "Wilt u COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] automatisch instellen als een film bron?"
+
+msgctxt "#30114"
+msgid "Movie trailer"
+msgstr "Film trailer"
+
+msgctxt "#30115"
+msgid "Recommended movies"
+msgstr "Aanbevolen films"
+
+msgctxt "#30200"
+msgid "TV shows"
+msgstr "TV series"
+
+msgctxt "#30201"
+msgid "Enable TV show players"
+msgstr "TV serie spelers activeren"
+
+msgctxt "#30202"
+msgid "TV show"
+msgstr "TV serie"
+
+msgctxt "#30210"
+msgid "Preferred TV show player"
+msgstr "Voorkeurs TV serie speler"
+
+msgctxt "#30211"
+msgid "Preferred TV show player from library"
+msgstr "Voorkeurs TV serie speler vanuit bibliotheek"
+
+msgctxt "#30212"
+msgid "Preferred TV show player from context menu"
+msgstr "Voorkeurs TV serie speler vanuit context menu"
+
+msgctxt "#30213"
+msgid "Would you like to automatically set MetalliQ as a TV show source?"
+msgstr "Wilt u MetalliQ automatisch instellen als een TV serie bron?"
+
+msgctxt "#30214"
+msgid "TV trailer"
+msgstr "TV trailer"
+
+msgctxt "#30215"
+msgid "Recommended TV shows"
+msgstr "Aanbevolen TV series"
+
+msgctxt "#30300"
+msgid "Library"
+msgstr "Bibliotheek"
+
+msgctxt "#30301"
+msgid "Library folders"
+msgstr "Bibliotheek mappen"
+
+msgctxt "#30302"
+msgid "Library folder"
+msgstr "Bibliotheek map"
+
+msgctxt "#30303"
+msgid "Update libraries"
+msgstr "Bibliotheek bijwerken"
+
+msgctxt "#30305"
+msgid "Set added time to release date"
+msgstr "Zet tijd van toevoegen bij uitgifte datum"
+
+msgctxt "#30306"
+msgid "Enable library updates"
+msgstr "Schakel bibliotheek updates in"
+
+msgctxt "#30307"
+msgid "Movies library updates enabled"
+msgstr "Films bibliotheek updates ingeschakeld"
+
+msgctxt "#30308"
+msgid "TV shows library updates enabled"
+msgstr "TV series bibliotheek updates ingeschakeld"
+
+msgctxt "#30309"
+msgid "Music library updates enabled"
+msgstr "Muziek bibliotheek updates ingeschakeld"
+
+msgctxt "#30310"
+msgid "Playlist"
+msgstr "Afspeellijst"
+
+msgctxt "#30311"
+msgid "Playlist folders"
+msgstr "Afspeellijst mappen"
+
+msgctxt "#30312"
+msgid "Playlist folder"
+msgstr "Afspeellijst map"
+
+msgctxt "#30313"
+msgid "Update playlists"
+msgstr "Afspeellijsten bijwerken"
+
+msgctxt "#30314"
+msgid "Video"
+msgstr "Video"
+
+msgctxt "#30315"
+msgid "Audio"
+msgstr "Audio"
+
+msgctxt "#30304"
+msgid "Automatic movies library server"
+msgstr "Automatische film bibliotheek server"
+
+msgctxt "#30400"
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+msgctxt "#30401"
+msgid "Clear cache"
+msgstr "Cache wissen"
+
+msgctxt "#30402"
+msgid "Use simple selection dialog"
+msgstr "Gebruik simpel selectie dialoog"
+
+msgctxt "#30404"
+msgid "Number of simultaneous searches"
+msgstr "Aantal gelijktijdige zoekopdrachten"
+
+msgctxt "#30410"
+msgid "Attempt to hide dialogs while MetalliQ is searching"
+msgstr "Probeer dialoogvensters te verbergen terwijl MetalliQ aan het zoeken is"
+
+msgctxt "#30411"
+msgid "Hide progress dialogs"
+msgstr "Verberg voortgangs dialogen"
+
+msgctxt "#30412"
+msgid "Hide information dialogs"
+msgstr "Verberg informatie dialogen"
+
+msgctxt "#30413"
+msgid "Hide keyboard dialog"
+msgstr "Verberg keyboard dialogen"
+
+msgctxt "#30414"
+msgid "Watchlist"
+msgstr "Kijklijst"
+
+msgctxt "#30415"
+msgid "Please go to https://trakt.tv/activate and enter the code"
+msgstr "Ga naar https://trakt.tv/activate en vul de code in"
+
+msgctxt "#30416"
+msgid "Next episodes"
+msgstr "Volgende afleveringen"
+
+msgctxt "#30417"
+msgid "Authenticate Trakt"
+msgstr "Trakt authoriseren"
+
+msgctxt "#30418"
+msgid "All"
+msgstr "Alle"
+
+msgctxt "#30419"
+msgid "You are about to add %s to %s."
+msgstr "U staat op het punt om %s toe te voegen aan %s."
+
+msgctxt "#30420"
+msgid "Your"
+msgstr "Uw"
+
+msgctxt "#30421"
+msgid "Entire"
+msgstr "Gehele"
+
+msgctxt "#30422"
+msgid "You must authenticate with Trakt. Do you want to authenticate now?"
+msgstr "U dient Trakt te authoriseren. Wilt u nu authoriseren?"
+
+msgctxt "#30423"
+msgid "Calendar"
+msgstr "Kalender"
+
+msgctxt "#30424"
+msgid "Recommendations"
+msgstr "Aanraders"
+
+msgctxt "#30425"
+msgid "Collection"
+msgstr "Collectie"
+
+msgctxt "#30500"
+msgid "Live"
+msgstr "Live"
+
+msgctxt "#30501"
+msgid "Enable live players"
+msgstr "Activeer live spelers"
+
+msgctxt "#30510"
+msgid "Preferred live player"
+msgstr "Voorkeurs live speler"
+
+msgctxt "#30511"
+msgid "Preferred live player from library"
+msgstr "Voorkeurs live speler vanuit bibliotheek"
+
+msgctxt "#30512"
+msgid "Preferred live player from context menu"
+msgstr "Voorkeurs live speler vanuit context menu"
+
+msgctxt "#30513"
+msgid "Would you like to automatically set MetalliQ as a channel source?"
+msgstr "Wilt u MetalliQ automatisch instellen als een kanalen video bron?"
+
+msgctxt "#30601"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#30602"
+msgid "Select default player"
+msgstr "Selecteer standaard speler"
+
+msgctxt "#30603"
+msgid "Show info"
+msgstr "Toon info"
+
+msgctxt "#30604"
+msgid "Video not found :("
+msgstr "Video niet gevonden :("
+
+msgctxt "#30605"
+msgid "Add to library"
+msgstr "Voeg toe aan bibliotheek"
+
+msgctxt "#30606"
+msgid "Do you want to remove your existing players first?"
+msgstr "Wilt u uw huidige spelers eerst verwijderen?"
+
+msgctxt "#30607"
+msgid "Enter password"
+msgstr "Vul wachtwoord in"
+
+msgctxt "#30608"
+msgid "Players updated"
+msgstr "Spelers bijgewerkt"
+
+msgctxt "#30609"
+msgid "Enable players"
+msgstr "Spelers activeren"
+
+msgctxt "#30610"
+msgid "Season"
+msgstr "Seizoen"
+
+msgctxt "#30612"
+msgid "Top rated"
+msgstr "Meest gewaardeerd"
+
+msgctxt "#30613"
+msgid "Blockbusters"
+msgstr "Kaskrakers"
+
+msgctxt "#30614"
+msgid "On the air"
+msgstr "Nu op TV"
+
+msgctxt "#30615"
+msgid "Update players"
+msgstr "Spelers bijwerken"
+
+msgctxt "#30617"
+msgid "Search"
+msgstr "Zoeken"
+
+msgctxt "#30618"
+msgid "Search for "
+msgstr "Zoeken naar "
+
+msgctxt "#30619"
+msgid "Next >>"
+msgstr "Volgende >>"
+
+msgctxt "#30620"
+msgid "Error"
+msgstr "Fout"
+
+msgctxt "#30621"
+msgid "Popular"
+msgstr "Populair"
+
+msgctxt "#30622"
+msgid "Context player"
+msgstr "Context speler"
+
+msgctxt "#30623"
+msgid "Failed to update players"
+msgstr "Bijwerken spelers mislukt"
+
+msgctxt "#30624"
+msgid "In theatres"
+msgstr "In de bioscoop"
+
+msgctxt "#30625"
+msgid "Select player"
+msgstr "Selecteer speler"
+
+msgctxt "#30626"
+msgid "Warning"
+msgstr "Waarschuwing"
+
+msgctxt "#30627"
+msgid "Library setup"
+msgstr "Bibliotheek instellen"
+
+msgctxt "#30628"
+msgid "Play with..."
+msgstr "Afspelen met..."
+
+msgctxt "#30629"
+msgid "Trending"
+msgstr "Trending"
+
+msgctxt "#30630"
+msgid "Personal"
+msgstr "Persoonlijk"
+
+msgctxt "#30631"
+msgid "Aired"
+msgstr "Uitgezonden"
+
+msgctxt "#30632"
+msgid "Premiered"
+msgstr "Nieuw seizoen"
+
+msgctxt "#30633"
+msgid "Edit query"
+msgstr "Bewerk zoekopdracht"
+
+msgctxt "#30634"
+msgid "Search artist"
+msgstr "Zoek artiest"
+
+msgctxt "#30635"
+msgid "Search album"
+msgstr "Zoek album"
+
+msgctxt "#30636"
+msgid "Search track"
+msgstr "Zoek liedje"
+
+msgctxt "#30637"
+msgid "Search list"
+msgstr "Zoek lijst"
+
+msgctxt "#30638"
+msgid "Search"
+msgstr "Zoeken"
+
+msgctxt "#30639"
+msgid "Next page"
+msgstr "Volgende pagina"
+
+msgctxt "#30641"
+msgid "%s: search for %s using \"%s\""
+msgstr "%s: zoek naar %s met term \"%s\""
+
+msgctxt "#30642"
+msgid "Search for %s using \"%s\""
+msgstr "Zoek naar %s met term \"%s\""
+
+msgctxt "#30643"
+msgid "Search for \"%s\" in %s"
+msgstr "Zoek naar \"%s\" in %s"
+
+msgctxt "#30640"
+msgid "Choose player for this TVShow"
+msgstr "Kies speler voor deze TV serie"
+
+msgctxt "#30641"
+msgid "Search %s for %s using \"%s\" as query"
+msgstr "Zoek in %s naar %s met zoekopdracht \"%s\""
+
+msgctxt "#30642"
+msgid "Search %s using \"%s\" as query"
+msgstr "Zoek in %s met zoekopdracht \"%s\""
+
+msgctxt "#30643"
+msgid "Search for \"%s\" using %s"
+msgstr "Zoek naar \"%s\" middels %s"
+
+msgctxt "#30699"
+msgid "Preferred music type"
+msgstr "Voorkeurs type muziek"
+
+msgctxt "#30700"
+msgid "Musicvideos"
+msgstr "Muziekvideos"
+
+msgctxt "#30701"
+msgid "Enable musicvideo players"
+msgstr "Activeer muziekvideo spelers"
+
+msgctxt "#30702"
+msgid "Musicvideo"
+msgstr "Muziekvideo"
+
+msgctxt "#30710"
+msgid "Preferred musicvideo player"
+msgstr "Voorkeurs muziekvideo speler"
+
+msgctxt "#30711"
+msgid "Preferred musicvideo player from library"
+msgstr "Voorkeurs muziekvideo speler vanuit bibliotheek"
+
+msgctxt "#30712"
+msgid "Preferred musicvideo player from context menu"
+msgstr "Voorkeurs muziekvideo speler vanuit contextmenu"
+
+msgctxt "#30713"
+msgid "Would you like to automatically set MetalliQ as a musicvideo source?"
+msgstr "Wilt u MetalliQ automatisch instellen als een muziekvideo bron?"
+
+msgctxt "#30714"
+msgid "Personal"
+msgstr "Persoonlijk"
+
+msgctxt "#30715"
+msgid "Popular"
+msgstr "Populair"
+
+msgctxt "#30716"
+msgid "Most played"
+msgstr "Meest afgespeeld"
+
+msgctxt "#30717"
+msgid "Most watched"
+msgstr "Meest bekeken"
+
+msgctxt "#30718"
+msgid "Most collected"
+msgstr "Meest verzameld"
+
+msgctxt "#30719"
+msgid "Related movies"
+msgstr "Gerelateerde films"
+
+msgctxt "#30720"
+msgid "Period to use for Most-sections"
+msgstr "Periode gebruikt in Meest-secties"
+
+msgctxt "#30721"
+msgid "Items per page"
+msgstr "Items per pagina"
+
+msgctxt "#30722"
+msgid "Number of days to use for Recently updated-section"
+msgstr "Aantal dagen voor gebruik in Recent geüpdate-sectie"
+
+msgctxt "#30723"
+msgid "Recently updated"
+msgstr "Recent geüupdate"
+
+msgctxt "#30800"
+msgid "Music"
+msgstr "Muziek"
+
+msgctxt "#30801"
+msgid "Enable music players"
+msgstr "Schakel muziek spelers in"
+
+msgctxt "#30802"
+msgid "Play random"
+msgstr "Willekeurig afspelen"
+
+msgctxt "#30803"
+msgid "Top artists"
+msgstr "Top artiesten"
+
+msgctxt "#30804"
+msgid "Top tracks"
+msgstr "Top nummers"
+
+msgctxt "#30810"
+msgid "Prefered music player"
+msgstr "Voorkeurs muziek speler"
+
+msgctxt "#30811"
+msgid "Prefered music player from library"
+msgstr "Voorkeurs muziek speler vanuit bibliotheek"
+
+msgctxt "#30812"
+msgid "Preferred music player from context menu"
+msgstr "Voorkeurs muziek speler vanuit context menu"
+
+msgctxt "#30813"
+msgid "Would you like to automatically set MetalliQ as a music source?"
+msgstr "Wilt u MetalliQ automatisch instellen als een muziek video bron?"
+
+msgctxt "#30814"
+msgid "[COLOR ff0084ff]Q[/COLOR]lick[COLOR ff0084ff]P[/COLOR]lay"
+msgstr "[COLOR ff0084ff]Q[/COLOR]lick[COLOR ff0084ff]P[/COLOR]lay"
+
+msgctxt "#30815"
+msgid "Lists"
+msgstr "Lijsten"
+
+msgctxt "#30816"
+msgid "Liked"
+msgstr "Gelikete"
+
+msgctxt "#30817"
+msgid "My"
+msgstr "Mijn"
+
+msgctxt "#30818"
+msgid "Add TV shows to library using preferred library player?"
+msgstr "Gebruik voorkeurs bibliotheek speler bij toevoegen TV series aan bibliotheek?"
+
+msgctxt "#30819"
+msgid "Choose movie"
+msgstr "Kies film"
+
+msgctxt "#30820"
+msgid "Add movies played by name to library automatically?"
+msgstr "Voeg films afgespeeld op naam automatisch aan bibliotheek toe?"
+
+msgctxt "#30821"
+msgid "Add TV shows played by name to library automatically?"
+msgstr "Voeg TV series afgespeeld op naam automatisch toe aan bibliotheek?"
+
+msgctxt "#30822"
+msgid "Meta"
+msgstr "Meta"
+
+msgctxt "#30823"
+msgid "Adding music to database"
+msgstr "Muziek toevoegen aan database"
+
+msgctxt "#30824"
+msgid "Enable library updates"
+msgstr "Schakel bibliotheek updates in"
+
+msgctxt "#30825"
+msgid "Appearance"
+msgstr "Uiterlijk"
+
+msgctxt "#30826"
+msgid "Views"
+msgstr "Weergaves"
+
+msgctxt "#30827"
+msgid "Language for TMDb"
+msgstr "Taal voor TMDb"
+
+msgctxt "#30828"
+msgid "Force views"
+msgstr "Forceer weergaves"
+
+msgctxt "#30829"
+msgid "Extended movie info"
+msgstr "Uitgebreide film informatie"
+
+msgctxt "#30830"
+msgid "Extended tv show info"
+msgstr "Uitgebreide tv serie informatie"
+
+msgctxt "#30831"
+msgid "Play by name"
+msgstr "Afspelen op naam"
+
+msgctxt "#30832"
+msgid "Play by name only"
+msgstr "Afspelen op alleen naam"
+
+msgctxt "#30833"
+msgid "MetalliQ"
+msgstr "MetalliQ"
+
+msgctxt "#30834"
+msgid "Add movies to library using preferred library player?"
+msgstr "Gebruik voorkeurs bibliotheek speler bij toevoegen films aan bibliotheek?"
+
+msgctxt "#30835"
+msgid "Add all lists to library"
+msgstr "Voeg alle lijsten toe aan bibliotheek"
+
+msgctxt "#30836"
+msgid "List"
+msgstr "Lijst"
+
+msgctxt "#30837"
+msgid "Album"
+msgstr "Album"
+
+msgctxt "#30838"
+msgid "Artist"
+msgstr "Artiest"
+
+msgctxt "#30839"
+msgid "Track"
+msgstr "Nummer"
+
+msgctxt "#30840"
+msgid "Albums"
+msgstr "Albums"
+
+msgctxt "#30841"
+msgid "Artists"
+msgstr "Artiesten"
+
+msgctxt "#30842"
+msgid "Tracks"
+msgstr "Nummers"
+
+msgctxt "#30901"
+msgid "pages to consider for random playback"
+msgstr "aantal paginas te gebruiken voor willekeurig afspelen"
