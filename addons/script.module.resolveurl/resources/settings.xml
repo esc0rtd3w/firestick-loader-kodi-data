@@ -38,14 +38,18 @@
 		<setting label="Premiumize.me" type="lsep"/>
 		<setting id="PremiumizeMeResolver_priority" type="number" label="Priority" default="100"/>
 		<setting id="PremiumizeMeResolver_enabled" type="bool" label="Enabled" default="true"/>
+		<setting id="PremiumizeMeResolver_login" type="bool" label="login" default="true" visible="false"/>
 		<setting id="PremiumizeMeResolver_torrents" type="bool" label="Torrent Support" default="true"/>
-		<setting id="PremiumizeMeResolver_login" type="bool" label="login" default="false"/>
-		<setting id="PremiumizeMeResolver_password" enable="eq(-1,true)" type="text" label="API Key" option="hidden" default=""/>
+		<setting id="PremiumizeMeResolver_cached_only" enable="eq(-1,true)" type="bool" label="Cached torrents only" default="false" />
+		<setting id="PremiumizeMeResolver_auth" type="action" label="(Re)Authorize My Account" action="RunPlugin(plugin://script.module.resolveurl/?mode=auth_pm)"/>
+		<setting id="PremiumizeMeResolver_reset" type="action" label="Reset My Authorization" action="RunPlugin(plugin://script.module.resolveurl/?mode=reset_pm)"/>
+		<setting id="PremiumizeMeResolver_token" visible="false" type="text" default=""/>
 		<setting label="Real-Debrid" type="lsep"/>
 		<setting id="RealDebridResolver_priority" type="number" label="Priority" default="100"/>
 		<setting id="RealDebridResolver_enabled" type="bool" label="Enabled" default="true"/>
 		<setting id="RealDebridResolver_login" type="bool" label="login" default="true" visible="false"/>
 		<setting id="RealDebridResolver_torrents" type="bool" label="Torrent Support" default="true"/>
+		<setting id="RealDebridResolver_cached_only" enable="eq(-1,true)" type="bool" label="Cached torrents only" default="false" />
 		<setting id="RealDebridResolver_autopick" type="bool" label="Choose Primary Link Automatically" default="false"/>
 		<setting id="RealDebridResolver_auth" type="action" label="(Re)Authorize My Account" action="RunPlugin(plugin://script.module.resolveurl/?mode=auth_rd)"/>
 		<setting id="RealDebridResolver_reset" type="action" label="Reset My Authorization" action="RunPlugin(plugin://script.module.resolveurl/?mode=reset_rd)"/>

@@ -95,7 +95,7 @@
         <addonforeignfilter default="true">false</addonforeignfilter>
         <addonnotifications default="true">true</addonnotifications>
         <addonupdates default="true">0</addonupdates>
-        <systemtotaluptime>50219</systemtotaluptime>
+        <systemtotaluptime>50224</systemtotaluptime>
         <settinglevel>2</settinglevel>
         <eventlog>
             <level>0</level>
