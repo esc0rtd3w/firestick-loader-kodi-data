@@ -42,34 +42,47 @@ def Main():
 	
 @utils.url_dispatcher.register('506', ['url'])
 def List(url):
-    try:
-        response = utils.getHtml(url, hdr=xhamster_headers)
-    except:
-        return None
-    match0 = re.compile('<head>(.*?)</head>.*?index-videos.*?>(.*?)<footer>', re.DOTALL | re.IGNORECASE).findall(response)
-    header_block = match0[0][0]
-    main_block = match0[0][1]
-    match = re.compile('thumb-image-container" href="([^"]+)".*?<i class="thumb-image-container__icon([^>]+)>.*?src="([^"]+)".*?alt="([^"]+)".*?duration">([^<]+)</div', re.DOTALL | re.IGNORECASE).findall(main_block)
-    for video, hd, img, name, length in match:
-        hd = ' [COLOR orange]HD[/COLOR]' if 'hd' in hd else ''
-        name = utils.cleantext(name) + hd + ' [COLOR hotpink]' + length + '[/COLOR]'
-        utils.addDownLink(name, video, 507, img, '')
-    try:
-        next_page = re.compile('<link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(header_block)[0]
-        utils.addDir('Next Page', next_page, 506, '')
-    except:
-        pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	try:
+		response = utils.getHtml(url, hdr=xhamster_headers)
+	except:
+		return None
+	
+	match0 = re.compile('<head>(.*?)</head>.*?index-videos.*?>(.*?)<footer>', re.DOTALL | re.IGNORECASE).findall(response)
+	header_block = match0[0][0]
+	main_block = match0[0][1]
+	match = re.compile('thumb-image-container" href="([^"]+)".*?<i class="thumb-image-container__icon([^>]+)>.*?src="([^"]+)".*?alt="([^"]+)".*?duration">([^<]+)</div', re.DOTALL | re.IGNORECASE).findall(main_block)
+	for video, hd, img, name, length in match:
+		hd = ' [COLOR orange]HD[/COLOR]' if 'hd' in hd else ''
+		name = utils.cleantext(name) + hd + ' [COLOR hotpink]' + length + '[/COLOR]'
+		utils.addDownLink(name, video, 507, img, '')
+	try:
+		next_page = re.compile('<link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(header_block)[0]
+		utils.addDir('Next Page', next_page, 506, '')
+	except:
+		pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('507', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    response = utils.getHtml(url, hdr=xhamster_headers)
-    match = get_xhamster_link(response)
-    if match:
-        utils.playvid(match, name, download)
-    else:
-        utils.notify('Oh oh','Couldn\'t find a video')
+	response = utils.getHtml(url, hdr=xhamster_headers)
+	
+	match = get_xhamster_link(response)
+	if match:
+	#videourl = re.compile('video id="vporn-video-player".*?<source src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(html)[0]
+	#if download == 1:
+	#	utils.downloadVideo(videourl, name)
+	#else:  
+	# if match:
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(match, listitem)	
+		#utils.playvid(match, name, download)	
+		#play_item = xbmcgui.ListItem(path=match)
+		#xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem=play_item)
+	else:
+		utils.notify('Oh oh','Couldn\'t find a video')
 
 @utils.url_dispatcher.register('508', ['url'])
 def Categories(url):
@@ -91,17 +104,18 @@ def Search(url, keyword=None):
         List(searchUrl)
 
 def get_xhamster_link(html):
-    for line in html.split('\n'):
-        line = line.strip()
-        if line.startswith("window.initials"):
-            jsonline = line[18:-1]
-            break
-    else:
-        return None
-    try:
-        xjson = json.loads(jsonline)
-        highest_quality_source = xjson["xplayerSettings"]["sources"]["mp4"][-1]
-        links = (highest_quality_source["url"], highest_quality_source["fallback"])
-        return links[0] if 'xhcdn' in links[0] or not links[1] else links[1]
-    except IndexError:
-        return None
+	for line in html.split('\n'):
+		line = line.strip()
+		if line.startswith("window.initials"):
+			jsonline = line[18:-1]
+			break
+	else:
+		return None
+	try:
+		
+		xjson = json.loads(jsonline)
+		highest_quality_source = xjson["xplayerSettings"]["sources"]['standard']["mp4"][0]#[-1]
+		links = (highest_quality_source["url"], highest_quality_source["fallback"])
+		return links[0] if 'xhcdn' in links[0] or not links[1] else links[1]
+	except IndexError:
+		return None

@@ -25,7 +25,7 @@ import xbmcgui
 from resources.lib import utils
 
 progress = utils.progress
-  
+
 
 @utils.url_dispatcher.register('390')
 def Main():
@@ -37,25 +37,25 @@ def Main():
 
 @utils.url_dispatcher.register('391', ['url'])
 def List(url):
-    try:
-        listhtml = utils.getHtml(url, '')
-    except:
-        return None
-    main_block = re.compile('videos search-video-thumbs[^>]+>(.*?)<div class="reset">', re.DOTALL).findall(listhtml)[0]
-    match = re.compile('<li class="js-pop.*?<a href="([^"]+)" title="([^"]+)".*?data-mediumthumb="([^"]+)".*?<var class="duration">([^<]+)</var>(.*?)</div', re.DOTALL).findall(main_block)
-    for videopage, name, img, duration, hd in match:
-        if hd.find('HD') > 0:
-            hd = " [COLOR orange]HD[/COLOR] "
-        else:
-            hd = " "            
-        name = utils.cleantext(name)
-        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
-        utils.addDownLink(name, 'https://www.pornhub.com' + videopage, 392, img, '')
-    try:
-        nextp=re.compile('<li class="page_next"><a href="(.+?)" class="orangeButton">Next', re.DOTALL).findall(listhtml)
-        utils.addDir('Next Page', 'https://www.pornhub.com' + nextp[0].replace('&amp;','&'), 391,'')
-    except: pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	try:
+		listhtml = utils.getHtml(url, '')
+	except:
+		return None
+	main_block = re.compile('videos search-video-thumbs[^>]+>(.*?)<div class="reset">', re.DOTALL).findall(listhtml)[0]
+	match = re.compile('<li class=" js-pop.*?<a href="([^"]+)" title="([^"]+)".*?data-mediumthumb="([^"]+)".*?<var class="duration">([^<]+)</var>(.*?)</div', re.DOTALL).findall(main_block)
+	for videopage, name, img, duration, hd in match:
+		if hd.find('HD') > 0:
+			hd = " [COLOR orange]HD[/COLOR] "
+		else:
+			hd = " "            
+		name = utils.cleantext(name)
+		name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
+		utils.addDownLink(name, 'https://www.pornhub.com' + videopage, 392, img, '')
+	try:
+		nextp=re.compile('<li class="page_next"><a href="(.+?)" class="orangeButton">Next', re.DOTALL).findall(listhtml)
+		utils.addDir('Next Page', 'https://www.pornhub.com' + nextp[0].replace('&amp;','&'), 391,'')
+	except: pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('394', ['url'], ['keyword'])    
@@ -72,14 +72,14 @@ def Search(url, keyword=None):
 
 @utils.url_dispatcher.register('393', ['url'])
 def Categories(url):
-    cathtml = utils.getHtml(url, '')
-    match = re.compile(r'<div class="category-wrapper.*?<a href="([^"]+)"\s*?alt="([^"]+)"[^>]+>\s*?<img src="([^"]+)"', re.DOTALL).findall(cathtml)
-    for catpage, name, img in match:
-        if '?' in catpage:
-            utils.addDir(name, 'https://www.pornhub.com' + catpage + "&o=cm", 391, img, '')
-        else:
-            utils.addDir(name, 'https://www.pornhub.com' + catpage + "?o=cm", 391, img, '')
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	cathtml = utils.getHtml(url, '')
+	match = re.compile(r'<div class="category-wrapper.*?<a href="([^"]+)"\s*?alt="([^"]+)".+?data-thumb_url="(.+?)"', re.DOTALL).findall(cathtml)
+	for catpage, name, img in match:
+		if '?' in catpage:
+			utils.addDir(name, 'https://www.pornhub.com' + catpage + "&o=cm", 391, img, '')
+		else:
+			utils.addDir(name, 'https://www.pornhub.com' + catpage + "?o=cm", 391, img, '')
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('392', ['url', 'name'], ['download'])    

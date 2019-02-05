@@ -20,33 +20,32 @@ import re
 
 import xbmcplugin
 from resources.lib import utils
-
     
 @utils.url_dispatcher.register('310')
 def Main():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://czech3x.net/',313,'','')
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://czech3x.net/?s=',314,'','')
-    List('http://czech3x.net')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://porn-czech.com/',313,'','')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://porn-czech.com/?s=',314,'','') 
+    List('http://porn-czech.com/')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('311', ['url'])
 def List(url):
-    try:
-        listhtml = utils.getHtml(url, '')
-    except:
-        return None
-    match = re.compile('<div id="main">(.*?)<div id="sidebar', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-    match1 = re.compile(r'data-id="\d+" title="([^"]+)" href="([^"]+)".*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(match)
-    for name, videopage, img in match1:
-        name = utils.cleantext(name)
-        utils.addDownLink(name, videopage, 312, img, '')
-    try:
-        nextp = re.compile('link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', nextp[0], 311,'')
-    except:
-        pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	try:
+		listhtml = utils.getHtml(url, '')
+	except:
+		return None
+	match = re.compile('</nav>(.+?)alert alert-info', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+	match1 = re.compile(r'<a title="(.+?)" href="(.+?)"><img.+?src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match)
+	for name, videopage, img in match1:
+		name = utils.cleantext(name)
+		utils.addDownLink(name, videopage, 312, img, '')
+	try:
+		nextp = re.compile('link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+		utils.addDir('Next Page', nextp[0], 311,'')
+	except:
+		pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('312', ['url', 'name'], ['download'])

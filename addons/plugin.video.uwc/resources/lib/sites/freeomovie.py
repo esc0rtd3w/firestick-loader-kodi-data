@@ -22,7 +22,6 @@ import re
 import xbmcplugin
 from resources.lib import utils
 
-
 progress = utils.progress
 
 @utils.url_dispatcher.register('370') 
@@ -37,16 +36,17 @@ def List(url):
     try:
         listhtml = utils.getHtml(url, '')
     except:
+        
         return None
     match = re.compile('<h2><a href="([^"]+)".*?title="([^"]+)">.+?<img src="([^"]+)".+? width="', re.DOTALL).findall(listhtml)
     for videopage, name, img in match:
         name = utils.cleantext(name)
+        img = img.replace('/i/','/t/')
         utils.addDownLink(name, videopage, 372, img, '')
     try:
         nextp = re.compile('<span class=\'current\'>.+?</span><a class="page larger".*?href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
         utils.addDir('Next Page', nextp[0], 371,'')
-    except:
-        pass
+    except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('374', ['url'], ['keyword'])     
@@ -57,12 +57,14 @@ def Search(url, keyword=None):
     else:
         title = keyword.replace(' ','+')
         searchUrl = searchUrl + title
+        print "Searching URL: " + searchUrl
         List(searchUrl)
 
 @utils.url_dispatcher.register('373', ['url']) 
 def Cat(url):
     listhtml = utils.getHtml(url, '')
-    match = re.compile('<li><a href="([^"]+)" rel="tag">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match0 = re.compile('<h2>Categories(.+?)<tr id="myRow">', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]	
+    match = re.compile('<a href="(.+?)"\s+title=".+?">(.+?)<', re.DOTALL | re.IGNORECASE).findall(match0)
     for catpage, name in match:
         name = utils.cleantext(name)
         utils.addDir(name, catpage, 371, '', '')
@@ -70,4 +72,4 @@ def Cat(url):
 
 @utils.url_dispatcher.register('372', ['url', 'name'], ['download'])   
 def Playvid(url, name, download=None):
-    utils.PLAYVIDEO(url, name, download, regex='myURL\[\]=([^"]+)')
+	utils.PLAYVIDEO(url, name, download)

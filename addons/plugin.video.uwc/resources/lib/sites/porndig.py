@@ -24,10 +24,11 @@ import xbmc
 import xbmcplugin
 import xbmcgui
 from resources.lib import utils
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'#resolveurl.lib.net.get_ua()
 
 addon = utils.addon
 
-headers = {'User-Agent': utils.USER_AGENT,
+headers = {'User-Agent': USER_AGENT,
            'X-Requested-With': 'XMLHttpRequest',
            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
            'Accept': '*/*',
@@ -40,7 +41,7 @@ headers['Cookie'] = addon.getSetting('pd_cookie')
 pdreferer = 'https://www.porndig.com/videos/'
 
 class UrlOpenerPD(urllib.FancyURLopener):
-    version = utils.USER_AGENT
+    version = USER_AGENT
 
 
 def set_cookie():
@@ -196,59 +197,64 @@ def Studios(url, page=1):
 
 @utils.url_dispatcher.register('291', ['channel', 'section'], ['page'])
 def List(channel, section, page=0):
-    if section == 0:
-        data = VideoListData(page, channel)
-        maxresult = 100
-    elif section == 1:
-        data = VideoListStudio(page, channel)
-        maxresult = 65
-    elif section == 2:
-        data = VideoListPornstar(page, channel)
-        maxresult = 65
-    elif section == 3:
-        data = CatListData(page, channel)
-        maxresult = 100
-    try:
-        urldata = utils.getHtml("https://www.porndig.com/posts/load_more_posts", pdreferer, headers, data=data)
-    except:
-        return None
-    urldata = ParseJson(urldata)
-    i = 0
-    match = re.compile(
-        r'<a.*?href="([^"]+)" title="([^"]+)">.*?</h2>(.*?)</div>.?<img.*?src="([^"]+)".*?>.*?<span class="pull-left">(\d[^\s<]+)',
-        re.DOTALL | re.IGNORECASE).findall(urldata)
-    for url, name, hd, img, duration in match:
-        if len(hd) > 2:
-            if hd.find('full') > 0:
-                hd = " [COLOR yellow]FULLHD[/COLOR] "
-            elif hd.find('4k') > 0:
-                hd = " [COLOR red]4K[/COLOR] "                
-            else:
-                hd = " [COLOR orange]HD[/COLOR] "
-        else:
-            hd = " "
-        url = "https://www.porndig.com" + url
-        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
-        utils.addDownLink(name, url, 292, img, '')
-        i += 1
-    if i >= maxresult and channel:
-        page += 1
-        name = 'Page ' + str(page)
-        utils.addDir(name, '', 291, page=page, channel=channel, section=section)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	if section == 0:
+		data = VideoListData(page, channel)
+		maxresult = 100
+	elif section == 1:
+		data = VideoListStudio(page, channel)
+		maxresult = 65
+	elif section == 2:
+		data = VideoListPornstar(page, channel)
+		maxresult = 65
+	elif section == 3:
+		data = CatListData(page, channel)
+		maxresult = 100
+	try:
+		urldata = utils.getHtml("https://www.porndig.com/posts/load_more_posts", pdreferer, headers, data=data)
+	except:
+		return None
+	urldata = ParseJson(urldata)
+	
+	i = 0
+	match = re.compile(
+		r'<a.*?href="([^"]+)" title="([^"]+)">.+?img\s+src="(.+?)".+?<span class="pull-left">(.+?)<',
+		re.DOTALL | re.IGNORECASE).findall(urldata)
+	for url, name,img, duration in match:
+		#if len(hd) > 2:
+		#	if hd.find('full') > 0:
+		#		hd = " [COLOR yellow]FULLHD[/COLOR] "
+		#	elif hd.find('4k') > 0:
+		#		hd = " [COLOR red]4K[/COLOR] "                
+		#	else:
+		#		hd = " [COLOR orange]HD[/COLOR] "
+		#else:
+		hd = " "
+		url = "https://www.porndig.com" + url
+		name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
+		utils.addDownLink(name, url, 292, img, '')
+		i += 1
+	if i >= maxresult and channel:
+		page += 1
+		name = 'Page ' + str(page)
+		utils.addDir(name, '', 291, page=page, channel=channel, section=section)
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('292', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download)
-    vp.progress.update(25, "", "Loading video page", "")
-    videopage = utils.getHtml(url, pdreferer, headers, data='')
-    links = re.compile('<a href="([^"]+)" class="post_download_link clearfix">[^>]+>([^<]+)<',
-                       re.DOTALL | re.IGNORECASE).findall(videopage)
-    videourl = getVideoUrl(links)
-    videourl = utils.getVideoLink(videourl, url)
-    vp.play_from_direct_link(videourl)
-
+	#vp = utils.VideoPlayer(name, download)
+	#vp.progress.update(25, "", "Loading video page", "")
+	videopage = utils.getHtml(url, pdreferer, headers, data='')
+	links = re.compile('<a href="([^"]+)" class="post_download_link clearfix">[^>]+>([^<]+)<',
+					re.DOTALL | re.IGNORECASE).findall(videopage)
+	videourl = getVideoUrl(links)
+	videourl = utils.getVideoLink(videourl, url)
+	
+	#vp.play_from_direct_link(videourl)
+	iconimage = xbmc.getInfoImage("ListItem.Thumb")
+	listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+	listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+	xbmc.Player().play(videourl, listitem)	
 
 def getVideoUrl(testquality):
     print testquality

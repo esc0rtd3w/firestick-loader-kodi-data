@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 '''
     Ultimate Whitecream
     Copyright (C) 2015 Whitecream
@@ -26,7 +27,7 @@ import xbmcgui
 from resources.lib import utils
 
 progress = utils.progress
-
+import urllib2,urllib
 
 @utils.url_dispatcher.register('340')
 def Main():
@@ -112,21 +113,53 @@ def Models(url):
 
 @utils.url_dispatcher.register('342', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    videopage = utils.getHtml(url, '')
-    videourl = re.compile('video_url="(.+?)"', re.DOTALL | re.IGNORECASE).findall(videopage)
-    videourl = videourl[-1]
-    if download == 1:
-        utils.downloadVideo(videourl, name)
-    else:    
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        listitem.setProperty("IsPlayable","true")
-        if int(sys.argv[1]) == -1:
-            pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-            pl.clear()
-            pl.add(videourl, listitem)
-            xbmc.Player().play(pl)
-        else:
-            listitem.setPath(str(videourl))
-            xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
+	videopage = utils.getHtml(url, '')
+	videourl = re.compile('video_url="([^"]+)"').findall(videopage)[0]
+	videourl += re.compile('video_url\+="([^"]+)"').findall(videopage)[0]	
+	partes = videourl.split('||')
+	videourl = decode_url(partes[0])
+	videourl = re.sub('/get_file/\d+/[0-9a-z]{32}/', partes[1], videourl)
+	videourl += '&' if '?' in videourl else '?'
+	videourl += 'lip=' + partes[2] + '&lt=' + partes[3]		
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:    
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		listitem.setProperty("IsPlayable","true")
+		if int(sys.argv[1]) == -1:
+			pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
+			pl.clear()
+			pl.add(videourl, listitem)
+			xbmc.Player().play(pl)
+		else:
+			iconimage = xbmc.getInfoImage("ListItem.Thumb")
+			listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+			listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+			xbmc.Player().play(videourl, listitem)
+def decode_url(txt):
+	_0x52f6x15 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'
+	reto = ''; n = 0
+	# En las dos siguientes líneas, ABCEM ocupan 2 bytes cada letra! El replace lo deja en 1 byte. !!!!: АВСЕМ (10 bytes) ABCEM (5 bytes)
+	txt = re.sub('[^АВСЕМA-Za-z0-9\.\,\~]', '', txt)
+	txt = txt.replace('А', 'A').replace('В', 'B').replace('С', 'C').replace('Е', 'E').replace('М', 'M')
+	
+	while n < len(txt):
+		a = _0x52f6x15.index(txt[n])
+		n += 1
+		b = _0x52f6x15.index(txt[n])
+		n += 1
+		c = _0x52f6x15.index(txt[n])
+		n += 1
+		d = _0x52f6x15.index(txt[n])
+		n += 1
+	
+		a = a << 2 | b >> 4
+		b = (b & 15) << 4 | c >> 2
+		e = (c & 3) << 6 | d
+		reto += chr(a)
+		if c != 64: reto += chr(b)
+		if d != 64: reto += chr(e)
+	
+	return urllib.unquote(reto)

@@ -58,12 +58,12 @@ class RealDebridResolver(ResolveUrl):
         self.hosts = None
         self.headers = {'User-Agent': USER_AGENT}
 
-    def get_media_url(self, host, media_id, retry=False):
+    def get_media_url(self, host, media_id, retry=False, cached_only=False):
         try:
             self.headers.update({'Authorization': 'Bearer %s' % self.get_setting('token')})
             if media_id.lower().startswith('magnet:'):
                 cached = self.__check_cache(media_id)
-                if not cached and self.get_setting('cached_only') == 'true':
+                if not cached and (self.get_setting('cached_only') == 'true' or cached_only):
                     raise ResolverError('Real-Debrid: Cached torrents only allowed to be initiated')
                 torrent_id = self.__add_magnet(media_id)
                 if not torrent_id == "":
@@ -181,7 +181,7 @@ class RealDebridResolver(ResolveUrl):
             return helpers.pick_source(links)
 
     def __check_cache(self, media_id):
-        r = re.search('''magnet:.+?urn:(\w+):([a-zA-Z0-9]+)''', media_id, re.I)
+        r = re.search('''magnet:.+?urn:([a-zA-Z0-9]+):([a-zA-Z0-9]+)''', media_id, re.I)
         if r:
             _hash, _format = r.group(2).lower(), r.group(1)
             try:
@@ -323,7 +323,7 @@ class RealDebridResolver(ResolveUrl):
             js_result = json.loads(self.net.http_GET(url, headers=self.headers).content)
             regexes = [regex[1:-1].replace('\/', '/').rstrip('\\') for regex in js_result]
             logger.log_debug('RealDebrid hosters : %s' % regexes)
-            hosters = [re.compile(regex) for regex in regexes]
+            hosters = [re.compile(regex, re.I) for regex in regexes]
         except Exception as e:
             logger.log_error('Error getting RD regexes: %s' % e)
         return hosters
@@ -334,6 +334,8 @@ class RealDebridResolver(ResolveUrl):
         try:
             url = '%s/%s' % (rest_base_url, hosts_domains_path)
             hosts = json.loads(self.net.http_GET(url, headers=self.headers).content)
+            if self.get_setting('torrents') == 'true':
+                hosts.extend([u'torrent', u'magnet'])
         except Exception as e:
             logger.log_error('Error getting RD hosts: %s' % e)
         logger.log_debug('RealDebrid hosts : %s' % hosts)

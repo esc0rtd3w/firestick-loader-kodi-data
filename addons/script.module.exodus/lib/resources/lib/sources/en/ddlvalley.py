@@ -25,6 +25,7 @@ from resources.lib.modules import debrid
 from resources.lib.modules import cfscrape
 from resources.lib.modules import dom_parser2
 
+
 class source:
     def __init__(self):
         self.priority = 1
@@ -32,18 +33,17 @@ class source:
         self.domains = ['ddlvalley.me']
         self.base_link = 'http://www.ddlvalley.me'
         self.search_link = 'search/%s/'
-
+        self.scraper = cfscrape.create_scraper()
 
     def movie(self, imdb, title, localtitle, aliases, year):
         try:
-            clean_title = cleantitle.geturl(title).replace('-','+')
-            url = urlparse.urljoin(self.base_link, self.search_link % clean_title)
+            clean_title = cleantitle.geturl(title).replace('-','+').replace(': ', '+')
+            url = urlparse.urljoin(self.base_link, self.search_link % clean_title).lower()
             url = {'url': url, 'title': title, 'year': year}
             url = urllib.urlencode(url)
             return url
         except:
             return
-
 
     def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
         try:
@@ -52,7 +52,6 @@ class source:
             return url
         except:
             return
-
 
     def episode(self, url, imdb, tvdb, title, premiered, season, episode):
         try:
@@ -65,7 +64,6 @@ class source:
             return url
         except:
             return
-
 
     def sources(self, url, hostDict, hostprDict):
         try:    
@@ -80,18 +78,20 @@ class source:
             data = dict([(i, data[i][0]) if data[i] else (i, '') for i in data])
 
             title = data['tvshowtitle'] if 'tvshowtitle' in data else data['title']
+
             hdlr = 'S%02dE%02d' % (int(data['season']), int(data['episode'])) if 'tvshowtitle' in data else data['year']
+
             query = '%s S%02dE%02d' % (data['tvshowtitle'], int(data['season']), int(data['episode'])) if\
-                'tvshowtitle' in data else '%s %s' % (data['title'], data['year'])
+                'tvshowtitle' in data else '%s' % data['title']
             query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
 
             url = self.search_link % urllib.quote_plus(query)
             url = urlparse.urljoin(self.base_link, url)
-            scraper = cfscrape.create_scraper()
-            r = scraper.get(url).content
+            headers = {'Referer': 'http://www.ddlvalley.me/', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+            r = self.scraper.get(url, headers=headers).content
 
             items = dom_parser2.parse_dom(r, 'h2')
-            items = [dom_parser2.parse_dom(i.content, 'a', req=['href','rel','title','data-wpel-link']) for i in items]
+            items = [dom_parser2.parse_dom(i.content, 'a', req=['href','rel','data-wpel-link']) for i in items]
             items = [(i[0].content, i[0].attrs['href']) for i in items]
 
             hostDict = hostprDict + hostDict
@@ -101,9 +101,9 @@ class source:
                     name = item[0]
                     name = client.replaceHTMLCodes(name)
 
-                    scraper = cfscrape.create_scraper()
-                    r = scraper.get(item[1]).content     
-                    links = dom_parser2.parse_dom(r, 'a', req=['href','rel','data-wpel-link','target'])
+                    headers = {'Referer': 'http://www.ddlvalley.me/', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+                    r = self.scraper.get(item[1], headers=headers).content
+                    links = dom_parser2.parse_dom(r, 'a', req=['href','rel','data-wpel-link'])
                     links = [i.attrs['href'] for i in links]
                     for url in links:
                         try:
@@ -115,7 +115,8 @@ class source:
                                 if any(i.endswith(('subs', 'sub', 'dubbed', 'dub')) for i in fmt): raise Exception()
                                 if any(i in ['extras'] for i in fmt): raise Exception()
 
-                                if '1080p' in fmt: quality = '1080p'
+                                if '2160p' in fmt: quality = '4K'
+                                elif '1080p' in fmt: quality = '1080p'
                                 elif '720p' in fmt: quality = '720p'
                                 else: quality = 'SD'
                                 if any(i in ['dvdscr', 'r5', 'r6'] for i in fmt): quality = 'SCR'
@@ -157,7 +158,7 @@ class source:
 
             return sources
         except:
-            return sources
+            return
 
     def resolve(self, url):
         return url

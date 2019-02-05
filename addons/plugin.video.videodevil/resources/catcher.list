@@ -257,7 +257,7 @@ url=%s
 quality=standard
 ########################################################
 title=pornomovies
-target=source src="([^"]+)"
+target=source\s*src="([^"]+)"
 url=%s
 build=https:%s
 quality=standard
@@ -647,6 +647,14 @@ target=src="([^"]+)" frameborder="0"
 url=%s
 build=https:%s|Referer=https://hqporner.com
 ext_target=<a href='([^']+)' style='color:#ddd'>1080p Full HD</a>
+ext_url=%s
+ext_build=http:%s
+extension=mp4
+quality=high
+target=src="([^"]+)" frameborder="0"
+url=%s
+build=https:%s|Referer=https://hqporner.com
+ext_target=<a href='([^']+)' style='color:#ddd'>4K Ultra HD</a>
 ext_url=%s
 ext_build=http:%s
 extension=mp4

@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 '''
     Ultimate Whitecream
     Copyright (C) 2015 Whitecream
@@ -22,9 +23,8 @@ import xbmc
 import xbmcplugin
 import xbmcgui
 from resources.lib import utils
-
+import urllib2,urllib
 progress = utils.progress
-
 
 @utils.url_dispatcher.register('360')
 def Main():
@@ -38,20 +38,25 @@ def Main():
 
 @utils.url_dispatcher.register('361', ['url'])
 def List(url):
-    try:
-        listhtml = utils.getHtml(url, '')
-    except:
-        return None
-    match = re.compile('<a href="([^"]+)" title="([^"]+)".*?src="([^"]+)".*?duration">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for videopage, name, img, duration in match:
-        name = utils.cleantext(name)
-        name = name + " [COLOR deeppink]" + duration + "[/COLOR]"
-        utils.addDownLink(name, videopage, 362, img, '')
-    try:
-        nextp = re.compile('<a href="([^"]+)"[^>]+>Next', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', 'http://www.tubepornclassic.com/' + nextp[0], 361,'')
-    except: pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	try:
+		listhtml = utils.getHtml3(url)
+	except:
+		return None
+	match = re.compile('<div class="item  ">.+?<a href="([^"]+)".+?class.+?src="([^"]+)".+?alt="([^"]+)".+?class="duration">(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+
+
+
+
+
+	for videopage, img, name, duration in match:
+		name = utils.cleantext(name)
+		name = name + " [COLOR deeppink]" + duration + "[/COLOR]"
+		utils.addDownLink(name, videopage, 362, img, '')
+	try:
+		nextp = re.compile('<a href="([^"]+)"[^>]+>Next', re.DOTALL | re.IGNORECASE).findall(listhtml)
+		utils.addDir('Next Page', 'http://www.tubepornclassic.com/' + nextp[0], 361,'')
+	except: pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('364', ['url'], ['keyword'])    
@@ -68,15 +73,59 @@ def Search(url, keyword=None):
 
 @utils.url_dispatcher.register('363', ['url'])
 def Cat(url):
-    listhtml = utils.getHtml(url, '')
-    match = re.compile('<a class="list-item__link" href="([^"]+)" title="([^"]+)".*?class="list-item__info">([^<]+)', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for catpage, name, videos in match:
-        name = utils.cleantext(name) + " [COLOR deeppink]" + videos + "[/COLOR]"
-        utils.addDir(name, catpage, 361)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
-
-
-@utils.url_dispatcher.register('362', ['url', 'name'], ['download'])
+	listhtml = utils.getHtml3(url)
+	match = re.compile('<a class="list-item__link" href="([^"]+)" title="([^"]+)".*?class="list-item__info">([^<]+)', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	for catpage, name, videos in match:
+		videos=videos.replace(' ','')
+		name = utils.cleantext(name) + " [COLOR deeppink]" + videos + "[/COLOR]"		
+		utils.addDir(name, catpage, 361)
+	xbmcplugin.endOfDirectory(utils.addon_handle)
+	
+@utils.url_dispatcher.register('362', ['url', 'name'], ['download'])	
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download, None, 'video_url="([^"]+)"')
-    vp.play_from_site_link(url)
+	vp = utils.VideoPlayer(name, download)
+	vp.progress.update(25, "", "Loading video page", "")
+	html = utils.getHtml3(url)
+	videourl = re.compile('video_url="([^"]+)"').findall(html)[0]
+	videourl += re.compile('video_url\+="([^"]+)"').findall(html)[0]	
+	
+	
+	videourl1 = re.compile('video_url="([^"]+)"').findall(html)[0]
+	videourl2 = re.compile('video_url\+="([^"]+)"').findall(html)[0]		
+	
+	partes = videourl.split('||')
+	videourl = decode_url(partes[0])
+	
+	videourl3 = decode_url(partes[0])
+	
+	videourl = re.sub('/get_file/\d+/[0-9a-z]{32}/', partes[1], videourl)
+	videourl += '&' if '?' in videourl else '?'
+	videourl += 'lip=' + partes[2] + '&lt=' + partes[3]	 + '&f=video.m3u8'
+	vp.play_from_direct_link(videourl)
+
+def decode_url(txt):
+	_0x52f6x15 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'
+	reto = ''; n = 0
+	# En las dos siguientes líneas, ABCEM ocupan 2 bytes cada letra! El replace lo deja en 1 byte. !!!!: АВСЕМ (10 bytes) ABCEM (5 bytes)
+	txt = re.sub('[^АВСЕМA-Za-z0-9\.\,\~]', '', txt)
+	txt = txt.replace('А', 'A').replace('В', 'B').replace('С', 'C').replace('Е', 'E').replace('М', 'M')
+	
+	while n < len(txt):
+		a = _0x52f6x15.index(txt[n])
+		n += 1
+		b = _0x52f6x15.index(txt[n])
+		n += 1
+		c = _0x52f6x15.index(txt[n])
+		n += 1
+		d = _0x52f6x15.index(txt[n])
+		n += 1
+	
+		a = a << 2 | b >> 4
+		b = (b & 15) << 4 | c >> 2
+		e = (c & 3) << 6 | d
+		reto += chr(a)
+		if c != 64: reto += chr(b)
+		if d != 64: reto += chr(e)
+	
+	return urllib.unquote(reto)	
+	

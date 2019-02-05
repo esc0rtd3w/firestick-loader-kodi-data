@@ -23,7 +23,6 @@ import xbmc
 import xbmcplugin
 import xbmcgui
 from resources.lib import utils
-
 sitelist = ['https://www.poldertube.nl', 'https://porno.milf.nl/', 'https://www.sextube.nl']
 
 
@@ -42,7 +41,7 @@ def NLTUBES(url, page=1):
 def NLVIDEOLIST(url, page=1):
     siteurl = sitelist[page]
     try:
-        link = utils.getHtml(url, '')
+        link = utils.getHtml3(url)
     except:
         
         return None
@@ -65,18 +64,19 @@ def NLVIDEOLIST(url, page=1):
 
 @utils.url_dispatcher.register('102', ['url', 'name'], ['download'])
 def NLPLAYVID(url,name, download=None):
-    videopage = utils.getHtml(url, '')
-    videourl = re.compile('<source src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
-    videourl = videourl[0]
-    if download == 1:
-        utils.downloadVideo(videourl, name)
-    else:    
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        xbmc.Player().play(videourl, listitem)
-
-
+	videopage = utils.getHtml3(url)
+	videourl = re.compile('<source src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
+	videourl = videourl[0]
+	videourl+='|verifypeer=false'
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:    
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(videourl, listitem)			
+		
+		
 @utils.url_dispatcher.register('104', ['url'], ['page', 'keyword'])  
 def NLSEARCH(url, page=1, keyword=None):
     searchUrl = url
@@ -91,7 +91,7 @@ def NLSEARCH(url, page=1, keyword=None):
 @utils.url_dispatcher.register('103', ['url'], ['page'])
 def NLCAT(url, page=1):
     siteurl = sitelist[page]
-    link = utils.getHtml(url, '')
+    link = utils.getHtml3(url)
     tags = re.compile('<div class="category".*?href="([^"]+)".*?<h2>([^<]+)<.*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
     for caturl, catname, catimg in tags:
         catimg = siteurl + catimg

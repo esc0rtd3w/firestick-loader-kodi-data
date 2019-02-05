@@ -32,32 +32,40 @@ def Main():
 
 @utils.url_dispatcher.register('501', ['url'])
 def List(url):
-    xbmc.log("List: " + url)
-    try:
-        listhtml = utils.getHtml(url, '')
-    except:
-        return None
-    match = re.compile('class="thumb">.*?href="([^"]+)".*?class="time">([^<]+)</span>.*?span class="hd([^<]+)</span>.*?<img src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for videopage, duration, hd, img, name in match:
-        name = utils.cleantext(name)
-        if hd.find('is-hd') > 0:
-            hd = " [COLOR orange]HD[/COLOR] "
-        else:
-            hd = " "
-        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
-        utils.addDownLink(name, videopage, 502, img, '')
-    try:
-        nextp = re.compile('<link rel="next" href="(.+?)">').findall(listhtml)
-        utils.addDir('Next Page', nextp[0], 501, '')
-    except:
-        pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	xbmc.log("List: " + url)
+	try:
+		listhtml = utils.getHtml(url, '')
+	except:
+		return None
+
+	match = re.compile('class="video">.*?href="([^"]+)".*?class="time">([^<]+)</span>.*?span class="hd([^<]+)</span>.*?<img src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	for videopage, duration, hd, img, name in match:
+		name = utils.cleantext(name)
+		if hd.find('HD Video') > 0:
+			hd = " [COLOR orange]HD[/COLOR] "
+		else:
+			hd = " "
+		name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
+		utils.addDownLink(name, videopage, 502, img, '')
+	try:
+		nextp = re.compile('<link rel="next" href="(.+?)">').findall(listhtml)
+		utils.addDir('Next Page', nextp[0], 501, '')
+	except:
+		pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('502', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download, None, 'video id="vporn-video-player".*?<source src="([^"]+)"')
-    vp.play_from_site_link(url)
-
+	html = utils.getHtml(url, '')
+	videourl = re.compile('video id="vporn-video-player".*?<source src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(html)[0]
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:    
+	#	xbmc.Player().play(str(videourl))
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(videourl, listitem)		
 
 @utils.url_dispatcher.register('503')
 def Categories():

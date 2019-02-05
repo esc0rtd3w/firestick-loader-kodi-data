@@ -26,6 +26,8 @@ __version__ = "1.1.64"
 
 import urllib
 import urllib2
+#import urllib3
+#urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import re
 import cookielib
 import os.path
@@ -37,6 +39,7 @@ import urlparse
 import base64
 from StringIO import StringIO
 import gzip
+import requests
 
 import xbmc
 import xbmcplugin
@@ -57,7 +60,7 @@ from url_dispatcher import URL_Dispatcher
 
 url_dispatcher = URL_Dispatcher()
 
-USER_AGENT = resolveurl.lib.net.get_ua()
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'#resolveurl.lib.net.get_ua()
 
 headers = {'User-Agent': USER_AGENT,
            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -488,7 +491,49 @@ def getHtml2(url):
     response.close()
     return data
 
+def getHtml3(url):
+	headok = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',}
+	data = requests.get(url,headers=headok,verify=False).content
+	# response = urlopen(req, timeout=60)
+	# data = response.read()
+	# response.close()
+	return data	
+def getHtml4(url):
+	headok = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0',
+		'Accept': '*/*',
+		'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
+		'X-Requested-With': 'XMLHttpRequest',}
+	data = requests.get(url,headers=headok,verify=False).json()
 
+	return data		
+
+def getHtml5(url):	
+	headersy = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0',
+		'Accept': '*/*',
+		'Accept-Language': 'pl,en-US;q=0.7,en;q=0.3',
+		'Referer': 'https://beeg.com/',
+		'X-Requested-With': 'XMLHttpRequest',
+		'DNT': '1',
+		'Connection': 'keep-alive',
+	}	
+	
+	sess=requests.session()
+	#UA      = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36'
+	#sess.headers=headersy
+	data=sess.get(url,headers=headersy,verify=False).content	
+	
+	
+	
+	#data = requests.get(url,headers=headersy,verify=False,timeout=160).content
+	# response = urlopen(req, timeout=60)
+	# data = response.read()
+	# response.close()
+	return data		
+	
+	
 def getVideoLink(url, referer, hdr=None, data=None):
     if not hdr:
         req2 = Request(url, data, headers)
@@ -773,7 +818,7 @@ def delKeyword(keyword):
     xbmc.log('keyword: ' + keyword)
     conn = sqlite3.connect(favoritesdb)
     c = conn.cursor()
-    c.execute("DELETE FROM keywords WHERE keyword = ?", (keyword,))
+    c.execute("DELETE FROM keywords WHERE keyword = ?" (keyword,))
     conn.commit()
     conn.close()
     xbmc.executebuiltin('Container.Refresh')
@@ -934,7 +979,6 @@ class VideoPlayer():
             return f(inst, *args, **kwargs)
         return wrapped
 
-    @_cancellable
     def _clean_urls(self, url_list):
         filtered_words = ['google']
         filtered_ends = ['.js', '.css', '/premium.html', '.jpg', '.gif', '.png', '.ico']
@@ -942,7 +986,7 @@ class VideoPlayer():
         new_list = []
         for source in url_list:
             to_break = False
-            if source._url in added or not source:
+            if source._url in added:
                 continue
             for word in filtered_words:
                 if word in source._url or to_break:
@@ -961,13 +1005,12 @@ class VideoPlayer():
     def play_from_site_link(self, url, referrer=''):
         self.progress.update(25, "", "Loading video page", "")
         html = getHtml(url, referrer)
-        self.play_from_html(html, url)
+        html += self._check_suburls(html, url)
+        self.play_from_html(html)
 
     @_cancellable
-    def play_from_html(self, html, url=None):
-        self.progress.update(40, "", "Searching for supported hosts", "")
-        solved_suburls = self._check_suburls(html, url)
-        self.progress.update(60, "", "Searching for supported hosts", "")
+    def play_from_html(self, html):
+        self.progress.update(50, "", "Searching for supported hosts", "")
         direct_links = None
         if self.direct_regex:
             direct_links = re.compile(self.direct_regex, re.DOTALL | re.IGNORECASE).findall(html)
@@ -978,21 +1021,14 @@ class VideoPlayer():
             elif not self.regex:
                 notify('Oh oh','Could not find a supported link')
         if self.regex and not direct_links:
-            scraped_sources = resolveurl.scrape_supported(html, self.regex)
-            scraped_sources = scraped_sources if scraped_sources else []
-            scraped_sources.extend(solved_suburls)
-            self.play_from_link_list(scraped_sources)
+            use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
+            sources = self._clean_urls([resolveurl.HostedMediaFile(x, title=x.split('/')[2], include_universal=use_universal) for x in resolveurl.scrape_supported(html, self.regex)])
+            if not sources:
+                notify('Oh oh','Could not find a supported link')
+                return
+            self._select_source(sources)
         if not self.direct_regex and not self.regex:
             raise ValueError("No regular expression specified")
-    
-    @_cancellable
-    def play_from_link_list(self, links):
-        use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
-        sources = self._clean_urls([resolveurl.HostedMediaFile(x, title=x.split('/')[2], include_universal=use_universal) for x in links])
-        if not sources:
-            notify('Oh oh','Could not find a supported link')
-            return
-        self._select_source(sources)
 
     @_cancellable
     def _select_source(self, sources):
@@ -1006,8 +1042,9 @@ class VideoPlayer():
     @_cancellable
     def play_from_link_to_resolve(self, source):
         if type(source) is str:
-            self.play_from_link_list([source])
-            return
+            use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
+            title = source.split('/')[2].split('.')[0] if '.' in source.split('/')[2] else source.split('/')[2]
+            source = resolveurl.HostedMediaFile(source, title=title, include_universal=use_universal)
         self.progress.update(80, "", "Passing link to ResolveURL", "Playing from " + source.title)
         try:
             link = source.resolve()
@@ -1023,55 +1060,74 @@ class VideoPlayer():
         self.progress.update(90, "", "Playing video", "")
         playvid(direct_link, self.name, self.download)
 
-    @_cancellable
     def _check_suburls(self, html, referrer_url):
+        klurl = re.compile(r"//(?:www\.)?keeplinks\.eu/p([0-9a-zA-Z/]+)", re.DOTALL | re.IGNORECASE).findall(html)
         sdurl = re.compile(r'streamdefence\.com/view.php\?ref=([^"]+)"', re.DOTALL | re.IGNORECASE).findall(html)
         sdurl_world = re.compile(r'.strdef\.world/([^"]+)', re.DOTALL | re.IGNORECASE).findall(html)
         fcurl = re.compile(r'filecrypt\.cc/Container/([^\.]+)\.html', re.DOTALL | re.IGNORECASE).findall(html)
-        links = []
-        if sdurl or sdurl_world or fcurl:
-            self.progress.update(50, "", "Found subsites", "")
-        if sdurl:
-            links.extend(self._solve_streamdefence(sdurl, referrer_url, False))
+        if klurl or sdurl or sdurl_world or fcurl:
+            html = ''
+            self.progress.update(30, "", "Found subsites", "")
+        if klurl:
+            html += self._solve_keep_links(klurl)
+        elif sdurl:
+            html += self._solve_streamdefence(sdurl, referrer_url, False)
         elif sdurl_world:
-            links.extend(self._solve_streamdefence(sdurl_world, referrer_url, True))
+            html += self._solve_streamdefence(sdurl_world, referrer_url, True)
         elif fcurl:
-            links.extend(self._solve_filecrypt(fcurl, referrer_url))
-        return links
+            html += self._solve_filecrypt(fcurl, referrer_url)
+        return html
 
-    @_cancellable
+    def _solve_keep_links(self, klurls):
+        self.progress.update(35, "", "Loading keeplinks sites", "")
+        klpages = ''
+        for kl_url in klurls:
+            klurl = 'http://www.keeplinks.eu/p' + kl_url
+            kllink = getVideoLink(klurl, '')
+            kllinkid = kllink.split('/')[-1]
+            klheader = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+            'Accept-Encoding': 'none',
+            'Accept-Language': 'en-US,en;q=0.8',
+            'Connection': 'keep-alive',
+            'Cookie': 'flag['+kllinkid+'] = 1;'}
+            klpage = getHtml(kllink, klurl, klheader)
+            klpages += klpage
+        return klpages
+
     def _solve_streamdefence(self, sdurls, url, world=False):
-        self.progress.update(55, "", "Loading streamdefence sites", "")
+        self.progress.update(35, "", "Loading streamdefence sites", "")
         sdpages = ''
         for sd_url in sdurls:
             if not world:
                 sdurl = 'http://www.streamdefence.com/view.php?ref=' + sd_url
             else:
                 sdurl = 'https://www.strdef.world/' + sd_url
-            sdsrc = getHtml(sdurl, url if url else sdurl)
+            sdsrc = getHtml(sdurl, url)
             sdpage = streamdefence(sdsrc)
             sdpages += sdpage
-        sources = set(re.compile('iframe src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(sdpages))
-        return sources
+        return sdpages
 
-    @_cancellable
     def _solve_filecrypt(self, fc_urls, url):
-        self.progress.update(55, "", "Loading filecrypt sites", "")
-        sites = set()
+        self.progress.update(35, "", "Loading filecrypt sites", "")
+        sites = ''
         for fc_url in fc_urls:
             fcurl = 'http://filecrypt.cc/Container/' + fc_url + ".html"
-            fcsrc = getHtml(fcurl, url if url else fcurl, headers)
+            fcsrc = getHtml(fcurl, url)
             fcmatch = re.compile(r"openLink.?'([\w\-]*)',", re.DOTALL | re.IGNORECASE).findall(fcsrc)
+            fcurls = ""
             for fclink in fcmatch:
                 fcpage = "http://filecrypt.cc/Link/" + fclink + ".html"
                 fcpagesrc = getHtml(fcpage, fcurl)
-                fclink2 = re.search('''top.location.href='([^']+)''', fcpagesrc)
+                fclink2 = re.search('<iframe .*? noresize src="(.*)"></iframe>', fcpagesrc)
                 if fclink2:
                     try:
                         fcurl2 = getVideoLink(fclink2.group(1), fcpage)
-                        sites.add(fcurl2)
+                        fcurls = fcurls + " " + fcurl2
                     except:
                         pass
+            sites += fcurls
         return sites
 
 

@@ -1292,7 +1292,7 @@
 				<top>5</top>
 				<height>225</height>
 				<width min="200" max="650">auto</width>
-				<label>Build 20190125.001     https://github.com/esc0rtd3w/firestick-loader/</label>
+				<label>Build 20190204.001     https://github.com/esc0rtd3w/firestick-loader/</label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10</font>

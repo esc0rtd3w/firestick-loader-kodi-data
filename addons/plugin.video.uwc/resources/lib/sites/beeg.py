@@ -59,27 +59,27 @@ def BGMain():
 
 @utils.url_dispatcher.register('81', ['url'])
 def BGList(url):
-    bgversion = addon.getSetting('bgversion')
-    try:
-        listjson = utils.getHtml(url,'')
-    except:
-        return None
-    match = re.compile(r'\{"title":"([^"]+)","id":"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listjson)
-    for title, videoid in match:
-        img = "https://img.beeg.com/236x177/" + videoid +  ".jpg"
-        videopage = "https://beeg.com/api/v6/" + bgversion + "/video/" + videoid
-        name = title.encode("utf8")
-        utils.addDownLink(name, videopage, 82, img, '')
-    try:
-        page=re.compile('https://beeg.com/api/v6/' + bgversion + '/index/[^/]+/([0-9]+)/pc', re.DOTALL | re.IGNORECASE).findall(url)[0]
-        page = int(page)
-        npage = page + 1
-        jsonpage = re.compile(r'pages":(\d+)', re.DOTALL | re.IGNORECASE).findall(listjson)[0]
-        if int(jsonpage) > page:
-            nextp = url.replace("/"+str(page)+"/", "/"+str(npage)+"/")
-            utils.addDir('Next Page ('+str(npage)+')', nextp,81,'')
-    except: pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	bgversion = addon.getSetting('bgversion')
+	try:
+		listjson = utils.getHtml(url,'')
+	except:
+		return None
+	match = re.compile(r'\{"title":"([^"]+)","id":"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listjson)	
+	for title, videoid in match:
+		img = "https://img.beeg.com/236x177/" + videoid +  ".jpg"
+		videopage = "https://beeg.com/api/v6/" + bgversion + "/video/" + videoid
+		name = title.encode("utf8")
+		utils.addDownLink(name, videopage, 82, img, '')
+	try:
+		page=re.compile('https://beeg.com/api/v6/' + bgversion + '/index/[^/]+/([0-9]+)/pc', re.DOTALL | re.IGNORECASE).findall(url)[0]
+		page = int(page)
+		npage = page + 1
+		jsonpage = re.compile(r'pages":(\d+)', re.DOTALL | re.IGNORECASE).findall(listjson)[0]
+		if int(jsonpage) > page:
+			nextp = url.replace("/"+str(page)+"/", "/"+str(npage)+"/")
+			utils.addDir('Next Page ('+str(npage)+')', nextp,81,'')
+	except: pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 # from youtube-dl   
 def split(o, e):
@@ -108,53 +108,58 @@ def decrypt_key(key):
 
 @utils.url_dispatcher.register('82', ['url', 'name'], ['download'])
 def BGPlayvid(url, name, download=None):
-    videopage = utils.getHtml(url,'http://beeg.com')
-    videopage = json.loads(videopage)
-   
-    if not videopage["240p"] == None:
-        url = videopage["240p"].encode("utf8")
-    if not videopage["480p"] == None:
-        url = videopage["480p"].encode("utf8")
-    if not videopage["720p"] == None:
-        url = videopage["720p"].encode("utf8")
+	
+	videopage = utils.getHtml4(url)
+	#videopage = json.loads(videopage)
 
-    url = url.replace("{DATA_MARKERS}","data=pc_XX")
-    if not url.startswith("http:"): url = "https:" + url
-    
-    key = re.compile("/key=(.*?)%2Cend", re.DOTALL | re.IGNORECASE).findall(url)[0]
-    decryptedkey = decrypt_key(key)
-    
-    videourl = url.replace(key, decryptedkey)
-
-    if download == 1:
-        utils.downloadVideo(videourl, name)
-    else:
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        listitem.setProperty("IsPlayable","true")
-        if int(sys.argv[1]) == -1:
-            pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-            pl.clear()
-            pl.add(videourl, listitem)
-            xbmc.Player().play(pl)
-        else:
-            listitem.setPath(str(videourl))
-            xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
+	if not videopage["240p"] == None:
+		url = videopage["240p"].encode("utf8")
+	if not videopage["480p"] == None:
+		url = videopage["480p"].encode("utf8")
+	if not videopage["720p"] == None:
+		url = videopage["720p"].encode("utf8")
+	
+	url = url.replace("{DATA_MARKERS}","data=pc_XX")
+	if not url.startswith("http:"): url = "https:" + url
+	
+	key = re.compile("/key=(.*?)%2Cend", re.DOTALL | re.IGNORECASE).findall(url)[0]
+	decryptedkey = decrypt_key(key)
+	
+	videourl = url.replace(key, decryptedkey)
+	
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		listitem.setProperty("IsPlayable","true")
+		if int(sys.argv[1]) == -1:
+			pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
+			pl.clear()
+			pl.add(videourl, listitem)
+			xbmc.Player().play(pl)
+		else:
+			listitem.setPath(str(videourl))
+			xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
 
 
 @utils.url_dispatcher.register('83', ['url'])
 def BGCat(url):
-    bgversion = addon.getSetting('bgversion')
-    caturl = utils.getHtml2(url)
-    tags = re.compile(r'"nonpopular":\[(.*?)\]', re.DOTALL | re.IGNORECASE).findall(caturl)[0]
-    tags = re.compile('"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(tags)
-    for tag in tags:
-        videolist = "https://beeg.com/api/v6/"+bgversion+"/index/tag/0/mobile?tag=" + tag.encode("utf8")
-        name = tag.encode("utf8")
-        name = name[:1].upper() + name[1:]
-        utils.addDir(name, videolist, 81, '')
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	bgversion = addon.getSetting('bgversion')
+
+	caturl = utils.getHtml5(url)
+
+	#tags = re.compile(r'"nonpopular":\[(.*?)\]', re.DOTALL | re.IGNORECASE).findall(caturl)[0]
+	#tags = re.compile('"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(tags)
+	tags = re.compile('{"tag":"(.+?)","videos":(.+?)}', re.DOTALL | re.IGNORECASE).findall(caturl)	
+	#{"tag":"18-21 yo","videos":11126}
+	for tag,count in tags:
+		videolist = "https://beeg.com/api/v6/"+bgversion+"/index/tag/0/mobile?tag=" + tag.encode("utf8")
+		name = tag.encode("utf8")
+		name = name.upper() +' [COLOR deeppink]' + count + '[/COLOR]'
+		utils.addDir(name, videolist, 81, '')
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('84', ['url'], ['keyword'])

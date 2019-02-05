@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# -Cleaned and Checked on 12-03-2018 by JewBMX in Scrubs.
+#checked and verified in Exodus by Clownman 1.4.2019
 
 import re,urllib,urlparse
 from resources.lib.modules import cleantitle,client,debrid,source_utils,cfscrape

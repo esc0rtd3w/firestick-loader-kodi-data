@@ -35,19 +35,31 @@ def Main():
 
 @utils.url_dispatcher.register('476', ['url'])
 def List(url):
-    if utils.addon.getSetting("chaturbate") == "true":
-        clean_database(False)
-    try:
-        response = utils.getHtml(url)
-    except:
-        return None
-    data = json.loads(response)
-    for camgirl in data['results']:
-        name = utils.cleanhtml(camgirl['display_name']).encode("ascii", errors="ignore")
-        videourl = "https://www.camsoda.com/api/v1/video/vtoken/" + camgirl['username']
-        img = "https:" + camgirl['thumb_small']
-        utils.addDownLink(name, videourl, 478, img, camgirl['subject_html'], noDownload=True)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	if utils.addon.getSetting("chaturbate") == "true":
+		clean_database(False)
+	try:
+		response = utils.getHtml(url)
+	except:
+		return None
+	data = json.loads(response)
+	for camgirl in data['results']:
+		try:
+			userid=camgirl['user_id']
+			name = camgirl['username'].encode("ascii", errors="ignore")#).encode("ascii", errors="ignore")			
+			#name = camgirl['tpl'][0].encode("ascii", errors="ignore")#).encode("ascii", errors="ignore")
+			videourl = "https://www.camsoda.com/api/v1/video/vtoken/" + name#camgirl['username']
+			
+			img1=camgirl['stream_name']#[5]
+			img2=camgirl['tsize']#[6]
+			img3=camgirl['server_prefix']#[7]
+			imag='http://thumbs-orig.camsoda.com/thumbs/%s/%s/%s/%s/%s.jpg'%(img1,img3,img2,userid,name)		
+			
+			   #          thumbs-orig.camsoda.com/thumbs/gabyferrer-enc5-ord/enc5-ord/355x200/51499296/gabyferrer.jpg?cb=51499296
+			
+			utils.addDownLink(name, videourl, 478, imag, '', noDownload=True)
+		except:
+			pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('479')
@@ -88,5 +100,7 @@ def Playvid(url, name):
         pl.add(videourl, listitem)
         xbmc.Player().play(pl)
     else:
-        listitem.setPath(str(videourl))
-        xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(videourl, listitem)	

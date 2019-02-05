@@ -38,7 +38,7 @@ def List(url, page=0):
         response = utils.postHtml(url, form_data=postRequest,headers={},compression=False)
     except:
         return None
-    match = re.compile('<div class="video-item">.*?a href="([^"]+)">.*?<img src="([^"]+)" alt="([^"]+)".*?<span class="video-time">([^<]+)', re.DOTALL | re.IGNORECASE).findall(response)
+    match = re.compile('<div class="video-item">.*?a href="([^"]+)".*?<img src="([^"]+)" alt="([^"]+)".*?<span class="video-time">([^<]+)', re.DOTALL | re.IGNORECASE).findall(response)
     for video, img, name, length in match:
         video = 'https://daftsex.com' + video
         name = utils.cleantext(name) + ' [COLOR hotpink]' + length + '[/COLOR]'

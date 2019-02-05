@@ -44,25 +44,26 @@ def Main():
 
 @utils.url_dispatcher.register('441', ['url'])
 def List(url):
-    print "spankbang::List " + url
-    try:
-        listhtml = utils.getHtml(url, '')
-    except:
-        return None
-    main_block = re.compile('<main id="container">(.*?)</main>', re.DOTALL).findall(listhtml)[0]
-    match = re.compile('<a href="([^"]+)" class="thumb.*?<img src="([^"]+)" alt="([^"]+)" class="cover.*?</span>(.*?)i-len"><i class="fa fa-clock-o"></i>([^<]+)<', re.DOTALL).findall(main_block)
-    for videopage, img, name, hd, duration in match:
-        if hd.find('HD') > 0:
-            hd = " [COLOR orange]HD[/COLOR] "
-        else:
-            hd = " "
-        name = utils.cleantext(name) + hd + "[COLOR deeppink]" + duration + "m[/COLOR]"
-        utils.addDownLink(name, base_url + videopage, play_mode, 'https:' + img, '')
-    try:
-        nextp=re.compile('<li class="active"><a>.+?</a></li><li><a href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', base_url + nextp[0], list_mode,'')
-    except: pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	print "spankbang::List " + url
+
+	try:
+		listhtml = utils.getHtml(url, '')
+	except:
+		return None
+	main_block = re.compile('<main id="container">(.*?)</main>', re.DOTALL).findall(listhtml)[0]
+	match = re.compile('<a href="([^"]+)" class="thumb.*?data-src="([^"]+)".*?alt="([^"]+)".+?i-hd">(.+?)<.+?fa fa-clock-o"></i>(.+?)<', re.DOTALL).findall(main_block)
+	for videopage, img, name, hd, duration in match:
+		if hd.find('HD') > 0:
+			hd = " [COLOR orange]HD[/COLOR] "
+		else:
+			hd = " "
+		name = utils.cleantext(name) + hd + "[COLOR deeppink]" + duration + "m[/COLOR]"
+		utils.addDownLink(name, base_url + videopage, play_mode, 'https:' + img, '')
+	try:
+		nextp=re.compile('<li class="active"><a>.+?</a></li><li><a href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+		utils.addDir('Next Page', base_url + nextp[0], list_mode,'')
+	except: pass
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('444', ['url'], ['keyword'])

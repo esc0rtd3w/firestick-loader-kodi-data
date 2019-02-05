@@ -28,7 +28,7 @@ progress = utils.progress
 @utils.url_dispatcher.register('170')
 def Main():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://streamxxx.tv/', 177, '', '')
-    utils.addDir('[COLOR hotpink]Tags[/COLOR]','http://streamxxx.tv/', 173, '', '')
+    utils.addDir('[COLOR hotpink]Tags[/COLOR]','http://streamxxx.tv/top-tags/', 173, '', '')
     utils.addDir('[COLOR hotpink]Movies[/COLOR]','http://streamxxx.tv/category/movies-xxx/', 175, '', '')
     utils.addDir('[COLOR hotpink]International Movies[/COLOR]','http://streamxxx.tv/category/movies-xxx/international-movies/', 176, '', '')
     utils.addDir('[COLOR hotpink]Search Overall[/COLOR]','http://streamxxx.tv/?s=', 174, '', '')
@@ -95,12 +95,11 @@ def Categories(url):
 
 @utils.url_dispatcher.register('173', ['url'])
 def Tags(url):
-    html = utils.getHtml(url, '')
-    match = re.compile('<div class="tagcloud">(.*?)</div>', re.DOTALL | re.IGNORECASE).findall(html)
-    match1 = re.compile('href="([^"]+)[^>]+>([^<]+)<', re.DOTALL | re.IGNORECASE).findall(match[0])
-    for catpage, name in match1:
-        utils.addDir(name, catpage, 171, '')
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	html = utils.getHtml(url, '')
+	match1 = re.compile('<a id="tag-link.+?href="([^"]+)".+?"tag">(.+?)</a>', re.DOTALL | re.IGNORECASE).findall(html)
+	for catpage, name in match1:
+		utils.addDir(name, catpage, 171, '')
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('172', ['url', 'name'], ['download'])

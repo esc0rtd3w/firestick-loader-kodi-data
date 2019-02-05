@@ -25,7 +25,6 @@ import xbmcplugin
 import xbmcgui
 from resources.lib import utils
 
-
 @utils.url_dispatcher.register('480')
 def Main():
 	utils.addDir('[COLOR red]Refresh naked.com images[/COLOR]','',483,'',Folder=False)
@@ -35,19 +34,22 @@ def Main():
 
 @utils.url_dispatcher.register('481', ['url'])
 def List(url):
-    if utils.addon.getSetting("chaturbate") == "true":
-        clean_database(False)
-    try:
-        data = utils.getHtml(url, '')
-    except:
-        
-        return None
-    model_list = re.compile('each-model-img[^?]+title="([^"]+)"[^?]+href="([^"]+)"[^?]+src="([^"]+)"[^?]+each-model-info', re.DOTALL | re.IGNORECASE).findall(data)
-    for model, url, img in model_list:
-        name = model.replace("'s webcam","").strip()
-        videourl = "http://new.naked.com" + url
-        utils.addDownLink(name, videourl, 482, img, '', noDownload=True)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	if utils.addon.getSetting("chaturbate") == "true":
+		clean_database(False)
+	try:
+		data = utils.getHtml(url, '')
+	except:
+		
+		return None
+	
+	model_list = re.compile('each-model-img[^?]+title="([^"]+)"[^?]+href="([^"]+)"[^?]+src="([^"]+)"[^?]+each-model-info', re.DOTALL | re.IGNORECASE).findall(data)
+	for model, url, img in model_list:
+	#	img='https:'+img
+		img = 'https:'+img if img.startswith('//') else img
+		name = model.replace("'s webcam","").strip()
+		videourl = "http://new.naked.com" + url
+		utils.addDownLink(name, videourl, 482, img, '', noDownload=True)
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('483')
@@ -69,21 +71,24 @@ def clean_database(showdialog=True):
 
 @utils.url_dispatcher.register('482', ['url', 'name'])
 def Playvid(url, name):
-    listhtml = utils.getHtml(url, '')
-    match = re.compile('(hls_[0-9]+s_[0-9a-z]+)', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    if match:
-        videourl = "https://static-transcode-k8s-do.camster.com/hls/" + match[0] + "/index.m3u8"
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        listitem.setProperty("IsPlayable","true")
-        if int(sys.argv[1]) == -1:
-            pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-            pl.clear()
-            pl.add(videourl, listitem)
-            xbmc.Player().play(pl)
-        else:
-            listitem.setPath(str(videourl))
-            xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
-    else:
-        utils.notify('Oh oh','Couldn\'t find a playable webcam link')
+	listhtml = utils.getHtml(url, '')
+	namex=name.replace(' ','-').lower()
+	try:
+	
+		videourl ='https://static-transcode-k8s-g.camster.com/t-/hls/hls_000s_%s_mid/index.m3u8'%namex
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		listitem.setProperty("IsPlayable","true")
+		if int(sys.argv[1]) == -1:
+			pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
+			pl.clear()
+			pl.add(videourl, listitem)
+			xbmc.Player().play(pl)
+		else:
+			iconimage = xbmc.getInfoImage("ListItem.Thumb")
+			listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+			listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+			xbmc.Player().play(match, listitem)	
+	except:
+		utils.notify('Oh oh','Couldn\'t find a playable webcam link')

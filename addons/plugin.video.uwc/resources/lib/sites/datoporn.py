@@ -35,7 +35,7 @@ def datoporn_list(url):
         listhtml = utils.getHtml(url)
     except Exception as e:
         return None
-    match = re.compile('''class="vid_block".*?href="([^"]+)".*?url[(]'([^']+)'[)].*?<span>([^<]+)</span>.*?<b>([^<]+)</b''', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile('''href="([^"]+)" class="video200 ">.+?url\('(.+?)'.+?<span>(.+?)<.+?class="title">(.+?)<''', re.DOTALL | re.IGNORECASE).findall(listhtml)
     for video, img, duration, name in match:
         duration = duration.strip()
         name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"

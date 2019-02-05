@@ -30,7 +30,7 @@ sortlistwxf = [addon.getLocalizedString(30012), addon.getLocalizedString(30013),
 def WXFMain():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.watchxxxfree.com/categories/',12,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.watchxxxfree.com/page/1/?s=',14,'','')
-    utils.addDir('[COLOR hotpink]Top Pornstars[/COLOR]','http://www.watchxxxfree.com/top-pornstars/',15,'','')
+    utils.addDir('[COLOR hotpink]Top Pornstars[/COLOR]','https://watchxxxfreeinhd.com/actress-performes/',15,'','')
     Sort = '[COLOR hotpink]Current sort:[/COLOR] ' + sortlistwxf[int(addon.getSetting("sortwxf"))]
     utils.addDir(Sort, '', 16, '', '')
     WXFList('http://watchxxxfree.com/page/1/',1)
@@ -45,8 +45,8 @@ def WXFSort():
 
 @utils.url_dispatcher.register('12', ['url'])
 def WXFCat(url):
-    cathtml = utils.getHtml(url, '')
-    match = re.compile('data-lazy-src="([^"]+)".*?<a href="([^"]+)"[^<]+<span>([^<]+)</s.*?">([^<]+)', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    cathtml = utils.getHtml(url, '')  #
+    match = re.compile('<img width=.+?src="(.+?)".+?a href="(.+?)"\s+title="(.+?)".+?span class="nb_cat border.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for img, catpage, name, videos in match:
         catpage = catpage + 'page/1/'
         name = name + ' [COLOR deeppink]' + videos + '[/COLOR]'
@@ -56,12 +56,12 @@ def WXFCat(url):
 
 @utils.url_dispatcher.register('15', ['url'])
 def WXFTPS(url):
-    tpshtml = utils.getHtml(url, '')
-    match = re.compile("<li><a href='([^']+)[^>]+>([^<]+)", re.DOTALL | re.IGNORECASE).findall(tpshtml)
-    for tpsurl, name in match:
-        tpsurl = tpsurl + 'page/1/'
-        utils.addDir(name, tpsurl, 11, '', 1)
-    xbmcplugin.endOfDirectory(utils.addon_handle)    
+	tpshtml = utils.getHtml(url, '')
+	match = re.compile('<li><a href="([^"]+)[^>]+>([^<]+)', re.DOTALL | re.IGNORECASE).findall(tpshtml)
+	for tpsurl, name in match:
+		tpsurl = tpsurl + 'page/1/'
+		utils.addDir(name, tpsurl, 11, '', 1)
+	xbmcplugin.endOfDirectory(utils.addon_handle)    
 
 
 @utils.url_dispatcher.register('14', ['url'], ['keyword'])

@@ -2,8 +2,8 @@
 	<category label="General">
 		<setting type="lsep" label="Adult Section"/>
 		<setting id="enable_adult_section" type="bool" label="Enable Adult Section (by enabling, you confirm you are 18+)" default="false" />
-		<setting type="lsep" label="Filmon View"/>
-		<setting id="filmon_view" type="enum" label="Filmon View" values="Play Channel|Show TV Listings First|Choose" default="0" />
+		<!--setting type="lsep" label="Filmon View"/>
+		<!--setting id="filmon_view" type="enum" label="Filmon View" values="Play Channel|Show TV Listings First|Choose" default="0" />
 		<!-- <setting type="lsep" label="TVA Log Uploader"/> -->
  		<!-- <setting id="upload_log" label="Upload Log File" type="action" action="RunScript(script.tvaddons.debug.log)" option="close"/> -->
 		<!-- <setting type="lsep" label="[CR]If you don't already have it, make sure you install the TVA Log Uploader"/> -->

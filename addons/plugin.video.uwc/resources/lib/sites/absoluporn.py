@@ -24,7 +24,6 @@ import xbmcplugin
 import xbmcgui
 from resources.lib import utils
 
-
 @utils.url_dispatcher.register('300')  
 def Main():
     utils.addDir('[COLOR hotpink]Top Rated[/COLOR]','http://www.absoluporn.com/en/wall-note-1.html',301,'','')
@@ -65,26 +64,27 @@ def List(url):
 
 @utils.url_dispatcher.register('302', ['url', 'name'], ['download'])  
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download)
-    vp.progress.update(25, "", "Loading video page", "")
-    videopage = utils.getHtml(url, '')
-    servervideo = re.compile("servervideo = '([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-    vpath = re.compile("path = '([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-    repp = re.compile(r"repp = codage\('([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-    filee = re.compile("filee = '([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-    repp = hashlib.md5(repp).hexdigest()
-    videourl = servervideo + vpath + repp + filee
-    vp.play_from_direct_link(videourl)
+	videopage = utils.getHtml(url, '')
+	videourl=re.compile('source src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(videopage)[0]
+	videourl+='|verifypeer=false'
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:    
+		xbmc.Player().play(str(videourl))
+		#iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		#listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		#listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		#xbmc.Player().play(videourl, listitem)		
 
 @utils.url_dispatcher.register('303', ['url'])  
 def Cat(url):
-    cathtml = utils.getHtml(url, '')
-    match = re.compile("gories(.*?)titre18", re.DOTALL | re.IGNORECASE).findall(cathtml)
-    match1 = re.compile(r'<a href="\.\.([^"]+)" class="link1">([^<]+)</a>', re.DOTALL | re.IGNORECASE).findall(match[0])
-    for caturl, name in match1:
-        catpage = 'http://www.absoluporn.com' + caturl
-        utils.addDir(name, catpage, 301, '', '')
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	cathtml = utils.getHtml(url, '')
+	match = re.compile("gories(.*?)titre18", re.DOTALL | re.IGNORECASE).findall(cathtml)
+	match1 = re.compile(r'<a href="\.\.([^"]+)" class="link1b">([^<]+)</a>', re.DOTALL | re.IGNORECASE).findall(match[0])
+	for caturl, name in match1:
+		catpage = 'http://www.absoluporn.com' + caturl
+		utils.addDir(name, catpage, 301, '', '')
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('304', ['url'], ['keyword'])  
 def Search(url, keyword=None):

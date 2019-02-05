@@ -29,7 +29,6 @@ logger.disable()
 CLIENT_ID = 'X245A4XAIBGVM'
 USER_AGENT = 'URLResolver for Kodi/%s' % common.addon_version
 INTERVALS = 5  # seconds
-MINIMUM_FILE_SIZE = 75  # megabytes
 FORMATS = ['.aac', '.asf', '.avi', '.flv', '.m4a', '.m4v', '.mka', '.mkv', '.mp4', '.mpeg', '.nut', '.ogg']
 STALLED = ['magnet_error', 'error', 'virus', 'dead']
 
@@ -59,15 +58,16 @@ class RealDebridResolver(UrlResolver):
         self.hosts = None
         self.headers = {'User-Agent': USER_AGENT}
 
-    def get_media_url(self, host, media_id, retry=False):
+    def get_media_url(self, host, media_id, retry=False, cached_only=False):
         try:
-            headers = self.headers
-            headers.update({'Authorization': 'Bearer %s' % self.get_setting('token')})
+            self.headers.update({'Authorization': 'Bearer %s' % self.get_setting('token')})
             if media_id.lower().startswith('magnet:'):
-                cached = self.__check_cache(media_id, headers)  # useless
-                torrent_id = self.__add_magnet(media_id, headers)
+                cached = self.__check_cache(media_id)
+                if not cached and (self.get_setting('cached_only') == 'true' or cached_only):
+                    raise ResolverError('Real-Debrid: Cached torrents only allowed to be initiated')
+                torrent_id = self.__add_magnet(media_id)
                 if not torrent_id == "":
-                    torrent_info = self.__torrent_info(torrent_id, headers)
+                    torrent_info = self.__torrent_info(torrent_id)
                     heading = 'URL Resolver Real-Debrid Transfer'
                     line1 = torrent_info.get('filename')
                     status = torrent_info.get('status')
@@ -79,35 +79,40 @@ class RealDebridResolver(UrlResolver):
                             while status == 'magnet_conversion' and _TIMEOUT > 0:
                                 cd.update(_TIMEOUT, line1=line1, line3=line3)
                                 if cd.is_canceled():
-                                    self.__delete_torrent(torrent_id, headers)
+                                    self.__delete_torrent(torrent_id)
                                     raise ResolverError('Real-Debrid: Torrent ID %s canceled by user' % torrent_id)
                                 elif any(x in status for x in STALLED):
-                                    self.__delete_torrent(torrent_id, headers)
+                                    self.__delete_torrent(torrent_id)
                                     raise ResolverError('Real-Debrid: Torrent ID %s has stalled | REASON: %s' % (torrent_id, status))
                                 _TIMEOUT -= INTERVALS
                                 common.kodi.sleep(1000 * INTERVALS)
-                                torrent_info = self.__torrent_info(torrent_id, headers)
+                                torrent_info = self.__torrent_info(torrent_id)
                                 status = torrent_info.get('status')
                                 line1 = torrent_info.get('filename')
                                 line3 = '%s seeders' % torrent_info.get('seeders')
                         if status == 'magnet_conversion':
-                            self.__delete_torrent(torrent_id, headers)
+                            self.__delete_torrent(torrent_id)
                             raise ResolverError('Real-Debrid Error: MAGNET Conversion exceeded time limit')
                     if status == 'waiting_files_selection':
-                        file_selected = False
+                        _videos = []
                         for _file in torrent_info.get('files'):
-                            if any(_file.get('path').lower().endswith(x) for x in FORMATS) and _file.get('bytes') >= ((1000 ** 2) * MINIMUM_FILE_SIZE):
-                                file_id = _file.get('id')
-                                file_selected = self.__select_file(torrent_id, file_id, headers)
-                                break
+                            if any(_file.get('path').lower().endswith(x) for x in FORMATS):
+                                _videos.append(_file)
+                        try:
+                            _video = max(_videos, key=lambda x: x.get('bytes'))
+                            file_id = _video.get('id', 0)
+                        except ValueError:
+                            self.__delete_torrent(torrent_id)
+                            raise ResolverError('Real-Debrid Error: Failed to locate largest video file')
+                        file_selected = self.__select_file(torrent_id, file_id)
                         if not file_selected:
-                            self.__delete_torrent(torrent_id, headers)
+                            self.__delete_torrent(torrent_id)
                             raise ResolverError('Real-Debrid Error: Failed to select file')
                         else:
-                            torrent_info = self.__torrent_info(torrent_id, headers)
+                            torrent_info = self.__torrent_info(torrent_id)
                             status = torrent_info.get('status')
                             if not status == 'downloaded':
-                                file_size = round(float(_file.get('bytes')) / (1000 ** 3), 2)
+                                file_size = round(float(_video.get('bytes')) / (1000 ** 3), 2)
                                 if cached:
                                     line2 = 'Getting torrent from the Real-Debrid Cloud'
                                 else:
@@ -116,7 +121,7 @@ class RealDebridResolver(UrlResolver):
                                 with common.kodi.ProgressDialog(heading, line1, line2, line3) as pd:
                                     while not status == 'downloaded':
                                         common.kodi.sleep(1000 * INTERVALS)
-                                        torrent_info = self.__torrent_info(torrent_id, headers)
+                                        torrent_info = self.__torrent_info(torrent_id)
                                         line1 = torrent_info.get('filename')
                                         status = torrent_info.get('status')
                                         if status == 'downloading':
@@ -126,21 +131,21 @@ class RealDebridResolver(UrlResolver):
                                         logger.log_debug(line3)
                                         pd.update(int(float(torrent_info.get('progress'))), line1=line1, line3=line3)
                                         if pd.is_canceled():
-                                            self.__delete_torrent(torrent_id, headers)
+                                            self.__delete_torrent(torrent_id)
                                             raise ResolverError('Real-Debrid: Torrent ID %s canceled by user' % torrent_id)
                                         elif any(x in status for x in STALLED):
-                                            self.__delete_torrent(torrent_id, headers)
+                                            self.__delete_torrent(torrent_id)
                                             raise ResolverError('Real-Debrid: Torrent ID %s has stalled | REASON: %s' % (torrent_id, status))
                             # xbmc.sleep(1000 * INTERVALS)  # allow api time to generate the stream_link
                             media_id = torrent_info.get('links')[0]
-                    self.__delete_torrent(torrent_id, headers)
+                    self.__delete_torrent(torrent_id)
                 if media_id.lower().startswith('magnet:'):
-                    self.__delete_torrent(torrent_id, headers)  # clean up just incase
+                    self.__delete_torrent(torrent_id)  # clean up just incase
                     raise ResolverError('Real-Debrid Error: Failed to transfer torrent to/from the cloud')
 
             url = '%s/%s' % (rest_base_url, unrestrict_link_path)
             data = {'link': media_id}
-            result = self.net.http_POST(url, form_data=data, headers=headers).content
+            result = self.net.http_POST(url, form_data=data, headers=self.headers).content
         except urllib2.HTTPError as e:
             if not retry and e.code == 401:
                 if self.get_setting('refresh'):
@@ -175,13 +180,13 @@ class RealDebridResolver(UrlResolver):
 
             return helpers.pick_source(links)
 
-    def __check_cache(self, media_id, headers):
-        r = re.search('''magnet:.+?urn:(\w+):([a-zA-Z0-9]+)''', media_id, re.I)
+    def __check_cache(self, media_id):
+        r = re.search('''magnet:.+?urn:([a-zA-Z0-9]+):([a-zA-Z0-9]+)''', media_id, re.I)
         if r:
             _hash, _format = r.group(2).lower(), r.group(1)
             try:
                 url = '%s/%s/%s' % (rest_base_url, check_cache_path, _hash)
-                result = self.net.http_GET(url, headers=headers).content
+                result = self.net.http_GET(url, headers=self.headers).content
                 js_result = json.loads(result)
                 _hash_info = js_result.get(_hash, {})
                 if isinstance(_hash_info, dict):
@@ -194,21 +199,21 @@ class RealDebridResolver(UrlResolver):
 
         return {}
 
-    def __torrent_info(self, torrent_id, headers):
+    def __torrent_info(self, torrent_id):
         try:
             url = '%s/%s/%s' % (rest_base_url, torrents_info_path, torrent_id)
-            result = self.net.http_GET(url, headers=headers).content
+            result = self.net.http_GET(url, headers=self.headers).content
             js_result = json.loads(result)
             return js_result
         except Exception as e:
             common.logger.log_warning("Real-Debrid Error: TORRENT INFO | %s" % e)
             raise
 
-    def __add_magnet(self, media_id, headers):
+    def __add_magnet(self, media_id):
         try:
             url = '%s/%s' % (rest_base_url, add_magnet_path)
             data = {'magnet': media_id}
-            result = self.net.http_POST(url, form_data=data, headers=headers).content
+            result = self.net.http_POST(url, form_data=data, headers=self.headers).content
             js_result = json.loads(result)
             logger.log_debug('Real-Debrid: Sending MAGNET URL to the real-debrid cloud')
             return js_result.get('id', "")
@@ -216,21 +221,21 @@ class RealDebridResolver(UrlResolver):
             common.logger.log_warning("Real-Debrid Error: ADD MAGNET | %s" % e)
             raise
 
-    def __select_file(self, torrent_id, file_id, headers):
+    def __select_file(self, torrent_id, file_id):
         try:
             url = '%s/%s/%s' % (rest_base_url, select_files_path, torrent_id)
             data = {'files': file_id}
-            self.net.http_POST(url, form_data=data, headers=headers)
+            self.net.http_POST(url, form_data=data, headers=self.headers)
             logger.log_debug('Real-Debrid: Selected file ID %s from Torrent ID %s to transfer' % (file_id, torrent_id))
             return True
         except Exception as e:
             common.logger.log_warning("Real-Debrid Error: SELECT FILE | %s" % e)
-            raise
+            return False
 
-    def __delete_torrent(self, torrent_id, headers):
+    def __delete_torrent(self, torrent_id):
         try:
             url = '%s/%s/%s' % (rest_base_url, torrents_delete_path, torrent_id)
-            self.net.http_DELETE(url, headers=headers)
+            self.net.http_DELETE(url, headers=self.headers)
             logger.log_debug('Real-Debrid: Torrent ID %s was removed from your active torrents' % torrent_id)
             return True
         except Exception as e:
@@ -318,7 +323,7 @@ class RealDebridResolver(UrlResolver):
             js_result = json.loads(self.net.http_GET(url, headers=self.headers).content)
             regexes = [regex[1:-1].replace('\/', '/').rstrip('\\') for regex in js_result]
             logger.log_debug('RealDebrid hosters : %s' % regexes)
-            hosters = [re.compile(regex) for regex in regexes]
+            hosters = [re.compile(regex, re.I) for regex in regexes]
         except Exception as e:
             logger.log_error('Error getting RD regexes: %s' % e)
         return hosters
@@ -329,6 +334,8 @@ class RealDebridResolver(UrlResolver):
         try:
             url = '%s/%s' % (rest_base_url, hosts_domains_path)
             hosts = json.loads(self.net.http_GET(url, headers=self.headers).content)
+            if self.get_setting('torrents') == 'true':
+                hosts.extend([u'torrent', u'magnet'])
         except Exception as e:
             logger.log_error('Error getting RD hosts: %s' % e)
         logger.log_debug('RealDebrid hosts : %s' % hosts)
@@ -365,6 +372,7 @@ class RealDebridResolver(UrlResolver):
     def get_settings_xml(cls):
         xml = super(cls, cls).get_settings_xml()
         xml.append('<setting id="%s_torrents" type="bool" label="%s" default="true"/>' % (cls.__name__, i18n('torrents')))
+        xml.append('<setting id="%s_cached_only" enable="eq(-1,true)" type="bool" label="%s" default="false" />' % (cls.__name__, i18n('cached_only')))
         xml.append('<setting id="%s_autopick" type="bool" label="%s" default="false"/>' % (cls.__name__, i18n('auto_primary_link')))
         xml.append('<setting id="%s_auth" type="action" label="%s" action="RunPlugin(plugin://script.module.urlresolver/?mode=auth_rd)"/>' % (cls.__name__, i18n('auth_my_account')))
         xml.append('<setting id="%s_reset" type="action" label="%s" action="RunPlugin(plugin://script.module.urlresolver/?mode=reset_rd)"/>' % (cls.__name__, i18n('reset_my_auth')))

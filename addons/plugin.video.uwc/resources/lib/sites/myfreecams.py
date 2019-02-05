@@ -36,29 +36,30 @@ from resources.lib import websocket
 
 @utils.url_dispatcher.register('270')
 def Main():
-    List('https://www.myfreecams.com/mfc2/php/online_models_splash.php')
+    List('https://www.myfreecams.com/')
 
 
 @utils.url_dispatcher.register('271', ['url'])
 def List(url):
-    try:
-        listhtml = utils.getHtml2(url)
-    except:
-        
-        return None
-    match = re.compile("model_detail=(.*?)&.*?img src=(.*?)jpg.*?</div>", re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for name, img in match:
-        url = name
-        name = utils.cleantext(name)
-        img = img + 'jpg'
-        #url = img[32:-17]
-        img = img.replace('90x90','300x300')
-        #if len(url) == 7:
-        #    url = '10' + url
-        #else:
-        #    url = '1' + url
-        utils.addDownLink(name, url, 272, img, '', noDownload=True)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	try:
+		listhtml = utils.getHtml2(url)
+	except:
+		
+		return None
+
+	match = re.compile('<div class=slm_c>.+?<a href="([^"]+)".+?src="([^"]+)".+?style=".+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	for urk,img,name in match:
+		url = name
+		name = utils.cleantext(name)
+		#img = img + 'jpg'
+		#url = img[32:-17]
+		img = img.replace('90x90','300x300')
+		#if len(url) == 7:
+		#    url = '10' + url
+		#else:
+		#    url = '1' + url
+		utils.addDownLink(name, url, 272, img, '', noDownload=True)
+	xbmcplugin.endOfDirectory(utils.addon_handle)
     
 
 

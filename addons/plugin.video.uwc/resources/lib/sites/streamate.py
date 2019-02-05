@@ -72,55 +72,57 @@ def clean_database(showdialog=True):
 
 @utils.url_dispatcher.register('518', ['url', 'name'])
 def Playvid(performerID, name):
-    response = utils.getHtml("https://streamate.com/ajax/config/?name=" + name + "&sakey=&sk=streamate.com&userid=0&version=2.2.0&ajax=1")
-    data = json.loads(response)
+	response = utils.getHtml("https://streamate.com/ajax/config/?name=" + name + "&sakey=&sk=streamate.com&userid=0&version=2.2.0&ajax=1")
+	data = json.loads(response)
+	
+	host = data['liveservices']['host'] + "/socket.io/?puserid=" + performerID + "&EIO=3&transport=websocket" #24824942
+	ws = websocket.WebSocket()
+	ws = websocket.create_connection(host)
+	
+	ws.send('40/live')
+	
+	quitting = 0
+	while quitting == 0:
+		message =  ws.recv()
+		match = re.compile('performer offline', re.DOTALL | re.IGNORECASE).findall(message)
+		if match:
+			quitting=1
+			ws.close()
+			utils.notify('Model is offline')
+			return None
 
-    host = data['liveservices']['host'] + "/socket.io/?puserid=" + performerID + "&EIO=3&transport=websocket"
-    ws = websocket.WebSocket()
-    ws = websocket.create_connection(host)
-
-    ws.send('40/live')
-
-    quitting = 0
-    while quitting == 0:
-        message =  ws.recv()
-        match = re.compile('performer offline', re.DOTALL | re.IGNORECASE).findall(message)
-        if match:
-           quitting=1
-           ws.close()
-           utils.notify('Model is offline')
-           return None
-
-        match = re.compile('isPaid":true', re.DOTALL | re.IGNORECASE).findall(message)
-        if match:
-           quitting=1
-           ws.close()
-           utils.notify('Model not in freechat')
-           return None
+		match = re.compile('isPaid":true', re.DOTALL | re.IGNORECASE).findall(message)
+		if match:
+			quitting=1
+			ws.close()
+			utils.notify('Model not in freechat')
+			return None
 		   
         match = re.compile('roomInfoUpdate', re.DOTALL | re.IGNORECASE).findall(message)
         if match:
-           ws.send('42/live,["GetVideoPath",{"nginx":1,"protocol":2,"attempt":1}]')
-           while quitting == 0:
-              message = ws.recv()
-              match = re.compile('(http[^"]+m3u8)', re.DOTALL | re.IGNORECASE).findall(message)
-              if match:
-                  videourl = match[0]
-                  quitting=1
-                  ws.close()
+			ws.send('42/live,["GetVideoPath",{"nginx":1,"protocol":2,"attempt":1}]')
+			while quitting == 0:
+				message = ws.recv()
+				match = re.compile('(http[^"]+m3u8)', re.DOTALL | re.IGNORECASE).findall(message)
+				if match:
+					videourl = match[0]
+					quitting=1
+					ws.close()
 
-    iconimage = xbmc.getInfoImage("ListItem.Thumb")
-    listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-    listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-    listitem.setProperty("IsPlayable","true")
-    if int(sys.argv[1]) == -1:
-        pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-        pl.clear()
-        pl.add(videourl, listitem)
-        xbmc.Player().play(pl)
-    else:
-        listitem.setPath(str(videourl))
-        xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
+	iconimage = xbmc.getInfoImage("ListItem.Thumb")
+	listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+	listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+	listitem.setProperty("IsPlayable","true")
+	if int(sys.argv[1]) == -1:
+		pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
+		pl.clear()
+		pl.add(videourl, listitem)
+		xbmc.Player().play(pl)
+	else:
+		#iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		#listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		#listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(videourl, listitem)
 
 @utils.url_dispatcher.register('519', ['url'])
 def Search(url):

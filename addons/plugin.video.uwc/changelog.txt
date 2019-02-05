@@ -1,12 +1,16 @@
+[B]Version 1.1.65 (mb)[/B]
+Fixed: All TUBES
+Fixed: All Hentais
+Fixed: Webcams
+Fixed: All Movies
+Fixed: All SCENES
+
 [B]Version 1.1.64[/B]
-New site: YesPornPlease
 Fixed: Porntrex categories
 Fixed: Videomegaporn
 Fixed: Xtasie pagination and category listing
 Fixed: PornsLand channels pagination
 Fixed: Porndig
-Fixed: YourPorn top pornstars
-Fixed: deleting keywords
 
 
 [B]Version 1.1.63[/B]

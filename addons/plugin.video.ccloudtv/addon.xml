@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.ccloudtv"
        name="cCloud TV"
-       version="1.5.6"
-       provider-name="rattlehead">
+       version="1.5.8"
+       provider-name="Bane">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -17,13 +17,13 @@
 	<import addon="script.module.addon.common" />
 	<import addon="script.module.simplejson" version="3.3.0"/>
     <import addon="script.common.plugin.cache" version="2.5.5"/>
-    <import addon="script.tvaddons.debug.log" optional="true" />     
+    <import addon="script.tvaddons.debug.log" optional="true" />
 </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>All the best from cCloud TV</summary>
+    <summary>All the best from cCloud Team Original Credits: Podgod and CA</summary>
     <description>cCloud is an open source cloud based social IPTV service. It is built by the community for the community, where streaming is just a click away. Just click, play and stream. Yes, it's that simple. Just go to [COLOR blue]http://ccloudtv.org[/COLOR] and enjoy:) Please report any channels that are down here [COLOR blue]http://www.tiny.cc/reportchs[/COLOR] Users can now check servers status which can be found at [COLOR blue]http://ccloudtv.org/status[/COLOR]
     </description>
 	<license>http://www.gnu.org/licenses/</license>

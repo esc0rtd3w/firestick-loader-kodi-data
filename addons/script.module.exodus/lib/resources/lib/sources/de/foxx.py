@@ -134,7 +134,7 @@ class source:
                             sources.append({'source': 'gvideo', 'quality': quality, 'language': 'de', 'url': url, 'direct': True, 'debridonly': False})
                     else:
                         try:
-                            # as long as resolveurl get no Update for this URL (So just a Temp-Solution)
+                            # as long as urlresolver get no Update for this URL (So just a Temp-Solution)
                             did = re.findall('youtube.googleapis.com.*?docid=(\w+)', i)
                             if did: i = 'https://drive.google.com/file/d/%s/view' % did[0]
 

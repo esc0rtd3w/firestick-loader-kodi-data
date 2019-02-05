@@ -24,9 +24,8 @@ import xbmc
 import xbmcplugin
 import xbmcgui
 from resources.lib import utils
-
 progress = utils.progress
-
+import urllib2,urllib
 
 @utils.url_dispatcher.register('380')
 def Main():
@@ -113,33 +112,40 @@ def ChannelList(url):
 
 @utils.url_dispatcher.register('382', ['url', 'name'], ['download'])    
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download)
-    vp.progress.update(25, "", "Loading video page", "")
-    html = utils.getHtml(url, '')
-    videourl = re.compile('video_url="([^"]+)"').findall(html)
-    videourl = decrypt_hclips(videourl[0])
-    vp.play_from_direct_link(videourl)
+	vp = utils.VideoPlayer(name, download)
+	vp.progress.update(25, "", "Loading video page", "")
+	html = utils.getHtml(url, '')
+	videourl = re.compile('video_url="([^"]+)"').findall(html)[0]
+	videourl += re.compile('video_url\+="([^"]+)"').findall(html)[0]	
+	partes = videourl.split('||')
+	videourl = decode_url(partes[0])
+	videourl = re.sub('/get_file/\d+/[0-9a-z]{32}/', partes[1], videourl)
+	videourl += '&' if '?' in videourl else '?'
+	videourl += 'lip=' + partes[2] + '&lt=' + partes[3]	
+	vp.play_from_direct_link(videourl)
 
-
-def decrypt_hclips(video_url):
-    chars = []
-    counter = 0
-    video_url = video_url.decode('utf-8')
-    while counter < len(video_url):
-        smth_1 = u'АВСDЕFGHIJKLМNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'.index(video_url[counter])
-        counter += 1
-        smth_2 = u'АВСDЕFGHIJKLМNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'.index(video_url[counter])
-        counter += 1
-        smth_3 = u'АВСDЕFGHIJKLМNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'.index(video_url[counter])
-        counter += 1
-        smth_4 = u'АВСDЕFGHIJKLМNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'.index(video_url[counter])
-        counter += 1
-        smth_1 = smth_1 << 2 | smth_2 >> 4
-        smth_2 = (smth_2 & 15) << 4 | smth_3 >> 2
-        smth_5 = (smth_3 & 3) << 6 | smth_4
-        chars.append(smth_1)
-        if 64 != smth_3:
-            chars.append(smth_2)
-        if 64 != smth_4:
-            chars.append(smth_5)
-    return ''.join(map(unichr, chars))
+def decode_url(txt):
+	_0x52f6x15 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,~'
+	reto = ''; n = 0
+	# En las dos siguientes líneas, ABCEM ocupan 2 bytes cada letra! El replace lo deja en 1 byte. !!!!: АВСЕМ (10 bytes) ABCEM (5 bytes)
+	txt = re.sub('[^АВСЕМA-Za-z0-9\.\,\~]', '', txt)
+	txt = txt.replace('А', 'A').replace('В', 'B').replace('С', 'C').replace('Е', 'E').replace('М', 'M')
+	
+	while n < len(txt):
+		a = _0x52f6x15.index(txt[n])
+		n += 1
+		b = _0x52f6x15.index(txt[n])
+		n += 1
+		c = _0x52f6x15.index(txt[n])
+		n += 1
+		d = _0x52f6x15.index(txt[n])
+		n += 1
+	
+		a = a << 2 | b >> 4
+		b = (b & 15) << 4 | c >> 2
+		e = (c & 3) << 6 | d
+		reto += chr(a)
+		if c != 64: reto += chr(b)
+		if d != 64: reto += chr(e)
+	
+	return urllib.unquote(reto)

@@ -14,7 +14,7 @@
     Special thanks for help with this resolver go out to t0mm0, jas0npc,
     mash2k3, Mikey1234,voinage and of course Eldorado. Cheers guys :)
 """
-from __generic_resolver__ import GenericResolver 
+from __generic_resolver__ import GenericResolver
 
 class VidtoResolver(GenericResolver):
     name = "vidto"

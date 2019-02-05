@@ -31,7 +31,7 @@ progress = utils.progress
 def Main():
     utils.addDir('[COLOR hotpink]Search[/COLOR]','http://cat3movie.us/?s=', 353, '', '')
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://cat3movie.us', 354, '', '')
-    List('http://cat3movie.us/page/1')
+    List('https://www.pubmovie.com/')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -43,7 +43,7 @@ def List(url):
         
         return None
     match = re.compile("<main(.*?)</main", re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-    match1 = re.compile('<a class="" href="([^"]+)" title="([^"]+)">.*?<img src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(match)
+    match1 = re.compile('<article id=.+?<a href="([^"]+)" title="([^"]+)">.+?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(match)
     cookieString = getCookiesString()
     for videopage, name, img in match1:
         name = utils.cleantext(name)
@@ -85,7 +85,7 @@ def Search(url, keyword=None):
 @utils.url_dispatcher.register('354', ['url'])
 def Categories(url):
     cathtml = utils.getHtml(url, '')
-    match = re.compile('menu-item-object-category[^>]+><a href="([^"]+)">([^<]+)</a></li>').findall(cathtml)
+    match = re.compile('<li class="cat-item cat-item.+?<a href="([^"]+)" title=.+?>(.+?)<').findall(cathtml)
     for catpage, name in match:
         utils.addDir(name, catpage, 351, '')
     xbmcplugin.endOfDirectory(utils.addon_handle)
@@ -93,17 +93,4 @@ def Categories(url):
 
 @utils.url_dispatcher.register('352', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    progress.create('Play video', 'Searching videofile.')
-    progress.update( 10, "", "Loading video page", "" )
-    html = utils.getHtml(url, '')
-    embedLinks = re.compile('<a href="([^"]+)" rel="nofollow" target="_blank">').findall(html)
-    url = ''
-    for link in embedLinks:
-        if 'embedlink' in link:
-            try:
-                html = utils.getHtml(link, '')
-                if 'Base64' in html:
-                    base64str = re.compile(r'Base64\.decode\("([^"]+)"').findall(html)
-                    url = url + " " + base64.b64decode(base64str[0])
-            except: pass
-    utils.playvideo(url, name, download, url)
+	utils.PLAYVIDEO(url, name, download, 'iframe src="([^"]+)"')

@@ -173,12 +173,10 @@ class tvshows:
         navigator.navigator().endDirectory()
 
     def search_new(self):
-            control.idle()
-
             t = control.lang(32010).encode('utf-8')
             k = control.keyboard('', t) ; k.doModal()
-            q = k.getText() if k.isConfirmed() else None
-
+            q = k.getText().strip() if k.isConfirmed() else None
+            if not q: return
             if (q == None or q == ''): return
 
             try: from sqlite3 import dbapi2 as database
@@ -190,29 +188,22 @@ class tvshows:
             dbcon.commit()
             dbcur.close()
             url = self.search_link + urllib.quote_plus(q)
-            url = '%s?action=tvshowPage&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
+            self.get(url)
 
     def search_term(self, name):
-            control.idle()
-
             url = self.search_link + urllib.quote_plus(name)
-            url = '%s?action=tvshowPage&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
+            self.get(url)
 
     def person(self):
         try:
-            control.idle()
-
             t = control.lang(32010).encode('utf-8')
             k = control.keyboard('', t) ; k.doModal()
-            q = k.getText() if k.isConfirmed() else None
-
+            q = k.getText().strip() if k.isConfirmed() else None
+            if not q: return
             if (q == None or q == ''): return
 
             url = self.persons_link + urllib.quote_plus(q)
-            url = '%s?action=tvPersons&url=%s' % (sys.argv[0], urllib.quote_plus(url))
-            control.execute('Container.Update(%s)' % url)
+            self.persons(url)
         except:
             return
 

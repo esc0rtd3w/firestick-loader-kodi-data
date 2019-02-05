@@ -127,9 +127,10 @@ def List(url, page=1):
         listhtml = utils.getHtml2(url)
     except:
         
-        return None
-    match = re.compile(r'<li>\s+<a href="([^"]+)".*?src="([^"]+)".*?<div[^>]+>([^<]+)</div>.*?href[^>]+>([^<]+)<.*?age[^>]+>([^<]+)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for videopage, img, status, name, age in match:
+        return None		
+    match = re.compile(r'<li.+?data-sl="(.+?)".+?<a href="(\/.+?)".+?<img\s+src="(.+?)".+?_label.+?>(.+?)<.+?age.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    for name,videopage, img, status, age in match:	
+
         name = utils.cleantext(name.strip())
         status = status.replace("\n","").strip()
         name = name + " [COLOR deeppink][" + age + "][/COLOR] " + status

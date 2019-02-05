@@ -96,19 +96,23 @@ def Stars(url):
 
 @utils.url_dispatcher.register('402', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    xbmc.log(url, xbmc.LOGNOTICE)
-    print "mrsexe::Playvid " + url
-    html = utils.getHtml(url, '')
-    videourl = re.compile(r"src='(/inc/clic\.php\?video=.+?&cat=mrsex.+?)'").findall(html)
-    html = utils.getHtml('http://www.mrsexe.com/' + videourl[0], '')
-    videourls = re.compile(r"'file': \"(.+?)\",.+?'label': '(.+?)'", re.DOTALL).findall(html)
-    videourls = sorted(videourls, key=lambda tup: tup[1], reverse=True)
-    videourl = videourls[0][0]
-    if videourl.startswith('//'): videourl = 'http:' + videourl
-    if download == 1:
-        utils.downloadVideo(videourl, name)
-    else:    
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        xbmc.Player().play(videourl, listitem)
+	xbmc.log(url, xbmc.LOGNOTICE)
+	print "mrsexe::Playvid " + url
+	html = utils.getHtml(url, '')
+	videourl = re.compile(r"src='(/inc/clic\.php\?video=.+?&cat=mrsex.+?)'").findall(html)
+	html = utils.getHtml('http://www.mrsexe.com/' + videourl[0], '')
+	videourls = re.compile(r"""['"](htt.+?.mp4)['"]""").findall(html)
+	output = []
+	for videourl in videourls:
+		link='Link'
+		output.append([videourl, link])
+	videourls = sorted(output, key=lambda tup: tup[1], reverse=True)
+	videourl = videourls[0][0]
+	if videourl.startswith('//'): videourl = 'http:' + videourl
+	if download == 1:
+		utils.downloadVideo(videourl, name)
+	else:    
+		iconimage = xbmc.getInfoImage("ListItem.Thumb")
+		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+		xbmc.Player().play(videourl, listitem)

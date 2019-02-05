@@ -19,6 +19,7 @@
 import re
 
 import xbmcplugin
+import xbmcgui
 from resources.lib import utils
  
 
@@ -34,11 +35,12 @@ def HQMAIN():
 
 @utils.url_dispatcher.register('151', ['url'])
 def HQLIST(url):
+	
     try:
         link = utils.getHtml(url, '')
     except:
         return None
-    match = re.compile('<a href="([^"]+)" class="image featured non-overlay".*?<img id="[^"]+" src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
+    match = re.compile('<a href="([^"]+)" class="image featured non-overlay click-trigger".*?<img id="[^"]+" src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
     for url, img, name in match:
         name = utils.cleantext(name)    
         videourl = "https://www.hqporner.com" + url
@@ -80,22 +82,24 @@ def HQSEARCH(url, keyword=None):
 
 @utils.url_dispatcher.register('152', ['url', 'name'], ['download'])
 def HQPLAY(url, name, download=None):
-    videopage = utils.getHtml(url, url)
-    iframeurl = re.compile(r"nativeplayer\.php\?i=([^']+)", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-    if iframeurl.startswith('//'):
-        iframeurl = 'https:' + iframeurl
-    if re.search('bemywife', iframeurl, re.DOTALL | re.IGNORECASE):
-        videourl = getBMW(iframeurl)
-    elif re.search('mydaddy', iframeurl, re.DOTALL | re.IGNORECASE):
-        videourl = getBMW(iframeurl)        
-    elif re.search('5\.79', iframeurl, re.DOTALL | re.IGNORECASE):
-        videourl = getIP(iframeurl)
-    elif re.search('flyflv', iframeurl, re.DOTALL | re.IGNORECASE):
-        videourl = getFly(iframeurl)
-    else:
-        utils.notify('Oh oh','Couldn\'t find a supported videohost')
-        return
-    utils.playvid(videourl, name, download)
+	videopage = utils.getHtml(url, url)
+	iframeurl = re.compile(r"nativeplayer\.php\?i=([^']+)", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
+	if iframeurl.startswith('//'):
+		iframeurl = 'https:' + iframeurl
+	if re.search('bemywife', iframeurl, re.DOTALL | re.IGNORECASE):
+		videourl = getBMW(iframeurl)
+	elif re.search('mydaddy', iframeurl, re.DOTALL | re.IGNORECASE):
+		videourl = getBMW(iframeurl)        
+	elif re.search('5\.79', iframeurl, re.DOTALL | re.IGNORECASE):
+		videourl = getIP(iframeurl)
+	elif re.search('flyflv', iframeurl, re.DOTALL | re.IGNORECASE):
+		videourl = getFly(iframeurl)
+	else:
+		utils.notify('Oh oh','Couldn\'t find a supported videohost')
+		return
+	#play_item = xbmcgui.ListItem(path=videourl)
+	#xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem=play_item)
+	utils.playvid(videourl, name, download)
 
 
 def getBMW(url):

@@ -35,7 +35,7 @@ from resources.lib.modules import thexem
 try: from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
 
-try: import resolveurl
+try: import urlresolver
 except: pass
 
 try: import xbmc
@@ -952,7 +952,7 @@ class sources:
                         part = debrid.resolver(part, d)
 
                     elif not direct == True:
-                        hmf = resolveurl.HostedMediaFile(url=u, include_disabled=True, include_universal=False)
+                        hmf = urlresolver.HostedMediaFile(url=u, include_disabled=True, include_universal=False)
                         if hmf.valid_url() == True: part = hmf.resolve()
                     urls.append(part)
 
@@ -1175,7 +1175,7 @@ class sources:
         self.sourceDict = sources()
 
         try:
-            self.hostDict = resolveurl.relevant_resolvers(order_matters=True)
+            self.hostDict = urlresolver.relevant_resolvers(order_matters=True)
             self.hostDict = [i.domains for i in self.hostDict if not '*' in i.domains]
             self.hostDict = [i.lower() for i in reduce(lambda x, y: x+y, self.hostDict)]
             self.hostDict = [x for y,x in enumerate(self.hostDict) if x not in self.hostDict[:y]]

@@ -21,7 +21,6 @@ import re
 import xbmcplugin
 from resources.lib import utils
 
-
 @utils.url_dispatcher.register('680')
 def pornvibe_main():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://pornvibe.org/categories/', 683, '', '')
@@ -56,12 +55,12 @@ def pornvibe_list(url):
 
 @utils.url_dispatcher.register('683', ['url']) 
 def pornvibe_cat(url):
-    listhtml = utils.getHtml(url)
-    match = re.compile('''<img src="([^"]+)" alt="([^"]+)"> <a href="([^"]+)".*?</h5><p>([^&]+)&''', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for img, name, catpage, count in sorted(match, key=lambda x: x[1].strip().lower()):
-        name = utils.cleantext(name.strip()) + " [COLOR deeppink]" + count.strip() + " videos[/COLOR]"
-        utils.addDir(name, catpage, 681, img, 1)
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+	listhtml = utils.getHtml(url)
+	match = re.compile('''<img src="([^"]+)" alt="([^"]+)">.+?href="([^"]+)".*?<p>([^&]+)&''', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	for img, name, catpage, count in sorted(match, key=lambda x: x[1].strip().lower()):
+		name = utils.cleantext(name.strip()) + " [COLOR deeppink]" + count.strip() + " videos[/COLOR]"
+		utils.addDir(name, catpage, 681, img, 1)
+	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('684', ['url'], ['keyword'])
