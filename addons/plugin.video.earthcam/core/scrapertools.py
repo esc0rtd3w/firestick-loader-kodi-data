@@ -35,7 +35,7 @@ def cache_page(url,post=None,headers=[['User-Agent', 'Mozilla/5.0 (Macintosh; U;
 # TODO: (3.1) Quitar el parámetro modoCache (ahora se hace por configuración)
 # TODO: (3.2) Usar notación minusculas_con_underscores para funciones y variables como recomienda Python http://www.python.org/dev/peps/pep-0008/
 def cachePage(url,post=None,headers=[['User-Agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; es-ES; rv:1.9.2.12) Gecko/20101026 Firefox/3.6.12']],modoCache=CACHE_ACTIVA, timeout=socket.getdefaulttimeout()):
-    url = urllib2.quote(url, safe='/:?=&') # :-o
+    url = urllib2.quote(url, safe='/:?=&%+') # :-o
     if (DEBUG==True): logger.info("[scrapertools.py] cachePage url="+url)
     modoCache = config.get_setting("cache.mode")
 

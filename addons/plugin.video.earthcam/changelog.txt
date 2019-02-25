@@ -1,3 +1,17 @@
+v1.3.2
+(2019, Jan)
+patched Places; Featured cams extended
+
+v1.3.1
+(2019, Jan)
+patched Search
+
+v1.3.0
+(2019, Jan)
+patched site
+speed up by using parseDOM
+buggy timeout in rtmp videos reduced (from 180s to 10s)
+
 v1.2.0
 (2017, Sept)   
 added HLS support: enable it in add-on's configuration if no cam is shown.

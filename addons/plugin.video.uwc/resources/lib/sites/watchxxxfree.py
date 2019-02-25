@@ -28,12 +28,12 @@ sortlistwxf = [addon.getLocalizedString(30012), addon.getLocalizedString(30013),
 
 @utils.url_dispatcher.register('10')
 def WXFMain():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.watchxxxfree.com/categories/',12,'','')
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.watchxxxfree.com/page/1/?s=',14,'','')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://watchxxxfreeinhd.com/categories/',12,'','')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://watchxxxfreeinhd.com/?s=',14,'','')
     utils.addDir('[COLOR hotpink]Top Pornstars[/COLOR]','https://watchxxxfreeinhd.com/actress-performes/',15,'','')
     Sort = '[COLOR hotpink]Current sort:[/COLOR] ' + sortlistwxf[int(addon.getSetting("sortwxf"))]
     utils.addDir(Sort, '', 16, '', '')
-    WXFList('http://watchxxxfree.com/page/1/',1)
+    WXFList('https://watchxxxfreeinhd.com/page/1/',1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 

@@ -95,7 +95,7 @@
         <addonforeignfilter default="true">false</addonforeignfilter>
         <addonnotifications default="true">true</addonnotifications>
         <addonupdates default="true">0</addonupdates>
-        <systemtotaluptime>50275</systemtotaluptime>
+        <systemtotaluptime>50283</systemtotaluptime>
         <settinglevel>2</settinglevel>
         <eventlog>
             <level>0</level>
@@ -398,10 +398,6 @@
         <height>488</height>
         <width>857</width>
     </window>
-    <audio>
-        <mute>false</mute>
-        <fvolumelevel>1.000000</fvolumelevel>
-    </audio>
     <resolutions />
     <defaultvideosettings>
         <deinterlacemode>1</deinterlacemode>
@@ -616,4 +612,8 @@
             <sortattributes>0</sortattributes>
         </videonavyears>
     </viewstates>
+    <audio>
+        <mute>false</mute>
+        <fvolumelevel>1.000000</fvolumelevel>
+    </audio>
 </settings>

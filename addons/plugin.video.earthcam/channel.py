@@ -7,13 +7,17 @@
 #------------------------------------------------------------
 
 # Code Upated by: Blazetamer 2014
-# Code Updated by: idleloop @ 2014 Oct, 2015 March, 2017 Aug, 2017 Sept
+# Code Updated by: idleloop @ 2014 Oct, 2015 March, 2017 Aug, 2017 Sept, 2019 Jan
 
 import urlparse,urllib2,urllib,re
 import os, sys
+from random import randint
+import time
 import xbmc
+import xbmcgui
 
-from BeautifulSoup import BeautifulSoup
+# //kodi.wiki/index.php?title=Add-on:Parsedom_for_xbmc_plugins
+from CommonFunctions import parseDOM, stripTags
 
 from core import logger
 from core import config
@@ -27,87 +31,106 @@ HLS = True
 if (config.get_setting("hls") == 'false'):
         HLS=False
 URL = 'https://www.earthcam.com/'
-USA_PREFIX_PATCH = 'search/adv_search.php?restrict=1&country[]=United%20States'
-WORLDWIDE_PREFIX_PATCH = 'search/adv_search.php?restrict=1&country[]='
-EARTHCAM_NAVIGATION_LINK_END = '&vars=0:2359:0:0'
+PLACES_URL = URL + 'network/'
+SEARCH_URL = 'search/ft_search.php?_sbox=1&s1=1&term='
+RESULTS_URL= 'search/ft_search.php?_sbox=1&s1=1&'
 
 IMAGES = os.path.join(config.get_runtime_path(),"resources")
+
 
 def isGeneric():
     return True
 
+
 def mainlist(item):
-    logger.info("[channel.py] mainlist")
+    if (DEBUG): ("[channel.py] mainlist")
     itemlist=[]
-    itemlist.append( Item(action="cams",  title="Featured Cams" , url=URL ) )
-    itemlist.append( Item(action="worldwide", title="Worldwide" , url=URL + WORLDWIDE_PREFIX_PATCH + EARTHCAM_NAVIGATION_LINK_END ) )
-    itemlist.append( Item(action="usa",       title="USA" ,       url=URL + USA_PREFIX_PATCH + EARTHCAM_NAVIGATION_LINK_END ) )
+    itemlist.append( Item(action="cams",  title="Featured Cams" , url=PLACES_URL ) )
+    itemlist.append( Item(action="places", title="Places" , url=PLACES_URL ) )
+    itemlist.append( Item(action="searching",    title="Search" ,    url='' ) )
     return itemlist
 
-def _get_tree(url, just_get_content = False):
 
-    html = scrapertools.cache_page(url)
+def searching( action ):
+    dialog = xbmcgui.Dialog()
+    search_term = dialog.input(heading='Type term of serch for EarthCam :', type=xbmcgui.INPUT_ALPHANUM)
+    del dialog
+    search_term = search_term.replace( ' ', '+' )
+    if len(search_term)==0:
+        return []
+    url = URL + SEARCH_URL + search_term
+    return _get_category( Item( action = "searching", title="Search results", url=url ), 'search' )
 
-    if just_get_content == True: return html
 
-    try:
-        tree = BeautifulSoup(html, convertEntities='html')
-    except TypeError:
-        html = html.decode('utf-8', 'ignore')
-        tree = BeautifulSoup(html, convertEntities='html')
+def _get_html(url, retries=5):
+    url = url.replace( ' ', '%20' )
+    return scrapertools.cache_page( url )
 
-    return tree
 
-def worldwide(item):
-    logger.info("[channel.py] worldwide")
+def _get_category(item, category):
     itemlist = []
-    #bStopNavigation = False
 
     if (DEBUG): logger.info("url=" + item.url)
 
-    tree = _get_tree( item.url )
+    html = _get_html( item.url )
 
-    divs = tree.findAll('div', {'class': re.compile(r'.*col\-xs\-.+result_column_[AB].*')})
+    divs = parseDOM( html, 'div', attrs={'class': '[^\'"]*?col\-xs\-[^\'"]+?result_column_[AB][^\'"]*'})
 
     (title, thumbnail, url, location, plot) = ('', '', '', '', '')
 
-    for _id, div in enumerate(divs):
-        try:
-            # column_A (even) contains thumbnail whilst column_B (odd) contains the rest of infos...
-            if (_id % 2 == 0):
-                # column_A: thumbnail
-                thumbnail = div.find('img', {'class': re.compile(r'.*thumbnailImage.*')})['src']
-            else:
-                # column_B
-                url       = div.find('a', {'class': 'camTitle'})['href']
-                # discard (almost all) the external links:
-                if not re.search( r'(//www.earthcam.com/|//(www.)?youtube.com/)', url ):
-                    #bStopNavigation = True
-                    #break
-                    pass
-                title     = div.find('a', {'class': 'camTitle'}).span.string.replace('EarthCam: ', '')
-                location  = div.find('div', {'class': 'cam_location'}).string
-                plot      = div.find('div', {'class': 'cam_description'}).string
-                if plot == None: plot=''
-                if (DEBUG): logger.info("%s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
-                item=Item(action="play", title=title, url=url, thumbnail=thumbnail, 
-                    fanart=thumbnail, plot=plot )
-                itemlist.append( item )
-        except:
-            continue
+    if divs:
+        for _id, div in enumerate( divs ):
+            try:
+                # column_A (even) contains thumbnail whilst column_B (odd) contains the rest of infos...
+                if ( _id % 2 == 0 ):
+                    # column_A: thumbnail
+                    thumbnail = parseDOM( div, 'img', attrs={'class': '[^\'"]*thumbnailImage[^\'"]*'}, ret='src' )[0].replace('256x144', '512x288').replace('128x72', '256x144')
+                else:
+                    # column_B
+                    url       = parseDOM( div, 'a', attrs={'class': 'camTitle'}, ret='href' )[0]
+                    # discard (almost all) the external links:
+                    if not re.search( r'(//www.earthcam.com/|//(www.)?youtube.com/)', url ):
+                        #bStopNavigation = True
+                        #break
+                        continue
+                    title     = parseDOM( parseDOM( div, 'a', attrs={'class': 'camTitle'} ), 'span' )[0].replace('EarthCam: ', '')
+                    location  = parseDOM( div, 'div', attrs={'class': 'cam_location'} )[0]
+                    plot      = parseDOM( div, 'div', attrs={'class': 'cam_description'} )[0]
+                    if plot == None: plot=''
+                    if (DEBUG): logger.info("%s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
+                    item=Item(action="play", title=title, url=url, thumbnail=thumbnail,
+                        fanart=thumbnail, plot=plot )
+                    itemlist.append( item )
+            except:
+                continue
+    else:
+        divs = parseDOM( html, 'div', attrs={'class': r'[^\'"]*?col\-xs\-12' } )
+        zone = parseDOM( html, 'p', attrs={ 'class': 'pageTitle' } )[0].replace(':', '')
+        for _id, div in enumerate( divs ):
+            thumbnail = parseDOM( div, 'img', ret='src' )[0].replace('256x144', '512x288').replace('128x72', '256x144')
+            url       = parseDOM( div, 'a', ret='href' )[0]
+            title     = parseDOM( div, 'span', attrs={'class': 'featuredTitle'} )[0]
+            location  = parseDOM( div, 'div', attrs={ 'class': 'featuredCity' } )[0] + ', ' + zone
+            plot      = title + "\n(" + location + ')'
+            if plot == None: plot=''
+            if (DEBUG): logger.info("%s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
+            item=Item(action="play", title=title, url=url, thumbnail=thumbnail,
+                fanart=thumbnail, plot=plot )
+            itemlist.append( item )
 
     try:
-        links = tree.find('div', {'id': 'pagination_bottom'}).findAll('a')
-        logger.info(str(links))
-        # next page
-        #if bStopNavigation == False or (bStopNavigation == True and len(itemlist)>0):
+        links = parseDOM( parseDOM( html, 'div', attrs={'id': 'pagination_bottom'} ), 'a', ret='href' )
+        links_text = parseDOM( parseDOM( html, 'div', attrs={'id': 'pagination_bottom'} ), 'a' )
         link = links[-1]
-        if re.search(r'^Next', link.text):
-            url = link['href']
-            # Unfortunately, until BeautifulSoup 4.2.1 there're problems with double ampersands, so:
-            url = URL + USA_PREFIX_PATCH + url[1:]
-            logger.info(url)
-            item=Item(action="worldwide", title='Next >>' , url=url, thumbnail='', 
+        if re.search(r'^Next', links_text[-1]):
+            url = link
+            if category.startswith('search'):
+                url = URL + RESULTS_URL + url[1:]
+                category = 'search_results'
+            else:
+                url = URL + PREFIX_PATCH + url[1:]
+            if (DEBUG): (url)
+            item=Item(action=category, title='Next >>' , url=url, thumbnail='',
                     fanart='', plot='' )
             itemlist.append( item )
     except:
@@ -115,102 +138,86 @@ def worldwide(item):
 
     return itemlist
 
-def usa(item):
-    logger.info("[channel.py] usa")
+
+def search_results(item):
+    if (DEBUG): ("[channel.py] search_results")
+    return _get_category( item, 'search_results' )
+
+
+def place(item):
+    if (DEBUG): ("[channel.py] place")
+    return _get_category( item, 'place' )
+
+
+def places(item):
+    if (DEBUG): ("[channel.py] places")
     itemlist = []
-    #bStopNavigation = False
-
-    if (DEBUG): logger.info("url=" + item.url)
-
-    tree = _get_tree( item.url )
-
-    divs = tree.findAll('div', {'class': re.compile(r'.*col-xs-.+result_column_[AB].*')})
-
-    (title, thumbnail, url, location, plot) = ('', '', '', '', '')
-
-    for _id, div in enumerate(divs):
-        try:
-            # column_A (even) contains thumbnail whilst column_B (odd) contains the rest of infos...
-            if (_id % 2 == 0):
-                # column_A: thumbnail
-                thumbnail = div.find('img', {'class': re.compile(r'.*thumbnailImage.*')})['src']
-            else:
-                # column_B
-                url       = div.find('a', {'class': 'camTitle'})['href']
-                # discard (almost all) the external links:
-                if not re.search( r'(//www.earthcam.com/|//(www.)?youtube.com/)', url ):
-                    #bStopNavigation = True
-                    #break
-                    pass
-                title     = div.find('a', {'class': 'camTitle'}).span.string.replace('EarthCam: ', '')
-                location  = div.find('div', {'class': 'cam_location'}).string
-                plot      = div.find('div', {'class': 'cam_description'}).string
-                if plot == None: plot=''
-                if (DEBUG): logger.info("%s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
-                item=Item(action="play", title=title , url=url, thumbnail=thumbnail, 
-                    fanart=thumbnail, plot=plot )
-                itemlist.append( item )
-        except:
-            continue
-
-    try:
-        links = tree.find('div', {'id': 'pagination_bottom'}).findAll('a')
-        logger.info(str(links))
-        # next page
-        #if bStopNavigation == False or (bStopNavigation == True and len(itemlist)>0):
-        link = links[-1]
-        if re.search(r'^Next', link.text):
-            url = link['href']
-            # Unfortunately, until BeautifulSoup 4.2.1 there're problems with double ampersands, so:
-            url = URL + USA_PREFIX_PATCH + url[1:]
-            logger.info(url)
-            item=Item(action="usa", title='Next >>' , url=url, thumbnail='', 
+    html = _get_html( item.url )
+    places = parseDOM( html, 'a', attrs={'class': 'locationLink'} )
+    places_url = parseDOM( html, 'a', attrs={'class': 'locationLink'}, ret='href' )
+    for _id, place in enumerate( places ):
+        title = place
+        url   = PLACES_URL + places_url[_id]
+        item=Item(action='place', title=title , url=url, thumbnail='',
                     fanart='', plot='' )
-            itemlist.append( item )
-    except:
-        pass
-
+        itemlist.append( item )
     return itemlist
 
+
+# featured cams
 def cams(item):
-    logger.info("[channel.py] cams")
+    if (DEBUG): ("[channel.py] cams")
     itemlist = []
 
     if (DEBUG): logger.info("url=" + item.url)
 
-    #tree = _get_tree( item.url )
-    # Ops... some earthcam's wrong html code here mangles BeautifulSoup tree :-(
-    html = _get_tree( item.url, just_get_content=True )
-    html = html.replace(' ; id=', ' id=')
-    try:
-        tree = BeautifulSoup(html, convertEntities='html')
-    except TypeError:
-        html = html.decode('utf-8', 'ignore')
-        tree = BeautifulSoup(html, convertEntities='html')
+    html = _get_html( item.url )
+    divs = parseDOM( html, 'div', attrs={'class': r'[^\'"]*?col\-xs\-12' } )
+    for _id, div in enumerate( divs ):
+        thumbnail = parseDOM( div, 'img', ret='src' )[0].replace('256x144', '512x288').replace('128x72', '256x144')
+        url       = parseDOM( div, 'a', ret='href' )[0]
+        if 'www.earthcam.com' not in url or 'alexa' in url or 'myearthcam' in url:
+            continue
+        title     = parseDOM( div, 'span', attrs={'class': 'featuredTitle'} )[0]
+        location  = parseDOM( div, 'div', attrs={ 'class': 'featuredCity' } )[0]
+        plot      = title + "\n(" + location + ')'
+        if plot == None: plot=''
+        if (DEBUG): logger.info("%s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
+        item=Item(action="play", title=title, url=url, thumbnail=thumbnail,
+            fanart=thumbnail, plot=plot )
+        itemlist.append( item )
 
-    divs = tree.findAll('div', {'class': re.compile(r'.*homepageplayer-camera.*')})
+    # more cameras from front page
+    if (DEBUG): logger.info("url=" + URL)
+
+    html = _get_html( URL )
+    divs = parseDOM( html, 'div', attrs={ 'class': '[^\'"]*?camera_block[^\'"]*?' } )
 
     for _id, div in enumerate(divs):
+        if not re.search( r'//www.earthcam.com/[^"}\']+?\?cam=', div ):
+            continue
         try:
-            title     = div.find('img', {'class': re.compile(r'homepage_player_thumb.*')})['alt']
-            thumbnail = div.find('img')['src']
-            url       = URL + re.search( r'cam_url.*?:.*?//www.earthcam.com/([^"}\']+)', 
-                                str(div) ).group(1)
-            location  = div.find('div', {'class': 'thumbnailTitle'}).string
-            plot      = ''
+            title     = parseDOM( div, 'img', ret='title')[0].replace('EarthCam: ','')
+            thumbnail = parseDOM( div, 'img', ret='src')[0].replace('256x144', '512x288').replace('128x72', '256x144')
+            url       = URL + re.search( r'//www.earthcam.com/([^"}\']+)', div ).group(1)
+            location  = parseDOM( div, 'div', attrs={ 'class': '[^\'"]*?thumbnailTitle[^\'"]*?' } )[0]
+            plot      = title
             if (DEBUG): logger.info("cams : %s, %s, %s, %s, %s" % (title, thumbnail, url, location, plot))
         except:
             continue
-        item=Item(action="play", title=title , url=url, thumbnail=thumbnail, 
+        item=Item(action="play", title=title , url=url, thumbnail=thumbnail,
                 fanart=thumbnail, plot=plot )
         itemlist.append( item )
+        #if _id >= 12:
+        #    break
 
     return itemlist
+
 
 def previous_play(item, just_check=False):
     itemlist = []
 
-    data = scrapertools.cache_page(item.url)
+    data = _get_html( item.url )
     if (DEBUG): logger.info("item.url="+item.url)
     # Extracts json info
     json_text=''
@@ -238,12 +245,13 @@ def previous_play(item, just_check=False):
                 return []
             if (DEBUG): logger.info("portal of cams=" + str(cams))
             for cam_id in cams:
-                new_item=Item(action="previous_play", title=cam_id["title"] , url=item.url + cam_id["url"], thumbnail=cam_id["thumbnail"], 
-                    fanart=cam_id["thumbnail"], plot=cam_id["title"] )
+                new_item=Item(action="previous_play", title=cam_id["title"] , url=item.url + cam_id["url"],
+                    thumbnail=cam_id["thumbnail"].replace('256x144', '512x288').replace('128x72', '256x144'),
+                    fanart=cam_id["thumbnail"].replace('256x144', '512x288').replace('128x72', '256x144'), plot=cam_id["title"] )
                 itemlist.append( new_item )
             return itemlist
         except Exception, e:
-            logger.info("[earthcam] channel.py " + str(e))
+            if (DEBUG): ("[earthcam] channel.py " + str(e))
             return []
     if (DEBUG): logger.info("json_text="+json_text)
     if json_text.startswith('%'):
@@ -255,29 +263,6 @@ def previous_play(item, just_check=False):
         cam_data=json_object["cam"]
     except Exception, e:
         return []
-
-    #http://www.earthcam.com/usa/newyork/timessquare/?cam=tsstreet
-    #if "?cam=" in item.url:
-    #video_url=""
-    #try:
-    #    # Extract cam_id
-    #    cam_id = item.url.split("?")[1].split("=")[1]
-    #    logger.info("cam_id="+cam_id)
-    #    cam_data=json_object["cam"][cam_id]
-    #    if (DEBUG): logger.info("cam_data="+str(cam_data))
-
-    #    offline = cam_data["showOfflineMessage"]
-    #    logger.info("offline="+offline)
-    #    liveon = cam_data["liveon"]
-    #    logger.info("liveon="+liveon)
-    
-    #    video_url = cam_data["worldtour_path"]
-    #    logger.info("video_url="+video_url)
-    #    url = calculate_url(video_url)
-    #    itemlist.append( Item(action="play", title=item.title , server="directo", url=url, 
-    #        fanart=item.thumbnail, thumbnail=item.thumbnail, folder=False) )
-    #except:
-    #   logger.info("NO cam_id")
 
     if (DEBUG): logger.info("len(cam_data)=%d" % len(cam_data))
     for cam_id in cam_data:
@@ -292,7 +277,8 @@ def previous_play(item, just_check=False):
             try:
                 if (HLS):
                     if "html5_streamingdomain" in cam_data[cam_id]:
-                        video_url = 'http:' + cam_data[cam_id]["html5_streamingdomain"]
+                        video_url = cam_data[cam_id]["html5_streamingdomain"]
+                        if not re.search( r'^http', video_url ): video_url = 'http://' + video_url
                         if "html5_streampath" in cam_data[cam_id] and  re.search( r'(\.m3u8)$', cam_data[cam_id]["html5_streampath"] ):
                             video_url = video_url + cam_data[cam_id]["html5_streampath"]
                             if (DEBUG): logger.info("html5_stream="+video_url)
@@ -316,12 +302,12 @@ def previous_play(item, just_check=False):
                 except Exception, e:
                     title=str(cam_id)
                 try:
-                    fanart=cam_data[cam_id]["offlineimage"]
+                    fanart=cam_data[cam_id]["thumbimage2"].replace('256x144', '512x288').replace('128x72', '256x144').replace(r'\\', '')
                 except Exception, e:
                     fanart=''
                     if (DEBUG): logger.info("[channel.py] [play] ERROR: no fanart")
                 try:
-                    thumbnail=cam_data[cam_id]["thumbimage"]
+                    thumbnail=cam_data[cam_id]["thumbimage"].replace('256x144', '512x288').replace('128x72', '256x144').replace(r'\\', '')
                 except Exception, e:
                     thumbnail=''
                     if (DEBUG): logger.info("[channel.py] [play] ERROR: no thumbnail")
@@ -339,29 +325,32 @@ def previous_play(item, just_check=False):
     
     return itemlist
 
+
 def play(item):
     itemlist = []
     if re.search( r'//(www.)?youtube.com/', item.url ):
-        video_id = re.sub('.+?=', '', item.url)
-        xbmc.executebuiltin('PlayMedia(plugin://plugin.video.youtube/play/?video_id=' + video_id + ')')
+        if re.search('(/channel/.+)', item.url):
+            channel = re.search('(/channel/.+)', item.url).group(1) + '/playlists/'
+            xbmc.executebuiltin('PlayMedia(plugin://plugin.video.youtube' + channel + ')')
+        elif re.search('/c/(.+)/live', item.url):
+            channel = re.search('/c/(.+)/live', item.url).group(1) + '/'
+            xbmc.executebuiltin('PlayMedia(plugin://plugin.video.youtube/user/' + channel + ')')
+        else:
+            video_id = re.sub('.+?=', '', item.url)
+            xbmc.executebuiltin('PlayMedia(plugin://plugin.video.youtube/play/?video_id=' + video_id + ')')
     elif re.search( r'(\.flv|\.mp4|\.jpg|\.png|\.m3u8)$', item.url ) or item.url.startswith("rtmp"):
         itemlist.append( item )
     else:   # for backward compatitbility with v1.0.7 favorites
         itemlist=previous_play( item )
     return itemlist
 
+
 def calculate_url(video_url):
-    #video_url2 = scrapertools.get_match(json_decoded,'"worldtour_path"\:"([^"]+)"')
-    #logger.info("video_url2="+video_url2)
-    #video_url = "rtmp://video2.earthcam.com/fecnetwork/hdtimes11.flv"
-    #./rtmpdump-2.4 -r "rtmp://video2.earthcam.com/fecnetwork/4828.flv" --swfVfy "http://www.earthcam.com/swf/cam_player_v2/ecnPlayer.swf?20121010" --pageUrl "http://www.earthcam.com/world/turkey/istanbul/" --tcUrl "rtmp://video2.earthcam.com/fecnetwork" --app fecnetwork --live --playpath "4828.flv" -o out.flv
-    # Taken from http://forum.xbmc.org/archive/index.php/thread-120418-20.html
-    # rtmp://video2.earthcam.com/ app=fecnetwork swfUrl=http://www.earthcam.com/swf/cam_player_v2/ecnPlayer.swf playpath=fridaysHD1.flv live=true timeout=180
     if video_url.lower().endswith(".jpg") or video_url.lower().endswith(".png"):
         url = video_url
     elif video_url.lower().endswith(".m3u8"):
         try:
-            m3u8_content = _get_tree(video_url, just_get_content = True)
+            m3u8_content = _get_html( video_url )
             url = video_url.replace( 'playlist', re.search(r'^([^#].+)\.m3u8$', m3u8_content, re.MULTILINE).group(1) )
         except:
             url=''
@@ -372,8 +361,8 @@ def calculate_url(video_url):
         app = scrapertools.get_match(video_url,"rtmp\://[^\/]+/([a-z]+)/")
         ###playpath = scrapertools.get_match(video_url,"rtmp\://[^\/]+/[a-z]+/([a-zA-Z0-9]+\.flv)")
         playpath = scrapertools.get_match(video_url,"rtmp\://[^\/]+/[a-z]+/(.+\.flv)")
-        swfurl = "http://www.earthcam.com/swf/cam_player_v2/ecnPlayer.swf"
-        url=rtmp_url + " app=" + app + " swfUrl=" + swfurl + " playpath=" + playpath + " live=true timeout=180"
+        swfurl = "https://www.earthcam.com/swf/cam_player_v2/ecnPlayer.swf"
+        url=rtmp_url + " app=" + app + " swfUrl=" + swfurl + " playpath=" + playpath + " live=true timeout=10"
     if (DEBUG): logger.info("calculated_url="+url)
     return url
 

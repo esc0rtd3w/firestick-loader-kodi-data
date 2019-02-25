@@ -1,11 +1,9 @@
 '''
-    Created by others
-    Refactored for exodus
-    Nov 20 2018
+    Torrentapi
 '''
 
-import re, requests, xbmc, xbmcaddon
-#from urlresolver.plugins.premiumize_me import PremiumizeMeResolver
+import re, requests, xbmc
+from urlresolver.plugins.premiumize_me import PremiumizeMeResolver
 from resources.lib.modules import source_utils
 
 class source:
@@ -13,11 +11,11 @@ class source:
     def __init__(self):
         self.priority = 1
         self.language = ['en']
-        self.domain = 'https://torrentapi.org'
-        self.api_key = xbmcaddon.Addon('script.module.exodus').getSetting('pm.pin')    #PremiumizeMeResolver.get_setting('password')
-        self.tvsearch = 'https://torrentapi.org//pubapi_v2.php?app_id=lamscr&mode=search&search_string=%s&category=tv&ranked=0&token=%s'
-        self.msearch = 'https://torrentapi.org//pubapi_v2.php?app_id=lamscr&mode=search&search_string=%s&category=movies&ranked=0&token=%s'
-        self.tokenta = 'https://torrentapi.org//pubapi_v2.php?app_id=lamscr&get_token=get_token'
+        self.domain = 'https://Torrentapi.top'
+        self.api_key = PremiumizeMeResolver.get_setting('password')
+        self.tvsearch = 'https://torrentapi.org//pubapi_v2.php?app_id=poached&mode=search&search_string=%s&category=tv&ranked=0&token=%s'
+        self.msearch = 'https://torrentapi.org//pubapi_v2.php?app_id=poached&mode=search&search_string=%s&category=movies&ranked=0&token=%s'
+        self.tokenta = 'https://torrentapi.org//pubapi_v2.php?app_id=poached&get_token=get_token'
         self.checkc = 'https://www.premiumize.me/api/torrent/checkhashes?apikey=%s&hashes[]=%s&apikey=%s'
         self.pr_link = 'https://www.premiumize.me/api/transfer/directdl?apikey=%s&src=magnet:?xt=urn:btih:%s'
 

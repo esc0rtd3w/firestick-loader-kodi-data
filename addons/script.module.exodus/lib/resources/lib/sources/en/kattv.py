@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 					   
 '''
-    Exodus Add-on
+    Exoduss Add-on
 						
 									 
 

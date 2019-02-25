@@ -1,20 +1,18 @@
 '''
-    Created by others
-    Refactored for exodus
-    Nov 20 2018
+    BitLord
 '''
 
-import re, requests, xbmcaddon
+import re, requests, xbmc
+from urlresolver.plugins.premiumize_me import PremiumizeMeResolver
 from resources.lib.modules import source_utils
-#from urlresolver.plugins.premiumize_me import PremiumizeMeResolver
 
 class source:
 
     def __init__(self):
-        self.priority = 1
+        self.priority = 0
         self.language = ['en']
         self.domain = 'http://www.bitlordsearch.com'
-        self.api_key = xbmcaddon.Addon('script.module.exodus').getSetting('pm.pin')    #PremiumizeMeResolver.get_setting('password')
+        self.api_key = PremiumizeMeResolver.get_setting('password')
         self.search_link = 'http://www.bitlordsearch.com/get_list'
         self.checkc = 'https://www.premiumize.me/api/torrent/checkhashes?apikey=%s&hashes[]=%s&apikey=%s'
         self.pr_link = 'https://www.premiumize.me/api/transfer/directdl?apikey=%s&src=magnet:?xt=urn:btih:%s'
@@ -64,16 +62,21 @@ class source:
                     ise = url['season'].zfill(2)
                     se = 's' + ise + 'e' + iep
                     sel = url['tvshowtitle'].replace(' ','.') + '.' + se
-                    cate = '4'  
+                    cate = '4'
+                    
                 else:
                     sel = url['title'].replace(' ','.') + '.' + url['year']
                     cate = '3'
+                    
                 sel = sel.lower()
                 bdata = {'filters[adult]': 'false', 'filters[category]': cate, 'filters[field]': 'category', 'filters[sort]': 'asc',\
                          'filters[time]': '4', 'limit': '25', 'offset': '0', 'query': sel}
+                
                 gs = s.post(self.search_link, data=bdata).text
-                gl = re.compile('me\W+(.*?)[\'"].*?tih:(.*?)\W.*?ize\W+(.*?)\W', re.I).findall(gs)
-                for nam,haas,siz in gl:
+                
+                gl = re.compile('me\W+(.*?)[\'"].*?tih:(.*?)\W', re.I).findall(gs)
+                for nam,haas in gl:
+                    print('FDGDFGDFGFD-----45345345', haas)
                     checkca = s.get(self.checkc % (self.api_key, haas, self.api_key)).text
                     quality = source_utils.check_sd_url(nam)
                     if 'finished' in checkca:
@@ -85,7 +88,7 @@ class source:
                             'url': url,
                             'direct': False,
                             'debridonly': False,
-                            'info': siz+' MB''|'+nam,
+                            'info': nam,
                         })  
             return sources
         except:
@@ -96,7 +99,13 @@ class source:
 
         
     def resolve(self, url):
-        getpl = requests.get(url).text
-        sl = re.compile('link.*?"(h.*?)["\'].\n.*?s.*?http', re.I).findall(getpl)[0]
-        url = sl.replace('\\','')
-        return url
+        try:
+            getpl = requests.get(url).text
+            sl = re.compile('link.*?"(h.*?)["\'].\n.*?s.*?http', re.I).findall(getpl)[0]
+            url = sl.replace('\\','')
+            return url
+        except:
+            print("Unexpected error in BitLord Script: episode", sys.exc_info()[0])
+            exc_type, exc_obj, exc_tb = sys.exc_info()
+            print(exc_type, exc_tb.tb_lineno)
+            return url

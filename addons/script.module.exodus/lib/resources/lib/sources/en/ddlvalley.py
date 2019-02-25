@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
     Exodus Add-on
 
     This program is free software: you can redistribute it and/or modify
@@ -15,7 +15,7 @@
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-'''
+"""
 
 import re,urllib,urlparse
 
@@ -82,12 +82,12 @@ class source:
             hdlr = 'S%02dE%02d' % (int(data['season']), int(data['episode'])) if 'tvshowtitle' in data else data['year']
 
             query = '%s S%02dE%02d' % (data['tvshowtitle'], int(data['season']), int(data['episode'])) if\
-                'tvshowtitle' in data else '%s' % data['title']
-            query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
+                'tvshowtitle' in data else '%s %s' % (data['title'], data['year'])
 
-            url = self.search_link % urllib.quote_plus(query)
+            url = self.search_link % urllib.quote_plus(query).lower()
             url = urlparse.urljoin(self.base_link, url)
-            headers = {'Referer': 'http://www.ddlvalley.me/', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
+
+            headers = {'Referer': url, 'User-Agent': 'Mozilla/5.0'}
             r = self.scraper.get(url, headers=headers).content
 
             items = dom_parser2.parse_dom(r, 'h2')
@@ -100,9 +100,12 @@ class source:
                 try:
                     name = item[0]
                     name = client.replaceHTMLCodes(name)
-
-                    headers = {'Referer': 'http://www.ddlvalley.me/', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'}
-                    r = self.scraper.get(item[1], headers=headers).content
+                    query = query.lower().replace(' ', '-')
+                    if not query in item[1]:
+                        continue
+                    url = item[1]
+                    headers = {'Referer': url, 'User-Agent': 'Mozilla/5.0'}
+                    r = self.scraper.get(url, headers=headers).content
                     links = dom_parser2.parse_dom(r, 'a', req=['href','rel','data-wpel-link'])
                     links = [i.attrs['href'] for i in links]
                     for url in links:

@@ -1,0 +1,115 @@
+<xml>
+
+<dir> 
+<name>[COLOR white][B]Fight[/B][/COLOR] [COLOR red][B]Night[/B][/COLOR] [COLOR white][B]Live[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/UFCTv.xml</link>
+<thumbnail>http://i.imgur.com/FSq5L7u.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]DK[/B][/COLOR] [COLOR red][B]Top[/B][/COLOR] [COLOR white][B]200[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/Top200.xml</link>
+<thumbnail>https://i.imgur.com/IAOWaut.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]UFC[/B][/COLOR] [COLOR red][B]Fight[/B][/COLOR] [COLOR white][B]Night[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/ufcfights.xml</link>
+<thumbnail>http://i.imgur.com/gqe8qXq.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]MMA[/B][/COLOR] [COLOR red][B]Fight[/B][/COLOR] [COLOR white][B]Night[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/mmafights.xml</link>
+<thumbnail>http://i.imgur.com/kDVlO2q.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]D[/B][/COLOR][COLOR red][B]K[/B][/COLOR] [COLOR white][B]Picks[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/DKPicks.xml</link>
+<thumbnail>https://i.imgur.com/NeIEarR.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]UFC[/B][/COLOR] [COLOR red][B]Retro[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/retro.xml</link>
+<thumbnail>https://i.imgur.com/y5OiDWI.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]BJJ[/B][/COLOR] [COLOR red][B]Events[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/BJJ.xml</link>
+<thumbnail>http://i.imgur.com/UkTixPf.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Contender[/B] [/COLOR][COLOR red][B]Series[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/Contender.xml</link>
+<thumbnail>http://i.imgur.com/J5Y2UVv.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Top[/B] [/COLOR][COLOR red][B]Ten[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/TOPTEN.xml</link>
+<thumbnail>https://i.imgur.com/S7Pz3W4.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Dana[/B] [/COLOR][COLOR red][B]White[/B][/COLOR] - [COLOR white][B]Looking[/B] [/COLOR][COLOR red][B]For[/B][/COLOR] [COLOR white][B]A[/B] [/COLOR][COLOR red][B]Fight[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/Looking.xml</link>
+<thumbnail>http://i.imgur.com/wqSRhiS.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Where[/B][/COLOR] [COLOR red][B]Are[/B][/COLOR] [COLOR white][B]They[/B][/COLOR] [COLOR red][B]Now[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/WhereNow.xml</link>
+<thumbnail>http://i.imgur.com/jUtwMrG.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Pioneers[/B][/COLOR] [COLOR red][B]Of[/B][/COLOR] [COLOR white][B]MMA[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/Pioneers.xml</link>
+<thumbnail>http://i.imgur.com/8xhVABh.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Ultimate[/B][/COLOR] [COLOR red][B]Fighter[/B][/COLOR] [COLOR white][B]Series[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/UltimateFighter.xml</link>
+<thumbnail>http://i.imgur.com/C0KRJaN.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Y[/B][/COLOR][COLOR red][B]outube[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/YouTube.xml</link>
+<thumbnail>http://i.imgur.com/a0d48MV.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Learning[/B][/COLOR] [COLOR red][B]Technique[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/Tech.xml</link>
+<thumbnail>https://i.imgur.com/IhPDMp6.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>>
+</dir> 
+
+<dir> 
+<name>[COLOR white][B]Test[/B][/COLOR] [COLOR red][B]Area[/B][/COLOR]</name>
+<link>http://supremacy.org.uk/MMA/TestArea.xml</link>
+<thumbnail>http://i.imgur.com/tLmcQZm.png</thumbnail>
+<fanart>http://i.imgur.com/012N6Gq.jpg</fanart>
+</dir> 
+
+</xml>

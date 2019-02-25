@@ -1,0 +1,232 @@
+CH #  Network
+
+29    A&E
+3     ABC
+229   AHC
+20    AMC
+179   ASPiRE
+1318  AWE
+170   AXS TV
+10    Adult Swim
+169   Al Jazeera America
+1339  American Sports Network
+92    Animal Planet
+778   Antenna TV
+31    Audience Network
+15    BBC America
+56    BET
+261   BOUNCE TV
+467   BYU Television
+1085  Bandamax
+171   Big Ten Network
+719   Biography Channel
+172   Bloomberg TV< 
+1511  Bohbot Kids Network
+456   Boomerang
+52    Bravo
+1009  C-SPAN
+1514  C-SPAN2
+2     CBS
+272   CBS Sports Network
+173   CMT
+93    CNBC
+555   CNBC World
+40    CNN
+11    Cartoon Network
+58    Centric
+396   Chiller
+1513  Christian Broadcasting Network
+19    Cinemax
+1489  Cloo
+23    Comedy Central
+174   Cooking Channel
+175   Create
+340   Current TV
+90    DIY Network
+107   Destination America
+177   Discovery Life Channel
+745   Discovery Kids
+66    Discovery Channel
+176   Discovery Family
+78    Disney Channel
+1039  Disney Junior
+25    Disney XD
+749   DuMont Television Network
+43    E!
+39    ESPN
+357   ESPN Classic
+183   ESPN Deportes
+180   ESPN2
+181   ESPNEWS
+182   ESPNU
+507   EVINE Live
+1311  EWTN
+21    El Rey Network
+178   Encore
+253   Epix
+184   Esquire Network
+535   Estrella TV
+378   FM
+4     FOX
+185   FOX News Channel
+186   FUSE TV
+13    FX
+47    FXX
+466   Fearnet
+81    Food Network
+524   Fox Business Network
+987   Fox Family
+1457  Fox Kids
+1061  Fox Reality Channel
+515   Fox Soccer
+95    Fox Sports 1
+1047  Fox Sports SUN
+386   Fox Sports 2
+26    FreeForm
+187   Fusion
+248   G4
+189   Game Show Network
+188   Golf Channel
+103   Great American Country
+74    H2
+8     HBO
+190   HBO Family
+191   HBO Signature
+192   HGTV
+193   HLN
+252   Hallmark Movies & Mysteries
+50    Hallmark Channel
+988   Here TV
+53    History
+1310  Home Shopping Network
+65    IFC
+195   ION Life
+194   ION Television
+89    Investigation Discovery
+975   KCET
+1383  KCLV Channel 2
+232   Lifetime Movie Network
+18    Lifetime
+1321  Light TV
+525   Lionsgate Television
+196   Live Well Network
+117   Logo TV
+233   LrW
+757   MASN
+739   MAVTV
+1007  MHz Worldview
+199   MLB Network
+741   MSG
+201   MSNBC
+22    MTV
+1275  MTV Classic
+1313  MTV Live
+145   MTV2
+198   Me-TV
+1532  Mega TV
+1464  Mnet America
+1434  Mojo HD
+200   MoreMax
+203   MyNetworkTV
+1485  Myx TV
+204   NBA TV
+1     NBC
+712   NBC Universo
+104   NBCSN
+1336  NESN
+1337  NESN Plus
+205   NFL Network
+516   NHL Network
+83    National Geographic WILD
+1296  National Educational Television
+42    National Geographic Channel
+206   Nick Jr.
+27    Nickelodeon
+73    Nicktoons
+1233  NuvoTV
+236   Oprah Winfrey Network
+1368  Ora TV
+207   Outdoor Channel
+208   Ovation
+79    Oxygen
+210   PAC-12 Network
+85    PBS
+540   PBS Kids
+395   PBS SoCal
+736   Palladia< 
+34    Paramount Network
+138   Pay-Per-View
+211   Pivot
+1035  Playboy TV
+88    Pop
+1509  Prime Time Entertainment
+733   Pursuit Channel
+212   Qubo
+75    REELZ
+520   REVOLT
+213   RFD-TV
+993   RLTV
+214   SEC Network
+1492  SHOWTIME Showcase
+77    Science
+216   Showtime Extreme
+215   Showtime 2
+9     Showtime
+260   Showtime Women
+86    Smithsonian Channel
+1380  Soapnet
+284   Speed TV
+217   Sportsman Channel
+17    Starz
+255   Starz Cinema
+256   Starz Comedy
+254   Starz Edge
+257   Starz InBlack
+258   Starz Kids & Family
+319   Style TV
+33    Sundance TV
+16    Syfy
+72    Syndication
+758   TBN
+32    TBS
+488   TCM
+80    TLC
+14    TNT
+455   TV Guide Channel
+57    TV Land
+224   TV One
+101   TeenNick
+219   Telemundo
+220   Tennis Channel
+5     The CW
+354   The Family Channel
+400   The Hub
+197   The Longhorn Network
+222   The Movie Channel Xtra
+221   The Movie Channel
+71    The WB
+228   The Weather Channel
+223   Toon Disney
+82    Travel Channel
+84    TruTV
+218   Turner Classic Movies
+227   UP TV
+70    UPN
+30    USA Network
+225   UniMás
+342   Universal Kids
+734   Universal Sports Network
+735   Universal HD
+226   Univision
+55    VH1
+557   VH1 Classic
+142   Velocity
+1006  Viceland
+1089  WGBH-TV
+28    WGN America
+122   We TV
+430   World
+1330  Z Living
+125   fyi
+660   insp
+62    nick@nite

@@ -1,0 +1,503 @@
+***********Jen Syntax Formats for XMLS***********
+
+If not using gifs you can remove <animated_thumbnail></animated_thumbnail> and <animated_fanart></animated_fanart>
+
+==========main.xml==========
+
+<xml>
+  <dir>
+    <title>Movies</title>
+    <link>http://LINK_TO_YOUR_SERVER_OR_LOCAL_FILE/movies.xml</link>
+  </dir>
+
+  <dir>
+    <title>TV Shows</title>
+    <link>http://LINK_TO_YOUR_SERVER_OR_LOCAL_FILE/tvshows.xml</link>
+  </dir>
+
+  <dir>
+    <title>Lists</title>
+    <link>http://LINK_TO_YOUR_SERVER_OR_LOCAL_FILE/lists.xml</link>
+  </dir>
+
+  <dir>
+    <title>Actors</title>
+    <link>http://LINK_TO_YOUR_SERVER_OR_LOCAL_FILE/actors.xml</link>
+  </dir>
+
+  <dir>
+    <title>Music</title>
+    <link>http://LINK_TO_YOUR_SERVER_OR_LOCAL_FILE/music.xml</link>
+  </dir>
+
+  <dir>
+    <title>Search Trakt</title>
+    <trakt>search</trakt>
+  </dir>
+
+  <dir>
+    <title>Search TMDB</title>
+    <tmdb>search</tmdb>
+  </dir>
+
+  <plugin>
+    <name>Testings</name>
+    <link>plugin://plugin.video.jenplugin/?action=developer</link>
+    <thumbnail></thumbnail>
+    <summary>Testings</summary>
+  </plugin>
+</xml>
+
+==========Most Common Formats==========
+
+<dir>
+   <name></name>
+   <link></link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</dir>
+
+<item>
+   <title></title>
+   <link></link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</item>
+
+<item>
+   <title></title>
+   <link>
+      <sublink></sublink>
+      <sublink></sublink>
+   </link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</item>
+
+==========Movies==========
+
+<dir>
+  <title>Trending Movies</title>
+  <trakt>https://api.trakt.tv/movies/trending</trakt>
+</dir>
+
+<dir>
+  <title>Popular Movies</title>
+  <trakt>https://api.trakt.tv/movies/popular</trakt>
+</dir>
+
+<dir>
+  <title>Movie Watchlist</title>
+  <trakt>https://api.trakt.tv/sync/watchlist/movies</trakt>
+</dir>
+
+<dir>
+  <title>Movie Collection</title>
+  <trakt>https://api.trakt.tv/sync/collection/movies</trakt>
+</dir>
+
+<dir>
+  <title>TMDB Popular</title>
+  <tmdb>movies/popular</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Now Playing</title>
+  <tmdb>movies/now_playing</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Top Rated</title>
+  <tmdb>movies/top_rated</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Action Movies</title>
+  <tmdb>genre/movies/28</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Star Wars Collection</title>
+  <tmdb>collection/10</tmdb>
+</dir>
+
+==========TV Shows==========
+
+<dir>
+  <title>Trending Shows</title>
+  <trakt>https://api.trakt.tv/shows/trending</trakt>
+</dir>
+
+<dir>
+  <title>Popular Shows</title>
+  <trakt>https://api.trakt.tv/shows/popular</trakt>
+</dir>
+
+<dir>
+  <title>TV Watchlist</title>
+  <trakt>https://api.trakt.tv/sync/watchlist/shows</trakt>
+</dir>
+
+<dir>
+  <title>TV Collection</title>
+  <trakt>https://api.trakt.tv/sync/collection/shows</trakt>
+</dir>
+
+<dir>
+  <title>TMDB Popular</title>
+  <tmdb>tv/popular</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Top Rated</title>
+  <tmdb>tv/top_rated</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Airing Today</title>
+  <tmdb>tv/today</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Animation Shows</title>
+  <tmdb>genre/shows/16</tmdb>
+</dir>
+
+<dir>
+  <title>TMDB Reality Shows</title>
+  <tmdb>genre/shows/10764</tmdb>
+</dir>
+
+==========Music==========
+
+<dir>
+  <title>Blind Guardian Albums</title>
+  <lastfm>artist/blind guardian/albums</lastfm>
+</dir>
+
+<dir>
+  <title>Disturbed Tracks</title>
+  <lastfm>artist/disturbed/tracks</lastfm>
+</dir>
+
+
+<dir>
+  <title>Sabaton</title>
+  <lastfm>artist/sabaton/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Iced Earth</title>
+  <lastfm>artist/iced earth/tracks</lastfm>
+</dir>
+
+
+<dir>
+  <title>Artist Chart</title>
+  <lastfm>chart/artists</lastfm>
+</dir>
+
+<dir>
+  <title>Track Chart</title>
+  <lastfm>chart/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Tag Chart</title>
+  <lastfm>chart/tags</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Tracks</title>
+  <lastfm>tag/metal/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Artists</title>
+  <lastfm>tag/metal/artists</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Albums</title>
+  <lastfm>tag/metal/albums</lastfm>
+</dir>
+
+==========Lists==========
+
+Single IMDB List from another user
+<dir>
+<title>Worth Checking Out</title>
+<imdburl>/list/ls068927829/</imdburl>
+</dir>
+
+All Lists from a user
+<dir>
+<title>Toney's Lists</title>
+<imdburl>user/ur27431414/lists</imdburl>
+</dir>
+
+TV Show Genres
+<dir>
+<title>TV Shows-Action</title>
+<imdburl>genrestv/action</imdburl>
+</dir>
+
+Movie Genres
+<dir>
+<title>IMDB Action Movies</title>
+<imdburl>genres/action</imdburl>
+</dir>
+
+Movie Lists
+<dir>
+<title>Chart Moviemeter</title>
+<imdburl>chart/moviemeter</imdburl>
+</dir>
+
+<dir>
+<title>Chart Best Rated</title>
+<imdburl>chart/top</imdburl>
+</dir>
+
+By Year
+<dir>
+<title>IMDB 2017</title>
+<imdburl>years/2017</imdburl>
+</dir>
+
+Tv show Lists
+<dir>
+<title>Popular TV</title>
+<imdburl>charttv/tvmeter</imdburl>
+</dir>
+
+<dir>
+  <title>My lists</title>
+  <trakt>https://api.trakt.tv/users/me/lists/</trakt>
+</dir>
+
+<dir>
+  <title>My Liked Lists</title>
+  <trakt>https://api.trakt.tv/users/likes/lists</trakt>
+</dir>
+
+<dir>
+  <title>Reddit Top 250 (2017 Edition)</title>
+  <trakt>https://api.trakt.tv/users/philrivers/lists/reddit-top-250-2017-edition/items</trakt>
+</dir>
+
+<dir>
+  <title>Rotten Tomatoes: Best of 2017</title>
+  <trakt>https://api.trakt.tv/users/lish408/lists/rotten-tomatoes-best-of-2017/items</trakt>
+</dir>
+
+<dir>
+  <title>TMDB List: Animal Kingdom</title>
+  <tmdb>list/13488</tmdb>
+</dir>
+
+<dir>
+  <title>Shan Animated</title>
+  <tmdb>list/32947</tmdb>
+</dir>
+
+==========Actors==========
+
+<dir>
+  <title>Bryan Cranston</title>
+  <link>file://actors/bryan-cranston.xml</link>
+</dir>
+
+<dir>
+  <title>Bryan Cranston Movies Trakt</title>
+  <trakt>https://api.trakt.tv/people/bryan-cranston/movies</trakt>
+</dir>
+
+<dir>
+  <title>Bryan Cranston shows Trakt</title>
+  <trakt>https://api.trakt.tv/people/bryan-cranston/shows</trakt>
+</dir>
+
+<dir>
+  <title>Bryan Cranston Shows TMDB</title>
+  <tmdb>person/shows/17419</tmdb>
+</dir>
+
+<dir>
+  <title>Bryan Cranston Movies TMDB</title>
+  <tmdb>person/movies/17419</tmdb>
+</dir>
+
+==========YouTube==========
+
+Single Link
+
+<item>
+<title></title>
+<link>**youtube link**</link>
+<thumbnail></thumbnail>
+</item>
+
+Playlist
+
+<plugin>
+<title></title>
+<link>plugin://plugin.video.youtube/playlist/**PLAYLIST NUMBER**/</link>
+<thumbnail></thumbnail>
+</plugin>
+
+Channel
+
+<plugin>
+<title></title>
+<link>plugin://plugin.video.youtube/channel/**CHANNEL NUMBER**/playlists/</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<title>Search Music</title>
+<link>plugin://plugin.video.youtube/kodion/search/list/</link>
+<thumbnail></thumbnail>
+</plugin>
+
+Live Channels
+
+<plugin>
+<title></title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.youtube.com/embed/U4CCwCe2yWA?rel=0&showinfo=0&autoplay=1&playsinline=1|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36</link>
+<thumbnail></thumbnail>
+</plugin>
+
+(Note: For live you have to enable RTMP Input and InputStream Adaptive in VideoPlayer InputStream, also enable MPEG-DASH in the YouTube Addon
+
+==========M3U8==========
+
+<item>
+   <title>ABC 7</title>
+   <link>http://live.field59.com/wwsb/ngrp:wwsb1_all/master.m3u8</link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</item>
+
+==========M3U==========
+
+<plugin>
+    <title>M3U Name</title>
+    <link>plugin://plugin.video.live.streamspro/?mode=1&url=http://link/.m3u</link>
+	<thumbnail></thumbnail>
+    <fanart></fanart>
+</plugin>
+
+==========Sports Devil==========
+
+<plugin>
+<title>title</title>
+<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=http://LINK_HERE|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36</link>
+<thumbnail></thumbnail>
+</plugin>
+
+==========Reddit==========
+
+<plugin>
+<title>Reddit Soccer Streams</title>
+<link>plugin://plugin.video.reddit_viewer/?mode=listSubReddit&amp;type=soccerstreams&amp;url=https%3a%2f%2fwww.reddit.com%2fr%2fsoccerstreams%2f.json%3f%26limit%3d50</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<content></content>
+</plugin>
+
+==========F4M==========
+
+<plugin>
+<name></name>
+<link>plugin://plugin.video.f4mTester/?streamtype=TSDOWNLOADER&amp;url=Add Your Link Here</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<summary></summary>
+</plugin>
+
+==========Old School Formats==========
+
+Movies
+
+<item>
+<title>Star Wars: The Last Jedi</title>
+<meta>
+<content>movie</content>
+<imdb>tt2527336</imdb>
+<title>Star Wars: The Last Jedi</title>
+<year>2017</year>
+</meta>
+<link>
+<sublink>search</sublink>
+<sublink>searchsd</sublink>
+</link>
+<animated_thumbnail></animated_thumbnail>
+<thumbnail>https://ia.media-imdb.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SY1000_CR0,0,675,1000_AL_.jpg</thumbnail>
+<animated_fanart></animated_fanart>
+<fanart>https://ia.media-imdb.com/images/M/MV5BMTZiMGY5NjctMTQ3Mi00NzI2LThkMWEtNmQ0OTE1MzZkMDg0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg</fanart>
+</item>
+
+TV Shows
+
+TV Directory
+
+<dir>
+<title></title>
+<meta>
+  <content>tvshow</content>
+  <imdb></imdb>
+  <tvdb></tvdb>
+  <tvshowtitle></tvshowtitle>
+  <year></year>
+</meta>
+<link></link>
+<animated_thumbnail></animated_thumbnail>
+<thumbnail></thumbnail>
+<animated_fanart></animated_fanart>
+<fanart></fanart>
+</dir>
+
+TV Seasons
+
+<dir>
+<name></name>
+<meta>
+  <content>season</content>
+  <imdb></imdb>
+  <tvdb></tvdb>
+  <tvshowtitle></tvshowtitle>
+  <year></year>
+  <season></season>
+</meta>
+<link></link>
+<animated_thumbnail></animated_thumbnail>
+<thumbnail></thumbnail>
+<animated_fanart></animated_fanart>
+<fanart></fanart>
+</dir>
+
+TV Episodes
+
+<item>
+<title></title>
+<meta>
+  <content>episode</content>
+  <imdb></imdb>
+  <tvdb></tvdb>
+  <tvshowtitle></tvshowtitle>
+  <year></year>
+  <title></title>
+  <premiered></premiered>
+  <season></season>
+  <episode></episode>
+</meta>
+<link>
+  <sublink>search</sublink>
+  <sublink>searchsd</sublink>
+</link>
+<animated_thumbnail></animated_thumbnail>
+<thumbnail></thumbnail>
+<animated_fanart></animated_fanart>
+<fanart></fanart>
+</item>
