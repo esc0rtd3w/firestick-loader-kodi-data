@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Universal Scrapers Bug
-# 25/12/2018
+# 24/02/2019
 
 import re, time, xbmcaddon, xbmc
 import urllib, urlparse
 from universalscrapers.scraper import Scraper
-from universalscrapers.common import clean_title, clean_search, get_rd_domains, send_log, error_log
-from universalscrapers.modules import client, dom_parser as dom, workers, quality_tags
+from universalscrapers.common import clean_title, send_log, error_log
+from universalscrapers.modules import client, dom_parser as dom, workers, quality_tags, cfscrape
 
 
 dev_log = xbmcaddon.Addon('script.module.universalscrapers').getSetting("dev_log")
@@ -17,9 +17,9 @@ class one337x(Scraper):
     sources = []
 
     def __init__(self):
-        self.base_link = 'https://1337x.to/'
-        self.tvsearch = 'https://1337x.to/sort-category-search/{0}/TV/seeders/desc/{1}/'
-        self.moviesearch = 'https://1337x.to/sort-category-search/{0}/Movies/size/desc/{1}/'
+        self.base_link = 'https://1337x.is/'
+        self.tvsearch = 'https://1337x.is/sort-category-search/{0}/TV/seeders/desc/{1}/'
+        self.moviesearch = 'https://1337x.is/sort-category-search/{0}/Movies/size/desc/{1}/'
 
 
     def scrape_movie(self, title, year, imdb, debrid=False):
@@ -103,8 +103,10 @@ class one337x(Scraper):
     def _get_items(self, url):
         try:
             headers = {'User-Agent': client.agent()}
-            r = client.request(url, headers=headers)
-            posts = client.parseDOM(r, 'tbody')[0]
+            scraper = cfscrape.create_scraper()
+            r = scraper.get(url, headers=headers)
+            #r = client.request(url, headers=headers)
+            posts = client.parseDOM(r.content, 'tbody')[0]
             posts = client.parseDOM(posts, 'tr')
             for post in posts:
                 data = dom.parse_dom(post, 'a', req='href')[1]

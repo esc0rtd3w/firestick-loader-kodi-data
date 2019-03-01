@@ -1,3 +1,11 @@
+28/02/2019 v.1.1.5
+fixed scrapers:
+releasebb
+1337x
+fluit
+change to client.py
+
+
 28/12/2018 v.1.1.4.a
 bug fix on piratebay
 

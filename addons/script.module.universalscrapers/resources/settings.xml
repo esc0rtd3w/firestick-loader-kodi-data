@@ -25,8 +25,8 @@
 		<setting id="extramovies_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="EZTV" type="lsep"/>
 		<setting id="EZTV_enabled" type="bool" label="Enabled" default="true"/>
-		<setting label="filuit" type="lsep"/>
-		<setting id="filuit_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="filepursuit" type="lsep"/>
+		<setting id="filepursuit_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="Freemusic" type="lsep"/>
 		<setting id="Freemusic_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="HD Popcorns" type="lsep"/>

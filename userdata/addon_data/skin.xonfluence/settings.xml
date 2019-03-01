@@ -17,56 +17,56 @@
     <setting id="UseStartUpPlaylistPath" type="bool">false</setting>
     <setting id="DisableClearArt" type="bool">false</setting>
     <setting id="Enable515WideBanners" type="bool">false</setting>
-    <setting id="DisableTVNextAired" type="bool">true</setting>
-    <setting id="EnablePlotInfo" type="bool">false</setting>
-    <setting id="enablecontext:script.playrandomvideos.single" type="bool">false</setting>
-    <setting id="EnableLargeWidgets" type="bool">false</setting>
-    <setting id="HidePopUpSeekBar" type="bool">false</setting>
-    <setting id="DisableAutoComplete" type="bool">false</setting>
-    <setting id="ScriptDisableWatchItLater" type="bool">false</setting>
-    <setting id="DisableDiscArt" type="bool">false</setting>
-    <setting id="HideWatchedMediaStat" type="bool">false</setting>
-    <setting id="NoDiffuseVizFanart" type="bool">false</setting>
-    <setting id="AutoHidePowerBtn" type="bool">false</setting>
-    <setting id="EnableHomeStats" type="bool">false</setting>
-    <setting id="ClockShowSeconds" type="bool">true</setting>
-    <setting id="HideYearTitle" type="bool">false</setting>
-    <setting id="Updates_V312" type="bool">true</setting>
-    <setting id="HideTopLeftWindows" type="bool">false</setting>
-    <setting id="View515Hidelogo" type="bool">false</setting>
-    <setting id="HideHomeNowPlaying" type="bool">false</setting>
-    <setting id="HideSeekBarOSD" type="bool">false</setting>
-    <setting id="HideInfoStartOSD" type="bool">false</setting>
-    <setting id="MediaShortDescription" type="bool">false</setting>
-    <setting id="NotificationsTopLeft" type="bool">false</setting>
-    <setting id="HideSystemTime" type="bool">false</setting>
-    <setting id="DisableLogoArt" type="bool">false</setting>
-    <setting id="DisableScriptPlayList" type="bool">false</setting>
-    <setting id="Show_Hibernate" type="bool">false</setting>
-    <setting id="Show_Suspend" type="bool">false</setting>
-    <setting id="HideSkinSettings" type="bool">false</setting>
-    <setting id="AllScreenTopLeftWidget" type="bool">false</setting>
-    <setting id="FixedEndingMenu" type="bool">false</setting>
-    <setting id="ScriptDisableTVNextAired" type="bool">false</setting>
-    <setting id="Show_SlideShow_Paused" type="bool">false</setting>
-    <setting id="EnableVolumeButtons" type="bool">true</setting>
-    <setting id="HideStartUpBackground" type="bool">false</setting>
-    <setting id="WeatherScript_Enable" type="bool">false</setting>
-    <setting id="HideBackgroundCDWall" type="bool">false</setting>
-    <setting id="Show_Timer" type="bool">false</setting>
-    <setting id="Show_Logoff" type="bool">false</setting>
-    <setting id="Enable_CustomShutDown" type="bool">false</setting>
-    <setting id="SmallVolumeJump" type="bool">true</setting>
-    <setting id="VizOnlyOnHome" type="bool">false</setting>
-    <setting id="HideTrailerBtn" type="bool">false</setting>
-    <setting id="Updates_V314" type="bool">true</setting>
-    <setting id="EnableRainDropEffect" type="bool">false</setting>
-    <setting id="ScriptDisableScriptPlaylist" type="bool">false</setting>
-    <setting id="HideArtWorkOSD" type="bool">false</setting>
-    <setting id="HideNextSongsInfo" type="bool">false</setting>
-    <setting id="InitialSetUpRun" type="bool">true</setting>
-    <setting id="EnableCDArtWork" type="bool">true</setting>
     <setting id="LowerMainMenuBar" type="bool">true</setting>
+    <setting id="EnableCDArtWork" type="bool">true</setting>
+    <setting id="InitialSetUpRun" type="bool">true</setting>
+    <setting id="HideNextSongsInfo" type="bool">false</setting>
+    <setting id="HideArtWorkOSD" type="bool">false</setting>
+    <setting id="ScriptDisableScriptPlaylist" type="bool">false</setting>
+    <setting id="EnableRainDropEffect" type="bool">false</setting>
+    <setting id="Updates_V314" type="bool">true</setting>
+    <setting id="HideTrailerBtn" type="bool">false</setting>
+    <setting id="VizOnlyOnHome" type="bool">false</setting>
+    <setting id="SmallVolumeJump" type="bool">true</setting>
+    <setting id="Enable_CustomShutDown" type="bool">false</setting>
+    <setting id="Show_Logoff" type="bool">false</setting>
+    <setting id="Show_Timer" type="bool">false</setting>
+    <setting id="HideBackgroundCDWall" type="bool">false</setting>
+    <setting id="WeatherScript_Enable" type="bool">false</setting>
+    <setting id="HideStartUpBackground" type="bool">false</setting>
+    <setting id="EnableVolumeButtons" type="bool">true</setting>
+    <setting id="Show_SlideShow_Paused" type="bool">false</setting>
+    <setting id="ScriptDisableTVNextAired" type="bool">false</setting>
+    <setting id="FixedEndingMenu" type="bool">false</setting>
+    <setting id="AllScreenTopLeftWidget" type="bool">false</setting>
+    <setting id="HideSkinSettings" type="bool">false</setting>
+    <setting id="Show_Suspend" type="bool">false</setting>
+    <setting id="Show_Hibernate" type="bool">false</setting>
+    <setting id="DisableScriptPlayList" type="bool">false</setting>
+    <setting id="DisableLogoArt" type="bool">false</setting>
+    <setting id="HideSystemTime" type="bool">false</setting>
+    <setting id="NotificationsTopLeft" type="bool">false</setting>
+    <setting id="MediaShortDescription" type="bool">false</setting>
+    <setting id="HideInfoStartOSD" type="bool">false</setting>
+    <setting id="HideSeekBarOSD" type="bool">false</setting>
+    <setting id="HideHomeNowPlaying" type="bool">false</setting>
+    <setting id="View515Hidelogo" type="bool">false</setting>
+    <setting id="HideTopLeftWindows" type="bool">false</setting>
+    <setting id="Updates_V312" type="bool">true</setting>
+    <setting id="HideYearTitle" type="bool">false</setting>
+    <setting id="ClockShowSeconds" type="bool">true</setting>
+    <setting id="EnableHomeStats" type="bool">false</setting>
+    <setting id="AutoHidePowerBtn" type="bool">false</setting>
+    <setting id="NoDiffuseVizFanart" type="bool">false</setting>
+    <setting id="HideWatchedMediaStat" type="bool">false</setting>
+    <setting id="DisableDiscArt" type="bool">false</setting>
+    <setting id="ScriptDisableWatchItLater" type="bool">false</setting>
+    <setting id="DisableAutoComplete" type="bool">false</setting>
+    <setting id="HidePopUpSeekBar" type="bool">false</setting>
+    <setting id="EnableLargeWidgets" type="bool">false</setting>
+    <setting id="enablecontext:script.playrandomvideos.single" type="bool">false</setting>
+    <setting id="EnablePlotInfo" type="bool">false</setting>
+    <setting id="DisableTVNextAired" type="bool">true</setting>
     <setting id="NoAnimateFanart" type="bool">false</setting>
     <setting id="SingleGlobalBackground" type="bool">false</setting>
     <setting id="ShowUsrVideoOSDButton" type="bool">false</setting>
@@ -130,16 +130,71 @@
     <setting id="HideFavorites" type="bool">true</setting>
     <setting id="MinimalPictureInfo" type="bool">false</setting>
     <setting id="Enable_CustomHibernate" type="bool">false</setting>
-    <setting id="AddonSetEleven.4.Icon" type="string"></setting>
-    <setting id="HomeItem.11.Type" type="string">VideoNode</setting>
-    <setting id="UserSubFive.10.Label" type="string">Castaway Live</setting>
-    <setting id="UserSubOne.2.Path" type="string">RunAddon(plugin.video.80smusicvideos)</setting>
-    <setting id="AddonSetNine.3.Icon" type="string"></setting>
-    <setting id="MediaPopupControl" type="string"></setting>
-    <setting id="AddonSetOne.5.Icon" type="string"></setting>
-    <setting id="HomeItem.9.Sub" type="string">Concerts</setting>
-    <setting id="AddonSetEleven.4.Label" type="string"></setting>
-    <setting id="SubMusic.9.Label" type="string">Recorded Games</setting>
+    <setting id="AddonSetTen.4.Icon" type="string"></setting>
+    <setting id="UserSubFour.5.List" type="string">plugin://plugin.video.all_wrestling/?mode=6&amp;name=Search&amp;url=url</setting>
+    <setting id="SubConcerts.9.Label" type="string">UK Turk</setting>
+    <setting id="UserSubOne.5.Icon" type="string">special://home/addons/plugin.program.dailyupdateswiz\resources\art\maintenance.png</setting>
+    <setting id="UserSubThree.5.Path" type="string">RunAddon(plugin.video.ccloudtv)</setting>
+    <setting id="UsrConcertsFanArtDir" type="string"></setting>
+    <setting id="FanArtCycleRate" type="string">10</setting>
+    <setting id="AddonSetEleven.1.Path" type="string"></setting>
+    <setting id="UserSelectAddon.2.Label" type="string"></setting>
+    <setting id="SubLiveTV.6.List" type="string">plugin://plugin.video.tdbwizard/?url=url&amp;mode=26&amp;name=%5BCOLOR+white%5DHide+All+Passwords%5B%2FCOLOR%5D&amp;fanart=C%3A%5CUsers%5Clwarshawsky%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.tdbwizard%5Cresources%5Cart%5Cmaintwall.jpg</setting>
+    <setting id="SubConcerts.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Documentaries&amp;mode=400&amp;folder=Youtube%2FDocumentaries&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-UlgzdrWGegU%2FV2QF1n43o0I%2FAAAAAAAAE6E%2F-PO-LTY7uO01mbOI-kwPgiATJAjXs3MXgCL8B%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
+    <setting id="AddonSetTen.4.Path" type="string"></setting>
+    <setting id="AddonSetOne.3.Icon" type="string"></setting>
+    <setting id="UserSubThree.4.Path" type="string">RunAddon(plugin.video.thepyramid)</setting>
+    <setting id="AddonSetEleven.5.Path" type="string"></setting>
+    <setting id="AddonSetFour.4.Icon" type="string"></setting>
+    <setting id="UserSelectAddon.5.Label" type="string"></setting>
+    <setting id="UserSubThree.2.Path" type="string">RunAddon(plugin.video.cyphertv)</setting>
+    <setting id="HomeItem.8.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Gaming&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CGaming&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.program.super.favourites%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.program.super.favourites%5Cfanart.jpg&amp;content_type=video,return)</setting>
+    <setting id="SubLiveTV.4.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
+    <setting id="AddonSetTwelve.6.Path" type="string"></setting>
+    <setting id="UserSubFive.5.Path" type="string">RunAddon(plugin.video.ufc-finest)</setting>
+    <setting id="AddonSetTwelve.2.Path" type="string"></setting>
+    <setting id="AddonSetFive.2.Icon" type="string"></setting>
+    <setting id="HomeItem.7.Label" type="string">Education</setting>
+    <setting id="UserSubThree.1.List" type="string">com.xtream_codes.dupdates</setting>
+    <setting id="SubPictures.5.Path" type="string">RunAddon(plugin.video.discovery-channels)</setting>
+    <setting id="SubProg.2.Icon" type="string">https://yt3.ggpht.com/-neqg2yiWj-A/AAAAAAAAAAI/AAAAAAAAAAA/CzQHBJoLlls/s240-c-k-no/photo.jpg</setting>
+    <setting id="UserSubFour.3.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nflarch,return)</setting>
+    <setting id="HomeItem.1.Addon" type="string">None</setting>
+    <setting id="AddonSetSix.3.Label" type="string"></setting>
+    <setting id="SubLiveTV.8.Icon" type="string">special://home/addons/script.speedtestnet\icon.png</setting>
+    <setting id="HomeItem.12.Type" type="string">AddOns</setting>
+    <setting id="AddonSetTwo.4.Path" type="string"></setting>
+    <setting id="AddonSetEight.5.Icon" type="string"></setting>
+    <setting id="HomeItem.6.Type" type="string">VideoNode</setting>
+    <setting id="SubRadio.2.Label" type="string">Hidden</setting>
+    <setting id="UserConcertsSubMenu" type="string">Documentaries</setting>
+    <setting id="SubPictures.9.Label" type="string">History Tube</setting>
+    <setting id="SubRadio.1.Path" type="string">Hidden</setting>
+    <setting id="HomeItem.12.Fanart" type="string">special://skin/media/retro/</setting>
+    <setting id="SubSettings.10.Icon" type="string">special://home/addons/plugin.video.Evolve\search.jpg</setting>
+    <setting id="UserSubOne.7.Path" type="string">RunAddon(plugin.audio.otr)</setting>
+    <setting id="SubTVShows.3.Label" type="string">1Channel</setting>
+    <setting id="SubSettings.9.Label" type="string">TED Talks</setting>
+    <setting id="SubLiveTV.9.List" type="string">plugin://plugin.video.tdbwizard/?description&amp;fanart=C%3a%5cUsers%5clwarshawsky%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.tdbwizard%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5clwarshawsky%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.tdbwizard%5cicon.png&amp;mode=30&amp;name=%5bCOLOR%20ghostwhite%5dADVANCED%20SETTINGS%5b%2fCOLOR%5d%20-%20%5bCOLOR%20lime%5d%5bB%5dONLINE%20%5b%2fB%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fwww.tdbwizard.com</setting>
+    <setting id="SubRadio.10.Path" type="string">Hidden</setting>
+    <setting id="UserSubFour.9.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.all_wrestling/?url=url&amp;mode=5&amp;name=TNA,return)</setting>
+    <setting id="UserSubThree.3.Label" type="string">FTV Guide</setting>
+    <setting id="UserSelectAddon.3.Label" type="string"></setting>
+    <setting id="UserSubFour.1.Label" type="string">MLB Replays</setting>
+    <setting id="AddonSetFive.4.Icon" type="string"></setting>
+    <setting id="UserSubThree.4.Label" type="string">The Pyramid</setting>
+    <setting id="SubVideos.7.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.titan/?url=https%3A%2F%2Farchive.org%2Fdownload%2FNaviXPlaylist%2FChildrens.xml&amp;mode=6&amp;name=%5BCOLOR+aqua%5D+Animation+%5B%2FCOLOR%5D&amp;iconimage=http%3A%2F%2Fi64.tinypic.com%2Fve9aoj.jpg&amp;description=,return)</setting>
+    <setting id="SubMusic.10.Path" type="string">RunAddon(plugin.video.giantbomb)</setting>
+    <setting id="UserSubOne.7.List" type="string">plugin://plugin.program.dailyupdateswiz/</setting>
+    <setting id="SubProg.3.Label" type="string">JohnLocker</setting>
+    <setting id="AddonSetThree.1.Icon" type="string"></setting>
+    <setting id="AddonSetEight.1.Icon" type="string"></setting>
+    <setting id="SubLiveTV.2.List" type="string"></setting>
+    <setting id="UserSubFive.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nba,return)</setting>
+    <setting id="UserSubTwo.7.Path" type="string"></setting>
+    <setting id="HomeItem.11.Widget" type="string">plugin://plugin.video.youtube</setting>
+    <setting id="SubTVShows.7.Path" type="string">RunAddon(plugin.video.placenta)</setting>
+    <setting id="OSDBtnUsrCmd" type="string"></setting>
     <setting id="AddonSetSix.1.Label" type="string"></setting>
     <setting id="HomeItem.9.Type" type="string">AddOns</setting>
     <setting id="SubLiveTV.7.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
@@ -267,260 +322,6 @@
     <setting id="AddonSetEight.1.Path" type="string"></setting>
     <setting id="CustomSuspend" type="string"></setting>
     <setting id="HomeItem.1.Sub" type="string">UserTwo</setting>
-    <setting id="UsrFavBtnCmd.Path" type="string"></setting>
-    <setting id="AddonSetTwo.7.Path" type="string"></setting>
-    <setting id="AddonSetEight.4.Path" type="string"></setting>
-    <setting id="UserSubOne.7.Label" type="string">Old Time Radio Live</setting>
-    <setting id="SubSettings.8.Label" type="string">Corbett Report</setting>
-    <setting id="SubProg.2.List" type="string">plugin://plugin.video.youtube/channel/UCnkMTsKYqhHm6l6GQzg4szg/</setting>
-    <setting id="AddonSetTwelve.3.Label" type="string"></setting>
-    <setting id="AddonSetTwo.2.Path" type="string"></setting>
-    <setting id="UsrArtistsFanArtDir" type="string"></setting>
-    <setting id="SubProg.3.List" type="string">plugin://plugin.video.youtube/channel/UCPrONRG9hO1f-OrxW-WH-xg/</setting>
-    <setting id="AddonSetSeven.6.Label" type="string"></setting>
-    <setting id="AddonSetEight.7.Label" type="string"></setting>
-    <setting id="HomeItem.1.Path" type="string">Main Menu</setting>
-    <setting id="UserSelectAddon.6.Label" type="string"></setting>
-    <setting id="SubSettings.8.Path" type="string">RunAddon(plugin.video.corbettreport)</setting>
-    <setting id="AddonSetThree.3.Label" type="string"></setting>
-    <setting id="SubSettings.2.Label" type="string">Engadget</setting>
-    <setting id="AddonSetEight.1.Label" type="string"></setting>
-    <setting id="AddonSetSeven.6.Path" type="string"></setting>
-    <setting id="SubConcerts.8.Path" type="string">RunAddon(plugin.video.thinktv)</setting>
-    <setting id="SubLiveTV.10.Path" type="string">RunAddon(plugin.video.time_com)</setting>
-    <setting id="UsrColorTwo" type="string">lightgrey</setting>
-    <setting id="HomeItem.3.Display" type="string">Default</setting>
-    <setting id="UserTVShowsSubMenu" type="string"></setting>
-    <setting id="SubRadio.5.Label" type="string">Hidden</setting>
-    <setting id="HomeItem.13.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Kids+Zone&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CKids+Zone&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.cartoonhd%5Cicon.png&amp;fanart=NULL&amp;content_type=video</setting>
-    <setting id="SubConcerts.3.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.video.titan/?description&amp;iconimage=http%3a%2f%2fi68.tinypic.com%2f30vkq9v.png&amp;mode=10&amp;name=Documentary&amp;url=https%3a%2f%2farchive.org%2fdownload%2fhifimoviesdocs%2fhifidocs.xml%0d&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.titan%5Cart%5Chifibg.jpg%26meta%3Dlabel%253DDocumentary%2526castandrole%253D%25255B%25255D%2526title%253DDocumentary%26_options_sf&quot;,return)</setting>
-    <setting id="UserSubOne.1.Icon" type="string">special://home/addons/plugin.video.xtream-codes-1.0\icon.png</setting>
-    <setting id="UPnP_Path" type="string"></setting>
-    <setting id="UserSubOne.5.Path" type="string"></setting>
-    <setting id="AddonSetEleven.2.Label" type="string"></setting>
-    <setting id="AddonSetSix.2.Icon" type="string"></setting>
-    <setting id="HomeItem.12.Addon" type="string">None</setting>
-    <setting id="AddonSetSix.4.Label" type="string"></setting>
-    <setting id="AddonSetEleven.5.Label" type="string"></setting>
-    <setting id="AddonSetFive.1.Label" type="string"></setting>
-    <setting id="UserSubOne.5.Label" type="string"></setting>
-    <setting id="AddonSetTwelve.1.Icon" type="string"></setting>
-    <setting id="UserMusicSubMenu" type="string">Gaming</setting>
-    <setting id="UserSubThree.10.Label" type="string">TV Guide</setting>
-    <setting id="AddonSetNine.1.Icon" type="string"></setting>
-    <setting id="AddonSetSeven.5.Path" type="string"></setting>
-    <setting id="SubLiveTV.5.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
-    <setting id="SubLiveTV.7.Path" type="string">RunAddon(plugin.video.wsj)</setting>
-    <setting id="SubLiveTV.1.Label" type="string">Youtube News</setting>
-    <setting id="AddonSetOne.1.Icon" type="string"></setting>
-    <setting id="AddonSetSix.7.Label" type="string"></setting>
-    <setting id="SubProg.1.Label" type="string">Youtube Education</setting>
-    <setting id="SubPictures.5.Label" type="string">Discovery Channels</setting>
-    <setting id="SubRadio.6.Label" type="string">Hidden</setting>
-    <setting id="HomeItem.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Movies&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CMovies&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg&amp;content_type=video,return)</setting>
-    <setting id="HomeItem.7.Display" type="string">Default</setting>
-    <setting id="UserSubOne.8.List" type="string">plugin://plugin.program.dailyupdateswiz/?description&amp;fanart=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cresources%5cart%5cfacebook.jpg&amp;mode=8&amp;name=%5bCOLOR%20blue%5dDaily%20Updates%20Facebook%20Page%5b%2fCOLOR%5d&amp;url=http%3a%2f%2finfa.ml%2f1o</setting>
-    <setting id="AddonSetSeven.7.Path" type="string"></setting>
-    <setting id="UserRadioSubMenu" type="string">Android</setting>
-    <setting id="AddonSetThree.5.Label" type="string"></setting>
-    <setting id="UsrTVShowFanArtDir" type="string"></setting>
-    <setting id="CustomShutdownArg" type="string"></setting>
-    <setting id="HomeItem.4.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Live+TV&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CLive+TV&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.ccloudtv%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.ccloudtv%5Cfanart.jpg&amp;content_type=video</setting>
-    <setting id="UserSubOne.1.List" type="string">plugin://plugin.video.xtream-codes/?content_type=video</setting>
-    <setting id="AddonSetOne.3.Label" type="string"></setting>
-    <setting id="TopLeftHomeInfo" type="string">Blank</setting>
-    <setting id="AddonSetThree.1.Path" type="string"></setting>
-    <setting id="SubConcerts.10.Label" type="string">GoodFellas</setting>
-    <setting id="UserSubFive.3.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nfl,return)</setting>
-    <setting id="AddonSetTwelve.3.Icon" type="string"></setting>
-    <setting id="AddonSetTen.3.Icon" type="string"></setting>
-    <setting id="AddonSetTwelve.7.Path" type="string"></setting>
-    <setting id="AddonSetFour.1.Path" type="string"></setting>
-    <setting id="SubMusic.5.Label" type="string">Machinima</setting>
-    <setting id="PhysicalMusicFolder" type="string"></setting>
-    <setting id="HomeItem.11.Fanart" type="string">special://skin/media/mixed_media/</setting>
-    <setting id="AddonSetTen.5.Path" type="string"></setting>
-    <setting id="UserSubTwo.3.Path" type="string">ActivateWindow(Settings)</setting>
-    <setting id="HomeItem.6.Fanart" type="string">special://skin/media/sports_live/</setting>
-    <setting id="AddonSetEleven.3.Icon" type="string"></setting>
-    <setting id="AddonSetFour.2.Icon" type="string"></setting>
-    <setting id="UserSelectOneSubMenu" type="string">Retro</setting>
-    <setting id="AddonSetOne.7.Icon" type="string"></setting>
-    <setting id="AddonSetTwo.2.Label" type="string"></setting>
-    <setting id="AddonSetThree.6.Path" type="string"></setting>
-    <setting id="SubLiveTV.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=News&amp;mode=400&amp;folder=Youtube%2FNews&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-kfIKf5PDh8A%2FVa0et9SmKpI%2FAAAAAAAAOLk%2FmYoq-sCMQYQ%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
-    <setting id="AddonSetFive.1.Icon" type="string"></setting>
-    <setting id="SubPictures.2.Label" type="string">Comedy</setting>
-    <setting id="AddonSetEight.2.Icon" type="string"></setting>
-    <setting id="UserSubFive.9.Label" type="string">SportsDevil Live</setting>
-    <setting id="AddonSetTwelve.2.Icon" type="string"></setting>
-    <setting id="AddonSetSix.7.Path" type="string"></setting>
-    <setting id="SubMusic.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Gaming&amp;mode=400&amp;folder=Youtube%2FGaming&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-RuFJUN0Bk88%2FVC2M3HSSnMI%2FAAAAAAAAAF4%2F9lnJiGjuvig%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
-    <setting id="AddonSetTwo.5.Label" type="string"></setting>
-    <setting id="AddonSetNine.5.Path" type="string"></setting>
-    <setting id="SubProg.9.Path" type="string">RunAddon(plugin.video.tvo)</setting>
-    <setting id="HomeItem.7.Addon" type="string">None</setting>
-    <setting id="WidgetFav.Path" type="string"></setting>
-    <setting id="AddonSetSeven.2.Icon" type="string"></setting>
-    <setting id="UserSubOne.10.Path" type="string"></setting>
-    <setting id="AddonSetSix.6.Icon" type="string"></setting>
-    <setting id="UserSubOne.4.List" type="string">plugin://plugin.program.dailyupdateswiz/?description&amp;fanart=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cresources%5cart%5capkstore.png&amp;mode=40&amp;name=%5bCOLOR%20lime%5dDaily%20Updates%20Android%20Apps%5b%2fCOLOR%5d&amp;url=http%3a%2f%2finfa.ml%2f1o</setting>
-    <setting id="SubSettings.2.Path" type="string">RunAddon(plugin.video.engadget)</setting>
-    <setting id="SubLiveTV.3.Label" type="string">CBS News</setting>
-    <setting id="SubMovies.6.Path" type="string">RunAddon(plugin.video.genesisreborn)</setting>
-    <setting id="SubVideos.10.Label" type="string">Kid&apos;s Movies</setting>
-    <setting id="SubMovies.2.Label" type="string">Rebirth</setting>
-    <setting id="AddonSetTwelve.5.Path" type="string"></setting>
-    <setting id="HomeFloor" type="string">Transparent</setting>
-    <setting id="SubPictures.8.Label" type="string">CrimeTube</setting>
-    <setting id="UserSubFive.6.Path" type="string">RunAddon(plugin.video.ufcfightpass)</setting>
-    <setting id="HomeItem.2.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Movies&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CMovies&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg&amp;content_type=video</setting>
-    <setting id="HomeItem.3.Fanart" type="string">special://skin/media/tv_shows/</setting>
-    <setting id="SubPictures.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Technology&amp;mode=400&amp;folder=Youtube%2FTechnology&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-xQj8AfcaEMg%2FVCL1aTLaSOI%2FAAAAAAAAAI8%2FE7TtO6EKDZw%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
-    <setting id="AddonSetFour.3.Path" type="string"></setting>
-    <setting id="HomeItem.8.Display" type="string">Default</setting>
-    <setting id="HomeItem.9.Playlist" type="string"></setting>
-    <setting id="AddonSetEight.6.Label" type="string"></setting>
-    <setting id="AddonSetThree.4.Path" type="string"></setting>
-    <setting id="SubMovies.4.Path" type="string">RunAddon(plugin.video.covenant)</setting>
-    <setting id="UserSubFive.4.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nhl,return)</setting>
-    <setting id="PingMacAddr" type="string"></setting>
-    <setting id="HomeItem.8.Sub" type="string">Music</setting>
-    <setting id="SubTVShows.8.Label" type="string">Genesis Reborn</setting>
-    <setting id="AddonSetTwo.7.Label" type="string"></setting>
-    <setting id="UserSubFive.8.Label" type="string">Live BPL</setting>
-    <setting id="HomeItem.3.Addon" type="string">None</setting>
-    <setting id="UserSelectThreeSubMenu" type="string">Live TV</setting>
-    <setting id="HomeItem.15.Display" type="string"></setting>
-    <setting id="SubVideos.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.titan/?url=https%3A%2F%2Farchive.org%2Fdownload%2FNaviXPlaylist%2FFamily.xml&amp;mode=6&amp;name=%5BCOLOR+aqua%5D+Family+Hits+%5B%2FCOLOR%5D&amp;iconimage=http%3A%2F%2Fi68.tinypic.com%2F125400y.jpg&amp;description=,return)</setting>
-    <setting id="SubTVShows.1.Path" type="string">RunAddon(plugin.video.covenant)</setting>
-    <setting id="AddonSetTwelve.1.Label" type="string"></setting>
-    <setting id="UserSubThree.10.Path" type="string">ActivateWindow(TVGuide)</setting>
-    <setting id="HomeItem.7.Fanart" type="string">special://skin/media/education/</setting>
-    <setting id="UserSubOne.6.Path" type="string">RunAddon(plugin.video.oldtimeradio)</setting>
-    <setting id="SubSettings.1.Label" type="string">Apple iTunes</setting>
-    <setting id="AddonSetTwelve.5.Label" type="string"></setting>
-    <setting id="UserSubFive.1.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=mlb,return)</setting>
-    <setting id="AddonSetNine.1.Label" type="string"></setting>
-    <setting id="AddonSetNine.6.Path" type="string"></setting>
-    <setting id="HomeItem.1.Display" type="string">Default</setting>
-    <setting id="AddonSetNine.2.Icon" type="string"></setting>
-    <setting id="AddonSetTwo.4.Label" type="string"></setting>
-    <setting id="SideBladeLabel" type="string"></setting>
-    <setting id="AddonSetSix.6.Path" type="string"></setting>
-    <setting id="SubPictures.10.Label" type="string">VOD on YouTube</setting>
-    <setting id="HomeItem.12.Display" type="string">Default</setting>
-    <setting id="AddonSetOne.5.Label" type="string"></setting>
-    <setting id="SubMovies.8.Label" type="string">Cypher Movie</setting>
-    <setting id="AddonSetSeven.1.Icon" type="string"></setting>
-    <setting id="UserSelectAddon.10.Label" type="string"></setting>
-    <setting id="AddonSetNine.1.Path" type="string"></setting>
-    <setting id="UserSubTwo.7.Label" type="string"></setting>
-    <setting id="UserSubThree.2.Label" type="string">Cypher TV</setting>
-    <setting id="UserSubOne.3.Icon" type="string">androidapp://sources/apps/com.myspecial.launcher.multiprovider.png</setting>
-    <setting id="SubTVShows.5.Label" type="string">Pegasus</setting>
-    <setting id="AddonSetEleven.6.Path" type="string"></setting>
-    <setting id="HomeItem.13.Label" type="string">Kids</setting>
-    <setting id="SubPictures.6.Path" type="string">RunAddon(plugin.audio.musicbox)</setting>
-    <setting id="UserSubFour.8.Icon" type="string">special://home/addons/plugin.video.all_wrestling\resources\art\wwe.png</setting>
-    <setting id="UserSubThree.9.Label" type="string">Goliath</setting>
-    <setting id="SubProg.4.Path" type="string"></setting>
-    <setting id="AddonSetNine.4.Icon" type="string"></setting>
-    <setting id="AddonSetSeven.7.Icon" type="string"></setting>
-    <setting id="UserSubOne.2.List" type="string">com.ron_killer.dupdates_epg</setting>
-    <setting id="AddonSetFour.2.Label" type="string"></setting>
-    <setting id="UserSubThree.9.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.Evolve/?url=http%3A%2F%2Fwww.matsbuilds.co.uk%2FGoliathLists%2Flivetv1.xml&amp;mode=1&amp;name=%5BB%5D%5BCOLOR+red%5DL%5B%2FCOLOR%5D%5BCOLOR+white%5Dive%5B%2FCOLOR%5D+%5BCOLOR+red%5DT%5B%2FCOLOR%5D%5BCOLOR+white%5DV%5B%2FCOLOR%5D%5B%2FB%5D&amp;description=&amp;fanart=http%3A%2F%2Fwww.matsbuilds.co.uk%2Fpics%2Fgoliath%2Ficons%2Flivetv.png,return)</setting>
-    <setting id="HomeItem.11.Sub" type="string">Pictures</setting>
-    <setting id="UserSubTwo.9.Label" type="string"></setting>
-    <setting id="SubConcerts.1.Label" type="string">YouTube Channels</setting>
-    <setting id="UserPicturesSubMenu" type="string">Mixed Media</setting>
-    <setting id="SubMusic.7.Path" type="string">RunAddon(plugin.video.pixel.tv)</setting>
-    <setting id="AddonSetEight.4.Icon" type="string"></setting>
-    <setting id="SubRadio.2.Path" type="string">Hidden</setting>
-    <setting id="UserSubOne.10.Icon" type="string"></setting>
-    <setting id="AddonSetTwo.4.Icon" type="string"></setting>
-    <setting id="UserSubFour.7.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.all_wrestling/?url=http%3A%2F%2Fwww.allwrestling.net%2Fcategory%2Fufc%2F&amp;mode=1&amp;name=UFC,return)</setting>
-    <setting id="HomeItem.3.Sub" type="string">TVShows</setting>
-    <setting id="UserSubOne.3.Label" type="string"></setting>
-    <setting id="SubConcerts.5.Label" type="string">Internet Archive</setting>
-    <setting id="SubRadio.7.Path" type="string">Hidden</setting>
-    <setting id="AddonSetTwelve.5.Icon" type="string"></setting>
-    <setting id="SubConcerts.4.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.video.titan/?description&amp;iconimage=http%3a%2f%2fi67.tinypic.com%2f2v2aag1.jpg&amp;mode=6&amp;name=%5bCOLOR%20aqua%5d%20Documentary%20%5b%2fCOLOR%5d&amp;url=https%3a%2f%2farchive.org%2fdownload%2fNaviXPlaylist%2fDocumentary.xml&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.titan%5Cart%5Cmmbg.jpg%26meta%3Dlabel%253D%25255BCOLOR%252Baqua%25255D%252BDocumentary%252B%25255B%25252FCOLOR%25255D%2526castandrole%253D%25255B%25255D%2526title%253D%25255BCOLOR%252Baqua%25255D%252BDocumentary%252B%25255B%25252FCOLOR%25255D%26_options_sf&quot;,return)</setting>
-    <setting id="AddonSetFour.5.Icon" type="string"></setting>
-    <setting id="SubProg.4.List" type="string">plugin://plugin.video.youtube/channel/UCWPQB43yGKEum3eW0P9N_nQ/</setting>
-    <setting id="AddonSetFour.3.Label" type="string"></setting>
-    <setting id="AddonSetSeven.1.Label" type="string"></setting>
-    <setting id="HomeItem.10.Display" type="string">Default</setting>
-    <setting id="SubPictures.10.Icon" type="string">https://dl.dropbox.com/s/k6v3lxwo6jfk01b/logonetflixbassfox.jpg</setting>
-    <setting id="UserSubOne.7.Icon" type="string">special://home/addons/plugin.program.dailyupdateswiz\icon.png</setting>
-    <setting id="AddonSetEleven.6.Icon" type="string"></setting>
-    <setting id="SubMusic.2.Path" type="string">RunAddon(plugin.video.twitch)</setting>
-    <setting id="SubMusic.6.Label" type="string">IGN.com</setting>
-    <setting id="PowerBtnAction" type="string"></setting>
-    <setting id="HomeItem.9.Display" type="string">Default</setting>
-    <setting id="UserProgsSubMenu" type="string">Education</setting>
-    <setting id="SubProg.4.Icon" type="string">https://yt3.ggpht.com/-xspd8uYupTc/AAAAAAAAAAI/AAAAAAAAAAA/UTwanzEE9iM/s240-c-k-no/photo.jpg</setting>
-    <setting id="SubRadio.3.Label" type="string">Hidden</setting>
-    <setting id="CustomHibernateArg" type="string"></setting>
-    <setting id="SubMovies.9.Label" type="string">Exodus</setting>
-    <setting id="HomeItem.8.Playlist" type="string"></setting>
-    <setting id="AddonSetFive.7.Icon" type="string"></setting>
-    <setting id="HomeItem.4.Display" type="string">Default</setting>
-    <setting id="AddonSetTwo.3.Icon" type="string"></setting>
-    <setting id="HomeItem.13.Sub" type="string">Videos</setting>
-    <setting id="SubMusic.7.Label" type="string">Pixel.tv</setting>
-    <setting id="SubPictures.4.Path" type="string">RunAddon(plugin.program.newgrounds)</setting>
-    <setting id="SubLiveTV.1.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
-    <setting id="SubRadio.3.Path" type="string">Hidden</setting>
-    <setting id="SubVideos.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Kids&amp;mode=400&amp;folder=Youtube%2FKids&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-BzPFvggvAcI%2FVqisZGGasPI%2FAAAAAAAAAhg%2FKecIJky92t8%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
-    <setting id="HomeItem.13.Type" type="string">VideoNode</setting>
-    <setting id="SubLiveTV.3.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
-    <setting id="SubConcerts.4.Label" type="string">Titan M&amp;M</setting>
-    <setting id="HomeItem.15.Addon" type="string"></setting>
-    <setting id="HomeItem.14.Addon" type="string">None</setting>
-    <setting id="AddonSetTen.3.Label" type="string"></setting>
-    <setting id="HomeItem.6.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Sports+LIVE&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CSports+LIVE&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cfanart.jpg&amp;content_type=video</setting>
-    <setting id="SubProg.6.Icon" type="string">https://yt3.ggpht.com/-O3WOfE_rWaE/AAAAAAAAAAI/AAAAAAAAAAA/TAaWn7fnYqc/s240-c-k-no/photo.jpg</setting>
-    <setting id="SubPictures.7.Path" type="string">RunAddon(plugin.video.clipfish.de)</setting>
-    <setting id="AddonSetTen.2.Icon" type="string"></setting>
-    <setting id="AddonSetThree.2.Path" type="string"></setting>
-    <setting id="UserSubTwo.8.Label" type="string"></setting>
-    <setting id="UserSubThree.3.Path" type="string">ActivateWindow(10025,&quot;plugin://script.ftvguide?sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cscript.ftvguide%5Cfanart.jpg%26meta%3Dcastandrole%253D%25255B%25255D%2526label%253DFTV%252BGuide%26desc%3DFTV+Guide+allows+you+to+combine+some+of+your+favourite+live+TV+plugins+for+use+with+a+fully+working+EPG%26_options_sf&quot;,return)</setting>
-    <setting id="UserSelectAddon.4.Label" type="string"></setting>
-    <setting id="SubLiveTV.8.Label" type="string">Fox News</setting>
-    <setting id="AddonSetSeven.7.Label" type="string"></setting>
-    <setting id="AddonSetNine.3.Path" type="string"></setting>
-    <setting id="HomeItem.14.Widget" type="string">plugin://plugin.video.fox.news/?mode=get_videolist&amp;amp;name=Latest%20Video&amp;amp;url=http%3a%2f%2fvideo.foxbusiness.com%2fplaylist%2flatest-video-latest-video&amp;amp;sf_options=meta%3Dcastandrole%253D%25255B%25255D%2526label%253DLatest%252BVideo%26_options_sf</setting>
-    <setting id="UserSelectAddon.1.Label" type="string"></setting>
-    <setting id="UserSubFour.8.List" type="string">plugin://plugin.video.all_wrestling/?mode=6&amp;name=Search&amp;url=url</setting>
-    <setting id="HomeItem.5.Label" type="string">Sports</setting>
-    <setting id="AddonSetEleven.2.Path" type="string"></setting>
-    <setting id="SubLiveTV.3.Path" type="string">RunAddon(plugin.video.cbsnews_com)</setting>
-    <setting id="HomeItem.14.Playlist" type="string">plugin://plugin.program.super.favourites/?label=News&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CNews&amp;image=&amp;fanart=&amp;content_type=video</setting>
-    <setting id="AddonSetTen.2.Label" type="string"></setting>
-    <setting id="AddonSetThree.6.Icon" type="string"></setting>
-    <setting id="AddonSetFour.7.Path" type="string"></setting>
-    <setting id="AddonSetTen.7.Path" type="string"></setting>
-    <setting id="AddonSetEleven.1.Icon" type="string"></setting>
-    <setting id="AddonSetEight.6.Icon" type="string"></setting>
-    <setting id="SubMovies.7.Path" type="string">RunAddon(plugin.video.thepyramid)</setting>
-    <setting id="SubMovies.9.Path" type="string">RunAddon(plugin.video.exodus)</setting>
-    <setting id="HomeItem.15.Sub" type="string"></setting>
-    <setting id="SubLiveTV.8.Path" type="string">RunAddon(plugin.video.fox.news)</setting>
-    <setting id="HomeTrans" type="string"></setting>
-    <setting id="AddonSetSeven.1.Path" type="string"></setting>
-    <setting id="HomeItem.2.Label" type="string">Movies</setting>
-    <setting id="AddonSetFive.2.Label" type="string"></setting>
-    <setting id="HomeItem.8.Addon" type="string">None</setting>
-    <setting id="HomeItem.11.Addon" type="string">None</setting>
-    <setting id="SubTVShows.9.Path" type="string">RunAddon(plugin.video.flixnet)</setting>
-    <setting id="HomeItem.5.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Sports&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CSports&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cfanart.jpg&amp;content_type=video,return)</setting>
-    <setting id="AddonSetEight.2.Label" type="string"></setting>
-    <setting id="AddonSetSix.5.Label" type="string"></setting>
-    <setting id="HomeItem.10.Label" type="string">Podcasts</setting>
-    <setting id="HomeItem.3.Label" type="string">TV Shows</setting>
-    <setting id="SubMovies.1.Label" type="string">Neptune Rising</setting>
-    <setting id="AddonSetNine.4.Path" type="string"></setting>
     <setting id="UserSubFour.5.Icon" type="string">special://home/addons/plugin.video.all_wrestling\resources\art\wwe.png</setting>
     <setting id="AddonSetTwo.2.Icon" type="string"></setting>
     <setting id="SubConcerts.5.Path" type="string">RunAddon(plugin.video.internetarchive)</setting>
@@ -776,6 +577,270 @@
     <setting id="AddonSetEight.5.Label" type="string"></setting>
     <setting id="HomeItem.1.Widget" type="string">None</setting>
     <setting id="AddonSetFive.5.Path" type="string"></setting>
+    <setting id="UsrFavBtnCmd.Path" type="string"></setting>
+    <setting id="AddonSetTwo.7.Path" type="string"></setting>
+    <setting id="AddonSetEight.4.Path" type="string"></setting>
+    <setting id="UserSubOne.7.Label" type="string">Old Time Radio Live</setting>
+    <setting id="SubSettings.8.Label" type="string">Corbett Report</setting>
+    <setting id="SubProg.2.List" type="string">plugin://plugin.video.youtube/channel/UCnkMTsKYqhHm6l6GQzg4szg/</setting>
+    <setting id="AddonSetTwelve.3.Label" type="string"></setting>
+    <setting id="AddonSetTwo.2.Path" type="string"></setting>
+    <setting id="UsrArtistsFanArtDir" type="string"></setting>
+    <setting id="SubProg.3.List" type="string">plugin://plugin.video.youtube/channel/UCPrONRG9hO1f-OrxW-WH-xg/</setting>
+    <setting id="AddonSetSeven.6.Label" type="string"></setting>
+    <setting id="AddonSetEight.7.Label" type="string"></setting>
+    <setting id="HomeItem.1.Path" type="string">Main Menu</setting>
+    <setting id="UserSelectAddon.6.Label" type="string"></setting>
+    <setting id="SubSettings.8.Path" type="string">RunAddon(plugin.video.corbettreport)</setting>
+    <setting id="AddonSetThree.3.Label" type="string"></setting>
+    <setting id="SubSettings.2.Label" type="string">Engadget</setting>
+    <setting id="AddonSetEight.1.Label" type="string"></setting>
+    <setting id="AddonSetSeven.6.Path" type="string"></setting>
+    <setting id="SubConcerts.8.Path" type="string">RunAddon(plugin.video.thinktv)</setting>
+    <setting id="SubLiveTV.10.Path" type="string">RunAddon(plugin.video.time_com)</setting>
+    <setting id="UsrColorTwo" type="string">lightgrey</setting>
+    <setting id="HomeItem.3.Display" type="string">Default</setting>
+    <setting id="UserTVShowsSubMenu" type="string"></setting>
+    <setting id="SubRadio.5.Label" type="string">Hidden</setting>
+    <setting id="HomeItem.13.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Kids+Zone&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CKids+Zone&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.cartoonhd%5Cicon.png&amp;fanart=NULL&amp;content_type=video</setting>
+    <setting id="SubConcerts.3.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.video.titan/?description&amp;iconimage=http%3a%2f%2fi68.tinypic.com%2f30vkq9v.png&amp;mode=10&amp;name=Documentary&amp;url=https%3a%2f%2farchive.org%2fdownload%2fhifimoviesdocs%2fhifidocs.xml%0d&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.titan%5Cart%5Chifibg.jpg%26meta%3Dlabel%253DDocumentary%2526castandrole%253D%25255B%25255D%2526title%253DDocumentary%26_options_sf&quot;,return)</setting>
+    <setting id="UserSubOne.1.Icon" type="string">special://home/addons/plugin.video.xtream-codes-1.0\icon.png</setting>
+    <setting id="UPnP_Path" type="string"></setting>
+    <setting id="UserSubOne.5.Path" type="string"></setting>
+    <setting id="AddonSetEleven.2.Label" type="string"></setting>
+    <setting id="AddonSetSix.2.Icon" type="string"></setting>
+    <setting id="HomeItem.12.Addon" type="string">None</setting>
+    <setting id="AddonSetSix.4.Label" type="string"></setting>
+    <setting id="AddonSetEleven.5.Label" type="string"></setting>
+    <setting id="AddonSetFive.1.Label" type="string"></setting>
+    <setting id="UserSubOne.5.Label" type="string"></setting>
+    <setting id="AddonSetTwelve.1.Icon" type="string"></setting>
+    <setting id="UserMusicSubMenu" type="string">Gaming</setting>
+    <setting id="UserSubThree.10.Label" type="string">TV Guide</setting>
+    <setting id="AddonSetNine.1.Icon" type="string"></setting>
+    <setting id="AddonSetSeven.5.Path" type="string"></setting>
+    <setting id="SubLiveTV.5.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
+    <setting id="SubLiveTV.7.Path" type="string">RunAddon(plugin.video.wsj)</setting>
+    <setting id="SubLiveTV.1.Label" type="string">Youtube News</setting>
+    <setting id="AddonSetOne.1.Icon" type="string"></setting>
+    <setting id="AddonSetSix.7.Label" type="string"></setting>
+    <setting id="SubProg.1.Label" type="string">Youtube Education</setting>
+    <setting id="SubPictures.5.Label" type="string">Discovery Channels</setting>
+    <setting id="SubRadio.6.Label" type="string">Hidden</setting>
+    <setting id="HomeItem.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Movies&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CMovies&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg&amp;content_type=video,return)</setting>
+    <setting id="HomeItem.7.Display" type="string">Default</setting>
+    <setting id="UserSubOne.8.List" type="string">plugin://plugin.program.dailyupdateswiz/?description&amp;fanart=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cresources%5cart%5cfacebook.jpg&amp;mode=8&amp;name=%5bCOLOR%20blue%5dDaily%20Updates%20Facebook%20Page%5b%2fCOLOR%5d&amp;url=http%3a%2f%2finfa.ml%2f1o</setting>
+    <setting id="AddonSetSeven.7.Path" type="string"></setting>
+    <setting id="UserRadioSubMenu" type="string">Android</setting>
+    <setting id="AddonSetThree.5.Label" type="string"></setting>
+    <setting id="UsrTVShowFanArtDir" type="string"></setting>
+    <setting id="CustomShutdownArg" type="string"></setting>
+    <setting id="HomeItem.4.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Live+TV&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CLive+TV&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.ccloudtv%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.ccloudtv%5Cfanart.jpg&amp;content_type=video</setting>
+    <setting id="UserSubOne.1.List" type="string">plugin://plugin.video.xtream-codes/?content_type=video</setting>
+    <setting id="AddonSetOne.3.Label" type="string"></setting>
+    <setting id="TopLeftHomeInfo" type="string">Blank</setting>
+    <setting id="AddonSetThree.1.Path" type="string"></setting>
+    <setting id="SubConcerts.10.Label" type="string">GoodFellas</setting>
+    <setting id="UserSubFive.3.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nfl,return)</setting>
+    <setting id="AddonSetTwelve.3.Icon" type="string"></setting>
+    <setting id="AddonSetTen.3.Icon" type="string"></setting>
+    <setting id="AddonSetTwelve.7.Path" type="string"></setting>
+    <setting id="AddonSetFour.1.Path" type="string"></setting>
+    <setting id="SubMusic.5.Label" type="string">Machinima</setting>
+    <setting id="PhysicalMusicFolder" type="string"></setting>
+    <setting id="HomeItem.11.Fanart" type="string">special://skin/media/mixed_media/</setting>
+    <setting id="AddonSetTen.5.Path" type="string"></setting>
+    <setting id="UserSubTwo.3.Path" type="string">ActivateWindow(Settings)</setting>
+    <setting id="HomeItem.6.Fanart" type="string">special://skin/media/sports_live/</setting>
+    <setting id="AddonSetEleven.3.Icon" type="string"></setting>
+    <setting id="AddonSetFour.2.Icon" type="string"></setting>
+    <setting id="UserSelectOneSubMenu" type="string">Retro</setting>
+    <setting id="AddonSetOne.7.Icon" type="string"></setting>
+    <setting id="AddonSetTwo.2.Label" type="string"></setting>
+    <setting id="AddonSetThree.6.Path" type="string"></setting>
+    <setting id="SubLiveTV.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=News&amp;mode=400&amp;folder=Youtube%2FNews&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-kfIKf5PDh8A%2FVa0et9SmKpI%2FAAAAAAAAOLk%2FmYoq-sCMQYQ%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
+    <setting id="AddonSetFive.1.Icon" type="string"></setting>
+    <setting id="SubPictures.2.Label" type="string">Comedy</setting>
+    <setting id="AddonSetEight.2.Icon" type="string"></setting>
+    <setting id="UserSubFive.9.Label" type="string">SportsDevil Live</setting>
+    <setting id="AddonSetTwelve.2.Icon" type="string"></setting>
+    <setting id="AddonSetSix.7.Path" type="string"></setting>
+    <setting id="SubMusic.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Gaming&amp;mode=400&amp;folder=Youtube%2FGaming&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-RuFJUN0Bk88%2FVC2M3HSSnMI%2FAAAAAAAAAF4%2F9lnJiGjuvig%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
+    <setting id="AddonSetTwo.5.Label" type="string"></setting>
+    <setting id="AddonSetNine.5.Path" type="string"></setting>
+    <setting id="SubProg.9.Path" type="string">RunAddon(plugin.video.tvo)</setting>
+    <setting id="HomeItem.7.Addon" type="string">None</setting>
+    <setting id="WidgetFav.Path" type="string"></setting>
+    <setting id="AddonSetSeven.2.Icon" type="string"></setting>
+    <setting id="UserSubOne.10.Path" type="string"></setting>
+    <setting id="AddonSetSix.6.Icon" type="string"></setting>
+    <setting id="UserSubOne.4.List" type="string">plugin://plugin.program.dailyupdateswiz/?description&amp;fanart=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5creign%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.program.dailyupdateswiz%5cresources%5cart%5capkstore.png&amp;mode=40&amp;name=%5bCOLOR%20lime%5dDaily%20Updates%20Android%20Apps%5b%2fCOLOR%5d&amp;url=http%3a%2f%2finfa.ml%2f1o</setting>
+    <setting id="SubSettings.2.Path" type="string">RunAddon(plugin.video.engadget)</setting>
+    <setting id="SubLiveTV.3.Label" type="string">CBS News</setting>
+    <setting id="SubMovies.6.Path" type="string">RunAddon(plugin.video.genesisreborn)</setting>
+    <setting id="SubVideos.10.Label" type="string">Kid&apos;s Movies</setting>
+    <setting id="SubMovies.2.Label" type="string">Rebirth</setting>
+    <setting id="AddonSetTwelve.5.Path" type="string"></setting>
+    <setting id="HomeFloor" type="string">Transparent</setting>
+    <setting id="SubPictures.8.Label" type="string">CrimeTube</setting>
+    <setting id="UserSubFive.6.Path" type="string">RunAddon(plugin.video.ufcfightpass)</setting>
+    <setting id="HomeItem.2.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Movies&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CMovies&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg&amp;content_type=video</setting>
+    <setting id="HomeItem.3.Fanart" type="string">special://skin/media/tv_shows/</setting>
+    <setting id="SubPictures.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Technology&amp;mode=400&amp;folder=Youtube%2FTechnology&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-xQj8AfcaEMg%2FVCL1aTLaSOI%2FAAAAAAAAAI8%2FE7TtO6EKDZw%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
+    <setting id="AddonSetFour.3.Path" type="string"></setting>
+    <setting id="HomeItem.8.Display" type="string">Default</setting>
+    <setting id="HomeItem.9.Playlist" type="string"></setting>
+    <setting id="AddonSetEight.6.Label" type="string"></setting>
+    <setting id="AddonSetThree.4.Path" type="string"></setting>
+    <setting id="SubMovies.4.Path" type="string">RunAddon(plugin.video.covenant)</setting>
+    <setting id="UserSubFive.4.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nhl,return)</setting>
+    <setting id="PingMacAddr" type="string"></setting>
+    <setting id="HomeItem.8.Sub" type="string">Music</setting>
+    <setting id="SubTVShows.8.Label" type="string">Genesis Reborn</setting>
+    <setting id="AddonSetTwo.7.Label" type="string"></setting>
+    <setting id="UserSubFive.8.Label" type="string">Live BPL</setting>
+    <setting id="HomeItem.3.Addon" type="string">None</setting>
+    <setting id="UserSelectThreeSubMenu" type="string">Live TV</setting>
+    <setting id="HomeItem.15.Display" type="string"></setting>
+    <setting id="SubVideos.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.titan/?url=https%3A%2F%2Farchive.org%2Fdownload%2FNaviXPlaylist%2FFamily.xml&amp;mode=6&amp;name=%5BCOLOR+aqua%5D+Family+Hits+%5B%2FCOLOR%5D&amp;iconimage=http%3A%2F%2Fi68.tinypic.com%2F125400y.jpg&amp;description=,return)</setting>
+    <setting id="SubTVShows.1.Path" type="string">RunAddon(plugin.video.covenant)</setting>
+    <setting id="AddonSetTwelve.1.Label" type="string"></setting>
+    <setting id="UserSubThree.10.Path" type="string">ActivateWindow(TVGuide)</setting>
+    <setting id="HomeItem.7.Fanart" type="string">special://skin/media/education/</setting>
+    <setting id="UserSubOne.6.Path" type="string">RunAddon(plugin.video.oldtimeradio)</setting>
+    <setting id="SubSettings.1.Label" type="string">Apple iTunes</setting>
+    <setting id="AddonSetTwelve.5.Label" type="string"></setting>
+    <setting id="UserSubFive.1.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=mlb,return)</setting>
+    <setting id="AddonSetNine.1.Label" type="string"></setting>
+    <setting id="AddonSetNine.6.Path" type="string"></setting>
+    <setting id="HomeItem.1.Display" type="string">Default</setting>
+    <setting id="AddonSetNine.2.Icon" type="string"></setting>
+    <setting id="AddonSetTwo.4.Label" type="string"></setting>
+    <setting id="SideBladeLabel" type="string"></setting>
+    <setting id="AddonSetSix.6.Path" type="string"></setting>
+    <setting id="SubPictures.10.Label" type="string">VOD on YouTube</setting>
+    <setting id="HomeItem.12.Display" type="string">Default</setting>
+    <setting id="AddonSetOne.5.Label" type="string"></setting>
+    <setting id="SubMovies.8.Label" type="string">Cypher Movie</setting>
+    <setting id="AddonSetSeven.1.Icon" type="string"></setting>
+    <setting id="UserSelectAddon.10.Label" type="string"></setting>
+    <setting id="AddonSetNine.1.Path" type="string"></setting>
+    <setting id="UserSubTwo.7.Label" type="string"></setting>
+    <setting id="UserSubThree.2.Label" type="string">Cypher TV</setting>
+    <setting id="UserSubOne.3.Icon" type="string">androidapp://sources/apps/com.myspecial.launcher.multiprovider.png</setting>
+    <setting id="SubTVShows.5.Label" type="string">Pegasus</setting>
+    <setting id="AddonSetEleven.6.Path" type="string"></setting>
+    <setting id="HomeItem.13.Label" type="string">Kids</setting>
+    <setting id="SubPictures.6.Path" type="string">RunAddon(plugin.audio.musicbox)</setting>
+    <setting id="UserSubFour.8.Icon" type="string">special://home/addons/plugin.video.all_wrestling\resources\art\wwe.png</setting>
+    <setting id="UserSubThree.9.Label" type="string">Goliath</setting>
+    <setting id="SubProg.4.Path" type="string"></setting>
+    <setting id="AddonSetNine.4.Icon" type="string"></setting>
+    <setting id="AddonSetSeven.7.Icon" type="string"></setting>
+    <setting id="UserSubOne.2.List" type="string">com.ron_killer.dupdates_epg</setting>
+    <setting id="AddonSetFour.2.Label" type="string"></setting>
+    <setting id="UserSubThree.9.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.Evolve/?url=http%3A%2F%2Fwww.matsbuilds.co.uk%2FGoliathLists%2Flivetv1.xml&amp;mode=1&amp;name=%5BB%5D%5BCOLOR+red%5DL%5B%2FCOLOR%5D%5BCOLOR+white%5Dive%5B%2FCOLOR%5D+%5BCOLOR+red%5DT%5B%2FCOLOR%5D%5BCOLOR+white%5DV%5B%2FCOLOR%5D%5B%2FB%5D&amp;description=&amp;fanart=http%3A%2F%2Fwww.matsbuilds.co.uk%2Fpics%2Fgoliath%2Ficons%2Flivetv.png,return)</setting>
+    <setting id="HomeItem.11.Sub" type="string">Pictures</setting>
+    <setting id="UserSubTwo.9.Label" type="string"></setting>
+    <setting id="SubConcerts.1.Label" type="string">YouTube Channels</setting>
+    <setting id="UserPicturesSubMenu" type="string">Mixed Media</setting>
+    <setting id="SubMusic.7.Path" type="string">RunAddon(plugin.video.pixel.tv)</setting>
+    <setting id="AddonSetEight.4.Icon" type="string"></setting>
+    <setting id="SubRadio.2.Path" type="string">Hidden</setting>
+    <setting id="UserSubOne.10.Icon" type="string"></setting>
+    <setting id="AddonSetTwo.4.Icon" type="string"></setting>
+    <setting id="UserSubFour.7.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.all_wrestling/?url=http%3A%2F%2Fwww.allwrestling.net%2Fcategory%2Fufc%2F&amp;mode=1&amp;name=UFC,return)</setting>
+    <setting id="HomeItem.3.Sub" type="string">TVShows</setting>
+    <setting id="UserSubOne.3.Label" type="string"></setting>
+    <setting id="SubConcerts.5.Label" type="string">Internet Archive</setting>
+    <setting id="SubRadio.7.Path" type="string">Hidden</setting>
+    <setting id="AddonSetTwelve.5.Icon" type="string"></setting>
+    <setting id="SubConcerts.4.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.video.titan/?description&amp;iconimage=http%3a%2f%2fi67.tinypic.com%2f2v2aag1.jpg&amp;mode=6&amp;name=%5bCOLOR%20aqua%5d%20Documentary%20%5b%2fCOLOR%5d&amp;url=https%3a%2f%2farchive.org%2fdownload%2fNaviXPlaylist%2fDocumentary.xml&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.titan%5Cart%5Cmmbg.jpg%26meta%3Dlabel%253D%25255BCOLOR%252Baqua%25255D%252BDocumentary%252B%25255B%25252FCOLOR%25255D%2526castandrole%253D%25255B%25255D%2526title%253D%25255BCOLOR%252Baqua%25255D%252BDocumentary%252B%25255B%25252FCOLOR%25255D%26_options_sf&quot;,return)</setting>
+    <setting id="AddonSetFour.5.Icon" type="string"></setting>
+    <setting id="SubProg.4.List" type="string">plugin://plugin.video.youtube/channel/UCWPQB43yGKEum3eW0P9N_nQ/</setting>
+    <setting id="AddonSetFour.3.Label" type="string"></setting>
+    <setting id="AddonSetSeven.1.Label" type="string"></setting>
+    <setting id="HomeItem.10.Display" type="string">Default</setting>
+    <setting id="SubPictures.10.Icon" type="string">https://dl.dropbox.com/s/k6v3lxwo6jfk01b/logonetflixbassfox.jpg</setting>
+    <setting id="UserSubOne.7.Icon" type="string">special://home/addons/plugin.program.dailyupdateswiz\icon.png</setting>
+    <setting id="AddonSetEleven.6.Icon" type="string"></setting>
+    <setting id="SubMusic.2.Path" type="string">RunAddon(plugin.video.twitch)</setting>
+    <setting id="SubMusic.6.Label" type="string">IGN.com</setting>
+    <setting id="PowerBtnAction" type="string"></setting>
+    <setting id="HomeItem.9.Display" type="string">Default</setting>
+    <setting id="UserProgsSubMenu" type="string">Education</setting>
+    <setting id="SubProg.4.Icon" type="string">https://yt3.ggpht.com/-xspd8uYupTc/AAAAAAAAAAI/AAAAAAAAAAA/UTwanzEE9iM/s240-c-k-no/photo.jpg</setting>
+    <setting id="SubRadio.3.Label" type="string">Hidden</setting>
+    <setting id="CustomHibernateArg" type="string"></setting>
+    <setting id="SubMovies.9.Label" type="string">Exodus</setting>
+    <setting id="HomeItem.8.Playlist" type="string"></setting>
+    <setting id="AddonSetFive.7.Icon" type="string"></setting>
+    <setting id="HomeItem.4.Display" type="string">Default</setting>
+    <setting id="AddonSetTwo.3.Icon" type="string"></setting>
+    <setting id="HomeItem.13.Sub" type="string">Videos</setting>
+    <setting id="SubMusic.7.Label" type="string">Pixel.tv</setting>
+    <setting id="SubPictures.4.Path" type="string">RunAddon(plugin.program.newgrounds)</setting>
+    <setting id="SubLiveTV.1.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
+    <setting id="SubRadio.3.Path" type="string">Hidden</setting>
+    <setting id="SubVideos.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Kids&amp;mode=400&amp;folder=Youtube%2FKids&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-BzPFvggvAcI%2FVqisZGGasPI%2FAAAAAAAAAhg%2FKecIJky92t8%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
+    <setting id="HomeItem.13.Type" type="string">VideoNode</setting>
+    <setting id="SubLiveTV.3.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
+    <setting id="SubConcerts.4.Label" type="string">Titan M&amp;M</setting>
+    <setting id="HomeItem.15.Addon" type="string"></setting>
+    <setting id="HomeItem.14.Addon" type="string">None</setting>
+    <setting id="AddonSetTen.3.Label" type="string"></setting>
+    <setting id="HomeItem.6.Playlist" type="string">plugin://plugin.program.super.favourites/?label=Sports+LIVE&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CSports+LIVE&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cfanart.jpg&amp;content_type=video</setting>
+    <setting id="SubProg.6.Icon" type="string">https://yt3.ggpht.com/-O3WOfE_rWaE/AAAAAAAAAAI/AAAAAAAAAAA/TAaWn7fnYqc/s240-c-k-no/photo.jpg</setting>
+    <setting id="SubPictures.7.Path" type="string">RunAddon(plugin.video.clipfish.de)</setting>
+    <setting id="AddonSetTen.2.Icon" type="string"></setting>
+    <setting id="AddonSetThree.2.Path" type="string"></setting>
+    <setting id="UserSubTwo.8.Label" type="string"></setting>
+    <setting id="UserSubThree.3.Path" type="string">ActivateWindow(10025,&quot;plugin://script.ftvguide?sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cscript.ftvguide%5Cfanart.jpg%26meta%3Dcastandrole%253D%25255B%25255D%2526label%253DFTV%252BGuide%26desc%3DFTV+Guide+allows+you+to+combine+some+of+your+favourite+live+TV+plugins+for+use+with+a+fully+working+EPG%26_options_sf&quot;,return)</setting>
+    <setting id="UserSelectAddon.4.Label" type="string"></setting>
+    <setting id="SubLiveTV.8.Label" type="string">Fox News</setting>
+    <setting id="AddonSetSeven.7.Label" type="string"></setting>
+    <setting id="AddonSetNine.3.Path" type="string"></setting>
+    <setting id="HomeItem.14.Widget" type="string">plugin://plugin.video.fox.news/?mode=get_videolist&amp;amp;name=Latest%20Video&amp;amp;url=http%3a%2f%2fvideo.foxbusiness.com%2fplaylist%2flatest-video-latest-video&amp;amp;sf_options=meta%3Dcastandrole%253D%25255B%25255D%2526label%253DLatest%252BVideo%26_options_sf</setting>
+    <setting id="UserSelectAddon.1.Label" type="string"></setting>
+    <setting id="UserSubFour.8.List" type="string">plugin://plugin.video.all_wrestling/?mode=6&amp;name=Search&amp;url=url</setting>
+    <setting id="HomeItem.5.Label" type="string">Sports</setting>
+    <setting id="AddonSetEleven.2.Path" type="string"></setting>
+    <setting id="SubLiveTV.3.Path" type="string">RunAddon(plugin.video.cbsnews_com)</setting>
+    <setting id="HomeItem.14.Playlist" type="string">plugin://plugin.program.super.favourites/?label=News&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CNews&amp;image=&amp;fanart=&amp;content_type=video</setting>
+    <setting id="AddonSetTen.2.Label" type="string"></setting>
+    <setting id="AddonSetThree.6.Icon" type="string"></setting>
+    <setting id="AddonSetFour.7.Path" type="string"></setting>
+    <setting id="AddonSetTen.7.Path" type="string"></setting>
+    <setting id="AddonSetEleven.1.Icon" type="string"></setting>
+    <setting id="AddonSetEight.6.Icon" type="string"></setting>
+    <setting id="SubMovies.7.Path" type="string">RunAddon(plugin.video.thepyramid)</setting>
+    <setting id="SubMovies.9.Path" type="string">RunAddon(plugin.video.exodus)</setting>
+    <setting id="HomeItem.15.Sub" type="string"></setting>
+    <setting id="SubLiveTV.8.Path" type="string">RunAddon(plugin.video.fox.news)</setting>
+    <setting id="HomeTrans" type="string"></setting>
+    <setting id="AddonSetSeven.1.Path" type="string"></setting>
+    <setting id="HomeItem.2.Label" type="string">Movies</setting>
+    <setting id="AddonSetFive.2.Label" type="string"></setting>
+    <setting id="HomeItem.8.Addon" type="string">None</setting>
+    <setting id="HomeItem.11.Addon" type="string">None</setting>
+    <setting id="SubTVShows.9.Path" type="string">RunAddon(plugin.video.flixnet)</setting>
+    <setting id="HomeItem.5.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Sports&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CSports&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.video.prosport%5Cfanart.jpg&amp;content_type=video,return)</setting>
+    <setting id="AddonSetEight.2.Label" type="string"></setting>
+    <setting id="AddonSetSix.5.Label" type="string"></setting>
+    <setting id="HomeItem.10.Label" type="string">Podcasts</setting>
+    <setting id="HomeItem.3.Label" type="string">TV Shows</setting>
+    <setting id="SubMovies.1.Label" type="string">Neptune Rising</setting>
+    <setting id="AddonSetNine.4.Path" type="string"></setting>
+    <setting id="AddonSetEleven.4.Icon" type="string"></setting>
+    <setting id="HomeItem.11.Type" type="string">VideoNode</setting>
+    <setting id="UserSubFive.10.Label" type="string">Castaway Live</setting>
+    <setting id="UserSubOne.2.Path" type="string">RunAddon(plugin.video.80smusicvideos)</setting>
+    <setting id="AddonSetNine.3.Icon" type="string"></setting>
+    <setting id="MediaPopupControl" type="string"></setting>
+    <setting id="AddonSetOne.5.Icon" type="string"></setting>
+    <setting id="HomeItem.9.Sub" type="string">Concerts</setting>
+    <setting id="AddonSetEleven.4.Label" type="string"></setting>
+    <setting id="SubMusic.9.Label" type="string">Recorded Games</setting>
     <setting id="AddonSetTwo.7.Icon" type="string"></setting>
     <setting id="SubTVShows.6.Label" type="string">SALTS</setting>
     <setting id="HomeItem.14.Fanart" type="string">special://skin/media/news/</setting>
@@ -903,69 +968,4 @@
     <setting id="UserSubThree.1.Icon" type="string">androidapp://sources/apps/com.xtream_codes.dupdates.png</setting>
     <setting id="AddonSetFive.3.Label" type="string"></setting>
     <setting id="SubProg.9.Label" type="string">TV Ontario</setting>
-    <setting id="AddonSetTen.4.Icon" type="string"></setting>
-    <setting id="UserSubFour.5.List" type="string">plugin://plugin.video.all_wrestling/?mode=6&amp;name=Search&amp;url=url</setting>
-    <setting id="SubConcerts.9.Label" type="string">UK Turk</setting>
-    <setting id="UserSubOne.5.Icon" type="string">special://home/addons/plugin.program.dailyupdateswiz\resources\art\maintenance.png</setting>
-    <setting id="UserSubThree.5.Path" type="string">RunAddon(plugin.video.ccloudtv)</setting>
-    <setting id="UsrConcertsFanArtDir" type="string"></setting>
-    <setting id="FanArtCycleRate" type="string">10</setting>
-    <setting id="AddonSetEleven.1.Path" type="string"></setting>
-    <setting id="UserSelectAddon.2.Label" type="string"></setting>
-    <setting id="SubLiveTV.6.List" type="string">plugin://plugin.video.tdbwizard/?url=url&amp;mode=26&amp;name=%5BCOLOR+white%5DHide+All+Passwords%5B%2FCOLOR%5D&amp;fanart=C%3A%5CUsers%5Clwarshawsky%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.tdbwizard%5Cresources%5Cart%5Cmaintwall.jpg</setting>
-    <setting id="SubConcerts.1.Path" type="string">ActivateWindow(10025,&quot;plugin://plugin.program.super.favourites/?label=Documentaries&amp;mode=400&amp;folder=Youtube%2FDocumentaries&amp;sf_options=fanart%3Dhttps%3A%2F%2Fyt3.ggpht.com%2F-UlgzdrWGegU%2FV2QF1n43o0I%2FAAAAAAAAE6E%2F-PO-LTY7uO01mbOI-kwPgiATJAjXs3MXgCL8B%2Fw1280-fcrop64%26_options_sf&quot;)</setting>
-    <setting id="AddonSetTen.4.Path" type="string"></setting>
-    <setting id="AddonSetOne.3.Icon" type="string"></setting>
-    <setting id="UserSubThree.4.Path" type="string">RunAddon(plugin.video.thepyramid)</setting>
-    <setting id="AddonSetEleven.5.Path" type="string"></setting>
-    <setting id="AddonSetFour.4.Icon" type="string"></setting>
-    <setting id="UserSelectAddon.5.Label" type="string"></setting>
-    <setting id="UserSubThree.2.Path" type="string">RunAddon(plugin.video.cyphertv)</setting>
-    <setting id="HomeItem.8.Path" type="string">ActivateWindow(Videos,plugin://plugin.program.super.favourites/?label=Gaming&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%5CGaming&amp;image=special%3A%2F%2Fhome%2Faddons%5Cplugin.program.super.favourites%5Cicon.png&amp;fanart=special%3A%2F%2Fhome%2Faddons%5Cplugin.program.super.favourites%5Cfanart.jpg&amp;content_type=video,return)</setting>
-    <setting id="SubLiveTV.4.Icon" type="string">special://home/addons/plugin.video.tdbwizard\resources\art\icon.png</setting>
-    <setting id="AddonSetTwelve.6.Path" type="string"></setting>
-    <setting id="UserSubFive.5.Path" type="string">RunAddon(plugin.video.ufc-finest)</setting>
-    <setting id="AddonSetTwelve.2.Path" type="string"></setting>
-    <setting id="AddonSetFive.2.Icon" type="string"></setting>
-    <setting id="HomeItem.7.Label" type="string">Education</setting>
-    <setting id="UserSubThree.1.List" type="string">com.xtream_codes.dupdates</setting>
-    <setting id="SubPictures.5.Path" type="string">RunAddon(plugin.video.discovery-channels)</setting>
-    <setting id="SubProg.2.Icon" type="string">https://yt3.ggpht.com/-neqg2yiWj-A/AAAAAAAAAAI/AAAAAAAAAAA/CzQHBJoLlls/s240-c-k-no/photo.jpg</setting>
-    <setting id="UserSubFour.3.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nflarch,return)</setting>
-    <setting id="HomeItem.1.Addon" type="string">None</setting>
-    <setting id="AddonSetSix.3.Label" type="string"></setting>
-    <setting id="SubLiveTV.8.Icon" type="string">special://home/addons/script.speedtestnet\icon.png</setting>
-    <setting id="HomeItem.12.Type" type="string">AddOns</setting>
-    <setting id="AddonSetTwo.4.Path" type="string"></setting>
-    <setting id="AddonSetEight.5.Icon" type="string"></setting>
-    <setting id="HomeItem.6.Type" type="string">VideoNode</setting>
-    <setting id="SubRadio.2.Label" type="string">Hidden</setting>
-    <setting id="UserConcertsSubMenu" type="string">Documentaries</setting>
-    <setting id="SubPictures.9.Label" type="string">History Tube</setting>
-    <setting id="SubRadio.1.Path" type="string">Hidden</setting>
-    <setting id="HomeItem.12.Fanart" type="string">special://skin/media/retro/</setting>
-    <setting id="SubSettings.10.Icon" type="string">special://home/addons/plugin.video.Evolve\search.jpg</setting>
-    <setting id="UserSubOne.7.Path" type="string">RunAddon(plugin.audio.otr)</setting>
-    <setting id="SubTVShows.3.Label" type="string">1Channel</setting>
-    <setting id="SubSettings.9.Label" type="string">TED Talks</setting>
-    <setting id="SubLiveTV.9.List" type="string">plugin://plugin.video.tdbwizard/?description&amp;fanart=C%3a%5cUsers%5clwarshawsky%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.tdbwizard%5cfanart.jpg&amp;iconimage=C%3a%5cUsers%5clwarshawsky%5cAppData%5cRoaming%5cKodi%5caddons%5cplugin.video.tdbwizard%5cicon.png&amp;mode=30&amp;name=%5bCOLOR%20ghostwhite%5dADVANCED%20SETTINGS%5b%2fCOLOR%5d%20-%20%5bCOLOR%20lime%5d%5bB%5dONLINE%20%5b%2fB%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fwww.tdbwizard.com</setting>
-    <setting id="SubRadio.10.Path" type="string">Hidden</setting>
-    <setting id="UserSubFour.9.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.all_wrestling/?url=url&amp;mode=5&amp;name=TNA,return)</setting>
-    <setting id="UserSubThree.3.Label" type="string">FTV Guide</setting>
-    <setting id="UserSelectAddon.3.Label" type="string"></setting>
-    <setting id="UserSubFour.1.Label" type="string">MLB Replays</setting>
-    <setting id="AddonSetFive.4.Icon" type="string"></setting>
-    <setting id="UserSubThree.4.Label" type="string">The Pyramid</setting>
-    <setting id="SubVideos.7.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.titan/?url=https%3A%2F%2Farchive.org%2Fdownload%2FNaviXPlaylist%2FChildrens.xml&amp;mode=6&amp;name=%5BCOLOR+aqua%5D+Animation+%5B%2FCOLOR%5D&amp;iconimage=http%3A%2F%2Fi64.tinypic.com%2Fve9aoj.jpg&amp;description=,return)</setting>
-    <setting id="SubMusic.10.Path" type="string">RunAddon(plugin.video.giantbomb)</setting>
-    <setting id="UserSubOne.7.List" type="string">plugin://plugin.program.dailyupdateswiz/</setting>
-    <setting id="SubProg.3.Label" type="string">JohnLocker</setting>
-    <setting id="AddonSetThree.1.Icon" type="string"></setting>
-    <setting id="AddonSetEight.1.Icon" type="string"></setting>
-    <setting id="SubLiveTV.2.List" type="string"></setting>
-    <setting id="UserSubFive.2.Path" type="string">ActivateWindow(Videos,plugin://plugin.video.prosport/?url=&amp;home=&amp;away=&amp;mode=nba,return)</setting>
-    <setting id="UserSubTwo.7.Path" type="string"></setting>
-    <setting id="HomeItem.11.Widget" type="string">plugin://plugin.video.youtube</setting>
-    <setting id="SubTVShows.7.Path" type="string">RunAddon(plugin.video.placenta)</setting>
-    <setting id="OSDBtnUsrCmd" type="string"></setting>
 </settings>

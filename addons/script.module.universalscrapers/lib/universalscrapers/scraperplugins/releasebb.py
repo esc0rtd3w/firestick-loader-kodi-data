@@ -21,6 +21,7 @@
 
 import xbmc, xbmcaddon,time
 import re, urllib, urlparse, json
+import random
 from universalscrapers.common import clean_title, get_rd_domains, send_log, error_log
 from universalscrapers.scraper import Scraper
 from universalscrapers.modules import client, workers, dom_parser as dom, quality_tags, cfscrape
@@ -35,9 +36,10 @@ class Releasebb(Scraper):
     def __init__(self):
         self.domains = ['rlsbb.ru']
         self.base_link = 'http://rlsbb.ru'
-        self.search_base_link = 'http://search.rlsbb.ru'
-        self.search_link = '/lib/search2341986049741.php?phrase=%s&pindex=1&&radit=0.27766844261132769'
-        self.search_link2 = '/search/%s'
+        self.referer_link = 'http://search.rlsbb.ru/search/{0}'
+        self.search_link = 'http://search.rlsbb.ru/lib/search45224149886049641.php'
+        self.search_phrase = '?phrase={0}&pindex=1&code={1}&radit={2}'
+
 
     def scrape_movie(self, title, year, imdb, debrid=False):
         try:
@@ -47,9 +49,14 @@ class Releasebb(Scraper):
             query = '%s %s' % (title, year)
             query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
             query = urllib.quote_plus(query).replace('+', '%2B')
-            url = urlparse.urljoin(self.search_base_link, self.search_link % query)
-            headers = {'User-Agent': client.agent(), 'Referer': self.base_link}
+
             scraper = cfscrape.create_scraper()
+            headers = {'User-Agent': client.agent(),
+                       'Referer': self.referer_link.format(query)}
+            code = scraper.get(self.referer_link.format(query), headers=headers).content
+            code = client.parseDOM(code, 'script', ret='data-code-rlsbb')[0]
+            rand = '0.%s' % random.randint(00000000000000001, 99999999999999999)
+            url = urlparse.urljoin(self.search_link, self.search_phrase.format(query.replace('+', '%2B'), str(code), str(rand)))
             r = scraper.get(url, headers=headers).content
             posts = json.loads(r)['results']
             posts = [(i['post_title'], i['post_name']) for i in posts]
@@ -83,10 +90,13 @@ class Releasebb(Scraper):
             query = '%s S%02dE%02d' % (title, int(season), int(episode))
             query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', ' ', query)
 
-            query = urllib.quote_plus(query).replace('+', '%2B')
-            url = urlparse.urljoin(self.search_base_link, self.search_link % query)
-            headers = {'User-Agent': client.agent(), 'Referer': self.base_link}
             scraper = cfscrape.create_scraper()
+            headers = {'User-Agent': client.agent(),
+                       'Referer': self.referer_link.format(query)}
+            code = scraper.get(self.referer_link.format(query), headers=headers).content
+            code = client.parseDOM(code, 'script', ret='data-code-rlsbb')[0]
+            rand = '0.%s' % random.randint(00000000000000001, 99999999999999999)
+            url = urlparse.urljoin(self.search_link, self.search_phrase.format(query.replace('+', '%2B'), str(code), str(rand)))
             r = scraper.get(url, headers=headers).content
             posts = json.loads(r)['results']
 
@@ -94,7 +104,7 @@ class Releasebb(Scraper):
                 hdlr = 'S%02d' % int(season)
                 query = '%s %s' % (title, hdlr)
                 query = urllib.quote_plus(query)
-                url = urlparse.urljoin(self.search_base_link, self.search_link % query.replace('+', '%2B'))
+                url = urlparse.urljoin(self.search_link, self.search_phrase.format(query.replace('+', '%2B'), str(code), str(rand)))
                 r = scraper.get(url, headers=headers).content
                 posts = json.loads(r)['results']
 
