@@ -46,7 +46,9 @@ def ypp_sort():
 
 @utils.url_dispatcher.register('691', ['url'])
 def ypp_list(url):
-    sort = ('&s={}'.format(get_ypp_sort(True)) if get_ypp_sort(True) else '') if len(url.split('/')) >= 4 and url.split('/')[3].startswith('search') else '/?s={}'.format(get_ypp_sort())
+#    utils.kodilog('RAW URL: ' + url)
+    sort = ('&s={}'.format(get_ypp_sort(True)) if get_ypp_sort(True) else '') if len(url.split('/')) >= 4 and url.split('/')[3].startswith('search') or url.endswith('date') else '/?s={}'.format(get_ypp_sort())
+#    utils.kodilog('SORT: ' + sort)
     url = url + sort if sort not in url else url
     utils.kodilog(url.split('/')[2])
     utils.kodilog(url)
@@ -61,6 +63,7 @@ def ypp_list(url):
         name = utils.cleantext(name) + hd_text + " [COLOR deeppink]" + duration + "[/COLOR]"
         utils.addDownLink(name, make_url(video), 692, make_url(img), '')
     try:
+#Test
         next_page = re.compile('''a href="([^"]+)" class="prevnext"''', re.DOTALL | re.IGNORECASE).findall(listhtml)[-1]
         utils.addDir('Next Page' , make_url(next_page), 691, '')
     except:

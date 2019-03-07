@@ -81,8 +81,12 @@ def PTList(url, page=1, onelist=None):
             img[0] = 'https://static'
 
         img = ('.').join(img)
+#       Image fix 19.02.07
+        img = re.sub(r"static.cdntrex", "porntrex", img)
+
         imgint = randint(1, 10)
         newimg = str(imgint) + '.jpg'
+
         img = img.replace('1.jpg', newimg)
         utils.addDownLink(name, videopage, 52, img, '')
     if not onelist:
@@ -182,11 +186,12 @@ def PTPlayvid(url, name, download=None):
 def PTCat(url):
     cathtml = utils.getHtml(url, '')
     cat_block = re.compile('<span class="icon type-video">(.*?)<div class="footer-margin">', re.DOTALL | re.IGNORECASE).search(cathtml).group(1)
-    match = re.compile('<a class="item" href="([^"]+)" title="([^"]+)".*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cat_block)
+    match = re.compile('<a class="item" href="([^"]+)" title="([^"]+)".*? src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cat_block)
     for catpage, name, img in sorted(match, key=lambda x: x[1]):
         if img.startswith('//'):
             img = 'https:' + img
-        img = re.sub(r"cdn\d?", "www", img)
+#       Image fix 19.02.07
+        img = re.sub(r"static.cdntrex", "porntrex", img)
         catpage = catpage + '?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=1'
 #   Changed 19.01.25
         if url.find('javwhores') > 0:

@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="209" />
-    <setting id="noteMessage" value="Using a VPN is the only way to [B]prevent[/B] your [B]internet&#x0A;provider[/B] and [B]government[/B] from [B]censoring[/B] and [B]monitoring[/B]&#x0A;your connection to the world wide web!&#x0A;&#x0A;Begin the New Year by [B]taking back control[/B], with a VPN:&#x0A;&#x0A;* More [B]Working Links[/B] in Kodi&#x0A;* [B]Bypass Site Blocking[/B]&#x0A;* [B]Hide Your IP[/B] and Location&#x0A;* Torrent, P2P, [B]Stream Safely[/B]&#x0A;* Hide Your Internet History&#x0A;&#x0A;[B][COLOR yellow]$2.99 VPN Special:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteImage" value="212" />
+    <setting id="noteMessage" value="Are you having trouble visiting certain streaming web&#x0A;sites, or are you seeing less sources in Kodi than&#x0A;usual?&#x0A;&#x0A;Using a VPN is the best way to [B]bypass site blocking[/B]&#x0A;and [B]censorship[/B] - while ensuring your [B]browsing history&#x0A;remains private[/B]!&#x0A;&#x0A;See the link below for a [B]special deal for Kodi users[/B]...&#x0A;&#x0A;[B][COLOR yellow]Only $2.99 for 6 Devices[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]&#x0A;&#x0A;Don&apos;t miss this special, rates will be rising soon!" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

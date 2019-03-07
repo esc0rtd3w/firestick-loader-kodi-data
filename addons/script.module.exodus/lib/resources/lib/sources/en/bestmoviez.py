@@ -30,7 +30,6 @@ class source:
 		self.base_link = 'http://www.best-moviez.ws'
 		self.search_link = '/%s'
 
-
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
 			url = {'imdb': imdb, 'title': title, 'year': year}
@@ -99,7 +98,7 @@ class source:
 			
 		
 			
-			size = ''			
+			size = ''
 			pre_txt = []
 			pre_url = []
 			pres = client.parseDOM(r, "pre", attrs={'style': '.+?'})

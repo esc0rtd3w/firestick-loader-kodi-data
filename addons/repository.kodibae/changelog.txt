@@ -1,5 +1,5 @@
 ------------------------
-Kodi Bae Repo 1.0.0 (18-Jan-18)
+Kodi Bae Repo 3.0.0 (05-Mar-19)
 ------------------------
 
-- Hello World
+- Bugfix
