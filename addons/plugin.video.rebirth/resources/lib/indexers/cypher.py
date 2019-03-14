@@ -25,7 +25,7 @@ class indexer:
 	def root(self):
 		try:
 			regex.clear()
-			url = base64.b64decode ('aHR0cDovL2N5cGhlci1tZWRpYS5jb20vcmViaXJ0aC9yZWJpcnRoLnhtbA==')
+			url = base64.b64decode ('aHR0cDovL2N5cGhlcm1lZGlhLm9yZy9yZWJpcnRoL3JlYmlydGgueG1s')
 			self.list = self.noname_list(url)
 			for i in self.list: i.update({'content': 'addons'})
 			self.addDirectory(self.list)

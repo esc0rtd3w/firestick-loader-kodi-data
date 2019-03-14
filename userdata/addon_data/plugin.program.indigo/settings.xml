@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="212" />
-    <setting id="noteMessage" value="Are you having trouble visiting certain streaming web&#x0A;sites, or are you seeing less sources in Kodi than&#x0A;usual?&#x0A;&#x0A;Using a VPN is the best way to [B]bypass site blocking[/B]&#x0A;and [B]censorship[/B] - while ensuring your [B]browsing history&#x0A;remains private[/B]!&#x0A;&#x0A;See the link below for a [B]special deal for Kodi users[/B]...&#x0A;&#x0A;[B][COLOR yellow]Only $2.99 for 6 Devices[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]&#x0A;&#x0A;Don&apos;t miss this special, rates will be rising soon!" />
+    <setting id="noteImage" value="213" />
+    <setting id="noteMessage" value="We wanted to remind everyone why anyone who streams&#x0A;TV online should be [B]using a VPN at all times[/B]...&#x0A;&#x0A;* Unlock [B]More Streaming Links[/B]&#x0A;* [B]Bypass Site Blocking[/B]/Censorship&#x0A;* [B]Hide Your IP[/B] Address &amp; [B]Location[/B]&#x0A;* Keep Your Web [B]History Private[/B]&#x0A;* [B]Torrent &amp; P2P[/B] Safely&#x0A;&#x0A;For a limited time, you can signup to [B]protect 6&#x0A;devices[/B] with the best VPN for [B]only $2.99/month[/B]!&#x0A;&#x0A;[B][COLOR yellow]Signup Today:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

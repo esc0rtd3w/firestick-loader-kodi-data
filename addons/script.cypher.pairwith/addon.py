@@ -10,6 +10,7 @@ site2qr = xbmc.translatePath('special://home/addons/script.cypher.pairwith/site2
 site3qr = xbmc.translatePath('special://home/addons/script.cypher.pairwith/site3.png')
 site4qr = xbmc.translatePath('special://home/addons/script.cypher.pairwith/site4.png')
 site5qr = xbmc.translatePath('special://home/addons/script.cypher.pairwith/site5.png')
+site6qr = xbmc.translatePath('special://home/addons/script.cypher.pairwith/site6.png')
 
 def menuoptions():
     dialog = xbmcgui.Dialog()
@@ -23,7 +24,9 @@ def menuoptions():
         function7,
         function8,
         function9,
-        function10
+        function10,
+        function11,
+        function12		
         )
         
     call = dialog.select('[B][COLOR=cyan]Cypher Media[/COLOR][COLOR=blue] Pair-ing System[/COLOR][/B]', [
@@ -32,11 +35,13 @@ def menuoptions():
     '[B][COLOR=white]      Vid Up Me[/COLOR][/B] [COLOR=cyan]Mobile/Cell QR Code[/COLOR]',
     '[B][COLOR=white]      VShare[/COLOR][/B] [COLOR=cyan]Mobile/Cell QR Code[/COLOR]',
     '[B][COLOR=white]      FlashX[/COLOR][/B] [COLOR=cyan]Mobile/Cell QR Code[/COLOR]',
+    '[B][COLOR=white]      Streamango[/COLOR][/B] [COLOR=cyan]Mobile/Cell QR Code[/COLOR]',	
     '[B][COLOR=white]      Open Load[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]', 
     '[B][COLOR=white]      The Video Me[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]',
     '[B][COLOR=white]      Vid Up Me[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]',
     '[B][COLOR=white]      VShare[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]',
-    '[B][COLOR=white]      FlashX[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]'])	
+    '[B][COLOR=white]      FlashX[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]',
+    '[B][COLOR=white]      Streamango[/COLOR][/B] [COLOR=red]Website Direct[/COLOR]'])	
     # dialog.selectreturns
     #   0 -> escape pressed
     #   1 -> first item
@@ -45,7 +50,7 @@ def menuoptions():
         # esc is not pressed
         if call < 0:
             return
-        func = funcs[call-10]
+        func = funcs[call-12]
         return func()
     else:
         func = funcs[call]
@@ -82,36 +87,45 @@ def function4():
 	
 def function5():
 	xbmc.executebuiltin('ShowPicture('+site5qr+')')
-
+	
 def function6():
+	xbmc.executebuiltin('ShowPicture('+site6qr+')')	
+
+def function7():
     if myplatform == 'android': # Android 
         opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'https://olpair.com/pair' ) )
     else:
         opensite = webbrowser . open('https://olpair.com/pair')
 
-def function7():
+def function8():
     if myplatform == 'android': # Android 
         opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'https://thevideo.us/pair' ) )
     else:
         opensite = webbrowser . open('https://thevideo.us/pair')
         
-def function8():
+def function9():
     if myplatform == 'android': # Android 
        opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'https://vidup.me/pair' ) )
     else:
         opensite = webbrowser . open('https://vidup.me/pair')
         
-def function9():
+def function10():
     if myplatform == 'android': # Android 
         opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'http://vshare.eu/pair' ) )
     else:
         opensite = webbrowser . open('http://vshare.eu/pair')
 		
-def function10():
+def function11():
     if myplatform == 'android': # Android 
         opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'https://www.flashx.tv/?op=login&redirect=https://www.flashx.tv/pairing.php' ) )
     else:
-        opensite = webbrowser . open('https://www.flashx.tv/?op=login&redirect=https://www.flashx.tv/pairing.php')	
+        opensite = webbrowser . open('https://www.flashx.tv/?op=login&redirect=https://www.flashx.tv/pairing.php')
+
+def function12():
+    if myplatform == 'android': # Android 
+        opensite = xbmc.executebuiltin( 'StartAndroidActivity(,android.intent.action.VIEW,,%s)' % ( 'https://streamango.com/pair' ) )
+    else:
+        opensite = webbrowser . open('https://streamango.com/pair')		
     
 
      

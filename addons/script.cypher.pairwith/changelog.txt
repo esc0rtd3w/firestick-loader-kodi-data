@@ -1,3 +1,5 @@
+-Version 1.6
+added streamango
 -Version 1.5
 added Site to QR code for mobile devices
 -Version 1.3
