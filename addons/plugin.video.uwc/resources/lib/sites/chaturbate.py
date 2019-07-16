@@ -39,9 +39,11 @@ def Main():
     female = True if addon.getSetting("chatfemale") == "true" else False
     male = True if addon.getSetting("chatmale") == "true" else False
     couple = True if addon.getSetting("chatcouple") == "true" else False
-    trans = True if addon.getSetting("chattrans") == "true" else False
-    
+    trans = True if addon.getSetting("chattrans") == "true" else False 
     utils.addDir('[COLOR red]Refresh Chaturbate images[/COLOR]','',223,'',Folder=False)
+    if female:utils.addDir('[COLOR hotpink]Tags - Female [/COLOR]','https://chaturbate.com/tags/female/',225,'','')  
+    if couple:utils.addDir('[COLOR hotpink]Tags - Couple [/COLOR]','https://chaturbate.com/tags/couple/',225,'','') 
+    if male:utils.addDir('[COLOR hotpink]Tags - Male [/COLOR]','https://chaturbate.com/tags/male/',225,'','')   
     utils.addDir('[COLOR hotpink]Featured[/COLOR]','https://chaturbate.com/?page=1',221,'','')
     if female: utils.addDir('[COLOR hotpink]Female[/COLOR]','https://chaturbate.com/female-cams/?page=1',221,'','')
     if couple: utils.addDir('[COLOR hotpink]Couple[/COLOR]','https://chaturbate.com/couple-cams/?page=1',221,'','')
@@ -128,9 +130,10 @@ def List(url, page=1):
     except:
         
         return None		
-    match = re.compile(r'<li.+?data-sl="(.+?)".+?<a href="(\/.+?)".+?<img\s+src="(.+?)".+?_label.+?>(.+?)<.+?age.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile(r'<li.+?data-slug="(.+?)".+?<a href="(\/.+?)".+?<img\s+src="(.+?)".+?_label.+?>(.+?)<.+?age.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
     for name,videopage, img, status, age in match:	
 
+        age = utils.cleantext(age.strip())
         name = utils.cleantext(name.strip())
         status = status.replace("\n","").strip()
         name = name + " [COLOR deeppink][" + age + "][/COLOR] " + status
@@ -143,6 +146,18 @@ def List(url, page=1):
         utils.addDir('Next Page ('+str(page)+')', next, 221,'', page)
     except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
+
+
+@utils.url_dispatcher.register('225', ['url'])
+def Tag(url):
+    link = utils.getHtml(url, '')
+    tags = re.compile('<span class="tag">.*?<a href="([^"]+)" title="([^"]+)".*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
+    tags = sorted(tags, key=lambda x: x[1])
+    for tagurl, tagname, tagimg in tags:
+        tagurl = "https://chaturbate.com" + tagurl 
+        utils.addDir(tagname,tagurl,221,tagimg, 1)
+    xbmcplugin.endOfDirectory(utils.addon_handle)
+
 
 
 @utils.url_dispatcher.register('223')

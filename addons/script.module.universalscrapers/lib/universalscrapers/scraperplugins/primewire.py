@@ -7,7 +7,7 @@ import urllib, urlparse
 
 from universalscrapers.common import clean_title, filter_host, clean_search, send_log, error_log
 from universalscrapers.scraper import Scraper
-from universalscrapers.modules import client, dom_parser as dom
+from universalscrapers.modules import client, dom_parser as dom, jsunpack
 
 dev_log = xbmcaddon.Addon('script.module.universalscrapers').getSetting("dev_log")
 
@@ -30,6 +30,8 @@ class Watchepisodes(Scraper):
             posts = client.parseDOM(html, 'div', attrs={'class': 'index_item.+?'})
             posts = [(dom.parse_dom(i, 'a', req='href')[0]) for i in posts if i]
             post = [(i.attrs['href']) for i in posts if clean_title(title) == clean_title(re.sub('(\.|\(|\[|\s)(\d{4})(\.|\)|\]|\s|)(.+|)', '', i.attrs['title'], re.I))][0]
+            #xbmc.log('@#@POST: %s' % post, xbmc.LOGNOTICE)
+
             self.get_sources(post, title, year, '', '', start_time)
             return self.sources
         except Exception as argument:
@@ -67,13 +69,24 @@ class Watchepisodes(Scraper):
             url = urlparse.urljoin(self.base_link, url) if url.startswith('/') else url
 
             r = client.request(url)
-            links = client.parseDOM(r, 'tbody')
+            data = re.findall(r'\s*(eval.+?)\s*</script', r, re.DOTALL)[1]
+            data = jsunpack.unpack(data).replace('\\', '')
+
+            # https://www.primewire.ink/ajax-78583.php?slug=watch-2809620-Black-Panther&cp=7TYP4N
+            # var rtv=\'aja\';var aa=\'x-7\';var ba=\'85\';var ca=\'83\';var da=\'.ph\';var ea=\'p?sl\';var fa=\'ug=\';var ia=\'&cp=7T\';var ja=\'YP\';var ka=\'4N\';var code=ia+ja+ka;var page=rtv+aa+ba+ca+da+ea+fa;function goml(loc){$(\'#div1\').load(domain+page+loc+code)}
+            patern = '''rtv='(.+?)';var aa='(.+?)';var ba='(.+?)';var ca='(.+?)';var da='(.+?)';var ea='(.+?)';var fa='(.+?)';var ia='(.+?)';var ja='(.+?)';var ka='(.+?)';'''
+            links_url = re.findall(patern, data, re.DOTALL)[0]
+            slug = 'slug={}'.format(url.split('/')[-1])
+            links_url = self.base_link + [''.join(links_url)][0].replace('slug=', slug)
+            links = client.request(links_url)
+            links = client.parseDOM(links, 'tbody')
+
+            #xbmc.log('@#@LINKSSSS: %s' % links, xbmc.LOGNOTICE)
             for link in links:
                 try:
                     data = [(client.parseDOM(link, 'a', ret='href')[0],
                              client.parseDOM(link, 'span', attrs={'class': 'version_host'})[0])][0]
                     link = urlparse.urljoin(self.base_link, data[0])
-                    #xbmc.log('@#@link: %s' % link, xbmc.LOGNOTICE)
 
                     host = data[1]
 
@@ -94,20 +107,38 @@ class Watchepisodes(Scraper):
 
     def resolve(self, url):
         try:
-            try:
-                from universalscrapers.modules import jsunpack
-                data = client.request(url, referer=self.base_link)
-                data = re.findall('\s*(eval.+?)\s*</script', data, re.DOTALL)[0]
-                link = jsunpack.unpack(data)
-                link = link.replace('\\', '')
-                link = re.findall('''go\(['"](.+?)['"]\)''', link)[0]
-            except:
-                link = client.request(url, output='geturl', timeout=10)
-                if link == url:
-                    return
-                else:
-                    return link
+            # url = 'https://primewire.ink/go.php?title=Black-Panther&url=efdf73e70e3dc1c530e983a5bb2414365d813086==&id=384919&loggedin=0'
+            if '/stream/' in url or '/watch/' in url:
+                # r = self.scraper.get(url, self.headers).text
+                r = client.request(url, referer=self.base_link)
+                link = client.parseDOM(r, 'a', ret='data-href', attrs={'id': 'iframe_play'})[0]
+            else:
+                try:
+                    # data = self.scraper.get(url, self.headers).text
+                    data = client.request(url, referer=self.base_link)
+                    data = re.findall(r'\s*(eval.+?)\s*</script', data, re.DOTALL)[0]
+                    link = jsunpack.unpack(data)
+                    link = link.replace('\\', '')
+                    if 'eval' in link:
+                        link = jsunpack.unpack(link)
+                    link = link.replace('\\', '')
+                    host = re.findall('hosted=\'(.+?)\';var', link, re.DOTALL)[0]
+                    if 'streamango' in host:
+                        loc = re.findall('''loc\s*=\s*['"](.+?)['"]''', link, re.DOTALL)[0]
+                        link = 'https://streamango.com/embed/{0}'.format(loc)
+                    elif 'openload' in host:
+                        loc = re.findall('''loc\s*=\s*['"](.+?)['"]''', link, re.DOTALL)[0]
+                        link = 'https://openload.co/embed/{0}'.format(loc)
+                    else:
+                        link = re.findall('''loc\s*=\s*['"](.+?)['"]\;''', re.DOTALL)[0]
+                except BaseException:
+                    link = client.request(url, output='geturl', timeout=10)
+                    print link
+                    if link == url:
+                        return
+                    else:
+                        return link
 
             return link
-        except:
+        except BaseException:
             return

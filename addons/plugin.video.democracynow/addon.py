@@ -5,6 +5,8 @@ import xbmcgui
 import xbmcplugin
 import xbmcaddon
 import requests
+import re
+from HTMLParser import HTMLParser
 
 addon = xbmcaddon.Addon()
 addon_icon = addon.getAddonInfo('icon')
@@ -19,12 +21,20 @@ current_show = 'http://www.democracynow.org/api/1/current_show'
 r = requests.get(current_show).json()
 
 
+def remove_html_tags(text):
+    """Remove html tags from a string"""
+    clean = re.compile(r'<[^>]+>')
+    return re.sub(clean, '', text)
+
+
+def decode_html_entities(text):
+    """Decode html entities from a string"""
+    h = HTMLParser()
+    return h.unescape(text)
+
+
 def string_correction(_str):
-    return _str.replace('&amp;', '&')\
-               .replace('&quot;', '"')\
-               .replace('&#8217;', "'")\
-               .replace('<span class="caps">', '').replace('</span>', '')\
-               .replace('<p>', '').replace('</p>', '')
+    return remove_html_tags(decode_html_entities(_str))
 
 
 def main():

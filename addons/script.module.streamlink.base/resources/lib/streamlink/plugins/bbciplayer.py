@@ -29,8 +29,7 @@ class BBCiPlayer(Plugin):
             live/(?P<channel_name>\w+)
         )
     """, re.VERBOSE)
-    mediator_re = re.compile(
-        r'window\.mediatorDefer\s*=\s*page\([^,]*,\s*({.*?})\);', re.DOTALL)
+    mediator_re = re.compile(r'window\.__IPLAYER_REDUX_STATE__\s*=\s*({.*?});', re.DOTALL)
     tvip_re = re.compile(r'channel"\s*:\s*{\s*"id"\s*:\s*"(\w+?)"')
     tvip_master_re = re.compile(r'event_master_brand=(\w+?)&')
     account_locals_re = re.compile(r'window.bbcAccount.locals\s*=\s*({.*?});')
@@ -45,20 +44,19 @@ class BBCiPlayer(Plugin):
 
     mediator_schema = validate.Schema(
         {
-            "appStoreState": {
-                "versions": [{"id": validate.text}]
-            }
+            "versions": [{"id": validate.text}]
         },
-        validate.get("appStoreState"), validate.get("versions"), validate.get(0),
+        validate.get("versions"), validate.get(0),
         validate.get("id")
     )
     mediaselector_schema = validate.Schema(
         validate.transform(parse_json),
         {"media": [
-            {"connection": [{
-                validate.optional("href"): validate.url(),
-                validate.optional("transferFormat"): validate.text
-            }],
+            {"connection":
+                validate.all([{
+                    validate.optional("href"): validate.url(),
+                    validate.optional("transferFormat"): validate.text
+                }], validate.filter(lambda c: c.get("href"))),
                 "kind": validate.text}
         ]},
         validate.get("media"),
@@ -187,13 +185,20 @@ class BBCiPlayer(Plugin):
         :return: Whether authentication was successful
         :rtype: bool
         """
+        def auth_check(res):
+            return ptrt_url in ([h.url for h in res.history] + [res.url])
+
+        # make the session request to get the correct cookies
         session_res = self.session.http.get(
             self.session_url,
             params=dict(ptrt=ptrt_url)
         )
 
-        http_nonce = self._extract_nonce(session_res)
+        if auth_check(session_res):
+            log.debug("Already authenticated, skipping authentication")
+            return True
 
+        http_nonce = self._extract_nonce(session_res)
         res = self.session.http.post(
             self.auth_url,
             params=dict(
@@ -208,7 +213,7 @@ class BBCiPlayer(Plugin):
             ),
             headers={"Referer": self.url})
 
-        return len(res.history) != 0
+        return auth_check(res)
 
     def _get_streams(self):
         if not self.get_option("username"):

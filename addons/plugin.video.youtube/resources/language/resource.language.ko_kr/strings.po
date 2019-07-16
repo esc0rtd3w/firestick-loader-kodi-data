@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: 2015-09-21 11:01+0000\n"
-"PO-Revision-Date: 2019-01-10 23:53+0900\n"
+"PO-Revision-Date: 2019-06-17 23:44+0900\n"
 "Last-Translator: Minho Park <parkmino@gmail.com>\n"
 "Language-Team: LANGUAGE\n"
 "MIME-Version: 1.0\n"
@@ -236,8 +236,8 @@ msgctxt "#30120"
 msgid "Clear"
 msgstr "지우기"
 
-#YouTube
-#empty strings from id 30121 to 30199
+# YouTube
+# empty strings from id 30121 to 30199
 
 msgctxt "#30200"
 msgid "API Key"
@@ -263,8 +263,8 @@ msgctxt "#30205"
 msgid "Use preset API key set"
 msgstr "현재 API 키 세트 사용"
 
-#YouTube
-#empty strings from id 30206 to 30499
+# YouTube
+# empty strings from id 30206 to 30499
 
 msgctxt "#30500"
 msgid "Channels"
@@ -1149,3 +1149,27 @@ msgstr "채널 구독"
 msgctxt "#30720"
 msgid "Unsubscribed from channel"
 msgstr "채널 구독 취소"
+
+msgctxt "#30721"
+msgid "Default to WEBM adaptation set (4K)"
+msgstr "기본으로 WEBM 적응 설정 (4K)"
+
+msgctxt "#30722"
+msgid "Include VP9.2 (HDR)"
+msgstr "VP9.2 (HDR) 포함"
+
+msgctxt "#30723"
+msgid "Proxy is required for mpeg-dash vods (see HTTP Server)[CR]> 1080p and HDR requires InputStream Adaptive >= 2.3.14"
+msgstr "mpeg-dash vods (HTTP 서버 참고)[CR]> 1080p에 프록시가 필요하고 HDR에 InputStream Adaptive >= 2.3.14 필요함"
+
+msgctxt "#30724"
+msgid "Limit to 30fps"
+msgstr "30fps 제한"
+
+msgctxt "#30725"
+msgid "1440p (HD)"
+msgstr "1440p (HD)"
+
+msgctxt "#30726"
+msgid "Uploads"
+msgstr "올리기"

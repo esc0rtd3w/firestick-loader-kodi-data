@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import re
 
 from streamlink.plugin import Plugin, PluginArguments, PluginArgument

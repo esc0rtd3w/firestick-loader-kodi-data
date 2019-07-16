@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    //Exodus Add-on//
+    //Covenant Add-on//
     Updated for Exodus Add-on
 
     This program is free software: you can redistribute it and/or modify
@@ -133,10 +133,6 @@ key = "RgUkXp2s5v8x/A?D(G+KbPeShVmYq3t6"
 
 iv = "p2s5v8y/B?E(H+Mb"
 
-def autoTraktSubscription(tvshowtitle, year, imdb, tvdb):
-    from . import libtools
-    libtools.libtvshows().add(tvshowtitle, year, imdb, tvdb)
-
 def addonIcon():
     theme = appearance() ; art = artPath()
     if not (art == None and theme in ['-', '']): return os.path.join(art, 'icon.png')
@@ -226,6 +222,7 @@ def yesnoDialog(line1, line2, line3, heading=addonInfo('name'), nolabel='', yesl
 def selectDialog(list, heading=addonInfo('name')):
     return dialog.select(heading, list)
 
+
 def metaFile():
     if condVisibility('System.HasAddon(script.exodus.metadata)'):
         return os.path.join(xbmcaddon.Addon('script.exodus.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
@@ -304,6 +301,7 @@ def getCurrentViewId():
     win = xbmcgui.Window(xbmcgui.getCurrentWindowId())
     return str(win.getFocusId())
 
+
 def refresh():
     return execute('Container.Refresh')
 
@@ -316,4 +314,3 @@ def idle():
 
 def queueItem():
     return execute('Action(Queue)')
-

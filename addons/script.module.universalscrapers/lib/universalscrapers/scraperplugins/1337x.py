@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Universal Scrapers Bug
-# 24/02/2019
+# 13/07/2019
 
 import re, time, xbmcaddon, xbmc
 import urllib, urlparse
@@ -17,9 +17,9 @@ class one337x(Scraper):
     sources = []
 
     def __init__(self):
-        self.base_link = 'https://1337x.is/'
-        self.tvsearch = 'https://1337x.is/sort-category-search/{0}/TV/seeders/desc/{1}/'
-        self.moviesearch = 'https://1337x.is/sort-category-search/{0}/Movies/size/desc/{1}/'
+        self.base_link = 'http://the1337x.org/'
+        self.tvsearch = 'http://the1337x.org/sort-category-search/{0}/TV/seeders/desc/{1}/'
+        self.moviesearch = 'http://the1337x.org/sort-category-search/{0}/Movies/size/desc/{1}/'
 
 
     def scrape_movie(self, title, year, imdb, debrid=False):
@@ -57,6 +57,7 @@ class one337x(Scraper):
         try:
             self.items = []
             count = 0
+            #print url
             if url is None:
                 return self.sources
 
@@ -79,6 +80,7 @@ class one337x(Scraper):
                 urls.append(self.moviesearch.format(urllib.quote(query), '3'))
             threads = []
             for url in urls:
+                #xbmc.log('@#@URLSSSSSSSSS:%s' % url, xbmc.LOGNOTICE)
                 threads.append(workers.Thread(self._get_items, url))
             [i.start() for i in threads]
             [i.join() for i in threads]
@@ -106,11 +108,14 @@ class one337x(Scraper):
             scraper = cfscrape.create_scraper()
             r = scraper.get(url, headers=headers)
             #r = client.request(url, headers=headers)
+            #print r 
             posts = client.parseDOM(r.content, 'tbody')[0]
             posts = client.parseDOM(posts, 'tr')
+            #xbmc.log('@#@POSTSSSSSSSSS:%s' % posts, xbmc.LOGNOTICE)
             for post in posts:
                 data = dom.parse_dom(post, 'a', req='href')[1]
                 link = urlparse.urljoin(self.base_link, data.attrs['href'])
+                #print link
                 name = data.content
                 t = name.split(self.hdlr)[0]
 

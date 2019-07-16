@@ -12,21 +12,23 @@ User_Agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, lik
 
 
 class bnw(Scraper):
-    name = "BnwMovies"
-    domains = ['http://www.bnwmovies.com']
+    domains = ['bnwmovies.com']
+    name = "BNWmovies"
     sources = []
+
 
     def __init__(self):
         self.base_link = 'http://www.bnwmovies.com'
-        self.search_link = "/?s=%s"
+        self.search_link = "/search/%s"
+
 
     def scrape_movie(self, title, year, imdb, debrid=False):
-        if int(year) > 1980: return self.sources
+        if int(year) > 1980:
+            return self.sources
         try:
             start_time = time.time()
             query = urllib.quote_plus(clean_search(title.lower()))
             start_url = urlparse.urljoin(self.base_link, self.search_link % query)
-
             headers = {'User-Agent': client.agent(), 'Referer': self.base_link}
             count = 0
             html = client.request(start_url, headers=headers)
@@ -35,10 +37,9 @@ class bnw(Scraper):
             posts = [(i.attrs['href'], i.content) for i in posts if i]
             post = [(i[0]) for i in posts if clean_title(i[1]) == clean_title(title)][0]
             r = client.request(post, headers=headers)
-
             y = client.parseDOM(r, 'h1')[0]
-            if not year in y: return self.sources
-
+            if not year in y:
+                return self.sources
             links = client.parseDOM(r, 'source', ret='src')
             link = [i for i in links if i.endswith('mp4')][0]
             link += '|User-Agent=%s&Referer=%s' % (client.agent(), post)
@@ -48,12 +49,10 @@ class bnw(Scraper):
             if dev_log == 'true':
                 end_time = time.time() - start_time
                 send_log(self.name,end_time,count,title,year)
-
             return self.sources
         except Exception, argument:
             if dev_log == 'true':
                 error_log(self.name,argument)
             return self.sources
-#bnw().scrape_movie('Black Panther', '1998', '', False)
-#bnw().scrape_movie('going my way', '1944', '', False)
-# Movie (Trail Riders) 1942             
+
+

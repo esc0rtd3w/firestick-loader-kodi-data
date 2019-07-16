@@ -26,7 +26,7 @@ from resources.lib import utils
 def animeidhentai_main():
     utils.addDir('[COLOR hotpink]Uncensored[/COLOR]','https://animeidhentai.com/genres/uncensored/', 661, '', '')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://animeidhentai.com/?s=', 664, '', '')
-    animeidhentai_list('https://animeidhentai.com/hentai')
+    animeidhentai_list('https://animeidhentai.com/hentai-series/')
 
 
 @utils.url_dispatcher.register('661', ['url'])
@@ -35,15 +35,14 @@ def animeidhentai_list(url):
         listhtml = utils.getHtml(url)
     except Exception as e:
         return None
-    match = re.compile('''data-movie-id="\d+" class="[^"]+">\s*?<a href="([^"]+)"[^>]+>(.*?)original="([^"]+)".*?alt="([^"]+)"''', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for video, other, img, name in match:
-        if 'uncensored' in other.lower():
-            name = name + " [COLOR hotpink]Uncensored[/COLOR]"  
+    match = re.compile(r'<article id="??[^"\s]+(.*?)src="??([^"\s]+)"?? alt="([^"]+)".*?href="??([^"\s>]+)"??', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    for other, img, name, video in match:
+        if 'uncensored' in other.lower() or 'uncensored' in name.lower():
+            name = name + " [COLOR hotpink]Uncensored[/COLOR]" 
         utils.addDownLink(utils.cleantext(name), video, 662, img, '')
     try:
-        next_page = re.compile('''class='active'><a>\d+?</a></li><li><a.*?href='([^'"]+)''', re.DOTALL | re.IGNORECASE).search(listhtml).group(1)
-        page_number = ''.join([nr for nr in next_page.split('/')[-1] if nr.isdigit()])
-        utils.addDir('Next Page (' + page_number + ')', next_page, 661, '')
+        next_page = re.compile(r'<a href="??([^"\s]+)\s*?><span class="??icon-chevron-right"??>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        utils.addDir('Next Page', next_page, 661, '')
     except:
         pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
@@ -61,5 +60,5 @@ def animeidhentai_search(url, keyword=None):
 
 @utils.url_dispatcher.register('662', ['url', 'name'], ['download'])
 def animeidhentai_play(url, name, download=None):
-    vp = utils.VideoPlayer(name, download=download, regex='''<(?:iframe|IFRAME).*?(?:src|SRC)\s*=\s*["']([^'"]+)''', direct_regex=None)
+    vp = utils.VideoPlayer(name, download=download, regex=r"""<iframe.*?src=["']??([^"'\s]+)""", direct_regex=None)
     vp.play_from_site_link(url)

@@ -1,5 +1,5 @@
-# Addon Name: Incurison
-# Addon id: plugin.video.Exodus
+# Addon Name: Exodus
+# Addon id: plugin.video.exodus
 # Addon Provider: Exodus
 # Translators:
 # Translators:
@@ -30,6 +30,9 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgctxt "#32000"
+msgid "Movie Collections"
+msgstr "Movie Collections"
 
 msgctxt "#32001"
 msgid "Movies"
@@ -448,7 +451,7 @@ msgid "Playback"
 msgstr ""
 
 msgctxt "#32331"
-msgid "Default action"
+msgid "Set Auto-Play, Directory or Dialog"
 msgstr ""
 
 msgctxt "#32332"
@@ -464,7 +467,7 @@ msgid "Auto Play"
 msgstr ""
 
 msgctxt "#32335"
-msgid "Progress Dialog"
+msgid "View Providers In-Progress Dialog"
 msgstr ""
 
 msgctxt "#32336"
@@ -480,7 +483,7 @@ msgid "File Hosting Filters"
 msgstr ""
 
 msgctxt "#32339"
-msgid "Max Quality"
+msgid "Set Max Quality With-Out Changing Providers"
 msgstr ""
 
 msgctxt "#32340"
@@ -577,6 +580,14 @@ msgstr ""
 
 msgctxt "#32373"
 msgid "Force container refresh"
+msgstr ""
+
+msgctxt "#32374"
+msgid "Enable Debug"
+msgstr ""
+
+msgctxt "#32375"
+msgid "News and Updates"
 msgstr ""
 
 msgctxt "#32401"
@@ -704,11 +715,11 @@ msgid "DEBRID-SERVICE"
 msgstr ""
 
 msgctxt "#32539"
-msgid "Configure Debrid Services in ResolveURL Settings."
+msgid "Configure Debrid Services in UrlResolver Settings."
 msgstr ""
 
 msgctxt "#32540"
-msgid "ResolveURL Settings"
+msgid "UrlResolver Settings"
 msgstr ""
 
 msgctxt "#32541"
@@ -780,15 +791,15 @@ msgid "[B]LIBRARY[/B] : Settings"
 msgstr ""
 
 msgctxt "#32558"
-msgid "[B]Exodus[/B] : Update library..."
+msgid "[B]EXODUS[/B] : Update library..."
 msgstr ""
 
 msgctxt "#32559"
-msgid "[B]Exodus[/B] : Movie folder..."
+msgid "[B]EXODUS[/B] : Movie folder..."
 msgstr ""
 
 msgctxt "#32560"
-msgid "[B]Exodus[/B] : TV folder..."
+msgid "[B]EXODUS[/B] : TV folder..."
 msgstr ""
 
 msgctxt "#32561"
@@ -936,5 +947,142 @@ msgid "Normal"
 msgstr ""
 
 msgctxt "#32608"
-msgid "Auto Syncing Trakt Library"
+msgid "Unaired Season/Episode Color"
+msgstr ""
+
+msgctxt "#32609"
+msgid "[B][COLOR red]UrlResolver[/COLOR][/B] Settings"
+msgstr ""
+
+msgctxt "#32610"
+msgid "Kids Corner"
+msgstr ""
+
+msgctxt "#32611"
+msgid "Fitness Zone"
+msgstr ""
+
+msgctxt "#32612"
+msgid "Legends of Music"
+msgstr ""
+
+msgctxt "#80000"
+msgid "Kings Of Horror"
+msgstr ""
+
+msgctxt "#80001"
+msgid "Kung Fu"
+msgstr ""
+
+msgctxt "#80002"
+msgid "Urban"
+msgstr ""
+
+msgctxt "#80003"
+msgid "MST3K / Sci-Fi"
+msgstr ""
+
+msgctxt "#80004"
+msgid "Movie Time"
+msgstr ""
+
+msgctxt "#32613"
+msgid "[B]EXODUS[/B] : Clear All Cache..."
+msgstr ""
+
+msgctxt "#32614"
+msgid "[B]EXODUS[/B] : Clear Meta Cache..."
+msgstr ""
+
+msgctxt "#32615"
+msgid "Check Host for Valid URL"
+msgstr ""
+
+msgctxt "#32616"
+msgid "Debugging"
+msgstr ""
+
+msgctxt "#32617"
+msgid "Debug Log"
+msgstr ""
+
+msgctxt "#32618"
+msgid "Kodi Log"
+msgstr ""
+
+msgctxt "#32619"
+msgid "Addon Log"
+msgstr ""
+
+msgctxt "#32620"
+msgid "Podcasts"
+msgstr ""
+
+msgctxt "#32621"
+msgid "Navigation"
+msgstr ""
+
+msgctxt "#32622"
+msgid "Main Menu"
+msgstr ""
+
+msgctxt "#32623"
+msgid "Reviews and Trailers"
+msgstr ""
+
+msgctxt "#32624"
+msgid "P[COLOR red]o[/COLOR]dcast[COLOR red]One[/COLOR]"
+msgstr ""
+
+msgctxt "#32625"
+msgid "Featured Podcasts"
+msgstr ""
+
+msgctxt "#32626"
+msgid "New Podcasts"
+msgstr ""
+
+msgctxt "#32627"
+msgid "Categories"
+msgstr ""
+
+msgctxt "#32628"
+msgid "[B]SETTINGS[/B] : Navigation"
+msgstr ""
+
+msgctxt "#32629"
+msgid "PodBay"
+msgstr ""
+
+msgctxt "#32630"
+msgid "Show Season 0 in Browse Seasons"
+msgstr ""
+
+msgctxt "#32631"
+msgid "Documentaries"
+msgstr ""
+
+
+msgctxt "#32634"
+msgid "Torrent Source Identifier Color"
+msgstr ""
+
+msgctxt "#32635"
+msgid "Torrent Support (Requires Real-Debrid or Premiumize)"
+msgstr ""
+
+msgctxt "#32636"
+msgid "Enable Torrent Scrapers"
+msgstr ""
+
+msgctxt "#32637"
+msgid "Real-Debrid Torrent Settings"
+msgstr ""
+
+msgctxt "#32638"
+msgid "Minimum Seeders"
+msgstr ""
+
+msgctxt "#32639"
+msgid "Sort By Torrent/Premium"
 msgstr ""

@@ -28,7 +28,7 @@ dialog = utils.dialog
 def Main():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://en.paradisehill.cc/porn/',253,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://en.paradisehill.cc/search/?pattern=',254,'','')
-    List('https://en.paradisehill.cc/all/?page=1',1)
+    List('https://en.paradisehill.cc/all/?sort=created_at&page=1',1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -41,7 +41,8 @@ def List(url, page=1):
 	except:
 		
 		return None	
-	match = re.compile(r'Movie">.+?<a href="([^"]+)".+?<span itemprop="name">(.+?)</span.?</div>.+?</span>.+?<img src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+#	match = re.compile(r'Movie">.+?<a href="([^"]+)".+?<span itemprop="name">(.+?)</span.?</div>.+?</span>.+?<img src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	match = re.compile(r'a href="([^"]+)".+?<span itemprop="name">(.+?)</span.?</div>.+?</span>.+?data-src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
 	for videopage, name, img in match:
 		name = utils.cleantext(name)
 		img = "https://en.paradisehill.cc" + img

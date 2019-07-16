@@ -1,3 +1,6 @@
+# Addon Name: Exodus
+# Addon id: plugin.video.exodus
+# Addon Provider: Exodus
 # Translators:
 # Translators:
 # Translators:
@@ -24,7 +27,7 @@
 # Xulek, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: EXODUS\n"
+"Project-Id-Version: Exodus\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: 2017-05-30 09:11+0000\n"
 "Last-Translator: Viper2k4\n"
@@ -272,8 +275,7 @@ msgid "CLICK HERE TO SAVE VIEW"
 msgstr "KLIKNIJ TUTAJ ABY ZAPISAĆ WIDOK"
 
 msgctxt "#32060"
-msgid ""
-"January|February|March|April|May|June|July|August|September|October|November|December"
+msgid "January|February|March|April|May|June|July|August|September|October|November|December"
 msgstr "Styczeń|Luty|Marzec|Kwiecień|Maj|Czerwiec|Lipiec|Sierpień|Wrzesień|Październik|Listopad|Grudzień"
 
 msgctxt "#32061"
@@ -297,12 +299,12 @@ msgid "Queue item"
 msgstr "Dodaj do Kolejki"
 
 msgctxt "#32066"
-msgid "Watched in EXODUS"
-msgstr "Obejrzane w EXODUS"
+msgid "Watched in Exodus"
+msgstr "Obejrzane w Exodus"
 
 msgctxt "#32067"
-msgid "Unwatched in EXODUS"
-msgstr "Nieobejrzane w EXODUS"
+msgid "Unwatched in Exodus"
+msgstr "Nieobejrzane w Exodus"
 
 msgctxt "#32068"
 msgid "Watched in Trakt"
@@ -577,8 +579,8 @@ msgid "No stream available"
 msgstr "Brak dostępnych źródeł"
 
 msgctxt "#32402"
-msgid "Playback outside EXODUS is not allowed"
-msgstr "Odtwarzanie poza EXODUSem zabronione"
+msgid "Playback outside Exodus is not allowed"
+msgstr "Odtwarzanie poza Exodus em zabronione"
 
 msgctxt "#32403"
 msgid "Download"
@@ -697,20 +699,20 @@ msgid "DEBRID-SERVICE"
 msgstr "SERWIS-DEBRID"
 
 msgctxt "#32539"
-msgid "Configure Debrid Services in ResolveURL Settings."
-msgstr "Skonfiguruj usługi Debrid w Ustawieniach ResolveURL."
+msgid "Configure Debrid Services in UrlResolver Settings."
+msgstr "Skonfiguruj usługi Debrid w Ustawieniach UrlResolver."
 
 msgctxt "#32540"
-msgid "ResolveURL Settings"
-msgstr "Ustawienia ResolveURL"
+msgid "[B]RESOLVEURL[/B] : Settings"
+msgstr "Ustawienia [B]RESOLVEURL[/B]"
 
 msgctxt "#32541"
 msgid "Library"
 msgstr "Biblioteka"
 
 msgctxt "#32542"
-msgid "EXODUS folders will be imported to library if they are added to media sources."
-msgstr "Foldery EXODUS zostaną zaimportowane do biblioteki, jeśli zostaną dodane do źródeł multimedialnych."
+msgid "Exodus folders will be imported to library if they are added to media sources."
+msgstr "Foldery Exodus zostaną zaimportowane do biblioteki, jeśli zostaną dodane do źródeł multimedialnych."
 
 msgctxt "#32543"
 msgid "Movies"
@@ -926,4 +928,97 @@ msgstr "Prem"
 
 msgctxt "#32607"
 msgid "Normal"
-msgstr "Normalny"
+msgstr "Normalna"
+
+msgctxt "#32608"
+msgid "Unaired Season/Episode Color"
+msgstr "Unaired Season / Episode Color"
+
+msgctxt "#32609"
+msgid "[B][COLOR red]UrlResolver[/COLOR][/B] Settings"
+msgstr "[B][COLOR red]UrlResolver[/COLOR][/B] Ustawienia"
+
+msgctxt "#32613"
+msgid "[B]EXODUS[/B] : Clear All Cache..."
+msgid "[B]EXODUS[/B] : Wyczyść całą pamięć podręczną..."
+
+msgctxt "#32614"
+msgid "[B]EXODUS[/B] : Clear Meta Cache..."
+msgstr "[B]EXODUS[/B] : Wyczyść pamięć podręczną Meta ..."
+
+msgctxt "#32615"
+msgid "Check Host for Valid URL"
+msgstr "Sprawdź Host pod prawidłowym adresem URL"
+
+msgctxt "#32616"
+msgid "Debugging"
+msgstr "Debugowanie"
+
+msgctxt "#32617"
+msgid "Debug Log"
+msgstr "Dziennik debugowania"
+
+msgctxt "#32618"
+msgid "Kodi Log"
+msgstr "Kodi Log"
+
+msgctxt "#32619"
+msgid "Addon Log"
+msgstr "Addon Log"
+
+
+msgctxt "#32621"
+msgid "Navigation"
+msgstr "Nawigacja"
+
+msgctxt "#32622"
+msgid "Main Menu"
+msgstr "Menu główne"
+
+msgctxt "#32623"
+msgid "Reviews and Trailers"
+msgstr "Recenzje i zwiastuny"
+
+msgctxt "#32627"
+msgid "Categories"
+msgstr "Kategorie"
+
+msgctxt "#32628"
+msgid "[B]SETTINGS[/B] : Navigation"
+msgstr "[B]SETTINGS[/B] : Nawigacja"
+
+msgctxt "#32629"
+msgid "PodBay"
+msgstr ""
+
+msgctxt "#32630"
+msgid "Show Season 0 in Browse Seasons"
+msgstr "Pokaż sezon 0 w sezonach przeglądania"
+
+msgctxt "#32631"
+msgid "Documentaries"
+msgstr "Filmy dokumentalne"
+
+msgctxt "#32634"
+msgid "Torrent Source Identifier Color"
+msgstr "Kolor identyfikatora źródła torrenta"
+
+msgctxt "#32635"
+msgid "Torrent Support (Requires Real-Debrid or Premiumize)"
+msgstr "Obsługa Torrent (wymaga Real-Debrid lub Premiumize)"
+
+msgctxt "#32636"
+msgid "Enable Torrent Scrapers"
+msgstr "Włącz Skrobaczki Torrent"
+
+msgctxt "#32637"
+msgid "Real-Debrid Torrent Settings"
+msgstr "Real-Debrid Torrent Settings"
+
+msgctxt "#32638"
+msgid "Minimum Seeders"
+msgstr "Minimalna liczba siewników"
+
+msgctxt "#32639"
+msgid "Sort By Torrent/Premium"
+msgstr "Sortuj według Torrent / Premium"

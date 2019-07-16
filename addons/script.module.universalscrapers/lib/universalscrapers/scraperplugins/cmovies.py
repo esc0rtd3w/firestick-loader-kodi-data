@@ -13,13 +13,15 @@ dev_log = xbmcaddon.Addon('script.module.universalscrapers').getSetting("dev_log
 
 
 class cmovies(Scraper):
-    domains = ['https://cmovies.cc']
+    domains = ['cmovies.cc']
     name = "Cmovies"
+
 
     def __init__(self):
         self.base_link = 'https://cmovies.cc'
         self.search_link = 'search/%s/feed/rss2/'
         self.sources = []
+
 
     def scrape_movie(self, title, year, imdb, debrid=False):
         count = 0
@@ -27,19 +29,15 @@ class cmovies(Scraper):
             start_time = time.time()
             search_id = '%s %s' % (clean_search(title), year)
             start_url = urlparse.urljoin(self.base_link, self.search_link % urllib.quote_plus(search_id))
-            #xbmc.log('scraperchk - scrape_movie - start_url:%s' % start_url, xbmc.LOGNOTICE)
-
             headers = {'User-Agent': client.agent()}
             html = requests.get(start_url, headers=headers, timeout=5).content
             posts = client.parseDOM(html, 'item')
             posts = [(client.parseDOM(i, 'title')[0], client.parseDOM(i, 'a', ret='href')) for i in posts if i]
             posts = [i[1] for i in posts if clean_title(i[0]) == clean_title(title)][0]
-            #xbmc.log('$#$POSTS:%s' % posts, xbmc.LOGNOTICE)
             for url in posts:
-                # print 'scraperchk - scrape_movie - link: '+str(link1)
-                if 'cmovies' in url: continue
+                if 'cmovies' in url:
+                    continue
                 link = 'https:' + url if url.startswith('//') else url
-                # print link+'?<<<<<<<<<<<<<<<<<<<,,,'
                 if '1080' in link:
                     qual = '1080p'
                 elif '720' in link:

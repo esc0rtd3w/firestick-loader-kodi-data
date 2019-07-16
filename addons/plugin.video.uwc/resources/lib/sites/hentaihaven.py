@@ -61,28 +61,25 @@ def List(url):
 
 @utils.url_dispatcher.register('462', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-	UA= 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0'
-	videopage = utils.getHtml(url)
-	sources = re.findall('''<source\s*.+?label=['"](\w+)['"]\s*src=['"]([^'"]+)''', videopage)
-	sources = [(i[0], i[1]) for i in sources if not i[1] == "dead_link"]	
-	
-	
-	if "<source" in videopage:
-		videourl = re.compile('<source.*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-	else:
-		videourl = re.compile('class="btn btn-1 btn-1e" href="([^"]+)" target="_blank"', re.DOTALL | re.IGNORECASE).findall(videopage)[0]
-	if videourl:
-		videourl += '|User-Agent='+urllib.quote(UA)+'&Referer='+url
-		if 'play.php' in videourl:
-			videourl = utils.getVideoLink(videourl, url)	
-		else:
-			iconimage = xbmc.getInfoImage("ListItem.Thumb")
-			listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-			listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-			xbmc.Player().play(videourl, listitem)				
-		
-	else:
-		utils.notify('Oh oh','Couldn\'t find a video')
+    links = {}
+    vp = utils.VideoPlayer(name)
+    vp.progress.update(25, "", "Loading video page", "")
+    videopage = utils.getHtml(url)
+    iframes = re.compile('<iframe.+?src="([^"]+)"[^>]+>.*?</iframe', re.DOTALL | re.IGNORECASE).findall(videopage)
+    if iframes:
+        for link in iframes:
+            if vp.resolveurl.HostedMediaFile(link):
+                links[link.split('/')[2]] = link
+    srcs = re.compile('label="([^"]+)" src="([^"]+)" type=', re.DOTALL | re.IGNORECASE).findall(videopage)
+    if srcs:
+        for quality, videourl in srcs:
+            links['Direct ' + quality] = videourl + '|Referer=%s&User-Agent=%s' % (url, utils.USER_AGENT)
+
+    videourl = utils.selector('Select link', links, dont_ask_valid=False)
+    if '|Referer' in videourl:
+        vp.play_from_direct_link(videourl)
+    else:
+        vp.play_from_link_to_resolve(videourl)
 
 
 @utils.url_dispatcher.register('463', ['url'])

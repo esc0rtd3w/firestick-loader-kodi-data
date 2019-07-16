@@ -7,26 +7,26 @@ from universalscrapers.common import clean_title,clean_search,random_agent,send_
 from ..scraper import Scraper
 
 dev_log = xbmcaddon.Addon('script.module.universalscrapers').getSetting("dev_log")
-
 headers = {"User-Agent": random_agent()}
 
 class freemusic(Scraper):
-    domains = ['freemusicdownloads']
-    name = "Freemusic"
+    domains = ['down.getfreemusic.world']
+    name = "FreeMusic"
     sources = []
     
 
     def __init__(self):
-        self.base_link = 'http://down.freemusicdownloads.world/'
+        self.base_link = 'https://down.getfreemusic.world/'
         self.sources = []
         if dev_log=='true':
             self.start_time = time.time()
-    
+
+
     def scrape_music(self, title, artist, debrid=False):
         try:
             song_search = clean_title(title.lower()).replace(' ','+')
             artist_search = clean_title(artist.lower()).replace(' ','+')
-            start_url = '%sresults?search_query=%s+%s'    %(self.base_link,artist_search,song_search)
+            start_url = '%sresults?search_query=%s+%s' % (self.base_link,artist_search,song_search)
             html = requests.get(start_url, headers=headers, timeout=20).content
             match = re.compile('<h4 class="card-title">.+?</i>(.+?)</h4>.+?id="(.+?)"',re.DOTALL).findall(html)
             count = 0
@@ -46,7 +46,8 @@ class freemusic(Scraper):
             if dev_log=='true':
                 end_time = time.time() - self.start_time
                 send_log(self.name,end_time,count)             
-
             return self.sources    
         except Exception, argument:
             return self.sources
+
+

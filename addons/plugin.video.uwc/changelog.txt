@@ -1,3 +1,90 @@
+Version 1.1.83
+Removed: Cat3Movie
+Fixed: PornHub
+Fixed: xHamster
+Fixed: Hentaihaven
+Fixed: XVideosHits
+Fixed: Anybunny
+Improved: Chaturbate,(Tag support)
+Improved: PornTrex
+
+Version 1.1.82
+Fixed: Xvideohits
+Fixed: Xtheatre
+Fixed: DaftSex
+ 
+Version 1.1.81
+Fixed: Animeid Hentai
+Fixed: DaftSex
+Fixed: ParadiseHill
+Fixed: DatoPorn
+Improved: utils.py
+
+Version 1.1.80
+Fixed: FreeOMovie
+Improved: ViralVideosX 
+Improved: PornTrex
+
+Version 1.1.79
+Fixed: Cam4
+Fixed: Camsoda
+Fixed: sxyprn(YourPorn)
+Improved: DaftSex
+
+Version 1.1.78
+Added: Broken labels
+Fixed: HQPorner
+Fixed: Pornsland
+Partly Fixed: K18.co
+
+Version 1.1.77
+Fixed: Xtheatre
+Fixed: Pornhive
+Fixed: Xvideohits
+
+Version 1.1.76
+Fixed: xmoviesforyou (next page + categories)
+Added: Xozilla
+
+Version 1.1.75
+Added: Freepornstreams
+Added: Viralvideosx
+Added: Xmoviesforyou
+Removed: Elreyx
+Removed: Videomegaporn
+
+Version 1.1.74
+Fixed: Beeg
+Fixed: K18
+
+Version 1.1.73
+Fixed: Beeg
+Fixed: Spankbang
+
+Version 1.1.72
+Fixed mostly: DaftSex
+
+Version 1.1.71
+Fixed: YourPorn
+Minor fix: PornDoe
+
+Version 1.1.70
+Fixed: Chaturbate
+Fixed: WatchXXXFree
+Added: PornDoe
+Added: ClipHunter
+
+Version 1.1.69
+Fixed: Chaturbate
+Fixed: WatchXXXFree
+
+Version 1.1.68
+Fixed: Czech3x
+Minor fix: poldertube.nl
+Added: XvideosHits
+Added PerfectGirls
+Removed: Milf.nl
+
 Version 1.1.67 
 Fixed: WatchXXXFree
 Fixed: YesPornPlease

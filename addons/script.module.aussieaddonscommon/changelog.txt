@@ -1,3 +1,14 @@
+[B]Version v1.2.0[/B]
+- Add platform as detected by Kodi to report summary
+- Fix travis config
+- travis-ci config update for notifications
+- Add to org blacklist
+- Create progress dialog for issue report immediately
+- Busy dialog box fix
+- Only allow reports for addons currently in repo
+- Limit issue report titles to 256 chars
+- Ensure debug mode is enabled for user reports. (#8)
+
 [B]Version v1.1.5[/B]
 - Add additional orgs to blacklist
 

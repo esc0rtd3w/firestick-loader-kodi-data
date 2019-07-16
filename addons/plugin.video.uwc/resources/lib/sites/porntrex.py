@@ -30,6 +30,10 @@ progress = utils.progress
 @utils.url_dispatcher.register('50')    
 def PTMain():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]', 'https://www.porntrex.com/categories/', 53, '', '')
+    utils.addDir('[COLOR hotpink]Channels[/COLOR]', 'https://www.porntrex.com/channels/', 59, '', '')
+    utils.addDir('[COLOR hotpink]JAV[/COLOR]', 'https://www.porntrex.com/members/1387755/videos/', 51, '', '')
+    utils.addDir('[COLOR hotpink]New[/COLOR]', 'https://www.porntrex.com/tags/new/', 51, '', '')
+    utils.addDir('[COLOR hotpink]Longest[/COLOR]', 'https://www.porntrex.com/longest/', 51, '', '')
     utils.addDir('[COLOR hotpink]Search[/COLOR]', 'https://www.porntrex.com/search/', 54, '', '')
     PTList('https://www.porntrex.com/latest-updates/1/', 1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
@@ -100,6 +104,12 @@ def PTList(url, page=1, onelist=None):
                   searchphrase = url.split('/')[5]
                   url = url + '?mode=async&function=get_block&block_id=list_videos_videos&q=' + searchphrase + '&category_ids=&sort_by=post_date&from_videos=' + str(page) + '&from_albums=' + str(page)
                 url = url.replace('from_videos=' + str(page), 'from_videos=' + str(npage)).replace('from_albums=' + str(page), 'from_albums=' + str(npage))
+            elif '/members/' in url:
+                url = url + '?mode=async&function=get_block&block_id=list_videos_uploaded_videos&is_private=0&sort_by=&from_uploaded_videos=' + str(npage)
+            elif '/tags/' in url:
+                url = url + '?mode=async&function=get_block&block_id=list_videos_common_videos_list_norm&sort_by=post_date&from4=' + str(npage)
+            elif '/longest/' in url:
+                url = url + '?mode=async&function=get_block&block_id=list_videos_common_videos_list_norm&sort_by=duration&from4=' + str(npage)
             else:
                 url = url.replace('/' + str(page) + '/', '/' + str(npage) + '/')
             utils.addDir('Next Page (' + str(npage) + ')', url, 51, '', npage)
@@ -148,8 +158,10 @@ def JHList(url, page=1, onelist=None):
                   searchphrase = url.split('/')[5]
                   url = url + '?mode=async&function=get_block&block_id=list_videos_videos_list_search_result&q=' + searchphrase + '&category_ids=&sort_by=&from_videos=' + str(page) + '&from_albums=' + str(page)
                 url = url.replace('from_videos=' + str(page), 'from_videos=' + str(npage)).replace('from_albums=' + str(page), 'from_albums=' + str(npage))
+
             else:
                 url = url.replace('/' + str(page) + '/', '/' + str(npage) + '/')
+            print "Next URL: " + url
             utils.addDir('Next Page (' + str(npage) + ')', url, 451, '', npage)
         xbmcplugin.endOfDirectory(utils.addon_handle)
 
@@ -198,6 +210,21 @@ def PTCat(url):
             utils.addDir(name, catpage, 451, img, 1)
         else:
             utils.addDir(name, catpage, 51, img, 1)       
+    xbmcplugin.endOfDirectory(utils.addon_handle)
+
+@utils.url_dispatcher.register('59', ['url'])
+def PTChn(url):
+    cathtml = utils.getHtml(url, '')
+    cat_block = re.compile('<div class="video-list">(.*?)<div class="footer-margin">', re.DOTALL | re.IGNORECASE).search(cathtml).group(1)    
+    match = re.compile('<div class="video-item   ">.*?<a href="([^"]+)" title="([^"]+)".*? src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cat_block)
+
+    for catpage, name, img in sorted(match, key=lambda x: x[1]):
+        if img.startswith('//'):
+            img = 'https:' + img
+        img = re.sub(r"static.cdntrex", "porntrex", img)
+        catpage = catpage + '?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=1'
+        
+        utils.addDir(name, catpage, 51, img, 1)       
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('54', ['url'], ['keyword'])

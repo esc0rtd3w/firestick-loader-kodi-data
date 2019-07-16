@@ -25,7 +25,10 @@ class GOLTelevision(Plugin):
         return cls.url_re.match(url) is not None
 
     def _get_streams(self):
-        return HLSStream.parse_variant_playlist(self.session, self.session.http.get(self.api_url, schema=self.api_schema))
+
+        return HLSStream.parse_variant_playlist(
+            self.session, self.session.http.get(self.api_url, schema=self.api_schema)
+        )
 
 
 __plugin__ = GOLTelevision

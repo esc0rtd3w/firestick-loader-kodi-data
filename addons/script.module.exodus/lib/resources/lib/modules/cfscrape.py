@@ -4,7 +4,7 @@ import re
 import subprocess
 from copy import deepcopy
 from time import sleep
-import requests
+import requests 
 from resources.lib.modules import cfdecoder
 
 from requests.sessions import Session
@@ -91,45 +91,6 @@ class CloudflareScraper(Session):
         cloudflare_kwargs["allow_redirects"] = False
         redirect = self.request(method, submit_url, **cloudflare_kwargs)
         return self.request(method, redirect.headers["Location"], **original_kwargs)
-
-    def solve_challenge(self, body):
-        try:
-            js = re.search(r"setTimeout\(function\(\){\s+(var "
-                        "s,t,o,p,b,r,e,a,k,i,n,g,f.+?\r?\n[\s\S]+?a\.value =.+?)\r?\n", body).group(1)
-        except Exception:
-            raise ValueError("Unable to identify Cloudflare IUAM Javascript on website. %s" % BUG_REPORT)
-
-        js = re.sub(r"a\.value = (parseInt\(.+?\)).+", r"\1", js)
-        js = re.sub(r"\s{3,}[a-z](?: = |\.).+", "", js)
-
-        # Strip characters that could be used to exit the string context
-        # These characters are not currently used in Cloudflare's arithmetic snippet
-        js = re.sub(r"[\n\\']", "", js)
-
-        if "parseInt" not in js:
-            raise ValueError("Error parsing Cloudflare IUAM Javascript challenge. %s" % BUG_REPORT)
-
-        # Use vm.runInNewContext to safely evaluate code
-        # The sandboxed code cannot use the Node.js standard library
-        js = "console.log(require('vm').runInNewContext('%s', Object.create(null), {timeout: 5000}));" % js
-
-        try:
-            result = subprocess.check_output(["node", "-e", js]).strip()
-        except OSError as e:
-            if e.errno == 2:
-                raise EnvironmentError("Missing Node.js runtime. Node is required. Please read the cfscrape"
-                    " README's Dependencies section: https://github.com/Anorov/cloudflare-scrape#dependencies.")
-            raise
-        except Exception:
-            logging.error("Error executing Cloudflare IUAM Javascript. %s" % BUG_REPORT)
-            raise
-
-        try:
-            result = int(result)
-        except Exception:
-            raise ValueError("Cloudflare IUAM challenge returned unexpected answer. %s" % BUG_REPORT)
-
-        return result
 
     @classmethod
     def create_scraper(cls, sess=None, **kwargs):

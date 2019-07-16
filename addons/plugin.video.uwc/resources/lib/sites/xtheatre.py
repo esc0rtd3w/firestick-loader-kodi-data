@@ -17,7 +17,8 @@
 '''
 
 import re
-
+import urllib2
+import requests
 import xbmcplugin
 from resources.lib import utils
 
@@ -29,11 +30,11 @@ sortlistxt = [addon.getLocalizedString(30022), addon.getLocalizedString(30023), 
 
 @utils.url_dispatcher.register('20')
 def XTMain():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://xxxmoviestream.com/categories/',22,'','')
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://xxxmoviestream.com/page/1/?s=',24,'','')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://xtheatre.org/categories/',22,'','')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://xtheatre.org/page/1/?s=',24,'','')
     Sort = '[COLOR hotpink]Current sort:[/COLOR] ' + sortlistxt[int(addon.getSetting("sortxt"))]
     utils.addDir(Sort, '', 25, '', '')    
-    XTList('https://xxxmoviestream.com/category/movies/page/1/',1)
+    XTList('https://xtheatre.org/category/movies/page/1/',1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -92,7 +93,17 @@ def XTList(url, page=1):
 
 @utils.url_dispatcher.register('23', ['url', 'name'], ['download'])
 def XTVideo(url, name, download=None):
-    utils.PLAYVIDEO(url, name, download)
+    vp = utils.VideoPlayer(name, download)
+    vp.progress.update(25, "", "Loading video page", "")
+    html = utils.getHtml(url, url)
+    if 'strdef.world' in html:
+	links = vp._check_suburls(html, url)
+	req = urllib2.Request(links[0],'',utils.headers)
+	req.add_header('Referer', url)
+	response = urllib2.urlopen(req, timeout=30)
+	vp.play_from_link_to_resolve(response.geturl())
+    else:	
+    	vp.play_from_html(html)  
 
 
 def getXTSortMethod():

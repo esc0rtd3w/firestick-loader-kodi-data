@@ -1,4 +1,5 @@
 import htmlentitydefs
+import json
 import os
 import re
 import sys
@@ -116,10 +117,14 @@ def format_error_summary():
     error message.
     """
     exc_type, exc_value, exc_traceback = sys.exc_info()
+
+    args = list(exc_value)
+    if exc_type == UnicodeEncodeError:
+        args.pop(1)  # remove error data, likely to be very long xml
     return "%s (%d) - %s: %s" % (
         os.path.basename(exc_traceback.tb_frame.f_code.co_filename),
         exc_traceback.tb_lineno, exc_type.__name__,
-        ', '.join(exc_value.args))
+        ', '.join([ensure_ascii(x) for x in args]))
 
 
 def log_error(message=None):
@@ -176,7 +181,7 @@ def get_platform():
         "Android",
         "Linux.RaspberryPi",
         "Linux",
-        "XBOX",
+        "UWP",
         "Windows",
         "ATV2",
         "IOS",
@@ -246,12 +251,30 @@ def is_valid_country(connection_info, message=None):
     return True
 
 
+def is_debug():
+    try:
+        json_query = ('{"jsonrpc":"2.0","id":1,"method":'
+                      '"Settings.GetSettingValue","params":'
+                      '{"setting":"debug.showloginfo"}}')
+        result = json.loads(xbmc.executeJSONRPC(json_query))
+        return result['result']['value']
+    except RuntimeError:
+        return True
+
+
 def user_report():
-    send_report('User initiated report', user_initiated=True)
+    if is_debug():
+        send_report('User initiated report', user_initiated=True)
+    else:
+        dialog_message(['Debug logging not enabled. '
+                        'Please enable debug logging, restart Kodi, '
+                        'recreate the issue and try again.'])
 
 
 def send_report(title, trace=None, connection_info=None, user_initiated=False):
     try:
+        dialog_progress = xbmcgui.DialogProgress()
+        dialog_created = False
         import issue_reporter
         log("Reporting issue to GitHub")
 
@@ -261,20 +284,38 @@ def send_report(title, trace=None, connection_info=None, user_initiated=False):
         if user_initiated:
             if not is_valid_country(connection_info):
                 return
+            if not xbmcgui.Dialog().yesno('{0} v{1}'.format(
+                get_addon_name(), get_addon_version()),
+                    'Please confirm you would like to submit an issue report '
+                    'and upload your logfile to Github. '):
+                log('Cancelled user report')
+                return
 
         # Show dialog spinner, and close afterwards
-        xbmc.executebuiltin("ActivateWindow(busydialog)")
+        dialog_progress.create('Uploading issue to GitHub...')
+        dialog_created = True
+
+        if not issue_reporter.is_supported_addon():
+            xbmcgui.Dialog().ok('{0} v{1}'.format(
+                get_addon_name(), get_addon_version()),
+                'This add-on is no longer supported by Aussie Add-ons.')
+            log('Add-on not supported, aborting issue report.')
+            return
+        
         report_url = issue_reporter.report_issue(title, trace, connection_info)
 
         split_url = report_url.replace('/issue-reports', ' /issue-reports')
         dialog_message(['Thanks! Your issue has been reported to: ',
-                       split_url])
+                        split_url,
+                        'Please visit and describe the issue in order for '
+                        'us to assist.'])
         return report_url
     except Exception:
         traceback.print_exc()
         log('Failed to send report')
     finally:
-        xbmc.executebuiltin("Dialog.Close(busydialog)")
+        if dialog_created:
+            dialog_progress.close()
 
 
 def handle_error(message):
@@ -298,7 +339,7 @@ def handle_error(message):
 
     # AttributeError: global name 'foo' is not defined
     error = '%s: %s' % (exc_type.__name__,
-                        ', '.join(str(e) for e in exc_value.args))
+                        ', '.join(ensure_ascii(e) for e in exc_value.args))
 
     message = format_dialog_error(message)
 

@@ -83,8 +83,7 @@ def PHVideo(url, name, download=None):
     if 'extra_urls' in videopage:
         baseurls = re.compile("'(aHr[^']+)", re.DOTALL | re.IGNORECASE).findall(videopage)
         for base in baseurls:
-            videopage = base64.b64decode(base) + " " + videopage
-    #xbmc.log(videopage)
+            videopage = 'src="' + base64.b64decode(base) + '"' + " " + videopage
     utils.playvideo(videopage, name, download=None, url=url)
 
 

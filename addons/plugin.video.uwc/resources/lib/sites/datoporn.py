@@ -41,8 +41,10 @@ def datoporn_list(url):
         name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"
         utils.addDownLink(name, video, 672, img, '')
     try:
-        next_page = re.compile('''<a href='([^']+)'>Next''', re.DOTALL | re.IGNORECASE).search(listhtml).group(1)
-        page_number = ''.join([nr for nr in next_page.split('/')[-1] if nr.isdigit()])
+#        next_page = re.compile('''<a href='([^']+)'>Next''', re.DOTALL | re.IGNORECASE).search(listhtml).group(1)
+        next_page = re.compile('''a class='page-link' href='([^']+)'>Next''', re.DOTALL | re.IGNORECASE).search(listhtml).group(1)
+	utils.kodilog(next_page)
+        page_number = ''.join([nr for nr in next_page.split('=')[-1] if nr.isdigit()])
         utils.addDir('Next Page (' + page_number + ')', next_page, 671, '')
     except:
         pass

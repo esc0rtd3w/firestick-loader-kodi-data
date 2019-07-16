@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 '''
     Simple XBMC Download Script
     Copyright (C) 2013 Sean Poyser (seanpoyser@gmail.com)
@@ -19,6 +21,7 @@
 
 import re
 import json
+import sys		  
 import urllib
 import urllib2
 import urlparse

@@ -49,15 +49,15 @@ class RapidVideoResolver(UrlResolver):
                 strurl = helpers.parse_html5_source_list(shtml)
                 if strurl:
                     sources.append(strurl[0])
-            sources = helpers.sort_sources_list(sources)
         else:
             sources = helpers.parse_html5_source_list(html)
         
         if len(sources) > 0:
+            sources = helpers.sort_sources_list(sources)
             return helpers.pick_source(sources) + helpers.append_headers(headers)
         else:
             raise ResolverError("Video not found")
             
 
     def get_url(self, host, media_id):
-        return self._default_get_url(host, media_id, template='https://www.{host}/e/{media_id}')
+        return self._default_get_url(host, media_id, template='https://www.{host}/v/{media_id}')

@@ -38,13 +38,17 @@ addon = utils.addon
 
 def BGVersion():
     bgpage = utils.getHtml('https://beeg.com','')
-    bgversion = re.compile(r"cpl/(\d+)\.js", re.DOTALL | re.IGNORECASE).findall(bgpage)[0]
+    bgversion = re.compile(r"var beeg_version = (\d+);", re.DOTALL | re.IGNORECASE).findall(bgpage)[0]
+    utils.kodilog(bgpage)
+    utils.kodilog(bgversion)
+
     bgsavedversion = addon.getSetting('bgversion')
-    if bgversion != bgsavedversion or not addon.getSetting('bgsalt'):
-        addon.setSetting('bgversion',bgversion)
-        bgjspage = utils.getHtml('https://beeg.com/static/cpl/'+bgversion+'.js','https://beeg.com')
-        bgsalt = re.compile('beeg_salt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(bgjspage)[0]
-        addon.setSetting('bgsalt',bgsalt)
+#    if bgversion != bgsavedversion or not addon.getSetting('bgsalt'):
+#        addon.setSetting('bgversion',bgversion)
+#        bgjspage = utils.getHtml('https://beeg.com/static/cpl/'+bgversion+'.js','https://beeg.com')
+#        bgsalt = re.compile('beeg_salt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(bgjspage)[0]
+#	utils.kodilog(bgsalt)
+#        addon.setSetting('bgsalt',bgsalt)
 
 
 @utils.url_dispatcher.register('80')
@@ -52,7 +56,7 @@ def BGMain():
     BGVersion()
     bgversion = addon.getSetting('bgversion')
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://beeg.com/api/v6/'+bgversion+'/index/main/0/pc',83,'','')
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://beeg.com/api/v6/'+bgversion+'/index/main/0/pc?query=',84,'','')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://beeg.com/api/v6/'+bgversion+'/index/tag/0/pc?tag=',84,'','')
     BGList('https://beeg.com/api/v6/'+bgversion+'/index/main/0/pc')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
@@ -64,7 +68,8 @@ def BGList(url):
 		listjson = utils.getHtml(url,'')
 	except:
 		return None
-	match = re.compile(r'\{"title":"([^"]+)","id":"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listjson)	
+	match = re.compile(r'\{"title":"([^"]+)","id":(\d+),', re.DOTALL | re.IGNORECASE).findall(listjson)	
+
 	for title, videoid in match:
 		img = "https://img.beeg.com/236x177/" + videoid +  ".jpg"
 		videopage = "https://beeg.com/api/v6/" + bgversion + "/video/" + videoid
@@ -108,7 +113,7 @@ def decrypt_key(key):
 
 @utils.url_dispatcher.register('82', ['url', 'name'], ['download'])
 def BGPlayvid(url, name, download=None):
-	
+
 	videopage = utils.getHtml4(url)
 	#videopage = json.loads(videopage)
 
@@ -122,11 +127,12 @@ def BGPlayvid(url, name, download=None):
 	url = url.replace("{DATA_MARKERS}","data=pc_XX")
 	if not url.startswith("http:"): url = "https:" + url
 	
-	key = re.compile("/key=(.*?)%2Cend", re.DOTALL | re.IGNORECASE).findall(url)[0]
-	decryptedkey = decrypt_key(key)
-	
-	videourl = url.replace(key, decryptedkey)
-	
+#	key = re.compile("/key=(.*?)%2Cend", re.DOTALL | re.IGNORECASE).findall(url)[0]
+#	decryptedkey = decrypt_key(key)
+#	
+#	videourl = url.replace(key, decryptedkey)
+        videourl = url
+			
 	if download == 1:
 		utils.downloadVideo(videourl, name)
 	else:
@@ -149,7 +155,6 @@ def BGCat(url):
 	bgversion = addon.getSetting('bgversion')
 
 	caturl = utils.getHtml5(url)
-
 	#tags = re.compile(r'"nonpopular":\[(.*?)\]', re.DOTALL | re.IGNORECASE).findall(caturl)[0]
 	#tags = re.compile('"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(tags)
 	tags = re.compile('{"tag":"(.+?)","videos":(.+?)}', re.DOTALL | re.IGNORECASE).findall(caturl)	

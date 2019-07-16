@@ -65,6 +65,7 @@ class HDSStreamWriter(SegmentedStreamWriter):
             return
 
         try:
+
             request_params = self.stream.request_params.copy()
             params = request_params.pop("params", {})
             params.pop("g", None)
@@ -78,6 +79,7 @@ class HDSStreamWriter(SegmentedStreamWriter):
             return self.fetch(fragment, retries - 1)
 
     def write(self, fragment, res, chunk_size=8192):
+
         fd = StreamIOIterWrapper(res.iter_content(chunk_size))
         self.convert_fragment(fragment, fd)
 
@@ -165,9 +167,11 @@ class HDSStreamWorker(SegmentedStreamWorker):
                 # Less likely to hit edge if we don't start with last fragment,
                 # default buffer is 10 sec.
                 fragment_buffer = int(ceil(self.live_edge / fragment_duration))
-                current_fragment = max(self.first_fragment, current_fragment - (fragment_buffer - 1))
+                current_fragment = max(self.first_fragment,
+                                       current_fragment - (fragment_buffer - 1))
 
-                log.debug("Live edge buffer {0} sec is {1} fragments", self.live_edge, fragment_buffer)
+                log.debug("Live edge buffer {0} sec is {1} fragments",
+                          self.live_edge, fragment_buffer)
 
                 # Make sure we don't have a duration set when it's a
                 # live stream since it will just confuse players anyway.
@@ -190,15 +194,22 @@ class HDSStreamWorker(SegmentedStreamWorker):
             log.debug("Bootstrap not changed, shortening timer")
             self.bootstrap_reload_time /= 2
 
-        self.bootstrap_reload_time = max(self.bootstrap_reload_time, self.bootstrap_minimal_reload_time)
+        self.bootstrap_reload_time = max(self.bootstrap_reload_time,
+                                         self.bootstrap_minimal_reload_time)
 
     def fetch_bootstrap(self, url):
-        res = self.session.http.get(url, exception=StreamError, **self.stream.request_params)
+        res = self.session.http.get(url,
+                                    exception=StreamError,
+                                    **self.stream.request_params)
         return Box.deserialize(BytesIO(res.content))
 
     def fragment_url(self, segment, fragment):
         url = absolute_url(self.stream.baseurl, self.stream.url)
-        return FRAGMENT_URL.format(url=url, segment=segment, fragment=fragment, identifier="", quality="")
+        return FRAGMENT_URL.format(url=url,
+                                   segment=segment,
+                                   fragment=fragment,
+                                   identifier="",
+                                   quality="")
 
     def fragment_count(self):
         table = self.fragmentruntable.payload.fragment_run_entry_table
@@ -215,10 +226,12 @@ class HDSStreamWorker(SegmentedStreamWorker):
                 first_fragment = fragmentrun.first_fragment
 
             end_fragment = fragmentrun.first_fragment
-            fragment_duration = (fragmentrun.first_fragment_timestamp + fragmentrun.fragment_duration)
+            fragment_duration = (fragmentrun.first_fragment_timestamp +
+                                 fragmentrun.fragment_duration)
 
             if self.timestamp > fragment_duration:
-                offset = ((self.timestamp - fragment_duration) / fragmentrun.fragment_duration)
+                offset = ((self.timestamp - fragment_duration) /
+                          fragmentrun.fragment_duration)
                 end_fragment += int(offset)
 
         if first_fragment is None:
@@ -302,8 +315,7 @@ class HDSStreamWorker(SegmentedStreamWorker):
                 fragment = Fragment(self.current_segment, fragment,
                                     fragment_duration, fragment_url)
 
-                log.debug("Adding fragment {0}-{1} to queue",
-                                  fragment.segment, fragment.fragment)
+                log.debug("Adding fragment {0}-{1} to queue", fragment.segment, fragment.fragment)
                 yield fragment
 
                 # End of stream
@@ -372,10 +384,8 @@ class HDSStream(Stream):
         )
 
     def __repr__(self):
-        return (
-            "<HDSStream({0!r}, {1!r}, {2!r}, metadata={3!r}, timeout={4!r})>").format(
-            self.baseurl, self.url, self.bootstrap, self.metadata, self.timeout
-        )
+
+        return "<HDSStream({0!r}, {1!r}, {2!r}, metadata={3!r}, timeout={4!r})>".format(self.baseurl, self.url, self.bootstrap, self.metadata, self.timeout)
 
     def __json__(self):
         if isinstance(self.bootstrap, Box):
@@ -516,11 +526,7 @@ class HDSStream(Stream):
             elif href:
                 url = absolute_url(baseurl, href)
                 try:
-                    child_streams = cls.parse_manifest(session, url,
-                                                       timeout=timeout,
-                                                       is_akamai=is_akamai,
-                                                       raise_for_drm=True,
-                                                       **request_params)
+                    child_streams = cls.parse_manifest(session, url, timeout=timeout, is_akamai=is_akamai, raise_for_drm=True, **request_params)
                 except PluginError:
                     child_drm = True
                     child_streams = {}
@@ -530,7 +536,7 @@ class HDSStream(Stream):
                     # manifest but not the child one.
                     bitrate = media.attrib.get("bitrate")
 
-                    if bitrate and not re.match("^(\d+)k$", name):
+                    if bitrate and not re.match(r"^(\d+)k$", name):
                         name = bitrate + "k"
 
                     streams[name] = stream

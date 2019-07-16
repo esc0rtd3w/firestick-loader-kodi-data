@@ -1,17 +1,21 @@
+from future import standard_library
+standard_library.install_aliases()
+from builtins import str
+from builtins import range
 import sys
-import urllib
-import urllib2
-import cookielib
+import urllib.request, urllib.parse, urllib.error
+import urllib.request, urllib.error, urllib.parse
+import http.cookiejar
 import re
 import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
 
-settings = xbmcaddon.Addon(id='plugin.video.empflix')
-cookiejar = cookielib.LWPCookieJar()
-cookie_handler = urllib2.HTTPCookieProcessor(cookiejar)
-opener = urllib2.build_opener(cookie_handler)
+xbmcaddon.Addon(id='plugin.video.empflix')
+cookiejar = http.cookiejar.LWPCookieJar()
+cookie_handler = urllib.request.HTTPCookieProcessor(cookiejar)
+urllib.request.build_opener(cookie_handler)
 
 
 def CATEGORIES():
@@ -44,11 +48,11 @@ def SORTMETHOD(url):
 
 def VIDEOLIST(url, page):
     link = openURL(url + '/?page=' + str(page))
-    match = re.compile(r"data-vid.+?data-name='([^']+)'.+?href='([^']+).+?data-original='([^']+)'.+?'>([\d:]+)",
+    match = re.compile(r"data-vid='([^']+)'.+?data-name='([^']+)'.+?data-original='([^']+)'.+?'>([\d:]+)",
                        re.DOTALL).findall(link)
-    for name, videourl, thumb, duration in match:
+    for videourl, name, thumb, duration in match:
         addLink(name + ' (' + duration + ')',
-                'http://www.empflix.com' + videourl + '?',
+                'http://player.empflix.com/video/' + videourl + '?',
                 3,
                 thumb.strip())
     if len(match) == 24:
@@ -58,8 +62,11 @@ def VIDEOLIST(url, page):
 
 def PLAYVIDEO(url):
     link = openURL(url)
-    match = re.compile('contentUrl" content="([^"]+)').findall(link)
-    xbmc.Player().play(match[0])
+    match = re.compile('flashvars\.config\s*=\s*escape\("([^&]+)').findall(link)
+    link = openURL('https:' + match[0])
+    match = re.compile('<res>.+p</[^/]+([^]]+)').findall(link)
+    match.reverse()
+    xbmc.Player().play('https:' + match[0])
 
 
 def get_params():
@@ -80,8 +87,8 @@ def get_params():
 
 
 def addLink(name, url, mode, iconimage):
-    u = sys.argv[0] + '?url=' + urllib.quote_plus(url) + '&mode=' + str(mode)\
-        + '&name=' + urllib.quote_plus(name)
+    u = sys.argv[0] + '?url=' + urllib.parse.quote_plus(url) + '&mode=' + str(mode)\
+        + '&name=' + urllib.parse.quote_plus(name)
     ok = True
     liz = xbmcgui.ListItem(name, iconImage='DefaultFolder.png',
                            thumbnailImage=iconimage)
@@ -91,8 +98,8 @@ def addLink(name, url, mode, iconimage):
 
 
 def addDir(name, url, mode, iconimage, page):
-    u = sys.argv[0] + '?url=' + urllib.quote_plus(url) + '&mode=' + str(mode) +\
-        '&name=' + urllib.quote_plus(name) + '&page=' + str(page)
+    u = sys.argv[0] + '?url=' + urllib.parse.quote_plus(url) + '&mode=' + str(mode) +\
+        '&name=' + urllib.parse.quote_plus(name) + '&page=' + str(page)
     ok = True
     liz = xbmcgui.ListItem(name, iconImage='DefaultFolder.png',
                            thumbnailImage=iconimage)
@@ -102,9 +109,11 @@ def addDir(name, url, mode, iconimage, page):
 
 
 def openURL(url):
-    req = urllib2.Request(url)
-    response = urllib2.urlopen(req)
-    link = response.read()
+    xbmc.log("Opening %s" % url)
+    req = urllib.request.Request(url)
+    req.add_header('Referer', 'https://www.empflix.com/')
+    response = urllib.request.urlopen(req)
+    link = response.read().decode('utf-8')
     response.close()
     return link
 
@@ -116,7 +125,7 @@ def main():
     page = 1
 
     try:
-        url = urllib.unquote_plus(params['url'])
+        url = urllib.parse.unquote_plus(params['url'])
     except:
         pass
     try:

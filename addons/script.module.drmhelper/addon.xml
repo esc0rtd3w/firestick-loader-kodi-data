@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="script.module.drmhelper" name="DRM Helper" provider-name="Aussie Add-ons" version="1.2.4">
+<addon id="script.module.drmhelper" name="DRM Helper" provider-name="Aussie Add-ons" version="2.0.0">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
@@ -15,7 +15,43 @@
     <source>https://github.com/aussieaddons/script.module.drmhelper</source>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
-  <news>[B]Version v1.2.4[/B]
+  <news>[B]Version v2.0.0[/B]
+- Small changes to tests
+- Add tests and refactor _get_wvcdm
+- Fix flake8 errors
+- Remove unneeded addon version checks and tests
+- Fix unarchive command
+- Rework cdm path logic (#4)
+- Actually, add the new version of our travis script
+- Replace xbmc-catchuptv-au with aussieaddons and formatting for travis
+- Set py2.7 and Slack notification to travis build
+- Revert "Reduce CDM paths to just what we need"
+- Don't do the WV checking for Android
+- Fold extra function into check
+- Reduce CDM paths to just what we need
+- Clean up platform detection and add logging for CDM paths
+- Show dialog when drm platform not supported
+- Add more tests
+- Fix changes lost from helper.py in 5ab7fd0
+- add xbmcbinaddons to cdm/ssd check
+- update arm cdm urls
+- Slight improvement for dialog texts
+- Stop keyerrors from arch lookup
+- Use arch lookup
+- Fix CDM path and some lint errors
+- Use xbmc cond vis UWP for Kodi 18
+- Major update for v2
+
+[B]Version v1.2.7[/B]
+- add special://xbmcbinaddons to ssd check
+
+[B]Version v1.2.6[/B]
+- Small hack for afl-video
+
+[B]Version v1.2.5[/B]
+- Update widevinecdm links
+
+[B]Version v1.2.4[/B]
 - Update widevinecdm, fix arm command, search lib/
 
 [B]Version v1.2.3[/B]
@@ -55,32 +91,6 @@
 - Fix for IndexError exceptions
 
 [B]Version v1.0.6[/B]
-- Fix android x86
-- Remove Kodi commit tag checking
-- Fix Android import error
-
-[B]Version v1.0.3[/B]
-- Formatting and docstrings
-- Several changes/features
-- Escape paths, fix buildversion errors
-- Fix Android error, begin Leia support
-- missing version attribute
-- Support Android, other tweaks/fixes
-- Windows - fix implementation and detect 32bit or 64bit
-- Fix error in addon.xml
-
-[B]Version v1.0.2[/B]
-- Update broken inputstream.adaptive zip links
-- update icon
-
-[B]Version v1.0.1[/B]
-- Feature to get i.a from direct link and install.
-- Catch error when trying to install modules without i.a
-- Add error message for Kodi &lt; 17.0
-- Add config
-- Improvement in checking for inputstream.adaptive
-
-[B]Version v1.0.0[/B]
 - Initial version
 </news></extension>
   <news />

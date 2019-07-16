@@ -203,5 +203,4 @@ class SegmentedStreamReader(StreamIO):
         if not self.buffer:
             return b""
 
-        return self.buffer.read(size, block=self.writer.is_alive(),
-                                timeout=self.timeout)
+        return self.buffer.read(size, block=self.writer.is_alive(), timeout=self.timeout)

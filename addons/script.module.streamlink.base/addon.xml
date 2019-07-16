@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.streamlink.base" name="Streamlink Library" version="2018.12.05" provider-name="Streamlink Devs, Twilight0">
+<addon id="script.module.streamlink.base" name="Streamlink Library" version="2019.06.23" provider-name="Streamlink Devs, Twilight0">
   <requires>
-    <import addon="xbmc.python" version="2.24.0"/>
-    <import addon="script.module.requests" version="2.12.4"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-    <import addon="script.module.streamlink.crypto" version="1.4.0"/>
+      <import addon="xbmc.python" version="2.24.0"/>
+      <import addon="script.module.requests" version="2.12.4"/>
+      <import addon="script.module.futures" version="2.2.0"/>
+      <import addon="script.module.cryptolib" version="1.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="resources/lib/"/>
   <extension point="xbmc.addon.metadata">
-    <summary>Streamlink Library</summary>
-    <description>Streamlink Library for Kodi</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
-    <language>en</language>
-    <assets>
-        <icon>icon.png</icon>
-    </assets>
-    <news>+ 2018.12.05
-- Corrected icon asset location, ensuring backwards compatibility
-
-+ 2018.12.04
-- Rebase to latest upstream commit b99249e941852341b06b267ffc1ca1d144c6b718
-- New icon</news>
+      <summary>Streamlink Library for Kodi</summary>
+      <description>Streamlink Library for Kodi. It is a collection of plugins to help resolve web page urls into streamable links. Known issue: Does not work on Xbox, specifically throws exception when trying to import something from ctypes module.</description>
+      <platform>all</platform>
+      <license>Simplified BSD</license>
+      <source>https://github.com/Twilight0/script.module.streamlink.base/</source>
+      <language>en</language>
+      <assets>
+          <icon>icon.png</icon>
+      </assets>
+      <news>+2019.06.23
+- Changed crypto module addon id
+- Updated description</news>
   </extension>
 </addon>

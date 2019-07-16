@@ -22,6 +22,15 @@ import threading
 
 control.execute('RunPlugin(plugin://%s)' % control.get_plugin_url({'action': 'service'}))
 
+#addon_settings = xbmc.translatePath('special://userdata/addon_data/plugin.video.exodus/settings.xml')
+#run2 = control.setting('first.info2')
+#if run2 == '': run2 = 'true' #clean install scenerio
+#if run2 == 'true':
+#    import os
+#    if os.path.exists(xbmc.translatePath(addon_settings)):
+#        control.deleteFile(addon_settings)
+#    control.setSetting(id='first.info2', value='false')
+
 def syncTraktLibrary():
     control.execute(
         'RunPlugin(plugin://%s)' % 'plugin.video.exodus/?action=tvshowsToLibrarySilent&url=traktcollection')
@@ -31,7 +40,6 @@ def syncTraktLibrary():
 try:
     ModuleVersion = control.addon('script.module.exodus').getAddonInfo('version')
     AddonVersion = control.addon('plugin.video.exodus').getAddonInfo('version')
-    #RepoVersion = control.addon('repository.exodus').getAddonInfo('version')
 
     log_utils.log('######################### EXODUS ############################', log_utils.LOGNOTICE)
     log_utils.log('####### CURRENT EXODUS VERSIONS REPORT ######################', log_utils.LOGNOTICE)

@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="213" />
-    <setting id="noteMessage" value="We wanted to remind everyone why anyone who streams&#x0A;TV online should be [B]using a VPN at all times[/B]...&#x0A;&#x0A;* Unlock [B]More Streaming Links[/B]&#x0A;* [B]Bypass Site Blocking[/B]/Censorship&#x0A;* [B]Hide Your IP[/B] Address &amp; [B]Location[/B]&#x0A;* Keep Your Web [B]History Private[/B]&#x0A;* [B]Torrent &amp; P2P[/B] Safely&#x0A;&#x0A;For a limited time, you can signup to [B]protect 6&#x0A;devices[/B] with the best VPN for [B]only $2.99/month[/B]!&#x0A;&#x0A;[B][COLOR yellow]Signup Today:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteImage" value="239" />
+    <setting id="noteMessage" value="Using a [B]VPN can greatly improve your Kodi experience[/B],&#x0A;in fact we recommend the use of one [B]at all times[B]!&#x0A;&#x0A;For a bit longer, you can signup at [B]only $2.99/month[/B]:&#x0A;&#x0A;* [B]Bypass Site Blocking[/B]&#x0A;* Access More Streams&#x0A;* Stay [B]Anonymous[/B] Online&#x0A;* Torrent/P2P Securely&#x0A;&#x0A;[B][COLOR yellow]Signup Today:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]&#x0A;&#x0A;We get a small referral fee, helps pay our servers." />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

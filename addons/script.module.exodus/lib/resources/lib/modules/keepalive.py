@@ -105,7 +105,7 @@ EXTRA ATTRIBUTES AND METHODS
 """
 
 # $Id: keepalive.py,v 1.14 2006/04/04 21:00:32 mstenner Exp $
-
+import sys
 import urllib2
 import httplib
 import socket
@@ -113,7 +113,7 @@ import thread
 
 DEBUG = None
 
-import sys
+
 if sys.version_info < (2, 4): HANDLE_ERRORS = 1
 else: HANDLE_ERRORS = 0
 
@@ -181,7 +181,7 @@ class KeepAliveHandler:
     def __init__(self):
         self._cm = ConnectionManager()
 
-    #### Connection Management
+    ## Connection Management
     def open_connections(self):
         """return a list of connected hosts and the number of connections
         to each.  [('foo.com:80', 2), ('bar.org', 1)]"""
@@ -211,7 +211,7 @@ class KeepAliveHandler:
         if close: connection.close()
         self._cm.remove(connection)
 
-    #### Transaction Execution
+    ## Transaction Execution
     def http_open(self, req):
         return self.do_open(HTTPConnection, req)
 

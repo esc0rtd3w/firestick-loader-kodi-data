@@ -1,3 +1,36 @@
+[B]Version 0.4.4[/B]
+- Removed unused import
+
+[B]Version 0.4.3[/B]
+- Replace bare except with if/else for python 2/3 support
+
+[B]Version 0.4.2[/B]
+- Updated import for python 2/3 support
+
+[B]Version 0.4.1[/B]
+- Version bump to test ci/cd
+
+[B]Version 0.4.0[/B]
+- Version bump to test ci/cd
+
+[B]Version 0.3.9[/B]
+- Version bump to test ci/cd
+
+[B]Version 0.3.8[/B]
+- Minor Changes
+
+[B]Version 0.3.7[/B]
+- Added error handling
+
+[B]Version 0.3.6[/B]
+- Updated to adjust for m7lib changes
+
+[B]Version 0.3.5[/B]
+- Started adding support for Python 3
+
+[B]Version 0.3.4[/B]
+- Total rewrite to dynamically pull in the latest live streams from explore.org
+
 [B]Version 0.3.3[/B]
 - Refactored how streams are pulled from YouTube
 - Added check for the MPEG-DASH setting in the YouTube addon

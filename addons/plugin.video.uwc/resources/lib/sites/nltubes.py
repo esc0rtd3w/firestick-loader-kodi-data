@@ -52,8 +52,10 @@ def NLVIDEOLIST(url, page=1):
         else:
             hd = " "
         videourl = url if url.startswith('http') else siteurl + url
+	utils.kodilog(duration)
         duration2 = "[COLOR deeppink]" +  duration + "[/COLOR]"
-        utils.addDownLink(name + hd + duration2, videourl, 102, img, '')
+	if duration != '1"':
+	    utils.addDownLink(name + hd + duration2, videourl, 102, img, '')
     try:
         nextp=re.compile('<a href="([^"]+)" title="volg', re.DOTALL | re.IGNORECASE).findall(link)
         nextp = siteurl + nextp[0]
@@ -93,7 +95,10 @@ def NLCAT(url, page=1):
     siteurl = sitelist[page]
     link = utils.getHtml3(url)
     tags = re.compile('<div class="category".*?href="([^"]+)".*?<h2>([^<]+)<.*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
+    utils.addDir('[COLOR orange]HD[/COLOR] sexfilms',siteurl + '/videos/hd',101,'',page)
     for caturl, catname, catimg in tags:
         catimg = siteurl + catimg
+	if siteurl not in caturl:
+		caturl = siteurl+caturl
         utils.addDir(catname,caturl,101,catimg,page)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))

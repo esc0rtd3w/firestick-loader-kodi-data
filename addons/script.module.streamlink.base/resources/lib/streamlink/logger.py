@@ -8,11 +8,10 @@ from streamlink.compat import is_py2
 from streamlink.utils.encoding import maybe_encode
 
 TRACE = 5
-
 _levelToName = dict(
     [
-        (CRITICAL, "critical"), (ERROR, "error"), (WARN, "warning"), (INFO, "info"), (DEBUG, "debug"),
-        (TRACE, "trace"), (NOTSET, "none")
+        (CRITICAL, "critical"), (ERROR, "error"), (WARN, "warning"), (INFO, "info"), (DEBUG, "debug"), (TRACE, "trace"),
+        (NOTSET, "none")
     ]
 )
 
@@ -100,7 +99,10 @@ root.setLevel(logging.WARNING)
 
 class StringFormatter(logging.Formatter):
     def __init__(self, fmt, datefmt=None, style='%', remove_base=None):
-        super(StringFormatter, self).__init__(fmt, datefmt=datefmt)
+        if is_py2:
+            super(StringFormatter, self).__init__(fmt, datefmt=datefmt)
+        else:
+            super(StringFormatter, self).__init__(fmt, datefmt=datefmt, style=style)
         if style not in ("{", "%"):
             raise ValueError("Only {} and % formatting styles are supported")
         self.style = style

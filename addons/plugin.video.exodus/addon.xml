@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.exodus" version="8.0.1" name="Exodus" provider-name="Exodus">
+<addon id="plugin.video.exodus" version="8.0.4" name="Exodus" provider-name="Exodus">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.exodus" />
@@ -7,12 +7,15 @@
 		<import addon="script.exodus.metadata" />
 		<import addon="script.module.urlresolver" />
 		<import addon="script.module.requests" />
+<!--		<import addon="script.module.lambdascrapers" />-->
+		<import addon="script.module.exoscrapers" />
 		<import addon="script.module.metahandler" version="1.0.0" />
 		<import addon="repository.kodibae" />
 		<import addon="repository.xbmchub" />
+		<import addon="repository.thebackup" />
 		<import addon="plugin.program.indigo" />
 	</requires>
-	<extension point="xbmc.python.pluginsource" library="exodus.py">
+	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
 	<extension point="xbmc.service" library="service.py" start="startup" />
@@ -31,13 +34,8 @@
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
-    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+    			<screenshot></screenshot>
 		</assets>
-		<news>
-v8.0.1 (JAN-2019)
-Changes to default settings.
-		</news>
+		<news></news>
 	</extension>
 </addon>

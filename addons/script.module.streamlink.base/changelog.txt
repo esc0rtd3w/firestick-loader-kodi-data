@@ -1,3 +1,26 @@
++2019.06.23
+- Changed crypto module addon id
+- Updated description
+
++2019.05.08
+- Added vimeo plugin
+
++2019.05.03
+- Bumped to upstream commit c8ed1daff14ac03195870238b9b900c1109dd5c1
+- Include PR #2441 from upstream
+- Add exception for ctypes on namedpipe for XBOX (MemoryError). So its a known issue that streamlink does not work on this platform
+
++ 2019.03.17
+- Fixed icon
+- Updated changelog.txt
+- Moved and updated six module into utils directory
+
++ 2019.03.16
+- Updated to latest upstream commit e96c725cb553027dd1ca7b1c278211b57947b05c
+
++ 2018.12.05
+- Corrected icon asset location, ensuring backwards compatibility
+
 + 2018.12.04
 - Rebase to latest upstream commit b99249e941852341b06b267ffc1ca1d144c6b718
 - New icon

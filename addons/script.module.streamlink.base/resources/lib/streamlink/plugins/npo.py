@@ -10,6 +10,7 @@ Supports:
     - https://www.npo.nl/live/npo-1
     - https://zappelin.nl/tv-kijken
     - https://www.npostart.nl/live/npo-1
+
 """
 
 import re
@@ -40,9 +41,8 @@ class NPO(Plugin):
             }]
         ]
     }, validate.get("items"), validate.get(0))
-    stream_info_schema = validate.Schema(validate.any(
-        validate.url(),
-        validate.all({"errorcode": 0, "url": validate.url()}, validate.get("url")))
+    stream_info_schema = validate.Schema(
+        validate.any(validate.url(), validate.all({"errorcode": 0, "url": validate.url()}, validate.get("url")))
     )
     arguments = PluginArguments(
         PluginArgument(
@@ -103,7 +103,10 @@ class NPO(Plugin):
 
         if asset_id:
             self.logger.debug("Found asset id: {0}", asset_id)
-            streams = self.api_call(asset_id, params=dict(adaptive="yes", token=self.token), schema=self.streams_schema)
+            streams = self.api_call(asset_id,
+                                    params=dict(adaptive="yes",
+                                                token=self.token),
+                                    schema=self.streams_schema)
 
             for stream in streams:
                 if stream["format"] in ("adaptive", "hls", "mp4"):
@@ -114,7 +117,8 @@ class NPO(Plugin):
                         info_url = stream["url"].replace("type=jsonp", "type=json")
 
                         # find the actual stream URL
-                        stream_url = self.session.http.json(self.session.http.get(info_url), schema=self.stream_info_schema)
+                        stream_url = self.session.http.json(self.session.http.get(info_url),
+                                               schema=self.stream_info_schema)
 
                     if stream["format"] in ("adaptive", "hls"):
                         for s in HLSStream.parse_variant_playlist(self.session, stream_url).items():

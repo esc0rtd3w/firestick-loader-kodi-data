@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 '''
-    Exodus Add-on
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -16,7 +14,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
-
 
 from resources.lib.modules import trakt
 from resources.lib.modules import cleantitle
@@ -41,11 +38,15 @@ class seasons:
 
         self.lang = control.apiLanguage()['tvdb']
         self.showunaired = control.setting('showunaired') or 'true'
+        self.unairedcolor = control.setting('unaired.identify')
+        if self.unairedcolor == '':
+            self.unairedcolor = 'red'
         self.datetime = (datetime.datetime.utcnow() - datetime.timedelta(hours = 5))
         self.today_date = (self.datetime).strftime('%Y-%m-%d')
-        self.tvdb_key = 'MUQ2MkYyRjkwMDMwQzQ0NA=='
-
-        self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
+        self.tvdb_key = control.setting('tvdb.user')
+        if self.tvdb_key == '' or self.tvdb_key == None:
+            self.tvdb_key = '1D62F2F90030C444'
+        self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key, '%s', '%s')
         self.tvdb_by_imdb = 'http://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
         self.tvdb_by_query = 'http://thetvdb.com/api/GetSeries.php?seriesname=%s'
         self.tvdb_image = 'http://thetvdb.com/banners/'
@@ -161,7 +162,6 @@ class seasons:
             item = result[0] ; item2 = result2[0]
 
             episodes = [i for i in result if '<EpisodeNumber>' in i]
-
             if control.setting('tv.specials') == 'true':
                 episodes = [i for i in episodes]
             else:
@@ -429,7 +429,6 @@ class seasons:
 
         addToLibrary = control.lang(32551).encode('utf-8')
 
-
         for i in items:
             try:
                 label = '%s %s' % (labelMenu, i['season'])
@@ -532,7 +531,9 @@ class episodes:
 
         self.trakt_link = 'http://api.trakt.tv'
         self.tvmaze_link = 'http://api.tvmaze.com'
-        self.tvdb_key = 'MUQ2MkYyRjkwMDMwQzQ0NA=='
+        self.tvdb_key = control.setting('tvdb.user')
+        if self.tvdb_key == '' or self.tvdb_key == None:
+            self.tvdb_key = '1D62F2F90030C444'
         self.datetime = (datetime.datetime.utcnow() - datetime.timedelta(hours = 5))
         self.systime = (self.datetime).strftime('%Y%m%d%H%M%S%f')
         self.today_date = (self.datetime).strftime('%Y-%m-%d')
@@ -540,7 +541,7 @@ class episodes:
         self.lang = control.apiLanguage()['tvdb']
         self.showunaired = control.setting('showunaired') or 'true'
 
-        self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key.decode('base64'), '%s', '%s')
+        self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/all/%s.zip' % (self.tvdb_key, '%s', '%s')
         self.tvdb_image = 'http://thetvdb.com/banners/'
         self.tvdb_poster = 'http://thetvdb.com/banners/_cache/'
 
@@ -581,7 +582,6 @@ class episodes:
 
     def calendar(self, url):
         try:
-
             try: url = getattr(self, url + '_link')
             except: pass
 
@@ -1489,6 +1489,8 @@ class episodes:
 
                 cm.append((addToLibrary, 'RunPlugin(%s?action=tvshowToLibrary&tvshowtitle=%s&year=%s&imdb=%s&tvdb=%s)' % (sysaddon, systvshowtitle, year, imdb, tvdb)))
 
+                cm.append(('Exodus Settings', 'RunPlugin(%s?action=openSettings&query=(0,0))' % sysaddon))
+                
                 item = control.item(label=label)
 
                 art = {}

@@ -27,29 +27,38 @@ progress = utils.progress
 
 @utils.url_dispatcher.register('230')
 def Main():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://k18.co/categories/',233,'','')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://k18.co/categories',233,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://k18.co/?s=',234,'','')
-    List('https://k18.co/page/1/')
+    List('https://k18.co/?filter=latest')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('231', ['url'])
 def List(url):
-	try:
-		listhtml = utils.getHtml(url, '')
-	except:
-		return None
-	cookieString = getCookiesString()
-	match = re.compile('<img width=.+?src="([^"]+)".+?<a href="([^"]+)" rel="bookmark" data-wpel-link="internal">(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
-	for img,videopage, name  in match:
-		name = utils.cleantext(name)
-		img = img + "|Cookie=" + urllib.quote(cookieString) + "&User-Agent=" + urllib.quote(utils.USER_AGENT)
-		utils.addDownLink(name, videopage, 232, img, '')
-	try:
-		nextp=re.compile('rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-		utils.addDir('Next Page', nextp, 231,'')
-	except: pass
-	xbmcplugin.endOfDirectory(utils.addon_handle)
+    try:
+        listhtml = utils.getHtml(url, '')
+    except:
+        return None
+#    cookieString = getCookiesString()
+    match = re.compile('<article id=(.+)<div class="video-archive-ad">', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+    match1 = re.compile('<a href="([^"]+)" title="([^"]+)">.+?<img data-src="([^"]+).+?class="duration">([^<]+)</span>', re.DOTALL | re.IGNORECASE).findall(match)
+    if match1 == []:
+        match1 = re.compile('<a href="([^"]+)" title="([^"]+)">.+?<img data-src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(match)	
+        for videopage, name, img in match1:
+            name = utils.cleantext(name)
+            utils.addDownLink(name, videopage, 232, img, '')
+    else:
+        for videopage, name, img, duration in match1:
+            name = utils.cleantext(name) + ' [COLOR deeppink]' + duration + '[/COLOR]'
+            utils.addDownLink(name, videopage, 232, img, '')
+    try:
+        match = re.compile('<div class="pagination">(.+?)</div>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        match = match.replace("'",'"')
+        match1 = re.compile('href="([^"]+)".*?>([^<]+)</a>', re.DOTALL | re.IGNORECASE).findall(match)
+        for pageurl, pagenumber in match1:        
+            utils.addDir('[COLOR deeppink]Page (' + str(pagenumber) + ')[/COLOR]', pageurl, 231,'')
+    except: pass
+    xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 def getCookiesString():
@@ -77,17 +86,23 @@ def Search(url, keyword=None):
         print "Searching URL: " + searchUrl
         List(searchUrl)
 
-
 @utils.url_dispatcher.register('233', ['url'])
 def Cat(url):
-	cathtml = utils.getHtml(url, '')
-	match = re.compile('0" value="([^"]+)">([^<]+)</option>', re.DOTALL | re.IGNORECASE).findall(cathtml) #0" value="([^"]+)">([^<]+)</option>
-	for catpage, name in match:
-		catpage = 'http://k18.co/?cat=' + catpage
-		utils.addDir(name, catpage, 231, '')
-	xbmcplugin.endOfDirectory(utils.addon_handle)   
+    cathtml = utils.getHtml(url, '')
+    match = re.compile('<article.+?href="([^"]+)" title="([^"]+)".+? src="([^"]+)" ', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    for catpage, name, img in match:
+        utils.addDir(name, catpage, 231, img)
+    try:
+        match = re.compile('<div class="pagination">(.+?)</div>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
+        match = match.replace("'",'"')
+        match1 = re.compile('href="([^"]+)".*?>([^<]+)</a>', re.DOTALL | re.IGNORECASE).findall(match)
+        for pageurl, pagenumber in match1:        
+            utils.addDir('[COLOR deeppink]Page (' + str(pagenumber) + ')[/COLOR]', pageurl, 233,'')
+    except: pass
+    xbmcplugin.endOfDirectory(utils.addon_handle)   
 
 
 @utils.url_dispatcher.register('232', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    utils.PLAYVIDEO(url, name, download, 'td><a href="([^"]+)" data-wpel')
+# needs fixing ...
+    utils.PLAYVIDEO(url, name, download, 'td><a href="([^"]+)"><img class')

@@ -2,11 +2,7 @@ import functools
 import json
 import re
 import zlib
-
-try:
-    import xml.etree.cElementTree as ET
-except ImportError:  # pragma: no cover
-    import xml.etree.ElementTree as ET
+import xml.etree.ElementTree as ET
 
 from streamlink.compat import urljoin, urlparse, parse_qsl, is_py2, is_py3
 from streamlink.exceptions import PluginError

@@ -6,6 +6,7 @@ is_py3 = (sys.version_info[0] == 3)
 is_win32 = os.name == "nt"
 
 if is_py2:
+
     _str = str
     str = unicode
     range = xrange
@@ -21,6 +22,7 @@ if is_py2:
             return _str(b)
 
 elif is_py3:
+
     bytes = bytes
     str = str
     range = range
@@ -29,4 +31,4 @@ elif is_py3:
 
 from streamlink.compat import OrderedDict
 
-__all__ = ["is_py2", "is_py3", "is_win32", "str", "bytes", "range", "OrderedDict"]
+__all__ = ["is_py2", "is_py3", "is_win32", "str", "bytes", "range", "OrderedDict", "string_types"]

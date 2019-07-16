@@ -15,6 +15,7 @@ GITHUB_API_URL = 'https://api.github.com/repos/aussieaddons/issue-reports'
 GITHUB_API_TOKEN = 'ab181e16a94e918bf81' + '7d86778599926126e0e30'
 ISSUE_API_URL = GITHUB_API_URL + '/issues'
 GIST_API_URL = 'https://api.github.com/gists'
+ORG_API_URL= 'https://api.github.com/orgs/aussieaddons/repos'
 
 
 # Filter out username and passwords from log files
@@ -145,6 +146,19 @@ def save_last_error_report(error):
         utils.log("Error writing error report file")
 
 
+def get_org_repos():
+    data = json.loads(urllib2.urlopen(ORG_API_URL).read())
+    listing = []
+    for repo in data:
+        listing.append(repo.get('name'))
+    return listing
+
+
+def is_supported_addon():
+    if utils.get_addon_id() in get_org_repos():
+        return True
+
+
 def is_reportable(exc_type, exc_value, exc_traceback):
     """Can we send an error report
 
@@ -157,7 +171,9 @@ def is_reportable(exc_type, exc_value, exc_traceback):
     """
 
     # AttributeError: global name 'foo' is not defined
-    error = '%s: %s' % (exc_type.__name__, ', '.join(exc_value.args))
+    error = '%s: %s' % (
+        exc_type.__name__, ', '.join(
+            utils.ensure_ascii(x) for x in exc_value.args))
 
     # Don't show any dialogs when user cancels
     if exc_type.__name__ == 'SystemExit':
@@ -212,7 +228,8 @@ def blacklisted_hostname(connection_info):
                      'softlayer',
                      'micfo',
                      'total server solutions',  # PIA
-                     'host universal pty ltd']  # NordVPN
+                     'host universal pty ltd',  # NordVPN
+                     'AS45671']  # serversaustralia.com.au
 
     hostname_blacklist = ['ipvanish',
                           'zoogvpn',
@@ -259,6 +276,7 @@ def generate_report(title, log_url=None, trace=None, connection_info={}):
         "**Country:** %s" % connection_info.get('country', 'N/A'),
         "**ISP:** %s" % connection_info.get('org', 'N/A'),
         "**Operating System:** %s %s" % (sys.platform, os_string),
+        "**Platform:** %s" % utils.get_platform(),
         "**Python Path:**\n```\n%s\n```" % '\n'.join(sys.path),
     ]
 
@@ -269,8 +287,10 @@ def generate_report(title, log_url=None, trace=None, connection_info={}):
         content.append("\n[Full log](%s)" % log_url)
 
     short_id = utils.get_addon_id().split('.')[-1]
+    title = '[%s] %s' % (short_id, title)
+    # Github throws HTTP 422 if title is too long
     report = {
-        'title': '[%s] %s' % (short_id, title),
+        'title': title[:255],
         'body': '\n'.join(content)
     }
 
@@ -282,7 +302,8 @@ def upload_report(report):
         response = urllib2.urlopen(make_request(ISSUE_API_URL),
                                    json.dumps(report))
     except urllib2.HTTPError as e:
-        utils.log("Failed to report issue: HTTPError %s" % e.code)
+        utils.log("Failed to report issue: HTTPError %s\n %s" % (
+            e.code, e.read()))
         return False
     except urllib2.URLError as e:
         utils.log("Failed to report issue: URLError %s" % e.reason)

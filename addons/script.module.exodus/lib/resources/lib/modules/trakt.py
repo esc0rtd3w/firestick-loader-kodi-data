@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Exodus Add-on
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 """
 
 
+
 import json
 import re
 import time
@@ -31,9 +32,10 @@ from resources.lib.modules import control
 from resources.lib.modules import log_utils
 from resources.lib.modules import utils
 
-BASE_URL = 'http://api.trakt.tv'
-V2_API_KEY = '46150347b5baa79600cb28f9888e8fae7a92defb02860f0fdf4ff3480450ee3b'
-CLIENT_SECRET = '54bc93a93f119d8ced87f9d708f5731e551d0c9f071f9b105a00c42703de92aa'
+BASE_URL = 'https://api.trakt.tv'
+#BASE_URL = 'https://api-v2launch.trakt.tv'
+V2_API_KEY = 'c1d7d1519b5d70158fc568c42b8c7a39b4f73a73e17e25c0e85152a542cd1664'
+CLIENT_SECRET = '3f1c01e94538cf23aaed1d2d86ec5ac0909d1ce4cd0f436a6a3d9eb5c1ed24ce'
 REDIRECT_URI = 'urn:ietf:wg:oauth:2.0:oob'
 
 def __getTrakt(url, post=None):

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.streamlink.crypto" name="streamlink.crypto" version="1.5.0" provider-name="Streamlink.crypto">
+<addon id="script.module.streamlink.crypto" name="Streamlink Crypto" version="1.5.2" provider-name="Twilight0">
   <requires>
     <import addon="xbmc.python" version="2.14.0"/>
   </requires>

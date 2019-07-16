@@ -7,10 +7,8 @@ from ...utils import parse_qsd as parse_query, parse_json, parse_xml
 __all__ = ["parse_json", "parse_xml", "parse_query", "itertags"]
 
 
-tag_re = re.compile(
-    '''(?=<(?P<tag>[a-zA-Z]+)(?P<attr>.*?)(?P<end>/)?>(?:(?P<inner>.*?)</\s*(?P=tag)\s*>)?)''', re.MULTILINE | re.DOTALL
-)
-attr_re = re.compile('''\s*(?P<key>[\w-]+)\s*(?:=\s*(?P<quote>["']?)(?P<value>.*?)(?P=quote)\s*)?''')
+tag_re = re.compile(r'''(?=<(?P<tag>[a-zA-Z]+)(?P<attr>.*?)(?P<end>/)?>(?:(?P<inner>.*?)</\s*(?P=tag)\s*>)?)''', re.MULTILINE | re.DOTALL)
+attr_re = re.compile(r'''\s*(?P<key>[\w-]+)\s*(?:=\s*(?P<quote>["']?)(?P<value>.*?)(?P=quote)\s*)?''')
 Tag = namedtuple("Tag", "tag attributes text")
 
 

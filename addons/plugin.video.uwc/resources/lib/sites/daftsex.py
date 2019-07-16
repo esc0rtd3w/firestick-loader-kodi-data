@@ -27,9 +27,33 @@ from resources.lib import utils
 def Main():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://daftsex.com/categories',614,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://daftsex.com/video/',613,'','')
+    utils.addDir('[COLOR red]Random TV[/COLOR]','https://daftsex.com/',615,'','')
     List('https://daftsex.com/hot')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
+def FindServer(video, vp):
+    crazycloud_list = ['13-2','14-2','15-2','16-2','17-2','20-2','13-1','14-1','15-1','16-1','17-1','20-1','13-3','16-3','17-3','20-3','13-4','16-4','13-5','13-6']
+    daxab_list = ['11-1','11-2','11-3','11-4','12-1','12-4','12-5','19-1','19-2','21-1','21-2','25-1','25-2','27-1','27-2','29-1','36-1','36-2','38-1','38-2','38-3','43-1','45-1','46-1','47-1','48-1','49-1','49-2','49-3','49-4','49-5','49-6','49-7','50-1','51-1','52-1','53-1','54-1','55-1','56-1','57-1','58-1','59-1','60-1']
+    i = 1
+    for srv in crazycloud_list:
+	server = 'https://psv' + srv + '.crazycloud.ru/videos/'
+        vp.progress.update(25 + i, "", "Searching on crazycloud.ru ... " + srv, "")
+    	try:
+            code = urllib2.urlopen(server + video).getcode()
+            if code == 200:
+               	return (server + video)
+        except:
+	    i = i+1
+    daxab_list.reverse()
+    for srv in daxab_list:
+        server = 'https://psv' + srv + '.daxab.com/videos/'
+        vp.progress.update(25 + i, "", "Searching on daxab.com ... " + srv, "")
+    	try:
+            code = urllib2.urlopen(server + video).getcode()
+            if code == 200:
+               	return (server + video)
+        except:
+	    i = i+1
 
 @utils.url_dispatcher.register('611', ['url'], ['page'])
 def List(url, page=0):
@@ -41,7 +65,7 @@ def List(url, page=0):
     match = re.compile('<div class="video-item">.*?a href="([^"]+)".*?<img src="([^"]+)" alt="([^"]+)".*?<span class="video-time">([^<]+)', re.DOTALL | re.IGNORECASE).findall(response)
     for video, img, name, length in match:
         video = 'https://daftsex.com' + video
-        name = utils.cleantext(name) + ' [COLOR hotpink]' + length + '[/COLOR]'
+        name = '[COLOR hotpink]' + length + '[/COLOR] ' + utils.cleantext(name)
         utils.addDownLink(name, video, 612, img, '')
     npage = page + 1
     utils.addDir('Next Page (' + str(npage) + ')', url, 611, '', npage)
@@ -53,9 +77,18 @@ def Playvid(url, name, download=None):
     vp = utils.VideoPlayer(name)
     vp.progress.update(25, "", "Loading video page", "")
     vidsite = utils.getHtml(url, 'https://daftsex.com/')
-    video = 'https://vk.com/video' + re.compile("Fav.Toggle\(this, '([^']+)'", re.DOTALL | re.IGNORECASE).findall(vidsite)[0]
-    vp.play_from_link_to_resolve(video)
 
+    videourl = re.compile('<iframe.+?src="(https://da{0,1}xa{0,1}b\.[ct]om{0,1}/[^"]+)"', re.DOTALL | re.IGNORECASE).findall(vidsite)[0]
+    videopage = utils.getHtml(videourl, 'https://daftsex.com/')
+    try:	
+        match = re.compile('id: "([^"]+)_([^"]+)".+:"(\d+)\.([^"]+)"}', re.DOTALL | re.IGNORECASE).findall(videopage)[0]
+        (id1, id2, res, extra) =  match
+        video =  id1 + '/' + id2 + '/' + res + '.mp4?extra=' + extra
+	vp.play_from_direct_link(FindServer(video, vp))
+    except:
+        video = 'https://vk.com/video' + re.compile("Fav.Toggle\(this, '([^']+)'", re.DOTALL | re.IGNORECASE).findall(vidsite)[0]
+        utils.kodilog(video)
+        vp.play_from_link_to_resolve(video)
 
 @utils.url_dispatcher.register('613', ['url'], ['keyword'])
 def Search(url, keyword=None):
@@ -78,3 +111,11 @@ def Categories(url):
         img = 'https://daftsex.com' + img
         utils.addDir(name, caturl, 611, img, 1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
+
+@utils.url_dispatcher.register('615', ['url'])
+def Random(url):
+    response = utils.getHtml(url, 'https://daftsex.com/')
+    match = re.compile('title="RandomTV" href="([^"]+)" class="randomQuery"', re.DOTALL | re.IGNORECASE).findall(response)
+    title = match[0].replace('/video/','')
+    utils.addDir('[COLOR red]' + title + '[/COLOR]', url, 615,'','')
+    List('https://daftsex.com' + match[0])

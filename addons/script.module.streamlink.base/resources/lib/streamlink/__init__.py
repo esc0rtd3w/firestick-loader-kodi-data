@@ -18,7 +18,7 @@ __version__ = addon().getAddonInfo('version')
 __title__ = "streamlink"
 __license__ = "Simplified BSD"
 __author__ = "Streamlink"
-__copyright__ = "Copyright 2018 Streamlink"
+__copyright__ = "Copyright 2019 Streamlink"
 __credits__ = [
     "Agustín Carrasco (@asermax)",
     "Andrew Bashore (@bashtech)",

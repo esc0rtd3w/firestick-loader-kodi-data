@@ -9,5 +9,5 @@ Text
 Copies Custom Kodi Data
 
 
-esc0rtd3w 2018
+esc0rtd3w 2019
 }

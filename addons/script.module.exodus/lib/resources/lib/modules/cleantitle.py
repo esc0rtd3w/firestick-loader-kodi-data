@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Exodus Add-on
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -71,6 +71,10 @@ def query(title):
     return title
 
 
+def get_query(title):
+    if title is None: return
+    title = title.replace(' ', '.').replace(':', '').replace('.-.', '.').replace('\'', '')
+    return title					 
 def normalize(title):
 
     try:

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-    Exodus Add-on
+    Covenant Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -28,6 +28,7 @@ from resources.lib.modules import directstream
 from resources.lib.modules import trakt
 from resources.lib.modules import pyaes
 
+
 def is_anime(content, type, type_id):
     try:
         r = trakt.getGenre(content, type, type_id)
@@ -35,27 +36,6 @@ def is_anime(content, type, type_id):
     except:
         return False
 
-def get_info_simple(release_title):
-    info = []
-    release_title = release_title.lower()
-
-    if '3d' in release_title or '.3D.' in release_title: info.append('3D')
-    if any(i in ['hevc', 'h265', 'x265'] for i in release_title): info.append('HEVC')
-    if 'x264' in release_title: info.append('x264')
-
-    return info
-
-def get_quality_simple(release_title):
-    release_title = release_title.lower()
-    quality = 'SD'
-    if '2160' in release_title or '4k' in release_title: quality='4k'
-    elif '1080' in release_title: quality = '1080p'
-    elif '720' in release_title: quality = '720p'
-    elif 'brrip' in release_title: quality = '720p'
-    elif any(i in ['camrip', 'tsrip', 'hdcam', 'hdts', 'dvdcam', 'dvdts', 'cam', 'telesync', 'ts'] for i in release_title):
-        quality = 'CAM'
-
-    return quality
 
 def get_release_quality(release_name, release_link=None):
 
@@ -72,7 +52,7 @@ def get_release_quality(release_name, release_link=None):
         fmt = re.sub('(.+)(\.|\(|\[|\s)(\d{4}|S\d*E\d*|S\d*)(\.|\)|\]|\s)', '', release_name)
         fmt = re.split('\.|\(|\)|\[|\]|\s|-', fmt)
         fmt = [i.lower() for i in fmt]
-        if '2160' in fmt: quality = '4k'
+        if '2160p' in fmt: quality = '4K'
         elif '1080p' in fmt: quality = '1080p'
         elif '720p' in fmt: quality = '720p'
         elif 'brrip' in fmt: quality = '720p'
@@ -84,7 +64,8 @@ def get_release_quality(release_name, release_link=None):
                 release_link = release_link.lower()
                 try: release_link = release_link.encode('utf-8')
                 except: pass
-                if '1080' in release_link: quality = '1080p'
+                if '2160' in release_link: quality = '4K'
+                elif '1080' in release_link: quality = '1080p'
                 elif '720' in release_link: quality = '720p'
                 elif '.hd' in release_link: quality = 'SD'
                 else: 
@@ -99,7 +80,8 @@ def get_release_quality(release_name, release_link=None):
         return quality, info
     except:
         return 'SD', []
-        
+
+
 def getFileType(url):
 
     try: url = url.lower()
@@ -133,20 +115,23 @@ def getFileType(url):
     type = type.rstrip('/')
     return type
 
+
 def check_sd_url(release_link):
 
     try:
         release_link = release_link.lower()
-        if '2160' in release_link: quality = '4k'
+        if '2160' in release_link: quality = '4K'
         elif '1080' in release_link: quality = '1080p'
         elif '720' in release_link: quality = '720p'
         elif '.hd.' in release_link: quality = '720p'
+        elif 'hdtv' in release_link: quality = '720p'
         elif any(i in ['dvdscr', 'r5', 'r6'] for i in release_link): quality = 'SCR'
         elif any(i in ['camrip', 'tsrip', 'hdcam', 'hdts', 'dvdcam', 'dvdts', 'cam', 'telesync', 'ts'] for i in release_link): quality = 'CAM'
         else: quality = 'SD'
         return quality
     except:
         return 'SD'
+
 
 def label_to_quality(label):
     try:
@@ -203,6 +188,7 @@ def __top_domain(url):
     domain = domain.lower()
     return domain
 
+
 def aliases_to_array(aliases, filter=None):
     try:
         if not filter:
@@ -218,6 +204,7 @@ def aliases_to_array(aliases, filter=None):
 def append_headers(headers):
     return '|%s' % '&'.join(['%s=%s' % (key, urllib.quote_plus(headers[key])) for key in headers])
 
+
 def get_size(url):
     try:
         size = client.request(url, output='file_size')
@@ -225,6 +212,7 @@ def get_size(url):
         size = convert_size(size)
         return size
     except: return False
+
 
 def convert_size(size_bytes):
    import math
@@ -236,7 +224,8 @@ def convert_size(size_bytes):
    s = round(size_bytes / p, 2)
    if size_name[i] == 'B' or size_name[i] == 'KB': return None
    return "%s %s" % (s, size_name[i])
-   
+
+
 def check_directstreams(url, hoster='', quality='SD'):
     urls = []
     host = hoster
@@ -306,14 +295,3 @@ def evpKDF(passwd, salt, key_size=8, iv_size=4, iterations=1, hash_algorithm="md
         "key": derived_bytes[0: key_size * 4],
         "iv": derived_bytes[key_size * 4:]
     }
-
-def checkHost(url, hostList):
-    host = ''
-    validHost = False
-    for i in hostList:
-        if i.lower() in url.lower():
-            host = i
-            validHost = True
-            return validHost, host
-
-    return validHost, host

@@ -89,13 +89,13 @@ def pl_search(url, keyword=None):
 
 @utils.url_dispatcher.register('622', ['url', 'name'], ['download'])
 def pl_play(url, name, download=None):
-    vp = utils.VideoPlayer(name, download=download, regex='''src\s*=\s*["']([^'"]+)''')
-    vp.progress.update(5, "", "Loading video page 1", "")
-    response = utils.getHtml(url)
-    video_players = re.compile('class="embed-sites"(.*?)class="video-detail"', re.DOTALL | re.IGNORECASE).findall(response)[0]
-    source_ids = re.compile('changeDefaultSourceID[(](.?)[)]', re.DOTALL | re.IGNORECASE).findall(video_players)
-    for idx, source_id in enumerate(source_ids):
-        vp.progress.update( 5 + (15 * idx / len(source_ids)), "", "Loading video page {}".format(idx + 2), "" )
-        response = utils.getHtml(url, hdr=create_header_for_source(source_id))
-        video_players += re.compile('class="embed-sites"(.*?)class="video-detail"', re.DOTALL | re.IGNORECASE).findall(response)[0]
-    vp.play_from_html(video_players)
+    vp = utils.VideoPlayer(name, download)
+    videopage = utils.getHtml(url, '')
+    match = re.compile('label: "([^"]+)",.*?file: "([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
+    sources =  {}	
+    for quality, videourl in match:
+        if videourl:
+            sources[quality] = videourl
+    videourl = utils.selector('Select quality', sources, dont_ask_valid=True, sort_by=lambda x: 1081 if x == '4k' else int(x[:-1]), reverse=True)
+    vp.play_from_direct_link(videourl)
+

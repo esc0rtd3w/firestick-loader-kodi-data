@@ -34,7 +34,7 @@ from datetime import timedelta
 from decimal import Decimal
 import re
 
-from six import string_types
+from streamlink.utils.six import string_types
 
 from duration import Duration
 from isoerror import ISO8601Error

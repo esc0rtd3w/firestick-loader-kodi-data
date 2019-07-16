@@ -1,0 +1,247 @@
+[B]Version 0.7.4[/B]
+- Fixed channel order
+
+[B]Version 0.7.3[/B]
+- Added Antenna TV
+- Added CBN
+- Added Cozi TV
+- Added Retro TV
+- Added This TV
+- Added News Net
+- Removed Celebrity Page Network
+
+[B]Version 0.7.2[/B]
+- Added Spirit TV
+- Added Court TV
+
+[B]Version 0.7.1[/B]
+- Removed Spirit TV
+- Removed RadioU
+- Removed Pluto TV Westerns
+- Fixed QVC
+- Added QVC 3
+- Added CMT Westerns
+
+[B]Version 0.7.0[/B]
+- Added support for searching Tubi
+
+[B]Version 0.6.9[/B]
+- Added France 24
+- Removed Flashback TV
+- Updated stream_plug
+
+[B]Version 0.6.8[/B]
+- Refactored to simplify get_stream_and_play function
+
+[B]Version 0.6.7[/B]
+- Added '# nosec' to suppress bandit warning since this is not used for security/cryptographic purposes.
+
+[B]Version 0.6.6[/B]
+- Added '# nosec' to suppress bandit warnings since the code is not accepting non-http schemes
+
+[B]Version 0.6.5[/B]
+- Added check for 'http' when using Urllib urlopen
+- Fixed issue with Redefining built-in 'type'
+
+[B]Version 0.6.4[/B]
+- Fixed nonetype exception
+
+[B]Version 0.6.3[/B]
+- Fixed bare exception
+
+[B]Version 0.6.2[/B]
+- Refactored Tubi TV functions a bit
+
+[B]Version 0.6.1[/B]
+- Renamed function to get live animal streams
+- Added Tubi TV functions
+
+[B]Version 0.6.0[/B]
+- Added MST3K
+- Added RiffTrax
+- Added Pluto TV Animals
+- Added Live Music Replays
+- Added Stand-Up TV
+
+[B]Version 0.5.9[/B]
+- Added Black Cinema
+- Added Pluto TV Cine
+- Added Voyager Documentaries
+- Added Science TV
+- Added Adventure TV
+- Added DocuTV
+- Added FrontDoor
+- Added Pluto TV History
+- Added Pluto TV Indies
+- Added Pluto TV Travel
+
+[B]Version 0.5.8[/B]
+- Added Food TV
+- Added Wahlburgers
+- Added Dog the Bounty Hunter
+
+[B]Version 0.5.7[/B]
+- Fixed Jewelry TV
+- Some minor code tweaks
+
+[B]Version 0.5.6[/B]
+- Removed CNBC
+
+[B]Version 0.5.5[/B]
+- Started adding support for Python 3
+
+[B]Version 0.5.4[/B]
+- Removed unused import
+
+[B]Version 0.5.3[/B]
+- Fixed missing images in Animal TV
+
+[B]Version 0.5.2[/B]
+- Updated server connections
+
+[B]Version 0.5.1[/B]
+- Minor update for Animal TV
+
+[B]Version 0.5.0[/B]
+- Fixed issue with Live streams being marked as watched
+
+[B]Version 0.4.9[/B]
+- Removed YouTube MPEGDASH requirement for YouTube Live streams, It doesn't seem to be needed any longer
+
+[B]Version 0.4.8[/B]
+- Minor refactoring
+- Added function to get streams for Animal TV
+
+[B]Version 0.4.7[/B]
+- Updated logos
+
+[B]Version 0.4.6[/B]
+- Updated logos
+
+[B]Version 0.4.5[/B]
+- Updated play function
+
+[B]Version 0.4.4[/B]
+- Updated a few functions
+
+[B]Version 0.4.3[/B]
+- Updated a few functions
+
+[B]Version 0.4.2[/B]
+- Updated stream_plug
+
+[B]Version 0.4.1[/B]
+- Updated stream_plug
+
+[B]Version 0.4.0[/B]
+- Added Flashback TV channel
+- Added Runway TV channel
+
+[B]Version 0.3.9[/B]
+- Added Gusto channel
+- Added Big Life TV channel
+- Added Soar channel
+
+[B]Version 0.3.8[/B]
+- Updated dialog colors
+
+[B]Version 0.3.7[/B]
+- Updated add_channel and add_sections
+
+[B]Version 0.3.6[/B]
+- Removed Cash Cab
+
+[B]Version 0.3.5[/B]
+- Cleaned up Genre icons
+
+[B]Version 0.3.4[/B]
+- Fixed Stadium
+
+[B]Version 0.3.3[/B]
+- Added several more channels
+
+[B]Version 0.3.2[/B]
+- Updates to genre organization
+
+[B]Version 0.3.1[/B]
+- Added more channels
+- Added Western genre
+- Added Comedy genre
+- Added Drama genre
+- Added Thriller genre
+
+[B]Version 0.3.0[/B]
+- Added more channels
+- Added Curiosity genre
+- Added Family genre
+
+[B]Version 0.2.9[/B]
+- Added more channels
+- Added 24-7 genre
+- Added Crime genre
+
+[B]Version 0.2.8[/B]
+- Some code refactoring
+- Added lots of new channels
+- Added ability to grab sections, and genres
+- Added abiltiy to sort channels by genre
+
+[B]Version 0.2.7[/B]
+- Fixed to work with Kodi 18
+- Fixed Stadium
+
+[B]Version 0.2.6[/B]
+- Removed CBS News, CBS Sports HQ, and ET Live in response to DMCA
+
+[B]Version 0.2.5[/B]
+- Minor tweak to NASA TV
+
+[B]Version 0.2.4[/B]
+- Added more common functions for creating channel lists
+- Added NASA Space Station Channel to NASA TV
+
+[B]Version 0.2.3[/B]
+- Fixed HSN program info with special characters
+- Code cleanup
+- Added imports to support Python 3. Hopefully making things more future proof
+
+[B]Version 0.2.2[/B]
+- Fixed HSN program info
+
+[B]Version 0.2.1[/B]
+- Code cleanup
+
+[B]Version 0.2.0[/B]
+- Removed stream reporting (too many false positives)
+
+[B]Version 0.1.9[/B]
+- Major refactoring
+
+[B]Version 0.1.8[/B]
+- Fixed HSN
+
+[B]Version 0.1.7[/B]
+- Added CBS Sports HQ
+- Added ET Live
+
+[B]Version 0.1.6[/B]
+- Code refactoring
+
+[B]Version 0.1.5[/B]
+- Updated Stadium to pull stream dynamically
+- Removed Cheddar since it is now a pay service
+
+[B]Version 0.1.4[/B]
+- Updated with stream failure reporting
+
+[B]Version 0.1.3[/B]
+- Typo tweak
+
+[B]Version 0.1.2[/B]
+- Fixed Catholic TV Network
+
+[B]Version 0.1.1[/B]
+- Initial release
+
+[B]Version 0.1.0[/B]
+- Initial version

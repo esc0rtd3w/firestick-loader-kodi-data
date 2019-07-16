@@ -40,7 +40,7 @@ def HQLIST(url):
         link = utils.getHtml(url, '')
     except:
         return None
-    match = re.compile('<a href="([^"]+)" class="image featured non-overlay click-trigger".*?<img id="[^"]+" src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)
+    match = re.compile('<a href="([^"]+)" class="image featured non-overlay atfib".*?<img id="[^"]+" src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(link)   # Working as of 19.05.15
     for url, img, name in match:
         name = utils.cleantext(name)    
         videourl = "https://www.hqporner.com" + url

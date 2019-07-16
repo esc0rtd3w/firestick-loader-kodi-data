@@ -47,7 +47,7 @@ def List(url):
 	except:
 		return None
 	
-	match0 = re.compile('<head>(.*?)</head>.*?index-videos.*?>(.*?)<footer>', re.DOTALL | re.IGNORECASE).findall(response)
+	match0 = re.compile('<head>(.*?)</head>.*?index-videos.*?>(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(response)
 	header_block = match0[0][0]
 	main_block = match0[0][1]
 	match = re.compile('thumb-image-container" href="([^"]+)".*?<i class="thumb-image-container__icon([^>]+)>.*?src="([^"]+)".*?alt="([^"]+)".*?duration">([^<]+)</div', re.DOTALL | re.IGNORECASE).findall(main_block)
@@ -87,7 +87,7 @@ def Playvid(url, name, download=None):
 @utils.url_dispatcher.register('508', ['url'])
 def Categories(url):
     cathtml = utils.getHtml(url, hdr=xhamster_headers)
-    match0 = re.compile('<div class="letter-blocks page">(.*?)<footer>', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match0 = re.compile('<div class="letter-blocks page">(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(cathtml)
     match = re.compile('<a href="(.+?)" >([^<]+)<').findall(match0[0])
     for url, name in match:
         utils.addDir(name, url, 506, '')

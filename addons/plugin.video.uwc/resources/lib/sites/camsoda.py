@@ -44,13 +44,13 @@ def List(url):
 	data = json.loads(response)
 	for camgirl in data['results']:
 		try:
-			userid=camgirl['user_id']
-			name = camgirl['username'].encode("ascii", errors="ignore")#).encode("ascii", errors="ignore")			
-			#name = camgirl['tpl'][0].encode("ascii", errors="ignore")#).encode("ascii", errors="ignore")
-			videourl = "https://www.camsoda.com/api/v1/video/vtoken/" + name#camgirl['username']
-			
-			imag='http://md.camsoda.com/thumbs/%s.jpg'%(name)
-			
+#			userid=camgirl['user_id']
+			userid=camgirl['tpl'][0]
+#			name = camgirl['username'].encode("ascii", errors="ignore")
+			name = camgirl['tpl'][1].encode("ascii", errors="ignore")
+			videourl = "https://www.camsoda.com/api/v1/video/vtoken/" + name
+#			imag='http://md.camsoda.com/thumbs/%s.jpg'%(name)
+			imag = 'http:' + camgirl['tpl'][9]
 			utils.addDownLink(name, videourl, 478, imag, '', noDownload=True)
 		except:
 			pass

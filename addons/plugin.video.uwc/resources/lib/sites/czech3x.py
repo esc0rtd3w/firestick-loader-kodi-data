@@ -35,13 +35,20 @@ def List(url):
 		listhtml = utils.getHtml(url, '')
 	except:
 		return None
-	match = re.compile('</nav>(.+?)alert alert-info', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-	match1 = re.compile(r'<a title="(.+?)" href="(.+?)"><img.+?src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match)
+
+	try:
+		match = re.compile('</nav>(.+?)alert alert-info', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+		match1 = re.compile(r'<a title="(.+?)" href="(.+?)"><img.+?src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match)
+	except:
+		match = re.compile(r'<div class="item-img">.+?<a href="(.+?)".+?src="(.+?)".+?<h3><a.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+		match1 = []
+		for videopage, img, name in match:
+			match1.append([name, videopage, img])
 	for name, videopage, img in match1:
 		name = utils.cleantext(name)
 		utils.addDownLink(name, videopage, 312, img, '')
 	try:
-		nextp = re.compile('link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+		nextp = re.compile('class="next page-numbers" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
 		utils.addDir('Next Page', nextp[0], 311,'')
 	except:
 		pass
@@ -56,9 +63,9 @@ def Playvid(url, name, download=None):
 @utils.url_dispatcher.register('313', ['url'])
 def Categories(url):
     cathtml = utils.getHtml(url, '')
-    match = re.compile('<a href="(http://czech3x.net/category/[^"]+)" >([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match = re.compile('<a href="(http://porn-czech.com/categories/[^"]+)">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
-        utils.addDir(name, catpage, 311, '')    
+        utils.addDir(name.title(), catpage, 311, '')    
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 

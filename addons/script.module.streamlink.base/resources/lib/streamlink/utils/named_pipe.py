@@ -15,7 +15,10 @@ if not xbmcvfs.exists(tmp_dir):
 
 if is_win32:
 
-    from ctypes import windll, cast, c_ulong, c_void_p, byref
+    try:
+        from ctypes import windll, cast, c_ulong, c_void_p, byref
+    except MemoryError:
+        pass
 
     PIPE_ACCESS_OUTBOUND = 0x00000002
     PIPE_TYPE_BYTE = 0x00000000

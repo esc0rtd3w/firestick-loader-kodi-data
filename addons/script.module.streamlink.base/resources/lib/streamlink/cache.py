@@ -2,7 +2,7 @@ import json
 import os
 import shutil
 import tempfile
-
+import xbmc, xbmcvfs
 from time import time, mktime
 
 # from .compat import is_win32
@@ -12,8 +12,6 @@ from time import time, mktime
 #     xdg_cache = os.environ.get("APPDATA", os.path.expanduser("~"))
 # else:
 #     xdg_cache = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
-
-import xbmc, xbmcvfs
 
 xdg_cache = xbmc.translatePath('special://profile/addon_data/script.module.streamlink.base').encode('utf-8')
 

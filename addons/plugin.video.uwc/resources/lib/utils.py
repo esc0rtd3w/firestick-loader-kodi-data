@@ -48,19 +48,16 @@ import xbmcaddon
 import xbmcvfs
 import cloudflare
 from jsunpack import unpack
-import resolveurl
+import random_ua
 import xbmcvfs
 from functools import wraps
 
-xxx_plugins_path = 'special://home/addons/script.module.resolveurl.xxx/resources/plugins/'
-if xbmcvfs.exists(xxx_plugins_path):
-    resolveurl.add_plugin_dirs(xbmc.translatePath(xxx_plugins_path))
 
 from url_dispatcher import URL_Dispatcher
 
 url_dispatcher = URL_Dispatcher()
 
-USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0'#resolveurl.lib.net.get_ua()
+USER_AGENT = random_ua.get_ua()
 
 headers = {'User-Agent': USER_AGENT,
            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -393,6 +390,8 @@ def PlayStream(name, url):
 
 def getHtml(url, referer='', hdr=None, NoCookie=None, data=None):
     try:
+        if data:
+            data = urllib.urlencode(data)
         if not hdr:
             req = Request(url, data, headers)
         else:
@@ -748,17 +747,46 @@ def videowood(data):
         return
 
 
+
 def streamdefence(html):
-    match = re.search(r'\("([^"]+)', html, re.DOTALL | re.IGNORECASE)
+    if 'iframe src="' in html:
+        return html
+    match = re.findall(r'(?:=|\()"([^"]+)', html, re.DOTALL | re.IGNORECASE)
     try:
+        decoded = ''
         if match:
-            result = match.group()
-            decoded = base64.b64decode(result)
+            for result in match:
+                try:
+                    decoded += base64.b64decode(result)
+                except:
+                    pass
         else:
             decoded = base64.b64decode(html)
     except TypeError:
         return html
     return streamdefence(decoded)
+
+
+
+#def streamdefence(html):
+#    match = re.search(r'a2D38E8="([^"]+)', html, re.DOTALL | re.IGNORECASE)
+#    match = re.search(r'\("([^"]+)"\)', html, re.DOTALL | re.IGNORECASE)
+#    if match:
+#	result = match.group(1)
+#	decoded = base64.b64decode(result)
+#    else:
+#	match = re.search(r'\("([^"]+)"', html, re.DOTALL | re.IGNORECASE)   
+#	try:
+#            if match:
+#            	result = match.group(1)
+#            	decoded = base64.b64decode(result)
+#            else:
+#	    	decoded = base64.b64decode(html)
+#		if ":" in html:
+#		    return html
+#        except TypeError:
+#            return html
+#    return streamdefence(decoded)
 
 
 def searchDir(url, mode, page=None):
@@ -970,6 +998,12 @@ class VideoPlayer():
         self.progress = xbmcgui.DialogProgress()
         self.progress.create('Playing video', 'Searching for videofile')
 
+        import resolveurl as resolveurl
+        self.resolveurl = resolveurl
+        xxx_plugins_path = 'special://home/addons/script.module.resolveurl.xxx/resources/plugins/'
+        if xbmcvfs.exists(xxx_plugins_path):
+            self.resolveurl.add_plugin_dirs(xbmc.translatePath(xxx_plugins_path))
+
     def _cancellable(f):
         @wraps(f)
         def wrapped(inst, *args, **kwargs):
@@ -979,6 +1013,7 @@ class VideoPlayer():
             return f(inst, *args, **kwargs)
         return wrapped
 
+    @_cancellable
     def _clean_urls(self, url_list):
         filtered_words = ['google']
         filtered_ends = ['.js', '.css', '/premium.html', '.jpg', '.gif', '.png', '.ico']
@@ -986,7 +1021,7 @@ class VideoPlayer():
         new_list = []
         for source in url_list:
             to_break = False
-            if source._url in added:
+            if source._url in added or not source:
                 continue
             for word in filtered_words:
                 if word in source._url or to_break:
@@ -1005,12 +1040,13 @@ class VideoPlayer():
     def play_from_site_link(self, url, referrer=''):
         self.progress.update(25, "", "Loading video page", "")
         html = getHtml(url, referrer)
-        html += self._check_suburls(html, url)
-        self.play_from_html(html)
+        self.play_from_html(html, url)
 
     @_cancellable
-    def play_from_html(self, html):
-        self.progress.update(50, "", "Searching for supported hosts", "")
+    def play_from_html(self, html, url=None):
+        self.progress.update(40, "", "Searching for supported hosts", "")
+        solved_suburls = self._check_suburls(html, url)
+        self.progress.update(60, "", "Searching for supported hosts", "")
         direct_links = None
         if self.direct_regex:
             direct_links = re.compile(self.direct_regex, re.DOTALL | re.IGNORECASE).findall(html)
@@ -1021,34 +1057,40 @@ class VideoPlayer():
             elif not self.regex:
                 notify('Oh oh','Could not find a supported link')
         if self.regex and not direct_links:
-            use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
-            sources = self._clean_urls([resolveurl.HostedMediaFile(x, title=x.split('/')[2], include_universal=use_universal) for x in resolveurl.scrape_supported(html, self.regex)])
-            if not sources:
-                notify('Oh oh','Could not find a supported link')
-                return
-            self._select_source(sources)
+            scraped_sources = self.resolveurl.scrape_supported(html, self.regex)
+            scraped_sources = scraped_sources if scraped_sources else []
+            scraped_sources.extend(solved_suburls)
+            self.play_from_link_list(scraped_sources)
         if not self.direct_regex and not self.regex:
             raise ValueError("No regular expression specified")
+
+    @_cancellable
+    def play_from_link_list(self, links):
+        use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
+        sources = self._clean_urls([self.resolveurl.HostedMediaFile(x, title=x.split('/')[2], include_universal=use_universal) for x in links])
+        if not sources:
+            notify('Oh oh','Could not find a supported link')
+            return
+        self._select_source(sources)
 
     @_cancellable
     def _select_source(self, sources):
         if not len(sources) > 1 or addon.getSetting("dontask") == "true":
             source = sources[0]
         else:
-            source = resolveurl.choose_source(sources)
+            source = self.resolveurl.choose_source(sources)
         if source:
             self.play_from_link_to_resolve(source)
 
     @_cancellable
     def play_from_link_to_resolve(self, source):
         if type(source) is str:
-            use_universal = True if addon.getSetting("universal_resolvers") == "true" else False
-            title = source.split('/')[2].split('.')[0] if '.' in source.split('/')[2] else source.split('/')[2]
-            source = resolveurl.HostedMediaFile(source, title=title, include_universal=use_universal)
+            self.play_from_link_list([source])
+            return
         self.progress.update(80, "", "Passing link to ResolveURL", "Playing from " + source.title)
         try:
             link = source.resolve()
-        except resolveurl.resolver.ResolverError:
+        except self.resolveurl.resolver.ResolverError:
             link = False # ResolveURL returns False in some cases when resolving fails
         if not link:
             notify('Resolve failed', '{} link could not be resolved'.format(source.title))
@@ -1060,86 +1102,80 @@ class VideoPlayer():
         self.progress.update(90, "", "Playing video", "")
         playvid(direct_link, self.name, self.download)
 
+    @_cancellable
     def _check_suburls(self, html, referrer_url):
-        klurl = re.compile(r"//(?:www\.)?keeplinks\.eu/p([0-9a-zA-Z/]+)", re.DOTALL | re.IGNORECASE).findall(html)
         sdurl = re.compile(r'streamdefence\.com/view.php\?ref=([^"]+)"', re.DOTALL | re.IGNORECASE).findall(html)
         sdurl_world = re.compile(r'.strdef\.world/([^"]+)', re.DOTALL | re.IGNORECASE).findall(html)
         fcurl = re.compile(r'filecrypt\.cc/Container/([^\.]+)\.html', re.DOTALL | re.IGNORECASE).findall(html)
-        if klurl or sdurl or sdurl_world or fcurl:
-            html = ''
-            self.progress.update(30, "", "Found subsites", "")
-        if klurl:
-            html += self._solve_keep_links(klurl)
-        elif sdurl:
-            html += self._solve_streamdefence(sdurl, referrer_url, False)
+        shortixurl = re.compile(r'1155xmv\.com/\?u=(\w+)', re.DOTALL | re.IGNORECASE).findall(html)
+        links = []
+        if sdurl or sdurl_world or fcurl or shortixurl:
+            self.progress.update(50, "", "Found subsites", "")
+        if sdurl:
+            links.extend(self._solve_streamdefence(sdurl, referrer_url, False))
         elif sdurl_world:
-            html += self._solve_streamdefence(sdurl_world, referrer_url, True)
+            links.extend(self._solve_streamdefence(sdurl_world, referrer_url, True))
         elif fcurl:
-            html += self._solve_filecrypt(fcurl, referrer_url)
-        return html
+            links.extend(self._solve_filecrypt(fcurl, referrer_url))
+        elif shortixurl:
+            links.extend(self._solve_shortix(shortixurl, referrer_url))
+        return links
 
-    def _solve_keep_links(self, klurls):
-        self.progress.update(35, "", "Loading keeplinks sites", "")
-        klpages = ''
-        for kl_url in klurls:
-            klurl = 'http://www.keeplinks.eu/p' + kl_url
-            kllink = getVideoLink(klurl, '')
-            kllinkid = kllink.split('/')[-1]
-            klheader = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
-            'Accept-Encoding': 'none',
-            'Accept-Language': 'en-US,en;q=0.8',
-            'Connection': 'keep-alive',
-            'Cookie': 'flag['+kllinkid+'] = 1;'}
-            klpage = getHtml(kllink, klurl, klheader)
-            klpages += klpage
-        return klpages
-
+    @_cancellable
     def _solve_streamdefence(self, sdurls, url, world=False):
-        self.progress.update(35, "", "Loading streamdefence sites", "")
+        self.progress.update(55, "", "Loading streamdefence sites", "")
         sdpages = ''
         for sd_url in sdurls:
             if not world:
                 sdurl = 'http://www.streamdefence.com/view.php?ref=' + sd_url
             else:
                 sdurl = 'https://www.strdef.world/' + sd_url
-            sdsrc = getHtml(sdurl, url)
+            sdsrc = getHtml(sdurl, url if url else sdurl)
             sdpage = streamdefence(sdsrc)
             sdpages += sdpage
-        return sdpages
+        sources = set(re.compile('iframe src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(sdpages))
+        return sources
 
+    @_cancellable
     def _solve_filecrypt(self, fc_urls, url):
-        self.progress.update(35, "", "Loading filecrypt sites", "")
-        sites = ''
+        self.progress.update(55, "", "Loading filecrypt sites", "")
+        sites = set()
         for fc_url in fc_urls:
             fcurl = 'http://filecrypt.cc/Container/' + fc_url + ".html"
-            fcsrc = getHtml(fcurl, url)
+            fcsrc = getHtml(fcurl, url if url else fcurl, headers)
             fcmatch = re.compile(r"openLink.?'([\w\-]*)',", re.DOTALL | re.IGNORECASE).findall(fcsrc)
-            fcurls = ""
             for fclink in fcmatch:
                 fcpage = "http://filecrypt.cc/Link/" + fclink + ".html"
                 fcpagesrc = getHtml(fcpage, fcurl)
-                fclink2 = re.search('<iframe .*? noresize src="(.*)"></iframe>', fcpagesrc)
+                fclink2 = re.search('''top.location.href='([^']+)''', fcpagesrc)
                 if fclink2:
                     try:
                         fcurl2 = getVideoLink(fclink2.group(1), fcpage)
-                        fcurls = fcurls + " " + fcurl2
+                        sites.add(fcurl2)
                     except:
                         pass
-            sites += fcurls
         return sites
+
+    @_cancellable
+    def _solve_shortix(self, shortixurls, url):
+        self.progress.update(55, "", "Loading streamdefence sites", "")
+        sources = set()
+        for shortix in shortixurls:
+            shortixurl = 'https://1155xmv.com/?u=' + shortix
+            shortixsrc = getHtml(shortixurl, url if url else shortixurl)
+            sources.add(re.compile('src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(shortixsrc)[0])
+        return sources
 
 
 def playvideo(videosource, name, download=None, url=None, regex='''(?:src|SRC|href|HREF)=\s*["']([^'"]+)'''):
-    '''Deprecated function, use VideoPlayer class.
-    Exists for compatiblity with old site plug-ins.'''
+    """Deprecated function, use VideoPlayer class.
+    Exists for compatiblity with old site plug-ins."""
     vp = VideoPlayer(name, download, regex)
     vp.play_from_html(videosource)
 
 
 def PLAYVIDEO(url, name, download=None, regex='''(?:src|SRC|href|HREF)=\s*["']([^'"]+)'''):
-    '''Deprecated function, use VideoPlayer class.
-    Exists for compatiblity with old site plug-ins.'''
+    """Deprecated function, use VideoPlayer class.
+    Exists for compatiblity with old site plug-ins."""
     vp = VideoPlayer(name, download, regex)
     vp.play_from_site_link(url, url)

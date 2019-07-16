@@ -43,6 +43,8 @@ class HLSStreamWriter(SegmentedStreamWriter):
         self.byterange_offsets = defaultdict(int)
         self.key_data = None
         self.key_uri = None
+        self.key_uri_override = options.get("hls-segment-key-uri")
+
         if self.ignore_names:
             # creates a regex from a list of segment names,
             # this will be used to ignore segments.
@@ -55,15 +57,18 @@ class HLSStreamWriter(SegmentedStreamWriter):
         if key.method != "AES-128":
             raise StreamError("Unable to decrypt cipher {0}", key.method)
 
-        if not key.uri:
+        if not self.key_uri_override and not key.uri:
             raise StreamError("Missing URI to decryption key")
 
-        if self.key_uri != key.uri:
-            res = self.session.http.get(key.uri, exception=StreamError,
+        key_uri = self.key_uri_override if self.key_uri_override else key.uri
+
+        if self.key_uri != key_uri:
+            res = self.session.http.get(key_uri, exception=StreamError,
                                         retries=self.retries,
                                         **self.reader.request_params)
+            res.encoding = "binary/octet-stream"
             self.key_data = res.content
-            self.key_uri = key.uri
+            self.key_uri = key_uri
 
         iv = key.iv or num_to_iv(sequence)
 
@@ -174,6 +179,9 @@ class HLSStreamWorker(SegmentedStreamWorker):
                       self.duration_offset_start, self.duration_limit,
                       self.playlist_sequence, self.playlist_end)
 
+    def _reload_playlist(self, text, url):
+        return hls_playlist.load(text, url)
+
     def reload_playlist(self):
         if self.closed:
             return
@@ -185,7 +193,7 @@ class HLSStreamWorker(SegmentedStreamWorker):
                                     retries=self.playlist_reload_retries,
                                     **self.reader.request_params)
         try:
-            playlist = hls_playlist.load(res.text, res.url)
+            playlist = self._reload_playlist(res.text, res.url)
         except ValueError as err:
             raise StreamError(err)
 
@@ -465,8 +473,12 @@ class HLSStream(HTTPStream):
                                         duration=duration,
                                         **request_params)
             else:
-                stream = HLSStream(session_, playlist.uri, force_restart=force_restart,
-                                   start_offset=start_offset, duration=duration, **request_params)
+                stream = cls(session_,
+                             playlist.uri,
+                             force_restart=force_restart,
+                             start_offset=start_offset,
+                             duration=duration,
+                             **request_params)
             streams[name_prefix + stream_name] = stream
 
         return streams

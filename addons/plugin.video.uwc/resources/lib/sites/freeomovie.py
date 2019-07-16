@@ -44,8 +44,9 @@ def List(url):
         img = img.replace('/i/','/t/')
         utils.addDownLink(name, videopage, 372, img, '')
     try:
-        nextp = re.compile('<span class=\'current\'>.+?</span><a class="page larger".*?href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', nextp[0], 371,'')
+#        nextp = re.compile('<span class=\'current\'>.+?</span><a class="page larger".*?href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+	nextp = re.compile("<link rel='next' href='https://www.freeomovie.com/page/(\d+)/'", re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        utils.addDir('Next Page (' + str(nextp) + ')', 'https://www.freeomovie.com/page/' + str(nextp[0]), 371,'')
     except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
@@ -63,7 +64,7 @@ def Search(url, keyword=None):
 @utils.url_dispatcher.register('373', ['url']) 
 def Cat(url):
     listhtml = utils.getHtml(url, '')
-    match0 = re.compile('<h2>Categories(.+?)<tr id="myRow">', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]	
+    match0 = re.compile('<h2>Categories(.+?)<div id="enhancedtextwidget-11"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]	
     match = re.compile('<a href="(.+?)"\s+title=".+?">(.+?)<', re.DOTALL | re.IGNORECASE).findall(match0)
     for catpage, name in match:
         name = utils.cleantext(name)
@@ -72,4 +73,5 @@ def Cat(url):
 
 @utils.url_dispatcher.register('372', ['url', 'name'], ['download'])   
 def Playvid(url, name, download=None):
-	utils.PLAYVIDEO(url, name, download)
+    vp = utils.VideoPlayer(name, download, '<a href="([^"]+)" target','')
+    vp.play_from_site_link(url, url)

@@ -41,7 +41,7 @@ def List(url):
     except:
         
         return None
-    match = re.compile(r"<a href='([^']+).*?src='([^']+)' id=\d+ alt='([^']+)'", re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile(r"<a class='nuyrfe' href='([^']+).*?src='([^']+)' id=\d+ alt='([^']+)'", re.DOTALL | re.IGNORECASE).findall(listhtml)
     for videopage, img, name in match:
         name = utils.cleantext(name)
         utils.addDownLink(name, videopage, 322, img, '')

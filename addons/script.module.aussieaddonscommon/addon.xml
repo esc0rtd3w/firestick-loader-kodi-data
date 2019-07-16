@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="script.module.aussieaddonscommon" name="Aussie Add-ons Common" provider-name="Aussie Add-ons" version="1.1.5">
+<addon id="script.module.aussieaddonscommon" name="Aussie Add-ons Common" provider-name="Aussie Add-ons" version="1.2.0">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.requests" />
@@ -14,7 +14,18 @@
     <source>https://github.com/aussieaddons/script.module.aussieaddonscommon</source>
     <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license>
-  <news>[B]Version v1.1.5[/B]
+  <news>[B]Version v1.2.0[/B]
+- Add platform as detected by Kodi to report summary
+- Fix travis config
+- travis-ci config update for notifications
+- Add to org blacklist
+- Create progress dialog for issue report immediately
+- Busy dialog box fix
+- Only allow reports for addons currently in repo
+- Limit issue report titles to 256 chars
+- Ensure debug mode is enabled for user reports. (#8)
+
+[B]Version v1.1.5[/B]
 - Add additional orgs to blacklist
 
 [B]Version v1.1.4[/B]

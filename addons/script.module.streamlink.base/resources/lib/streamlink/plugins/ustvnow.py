@@ -87,10 +87,8 @@ class USTVNow(Plugin):
             log.debug("Finding streams for: {0}", channels.get(scode))
 
             r = self.session.http.get(
-                self._stream_url,
-                params={
-                    "scode": scode, "token": token, "br_n": "Firefox", "br_v": "52", "br_d": "desktop"
-                }, headers={"User-Agent": useragents.FIREFOX}
+                self._stream_url, params={"scode": scode, "token": token, "br_n": "Firefox", "br_v": "52", "br_d": "desktop"},
+                headers={"User-Agent": useragents.FIREFOX}
             )
 
             data = self.session.http.json(r)

@@ -67,10 +67,10 @@ def List(url, page=1):
         listhtml = utils.getHtml(url, url)
     except:
         return None
-    match = re.compile('profileDataBox">.*?<a href="([^"]+)".*?src="([^"]+)" title="Chat Now Free with ([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile('data-hls-preview-url="([^"]+)".*? src="([^"]+)".*?title="Chat Now Free with ([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
     for videourl, img, name in match:
         name = utils.cleantext(name)
-        videourl = "http://www.cam4.com" + videourl
+#        videourl = "http://www.cam4.com" + videourl
         utils.addDownLink(name, videourl, 282, img, '', noDownload=True)
     if re.search('<link rel="next"', listhtml, re.DOTALL | re.IGNORECASE):
             npage = page + 1        
@@ -81,19 +81,20 @@ def List(url, page=1):
 
 @utils.url_dispatcher.register('282', ['url', 'name'])
 def Playvid(url, name):
-    listhtml = utils.getHtml(url, '', mobileagent)
-    match = re.compile('src="(http[^"]+m3u8)', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    if match:
-       videourl = match[0] + "|User-Agent=" + urllib.quote_plus(mobileagent['User-Agent'])
-       iconimage = xbmc.getInfoImage("ListItem.Thumb")
-       listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-       listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-       listitem.setProperty("IsPlayable","true")
-       if int(sys.argv[1]) == -1:
-         pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
-         pl.clear()
-         pl.add(videourl, listitem)
-         xbmc.Player().play(pl)
-       else:
-         listitem.setPath(str(videourl))
-         xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)
+#    listhtml = utils.getHtml(url, '', mobileagent)
+#    match = re.compile('src="(http[^"]+m3u8)', re.DOTALL | re.IGNORECASE).findall(listhtml)
+#    if match:
+#       videourl = match[0] + "|User-Agent=" + urllib.quote_plus(mobileagent['User-Agent'])
+    videourl = url + "|User-Agent=" + urllib.quote_plus(mobileagent['User-Agent'])
+    iconimage = xbmc.getInfoImage("ListItem.Thumb")
+    listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+    listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+    listitem.setProperty("IsPlayable","true")
+    if int(sys.argv[1]) == -1:
+       pl = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
+       pl.clear()
+       pl.add(videourl, listitem)
+       xbmc.Player().play(pl)
+    else:
+       listitem.setPath(str(videourl))
+       xbmcplugin.setResolvedUrl(utils.addon_handle, True, listitem)

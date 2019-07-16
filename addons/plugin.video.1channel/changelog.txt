@@ -1,3 +1,6 @@
+[B]Version 4.0.07[/B]
+- New dependencies
+
 [B]Version 4.0.06[/B]
 - Error fix
 

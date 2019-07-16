@@ -7,7 +7,8 @@ from streamlink.stream import HLSStream
 
 class MeTube(Plugin):
 
-    _url_re = re.compile(r"https?://(?:www\.)?metube\.id/(?P<type>live|videos)/\w+(?:/.*)?", re.VERBOSE)
+    _url_re = re.compile(r"""https?://(?:www\.)?metube\.id/
+                         (?P<type>live|videos)/\w+(?:/.*)?""", re.VERBOSE)
 
     # extracted from webpage source
     _VOD_STREAM_NAMES = {

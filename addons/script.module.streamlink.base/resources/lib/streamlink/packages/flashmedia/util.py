@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from .compat import bytes, is_py2, string_types
+from .compat import bytes, string_types
 
 import struct
 
