@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.deceit" name="Deceit" version="1.2.2" provider-name="Collusion/OneNation">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <import addon="plugin.video.youtube"
+version="6.0.0~alpha6" />
+        <import addon="script.module.dateutil" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>audio video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+      <reuselanguageinvoker>false</reuselanguageinvoker>
+      <summary lang="en">Collusion/OneNation</summary>
+      <summary lang="he">הרחבת וידאו Jen</summary>
+      <description lang="en">An All-In-One Jen Powered Addon from Collusion and the OneNation Team. Massive Respect to all over in the Jen group without whom this wouldnt of been possible</description>
+      <description lang="he">האחות הקטנה של בוב</description>
+      <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <disclaimer lang="he">מחבר ההרחבה זה אינו מארח את התוכן שיתכן ויימצא ואין לו זיקה לאף אחד מספקי התוכן. הרחבה רק מחפשת תוכן שקיים באתרי אינטרנט. השימוש בהרחבה הוא על אחריותך בלבד!</disclaimer>
+      <platform>all</platform>
+        <website></website>
+        <video_guide></video_guide>
+    </extension>
+</addon>

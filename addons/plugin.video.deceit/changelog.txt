@@ -1,0 +1,70 @@
+v1.2.2
+- Toons & Anime Fixed (Credit Maud'Dib)
+
+v1.2.1
+- Sports League Py Updated (Credit TV Hangouts Group)
+
+v1.2.0
+- Under the Hood fixes (Credit Collusion)
+
+v1.1.9
+- Under the Hood fixes (Credit Collusion)
+
+v1.1.8
+- Sources.py Updated (US Scrapers Team)
+
+v1.1.7
+- Sport League.py Updated (Credit TV Hangouts Group)
+
+v1.1.6
+- Sport League.py Updated (Credit TV Hangouts Group)
+
+v1.1.5
+- Under the hood Fixes (Credit Collusion)
+- Sport League.py Updated (Credit TV Hangouts Group)
+
+v1.1.4
+- Under the hood Fixes (Credit Collusion)
+
+v1.1.3
+- Under the hood Fixes (Credit Collusion)
+
+v1.1.2
+- Under the hood Fixes (Credit Collusion)
+
+v1.1.1
+- Sport League.py Updated (Credit TV Hangouts Group)
+
+v1.1.0
+- Sport League.py Added (Credit TV Hangouts Group)
+
+v1.0.9
+- Now Compatible on X-Box 1 (Credit Bugatsinho)
+
+v1.0.8
+- SportsStreams.py Updated (Credit Jen Group)
+
+v1.0.7
+- Added Airtable4k (Credit S.H)
+
+v1.0.6
+- Under the hood fixes (Credit Collusion)
+
+v1.0.5
+- Sources.py Updated (Credit Maud'Dib)
+- NewReleases.py Updated (Credit Mookdog)
+- Added Podbay.py (Credit Maud'Dib)
+
+v1.0.4
+- Added Topdocs.py (Credit Maud'Dib)
+
+v1.0.3
+- TV Maze.py Updated (Credit TonyH)
+
+v1.0.2
+- Fixed Trakt.py (Credit Collusion)
+- Added Dom Parser.py (Credit Maud'Dib)
+- Added Watchcartoon.py (Credit Maud'Dib)
+
+v1.0.1
+- Initial Release

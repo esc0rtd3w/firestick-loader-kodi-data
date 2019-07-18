@@ -98,8 +98,8 @@
     <!-- Dev mode - future features for playlisters and developers -->
     <category label="30770">
         <setting id="debug" type="bool" label="30758" default="false" visible="true"/>
-        <setting id="root_xml" type="text" label="30060" option="hidden" default="http://supremacy.org.uk/MMA1/ufcmain.xml" visible="false"/>
-        <setting id="message_xml_url" type="text" label="News File Location" option="hidden" default="http://supremacy.org.uk/MMA1/message.xml" visible="false"/>
+        <setting id="root_xml" type="text" label="30060" option="hidden" default="http://kodi-911.com/.Pmma/ufcmain.xml" visible="false"/>
+        <setting id="message_xml_url" type="text" label="News File Location" option="hidden" default="http://kodi-911.com/.Pmma/message.xml" visible="true"/>
         <setting id="current_version" type="text" label="Current API Set Version" option="hidden" default="0" visible="false"/>
         <setting id="enable_notification" type="bool" label="Enable Service Notification" option="hidden" default="true" visible="false"/>
         <setting id="disable_service" type="bool" label="Disable Service after First Run" option="hidden" default="true" visible="false"/>

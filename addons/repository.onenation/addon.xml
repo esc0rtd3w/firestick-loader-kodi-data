@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.onenation" name="OneNation Repo" version="1.0.5" provider-name="OneNation">
+	<extension point="xbmc.addon.repository" name="OneNation Repo">
+		<info compressed="false">https://www.onenation.appboxes.co/repository/repofiles/addons.xml</info>
+		<checksum>https://www.onenation.appboxes.co/repository/repofiles/addons.xml.md5</checksum>
+		<datadir zip="true">https://www.onenation.appboxes.co/repository/repofiles/</datadir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+        </dir>
+ <dir>
+		<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>	
+		<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+	</dir>
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/duncanh52/modrepo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/duncanh52/modrepo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/duncanh52/modrepo/master/plugins/</datadir>
+	</dir>
+ <dir>
+                <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            </dir>
+ <dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">OneNation Repo</summary>
+		<description lang="en_GB">The home of the OneNation Plugins.</description>
+		<disclaimer lang="en_GB"></disclaimer>
+	<platform>all</platform>
+	<language>en</language>
+	<license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+	<email></email>
+	</extension>
+</addon>

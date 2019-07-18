@@ -1,0 +1,19 @@
+
+<plugin>
+<title>Acestream Channels</title>
+<link>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://9eba690be925a98e8aecfc758070b874e19260c6(SKY SPORTS Football HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://1c14883164419285b005a7f96d502489e80b8dc4(SKY SPORTS Arena HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://88ed3eb027715170bbc30d6e6278401917901c2c(SKY SPORTS Action HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://bd58392b1180b79c50439bd8beb051ea1d56fa38(SKY SPORTS Cricket HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://7f0f325c3eafce8bfedfc43a9ddb13f063bf0879(SKY SPORTS Golf HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://38d2c3762a9fbcb18031b18e7dba3a20bdbbaf59(SKY SPORTS F1 HD UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://3cf32325ca45e0179e0b1a3e3ad8d2de5296edcd (BT SPORT 1 UKAcestream-Stream Name goes here)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://33b428a9cec1d7d2cd2809d8e49a687e167378a6(BT SPORT 2 UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://66ce42b59cd7028be149ee7e7ca17066910b2db3(BT SPORT 3 UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://c880ed219ebc35a1a9ab59fe12260c59b25ab406(BT SPORT ESPN UK)</sublink>
+<sublink>plugin://program.plexus/?mode=1&url=acestream://e4d9f7188e4403523c32717a98093671f8931101(PREMIER SPORTS UK)</sublink>
+<thumbnail></thumbnail>
+<fanart></fanart>
+<summary>[COLOR white]Please Note[/COLOR][COLOR red]Always remember to connect to a VPN before streaming on Acestream. If you don’t, then you might get into a lot of trouble. A VPN will mask your IP address with a shared IP from another country, thus your ISP and copyright trolls won’t be able to track your activities.[/COLOR]</summary>
+</plugin>

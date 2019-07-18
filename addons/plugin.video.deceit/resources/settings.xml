@@ -1,0 +1,80 @@
+<settings>
+        <!-- customization settings -->
+    <category label="General Settings">
+      <setting label="Display" type="lsep" visible="false"/>
+      <setting label="Enable Settings Context item" type="bool" id="settings_context" default="true" visible="false"/>
+      <setting label="Enable Trailer Context item" type="bool" id="trailer_context" default="true" visible="false"/>
+      <setting label="Hide Help Videos" type="bool" id="hide_help" default="false" visible="false"/>
+      <setting label="Metadata Language" type="lsep"/>
+      <setting label="32506" type="select"
+               values="system|bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh"
+               id="language_id" default="system"/>
+      <setting label="32507" type="lsep"/>
+      <setting label="30717" type="bool" id="metadata" default="false"/>
+      <setting label="Disable metadata Dialog" type="bool" id="disable_metadata_dialog" default="false" visible="false"/>
+      <setting label="Movie Provider" type="select" values="Trakt|TMDB" id="movie_metadata_provider" default="Trakt"/>
+      <setting label="TV Show Provider" type="select" values="Trakt|TVDB" id="tv_metadata_provider" default="Trakt"/>
+      <setting label="32510" type="lsep" visible="false"/>
+      <setting label="32511" type="select" values="BOTH|SD|HD" id="default_link" default="BOTH" visible="false"/>
+      <setting label="32514" type="lsep"/>
+      <setting label="32515" type="bool" id="enable_gifs" default="false" />
+    </category>
+
+    <!-- main user settings -->
+    <category label="Scraper Settings">
+      <setting label="30718" type="lsep"/>
+      <setting label="30719" type="action" option="close"
+               action="RunPlugin(plugin://plugin.video.deceit/?mode=clearCache)"/>
+      <setting label="30733" type="lsep"/>
+      <!-- scraper settings -->
+      <setting label="Scraper Settings" type="action" option="close"
+               action="RunPlugin(plugin://plugin.video.deceit/?mode=ScraperSettings)"/>
+      <setting id="use_link_dialog" label="30744" type="bool" default="true" visible="false"/>
+      <setting id="link_fallthrough" label="30745" type="bool"	default="true" visible="eq(-1,false)"/>
+      <setting label="30741" type="lsep" visible="false"/>
+      <setting label="Resolver Settings" type="action" option="close"
+               action="RunPlugin(plugin://plugin.video.deceit/?mode=ResolverSettings)"/>
+      <!-- filtering settings -->
+      <setting label="30735" type="lsep" visible=""/>
+      <setting id="allow_openload" label="30736" type="bool" default="false" visible=""/>
+      <setting id="allow_the_video_me" label="30737" type="bool" default="false" visible=""/>
+      <setting id="allow_vidup_me" label="30738" type="bool" default="false" visible=""/>
+      <setting id="allow_debrid" label="30743" type="bool" default="false" visible=""/>
+      <setting label="30760" type="lsep" visible="false"/>
+      <setting id="disable_messages" label="30767" type="bool" default="false" visible="false"/>
+      <setting id="enable_offensive" label="30761" type="bool" default="false" enable="eq(-1,false)" visible="false"/>
+      <setting label="queueing Options" type="lsep" visible="false"/>
+      <setting id="include_watched_queue" label="Include Watched In Collection Queueing" type="bool" default="false" visible="false"/>
+      <setting id="autostart_queue" label="Auto start queue if empty" type="bool" default="true" visible="false"/>
+    </category>
+
+    <!-- Third party install options -->
+    <!--	<category label="30740">
+            <setting id="installaddons"			label="30766"   type="bool"		default="false"		visible="true"/>
+            <setting label="30762"	type="lsep" />
+            <setting label="30763"	type="lsep" />
+            <setting id="installrepos"			label="30757"   type="bool"		default="false"		visible="eq(-3,true)"/>
+            <setting label="30765"	type="lsep"	visible="eq(-4,true)"/>
+        </category>-->
+
+    <!-- login - future features for playlisters -->
+    <category label="Enter Own API's">
+      <!-- debugging and developer options -->
+	  <setting id="news_win" type="bool" label="Enable News Dialog" default="false" visible="false"/>
+	  <setting id="dlimage" type="bool" label="Enable Image Downloader" default="false" visible="false"/>
+      <setting id="debug" type="bool" label="API's" default="false" visible="true"/>
+      <setting id="first_run" label="first run" type="bool" default="false" visible="false"/>
+      <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.onenation/" visible="false"/>
+      <setting label="TVDB API Key" type="text" id="tvdb_api_key" option="hidden" default="" visible="eq(-3,true)"/>
+      <setting label="TMDB API Key" type="text" id="tmdb_api_key" option="hidden" default="105848b55027e57ad93ff46728121797" visible="eq(-4,true)"/>
+      <setting label="Trakt Client ID" type="text" id="trakt_api_client_id" option="hidden" default="fbab5555fd97170129b59f2c24e587206293e6ab2e0fe5727b28136f31a8e2fa" visible="eq(-5,true)"/>
+      <setting label="Trakt Client Secret" type="text" id="trakt_api_client_secret" option="hidden" visible="!eq(-1,true) + eq(-6,true)" default="8aede7ceccff1af70a75c17efbfdde47dd2d1d1efaccd52eebf3a5af224b3364"/>
+      <setting label="Last.fm API Key" type="text" id="lastfm_api_key" option="hidden" default="" visible="eq(-7,true)"/>
+      <setting label="Last.fm Secret" type="text" id="lastfm_secret" option="hidden" visible="!eq(-1,true) + eq(-8,true)" default=""/>
+      <setting id="TRAKT_ACCESS_TOKEN" label="" type="text" visible="false"/>
+      <setting id="TRAKT_EXPIRES_AT" label="" type="text" visible="false"/>
+      <setting id="TRAKT_REFRESH_TOKEN" label="" type="text" visible="false"/>
+    </category>
+
+
+</settings>

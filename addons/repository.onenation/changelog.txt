@@ -1,0 +1,15 @@
+v1.0.4
+- Dependency modules updated
+- New add-ons added
+
+v1.0.3
+-Universal Scrapers Link Updated 
+
+v1.0.2
+- Repo now links directly to Universal Scrapers and others for help with Dependencies
+
+v1.0.1
+- Repo Links directly Jsergio Repo
+
+v1.0.0
+- Initial release

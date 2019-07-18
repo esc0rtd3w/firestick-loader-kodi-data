@@ -7,7 +7,7 @@ import urllib
 import xbmc, xbmcaddon, time
 from universalscrapers.common import clean_title, clean_search, send_log, error_log
 from universalscrapers.scraper import Scraper
-from universalscrapers.modules import client, quality_tags
+from universalscrapers.modules import client, quality_tags, cfscrape
 
 dev_log = xbmcaddon.Addon('script.module.universalscrapers').getSetting("dev_log")            
 
@@ -60,13 +60,15 @@ class piriro(Scraper):
             #print 'URL PASSED OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK'+start_url
             count = 0
             headers = {'User-Agent': client.agent()}
+            #scraper= cfscrape.create_scraper()
+            #r=scraper.get(start_url, headers=headers)
             r = client.request(start_url, headers=headers)
             #print r
             Endlinks=re.compile('class="imagnet icon16" href="(.+?)">.+?<font color=#004E98>(.+?)</font>.+?><b>(.+?)</b></a',re.DOTALL).findall(r)
             #print 'scraperchk - scrape_movie - EndLinks: '+str(Endlinks)
             for Magnet,size, quality in Endlinks:
                 #Magnet=Magnet.replace('https://mylink.me.uk/?url=', '')
-                qual = quality_tags.check_sd_url(quality)
+                qual = quality_tags.get_release_quality(quality, None)[0]
                 #print Magnet + '<><><><><>'
                 count+=1
                 self.sources.append({'source':'Torrent', 'quality':qual+' '+size, 'scraper':self.name, 'url':Magnet, 'direct':False, 'debridonly': True})
