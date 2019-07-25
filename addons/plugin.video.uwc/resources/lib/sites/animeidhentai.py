@@ -36,12 +36,21 @@ def animeidhentai_list(url):
     except Exception as e:
         return None
     match = re.compile(r'<article id="??[^"\s]+(.*?)src="??([^"\s]+)"?? alt="([^"]+)".*?href="??([^"\s>]+)"??', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    for other, img, name, video in match:
-        if 'uncensored' in other.lower() or 'uncensored' in name.lower():
-            name = name + " [COLOR hotpink]Uncensored[/COLOR]" 
-        utils.addDownLink(utils.cleantext(name), video, 662, img, '')
+    if match:    
+        for other, img, name, video in match:
+            if 'uncensored' in other.lower() or 'uncensored' in name.lower():
+                name = name + " [COLOR hotpink]Uncensored[/COLOR]" 
+            utils.addDownLink(utils.cleantext(name), video, 662, img, '')
+    else:
+        match = re.compile('div class="result-item".*?<a href="([^"]+)">.*?<img\s*src="([^"]+)"\s*alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)       
+        for video, img, name in match:
+            if 'uncensored' in name.lower():
+                name = name.replace('Uncensored',' [COLOR hotpink]Uncensored[/COLOR]')
+            utils.addDownLink(utils.cleantext(name), video, 662, img, '')
+
     try:
-        next_page = re.compile(r'<a href="??([^"\s]+)\s*?><span class="??icon-chevron-right"??>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+#        next_page = re.compile(r'<a href="??([^"\s]+)\s*?><span class="??icon-chevron-right"??>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        next_page = re.compile('<a href="([^"]+)"\s*><span class="icon-chevron-right"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
         utils.addDir('Next Page', next_page, 661, '')
     except:
         pass

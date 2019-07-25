@@ -94,6 +94,8 @@ def HQPLAY(url, name, download=None):
 		videourl = getIP(iframeurl)
 	elif re.search('flyflv', iframeurl, re.DOTALL | re.IGNORECASE):
 		videourl = getFly(iframeurl)
+	elif re.search('hqwo', iframeurl, re.DOTALL | re.IGNORECASE):
+		videourl = getHQWO(iframeurl)
 	else:
 		utils.notify('Oh oh','Couldn\'t find a supported videohost')
 		return
@@ -122,7 +124,19 @@ def getIP(url):
 
 def getFly(url):
     videopage = utils.getHtml(url, '')
-    videos = re.compile('fileUrl="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
+#    videos = re.compile('fileUrl="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
+    videos = re.compile("<source src='([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)
+    videourl = videos[0]
+    if videourl.startswith('//'):
+        videourl = 'https:' + videourl
+    return videourl
+
+def getHQWO(url):
+    videopage1 = utils.getHtml(url, '')
+    videos1 = re.compile("<script type='text/javascript' src='([^']+)'></script>", re.DOTALL | re.IGNORECASE).findall(videopage1)
+    url = videos1[-1]
+    videopage2 = utils.getHtml(url, '')
+    videos = re.compile('file": "([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage2)
     videourl = videos[-1]
     if videourl.startswith('//'):
         videourl = 'https:' + videourl

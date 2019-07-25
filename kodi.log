@@ -1,0 +1,882 @@
+﻿22:15:29 T:1132  NOTICE: special://profile/ is mapped to: special://masterprofile/
+22:15:29 T:1132  NOTICE: Previous line repeats 1 times.
+22:15:29 T:1132  NOTICE: -----------------------------------------------------------------------
+22:15:29 T:1132  NOTICE: Starting Kodi (16.1 Git:20160424-c327c53). Platform: Windows NT x86 32-bit
+22:15:29 T:1132  NOTICE: Using Release Kodi x32 build
+22:15:29 T:1132  NOTICE: Kodi compiled Apr 24 2016 by MSVC 180040629 for Windows NT x86 32-bit version 6.0 (0x06000000)
+22:15:29 T:1132  NOTICE: Running on Dell Inc. Latitude E6430 with Windows 7 SP1, kernel: Windows NT x86 64-bit version 6.1
+22:15:29 T:1132  NOTICE: Host CPU: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 4 cores available
+22:15:29 T:1132  NOTICE: Desktop Resolution: 1366x768 32Bit at 60Hz
+22:15:29 T:1132  NOTICE: Running with administrator rights
+22:15:29 T:1132  NOTICE: Aero is enabled
+22:15:29 T:1132  NOTICE: special://xbmc/ is mapped to: C:\Program Files (x86)\Kodi
+22:15:29 T:1132  NOTICE: special://xbmcbin/ is mapped to: C:\Program Files (x86)\Kodi
+22:15:29 T:1132  NOTICE: special://masterprofile/ is mapped to: C:\Users\hacker\AppData\Roaming\Kodi\userdata
+22:15:29 T:1132  NOTICE: special://home/ is mapped to: C:\Users\hacker\AppData\Roaming\Kodi\
+22:15:29 T:1132  NOTICE: special://temp/ is mapped to: C:\Users\hacker\AppData\Roaming\Kodi\cache
+22:15:29 T:1132  NOTICE: The executable running is: C:\Program Files (x86)\Kodi\Kodi.exe
+22:15:29 T:1132  NOTICE: Local hostname: hacker-PC
+22:15:29 T:1132  NOTICE: Log File is located: C:\Users\hacker\AppData\Roaming\Kodi\kodi.log
+22:15:29 T:1132  NOTICE: -----------------------------------------------------------------------
+22:15:29 T:1132  NOTICE: load settings...
+22:15:29 T:1132 WARNING: CSettingString: unknown options filler "timezonecountries" of "locale.timezonecountry"
+22:15:29 T:1132 WARNING: CSettingString: unknown options filler "timezones" of "locale.timezone"
+22:15:29 T:1132  NOTICE: No settings file to load (special://xbmc/system/advancedsettings.xml)
+22:15:29 T:1132  NOTICE: Loaded settings file from special://profile/advancedsettings.xml
+22:15:29 T:1132  NOTICE: Contents of special://profile/advancedsettings.xml are...
+                                            <advancedsettings>
+                                              <splash>false</splash>
+                                              <fullscreen>true</fullscreen>
+                                              <!-- Globally Hide or Show the Exit Button -->
+                                              <!-- <showexitbutton>true</showexitbutton> -->
+                                              <loglevel hide="true">0</loglevel>
+                                              <!-- Path substitutions are for use for redirecting file paths -->
+                                              <!-- <pathsubstitution>
+                                            	  <substitute>
+                                            		<from>G:\dvds\</from>
+                                            		<to>smb://somecomputer/g-share/dvds/</to>
+                                            	  </substitute>
+                                            	</pathsubstitution> -->
+                                              <!-- Set deadzone for joysticks and gamepads -->
+                                              <!-- <controllerdeadzone>0.2</controllerdeadzone> -->
+                                              <!-- Repeat delay for a LIRC remote control -->
+                                              <!-- <remotedelay>10</remotedelay> -->
+                                              <!-- Adjust the amount of time in milliseconds between repeated keystrokes -->
+                                              <!-- <remoterepeat>800</remoterepeat> -->
+                                              <!-- Storage of zipped add-ons in MB in the path /addons/packages/ -->
+                                              <packagefoldersize>420</packagefoldersize>
+                                              <!-- Network Settings -->
+                                              <!-- <hosts>
+                                            		<entry name="HOSTNAME">IPADDRESS</entry>
+                                            	</hosts> -->
+                                              <!-- <samba>
+                                            	  <doscodepage></doscodepage> 
+                                            	  <clienttimeout>10</clienttimeout>
+                                            	  <statfiles>true</statfiles>
+                                            	</samba> -->
+                                              <network>
+                                                <!-- <curlclienttimeout>10</curlclienttimeout> -->
+                                                <!-- <curllowspeedtime>20</curllowspeedtime> -->
+                                                <!-- <curlretries>2</curlretries> -->
+                                                <!-- <httpproxyusername></httpproxyusername> -->
+                                                <!-- <httpproxypassword></httpproxypassword> -->
+                                                <buffermode>1</buffermode>
+                                                <readbufferfactor>10</readbufferfactor>
+                                                <!-- Based off Memory Available After Amazon Stuff Disable -->
+                                                <!-- <cachemembuffersize>69904384</cachemembuffersize> -->
+                                                <!-- Old Based off Memory Available After Amazon Stuff Disable -->
+                                                <cachemembuffersize>96119466</cachemembuffersize>
+                                                <!-- Default Optimized Cache -->
+                                                <!-- <cachemembuffersize>104857600</cachemembuffersize> -->
+                                                <!-- 150MB Cache -->
+                                                <!-- <cachemembuffersize>157286400</cachemembuffersize> -->
+                                                <!-- 256MB Cache -->
+                                                <!-- <cachemembuffersize>262144000</cachemembuffersize> -->
+                                              </network>
+                                              <!-- Frame Skip For FireStick/FireTV (8) -->
+                                              <skiploopfilter>8</skiploopfilter>
+                                              <!-- Art Resolutions -->
+                                              <imageres>540</imageres>
+                                              <fanartres>720</fanartres>
+                                              <!-- Clean Video Library -->
+                                              <!-- <videolibrary> -->
+                                              <!-- <cleanonupdate>true</cleanonupdate> -->
+                                              <!-- <recentlyaddeditems>20</recentlyaddeditems> -->
+                                              <!-- </videolibrary> -->
+                                              <!-- Video Play Tweaks -->
+                                              <!-- <video> -->
+                                              <!-- <playcountminimumpercent>85</playcountminimumpercent> -->
+                                              <!-- <ignoresecondsatstart>120</ignoresecondsatstart> -->
+                                              <!-- <ignorepercentatend>10</ignorepercentatend> -->
+                                              <!-- </video> -->
+                                              <!-- The number of retries attempted if a source is offline -->
+                                              <!-- <playlistretries>100</playlistretries> -->
+                                              <!-- The timeout, in seconds, before item failure -->
+                                              <!-- <playlisttimeout>20</playlisttimeout> -->
+                                              <!-- Specify the image scaling algorithm for image resizing/caching -->
+                                              <!-- Available: fast_bilinear, bilinear, bicubic, experimental, nearest_neighbor -->
+                                              <!-- averaging_area, bicublin, gaussian, sinc, lanczos, bicubic_spline -->
+                                              <!-- <imagescalingalgorithm>fast_bilinear</imagescalingalgorithm> -->
+                                              <!-- GUI Tweaks -->
+                                              <gui>
+                                                <algorithmdirtyregions>3</algorithmdirtyregions>
+                                                <nofliptimeout>0</nofliptimeout>
+                                              </gui>
+                                              <!-- Video Misc Tweaks -->
+                                              <videoscanner>
+                                                <ignoreerrors>true</ignoreerrors>
+                                              </videoscanner>
+                                              <!-- DEBUG ONLY -->
+                                              <!-- <loglevel hide="false">2</loglevel>
+                                            	<debug>
+                                                    <extralogging>true</extralogging>
+                                                    <setextraloglevel>32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536</setextraloglevel>
+                                                    <showloginfo>true</showloginfo>
+                                                </debug> -->
+                                            </advancedsettings>
+22:15:29 T:1132  NOTICE: Log level changed to "LOG_LEVEL_NORMAL"
+22:15:29 T:1132  NOTICE: Default DVD Player: dvdplayer
+22:15:29 T:1132  NOTICE: Default Video Player: dvdplayer
+22:15:29 T:1132  NOTICE: Default Audio Player: paplayer
+22:15:29 T:1132  NOTICE: Disabled debug logging due to GUI setting. Level 0.
+22:15:29 T:1132  NOTICE: Log level changed to "LOG_LEVEL_NORMAL"
+22:15:29 T:1132  NOTICE: CMediaSourceSettings: loading media sources from special://masterprofile/sources.xml
+22:15:29 T:1132  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
+22:15:29 T:1132  NOTICE: Loaded playercorefactory configuration
+22:15:29 T:1132  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
+22:15:29 T:1132  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
+22:15:29 T:5916  NOTICE: Found 2 Lists of Devices
+22:15:29 T:5916  NOTICE: Enumerated DIRECTSOUND devices:
+22:15:29 T:5916  NOTICE:     Device 1
+22:15:29 T:5916  NOTICE:         m_deviceName      : {ECD512F1-5272-4163-822F-49EAA7D51D82}
+22:15:29 T:5916  NOTICE:         m_displayName     : Speakers - Speakers (IDT High Definition Audio CODEC)
+22:15:29 T:5916  NOTICE:         m_displayNameExtra: DIRECTSOUND: Speakers (IDT High Definition Audio CODEC)
+22:15:29 T:5916  NOTICE:         m_deviceType      : AE_DEVTYPE_PCM
+22:15:29 T:5916  NOTICE:         m_channels        : FL,FR
+22:15:29 T:5916  NOTICE:         m_sampleRates     : 44100
+22:15:29 T:5916  NOTICE:         m_dataFormats     : AE_FMT_FLOAT
+22:15:29 T:5916  NOTICE:     Device 2
+22:15:29 T:5916  NOTICE:         m_deviceName      : default
+22:15:29 T:5916  NOTICE:         m_displayName     : default
+22:15:29 T:5916  NOTICE:         m_displayNameExtra:
+22:15:29 T:5916  NOTICE:         m_deviceType      : AE_DEVTYPE_PCM
+22:15:29 T:5916  NOTICE:         m_channels        : FL,FR
+22:15:29 T:5916  NOTICE:         m_sampleRates     : 44100
+22:15:29 T:5916  NOTICE:         m_dataFormats     : AE_FMT_FLOAT
+22:15:29 T:5916  NOTICE: Enumerated WASAPI devices:
+22:15:29 T:5916  NOTICE:     Device 1
+22:15:29 T:5916  NOTICE:         m_deviceName      : {ECD512F1-5272-4163-822F-49EAA7D51D82}
+22:15:29 T:5916  NOTICE:         m_displayName     : Speakers - Speakers (IDT High Definition Audio CODEC)
+22:15:29 T:5916  NOTICE:         m_displayNameExtra: WASAPI: Speakers (IDT High Definition Audio CODEC)
+22:15:29 T:5916  NOTICE:         m_deviceType      : AE_DEVTYPE_PCM
+22:15:29 T:5916  NOTICE:         m_channels        : FL,FR
+22:15:29 T:5916  NOTICE:         m_sampleRates     : 192000,96000,88200,48000,44100
+22:15:29 T:5916  NOTICE:         m_dataFormats     : AE_FMT_S24NE4MSB,AE_FMT_S16NE,AE_FMT_S16LE,AE_FMT_S16BE
+22:15:29 T:5916  NOTICE:     Device 2
+22:15:29 T:5916  NOTICE:         m_deviceName      : default
+22:15:29 T:5916  NOTICE:         m_displayName     : default
+22:15:29 T:5916  NOTICE:         m_displayNameExtra:
+22:15:29 T:5916  NOTICE:         m_deviceType      : AE_DEVTYPE_PCM
+22:15:29 T:5916  NOTICE:         m_channels        : FL,FR
+22:15:29 T:5916  NOTICE:         m_sampleRates     : 192000,96000,88200,48000,44100
+22:15:29 T:5916  NOTICE:         m_dataFormats     : AE_FMT_S24NE4MSB,AE_FMT_S16NE,AE_FMT_S16LE,AE_FMT_S16BE
+22:15:29 T:1132  NOTICE: Running database version Addons20
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.tknorris.beta
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.queeup
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.jsergio
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.aresproject
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.BassFox-Official
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.BlazeRepo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.gfservers
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.noobsandnerds
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.dnaREPO-v2
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repo.natko1412
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.OperationRobocop
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.dokinl
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.supremacy
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.infadroid
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.Kinkin
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.onenation
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xbmchub
+22:15:30 T:1132  NOTICE: ADDONS: Using repository plugin.video.xbmctorrent
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.adriansports
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.VinManJSV
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.zt
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.mdrepo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.torrentstreaming
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.tva.common
+22:15:30 T:1132  NOTICE: ADDONS: Using repository hellyrepo.kodi
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xbmc.org
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.goodfellas
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.thebackup
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.rayw1986
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.universalscrapers
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.Dixie-Deans-XBMC-Repo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.coldkeys
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xbmcplus.xbmc-plugins
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.istream
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.exodus
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xxxadultxbmc
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xunitytalk
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.googlecode.xbmc-catchuptv-au
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.megatron
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.blamo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.rawmaintenance
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.FTV-Guide-Repo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.titan.addons
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.spoyser
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.sanctuary
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.gujal
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.filmkodi.com
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xibalba
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.merlin
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.jesusboxtv
+22:15:30 T:1132  NOTICE: ADDONS: Using repository superrepo.kodi.jarvis.all
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.dudehere.plugins
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.colossus
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.shani
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.podgod
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.schismtv.official
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.q
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.xbmcadult
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.eldorado
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.ytplugin
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.Cypherslocker
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.lambda
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.smash
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.communityrepo
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.kodibae
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.metalkettle
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.entertainmentrepobackup
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.whitecream
+22:15:30 T:1132  NOTICE: ADDONS: Using repository repository.teammaniac
+22:15:30 T:1132  NOTICE: Found screen: Generic PnP Monitor on Intel(R) HD Graphics 4000, adapter 0.
+22:15:30 T:1132  NOTICE: Found screen: Generic PnP Monitor on Intel(R) HD Graphics 4000, adapter 1.
+22:15:30 T:1132  NOTICE: Primary mode: 1366x768@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Secondary mode: 1440x900@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 320x200@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x200@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x240@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x240@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 400x300@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 400x300@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 512x384@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 512x384@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x400@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x400@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 800x600@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 800x600@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1024x768@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1024x768@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1360x768@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1360x768@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1366x768@ 40.00 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 1366x768@ 60.00 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 320x200@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 1 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x200@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 1 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x240@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 320x240@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 400x300@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 400x300@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 512x384@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 512x384@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x400@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 1 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x400@ 70.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 640x400@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 1 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 59.94 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 70.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 73.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 640x480@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 800x600@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 800x600@ 72.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 800x600@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1024x768@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1024x768@ 70.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 1024x768@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1152x864@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1152x864@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x600@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x600@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x720@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x720@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x768@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x768@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x800@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x800@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x960@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x960@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1280x1024@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 1280x1024@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 1360x768@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1360x768@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1366x768@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1366x768@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Previous line repeats 2 times.
+22:15:30 T:1132  NOTICE: Additional mode: 1440x900@ 60.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Additional mode: 1440x900@ 75.00 #2 - Full Screen
+22:15:30 T:1132  NOTICE: Checking resolution 16
+22:15:30 T:1132  NOTICE: Running database version Addons20
+22:15:30 T:1132  NOTICE: Running database version ViewModes6
+22:15:30 T:1132  NOTICE: Running database version Textures13
+22:15:30 T:1132  NOTICE: Running database version MyMusic56
+22:15:30 T:1132  NOTICE: Running database version MyVideos99
+22:15:30 T:1132  NOTICE: Running database version TV29
+22:15:30 T:1132  NOTICE: Running database version Epg11
+22:15:31 T:1132 WARNING: JSONRPC: Could not parse type "Setting.Details.SettingList"
+22:15:31 T:1132   ERROR: CScriptInvocationManager::ExecuteAsync - Not executing non-existing script C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.yts\service.py
+22:15:31 T:1132  NOTICE: ActiveAE DSP - starting
+22:15:31 T:1132   ERROR: CScriptInvocationManager::ExecuteAsync - Not executing non-existing script C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.placenta\service.py
+22:15:31 T:1132   ERROR: CScriptInvocationManager::ExecuteAsync - Not executing non-existing script C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.audio.jango\playerMP3.py
+22:15:31 T:1132  NOTICE: initialize done
+22:15:31 T:1132  NOTICE: Running the application...
+22:15:32 T:968   ERROR: CCurlFile::Open failed with code 404 for https://github.com/zqfaen/tva-common/raw/master/addons.xml.md5
+22:15:32 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://github.com/zqfaen/tva-common/raw/master/addons.xml.md5>
+22:15:32 T:968   ERROR: CRepositoryUpdateJob[repository.tknorris.beta] failed read checksum for directory 'https://github.com/zqfaen/tva-common/raw/master/addons.xml'
+22:15:33 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5
+22:15:33 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5>
+22:15:33 T:968   ERROR: CRepositoryUpdateJob[repository.aresproject] failed read checksum for directory 'https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml'
+22:15:33 T:5524 WARNING: script.module.python.twitch: API version |V5| is deprecated, update to |Helix| by |TBD|
+22:15:33 T:1132  NOTICE: WebServer: Started the webserver
+22:15:33 T:1132  NOTICE: starting upnp client
+22:15:33 T:5128  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
+22:15:33 T:5128  NOTICE: UDP: Listening on port 9777
+22:15:33 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml.md5
+22:15:33 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml.md5>
+22:15:33 T:968   ERROR: CRepositoryUpdateJob[repository.BassFox-Official] failed read checksum for directory 'https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml'
+22:15:33 T:5524  NOTICE: Twitch: Service: Start
+22:15:34 T:4684   ERROR: CCurlFile::FillBuffer - Failed: HTTP returned error 410
+22:15:34 T:4684   ERROR: CCurlFile::Open failed with code 410 for http://www.gfservers.com/plugins/addons.xml.md5
+22:15:34 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <http://www.gfservers.com/plugins/addons.xml.md5>
+22:15:34 T:4684   ERROR: CRepositoryUpdateJob[repository.gfservers] failed read checksum for directory 'http://www.gfservers.com/plugins/addons.xml'
+22:15:34 T:4756   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.beautifulsoup4\lib\bs4\__init__.py:181: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+                                            
+                                            The code that caused this warning is on line 4 of the file C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.torrentrssviewer\service.py. To get rid of this warning, change code that looks like this:
+                                            
+                                             BeautifulSoup([your markup])
+                                            
+                                            to this:
+                                            
+                                             BeautifulSoup([your markup], "html5lib")
+                                            
+                                              markup_type=markup_type))
+22:15:34 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml.md5
+22:15:34 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml.md5>
+22:15:34 T:968   ERROR: CRepositoryUpdateJob[repository.noobsandnerds] failed read checksum for directory 'https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml'
+22:15:34 T:4684   ERROR: CRepositoryUpdateJob[repository.OperationRobocop] failed read checksum for directory 'http://addon.shit.football/zips/addons.xml'
+22:15:34 T:4684   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/doki1/repo/master/addons.xml.md5
+22:15:34 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/doki1/repo/master/addons.xml.md5>
+22:15:34 T:4684   ERROR: CRepositoryUpdateJob[repository.dokinl] failed read checksum for directory 'https://raw.githubusercontent.com/doki1/repo/master/addons.xml'
+22:15:34 T:6028   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.beautifulsoup4\lib\bs4\__init__.py:181: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+                                            
+                                            The code that caused this warning is on line 4 of the file C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.eztv\service.py. To get rid of this warning, change code that looks like this:
+                                            
+                                             BeautifulSoup([your markup])
+                                            
+                                            to this:
+                                            
+                                             BeautifulSoup([your markup], "html5lib")
+                                            
+                                              markup_type=markup_type))
+22:15:35 T:5304  NOTICE: script.grab.fanart: mode
+22:15:35 T:5304  NOTICE: script.grab.fanart: refresh
+22:15:35 T:4928  NOTICE: [Covenant] ######################### COVENANT ############################
+22:15:35 T:4928  NOTICE: [Covenant] ####### CURRENT COVENANT VERSIONS REPORT ######################
+22:15:35 T:4928  NOTICE: [Covenant] ### COVENANT PLUGIN VERSION: 1.1.34 ###
+22:15:35 T:4928  NOTICE: [Covenant] ### COVENANT SCRIPT VERSION: 1.00.030 ###
+22:15:35 T:4928  NOTICE: [Covenant] ###############################################################
+22:15:35 T:4684   ERROR: CRepositoryUpdateJob[repository.supremacy] failed read checksum for directory 'http://supremacy.org.uk/zip/plugin/addon.xml'
+22:15:35 T:5888  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:15:35 T:4684   ERROR: CRepository: Failed to parse addons.xml. Malformated.
+22:15:35 T:4684   ERROR: CRepositoryUpdateJob[repository.infadroid] failed to read or parse directory 'https://raw.githubusercontent.com/infadroidmx/infadroid/master/addons.xml'
+22:15:35 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:35 T:3736   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:35 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:35 T:3736   ERROR: CRepositoryUpdateJob[repository.BlazeRepo] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:35 T:5164   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.beautifulsoup4\lib\bs4\__init__.py:181: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+                                            
+                                            The code that caused this warning is on line 10 of the file C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.1337x\service.py. To get rid of this warning, change code that looks like this:
+                                            
+                                             BeautifulSoup([your markup])
+                                            
+                                            to this:
+                                            
+                                             BeautifulSoup([your markup], "html5lib")
+                                            
+                                              markup_type=markup_type))
+22:15:36 T:1612   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.beautifulsoup4\lib\bs4\__init__.py:181: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+                                            
+                                            The code that caused this warning is on line 10 of the file C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.torrentz\service.py. To get rid of this warning, change code that looks like this:
+                                            
+                                             BeautifulSoup([your markup])
+                                            
+                                            to this:
+                                            
+                                             BeautifulSoup([your markup], "html5lib")
+                                            
+                                              markup_type=markup_type))
+22:15:36 T:4800   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.beautifulsoup4\lib\bs4\__init__.py:181: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+                                            
+                                            The code that caused this warning is on line 10 of the file C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.extratorrent\service.py. To get rid of this warning, change code that looks like this:
+                                            
+                                             BeautifulSoup([your markup])
+                                            
+                                            to this:
+                                            
+                                             BeautifulSoup([your markup], "html5lib")
+                                            
+                                              markup_type=markup_type))
+22:15:36 T:968   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:36 T:968   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/natko1412/addons.xml.md5
+22:15:36 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/natko1412/addons.xml.md5>
+22:15:36 T:968   ERROR: CRepositoryUpdateJob[repo.natko1412] failed read checksum for directory 'https://offshoregit.com/natko1412/addons.xml'
+22:15:36 T:1612  NOTICE: [TorrentZ viewer] Persistent Update Service starting...
+22:15:36 T:5164  NOTICE: [1337x viewer] Persistent Update Service starting...
+22:15:36 T:4800  NOTICE: [ExtraTorrent viewer] Persistent Update Service starting...
+22:15:36 T:6028  NOTICE: [EZTV Viewer] Persistent Update Service starting...
+22:15:36 T:1252  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:15:36 T:4768  NOTICE:  StorageServer Module loaded RUN
+22:15:36 T:4768  NOTICE: StorageClient-2.5.4 Starting server
+22:15:36 T:968   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:36 T:4756  NOTICE: [Torrent RSS Viewer] Persistent Update Service starting...
+22:15:37 T:3736   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:37 T:968   ERROR: CCurlFile::Open failed with code 404 for http://afedchin.github.io/repository/addons.xml.md5
+22:15:37 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <http://afedchin.github.io/repository/addons.xml.md5>
+22:15:37 T:968   ERROR: CRepositoryUpdateJob[plugin.video.xbmctorrent] failed read checksum for directory 'http://afedchin.github.io/repository/addons.xml'
+22:15:37 T:2596  NOTICE: Starting XXX-O-DUS Service
+22:15:37 T:968   ERROR: CCurlFile::FillBuffer - Failed: HTTP returned error 410
+22:15:37 T:968   ERROR: CCurlFile::Open failed with code 410 for http://adriansports.net16.net/addons.xml.md5
+22:15:37 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <http://adriansports.net16.net/addons.xml.md5>
+22:15:37 T:968   ERROR: CRepositoryUpdateJob[repository.adriansports] failed read checksum for directory 'http://adriansports.net16.net/addons.xml'
+22:15:37 T:4684   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:37 T:4684   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/kinkin-xbmc-repository/addons.xml.md5
+22:15:37 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/kinkin-xbmc-repository/addons.xml.md5>
+22:15:37 T:4684   ERROR: CRepositoryUpdateJob[repository.Kinkin] failed read checksum for directory 'https://offshoregit.com/kinkin-xbmc-repository/addons.xml'
+22:15:37 T:4684   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml.md5
+22:15:37 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml.md5>
+22:15:37 T:4684   ERROR: CRepositoryUpdateJob[repository.mdrepo] failed read checksum for directory 'https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml'
+22:15:37 T:6012 WARNING: script.module.python.twitch: API version |V5| is deprecated, update to |Helix| by |TBD|
+22:15:38 T:6012  NOTICE: URLResolver: Initializing URLResolver version: 5.0.38
+22:15:38 T:4208  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:15:38 T:5856  NOTICE: script.grab.fanart: Grab Fanart Service Started
+22:15:39 T:4208  NOTICE: PrimeWire: Service: Installed Version: 4.0.07
+22:15:39 T:2300  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:15:39 T:2300  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:15:39 T:2300  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:15:39 T:2300  NOTICE: metahandler: No SQLite rows requiring update
+22:15:39 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:39 T:3736   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml.md5
+22:15:39 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml.md5>
+22:15:39 T:3736   ERROR: CRepositoryUpdateJob[repository.VinManJSV] failed read checksum for directory 'https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml'
+22:15:39 T:3736   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:40 T:4684   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:40 T:4684   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/iCanuck/Torrent-Streaming-Repo/addons.xml.md5
+22:15:40 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/iCanuck/Torrent-Streaming-Repo/addons.xml.md5>
+22:15:40 T:4684   ERROR: CRepositoryUpdateJob[repository.torrentstreaming] failed read checksum for directory 'https://offshoregit.com/iCanuck/Torrent-Streaming-Repo/addons.xml'
+22:15:40 T:4208  NOTICE: PrimeWire: Loading sqlite3 as DB engine
+22:15:40 T:4208  NOTICE: PrimeWire: Service: Resetting...
+22:15:40 T:4208  NOTICE: PrimeWire: Service: starting...
+22:15:40 T:3736   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/goodfellasteam/addonrepo/master/addons.xml.md5
+22:15:40 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/goodfellasteam/addonrepo/master/addons.xml.md5>
+22:15:40 T:3736   ERROR: CRepositoryUpdateJob[repository.goodfellas] failed read checksum for directory 'https://raw.githubusercontent.com/goodfellasteam/addonrepo/master/addons.xml'
+22:15:40 T:3736   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:41 T:2068   ERROR: EXCEPTION: Unknown addon id 'plugin.video.ugottoc'.
+22:15:42 T:2068 WARNING: script.module.python.twitch: API version |V5| is deprecated, update to |Helix| by |TBD|
+22:15:42 T:2068  NOTICE: URLResolver: Initializing URLResolver version: 5.0.38
+22:15:42 T:2068  NOTICE: APEP Common Routines: Setting DHCR API Access log to: C:\Users\hacker\AppData\Roaming\Kodi\userdata\addon_data\script.module.dudehere.routines\access.log
+22:15:42 T:2068  NOTICE: APEP Common Routines: DHCR Service Starting...
+22:15:42 T:2068  NOTICE: APEP Common Routines:  
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMM DudeHere - 2016 - http://forums.tvaddons.ag MMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+                                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+22:15:42 T:2068  NOTICE: APEP Common Routines: Version: 0.7.14
+22:15:42 T:2068  NOTICE: APEP Common Routines: Repository installed: True
+22:15:42 T:2068  NOTICE: APEP Common Routines: Transmogrifier installed: False
+22:15:42 T:2068  NOTICE: APEP Common Routines: Walter Sobchak installed: False
+22:15:42 T:2068  NOTICE: APEP Common Routines: Launching Fanart WebInterface on: 127.0.0.1:8630
+22:15:42 T:6136  NOTICE: Indigo NOTICE: STARTING Indigo SERVICE
+22:15:42 T:300  NOTICE: Universal - An Addons Toolkit: -watchhistory- -Loading sqlite3 as DB engine version: 3.8.6
+22:15:42 T:300  NOTICE: Universal - An Addons Toolkit: -watchhistory- -DELETE FROM watch_history WHERE lastwatched < '2019-07-04'
+22:15:42 T:3932  NOTICE: [SPECTO]: ->----------                PARAMS: {'action': 'service'}
+22:15:42 T:648  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:15:42 T:648  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:15:42 T:648  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:15:42 T:648  NOTICE: Previous line repeats 1 times.
+22:15:42 T:648  NOTICE: metahandler: No SQLite rows requiring update
+22:15:42 T:648 WARNING: Attempt to use invalid handle -1
+22:15:43 T:3736 WARNING: Previous line repeats 1 times.
+22:15:43 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:43 T:3736   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:43 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:43 T:3736   ERROR: CRepositoryUpdateJob[repository.rayw1986] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:43 T:6136 WARNING: CSkinInfo: failed to load skin settings
+22:15:43 T:968   ERROR: CRepositoryUpdateJob[repository.zt] failed read checksum for directory 'http://teamuniversal.xyz/modules4all/addons.xml'
+22:15:43 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/mucky-duck/istream/master/repo/addons.xml.md5
+22:15:43 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/mucky-duck/istream/master/repo/addons.xml.md5>
+22:15:43 T:968   ERROR: CRepositoryUpdateJob[repository.istream] failed read checksum for directory 'https://raw.githubusercontent.com/mucky-duck/istream/master/repo/addons.xml'
+22:15:43 T:3736   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:44 T:968   ERROR: Previous line repeats 1 times.
+22:15:44 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5
+22:15:44 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5>
+22:15:44 T:968   ERROR: CRepositoryUpdateJob[repository.gujal] failed read checksum for directory 'https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml'
+22:15:45 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5
+22:15:45 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5>
+22:15:45 T:968   ERROR: CRepositoryUpdateJob[repository.xibalba] failed read checksum for directory 'https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml'
+22:15:45 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/jesusboxrepo/repository/master/addons.xml.md5
+22:15:45 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/jesusboxrepo/repository/master/addons.xml.md5>
+22:15:45 T:968   ERROR: CRepositoryUpdateJob[repository.jesusboxtv] failed read checksum for directory 'https://raw.githubusercontent.com/jesusboxrepo/repository/master/addons.xml'
+22:15:46 T:4684   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:47 T:2596  NOTICE: Starting XXX-O-DUS Chaturbate Monitoring
+22:15:47 T:968   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:47 T:968   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/dudehere-repository/addons/addons.xml.md5
+22:15:47 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/dudehere-repository/addons/addons.xml.md5>
+22:15:47 T:968   ERROR: CRepositoryUpdateJob[repository.dudehere.plugins] failed read checksum for directory 'https://offshoregit.com/dudehere-repository/addons/addons.xml'
+22:15:48 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:48 T:3736   ERROR: CCurlFile::Open failed with code 0 for http://mrepo.uk/merlinrepo/addons.xml.md5
+22:15:48 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://mrepo.uk/merlinrepo/addons.xml.md5>
+22:15:48 T:3736   ERROR: CRepositoryUpdateJob[repository.merlin] failed read checksum for directory 'http://mrepo.uk/merlinrepo/addons.xml'
+22:15:48 T:3736   ERROR: CCurlFile::Open failed with code 404 for http://github.com/schismtv/officialrepo/raw/master/addons.xml.md5
+22:15:48 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://github.com/schismtv/officialrepo/raw/master/addons.xml.md5>
+22:15:48 T:3736   ERROR: CRepositoryUpdateJob[repository.schismtv.official] failed read checksum for directory 'http://github.com/schismtv/officialrepo/raw/master/addons.xml'
+22:15:48 T:4684   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:48 T:4684   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:48 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:48 T:4684   ERROR: CRepositoryUpdateJob[repository.shani] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:48 T:4684   ERROR: CCurlFile::Open failed with code 404 for https://github.com/jdf76/repository/raw/master/addons.xml.md5
+22:15:48 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://github.com/jdf76/repository/raw/master/addons.xml.md5>
+22:15:48 T:4684   ERROR: CRepositoryUpdateJob[repository.ytplugin] failed read checksum for directory 'https://github.com/jdf76/repository/raw/master/addons.xml'
+22:15:48 T:3736   ERROR: CCurlFile::Open failed with code 404 for http://raw.github.com/Eldorados/eldorado-xbmc-addons/master/addons.xml.md5
+22:15:48 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://raw.github.com/Eldorados/eldorado-xbmc-addons/master/addons.xml.md5>
+22:15:48 T:3736   ERROR: CRepositoryUpdateJob[repository.eldorado] failed read checksum for directory 'http://raw.github.com/Eldorados/eldorado-xbmc-addons/master/addons.xml'
+22:15:49 T:3736   ERROR: CCurlFile::Open failed with code 404 for http://raw.github.com/lambda81/lambda-repo/master/addons.xml.md5
+22:15:49 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://raw.github.com/lambda81/lambda-repo/master/addons.xml.md5>
+22:15:49 T:3736   ERROR: CRepositoryUpdateJob[repository.lambda] failed read checksum for directory 'http://raw.github.com/lambda81/lambda-repo/master/addons.xml'
+22:15:49 T:4684   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:49 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Server returned nothing (no headers, no data)(52)
+22:15:49 T:3736   ERROR: CCurlFile::Open failed with code 0 for http://mediarepos.net/Repos/smashrepo/addons.xml.md5
+22:15:49 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://mediarepos.net/Repos/smashrepo/addons.xml.md5>
+22:15:49 T:3736   ERROR: CRepositoryUpdateJob[repository.smash] failed read checksum for directory 'http://mediarepos.net/Repos/smashrepo/addons.xml'
+22:15:50 T:968   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:50 T:968   ERROR: CCurlFile::Open failed with code 0 for http://offshoregit.com/podgod/repo/addons.xml.md5
+22:15:50 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <http://offshoregit.com/podgod/repo/addons.xml.md5>
+22:15:50 T:968   ERROR: CRepositoryUpdateJob[repository.podgod] failed read checksum for directory 'http://offshoregit.com/podgod/repo/addons.xml'
+22:15:50 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/MetalKettle/MK/master/addons.xml.md5
+22:15:50 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/MetalKettle/MK/master/addons.xml.md5>
+22:15:50 T:968   ERROR: CRepositoryUpdateJob[repository.metalkettle] failed read checksum for directory 'https://raw.githubusercontent.com/MetalKettle/MK/master/addons.xml'
+22:15:51 T:4684   ERROR: ADDON: extension '' is not currently supported for service addon
+22:15:51 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:51 T:3736   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:51 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:51 T:3736   ERROR: CRepositoryUpdateJob[repository.communityrepo] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:51 T:3736   ERROR: XFILE::CDirectory::GetDirectory - Error getting
+22:15:51 T:4684   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:15:51 T:4684   ERROR: CCurlFile::Open failed with code 404 for https://github.com/zqfaen/tva-common/raw/master/addons.xml.md5
+22:15:51 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://github.com/zqfaen/tva-common/raw/master/addons.xml.md5>
+22:15:51 T:4684   ERROR: CRepositoryUpdateJob[repository.tknorris.beta] failed read checksum for directory 'https://github.com/zqfaen/tva-common/raw/master/addons.xml'
+22:15:52 T:3736   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5
+22:15:52 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml.md5>
+22:15:52 T:3736   ERROR: CRepositoryUpdateJob[repository.aresproject] failed read checksum for directory 'https://raw.githubusercontent.com/Colossal1/repository.colossus.common/master/addons.xml'
+22:15:52 T:3736   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml.md5
+22:15:52 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml.md5>
+22:15:52 T:3736   ERROR: CRepositoryUpdateJob[repository.BassFox-Official] failed read checksum for directory 'https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml'
+22:15:52 T:968   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:52 T:968   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:52 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:52 T:968   ERROR: CRepositoryUpdateJob[repository.whitecream] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:52 T:4684   ERROR: CCurlFile::FillBuffer - Failed: HTTP returned error 410
+22:15:52 T:4684   ERROR: CCurlFile::Open failed with code 410 for http://www.gfservers.com/plugins/addons.xml.md5
+22:15:52 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <http://www.gfservers.com/plugins/addons.xml.md5>
+22:15:52 T:4684   ERROR: CRepositoryUpdateJob[repository.gfservers] failed read checksum for directory 'http://www.gfservers.com/plugins/addons.xml'
+22:15:52 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml.md5
+22:15:52 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml.md5>
+22:15:52 T:968   ERROR: CRepositoryUpdateJob[repository.noobsandnerds] failed read checksum for directory 'https://raw.githubusercontent.com/OpenELEQ/repository.elysium/master/elysium.xml'
+22:15:53 T:968   ERROR: CRepositoryUpdateJob[repository.OperationRobocop] failed read checksum for directory 'http://addon.shit.football/zips/addons.xml'
+22:15:53 T:968   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/doki1/repo/master/addons.xml.md5
+22:15:53 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/doki1/repo/master/addons.xml.md5>
+22:15:53 T:968   ERROR: CRepositoryUpdateJob[repository.dokinl] failed read checksum for directory 'https://raw.githubusercontent.com/doki1/repo/master/addons.xml'
+22:15:54 T:968   ERROR: CRepositoryUpdateJob[repository.supremacy] failed read checksum for directory 'http://supremacy.org.uk/zip/plugin/addon.xml'
+22:15:54 T:968   ERROR: CRepository: Failed to parse addons.xml. Malformated.
+22:15:54 T:968   ERROR: CRepositoryUpdateJob[repository.infadroid] failed to read or parse directory 'https://raw.githubusercontent.com/infadroidmx/infadroid/master/addons.xml'
+22:15:54 T:3736   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:54 T:3736   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5
+22:15:54 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5>
+22:15:54 T:3736   ERROR: CRepositoryUpdateJob[repository.BlazeRepo] failed read checksum for directory 'https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml'
+22:15:54 T:4684   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:54 T:4684   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/natko1412/addons.xml.md5
+22:15:54 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/natko1412/addons.xml.md5>
+22:15:54 T:4684   ERROR: CRepositoryUpdateJob[repo.natko1412] failed read checksum for directory 'https://offshoregit.com/natko1412/addons.xml'
+22:15:55 T:3736   ERROR: CCurlFile::Open failed with code 404 for http://afedchin.github.io/repository/addons.xml.md5
+22:15:55 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://afedchin.github.io/repository/addons.xml.md5>
+22:15:55 T:3736   ERROR: CRepositoryUpdateJob[plugin.video.xbmctorrent] failed read checksum for directory 'http://afedchin.github.io/repository/addons.xml'
+22:15:55 T:3736   ERROR: CCurlFile::FillBuffer - Failed: HTTP returned error 410
+22:15:55 T:3736   ERROR: CCurlFile::Open failed with code 410 for http://adriansports.net16.net/addons.xml.md5
+22:15:55 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <http://adriansports.net16.net/addons.xml.md5>
+22:15:55 T:3736   ERROR: CRepositoryUpdateJob[repository.adriansports] failed read checksum for directory 'http://adriansports.net16.net/addons.xml'
+22:15:55 T:3736   ERROR: CCurlFile::Open failed with code 404 for https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml.md5
+22:15:55 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml.md5>
+22:15:55 T:3736   ERROR: CRepositoryUpdateJob[repository.mdrepo] failed read checksum for directory 'https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml'
+22:15:55 T:3736  NOTICE: VideoInfoScanner: Starting scan ..
+22:15:55 T:3736  NOTICE: VideoInfoScanner: Finished scan. Scanning for video info took 00:00
+22:15:56 T:968   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:56 T:968   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/kinkin-xbmc-repository/addons.xml.md5
+22:15:56 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/kinkin-xbmc-repository/addons.xml.md5>
+22:15:56 T:968   ERROR: CRepositoryUpdateJob[repository.Kinkin] failed read checksum for directory 'https://offshoregit.com/kinkin-xbmc-repository/addons.xml'
+22:15:57 T:5268   ERROR: XFILE::CDirectory::Create - Error creating C:\Users\hacker\AppData\Roaming\Kodi\userdata\playlists\video\MetalliQ\TVShows\
+22:15:57 T:5268   ERROR: XFILE::CDirectory::Create - Error creating special://profile/playlists/video/MetalliQ/TVShows/
+22:15:57 T:4580 WARNING: Attempt to use invalid handle -1
+22:15:57 T:4580  NOTICE: [xbmcswift2] Request for "/movies/batch_add_to_library" matches rule for function "movies_batch_add_to_library"
+22:15:57 T:4684   ERROR: CCurlFile::FillBuffer - Failed: Couldn't resolve host name(6)
+22:15:57 T:4684   ERROR: CCurlFile::Open failed with code 0 for https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml.md5
+22:15:57 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml.md5>
+22:15:57 T:4684   ERROR: CRepositoryUpdateJob[repository.VinManJSV] failed read checksum for directory 'https://offshoregit.com/VinManJSV/repo/raw/master/addons.xml'
+22:16:29 T:3652 WARNING: [ Neptune Rising] Object Not Found : 404
+22:16:29 T:3512  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:16:29 T:3512  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:16:29 T:3512  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:16:29 T:3512  NOTICE: metahandler: No SQLite rows requiring update
+22:16:37 T:5324  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:16:37 T:5324  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:16:37 T:5324  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:16:37 T:5324  NOTICE: metahandler: No SQLite rows requiring update
+22:16:39 T:2272  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:16:42 T:884 WARNING: script.module.python.twitch: API version |V5| is deprecated, update to |Helix| by |TBD|
+22:16:42 T:884  NOTICE: ResolveURL: Initializing ResolveURL version: 5.0.33
+22:16:42 T:4380 WARNING: CPythonInvoker(60): Script invoked without an addon. Adding all addon modules installed to python path as fallback. This behaviour will be removed in future version.
+22:16:42 T:4380  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:16:42 T:4380  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:16:43 T:4380  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:16:43 T:4380  NOTICE: metahandler: No SQLite rows requiring update
+22:16:43 T:4380  NOTICE: iSTREAM: Cache Cleanup Service - Starting\Waking...
+22:16:43 T:4380  NOTICE: iSTREAM: -netcache- -Loading sqlite3 as DB engine version: 3.8.6
+22:16:43 T:4380  NOTICE: iSTREAM: -netcache- -DELETE FROM netcache WHERE cached < '2019-07-24'
+22:16:43 T:4380  NOTICE: iSTREAM: Cache Cleanup Service - Sleeping... Sleep for 300 mins
+22:16:43 T:884  NOTICE: input_list: []
+22:16:43 T:884 WARNING: CPythonInvoker(59, C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.ufc-finest\default.py): the python script "C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.ufc-finest\default.py" has left several classes in memory that we couldn't clean up. The classes include: class XBMCAddon::xbmc::Player
+22:16:43 T:968   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:16:48 T:1936 WARNING: script.module.python.twitch: API version |V5| is deprecated, update to |Helix| by |TBD|
+22:16:48 T:1936  NOTICE: Twitch: Calling |_list_featured_streams| for mode |featured_streams| with pos args |[]| and kwargs |{}|
+22:16:48 T:1936 WARNING: Twitch: Warning: Arguments |{'sf_options': 'fanart=special://home/addons\\plugin.video.twitch\\fanart.png&meta=plot%3DFeatured%2BStreams%26label%3DFeatured%2BStreams&desc=Featured Streams&_options_sf'}| were passed but unused by |_list_featured_streams| for mode |featured_streams|
+22:16:48 T:1936   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.requests\lib\requests\packages\urllib3\util\ssl_.py:335: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+                                              SNIMissingWarning
+22:16:48 T:1936   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.requests\lib\requests\packages\urllib3\util\ssl_.py:133: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+                                              InsecurePlatformWarning
+22:16:48 T:1936   ERROR: C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.requests\lib\requests\packages\urllib3\connectionpool.py:852: InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+                                              InsecureRequestWarning)
+22:16:50 T:1764  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:16:50 T:1764  NOTICE: docu.run
+22:16:50 T:1764  NOTICE: docu.main_list {'sf_options': 'fanart=special://home/addons\\plugin.video.documentarytube\\fanart.jpg&meta=castandrole%3D%255B%255D%26label%3DDocumentaryTube&desc=Thousands of Documentaries on YouTube. Including Richard Attenborough, Nat Geo, BBC, PBS - Nova, How Its Made, Bear Grylls, Bush Tucker Man, Tanked, Grand Designs and many more.&_options_sf'}
+22:16:52 T:4932 WARNING: [xbmcswift2] No converter provided, unicode should be used, but returning str value
+22:16:52 T:4932 WARNING: Previous line repeats 1 times.
+22:16:52 T:4932  NOTICE: [xbmcswift2] Request for "/video/podcasts/by-genre/26/" matches rule for function "show_podcasts"
+22:16:54 T:3280  NOTICE: [plugin.video.youtube] Running: YouTube (6.5.0) on Jarvis (Kodi-16.1) with Python 2.7.8
+                                            	Path: /
+                                            	Params: {}
+22:16:54 T:6116 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.youtube/sign/in/
+22:16:54 T:6116   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.youtube/sign/in/>
+22:16:56 T:968   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:16:57 T:3736 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.program.super.favourites/?label=Cartoon+Channel&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fiphone-streaming.ustream.tv%252Fuhls%252F19964352%252Fstreams%252Flive%252Fiphone%252Fplaylist.m3u8%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Ftheboyz.comli.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DCartoon%25252BChannel%252526castandrole%25253D%2525255B%2525255D%252526title%25253DCartoon%25252BChannel%2526winID%253D10000%2526_options_sf%22%29&image=http%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Ftv-cartoons-7310188.jpg&fanart=http%3A%2F%2Ftheboyz.comli.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=
+22:16:57 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.program.super.favourites/?label=Cartoon+Channel&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fiphone-streaming.ustream.tv%252Fuhls%252F19964352%252Fstreams%252Flive%252Fiphone%252Fplaylist.m3u8%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Ftheboyz.comli.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DCartoon%25252BChannel%252526castandrole%25253D%2525255B%2525255D%252526title%25253DCartoon%25252BChannel%2526winID%253D10000%2526_options_sf%22%29&image=http%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Ftv-cartoons-7310188.jpg&fanart=http%3A%2F%2Ftheboyz.comli.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=>
+22:16:57 T:3736 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.program.super.favourites/?label=Cartoon+Network&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fd1hya96e2cm7qi.cloudfront.net%252FLive%252F_definst_%252Fsweetbcha1novD28_W_250.sdp%252Fplaylist.m3u8%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DCartoon%25252BNetwork%252526castandrole%25253D%2525255B%2525255D%252526title%25253DCartoon%25252BNetwork%2526winID%253D10000%2526_options_sf%22%29&image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fbb%2FCartoon_Network_HD_logo.svg%2F1811px-Cartoon_Network_HD_logo.svg.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=
+22:16:57 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.program.super.favourites/?label=Cartoon+Network&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fd1hya96e2cm7qi.cloudfront.net%252FLive%252F_definst_%252Fsweetbcha1novD28_W_250.sdp%252Fplaylist.m3u8%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DCartoon%25252BNetwork%252526castandrole%25253D%2525255B%2525255D%252526title%25253DCartoon%25252BNetwork%2526winID%253D10000%2526_options_sf%22%29&image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fbb%2FCartoon_Network_HD_logo.svg%2F1811px-Cartoon_Network_HD_logo.svg.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=>
+22:16:57 T:3736 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.program.super.favourites/?label=Disney+Jr&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3D%2524doregex%255Bget_sxstream%255D%257CUser-Agent%253DMozilla%252F5.0%2B%2528iPad%253B%2BCPU%2BOS%2B6_0%2Blike%2BMac%2BOS%2BX%2529%2BAppleWebKit%252F536.26%2B%2528KHTML%252C%2Blike%2BGecko%2529%2BVersion%252F6.0%2BMobile%252F10A5376e%2BSafari%252F8536.25%26mode%3D17%26regexs%3D%257Bu%2527get_sxstream%2527%253A%2520%257B%2527refer%2527%253A%2520u%2527http%253A%2F%2Fwww.liveonlinetv247.info%2F%2527%252C%2520%2527page%2527%253A%2520u%2527http%253A%2F%2Fwww.liveonlinetv247.info%2Fembed%2Fdisneychannel.php%253Fwidth%253D650%2526height%253B%253D480%2527%252C%2520%2527expre%2527%253A%2520u%2527src%253D.%252A%255B%2522%252C%255C%2527%255D%2528.%252Am3u8.%252A%253F%2529%255B%2522%252C%255C%2527%255D%2527%257D%257D%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DDisney%25252BChannel%25252B%25252528its%25252Bdown%25252Band%25252Bup%25252529%252526castandrole%25253D%2525255B%2525255D%252526title%25253DDisney%25252BChannel%25252B%25252528its%25252Bdown%25252Band%25252Bup%25252529%2526winID%253D10000%2526_options_sf%22%29&image=http%3A%2F%2Fwww.liveonlinetv247.info%2Fimages%2Fdisneychannel.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=
+22:16:57 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.program.super.favourites/?label=Disney+Jr&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3D%2524doregex%255Bget_sxstream%255D%257CUser-Agent%253DMozilla%252F5.0%2B%2528iPad%253B%2BCPU%2BOS%2B6_0%2Blike%2BMac%2BOS%2BX%2529%2BAppleWebKit%252F536.26%2B%2528KHTML%252C%2Blike%2BGecko%2529%2BVersion%252F6.0%2BMobile%252F10A5376e%2BSafari%252F8536.25%26mode%3D17%26regexs%3D%257Bu%2527get_sxstream%2527%253A%2520%257B%2527refer%2527%253A%2520u%2527http%253A%2F%2Fwww.liveonlinetv247.info%2F%2527%252C%2520%2527page%2527%253A%2520u%2527http%253A%2F%2Fwww.liveonlinetv247.info%2Fembed%2Fdisneychannel.php%253Fwidth%253D650%2526height%253B%253D480%2527%252C%2520%2527expre%2527%253A%2520u%2527src%253D.%252A%255B%2522%252C%255C%2527%255D%2528.%252Am3u8.%252A%253F%2529%255B%2522%252C%255C%2527%255D%2527%257D%257D%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DDisney%25252BChannel%25252B%25252528its%25252Bdown%25252Band%25252Bup%25252529%252526castandrole%25253D%2525255B%2525255D%252526title%25253DDisney%25252BChannel%25252B%25252528its%25252Bdown%25252Band%25252Bup%25252529%2526winID%253D10000%2526_options_sf%22%29&image=http%3A%2F%2Fwww.liveonlinetv247.info%2Fimages%2Fdisneychannel.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=>
+22:16:57 T:3736 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.program.super.favourites/?label=Nickelodeon&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fover.ddns.net%253A65209%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DNickelodeon%252526castandrole%25253D%2525255B%2525255D%252526title%25253DNickelodeon%2526winID%253D10000%2526_options_sf%22%29&image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F73%2FNickelodeon_schweiz_logo.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=
+22:16:57 T:3736   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.program.super.favourites/?label=Nickelodeon&mode=600&cmd=HOME%3APlayMedia%28%22plugin%3A%2F%2Fplugin.video.goodfellas%2F%3Furl%3Dhttp%253A%252F%252Fover.ddns.net%253A65209%26mode%3D12%26sf_options%3Dfanart%253Dhttp%253A%252F%252Fwww.goodfellasteam.com%252Fgoodfellas%252Ffanart%252Fgoodfellas.jpg%2526meta%253Dlabel%25253DNickelodeon%252526castandrole%25253D%2525255B%2525255D%252526title%25253DNickelodeon%2526winID%253D10000%2526_options_sf%22%29&image=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F73%2FNickelodeon_schweiz_logo.png&fanart=http%3A%2F%2Fwww.goodfellasteam.com%2Fgoodfellas%2Ffanart%2Fgoodfellas.jpg&content_type=>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2506%2F854081161001_606369%2C6875001_6063691299001%2C8032001_6063691299001%2C7725001_6063691299001%2C9990001_6063691299001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+was+running+the+Russia+investigation+in+%E2%80%98name+only%E2%80%99%3A+Corey+Lewandowski&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2506%2F854081161001_606369%2C6875001_6063691299001%2C8032001_6063691299001%2C7725001_6063691299001%2C9990001_6063691299001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+was+running+the+Russia+investigation+in+%E2%80%98name+only%E2%80%99%3A+Corey+Lewandowski&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1282%2F854081161001_606370%2C2039001_6063703800001%2C2316001_6063703800001%2C4348001_6063703800001%2C2569001_6063703800001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Andy+Biggs+grills+Mueller+on+Capitol+Hill&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1282%2F854081161001_606370%2C2039001_6063703800001%2C2316001_6063703800001%2C4348001_6063703800001%2C2569001_6063703800001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Andy+Biggs+grills+Mueller+on+Capitol+Hill&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3338%2F854081161001_606369%2C1697001_6063690419001%2C2014001_6063690419001%2C3492001_6063690419001%2C1847001_6063690419001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Did+Mueller+lose+his+credibility%3F&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3338%2F854081161001_606369%2C1697001_6063690419001%2C2014001_6063690419001%2C3492001_6063690419001%2C1847001_6063690419001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Did+Mueller+lose+his+credibility%3F&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F506%2F854081161001_606367%2C5202001_6063674885001%2C5290001_6063674885001%2C2390001_6063674885001%2C5005001_6063674885001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+had+an+awful+performance%3A+Bill+Gavin&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F506%2F854081161001_606367%2C5202001_6063674885001%2C5290001_6063674885001%2C2390001_6063674885001%2C5005001_6063674885001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+had+an+awful+performance%3A+Bill+Gavin&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2990%2F854081161001_606368%2C1631001_6063678198001%2C0226001_6063678198001%2C0095001_6063678198001%2C0672001_6063678198001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+acting+ICE+Director%3A+Security+crisis+at+the+border+enriches+cartels&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2990%2F854081161001_606368%2C1631001_6063678198001%2C0226001_6063678198001%2C0095001_6063678198001%2C0672001_6063678198001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+acting+ICE+Director%3A+Security+crisis+at+the+border+enriches+cartels&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F782%2F854081161001_60636%2C61455001_6063655454001%2C58985001_6063655454001%2C61379001_6063655454001%2C58609001_6063655454001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Trump%3A+Mueller%E2%80%99s+aides+were+untruthful&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F782%2F854081161001_60636%2C61455001_6063655454001%2C58985001_6063655454001%2C61379001_6063655454001%2C58609001_6063655454001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Trump%3A+Mueller%E2%80%99s+aides+were+untruthful&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3638%2F854081161001_60636%2C53547001_6063649183001%2C53905001_6063649183001%2C49931001_6063649183001%2C53552001_6063649183001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Tesla+shares+down+after+Q2+earnings+miss&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3638%2F854081161001_60636%2C53547001_6063649183001%2C53905001_6063649183001%2C49931001_6063649183001%2C53552001_6063649183001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Tesla+shares+down+after+Q2+earnings+miss&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3238%2F854081161001_606363%2C8660001_6063634433001%2C7202001_6063634433001%2C7898001_6063634433001%2C7909001_6063634433001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=DOJ+to+release+media+advisory+about+T-Mobile%2C+Sprint%3A+Charlie+Gasparino&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3238%2F854081161001_606363%2C8660001_6063634433001%2C7202001_6063634433001%2C7898001_6063634433001%2C7909001_6063634433001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=DOJ+to+release+media+advisory+about+T-Mobile%2C+Sprint%3A+Charlie+Gasparino&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2322%2F854081161001_60636%2C40624001_6063639250001%2C38214001_6063639250001%2C38216001_6063639250001%2C40054001_6063639250001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Where+to+find+value+in+the+real+estate+sector&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2322%2F854081161001_60636%2C40624001_6063639250001%2C38214001_6063639250001%2C38216001_6063639250001%2C40054001_6063639250001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Where+to+find+value+in+the+real+estate+sector&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F362%2F854081161001_606363%2C5634001_6063632027001%2C7134001_6063632027001%2C7352001_6063632027001%2C5522001_6063632027001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Courtney+Reum%3A+I+have+no+intention+of+selling+Facebook+despite+FTC%E2%80%99s+%245B+fine&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F362%2F854081161001_606363%2C5634001_6063632027001%2C7134001_6063632027001%2C7352001_6063632027001%2C5522001_6063632027001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Courtney+Reum%3A+I+have+no+intention+of+selling+Facebook+despite+FTC%E2%80%99s+%245B+fine&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3590%2F854081161001_606361%2C6666001_6063614321001%2C5953001_6063614321001%2C5960001_6063614321001%2C4851001_6063614321001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Puerto+Ricans+demand+governor%E2%80%99s+resignation+over+corruption&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3590%2F854081161001_606361%2C6666001_6063614321001%2C5953001_6063614321001%2C5960001_6063614321001%2C4851001_6063614321001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Puerto+Ricans+demand+governor%E2%80%99s+resignation+over+corruption&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F270%2F854081161001_606362%2C3582001_6063622174001%2C4320001_6063622174001%2C1710001_6063622174001%2C3404001_6063622174001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Should+investors+remain+bullish+about+US-China+trade+talks%3F&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F270%2F854081161001_606362%2C3582001_6063622174001%2C4320001_6063622174001%2C1710001_6063622174001%2C3404001_6063622174001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Should+investors+remain+bullish+about+US-China+trade+talks%3F&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1686%2F854081161001_606362%2C8654001_6063626703001%2C9905001_6063626703001%2C9222001_6063626703001%2C9221001_6063626703001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+didn%E2%80%99t+have+good+day%2C+but+Trump+did%3A+Former+Florida+Senator+George+LeMieux&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1686%2F854081161001_606362%2C8654001_6063626703001%2C9905001_6063626703001%2C9222001_6063626703001%2C9221001_6063626703001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+didn%E2%80%99t+have+good+day%2C+but+Trump+did%3A+Former+Florida+Senator+George+LeMieux&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3922%2F854081161001_60636%2C28718001_6063629414001%2C32991001_6063629414001%2C32838001_6063629414001%2C32738001_6063629414001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=WeWork+may+speed+up+plans+for+IPO&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3922%2F854081161001_60636%2C28718001_6063629414001%2C32991001_6063629414001%2C32838001_6063629414001%2C32738001_6063629414001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=WeWork+may+speed+up+plans+for+IPO&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F954%2F854081161001_6063643%2C504001_6063641661001%2C057001_6063641661001%2C694001_6063641661001%2C058001_6063641661001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Facebook+shares+rise+after+Q2+earnings+beat&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F954%2F854081161001_6063643%2C504001_6063641661001%2C057001_6063641661001%2C694001_6063641661001%2C058001_6063641661001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Facebook+shares+rise+after+Q2+earnings+beat&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3198%2F854081161001_606361%2C5579001_6063610848001%2C5491001_6063610848001%2C6279001_6063610848001%2C6842001_6063610848001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+couldn%E2%80%99t+respond+to+basic+questions%3A+Deneen+Borelli&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3198%2F854081161001_606361%2C5579001_6063610848001%2C5491001_6063610848001%2C6279001_6063610848001%2C6842001_6063610848001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+couldn%E2%80%99t+respond+to+basic+questions%3A+Deneen+Borelli&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F334%2F854081161001_60636%2C21485001_6063614062001%2C21487001_6063614062001%2C17952001_6063614062001%2C21301001_6063614062001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=UPS+plans+to+start+Sunday+delivery%2C+Dunkin+adds+beyond+meat+to+its+menu&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F334%2F854081161001_60636%2C21485001_6063614062001%2C21487001_6063614062001%2C17952001_6063614062001%2C21301001_6063614062001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=UPS+plans+to+start+Sunday+delivery%2C+Dunkin+adds+beyond+meat+to+its+menu&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2142%2F854081161001_6063%2C600816001_6063597468001%2C600818001_6063597468001%2C599808001_6063597468001%2C601483001_6063597468001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Lawmakers+worried+Trump+won%27t+sign+debt+deal+over+Mueller+hearing&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2142%2F854081161001_6063%2C600816001_6063597468001%2C600818001_6063597468001%2C599808001_6063597468001%2C601483001_6063597468001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Lawmakers+worried+Trump+won%27t+sign+debt+deal+over+Mueller+hearing&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1050%2F854081161001_606358%2C5557001_6063588337001%2C8186001_6063588337001%2C5558001_6063588337001%2C5560001_6063588337001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+prosecutor+on+DOJ+big+tech+review%3A+Google+is+the+most+at+risk&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1050%2F854081161001_606358%2C5557001_6063588337001%2C8186001_6063588337001%2C5558001_6063588337001%2C5560001_6063588337001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+prosecutor+on+DOJ+big+tech+review%3A+Google+is+the+most+at+risk&mode=resolve_url>
+22:16:59 T:968 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1066%2F854081161001_6063577%2C570001_6063573959001%2C577001_6063573959001%2C308001_6063573959001%2C586001_6063573959001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=It%27s+a+sad+day+for+Robert+Mueller%3A+Alan+Dershowitz&mode=resolve_url
+22:16:59 T:968   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1066%2F854081161001_6063577%2C570001_6063573959001%2C577001_6063573959001%2C308001_6063573959001%2C586001_6063573959001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=It%27s+a+sad+day+for+Robert+Mueller%3A+Alan+Dershowitz&mode=resolve_url>
+22:17:03 T:6116   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:17:12 T:5204 WARNING: [ Neptune Rising] Object Not Found : 404
+22:17:13 T:4832  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:17:13 T:4832  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:17:13 T:4832  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:17:13 T:4832  NOTICE: metahandler: No SQLite rows requiring update
+22:17:19 T:968   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2506%2F854081161001_606369%2C6875001_6063691299001%2C8032001_6063691299001%2C7725001_6063691299001%2C9990001_6063691299001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+was+running+the+Russia+investigation+in+%E2%80%98name+only%E2%80%99%3A+Corey+Lewandowski&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2506%2F854081161001_606369%2C6875001_6063691299001%2C8032001_6063691299001%2C7725001_6063691299001%2C9990001_6063691299001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+was+running+the+Russia+investigation+in+%E2%80%98name+only%E2%80%99%3A+Corey+Lewandowski&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F298%2F854081161001_606370%2C3490001_6063697639001%2C3678001_6063697639001%2C0836001_6063697639001%2C3679001_6063697639001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Putin+has+increased+political+partisanship+in+US%3A+Jack+Keane&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F298%2F854081161001_606370%2C3490001_6063697639001%2C3678001_6063697639001%2C0836001_6063697639001%2C3679001_6063697639001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Putin+has+increased+political+partisanship+in+US%3A+Jack+Keane&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1282%2F854081161001_606370%2C2039001_6063703800001%2C2316001_6063703800001%2C4348001_6063703800001%2C2569001_6063703800001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Andy+Biggs+grills+Mueller+on+Capitol+Hill&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1282%2F854081161001_606370%2C2039001_6063703800001%2C2316001_6063703800001%2C4348001_6063703800001%2C2569001_6063703800001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Andy+Biggs+grills+Mueller+on+Capitol+Hill&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1034%2F854081161001_606369%2C2135001_6063692795001%2C5139001_6063692795001%2C4183001_6063692795001%2C4000001_6063692795001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Joe+diGenova%3A+I%E2%80%99m+happy+the+public+got+to+see+Mueller+so+incompetent&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1034%2F854081161001_606369%2C2135001_6063692795001%2C5139001_6063692795001%2C4183001_6063692795001%2C4000001_6063692795001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Joe+diGenova%3A+I%E2%80%99m+happy+the+public+got+to+see+Mueller+so+incompetent&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3338%2F854081161001_606369%2C1697001_6063690419001%2C2014001_6063690419001%2C3492001_6063690419001%2C1847001_6063690419001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Did+Mueller+lose+his+credibility%3F&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3338%2F854081161001_606369%2C1697001_6063690419001%2C2014001_6063690419001%2C3492001_6063690419001%2C1847001_6063690419001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Did+Mueller+lose+his+credibility%3F&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2706%2F854081161001_606368%2C7873001_6063688018001%2C4557001_6063688018001%2C9248001_6063688018001%2C5833001_6063688018001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Harmeet+Dhillon+on+Mueller+hearing%3A+Impeachment+died+today&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2706%2F854081161001_606368%2C7873001_6063688018001%2C4557001_6063688018001%2C9248001_6063688018001%2C5833001_6063688018001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Harmeet+Dhillon+on+Mueller+hearing%3A+Impeachment+died+today&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F506%2F854081161001_606367%2C5202001_6063674885001%2C5290001_6063674885001%2C2390001_6063674885001%2C5005001_6063674885001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+had+an+awful+performance%3A+Bill+Gavin&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F506%2F854081161001_606367%2C5202001_6063674885001%2C5290001_6063674885001%2C2390001_6063674885001%2C5005001_6063674885001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+had+an+awful+performance%3A+Bill+Gavin&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1370%2F854081161001_606367%2C9521001_6063678125001%2C8526001_6063678125001%2C7891001_6063678125001%2C7971001_6063678125001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Steve+Chabot+on+Mueller+testimony%3A+We+didn%E2%80%99t+learn+much+today&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1370%2F854081161001_606367%2C9521001_6063678125001%2C8526001_6063678125001%2C7891001_6063678125001%2C7971001_6063678125001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Rep.+Steve+Chabot+on+Mueller+testimony%3A+We+didn%E2%80%99t+learn+much+today&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2990%2F854081161001_606368%2C1631001_6063678198001%2C0226001_6063678198001%2C0095001_6063678198001%2C0672001_6063678198001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+acting+ICE+Director%3A+Security+crisis+at+the+border+enriches+cartels&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2990%2F854081161001_606368%2C1631001_6063678198001%2C0226001_6063678198001%2C0095001_6063678198001%2C0672001_6063678198001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+acting+ICE+Director%3A+Security+crisis+at+the+border+enriches+cartels&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1118%2F854081161001_60636%2C66526001_6063670152001%2C70869001_6063670152001%2C69282001_6063670152001%2C70761001_6063670152001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Democrats+respond+to+Mueller+testimony+&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1118%2F854081161001_60636%2C66526001_6063670152001%2C70869001_6063670152001%2C69282001_6063670152001%2C70761001_6063670152001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Democrats+respond+to+Mueller+testimony+&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F658%2F854081161001_606366%2C8205001_6063665530001%2C6271001_6063665530001%2C6269001_6063665530001%2C6270001_6063665530001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Bill+de+Blasio%E2%80%99s+plan+will+hurt+small+businesses%3A+Former+SBA+administrator+&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F658%2F854081161001_606366%2C8205001_6063665530001%2C6271001_6063665530001%2C6269001_6063665530001%2C6270001_6063665530001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Bill+de+Blasio%E2%80%99s+plan+will+hurt+small+businesses%3A+Former+SBA+administrator+&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3982%2F854081161001_60636%2C61362001_6063658738001%2C59074001_6063658738001%2C58204001_6063658738001%2C60732001_6063658738001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+wasn%E2%80%99t+on+his+game+today%3A+Rep.+Lesko&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3982%2F854081161001_60636%2C61362001_6063658738001%2C59074001_6063658738001%2C58204001_6063658738001%2C60732001_6063658738001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+wasn%E2%80%99t+on+his+game+today%3A+Rep.+Lesko&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F782%2F854081161001_60636%2C61455001_6063655454001%2C58985001_6063655454001%2C61379001_6063655454001%2C58609001_6063655454001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Trump%3A+Mueller%E2%80%99s+aides+were+untruthful&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F782%2F854081161001_60636%2C61455001_6063655454001%2C58985001_6063655454001%2C61379001_6063655454001%2C58609001_6063655454001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Trump%3A+Mueller%E2%80%99s+aides+were+untruthful&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2750%2F854081161001_60636%2C52800001_6063651356001%2C51461001_6063651356001%2C51227001_6063651356001%2C49710001_6063651356001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+DOJ+prosecutor+on+the+Mueller+hearing&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2750%2F854081161001_60636%2C52800001_6063651356001%2C51461001_6063651356001%2C51227001_6063651356001%2C49710001_6063651356001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+DOJ+prosecutor+on+the+Mueller+hearing&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F362%2F854081161001_606363%2C5634001_6063632027001%2C7134001_6063632027001%2C7352001_6063632027001%2C5522001_6063632027001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Courtney+Reum%3A+I+have+no+intention+of+selling+Facebook+despite+FTC%E2%80%99s+%245B+fine&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F362%2F854081161001_606363%2C5634001_6063632027001%2C7134001_6063632027001%2C7352001_6063632027001%2C5522001_6063632027001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Courtney+Reum%3A+I+have+no+intention+of+selling+Facebook+despite+FTC%E2%80%99s+%245B+fine&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1686%2F854081161001_606362%2C8654001_6063626703001%2C9905001_6063626703001%2C9222001_6063626703001%2C9221001_6063626703001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+didn%E2%80%99t+have+good+day%2C+but+Trump+did%3A+Former+Florida+Senator+George+LeMieux&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1686%2F854081161001_606362%2C8654001_6063626703001%2C9905001_6063626703001%2C9222001_6063626703001%2C9221001_6063626703001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+didn%E2%80%99t+have+good+day%2C+but+Trump+did%3A+Former+Florida+Senator+George+LeMieux&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3590%2F854081161001_606361%2C6666001_6063614321001%2C5953001_6063614321001%2C5960001_6063614321001%2C4851001_6063614321001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Puerto+Ricans+demand+governor%E2%80%99s+resignation+over+corruption&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3590%2F854081161001_606361%2C6666001_6063614321001%2C5953001_6063614321001%2C5960001_6063614321001%2C4851001_6063614321001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Puerto+Ricans+demand+governor%E2%80%99s+resignation+over+corruption&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F270%2F854081161001_606362%2C3582001_6063622174001%2C4320001_6063622174001%2C1710001_6063622174001%2C3404001_6063622174001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Should+investors+remain+bullish+about+US-China+trade+talks%3F&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F270%2F854081161001_606362%2C3582001_6063622174001%2C4320001_6063622174001%2C1710001_6063622174001%2C3404001_6063622174001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Should+investors+remain+bullish+about+US-China+trade+talks%3F&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F930%2F854081161001_606361%2C8880001_6063618148001%2C8881001_6063618148001%2C8972001_6063618148001%2C9066001_6063618148001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=FTC%E2%80%99s+%245B+fine+against+Facebook+was+a+%E2%80%98slap+on+the+wrist%E2%80%99%3A+District+Media+president&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F930%2F854081161001_606361%2C8880001_6063618148001%2C8881001_6063618148001%2C8972001_6063618148001%2C9066001_6063618148001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=FTC%E2%80%99s+%245B+fine+against+Facebook+was+a+%E2%80%98slap+on+the+wrist%E2%80%99%3A+District+Media+president&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3198%2F854081161001_606361%2C5579001_6063610848001%2C5491001_6063610848001%2C6279001_6063610848001%2C6842001_6063610848001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+couldn%E2%80%99t+respond+to+basic+questions%3A+Deneen+Borelli&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3198%2F854081161001_606361%2C5579001_6063610848001%2C5491001_6063610848001%2C6279001_6063610848001%2C6842001_6063610848001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Mueller+couldn%E2%80%99t+respond+to+basic+questions%3A+Deneen+Borelli&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1746%2F854081161001_606361%2C9701001_6063615258001%2C9581001_6063615258001%2C9704001_6063615258001%2C7749001_6063615258001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Kelly+Sadler%3A+We+need+to+%E2%80%98investigate+the+investigators%E2%80%99&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1746%2F854081161001_606361%2C9701001_6063615258001%2C9581001_6063615258001%2C9704001_6063615258001%2C7749001_6063615258001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Kelly+Sadler%3A+We+need+to+%E2%80%98investigate+the+investigators%E2%80%99&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F334%2F854081161001_60636%2C21485001_6063614062001%2C21487001_6063614062001%2C17952001_6063614062001%2C21301001_6063614062001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=UPS+plans+to+start+Sunday+delivery%2C+Dunkin+adds+beyond+meat+to+its+menu&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F334%2F854081161001_60636%2C21485001_6063614062001%2C21487001_6063614062001%2C17952001_6063614062001%2C21301001_6063614062001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=UPS+plans+to+start+Sunday+delivery%2C+Dunkin+adds+beyond+meat+to+its+menu&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2142%2F854081161001_6063%2C600816001_6063597468001%2C600818001_6063597468001%2C599808001_6063597468001%2C601483001_6063597468001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Lawmakers+worried+Trump+won%27t+sign+debt+deal+over+Mueller+hearing&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2142%2F854081161001_6063%2C600816001_6063597468001%2C600818001_6063597468001%2C599808001_6063597468001%2C601483001_6063597468001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Lawmakers+worried+Trump+won%27t+sign+debt+deal+over+Mueller+hearing&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3242%2F854081161001_60636%2C19574001_6063612715001%2C19693001_6063612715001%2C17305001_6063612715001%2C20169001_6063612715001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=The+best+housing+markets+for+growth+and+stability+in+2019&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3242%2F854081161001_60636%2C19574001_6063612715001%2C19693001_6063612715001%2C17305001_6063612715001%2C20169001_6063612715001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=The+best+housing+markets+for+growth+and+stability+in+2019&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2866%2F854081161001_606360%2C5606001_6063601838001%2C5246001_6063601838001%2C5614001_6063601838001%2C3142001_6063601838001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+Deputy+Assistant+AG+on+Mueller+testimony%3A+Dems+needed+a+home+run%2C+didn%27t+get+a+single&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2866%2F854081161001_606360%2C5606001_6063601838001%2C5246001_6063601838001%2C5614001_6063601838001%2C3142001_6063601838001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+Deputy+Assistant+AG+on+Mueller+testimony%3A+Dems+needed+a+home+run%2C+didn%27t+get+a+single&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3922%2F854081161001_60636%2C28718001_6063629414001%2C32991001_6063629414001%2C32838001_6063629414001%2C32738001_6063629414001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=WeWork+may+speed+up+plans+for+IPO&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F3922%2F854081161001_60636%2C28718001_6063629414001%2C32991001_6063629414001%2C32838001_6063629414001%2C32738001_6063629414001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=WeWork+may+speed+up+plans+for+IPO&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F626%2F854081161001_606360%2C2159001_6063604106001%2C4600001_6063604106001%2C2440001_6063604106001%2C0509001_6063604106001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=DOJ+reportedly+expected+to+approve+T-Mobile%2C+Sprint+deal&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F626%2F854081161001_606360%2C2159001_6063604106001%2C4600001_6063604106001%2C2440001_6063604106001%2C0509001_6063604106001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=DOJ+reportedly+expected+to+approve+T-Mobile%2C+Sprint+deal&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2322%2F854081161001_60636%2C40624001_6063639250001%2C38214001_6063639250001%2C38216001_6063639250001%2C40054001_6063639250001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Where+to+find+value+in+the+real+estate+sector&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2322%2F854081161001_60636%2C40624001_6063639250001%2C38214001_6063639250001%2C38216001_6063639250001%2C40054001_6063639250001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Where+to+find+value+in+the+real+estate+sector&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F954%2F854081161001_6063643%2C504001_6063641661001%2C057001_6063641661001%2C694001_6063641661001%2C058001_6063641661001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Facebook+shares+rise+after+Q2+earnings+beat&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F954%2F854081161001_6063643%2C504001_6063641661001%2C057001_6063641661001%2C694001_6063641661001%2C058001_6063641661001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Facebook+shares+rise+after+Q2+earnings+beat&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2602%2F854081161001_6063%2C598887001_6063596967001%2C598988001_6063596967001%2C600467001_6063596967001%2C598982001_6063596967001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Absolutely+no+chance+we%27ll+go+to+impeachment+proceedings+based+on+Mueller+Report%3A+Dan+Geltrude&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F2602%2F854081161001_6063%2C598887001_6063596967001%2C598988001_6063596967001%2C600467001_6063596967001%2C598982001_6063596967001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Absolutely+no+chance+we%27ll+go+to+impeachment+proceedings+based+on+Mueller+Report%3A+Dan+Geltrude&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1634%2F854081161001_606359%2C5932001_6063592852001%2C5194001_6063592852001%2C5535001_6063592852001%2C1634001_6063592852001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=The+market+implications+of+DOJ+vs.+Big+Tech&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1634%2F854081161001_606359%2C5932001_6063592852001%2C5194001_6063592852001%2C5535001_6063592852001%2C1634001_6063592852001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=The+market+implications+of+DOJ+vs.+Big+Tech&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F930%2F854081161001_60635%2C89279001_6063585376001%2C91865001_6063585376001%2C88803001_6063585376001%2C89282001_6063585376001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=European+Union+is+a+sinking+Titanic%3A+Nile+Gardiner&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F930%2F854081161001_60635%2C89279001_6063585376001%2C91865001_6063585376001%2C88803001_6063585376001%2C89282001_6063585376001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=European+Union+is+a+sinking+Titanic%3A+Nile+Gardiner&mode=resolve_url>
+22:17:41 T:4684 WARNING: XFILE::CFileFactory::CreateLoader - unsupported protocol(plugin) in plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1050%2F854081161001_606358%2C5557001_6063588337001%2C8186001_6063588337001%2C5558001_6063588337001%2C5560001_6063588337001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+prosecutor+on+DOJ+big+tech+review%3A+Google+is+the+most+at+risk&mode=resolve_url
+22:17:41 T:4684   ERROR: XFILE::CFileCache::Open - failed to open source <plugin://plugin.video.fox.news/?url=https%3A%2F%2Ffoxbusiness-f.akamaihd.net%2Fi%2FBrightCove%2F854081161001%2F201907%2F1050%2F854081161001_606358%2C5557001_6063588337001%2C8186001_6063588337001%2C5558001_6063588337001%2C5560001_6063588337001%2C.mp4.csmil%2Fmaster.m3u8%3Fset-akamai-hls-revision%3D5&name=Former+prosecutor+on+DOJ+big+tech+review%3A+Google+is+the+most+at+risk&mode=resolve_url>
+22:17:42 T:3936 WARNING: CPythonInvoker(69): Script invoked without an addon. Adding all addon modules installed to python path as fallback. This behaviour will be removed in future version.
+22:17:42 T:3936  NOTICE: Common addon methods: Initializing addon.common version: 2.0.1
+22:17:42 T:3936  NOTICE: metahandler: Initializing MetaHandlers version: 3.0.3
+22:17:43 T:3936  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.6
+22:17:43 T:3936  NOTICE: metahandler: No SQLite rows requiring update
+22:17:43 T:3936  NOTICE: iSTREAM: -searchhistory- -Loading sqlite3 as DB engine version: 3.8.6
+22:17:43 T:3936  NOTICE: iSTREAM: Search History Cleanup Service - Starting\Waking...
+22:17:43 T:3936  NOTICE: iSTREAM: -searchhistory- -SELECT DISTINCT indexer_type FROM searchhistory
+22:17:43 T:3936  NOTICE: iSTREAM: Search History Cleanup Service - Sleeping... Sleep for 300 mins
+22:17:47 T:3736   ERROR: XFILE::CDirectory::GetDirectory - Error getting None
+22:17:51 T:1132  NOTICE: Storing total System Uptime
+22:17:51 T:1132  NOTICE: Saving settings
+22:17:51 T:1132  NOTICE: stop all
+22:17:51 T:1132  NOTICE: stop player
+22:17:51 T:1132  NOTICE: ES: Stopping event server
+22:17:51 T:1132  NOTICE: stopping upnp
+22:17:51 T:1132  NOTICE: WebServer: Stopped the webserver
+22:17:52 T:5128  NOTICE: ES: UDP Event server stopped
+22:17:52 T:1132  NOTICE: stop sap announcement listener
+22:17:52 T:1132  NOTICE: clean cached files!
+22:17:52 T:1132  NOTICE: unload skin
+22:17:52 T:2068  NOTICE: APEP Common Routines: Service stopping...
+22:17:57 T:1132   ERROR: CPythonInvoker(29, C:\Users\hacker\AppData\Roaming\Kodi\addons\script.module.dudehere.routines\service.py): script didn't stop in 5 seconds - let's kill it
+22:17:59 T:4768  NOTICE: StorageServer-2.5.4 Closed down
+22:17:59 T:5524  NOTICE: Twitch: Service: Shutdown
+22:18:04 T:6136  NOTICE: Indigo NOTICE: CLOSING INDIGO SERVICES
+22:18:05 T:4208  NOTICE: PrimeWire: Service: shutting down...
+22:18:11 T:1132   ERROR: CPythonInvoker(46, C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.neptune\neptune.py): script didn't stop in 5 seconds - let's kill it
+22:18:17 T:1132   ERROR: CPythonInvoker(49, C:\Users\hacker\AppData\Roaming\Kodi\addons\plugin.video.specto\default.py): script didn't stop in 5 seconds - let's kill it
+22:18:22 T:1132  NOTICE: stopped
+22:18:22 T:1132  NOTICE: destroy
+22:18:22 T:1132  NOTICE: closing down remote control service
+22:18:22 T:1132  NOTICE: unload sections
+22:18:22 T:1132  NOTICE: special://profile/ is mapped to: special://masterprofile/
+22:18:22 T:1132  NOTICE: destroy
+22:18:22 T:1132 WARNING: Attempted to remove window 10013 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10014 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10015 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10016 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10017 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10018 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10019 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10021 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10107 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10115 from the window manager when it didn't exist
+22:18:22 T:1132 WARNING: Attempted to remove window 10104 from the window manager when it didn't exist
+22:18:22 T:1132  NOTICE: closing down remote control service
+22:18:22 T:1132  NOTICE: unload sections
+22:18:22 T:1132  NOTICE: application stopped...
+22:18:22 T:1132   ERROR: dllFreeLibrary - Invalid hModule specified

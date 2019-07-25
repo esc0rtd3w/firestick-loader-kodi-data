@@ -37,14 +37,14 @@ def List(url):
 		return None
 
 	try:
-		match = re.compile('</nav>(.+?)alert alert-info', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-		match1 = re.compile(r'<a title="(.+?)" href="(.+?)"><img.+?src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match)
+		match = re.compile('<div id="content">(.+?)</div><!-- #content -->', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+		match1 = re.compile(r'<div id="post-.*?<a href="(.+?)".*?<img src="(.+?)" alt="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match)
 	except:
 		match = re.compile(r'<div class="item-img">.+?<a href="(.+?)".+?src="(.+?)".+?<h3><a.+?>(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
 		match1 = []
 		for videopage, img, name in match:
 			match1.append([name, videopage, img])
-	for name, videopage, img in match1:
+	for videopage, img, name in match1:
 		name = utils.cleantext(name)
 		utils.addDownLink(name, videopage, 312, img, '')
 	try:
@@ -58,14 +58,18 @@ def List(url):
 @utils.url_dispatcher.register('312', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
     utils.PLAYVIDEO(url, name, download)
+#    vp = utils.VideoPlayer(name)
+#    vp.progress.update(25, "", "Loading video page", "")
+#    vp.play_from_link_to_resolve(url)
+
 
 
 @utils.url_dispatcher.register('313', ['url'])
 def Categories(url):
     cathtml = utils.getHtml(url, '')
-    match = re.compile('<a href="(http://porn-czech.com/categories/[^"]+)">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match = re.compile('<li class="cat-item cat-item.*?<a href="(.+?)" title="(.+?)"', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
-        utils.addDir(name.title(), catpage, 311, '')    
+        utils.addDir(name.title(), catpage, 311, '',1)    
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 

@@ -1,4 +1,41 @@
-Version 1.1.83
+Version 1.1.89
+Fixed: BubbaPorn
+Improved: HQPorner
+Account added to settings for PornTrex and JavWhores
+General maintenance
+
+Version 1.1.88
+Fixed: BubbaPorn
+Account added to settings for PornTrex and JavWhores
+General maintenance
+
+Version 1.1.87
+Fixed: sxyprn(YourPorn)
+Fixed: JavWhores
+Improved: SpeedPorn
+Improved: MangoPorn
+Improved: PornsLand
+
+Version 1.1.86
+Fixed: Animeid Hentai
+Fixed: TubePornClassic
+Fixed: HClips
+Fixed: HDZog
+Added: MangoPorn(Movies)
+
+Version 1.1.85
+Added: xVideos
+Added: SpeedPorn
+Added: HDpornz
+Fixed: Sxyprn(yourporn)
+
+Version 1.1.84
+Fixed: BubbaPorn
+Fixed: XvideoSpanish
+Fixed: YourFreeTube
+Fixed: ParadiseHill
+
+ersion 1.1.83
 Removed: Cat3Movie
 Fixed: PornHub
 Fixed: xHamster

@@ -51,6 +51,7 @@ from jsunpack import unpack
 import random_ua
 import xbmcvfs
 from functools import wraps
+from kvs import decryptHash
 
 
 from url_dispatcher import URL_Dispatcher
@@ -767,28 +768,6 @@ def streamdefence(html):
     return streamdefence(decoded)
 
 
-
-#def streamdefence(html):
-#    match = re.search(r'a2D38E8="([^"]+)', html, re.DOTALL | re.IGNORECASE)
-#    match = re.search(r'\("([^"]+)"\)', html, re.DOTALL | re.IGNORECASE)
-#    if match:
-#	result = match.group(1)
-#	decoded = base64.b64decode(result)
-#    else:
-#	match = re.search(r'\("([^"]+)"', html, re.DOTALL | re.IGNORECASE)   
-#	try:
-#            if match:
-#            	result = match.group(1)
-#            	decoded = base64.b64decode(result)
-#            else:
-#	    	decoded = base64.b64decode(html)
-#		if ":" in html:
-#		    return html
-#        except TypeError:
-#            return html
-#    return streamdefence(decoded)
-
-
 def searchDir(url, mode, page=None):
     addDir('[COLOR hotpink]Add Keyword[/COLOR]', url, 902, uwcimage('uwc-search.png'), '', mode, Folder=False)
     conn = sqlite3.connect(favoritesdb)
@@ -1051,8 +1030,11 @@ class VideoPlayer():
         if self.direct_regex:
             direct_links = re.compile(self.direct_regex, re.DOTALL | re.IGNORECASE).findall(html)
             if direct_links:
+                if 'function/0/' in direct_links[0]:
+                    licensecode = re.compile("license_code:\s*'([^']+)'", re.DOTALL | re.IGNORECASE).search(html).group(1)
+                    direct_links[0] = decryptHash(direct_links[0], licensecode, '16')           
                 selected = 'https:' + direct_links[0] if direct_links[0].startswith('//') else direct_links[0]
-                self.progress.update(50, "", "", "Playing from direct link")
+                self.progress.update(70, "", "", "Playing from direct link")
                 self.play_from_direct_link(selected)
             elif not self.regex:
                 notify('Oh oh','Could not find a supported link')
@@ -1063,6 +1045,7 @@ class VideoPlayer():
             self.play_from_link_list(scraped_sources)
         if not self.direct_regex and not self.regex:
             raise ValueError("No regular expression specified")
+            
 
     @_cancellable
     def play_from_link_list(self, links):

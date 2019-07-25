@@ -22,12 +22,11 @@ from random import randint
 import xbmc
 import xbmcplugin
 import xbmcgui
+import requests
 from resources.lib import utils
 
-progress = utils.progress
 
-
-@utils.url_dispatcher.register('50')    
+@utils.url_dispatcher.register('50')
 def PTMain():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]', 'https://www.porntrex.com/categories/', 53, '', '')
     utils.addDir('[COLOR hotpink]Channels[/COLOR]', 'https://www.porntrex.com/channels/', 59, '', '')
@@ -39,7 +38,7 @@ def PTMain():
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-@utils.url_dispatcher.register('55')    
+@utils.url_dispatcher.register('55')
 def JHMain():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]', 'https://www.javwhores.com/categories/', 53, '', '')
     utils.addDir('[COLOR hotpink]Search[/COLOR]', 'https://www.javwhores.com/search/', 54, '', '')
@@ -54,14 +53,23 @@ def PTList(url, page=1, onelist=None):
         listhtml = utils.getHtml(url, '')
     except:
         return None
+        
+    if '>Log in<' in listhtml:
+        html = login(url)
+        if html:
+            listhtml = html
+    for cookie in utils.cj:
+        if cookie.domain == '.porntrex.com' and cookie.name == 'PHPSESSID':
+            utils.addon.setSetting(id='session', value = cookie.value)
+        if cookie.domain == '.porntrex.com' and cookie.name == 'kt_member':
+            utils.addon.setSetting(id='kt_member', value = cookie.value)    
+        
 #   Changed regex current 19.01.22
     match = re.compile ('data-item-id=.*?href="([^"]+)".*?data-src="([^"]+)"(.*?)clock-o"></i>([^<]+)<.*?title="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
 #   Changed var order 19.01.22
     for videopage, img, hd, duration, name in match:
-
         name = utils.cleantext(name)
-        if 'private' in hd:
-            continue
+        private = '[COLOR blue] private[/COLOR]' if 'Private' in hd else ''
 #       Changed labelling adding Video quality
         if hd.find('4k') > 0:
             hd = " [COLOR orange]4K[/COLOR] "
@@ -75,7 +83,9 @@ def PTList(url, page=1, onelist=None):
             hd = " [COLOR orange]1440p[/COLOR] "
         else:
             hd = " "
-        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
+        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]" + private
+
+
         if img.startswith('//'):
             img = 'https:' + img
         img = re.sub(r"http:", "https:", img)
@@ -120,21 +130,31 @@ def JHList(url, page=1, onelist=None):
     if onelist:
         url = url.replace('/1/', '/' + str(page) + '/')
     try:
-        listhtml = utils.getHtml(url, '')
+        listhtml = utils.getHtml(url)
     except:
         return None
+
+    if '>Log in<' in listhtml:
+        html = login(url)
+        if html:
+            listhtml = html
+    for cookie in utils.cj:
+        if cookie.domain == '.javwhores.com' and cookie.name == 'PHPSESSID':
+            utils.addon.setSetting(id='session', value = cookie.value)
+        if cookie.domain == '.javwhores.com' and cookie.name == 'kt_member':
+            utils.addon.setSetting(id='kt_member', value = cookie.value)    
+
     match = re.compile('class="video-item.*?href="([^"]+)" title="([^"]+)".*?original="([^"]+)"(.*?)clock-o"></i>([^<]+)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
     for videopage, name, img, hd, duration in match:
         name = utils.cleantext(name)
-        if 'private' in hd:
-            continue
+        private = '[COLOR blue] private[/COLOR]' if 'Private' in hd else ''
         if hd.find('HD') > 0:
             hd = " [COLOR orange]HD[/COLOR] "
         elif hd.find('4k') > 0:
             hd = " [COLOR orange]4K[/COLOR] "
         else:
             hd = " "
-        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]"
+        name = name + hd + "[COLOR deeppink]" + duration + "[/COLOR]" + private
         if img.startswith('//'):
             img = 'https:' + img
         img = re.sub(r"http:", "https:", img)
@@ -166,12 +186,18 @@ def JHList(url, page=1, onelist=None):
         xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-
 @utils.url_dispatcher.register('52', ['url', 'name'], ['download'])
 def PTPlayvid(url, name, download=None):
-    progress.create('Play video', 'Searching for videofile.')
-    progress.update(25, "", "Loading video page", "")
-    videopage = utils.getHtml(url, '')
+    vp = utils.VideoPlayer(name) #, download=download, direct_regex="video\S+url\d*:\s*'([^']+)'")
+    vp.progress.update(25, "", "Loading video page", "")
+
+    hdr = dict(utils.headers)
+    hdr['Cookie'] = 'PHPSESSID=' + utils.addon.getSetting('session') + '; kt_member=' + utils.addon.getSetting('kt_member')
+    videopage = utils.getHtml(url, hdr=hdr)
+    if 'video is a private video' in videopage:
+        utils.notify('PRIVATE VIDEO','Add an account in settings to watch private videos!')
+        return
+        
     if 'video_url_text' not in videopage:
         videourl = re.compile("video_url: '([^']+)'", re.DOTALL | re.IGNORECASE).search(videopage).group(1)
     else:
@@ -181,18 +207,29 @@ def PTPlayvid(url, name, download=None):
             sources[quality] = src
         videourl = utils.selector('Select quality', sources, dont_ask_valid=True, sort_by=lambda x: int(''.join([y for y in x if y.isdigit()])), reverse=True)
     if not videourl:
-        progress.close()
         return
-    progress.update(75, "", "Video found", "")
-    progress.close()
-    if download == 1:
-        utils.downloadVideo(videourl, name)
-    else:
-        iconimage = xbmc.getInfoImage("ListItem.Thumb")
-        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        xbmc.Player().play(videourl, listitem)
+    vp.direct_regex = '(' + re.escape(videourl) + ')'
+    vp.play_from_html(videopage)
 
+
+def login(url):
+    if 'javwhores' in url:
+        username = utils.addon.getSetting('jw_user')
+        password = utils.addon.getSetting('jw_pass')
+        loginurl = 'https://www.javwhores.com/ajax-login/'
+    if 'porntrex' in url:
+        username = utils.addon.getSetting('pt_user')
+        password = utils.addon.getSetting('pt_pass')
+        loginurl = 'https://www.porntrex.com/ajax-login/'
+    if username and password:
+        values = {'username':username, 'pass':password, 'remember_me':'1', 'action':'login', 'email_link':'https://www.javwhores.com/email/'}
+        data = utils.postHtml(loginurl, form_data=values, compression=False, NoCookie=None)
+        if '>Log out<' not in data:
+            utils.notify('Info','Login failed - check username/password in settings.')
+            return
+        return data
+    else:
+        return
 
 @utils.url_dispatcher.register('53', ['url'])
 def PTCat(url):
@@ -209,13 +246,13 @@ def PTCat(url):
         if url.find('javwhores') > 0:
             utils.addDir(name, catpage, 451, img, 1)
         else:
-            utils.addDir(name, catpage, 51, img, 1)       
+            utils.addDir(name, catpage, 51, img, 1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('59', ['url'])
 def PTChn(url):
     cathtml = utils.getHtml(url, '')
-    cat_block = re.compile('<div class="video-list">(.*?)<div class="footer-margin">', re.DOTALL | re.IGNORECASE).search(cathtml).group(1)    
+    cat_block = re.compile('<div class="video-list">(.*?)<div class="footer-margin">', re.DOTALL | re.IGNORECASE).search(cathtml).group(1)
     match = re.compile('<div class="video-item   ">.*?<a href="([^"]+)" title="([^"]+)".*? src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cat_block)
 
     for catpage, name, img in sorted(match, key=lambda x: x[1]):
@@ -223,8 +260,8 @@ def PTChn(url):
             img = 'https:' + img
         img = re.sub(r"static.cdntrex", "porntrex", img)
         catpage = catpage + '?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=1'
-        
-        utils.addDir(name, catpage, 51, img, 1)       
+
+        utils.addDir(name, catpage, 51, img, 1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 @utils.url_dispatcher.register('54', ['url'], ['keyword'])

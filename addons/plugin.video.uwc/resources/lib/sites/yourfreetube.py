@@ -27,7 +27,7 @@ progress = utils.progress
 def YFTMain():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://www.yourfreetube.net/',193,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.yourfreetube.net/search.php?keywords=',194,'','')
-    YFTList('https://www.yourfreetube.net/new-videos/')
+    YFTList('https://www.yourfreetube.net/newvideos.html')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -38,10 +38,10 @@ def YFTList(url):
 	except:
 		
 		return None
-	match0= re.compile('blog-items blog-items-control site__row grid(.+?)site__col main-sidebar main-sidebar-control', re.DOTALL).findall(listhtml)[0]
+	match0= re.compile('<div id="wrapper">(.+?)</div><!-- end wrapper -->', re.DOTALL).findall(listhtml)[0]
 #
-	match = re.compile('data-post-id=.+?href="(.+?)" title="(.+?)".+?src="(.+?)"', re.DOTALL | re.IGNORECASE).findall(match0)
-	for videopage, name, img in match:
+	match = re.compile('<div class="pm-li-video">.+?<a href="([^"]+)".*?<img src="([^"]+)" alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(match0)
+	for videopage, img, name in match:
 		name = utils.cleantext(name)
 		utils.addDownLink(name, videopage, 192, img, '')
 	try:
@@ -69,14 +69,36 @@ def YFTSearch(url, keyword=None):
 def YFTCat(url):
 	cathtml = utils.getHtml(url, '')
 
-	#match = re.compile('<ul class="pm-browse-ul-subcats">(.*?)</ul>', re.DOTALL | re.IGNORECASE).findall(cathtml)
-	match1 = re.compile('-category menu-item.*?<a href="([^"]+)">(.+?)</a>', re.DOTALL | re.IGNORECASE).findall(cathtml)
-	for catpage, name in match1:
+	match0 = re.compile('<ul class="pm-browse-ul-subcats">(.*?)</ul>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
+#	match1 = re.compile('-category menu-item.*?<a href="([^"]+)">(.+?)</a>', re.DOTALL | re.IGNORECASE).findall(cathtml)
+	match = re.compile('<a href="([^"]+)".*?class="">(.+?)</a>', re.DOTALL | re.IGNORECASE).findall(match0)
+	for catpage, name in match:
 		utils.addDir(name, catpage, 191, '')
 	xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('192', ['url', 'name'], ['download'])
+#def YFTPlayvid(url, name, download=None):
+#    utils.PLAYVIDEO(url, name, download, '''src=\s*["']([^'"]+)''')
+
 def YFTPlayvid(url, name, download=None):
-    utils.PLAYVIDEO(url, name, download, '''src=\s*["']([^'"]+)''')
+    links = {}
+    vp = utils.VideoPlayer(name)
+    vp.progress.update(25, "", "Loading video page", "")
+    videopage = utils.getHtml(url)
+    iframes = re.compile('<iframe.+?src="([^"]+)"[^>]+>.*?</iframe', re.DOTALL | re.IGNORECASE).findall(videopage)
+    if iframes:
+        for link in iframes:
+            if vp.resolveurl.HostedMediaFile(link):
+                links[link.split('/')[2]] = link
+    srcs = re.compile('label="([^"]+)" src="([^"]+)" type=', re.DOTALL | re.IGNORECASE).findall(videopage)
+    if srcs:
+        for quality, videourl in srcs:
+            links['Direct ' + quality] = videourl + '|Referer=%s&User-Agent=%s' % (url, utils.USER_AGENT)
+
+    videourl = utils.selector('Select link', links, dont_ask_valid=False)
+    if '|Referer' in videourl:
+        vp.play_from_direct_link(videourl)
+    else:
+        vp.play_from_link_to_resolve(videourl)
 

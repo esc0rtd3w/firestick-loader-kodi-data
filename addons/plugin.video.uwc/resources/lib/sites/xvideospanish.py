@@ -17,38 +17,59 @@
 '''
 
 import re
-
+import urlparse
 import xbmcplugin
 from resources.lib import utils
 
+def urlEncodeNonAscii(b):
+    return re.sub('[\x80-\xFF]', lambda c: '%%%02x' % ord(c.group(0)), b)
+
+def iriToUri(iri):
+    parts= urlparse.urlparse(iri)
+    return urlparse.urlunparse(
+        part.encode('idna') if parti==1 else urlEncodeNonAscii(part.encode('utf-8'))
+        for parti, part in enumerate(parts)
+    )
 
 @utils.url_dispatcher.register('130')
 def Main():
-    utils.addDir('[COLOR hotpink]Tags[/COLOR]','http://www.xvideospanish.net/tags/',133,'','')
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.xvideospanish.net/videos-pornos-por-productora-gratis/',135,'','')
-    utils.addDir('[COLOR hotpink]Actors[/COLOR]','http://www.xvideospanish.net/actors/',136,'','')
+#    utils.addDir('[COLOR grey]Tags[/COLOR]','https://www.xn--xvideos-espaol-1nb.com/tags/',133,'','')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.xvideospanish.net/videos-pornos-por-productora-gratis/page/1/',135,'','')
+    utils.addDir('[COLOR hotpink]Actors[/COLOR]','https://www.xn--xvideos-espaol-1nb.com/actors/',136,'','')
+    utils.addDir('[COLOR hotpink]Longest videos[/COLOR]','https://www.xn--xvideos-espaol-1nb.com/?filter=longest',131)
+    utils.addDir('[COLOR hotpink]Most viewed videos[/COLOR]','https://www.xn--xvideos-espaol-1nb.com/?filter=most-viewed',131)
+    utils.addDir('[COLOR hotpink]Popular videos[/COLOR]','https://www.xn--xvideos-espaol-1nb.com/?filter=popular',131)
     utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.xvideospanish.net/?s=',134,'','')
-    List('http://www.xvideospanish.net/', False)
+    List('https://www.xn--xvideos-espaol-1nb.com/?filter=latest')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-@utils.url_dispatcher.register('131', ['url'], ['next_page_needed'])
-def List(url, next_page_needed=True):
+@utils.url_dispatcher.register('131', ['url'])
+def List(url):
     try:
         listhtml = utils.getHtml(url, '')
     except:
         return None
     main = re.compile('<main.*?>(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-    match = re.compile('<a href="([^"]+)" title="([^"]+)".*?data-src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(main)
-    for videopage, name, img in match:
-        name = utils.cleantext(name)
+    match = re.compile('<a href="([^"]+)" title="([^"]+)".*?data-src="([^"]+)"(.+?)/header', re.DOTALL | re.IGNORECASE).findall(main)
+    for videopage, name, img, duration in match:
+        if 'fa fa-clock-o' in duration:
+            duration = re.compile('fa fa-clock-o"></i> ([^<]+)<', re.DOTALL | re.IGNORECASE).findall(duration)[0]
+        else:
+            duration = ''
+        name = "[COLOR deeppink]" + duration + "[/COLOR] " + utils.cleantext(name)
+        uvideopage = unicode(videopage, encoding='utf-8')
+        videopage = iriToUri(uvideopage)
+        uimg = unicode(img, encoding='utf-8')
+        img = iriToUri(uimg)
         utils.addDownLink(name, videopage, 132, img, '')
-    if next_page_needed:
-        try:
-            nextp=re.compile('<link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-            utils.addDir('Next Page', nextp, 131,'')
-        except:
-            pass
+    try:
+        nextp=re.compile('<a href="([^"]+)">Next</a>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        unextp = unicode(nextp, encoding='utf-8')
+        nextp = iriToUri(unextp)
+        utils.addDir('Next Page', nextp, 131,'')
+    except:
+        pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -70,6 +91,8 @@ def Tags(url):
     cathtml = re.compile('<main.*?>(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
     match = re.compile('<a href="([^"]+)" class="tag-cloud-link.*?>([^<]+)', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
+        ucatpage = unicode(catpage, encoding='utf-8')
+        catpage = iriToUri(ucatpage)
         utils.addDir(name, catpage, 131)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
@@ -80,7 +103,18 @@ def Categories(url):
     cathtml = re.compile('<main.*?>(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
     match = re.compile('<a href="([^"]+)" title="([^"]+)".*?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name, img in match:
-        utils.addDir(name, catpage, 131, img)
+        ucatpage = unicode(catpage, encoding='utf-8')
+        catpage = iriToUri(ucatpage)
+        uimg = unicode(img, encoding='utf-8')
+        img = iriToUri(uimg)
+        utils.addDir(name, catpage, 131, img,1)
+    try:
+        nextp=re.compile('<a class="current">.*?<a href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
+        unextp = unicode(nextp, encoding='utf-8')
+        nextp = iriToUri(unextp)
+        utils.addDir('Next Page', nextp, 135,'')
+    except:
+        pass
     xbmcplugin.endOfDirectory(utils.addon_handle) 
 
 
@@ -88,14 +122,47 @@ def Categories(url):
 def Actors(url):
     cathtml = utils.getHtml(url, '')
     cathtml = re.compile('<main.*?>(.*?)</main>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
-    match = re.compile('<a href="([^"]+)".*?</i>([^<]+)', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match = re.compile('<a href="([^"]+)" title="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
-        utils.addDir(name, catpage.strip(), 131)
+        ucatpage = unicode(catpage, encoding='utf-8')
+        catpage = iriToUri(ucatpage)
+        utils.addDir(name, catpage.strip(), 131,'',1)
+    try:
+        nextp=re.compile('<a href="([^"]+)">Next</a>', re.DOTALL | re.IGNORECASE).findall(cathtml)[0]
+        unextp = unicode(nextp, encoding='utf-8')
+        nextp = iriToUri(unextp)
+        utils.addDir('Next Page', nextp, 136,'')
+    except:
+        pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('132', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    html = utils.getHtml(url, url)
-    vp = utils.VideoPlayer(name, download, regex='''(?:SRC|src|"embedURL" content)=\s*["']([^'"]+)''')
-    vp.play_from_html(html)
+    vp = utils.VideoPlayer(name)
+    vp.progress.update(25, "", "Loading video page", "")
+    html = utils.getHtml(url)   
+    videourl = re.compile('<iframe src="([^"]+)" ', re.DOTALL | re.IGNORECASE).findall(html)[0]
+    if '/player/' in videourl:
+        videourl = videourl.replace('/player/?data=','')
+        videourl = 'https://www.xn--xvideos-espaol-1nb.com/player/getVideo.php?data=' + videourl
+     	listjson = utils.getHtml(videourl,'')
+        listjson = listjson.replace('\/','/')          
+        videourl = re.compile('"videoUrl":"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listjson)[0]
+#        match = re.compile('"(videoUr[^"]+)":"([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listjson)
+#        links = {}
+#        for type, videourl in match:
+#            utils.kodilog(videourl)
+#            links['Direct ' + type] = videourl 
+#        videourl = utils.selector('Select link', links, dont_ask_valid=False)
+        vp.play_from_direct_link(videourl)
+    else: 
+        if vp.resolveurl.HostedMediaFile(videourl):
+            vp.play_from_link_to_resolve(videourl)
+        else:
+            if 'pornhub' in videourl:
+                from resources.lib.sites import pornhub
+                videourl = videourl.replace('embed/','view_video.php?viewkey=')                           
+                pornhub.Playvid(videourl,name)
+            else:
+                utils.kodilog(' ???: ' + videourl)

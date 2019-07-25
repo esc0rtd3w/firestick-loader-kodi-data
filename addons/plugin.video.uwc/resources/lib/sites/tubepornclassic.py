@@ -22,6 +22,7 @@ import re
 import xbmc
 import xbmcplugin
 import xbmcgui
+import base64
 from resources.lib import utils
 import urllib2,urllib
 progress = utils.progress
@@ -83,6 +84,39 @@ def Cat(url):
 	
 @utils.url_dispatcher.register('362', ['url', 'name'], ['download'])	
 def Playvid(url, name, download=None):
+    vp = utils.VideoPlayer(name)
+    vp.progress.update(25, "", "Playing video", "")        
+    videolink = GetTxxxVideo(url)
+    vp.progress.update(40, "", "Playing video", "")    
+    vp.play_from_direct_link(videolink)
+    
+    
+    
+    
+def GetTxxxVideo(vidpage):
+    vidpagecontent = utils.getHtml(vidpage)
+    posturl = 'https://%s/sn4diyux.php' % vidpage.split('/')[2]
+
+    pC3 = re.search('''pC3:'([^']+)''', vidpagecontent).group(1)
+    vidid = re.search('''video_id["|']?:\s?(\d+)''', vidpagecontent).group(1)
+    data = '%s,%s' % (vidid, pC3)
+    vidcontent = utils.getHtml(posturl, referer=vidpage, data={'param': data})
+    vidurl = re.search('video_url":"([^"]+)', vidcontent).group(1)
+
+    replacemap = {'M':'\u041c', 'A':'\u0410', 'B':'\u0412', 'C':'\u0421', 'E':'\u0415', '=':'~', '+':'.', '/':','}
+    
+    for key in replacemap:
+        vidurl = vidurl.replace(replacemap[key], key)
+
+    vidurl = base64.b64decode(vidurl)
+
+    return vidurl + "|Referer=" + vidpage    
+
+
+
+'''
+
+
 	vp = utils.VideoPlayer(name, download)
 	vp.progress.update(25, "", "Loading video page", "")
 	html = utils.getHtml3(url)
@@ -128,4 +162,4 @@ def decode_url(txt):
 		if d != 64: reto += chr(e)
 	
 	return urllib.unquote(reto)	
-	
+'''	

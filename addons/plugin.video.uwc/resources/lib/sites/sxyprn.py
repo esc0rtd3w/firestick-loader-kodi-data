@@ -152,18 +152,26 @@ def yourporn_search(url, keyword=None):
 
 @utils.url_dispatcher.register('652', ['url', 'name'], ['download'])
 def yourporn_play(url, name, download=None):
-	utils.kodilog(url)
-	url = url.replace('https://yps.to/','https://sxyprn.com/')
-	html = utils.getHtml(url, '')
-	videourl = re.compile('''data-vnfo='{".+?":"(.+?)"''', re.DOTALL | re.IGNORECASE).findall(html)[0].replace('\/','/').replace('/cdn/','/cdn4/')
-	videourl='https://sxyprn.com'+videourl
-	if download == 1:
-		utils.downloadVideo(videourl, name)
-	else:
-		iconimage = xbmc.getInfoImage("ListItem.Thumb")
-		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-		xbmc.Player().play(videourl, listitem)		
+    utils.kodilog(url)
+    url = url.replace('https://yps.to/','https://sxyprn.com/')
+    html = utils.getHtml(url, '')
+    videourl = re.compile('''data-vnfo='{".+?":"(.+?)"''', re.DOTALL | re.IGNORECASE).findall(html)[0].replace('\/','/')
+    match = re.search('src="(/js/main[^"]+)"', html, re.DOTALL | re.IGNORECASE)
+    if match:
+        result = match.group(1)
+        jsscript = utils.getHtml(make_url(result), url)
+        replaceint = re.search(r'tmp\[1\]\+= "(\d+)";', jsscript, re.DOTALL | re.IGNORECASE).group(1)
+        videourl = videourl.replace('/cdn/', '/cdn%s/' % replaceint)
+    else:
+        videourl = videourl.replace('/cdn/','/cdn7/')
+    videourl = make_url(videourl)
+    if download == 1:
+        utils.downloadVideo(videourl, name)
+    else:
+        iconimage = xbmc.getInfoImage("ListItem.Thumb")
+        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+        xbmc.Player().play(videourl, listitem)		
 		
 		
 		

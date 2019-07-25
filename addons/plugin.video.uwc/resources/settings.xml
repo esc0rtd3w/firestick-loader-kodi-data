@@ -27,6 +27,14 @@
         <setting type="lsep" label="With RTMP, no audio on most streams though," />         
         <setting type="lsep" label="because of missing Speex coded in Kodi" />        
     </category>
+    <category label="Accounts">
+        <setting type="lsep" label="Porntrex"/>
+        <setting id="pt_user" type="text" label="User:" default=""/>
+        <setting id="pt_pass" type="text" label="Password:" option="hidden" default=""/>
+        <setting type="lsep" label="JAVWhores"/>
+        <setting id="jw_user" type="text" label="User:" default=""/>
+        <setting id="jw_pass" type="text" label="Password:" option="hidden" default=""/>
+    </category>
     <category label="Favorites and keywords">
         <setting type="lsep" label="Favorites" />
         <setting id="backup_favorites" type="action" label="30201" enable="true" option="close" action="RunPlugin(plugin://plugin.video.uwc/?mode=910)" />
