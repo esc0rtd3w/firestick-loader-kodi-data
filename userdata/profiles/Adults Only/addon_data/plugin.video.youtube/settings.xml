@@ -7,8 +7,10 @@
     <setting id="kodion.fanart.show" value="true" />
     <setting id="kodion.http.listen" value="0.0.0.0" />
     <setting id="kodion.mpd.hdr" value="false" />
+    <setting id="kodion.mpd.limit.30" value="false" />
     <setting id="kodion.mpd.live_streams" value="true" />
     <setting id="kodion.mpd.proxy.port" value="50152" />
+    <setting id="kodion.mpd.quality.selection" value="4" />
     <setting id="kodion.mpd.videos" value="true" />
     <setting id="kodion.mpd.webm" value="false" />
     <setting id="kodion.play_count.percent" value="85" />
