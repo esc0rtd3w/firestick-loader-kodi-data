@@ -17,23 +17,8 @@
 </category>
 <category label="Indexers">
 <setting type="sep"/>
-<setting id="movies_IceFilms_indexer_enabled" type="bool" label="Ice Films" default="false"/>
-<setting id="movies_IMDb_indexer_enabled" type="bool" label="IMDb" default="true"/>
-<setting id="movies_superchillin_indexer_enabled" type="bool" label="[COLOR royalblue]S[/COLOR]uperchillin" default="false"/>
-<setting id="movies_trakt_indexer_enabled" type="bool" label="Trakt" default="false"/>
 </category>
 <category label="Sources">
 <setting type="sep"/>
-<setting id="movies_123Movies_source_enabled" type="bool" label="123Movies" default="true"/>
-<setting id="movies_Cartoon HD_source_enabled" type="bool" label="Cartoon HD" default="true"/>
-<setting id="movies_CARTOONEXTRA_source_enabled" type="bool" label="CARTOONEXTRA" default="true"/>
-<setting id="movies_EasyNews_source_enabled" type="bool" label="Easy News [COLOR gold][I](autoplay not supported)[/I][/COLOR]" default="false"/>
-<setting id="movies_Furk.Net_source_enabled" type="bool" label="Furk.Net [COLOR gold][I](autoplay not supported)[/I][/COLOR]" default="false"/>
-<setting id="movies_IceFilms_source_enabled" type="bool" label="Ice Films" default="true"/>
-<setting id="movies_MailRu_source_enabled" type="bool" label="MailRu" default="true"/>
-<setting id="movies_movie4u.cc_source_enabled" type="bool" label="Movie4uCC" default="true"/>
-<setting id="movies_myvideolinks_source_enabled" type="bool" label="Myvideolinks" default="false"/>
-<setting id="movies_superchillin_source_enabled" type="bool" label="[COLOR royalblue]S[/COLOR]uperchillin" default="false"/>
-<setting id="movies_vidic.ch_source_enabled" type="bool" label="Vidics.ch" default="true"/>
 </category>
 </settings>

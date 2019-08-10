@@ -39,7 +39,6 @@ dialog = utils.dialog
 
 imgDir = utils.imgDir
 rootDir = utils.rootDir
-url1 = 'http://www.google.fr/'
 
 @utils.url_dispatcher.register('0')
 def INDEX():
@@ -110,7 +109,7 @@ def INDEXM():
 #    utils.addDir('[COLOR hotpink]ElReyX[/COLOR]','http://elreyx.com/index1.html',116,os.path.join(imgDir, 'elreyx.png'),'')
     utils.addDir('[COLOR hotpink]PelisxPorno[/COLOR]','http://www.pelisxporno.com/',140,os.path.join(imgDir, 'pelisxporno.png'),'')
     utils.addDir('[COLOR hotpink]StreamXXX[/COLOR]','http://streamxxx.tv/category/movies/',175,os.path.join(imgDir, 'streamxxx.png'),'')
-    utils.addDir('[COLOR grey]ParadiseHill[/COLOR] [COLOR red]Broken[/COLOR]','http://www.paradisehill.tv/en/',250,os.path.join(imgDir, 'paradisehill.png'),'')
+    utils.addDir('[COLOR hotpink]ParadiseHill[/COLOR]','http://www.paradisehill.tv/en/',250,os.path.join(imgDir, 'paradisehill.png'),'')
     utils.addDir('[COLOR hotpink]FreeOMovie[/COLOR]','http://www.freeomovie.com/',370,os.path.join(imgDir, 'freeomovie.png'),'')
     utils.addDir('[COLOR hotpink]Eroticage[/COLOR]','http://www.eroticage.net/',430,'','')
     utils.addDir('[COLOR hotpink]SpeedPorn[/COLOR]','https://speedporn.net/',780,os.path.join(imgDir, 'speedporn11.png'),'')
@@ -152,7 +151,7 @@ def INDEXW():
 @utils.url_dispatcher.register('3')
 def INDEXH():
     utils.addDir('[COLOR hotpink]Hentaihaven[/COLOR]','http://hentaihaven.org/?sort=date',460,os.path.join(imgDir, 'hh.png'),'')
-    utils.addDir('[COLOR hotpink]Animeid Hentai[/COLOR]','https://animeidhentai.com/hentai',660,os.path.join(imgDir, 'ah.png'),'')
+    utils.addDir('[COLOR grey]Animeid Hentai[/COLOR] [COLOR red]Broken[/COLOR]','https://animeidhentai.com/hentai',660,os.path.join(imgDir, 'ah.png'),'')
     xbmcplugin.endOfDirectory(utils.addon_handle, cacheToDisc=False)    
 
 @utils.url_dispatcher.register('5', ['page'])
@@ -168,6 +167,8 @@ def ONELIST(page=1):
 
 @utils.url_dispatcher.register('4', ['url'])
 def OpenDownloadFolder(url):
+    xbmc.executebuiltin('Dialog.Close(busydialog)')
+    xbmc.sleep(100)
     xbmc.executebuiltin('ActivateWindow(Videos, ' + url + ')')
 
 

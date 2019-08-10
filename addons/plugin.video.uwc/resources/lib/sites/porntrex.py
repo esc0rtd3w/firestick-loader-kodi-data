@@ -188,7 +188,7 @@ def JHList(url, page=1, onelist=None):
 
 @utils.url_dispatcher.register('52', ['url', 'name'], ['download'])
 def PTPlayvid(url, name, download=None):
-    vp = utils.VideoPlayer(name) #, download=download, direct_regex="video\S+url\d*:\s*'([^']+)'")
+    vp = utils.VideoPlayer(name, download=download)
     vp.progress.update(25, "", "Loading video page", "")
 
     hdr = dict(utils.headers)

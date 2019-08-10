@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="241" />
-    <setting id="noteMessage" value="Every internet user should use a VPN at all&#x0A;times. [B]Protect your privacy[/B], [B]Bypass region&#x0A;blocking[/B] and [B]censorship[/B]!&#x0A;&#x0A;[B][COLOR yellow]VPN for $2.99:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]&#x0A;&#x0A;We also just published a list of the [B]best legal&#x0A;Kodi addons[/B]. They&apos;re fantastic with a VPN, and&#x0A;many channels work fine without.&#x0A;&#x0A;[B][COLOR yellow]Best Addons:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/legal[/COLOR][/B]&#x0A;&#x0A;Be sure to check out [B]our new web site[/B] and [B]forums[/B]!" />
+    <setting id="noteImage" value="242" />
+    <setting id="noteMessage" value="We hope you&apos;re enjoying Kodi. Just to let you&#x0A;know, a [B]VPN could greatly enhance[/B] your overall&#x0A;experience and is [B]highly recommended[/B].&#x0A;&#x0A;* More [B]Working Sources[/B]&#x0A;* Bypass [B]Site Blocking[/B]&#x0A;* Protect Your [B]Identity[/B]&#x0A;* [B]Torrent/P2P[/B] Safely&#x0A;&#x0A;Signup today through the link below for [B]only&#x0A;$2.99/month[/B]. Works great on all devices!&#x0A;&#x0A;[B][COLOR yellow]Get Started:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />
