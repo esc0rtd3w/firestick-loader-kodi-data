@@ -54,7 +54,7 @@ def List(url):
 
 @utils.url_dispatcher.register('952', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    vp  = utils.VideoPlayer(name)
+    vp  = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
     videopage = utils.getHtml(url)
     vidlink = re.compile('"video-player".*?<iframe src=\'(.*?)\'', re.DOTALL | re.IGNORECASE).findall(videopage)[0]

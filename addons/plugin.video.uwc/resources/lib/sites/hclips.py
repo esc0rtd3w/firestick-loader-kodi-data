@@ -113,7 +113,7 @@ def ChannelList(url):
 
 @utils.url_dispatcher.register('382', ['url', 'name'], ['download'])    
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name)
+    vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Playing video", "")        
     videolink = GetTxxxVideo(url)
     vp.progress.update(40, "", "Playing video", "")    

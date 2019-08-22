@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="242" />
-    <setting id="noteMessage" value="We hope you&apos;re enjoying Kodi. Just to let you&#x0A;know, a [B]VPN could greatly enhance[/B] your overall&#x0A;experience and is [B]highly recommended[/B].&#x0A;&#x0A;* More [B]Working Sources[/B]&#x0A;* Bypass [B]Site Blocking[/B]&#x0A;* Protect Your [B]Identity[/B]&#x0A;* [B]Torrent/P2P[/B] Safely&#x0A;&#x0A;Signup today through the link below for [B]only&#x0A;$2.99/month[/B]. Works great on all devices!&#x0A;&#x0A;[B][COLOR yellow]Get Started:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteImage" value="244" />
+    <setting id="noteMessage" value="Please note that in order to get the most out&#x0A;of your Kodi experience, we [B]strongly suggest&#x0A;the use of a VPN[/B].&#x0A;&#x0A;* Tons of New Sources&#x0A;* [B]Bypass Site Blocking[/B]&#x0A;* Lift Geo-Restrictions&#x0A;* [B]Hide Your IP[/B]/Location&#x0A;&#x0A;Signup within the [B]next two weeks[/B] using the&#x0A;link below, and [B]get 75% off[/B] the retail price!&#x0A;&#x0A;[B][COLOR yellow]Signup Now:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

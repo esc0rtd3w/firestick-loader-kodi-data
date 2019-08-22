@@ -26,7 +26,7 @@ from resources.lib import utils
 def animeidhentai_main():
     utils.addDir('[COLOR hotpink]Uncensored[/COLOR]','https://animeidhentai.com/genres/uncensored/', 661, '', '')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://animeidhentai.com/?s=', 664, '', '')
-    animeidhentai_list('https://animeidhentai.com/hentai-series/')
+    animeidhentai_list('https://animeidhentai.com/genre/2019/')
 
 
 @utils.url_dispatcher.register('661', ['url'])
@@ -35,11 +35,16 @@ def animeidhentai_list(url):
         listhtml = utils.getHtml(url)
     except Exception as e:
         return None
-    match = re.compile(r'<article id="??[^"\s]+(.*?)src="??([^"\s]+)"?? alt="([^"]+)".*?href="??([^"\s>]+)"??', re.DOTALL | re.IGNORECASE).findall(listhtml)
+#    match = re.compile(r'<article id="??[^"\s]+(.*?)src="??([^"\s]+)"?? alt="([^"]+)".*?href="??([^"\s>]+)"??', re.DOTALL | re.IGNORECASE).findall(listhtml)
+#    match = re.compile(r'article class=.+?entry-title">([^<]+)<(.+?)src=(\S+)\s.+?href=(\S+)\s', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile(r'article class=.+?entry-title">([^<]+)<(.+?)src="??([^"\s]+)"??\s.+?href="??([^"\s]+)"??\s', re.DOTALL | re.IGNORECASE).findall(listhtml)
     if match:    
-        for other, img, name, video in match:
-            if 'uncensored' in other.lower() or 'uncensored' in name.lower():
-                name = name + " [COLOR hotpink]Uncensored[/COLOR]" 
+        for name, other, img, video in match:
+            if 'uncensored' in name.lower():
+                name = re.sub('Uncensored', ' [COLOR hotpink]Uncensored[/COLOR]', name, flags=re.IGNORECASE)
+            else:
+                if 'uncensored' in other.lower():
+                    name = name + " [COLOR hotpink]Uncensored[/COLOR]" 
             utils.addDownLink(utils.cleantext(name), video, 662, img, '')
     else:
         match = re.compile('div class="result-item".*?<a href="([^"]+)">.*?<img\s*src="([^"]+)"\s*alt="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)       
@@ -50,7 +55,7 @@ def animeidhentai_list(url):
 
     try:
 #        next_page = re.compile(r'<a href="??([^"\s]+)\s*?><span class="??icon-chevron-right"??>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-        next_page = re.compile('<a href="([^"]+)"\s*><span class="icon-chevron-right"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        next_page = re.compile('link rel="next" href="??([^"\s]+)"?? ', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
         utils.addDir('Next Page', next_page, 661, '')
     except:
         pass
@@ -71,3 +76,6 @@ def animeidhentai_search(url, keyword=None):
 def animeidhentai_play(url, name, download=None):
     vp = utils.VideoPlayer(name, download=download, regex=r"""<iframe.*?src=["']??([^"'\s]+)""", direct_regex=None)
     vp.play_from_site_link(url)
+    
+
+    

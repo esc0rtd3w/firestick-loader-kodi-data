@@ -84,7 +84,7 @@ def Categories(url):
 @utils.url_dispatcher.register('782', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
     links = {}
-    vp = utils.VideoPlayer(name)
+    vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
     videopage = utils.getHtml(url)
     srcs = re.compile('<a title="([^"]+)" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)

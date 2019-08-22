@@ -84,7 +84,7 @@ def PHVideo(url, name, download=None):
         baseurls = re.compile("'(aHr[^']+)", re.DOTALL | re.IGNORECASE).findall(videopage)
         for base in baseurls:
             videopage = 'src="' + base64.b64decode(base) + '"' + " " + videopage
-    utils.playvideo(videopage, name, download=None, url=url)
+    utils.playvideo(videopage, name, download, url=url)
 
 
 

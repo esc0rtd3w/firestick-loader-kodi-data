@@ -83,7 +83,7 @@ def YFTCat(url):
 
 def YFTPlayvid(url, name, download=None):
     links = {}
-    vp = utils.VideoPlayer(name)
+    vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
     videopage = utils.getHtml(url)
     iframes = re.compile('<iframe.+?src="([^"]+)"[^>]+>.*?</iframe', re.DOTALL | re.IGNORECASE).findall(videopage)

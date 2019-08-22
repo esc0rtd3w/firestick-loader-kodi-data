@@ -139,7 +139,7 @@ def Actors(url):
 
 @utils.url_dispatcher.register('132', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name)
+    vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
     html = utils.getHtml(url)   
     videourl = re.compile('<iframe src="([^"]+)" ', re.DOTALL | re.IGNORECASE).findall(html)[0]
