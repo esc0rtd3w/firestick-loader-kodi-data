@@ -1,3 +1,24 @@
+[B]Version 0.8.0/B]
+- Added Classic Arts Showcase
+
+[B]Version 0.7.9[/B]
+- Fixed: Court TV, QVC, RT, TBD
+- Added: American Classics, , CombatGo, Comedy Dynamics, Docurama, FilmRise Free Movies, FilmRise Classic TV, Glewed TV, Hallypop, Hell's Kitchen, Kitchen Nightmares, Made in Hollywood, Music Baeble, Newsy, Outside TV, PeopleTV, Shout TV, Stirr Action, Stirr Biographies, Stirr Black Cinema, Stirr Classics, Stirr Comedy, Stirr Drama, Stirr Music, Stirr Travel, The Film Detective
+- Removed: Soar
+
+[B]Version 0.7.8[/B]
+- removed rebase function
+
+[B]Version 0.7.7[/B]
+- version bump
+
+[B]Version 0.7.6[/B]
+- Removed broken live TV channels
+- Fixed several live TV channels
+
+[B]Version 0.7.5[/B]
+- Updated functions for Tubi
+
 [B]Version 0.7.4[/B]
 - Fixed channel order
 

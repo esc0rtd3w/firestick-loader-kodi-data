@@ -48,8 +48,9 @@ def HQLIST(url):
             img = 'https:' + img
         utils.addDownLink(name, videourl, 152, img, '')
     try:
-        nextp=re.compile('<a href="([^"]+)"[^>]+>Next', re.DOTALL | re.IGNORECASE).findall(link)
+        nextp=re.compile('<a href="([^"]+)" class="button mobile-pagi pagi-btn">Next</a>', re.DOTALL | re.IGNORECASE).findall(link)
         nextp = "https://www.hqporner.com" + nextp[0]
+        print "NEXTP: " + nextp
         utils.addDir('Next Page', nextp,151,'')
     except:
         pass

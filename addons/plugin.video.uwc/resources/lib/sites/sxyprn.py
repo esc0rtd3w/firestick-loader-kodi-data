@@ -45,86 +45,86 @@ def yourporn_main():
 @utils.url_dispatcher.register('651', ['url', 'page'], ['section'])
 def yourporn_list(url, page=None, section=None):
 
-	popular_mode = section if section else None
-	try:
-		if popular_mode and page:
-			listhtml = utils.postHtml(url, compression=False, form_data={'period': 'week', 'popular_source': 'blogs', 'popular_mode': popular_mode, 'popular_off': page})
-			page += 6
-			listhtml += utils.postHtml(url, compression=False, form_data={'period': 'week', 'popular_source': 'blogs', 'popular_mode': popular_mode, 'popular_off': page})
-		else:
-			listhtml = utils.getHtml(url)
-	except Exception as e:
-		return None
-	if popular_mode and page:
-		content = listhtml
-	else:
-		content = listhtml.replace("\'",'"')
-	content = content.replace("\'",'"')
-#	match_big = re.compile('''data-title="([^"]+)".+?<a href="([^"]+)">.+?<img class=.+?;" src="([^"]+)".+?<span class="duration_small".+?" ; title=".+?">(.+?)<''', re.DOTALL | re.IGNORECASE).findall(content)
-	match_big = re.compile('''data-title="([^"]+)".+?<a href="([^"]+)">.+?src="([^"]+.jpg)">.+?<span class="duration_small".+?title=".+?">(.+?)<''', re.DOTALL | re.IGNORECASE).findall(content)
-	for name,video,img, duration in match_big:
-		duration = duration.strip()
-		if duration == '??':
-			continue
-		try:
-			name=name.split('\n')[0]
-			if name.split('#')[0] <> '':
-			    name=name.split('#')[0]
-			else:
-			    name=name.split('#')[1]
-		except:
-			pass
-		name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"
-		utils.addDownLink(name, make_url(video), 652, make_url(img), '')
+    popular_mode = section if section else None
+    try:
+        if popular_mode and page:
+            listhtml = utils.postHtml(url, compression=False, form_data={'period': 'week', 'popular_source': 'blogs', 'popular_mode': popular_mode, 'popular_off': page})
+            page += 6
+            listhtml += utils.postHtml(url, compression=False, form_data={'period': 'week', 'popular_source': 'blogs', 'popular_mode': popular_mode, 'popular_off': page})
+        else:
+            listhtml = utils.getHtml(url)
+    except Exception as e:
+        return None
+    if popular_mode and page:
+        content = listhtml
+    else:
+        content = listhtml.replace("\'",'"')
+    content = content.replace("\'",'"')
+#   match_big = re.compile('''data-title="([^"]+)".+?<a href="([^"]+)">.+?<img class=.+?;" src="([^"]+)".+?<span class="duration_small".+?" ; title=".+?">(.+?)<''', re.DOTALL | re.IGNORECASE).findall(content)
+    match_big = re.compile('''data-title="([^"]+)".+?<a href="([^"]+)">.+?src="([^"]+.jpg)">.+?<span class="duration_small".+?title=".+?">(.+?)<''', re.DOTALL | re.IGNORECASE).findall(content)
+    for name,video,img, duration in match_big:
+        duration = duration.strip()
+        if duration == '??':
+            continue
+        try:
+            name=name.split('\n')[0]
+            if name.split('#')[0] <> '':
+                name=name.split('#')[0]
+            else:
+                name=name.split('#')[1]
+        except:
+            pass
+        name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"
+        utils.addDownLink(name, make_url(video), 652, make_url(img), '')
 
-	match_cat = re.compile('src="([^"]+)"><video loop.+?title="[^"]+">([^<]+)</span>.+?href="([^"]+)" title="([^"]+)"><div class="post_control', re.DOTALL | re.IGNORECASE).findall(content)
-	for img, duration, video, name in match_cat:
-		duration = duration.strip()
-		if duration == '??':
-			continue
-		try:
-			name=name.split('\n')[0]
-			if name.split('#')[0] <> '':
-			    name=name.split('#')[0]
-			else:
-			    name=name.split('#')[1]
-		except:
-			pass
-		name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"
-		utils.addDownLink(name, make_url(video), 652, make_url(img), '')
-
-
-	match_small = re.compile('''<div class='blog_post_small'>.*?<div class='blog_post_small_title'>(.*?)</div>.*?href.*?href='([^']+)'.*? src='([^']+)'[^>]''', re.DOTALL | re.IGNORECASE).findall(content)
-	for name, video, img in match_small:
-		name = utils.cleantext(re.sub("<.*?>", '', name))
-		utils.addDownLink(name, make_url(video), 652, make_url(img), '')
-	if popular_mode:
-		page = page + 6 if page else 12
-		utils.addDir('Next Page', 'https://sxyprn.com/php/popular_append.php', 651, '', page, section=popular_mode)
-	else:
-		try:
-			next_page = re.compile('''<a href="([^"]+)" class="tdn"><div class="next''', re.DOTALL | re.IGNORECASE).search(content).group(1)
-			next_page = make_url(next_page)
-			utils.addDir('Next Page' , next_page, 651, '')
-		except:
-			pass
-	xbmcplugin.endOfDirectory(utils.addon_handle)
+    match_cat = re.compile('src="([^"]+)"><video loop.+?title="[^"]+">([^<]+)</span>.+?href="([^"]+)" title="([^"]+)"><div class="post_control', re.DOTALL | re.IGNORECASE).findall(content)
+    for img, duration, video, name in match_cat:
+        duration = duration.strip()
+        if duration == '??':
+            continue
+        try:
+            name=name.split('\n')[0]
+            if name.split('#')[0] <> '':
+                name=name.split('#')[0]
+            else:
+                name=name.split('#')[1]
+        except:
+            pass
+        name = utils.cleantext(name) + " [COLOR deeppink]" + duration + "[/COLOR]"
+        utils.addDownLink(name, make_url(video), 652, make_url(img), '')
 
 
-@utils.url_dispatcher.register('653', ['url']) 
+    match_small = re.compile('''<div class='blog_post_small'>.*?<div class='blog_post_small_title'>(.*?)</div>.*?href.*?href='([^']+)'.*? src='([^']+)'[^>]''', re.DOTALL | re.IGNORECASE).findall(content)
+    for name, video, img in match_small:
+        name = utils.cleantext(re.sub("<.*?>", '', name))
+        utils.addDownLink(name, make_url(video), 652, make_url(img), '')
+    if popular_mode:
+        page = page + 6 if page else 12
+        utils.addDir('Next Page', 'https://sxyprn.com/php/popular_append.php', 651, '', page, section=popular_mode)
+    else:
+        try:
+            next_page = re.compile('''<a href="([^"]+)" class="tdn"><div class="next''', re.DOTALL | re.IGNORECASE).search(content).group(1)
+            next_page = make_url(next_page)
+            utils.addDir('Next Page' , next_page, 651, '')
+        except:
+            pass
+    xbmcplugin.endOfDirectory(utils.addon_handle)
+
+
+@utils.url_dispatcher.register('653', ['url'])
 def yourporn_cat(url):
-	listhtml = utils.getHtml(url)
-	listhtml=listhtml.replace("\'",'"')
-	match = re.compile('<a href="([^"]+)" target="_blank"><div class="top_sub_el top_sub_el_sc"><span class="top_sub_el_key_sc">([^<]+)</span><span class="top_sub_el_count">([^<]+)</span></div>', re.DOTALL | re.IGNORECASE).findall(listhtml)
-#	match = re.compile('<a href="([^"]+)".+?"top_sub_el_key_sc">(.+?)<.+?"top_sub_el_count">(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
-	for catpage, name, count in match: #sorted(match, key=lambda x: x[2]):
-		#count = count.strip()
-		name = name.strip() + " [COLOR deeppink]" + count + "[/COLOR]"
-		utils.addDir(name, make_url(catpage) + '?sm=latest', 651, '', 1)
-	xbmcplugin.endOfDirectory(utils.addon_handle)
+    listhtml = utils.getHtml(url)
+    listhtml=listhtml.replace("\'",'"')
+    match = re.compile('<a href="([^"]+)" target="_blank"><div class="top_sub_el top_sub_el_sc"><span class="top_sub_el_key_sc">([^<]+)</span><span class="top_sub_el_count">([^<]+)</span></div>', re.DOTALL | re.IGNORECASE).findall(listhtml)
+#   match = re.compile('<a href="([^"]+)".+?"top_sub_el_key_sc">(.+?)<.+?"top_sub_el_count">(.+?)<', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    for catpage, name, count in match: #sorted(match, key=lambda x: x[2]):
+        #count = count.strip()
+        name = name.strip() + " [COLOR deeppink]" + count + "[/COLOR]"
+        utils.addDir(name, make_url(catpage) + '?sm=latest', 651, '', 1)
+    xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-@utils.url_dispatcher.register('654', ['url'], ['section']) 
+@utils.url_dispatcher.register('654', ['url'], ['section'])
 def yourporn_channels(url, section):
     listhtml = utils.getHtml(url)
     if section == 'networks':
@@ -150,12 +150,35 @@ def yourporn_search(url, keyword=None):
         url = url + title + '.html'
         yourporn_list(url)
 
+
+#    function preda(arg){
+#        arg[5]-= parseInt(ssut51(arg[6]))+parseInt(ssut51(arg[7]));
+#        return arg;
+#    }
+#    function ssut51(arg){
+#        var str = arg.replace(/[^0-9]/g,'');
+#        var sut = 0;
+#        for (var i = 0; i < str.length; i++) {
+#        sut += parseInt(str.charAt(i), 10);
+#        }
+#        return sut;
+#    }
+
+def ssut51(str):
+    str = re.sub(r'\D', '', str)
+    sut = 0
+    for i in range(0, len(str)):
+        sut += int(str[i])
+    return sut
+
 @utils.url_dispatcher.register('652', ['url', 'name'], ['download'])
 def yourporn_play(url, name, download=None):
-    utils.kodilog(url)
     url = url.replace('https://yps.to/','https://sxyprn.com/')
     html = utils.getHtml(url, '')
     videourl = re.compile('''data-vnfo='{".+?":"(.+?)"''', re.DOTALL | re.IGNORECASE).findall(html)[0].replace('\/','/')
+    tmp = videourl.split('/')
+    tmp[5] = str(int(tmp[5]) - ssut51(re.sub(r'\D', '', tmp[6])) - ssut51(re.sub(r'\D', '', tmp[7])))
+    videourl = '/'.join(tmp)
     match = re.search('src="(/js/main[^"]+)"', html, re.DOTALL | re.IGNORECASE)
     if match:
         result = match.group(1)
@@ -163,7 +186,7 @@ def yourporn_play(url, name, download=None):
         replaceint = re.search(r'tmp\[1\]\+= "(\d+)";', jsscript, re.DOTALL | re.IGNORECASE).group(1)
         videourl = videourl.replace('/cdn/', '/cdn%s/' % replaceint)
     else:
-        videourl = videourl.replace('/cdn/','/cdn7/')
+        videourl = videourl.replace('/cdn/','/cdn8/')
     videourl = make_url(videourl)
     if download == 1:
         utils.downloadVideo(videourl, name)
@@ -171,10 +194,9 @@ def yourporn_play(url, name, download=None):
         iconimage = xbmc.getInfoImage("ListItem.Thumb")
         listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
         listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-        xbmc.Player().play(videourl, listitem)		
-		
-		
-		
+        xbmc.Player().play(videourl, listitem)
+
+
 def yourporn_multiple_videos(html):
     videos = re.compile('''class="pl_vid_el transition".*?data-hash="([^"]+)".*?title="([^"]+)"''', re.DOTALL | re.IGNORECASE).findall(html)
     vids = {}

@@ -51,7 +51,12 @@ def List(url):
 
 @utils.url_dispatcher.register('432', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    utils.PLAYVIDEO(url, name, download)
+    vp = utils.VideoPlayer(name, download)
+    vp.progress.update(25, "", "Loading video page", "")
+    videopage = utils.getHtml(url)
+    videolink = re.compile('<iframe src="([^"]+)" ', re.DOTALL | re.IGNORECASE).findall(videopage)[0]
+    videolink = videolink.replace('woof.tube','verystream.com')
+    vp.play_from_link_to_resolve(videolink)
 
 
 @utils.url_dispatcher.register('433', ['url'])

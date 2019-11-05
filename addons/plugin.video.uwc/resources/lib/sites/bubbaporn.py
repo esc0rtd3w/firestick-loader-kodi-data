@@ -85,8 +85,8 @@ def TPCat(url):
 @utils.url_dispatcher.register('95', ['url'], ['page'])
 def TPPornstars(url, page=1):
     pshtml = utils.getHtml(url, '')
-    pornstars = re.compile("""img" src='([^']+)'[^<]+<[^"]+"([^"]+)"[^>]+>([^<]+)<.*?total[^>]+>([^<]+)<""", re.DOTALL | re.IGNORECASE).findall(pshtml)
-    for img, psurl, title, videos in pornstars:
+    pornstars = re.compile("""img" src='([^']+)'.+?alt="([^"]+)".+?href="([^"]+)".+?>(\d+\s*videos)<""", re.DOTALL | re.IGNORECASE).findall(pshtml)
+    for img, title, psurl, videos in pornstars:
         psurl = psurl.replace('/pornstar','')
         psurl = "https://www.bubbaporn.com/ajax/show_pornstar" + psurl + "?page=1"
         title = title + " [COLOR deeppink]" + videos + "[/COLOR]" 

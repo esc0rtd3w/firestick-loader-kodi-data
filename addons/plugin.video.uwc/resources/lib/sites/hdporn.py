@@ -28,15 +28,15 @@ progress = utils.progress
 
 @utils.url_dispatcher.register('60')
 def PAQMain():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.pornaq.com',63,'','')
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.pornaq.com/page/1/?s=',68,'','')
-    PAQList('http://www.pornaq.com/page/1/',1)
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.woxtube.com/categories/',63,'','')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.woxtube.com/page/1/?s=',68,'','')
+    PAQList('http://www.woxtube.com/page/1/',1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('64')
 def P00Main():
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.porn00.org',63,'','')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.porn00.org/categories/',63,'','')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.porn00.org/page/1/?s=',68,'','')
     PAQList('http://www.porn00.org/page/1/',1)
     xbmcplugin.endOfDirectory(utils.addon_handle)    
@@ -49,66 +49,63 @@ def PAQList(url, page=1, onelist=None):
     try:
         listhtml = utils.getHtml(url, '')
     except:
-        
-        return None
-    if 'pornaq' in url:
-        match = re.compile(r'<h2>\s+<a title="([^"]+)" href="([^"]+)".*?src="([^"]+)" class="attachment-primary-post-thumbnail', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        for name, videopage, img in match:
-            name = utils.cleantext(name)
-            utils.addDownLink(name, videopage, 62, img, '')
-    elif 'porn00' in url:
-        match = re.compile('<h2>\s+<a title="([^"]+)" href="([^"]+)".*?src="([^"]+)" class="attachment-primary-post-thumbnail', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        for name, videopage, img in match:
-            name = utils.cleantext(name)
-            utils.addDownLink(name, videopage, 62, img, '')    
-    if not onelist:
-        if re.search("<span class='current'>\d+?</span><span>", listhtml, re.DOTALL | re.IGNORECASE):
-            npage = page + 1        
-            url = url.replace('page/'+str(page)+'/','page/'+str(npage)+'/')
-            utils.addDir('Next Page ('+str(npage)+')', url, 61, '', npage)
-        xbmcplugin.endOfDirectory(utils.addon_handle)
-
-
-def get_porn00(url):
-    videopage = utils.getHtml(url)
-    try:
-        alternatives_div = re.compile('<div id="alternatives">(.*?)</div', re.DOTALL | re.IGNORECASE).search(videopage).group(1)
-        alternatives = re.compile('''href=['"]([^'"]+)['"]''', re.DOTALL | re.IGNORECASE).findall(alternatives_div)
-        for alternative in alternatives:
-            videopage += utils.getHtml(alternative)
-    except AttributeError:
         pass
-    return '\n'.join(re.compile('<div class="video-box">(.*?)</iframe', re.DOTALL | re.IGNORECASE).findall(videopage))
-
-
-def get_pornaq(url):
-    videopage = utils.getHtml(url)
-    return re.compile('<div class="imatge alta">(.*?)</iframe', re.DOTALL | re.IGNORECASE).search(videopage).group(1)
+        return None
+    match = re.compile('class="post-con">.*?<a title="([^"]+)".*?href="([^"]+)".*?src="([^"]+)" class="attachment', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    for name, videopage, img in match:
+        name = utils.cleantext(name)
+        utils.addDownLink(name, videopage, 62, img, '')    
+    if not onelist:
+        try:
+            nextp=re.compile('link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+            utils.addDir('Next Page', nextp,61,'')
+        except:
+            pass
+        xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('62', ['url', 'name'], ['download'])
 def PPlayvid(url, name, download=None):
     vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
-    html = get_pornaq(url) if 'pornaq' in url else get_porn00(url)
-    vp.play_from_html(html)
+    videopage = utils.getHtml(url)
+    if 'porn00' in url:
+        alternatives = re.compile('div id="alternatives".+?href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(videopage)
+        for alternative in alternatives:
+            videopage += utils.getHtml(alternative)
+        links = {}    
+        videolinks = re.compile('iframe.+?src="([^"]+)" width', re.DOTALL | re.IGNORECASE).findall(videopage)
+        for link in videolinks:
+            if vp.resolveurl.HostedMediaFile(link) and 'www.porn00.org' not in link:
+                links[link.split('/')[2]] = link
+            if 'www.porn00.org/player/' in link:
+                html = utils.getHtml(link)
+                srcs = re.compile('''<source src='([^']+)' title="([^"]+)"''', re.DOTALL | re.IGNORECASE).findall(html)
+                for (vlink, title) in srcs:
+                    links['direct ' + title] = vlink + '|Referer=' + link
+        videourl = utils.selector('Select link', links, dont_ask_valid=False, reverse=True)
+        vp.progress.update(75, "", "Loading video page", "")    
+        if '|Referer' in videourl:
+            vp.play_from_direct_link(videourl)
+        else:
+            vp.play_from_link_to_resolve(videourl)
+    if 'woxtube' in url:
+        videourl = re.compile("<source src='([^']+)' title", re.DOTALL | re.IGNORECASE).findall(videopage)[0]
+        vp.play_from_direct_link(videourl + '|Referer=' + url)
 
 
 @utils.url_dispatcher.register('63', ['url'])
 def PCat(url):
-    caturl = utils.getHtml(url, '')
-    cathtml = re.compile('<ul id="categorias">(.*?)</html>', re.DOTALL | re.IGNORECASE).findall(caturl)
-    if 'pornaq' in url:
-        match = re.compile("""<li.*?href=(?:'|")(/[^'"]+)(?:'|").*?>([^<]+)""", re.DOTALL | re.IGNORECASE).findall(cathtml[0])
-    elif 'porn00' in url:
-        match = re.compile("""<li.*?href=(?:'|")([^'"]+)(?:'|").*?>([^<]+)""", re.DOTALL | re.IGNORECASE).findall(cathtml[0])
-    for videolist, name in match:
-        if 'pornaq' in url:
-            videolist = "http://www.pornaq.com" + videolist + "page/1/"
-            utils.addDir(name, videolist, 61, '', 1)
+    cathtml = utils.getHtml(url, '')
+    match = re.compile('<a title="([^"]+)" href="([^"]+)".+?src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    for name, videolist, img in match:
+        name = name.replace(' Porn Videos','').title()
+        if 'woxtube' in url:
+            videolist = "http://www.woxtube.com" + videolist + "page/1/"
+            utils.addDir(name, videolist, 61, img, 1)
         elif 'porn00' in url:
-            videolist = videolist + "page/1/"
-            utils.addDir(name, videolist, 61, '', 1)            
+            videolist = "http://www.porn00.org" + videolist + "page/1/"
+            utils.addDir(name, videolist, 61, img, 1)
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 

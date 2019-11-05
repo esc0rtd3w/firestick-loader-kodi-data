@@ -95,15 +95,25 @@ def XTList(url, page=1):
 def XTVideo(url, name, download=None):
     vp = utils.VideoPlayer(name, download)
     vp.progress.update(25, "", "Loading video page", "")
-    html = utils.getHtml(url, url)
+    html = utils.getHtml(url, url)   
     if 'strdef.world' in html:
-	links = vp._check_suburls(html, url)
-	req = urllib2.Request(links[0],'',utils.headers)
-	req.add_header('Referer', url)
-	response = urllib2.urlopen(req, timeout=30)
-	vp.play_from_link_to_resolve(response.geturl())
-    else:	
-    	vp.play_from_html(html)  
+        links = vp._check_suburls(html, url)
+        select = {}       
+        for i, link in enumerate(links, start = 1):
+            if 'strdef.world' in link:
+                req = urllib2.Request(link,'',utils.headers)
+                req.add_header('Referer', url)
+                response = urllib2.urlopen(req, timeout=30)
+                link = response.geturl()
+            index = 'Player ' + str(i) + ' - ' + link.rsplit('/', 1)[-1]
+            select[index] = link
+        videourl = utils.selector('Select video:', select, dont_ask_valid=False)
+        if not videourl:
+            return
+        videourl = videourl.replace('woof.tube','verystream.com')
+        vp.play_from_link_to_resolve(videourl)
+    else:   
+        vp.play_from_html(html)  
 
 
 def getXTSortMethod():

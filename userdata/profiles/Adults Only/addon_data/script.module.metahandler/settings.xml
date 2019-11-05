@@ -9,7 +9,7 @@
     <setting id="omdbapi_fallback" value="true" />
     <setting id="override_keys" value="False" />
     <setting id="tmdb_api_key" value="f090bb54758cabf231fb605d3e3e0468" />
-    <setting id="tmdb_api_key_ver" value="3.1.9" />
+    <setting id="tmdb_api_key_ver" value="3.1.10" />
     <setting id="tmdb_backdrop_size" value="original" />
     <setting id="tmdb_language" value="English (en)" />
     <setting id="tmdb_poster_size" value="w342" />

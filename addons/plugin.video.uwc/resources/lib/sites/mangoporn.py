@@ -27,14 +27,11 @@ import urllib2,urllib
 @utils.url_dispatcher.register('800')
 def Main():
     utils.addDir('[COLOR hotpink]Categories[/COLOR]', 'https://mangoporn.net/', 803, '', '')
-    utils.addDir('[COLOR hotpink]Year[/COLOR]', 'https://mangoporn.net/', 804, '', '')
-    utils.addDir('[COLOR hotpink]Studio[/COLOR]', 'https://mangoporn.net/', 805, '', '')
-    utils.addDir('[COLOR hotpink]Pornstar[/COLOR]', 'https://mangoporn.net/', 806, '', '')    
+    utils.addDir('[COLOR hotpink]Years[/COLOR]', 'https://mangoporn.net/', 804, '', '')
+    utils.addDir('[COLOR hotpink]Studios[/COLOR]', 'https://mangoporn.net/', 805, '', '')
+    utils.addDir('[COLOR hotpink]Pornstars[/COLOR]', 'https://mangoporn.net/', 806, '', '')    
     utils.addDir('[COLOR hotpink]Search[/COLOR]', 'https://mangoporn.net/?s=', 807, '', '') 
     List('https://mangoporn.net/genres/featured-movies/')
-
-
-    xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('801', ['url'])
@@ -48,7 +45,7 @@ def List(url):
     for img, name, videopage, year in match:
         name = utils.cleantext(name) + "[COLOR hotpink] (" + str(year) + ")[/COLOR]"
         utils.addDownLink(name, videopage, 802, img, '')
-    try:       
+    try:
         nextp = re.compile('link rel="next" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
         utils.addDir('Next Page ', nextp, 801, '')
     except:
@@ -78,14 +75,16 @@ def Playvid(url, name, download=None):
         title = title.replace(name.split("[",1)[0],'').replace(' on','')
         if '/goto/' in src:
             src = url_decode(src)
-            if vp.resolveurl.HostedMediaFile(src):
-                links[title] = src    
+        if vp.resolveurl.HostedMediaFile(src):
+            links[title] = src
         if 'mangovideo' in src:
-            title = title.replace(' - ','')        
+            title = title.replace(' - ','')
             html = utils.getHtml(src)
-            match = re.compile("video_url:\s*'([^']+)'", re.DOTALL | re.IGNORECASE).findall(html)[0]           
+            match = re.compile("video_url:\s*'([^']+)'", re.DOTALL | re.IGNORECASE).findall(html)[0]
             links[title] = match
     videourl = utils.selector('Select server', links, dont_ask_valid=False, reverse=True)
+    if not videourl:
+        return
     vp.progress.update(90, "", "Loading video page", "")
     if 'mango' in videourl:
         vp.direct_regex = '(' + re.escape(videourl) + ')'
@@ -116,7 +115,7 @@ def Years(url):
 @utils.url_dispatcher.register('805', ['url'])
 def Studio(url):
     cathtml = utils.getHtml(url, '')
-    match = re.compile('a href="(https://mangoporn.net/studios/[^"]+)" class="menu-image-title-after"><span class="menu-image-title">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match = re.compile('a href="(https://mangoporn.net/studios/[^"]+)">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
         name = utils.cleantext(name)
         utils.addDir(name, catpage, 801, '')    
@@ -125,7 +124,7 @@ def Studio(url):
 @utils.url_dispatcher.register('806', ['url'])
 def Pornstars(url):
     cathtml = utils.getHtml(url, '')
-    match = re.compile('a href="(https://mangoporn.net/pornstar/[^"]+)" class="menu-image-title-after"><span class="menu-image-title">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
+    match = re.compile('a href="(https://mangoporn.net/pornstar/[^"]+)">([^<]+)<', re.DOTALL | re.IGNORECASE).findall(cathtml)
     for catpage, name in match:
         name = utils.cleantext(name)
         utils.addDir(name, catpage, 801, '')    

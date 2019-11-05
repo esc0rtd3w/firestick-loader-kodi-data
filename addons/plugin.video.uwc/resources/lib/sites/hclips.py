@@ -30,10 +30,10 @@ import urllib2,urllib
 
 @utils.url_dispatcher.register('380')
 def Main():
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','http://www.hclips.com/search/?p=0&q=', 384, '', '')
-    utils.addDir('[COLOR hotpink]Categories[/COLOR]','http://www.hclips.com/categories/', 383, '', '')
-    utils.addDir('[COLOR hotpink]Channels[/COLOR]','http://www.hclips.com/channels/', 385, '', '')
-    List('http://www.hclips.com/latest-updates/')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://hclips.com/search/?p=0&q=', 384, '', '')
+    utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://hclips.com/categories/', 383, '', '')
+    utils.addDir('[COLOR hotpink]Channels[/COLOR]','https://hclips.com/channels/name/', 385, '', '')
+    List('https://hclips.com/latest-updates/')
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
@@ -44,18 +44,17 @@ def List(url):
     except:
         
         return None
-    match = re.compile('<a href="([^"]+)"[^<]+<img src="([^"]+)" alt="([^"]+)"[^<]+[^>]+>([^<]+)</span>(.*?)<strong', re.DOTALL).findall(listhtml)
+    match = re.compile('href="([^"]+)"[^\/]+?src="([^"]+)"\s*alt="([^"]+)"[^<]+?<span class="dur">([^<]+)<(.+?)div class="info-small"', re.DOTALL).findall(listhtml)
     for videopage, img, name, dur, hd in match:
-        if 'hd' in hd:
+        if 'hd_video' in hd:
             hd = " [COLOR orange]HD[/COLOR] "
         else:
             hd = " "
         name = utils.cleantext(name)
         name = name + hd + "[COLOR deeppink]" + dur + "[/COLOR]"
-#        videopage = 'http://www.hclips.com/embed/' + videopage.split(':')[-2]
         utils.addDownLink(name, videopage, 382, img, '')
     try:
-        nextp=re.compile('<li class="next">.+?<a href="([^"]+)".*?>Next</a>', re.DOTALL | re.IGNORECASE).findall(listhtml)
+        nextp=re.compile('class="paginator__item paginator__item--next paginator__item--arrow" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
         utils.addDir('Next Page', 'http://www.hclips.com' + nextp[0], 381,'')
     except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
@@ -86,34 +85,35 @@ def Categories(url):
 @utils.url_dispatcher.register('385', ['url'])
 def Channels(url):
     listhtml = utils.getHtml(url, '')
-    match = re.compile('<a href="([^"]+)" class="video_thumb" title="([^"]+)">.+?<img height="165" width="285" src="([^"]+)"', re.DOTALL).findall(listhtml)
-    for chanpage, name, img in match:
+    match = re.compile('<a href="([^"]+)" class="video_thumb" title="([^"]+)">.+?<img height="165" width="285" src="([^"]+)".*?<b>([^<]+)<', re.DOTALL).findall(listhtml)
+    for chanpage, name, img, vids in match:
         name = utils.cleantext(name)
-        utils.addDir(name, "http://hclips.com" + chanpage, 386, "http://hclips.com" + img, '')
+        name = '%s [COLOR deeppink]%s videos[/COLOR]' %(name, vids)
+        utils.addDir(name, 'https://hclips.com' + chanpage, 381, img, '')
     try:
-        nextp=re.compile(r'<li class="next">\s+<a href="([^"]+)".*?>Next</a>', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', 'http://www.hclips.com' + nextp[0], 385,'')
+        nextp=re.compile('class="paginator__item paginator__item--next paginator__item--arrow" href="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(listhtml)
+        utils.addDir('Next Page', 'https://www.hclips.com' + nextp[0], 385,'')
     except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-@utils.url_dispatcher.register('386', ['url'])
-def ChannelList(url):
-    listhtml = utils.getHtml(url, '')
-    match = re.compile('<a href="([^"]+)" class="thumb" data-rt=".+?">.+?<img  width="220" height="165" src="([^"]+)" alt="([^"]+)"', re.DOTALL).findall(listhtml)
-    for videopage, img, name in match:
-        name = utils.cleantext(name)
-        utils.addDownLink(name, 'http://www.hclips.com' + videopage, 382, img, '')
-    try:
-        nextp=re.compile('<li class="next">.+?<a href="([^"]+)".*?>Next</a>', re.DOTALL | re.IGNORECASE).findall(listhtml)
-        utils.addDir('Next Page', 'http://www.hclips.com' + nextp[0], 386,'')
-    except: pass
-    xbmcplugin.endOfDirectory(utils.addon_handle)
+# @utils.url_dispatcher.register('386', ['url'])
+# def ChannelList(url):
+    # listhtml = utils.getHtml(url, '')
+    # match = re.compile('<a href="([^"]+)" class="thumb" data-rt=".+?">.+?<img  width="220" height="165" src="([^"]+)" alt="([^"]+)"', re.DOTALL).findall(listhtml)
+    # for videopage, img, name in match:
+        # name = utils.cleantext(name)
+        # utils.addDownLink(name, 'http://www.hclips.com' + videopage, 382, img, '')
+    # try:
+        # nextp=re.compile('<li class="next">.+?<a href="([^"]+)".*?>Next</a>', re.DOTALL | re.IGNORECASE).findall(listhtml)
+        # utils.addDir('Next Page', 'http://www.hclips.com' + nextp[0], 386,'')
+    # except: pass
+    # xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
 @utils.url_dispatcher.register('382', ['url', 'name'], ['download'])    
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download)
+    vp = utils.VideoPlayer(name, download = download)
     vp.progress.update(25, "", "Playing video", "")        
     videolink = GetTxxxVideo(url)
     vp.progress.update(40, "", "Playing video", "")    
@@ -128,9 +128,7 @@ def GetTxxxVideo(vidpage):
     vidid = re.search('''video_id["|']?:\s?(\d+)''', vidpagecontent).group(1)
     data = '%s,%s' % (vidid, pC3)
     vidcontent = utils.getHtml(posturl, referer=vidpage, data={'param': data})
-
     vidurl = re.search('video_url":"([^"]+)', vidcontent).group(1)
-
     replacemap = {'M':'\u041c', 'A':'\u0410', 'B':'\u0412', 'C':'\u0421', 'E':'\u0415', '=':'~', '+':'.', '/':','}
     
     for key in replacemap:

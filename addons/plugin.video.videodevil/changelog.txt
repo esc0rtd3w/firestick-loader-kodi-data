@@ -1,3 +1,15 @@
+[B]Version 1.7.237[/B]
+
+- Updated: spankbang
+- Fixed: catcher
+
+[B]Version 1.7.236[/B]
+
+- Updated: extremetube
+- Fixed: url
+- Updated: moviefap
+- Fixed: catcher
+
 [B]Version 1.7.235[/B]
 
 - Updated: indiansexmovies

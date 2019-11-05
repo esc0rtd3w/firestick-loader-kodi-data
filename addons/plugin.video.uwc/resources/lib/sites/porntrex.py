@@ -47,6 +47,7 @@ def JHMain():
 
 @utils.url_dispatcher.register('51', ['url'], ['page'])
 def PTList(url, page=1, onelist=None):
+    ptacct = utils.addon.getSetting("porntrexacct")
     if onelist:
         url = url.replace('/1/', '/' + str(page) + '/')
     try:
@@ -70,6 +71,8 @@ def PTList(url, page=1, onelist=None):
     for videopage, img, hd, duration, name in match:
         name = utils.cleantext(name)
         private = '[COLOR blue] private[/COLOR]' if 'Private' in hd else ''
+        if ptacct == "false" and private !='' :
+            continue
 #       Changed labelling adding Video quality
         if hd.find('4k') > 0:
             hd = " [COLOR orange]4K[/COLOR] "
@@ -240,7 +243,7 @@ def PTCat(url):
         if img.startswith('//'):
             img = 'https:' + img
 #       Image fix 19.02.07
-        img = re.sub(r"static.cdntrex", "porntrex", img)
+        img = re.sub(r"statics.cdntrex", "porntrex", img)
         catpage = catpage + '?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=1'
 #   Changed 19.01.25
         if url.find('javwhores') > 0:
@@ -258,7 +261,7 @@ def PTChn(url):
     for catpage, name, img in sorted(match, key=lambda x: x[1]):
         if img.startswith('//'):
             img = 'https:' + img
-        img = re.sub(r"static.cdntrex", "porntrex", img)
+        img = re.sub(r"statics.cdntrex", "porntrex", img)
         catpage = catpage + '?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=post_date&from=1'
 
         utils.addDir(name, catpage, 51, img, 1)

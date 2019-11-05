@@ -347,7 +347,7 @@ def downloadVideo(url, name):
 
 
 def notify(header=None, msg='', duration=5000):
-    if header is None: header = 'Ultimate Whitecream'
+    if header is None: header = 'Ultimate Whitecream X'
     builtin = "XBMC.Notification(%s,%s, %s, %s)" % (header, msg, duration, uwcicon)
     xbmc.executebuiltin(builtin)
 
@@ -366,7 +366,12 @@ def playvid(videourl, name, download=None):
         if '.mpd' in videourl:
             listitem.setProperty('inputstreamaddon','inputstream.adaptive')
             listitem.setProperty('inputstream.adaptive.manifest_type','mpd')
-        xbmc.Player().play(videourl, listitem)
+        videourl += '|verifypeer=false' if '|' not in videourl else '&verifypeer=false' if 'verifypeer=false' not in videourl.lower() else ''
+        if int(sys.argv[1]) == -1:
+            xbmc.Player().play(videourl, listitem)
+        else:
+            listitem.setPath(str(videourl))
+            xbmcplugin.setResolvedUrl(addon_handle, True, listitem)
 
 
 def chkmultivids(videomatch):
@@ -1117,7 +1122,12 @@ class VideoPlayer():
             sdpage = streamdefence(sdsrc)
             sdpages += sdpage
         sources = set(re.compile('iframe src="([^"]+)"', re.DOTALL | re.IGNORECASE).findall(sdpages))
-        return sources
+        srcs = set()
+        for source in sources:
+            if 'strdef.world/player' in source:
+                source = getVideoLink(source, url)
+            srcs.add(source)
+        return srcs
 
     @_cancellable
     def _solve_filecrypt(self, fc_urls, url):

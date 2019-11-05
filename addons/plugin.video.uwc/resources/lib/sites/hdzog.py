@@ -32,7 +32,7 @@ import urllib2,urllib
 
 @utils.url_dispatcher.register('340')
 def Main():
-    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://www.hdzog.com/search/?q=', 343, '', '')
+    utils.addDir('[COLOR hotpink]Search[/COLOR]','https://hdzog.com/search/', 343, '', '')
     utils.addDir('[COLOR hotpink]Categories[/COLOR]','https://www.hdzog.com/categories/', 344, '', '')
     utils.addDir('[COLOR hotpink]Channels[/COLOR]','https://www.hdzog.com/channels/', 345, '', '')
     utils.addDir('[COLOR hotpink]Models[/COLOR]','https://www.hdzog.com/models/', 346, '', '')
@@ -66,8 +66,7 @@ def Search(url, keyword=None):
         utils.searchDir(url, 343)
     else:
         title = keyword.replace(' ','+')
-        searchUrl = searchUrl + title
-        print "Searching URL: " + searchUrl
+        searchUrl = searchUrl + title + '/'
         List(searchUrl)
 
 
@@ -114,7 +113,7 @@ def Models(url):
 
 @utils.url_dispatcher.register('342', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-    vp = utils.VideoPlayer(name, download)
+    vp = utils.VideoPlayer(name, download = download)
     vp.progress.update(25, "", "Playing video", "")        
     videolink = GetTxxxVideo(url)
     vp.progress.update(40, "", "Playing video", "")    

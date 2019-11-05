@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.Cypherslocker" name="[COLOR cornflowerblue]Cyphers locker[/COLOR]" version="2.0" provider-name="Project Cypher">
+<addon id="repository.Cypherslocker" name="[COLOR cornflowerblue]Cyphers locker[/COLOR]" version="3.0" provider-name="Project Cypher">
 	<extension point="xbmc.addon.repository" name="CyphersLocker">
 	    <dir>
 			<info compressed="false">https://raw.githubusercontent.com/tvaddonsco/tva-resolvers-repo/master/addons.xml</info>
@@ -11,6 +11,12 @@
 			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+        </dir>
+		
+		<dir>
+        <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
         </dir>
 
 		<info compressed="false">https://github.com/CypherMediaGIT/CypherRepo/raw/master/cypherrepo/plugins/addons.xml</info>

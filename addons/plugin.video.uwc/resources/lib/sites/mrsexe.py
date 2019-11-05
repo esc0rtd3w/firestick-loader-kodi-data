@@ -42,7 +42,7 @@ def List(url):
     try:
         listhtml = utils.getHtml(url, '')
     except:
-        
+
         return None
     match = re.compile('thumb-list(.*?)<ul class="right pagination">', re.DOTALL | re.IGNORECASE).findall(listhtml)
     match1 = re.compile(r'<li class="[^"]*">\s<a class="thumbnail" href="([^"]+)">\n<script.+?</script>\n<figure>\n<img  id=".+?" src="([^"]+)".+?/>\n<figcaption>\n<span class="video-icon"><i class="fa fa-play"></i></span>\n<span class="duration"><i class="fa fa-clock-o"></i>([^<]+)</span>\n(.+?)\n', re.DOTALL | re.IGNORECASE).findall(match[0])
@@ -51,13 +51,13 @@ def List(url):
         name = utils.cleantext(name) + ' [COLOR deeppink]' + duration + '[/COLOR]'
         utils.addDownLink(name, 'http://www.mrsexe.com' + videopage, 402, img, '')
     try:
-        nextp=re.compile(r'<li class="arrow"><a href="(.+?)">suivant</li>').findall(listhtml)
+        nextp=re.compile(r'<li class="arrow"><a href="(.+?)">suivant</a></li>').findall(listhtml)
         utils.addDir('Next Page', 'http://www.mrsexe.com/' + nextp[0], 401,'')
     except: pass
     xbmcplugin.endOfDirectory(utils.addon_handle)
 
 
-@utils.url_dispatcher.register('404', ['url'], ['keyword'])    
+@utils.url_dispatcher.register('404', ['url'], ['keyword'])
 def Search(url, keyword=None):
     searchUrl = url
     if not keyword:
@@ -82,10 +82,12 @@ def Categories(url):
 def Stars(url):
     print "mrsexe::Stars " + url
     starhtml = utils.getHtml(url, '')
-    match = re.compile(r'<header>\s<h3 class="filles">Les filles de MrSexe</h3>(.*?)</ul>', re.DOTALL | re.IGNORECASE).findall(starhtml)
-    match1 = re.compile(r'<figure>\s<a href="(.+?)"><img src="(.+?)" alt=""\s/></a>\s</figure>.+?</div>\s<div class="infos">\s<h5><a href=".+?">([^<]+)</a></h5>\s([0-9]+) vid', re.DOTALL | re.IGNORECASE).findall(match[0])
+    match = re.compile(r'<h3 class="filles">Les filles de MrSexe</h3>(.*?)<ul class="right pagination">', re.DOTALL | re.IGNORECASE).findall(starhtml)
+    match1 = re.compile(r'<figure>\s*<a href="(.+?)"><img src="(.+?)" alt="".+?</figure>.+?class="infos".+?a href=".+?">([^<]+)</a></h5>\s*([0-9]+) vid', re.DOTALL | re.IGNORECASE).findall(match[0])
     for starpage, img, name, vidcount in match1:
+        img = 'https:' + img
         name = name + " (" + vidcount + " Videos)"
+        utils.kodilog(img)
         utils.addDir(name, 'http://www.mrsexe.com/' + starpage, 401, img)
     try:
         nextp=re.compile(r'<li class="arrow"><a href="(.+?)">suivant</li>').findall(starhtml)
@@ -96,23 +98,21 @@ def Stars(url):
 
 @utils.url_dispatcher.register('402', ['url', 'name'], ['download'])
 def Playvid(url, name, download=None):
-	xbmc.log(url, xbmc.LOGNOTICE)
-	print "mrsexe::Playvid " + url
-	html = utils.getHtml(url, '')
-	videourl = re.compile(r"src='(/inc/clic\.php\?video=.+?&cat=mrsex.+?)'").findall(html)
-	html = utils.getHtml('http://www.mrsexe.com/' + videourl[0], '')
-	videourls = re.compile(r"""['"](htt.+?.mp4)['"]""").findall(html)
-	output = []
-	for videourl in videourls:
-		link='Link'
-		output.append([videourl, link])
-	videourls = sorted(output, key=lambda tup: tup[1], reverse=True)
-	videourl = videourls[0][0]
-	if videourl.startswith('//'): videourl = 'http:' + videourl
-	if download == 1:
-		utils.downloadVideo(videourl, name)
-	else:    
-		iconimage = xbmc.getInfoImage("ListItem.Thumb")
-		listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-		listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
-		xbmc.Player().play(videourl, listitem)
+    html = utils.getHtml(url, '')
+    videourl = re.compile(r"src='(/inc/clic\.php\?video=.+?&cat=mrsex.+?)'").findall(html)
+    html = utils.getHtml('http://www.mrsexe.com/' + videourl[0], '')
+    videourls = re.compile(r"""['"](htt.+?.mp4)['"]""").findall(html)
+    output = []
+    for videourl in videourls:
+        link='Link'
+        output.append([videourl, link])
+    videourls = sorted(output, key=lambda tup: tup[1], reverse=True)
+    videourl = videourls[0][0]
+    if videourl.startswith('//'): videourl = 'http:' + videourl
+    if download == 1:
+        utils.downloadVideo(videourl, name)
+    else:
+        iconimage = xbmc.getInfoImage("ListItem.Thumb")
+        listitem = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+        listitem.setInfo('video', {'Title': name, 'Genre': 'Porn'})
+        xbmc.Player().play(videourl, listitem)

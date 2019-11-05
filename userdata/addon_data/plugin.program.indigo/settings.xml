@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="244" />
-    <setting id="noteMessage" value="Please note that in order to get the most out&#x0A;of your Kodi experience, we [B]strongly suggest&#x0A;the use of a VPN[/B].&#x0A;&#x0A;* Tons of New Sources&#x0A;* [B]Bypass Site Blocking[/B]&#x0A;* Lift Geo-Restrictions&#x0A;* [B]Hide Your IP[/B]/Location&#x0A;&#x0A;Signup within the [B]next two weeks[/B] using the&#x0A;link below, and [B]get 75% off[/B] the retail price!&#x0A;&#x0A;[B][COLOR yellow]Signup Now:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteImage" value="318" />
+    <setting id="noteMessage" value="There&apos;s [B]less than two weeks[/B] left before our [B]VPN&#x0A;provider[/B] of choice raises their rates again...&#x0A;&#x0A;Subscribe today to [B]get locked into $3.49/month[/B]&#x0A;pricing, while [B]supporting our community[/B]!&#x0A;&#x0A;* [B]Bypass[/B] Censorship&#x0A;* Stream TV[B] Worldwide[/B]&#x0A;* Hide Your [B]IP Address[/B]&#x0A;* [B]Location[/B] Spoofing&#x0A;* [B]Torrent[/B]/P2P Safely&#x0A;&#x0A;[B][COLOR yellow]Best VPN for Kodi:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

@@ -24,7 +24,7 @@ from resources.lib import utils
 
 @utils.url_dispatcher.register('660')
 def animeidhentai_main():
-    utils.addDir('[COLOR hotpink]Uncensored[/COLOR]','https://animeidhentai.com/genres/uncensored/', 661, '', '')
+    utils.addDir('[COLOR hotpink]Uncensored[/COLOR]','https://animeidhentai.com/genre/hentai-uncensored/', 661, '', '')
     utils.addDir('[COLOR hotpink]Search[/COLOR]','https://animeidhentai.com/?s=', 664, '', '')
     animeidhentai_list('https://animeidhentai.com/genre/2019/')
 
@@ -37,7 +37,7 @@ def animeidhentai_list(url):
         return None
 #    match = re.compile(r'<article id="??[^"\s]+(.*?)src="??([^"\s]+)"?? alt="([^"]+)".*?href="??([^"\s>]+)"??', re.DOTALL | re.IGNORECASE).findall(listhtml)
 #    match = re.compile(r'article class=.+?entry-title">([^<]+)<(.+?)src=(\S+)\s.+?href=(\S+)\s', re.DOTALL | re.IGNORECASE).findall(listhtml)
-    match = re.compile(r'article class=.+?entry-title">([^<]+)<(.+?)src="??([^"\s]+)"??\s.+?href="??([^"\s]+)"??\s', re.DOTALL | re.IGNORECASE).findall(listhtml)
+    match = re.compile(r'article class=.+?entry-title">([^<]+)<(.+?)src="??([^"\s]+jpg)"??\s.+?href="??([^"\s]+)"??\s', re.DOTALL | re.IGNORECASE).findall(listhtml)
     if match:    
         for name, other, img, video in match:
             if 'uncensored' in name.lower():
@@ -54,8 +54,7 @@ def animeidhentai_list(url):
             utils.addDownLink(utils.cleantext(name), video, 662, img, '')
 
     try:
-#        next_page = re.compile(r'<a href="??([^"\s]+)\s*?><span class="??icon-chevron-right"??>', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
-        next_page = re.compile('link rel="next" href="??([^"\s]+)"?? ', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
+        next_page = re.compile(r'href="??([^"\s]+)"??\s*class="??next', re.DOTALL | re.IGNORECASE).findall(listhtml)[0]
         utils.addDir('Next Page', next_page, 661, '')
     except:
         pass

@@ -83,22 +83,38 @@ def YFTCat(url):
 
 def YFTPlayvid(url, name, download=None):
     links = {}
-    vp = utils.VideoPlayer(name, download)
+    vp = utils.VideoPlayer(name, download = download)
     vp.progress.update(25, "", "Loading video page", "")
-    videopage = utils.getHtml(url)
-    iframes = re.compile('<iframe.+?src="([^"]+)"[^>]+>.*?</iframe', re.DOTALL | re.IGNORECASE).findall(videopage)
-    if iframes:
-        for link in iframes:
-            if vp.resolveurl.HostedMediaFile(link):
-                links[link.split('/')[2]] = link
-    srcs = re.compile('label="([^"]+)" src="([^"]+)" type=', re.DOTALL | re.IGNORECASE).findall(videopage)
-    if srcs:
-        for quality, videourl in srcs:
-            links['Direct ' + quality] = videourl + '|Referer=%s&User-Agent=%s' % (url, utils.USER_AGENT)
-
-    videourl = utils.selector('Select link', links, dont_ask_valid=False)
-    if '|Referer' in videourl:
-        vp.play_from_direct_link(videourl)
+    videopage1 = utils.getHtml(url)
+    iframe = re.compile('<iframe .+? src="([^"]+)"', re.DOTALL | re.IGNORECASE).search(videopage1).group(1)
+    videopage = utils.getHtml(iframe)    
+    if 'video_url_text' not in videopage:
+        videourl = re.compile("video_url: '([^']+)'", re.DOTALL | re.IGNORECASE).search(videopage).group(1)
     else:
-        vp.play_from_link_to_resolve(videourl)
+        sources = {}
+        srcs = re.compile("video(?:_alt_|_)url(?:[0-9]|): '([^']+)'.*?video(?:_alt_|_)url(?:[0-9]|)_text: '([^']+)'", re.DOTALL | re.IGNORECASE).findall(videopage)
+        for src, quality in srcs:
+            sources[quality] = src
+        videourl = utils.selector('Select quality', sources, dont_ask_valid=True, sort_by=lambda x: int(''.join([y for y in x if y.isdigit()])), reverse=True)
+    if not videourl:
+        return
+    vp.direct_regex = '(' + re.escape(videourl) + ')'
+    vp.play_from_html(videopage)
+
+
+    # iframes = re.compile('<iframe.+?src="([^"]+)"[^>]+>.*?</iframe', re.DOTALL | re.IGNORECASE).findall(videopage)
+    # if iframes:
+        # for link in iframes:
+            # if vp.resolveurl.HostedMediaFile(link):
+                # links[link.split('/')[2]] = link
+    # srcs = re.compile('label="([^"]+)" src="([^"]+)" type=', re.DOTALL | re.IGNORECASE).findall(videopage)
+    # if srcs:
+        # for quality, videourl in srcs:
+            # links['Direct ' + quality] = videourl + '|Referer=%s&User-Agent=%s' % (url, utils.USER_AGENT)
+
+    # videourl = utils.selector('Select link', links, dont_ask_valid=False)
+    # if '|Referer' in videourl:
+        # vp.play_from_direct_link(videourl)
+    # else:
+        # vp.play_from_link_to_resolve(videourl)
 

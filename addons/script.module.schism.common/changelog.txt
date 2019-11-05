@@ -1,3 +1,9 @@
+[2018.12.16]
+- requests vulnerability found in …/incapsula/requirements.txt on Oct 29 fixed
+- Vulnerable versions was 2.19.1 - Patched version: 2.20.0
+- Requests Upgrade to version 2.20.0
+- More info here: https://nvd.nist.gov/vuln/detail/CVE-2018-18074
+
 [2017.06.08]
 - Rebrand Zen to Elysium
 
