@@ -96,151 +96,110 @@ class Streamlink(object):
     def set_option(self, key, value):
         """Sets general options used by plugins and streams originating
         from this session object.
-
         :param key: key of the option
         :param value: value to set the option to
-
-
         **Available options**:
-
         ======================== =========================================
         hds-live-edge            ( float) Specify the time live HDS
                                  streams will start from the edge of
                                  stream, default: ``10.0``
-
         hds-segment-attempts     (int) How many attempts should be done
                                  to download each HDS segment, default: ``3``
-
         hds-segment-threads      (int) The size of the thread pool used
                                  to download segments, default: ``1``
-
         hds-segment-timeout      (float) HDS segment connect and read
                                  timeout, default: ``10.0``
-
         hds-timeout              (float) Timeout for reading data from
                                  HDS streams, default: ``60.0``
-
         hls-live-edge            (int) How many segments from the end
                                  to start live streams on, default: ``3``
-
         hls-segment-attempts     (int) How many attempts should be done
                                  to download each HLS segment, default: ``3``
-
         hls-segment-threads      (int) The size of the thread pool used
                                  to download segments, default: ``1``
-
         hls-segment-timeout      (float) HLS segment connect and read
                                  timeout, default: ``10.0``
-
         hls-timeout              (float) Timeout for reading data from
                                  HLS streams, default: ``60.0``
-
         http-proxy               (str) Specify a HTTP proxy to use for
                                  all HTTP requests
-
         https-proxy              (str) Specify a HTTPS proxy to use for
                                  all HTTPS requests
-
         http-cookies             (dict or str) A dict or a semi-colon (;)
                                  delimited str of cookies to add to each
                                  HTTP request, e.g. ``foo=bar;baz=qux``
-
         http-headers             (dict or str) A dict or semi-colon (;)
                                  delimited str of headers to add to each
                                  HTTP request, e.g. ``foo=bar;baz=qux``
-
         http-query-params        (dict or str) A dict or a ampersand (&)
                                  delimited string of query parameters to
                                  add to each HTTP request,
                                  e.g. ``foo=bar&baz=qux``
-
         http-trust-env           (bool) Trust HTTP settings set in the
                                  environment, such as environment
                                  variables (HTTP_PROXY, etc) and
                                  ~/.netrc authentication
-
         http-ssl-verify          (bool) Verify SSL certificates,
                                  default: ``True``
-
         http-ssl-cert            (str or tuple) SSL certificate to use,
                                  can be either a .pem file (str) or a
                                  .crt/.key pair (tuple)
-
         http-timeout             (float) General timeout used by all HTTP
                                  requests except the ones covered by
                                  other options, default: ``20.0``
-
         http-stream-timeout      (float) Timeout for reading data from
                                  HTTP streams, default: ``60.0``
-
         subprocess-errorlog      (bool) Log errors from subprocesses to
                                  a file located in the temp directory
-
         subprocess-errorlog-path (str) Log errors from subprocesses to
                                  a specific file
-
         ringbuffer-size          (int) The size of the internal ring
                                  buffer used by most stream types,
                                  default: ``16777216`` (16MB)
-
         rtmp-proxy               (str) Specify a proxy (SOCKS) that RTMP
                                  streams will use
-
         rtmp-rtmpdump            (str) Specify the location of the
                                  rtmpdump executable used by RTMP streams,
                                  e.g. ``/usr/local/bin/rtmpdump``
-
         rtmp-timeout             (float) Timeout for reading data from
                                  RTMP streams, default: ``60.0``
-
         ffmpeg-ffmpeg            (str) Specify the location of the
                                  ffmpeg executable use by Muxing streams
                                  e.g. ``/usr/local/bin/ffmpeg``
-
         ffmpeg-verbose           (bool) Log stderr from ffmpeg to the
                                  console
-
         ffmpeg-verbose-path      (str) Specify the location of the
                                  ffmpeg stderr log file
-
         ffmpeg-video-transcode   (str) The codec to use if transcoding
                                  video when muxing with ffmpeg
                                  e.g. ``h264``
-
         ffmpeg-audio-transcode   (str) The codec to use if transcoding
                                  audio when muxing with ffmpeg
                                  e.g. ``aac``
-
         stream-segment-attempts  (int) How many attempts should be done
                                  to download each segment, default: ``3``.
                                  General option used by streams not
                                  covered by other options.
-
         stream-segment-threads   (int) The size of the thread pool used
                                  to download segments, default: ``1``.
                                  General option used by streams not
                                  covered by other options.
-
         stream-segment-timeout   (float) Segment connect and read
                                  timeout, default: ``10.0``.
                                  General option used by streams not
                                  covered by other options.
-
         stream-timeout           (float) Timeout for reading data from
                                  stream, default: ``60.0``.
                                  General option used by streams not
                                  covered by other options.
-
         locale                   (str) Locale setting, in the RFC 1766 format
                                  eg. en_US or es_ES
                                  default: ``system locale``.
-
         user-input-requester     (UserInputRequester) instance of UserInputRequester
                                  to collect input from the user at runtime. Must be
                                  set before the plugins are loaded.
                                  default: ``UserInputRequester``.
         ======================== =========================================
-
         """
 
         # Backwards compatibility
@@ -255,6 +214,9 @@ class Streamlink(object):
 
         if key == "http-proxy":
             self.http.proxies["http"] = update_scheme("http://", value)
+            if "https" not in self.http.proxies:
+                self.http.proxies["https"] = update_scheme("http://", value)
+
         elif key == "https-proxy":
             self.http.proxies["https"] = update_scheme("https://", value)
         elif key == "http-cookies":
@@ -294,9 +256,7 @@ class Streamlink(object):
 
     def get_option(self, key):
         """Returns current value of specified option.
-
         :param key: key of the option
-
         """
         # Backwards compatibility
         if key == "rtmpdump":
@@ -330,11 +290,9 @@ class Streamlink(object):
     def set_plugin_option(self, plugin, key, value):
         """Sets plugin specific options used by plugins originating
         from this session object.
-
         :param plugin: name of the plugin
         :param key: key of the option
         :param value: value to set the option to
-
         """
 
         if plugin in self.plugins:
@@ -343,10 +301,8 @@ class Streamlink(object):
 
     def get_plugin_option(self, plugin, key):
         """Returns current value of plugin specific option.
-
         :param plugin: name of the plugin
         :param key: key of the option
-
         """
 
         if plugin in self.plugins:
@@ -355,35 +311,26 @@ class Streamlink(object):
 
     def set_loglevel(self, level):
         """Sets the log level used by this session.
-
         Valid levels are: "none", "error", "warning", "info"
         and "debug".
-
         :param level: level of logging to output
-
         """
         self.logger.set_level(level)
 
     def set_logoutput(self, output):
         """Sets the log output used by this session.
-
         :param output: a file-like object with a write method
-
         """
         self.logger.set_output(output)
 
     @memoize
     def resolve_url(self, url, follow_redirect=True):
         """Attempts to find a plugin that can use this URL.
-
         The default protocol (http) will be prefixed to the URL if
         not specified.
-
         Raises :exc:`NoPluginError` on failure.
-
         :param url: a URL to match against loaded plugins
         :param follow_redirect: follow redirects
-
         """
         url = update_scheme("http://", url)
 
@@ -414,22 +361,16 @@ class Streamlink(object):
 
     def resolve_url_no_redirect(self, url):
         """Attempts to find a plugin that can use this URL.
-
         The default protocol (http) will be prefixed to the URL if
         not specified.
-
         Raises :exc:`NoPluginError` on failure.
-
         :param url: a URL to match against loaded plugins
-
         """
         return self.resolve_url(url, follow_redirect=False)
 
     def streams(self, url, **params):
         """Attempts to find a plugin and extract streams from the *url*.
-
         *params* are passed to :func:`Plugin.streams`.
-
         Raises :exc:`NoPluginError` if no plugin is found.
         """
 
@@ -446,9 +387,7 @@ class Streamlink(object):
 
     def load_plugins(self, path):
         """Attempt to load plugins from the path specified.
-
         :param path: full path to a directory where to look for plugins
-
         """
         for loader, name, ispkg in pkgutil.iter_modules([path]):
             file, pathname, desc = imp.find_module(name, [path])

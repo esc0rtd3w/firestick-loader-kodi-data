@@ -34,13 +34,13 @@ elif is_py3:
 
 try:
     from urllib.parse import (
-        urlparse, urlunparse, urljoin, quote, unquote, parse_qsl, urlencode, urlsplit, urlunsplit
+        urlparse, urlunparse, urljoin, quote, unquote, parse_qsl, urlencode, urlsplit, urlunsplit, unquote_plus
     )
     import queue
     from shutil import which
 except ImportError:
     from urlparse import urlparse, urlunparse, urljoin, parse_qsl, urlsplit, urlunsplit
-    from urllib import quote, unquote, urlencode
+    from urllib import quote, unquote, urlencode, unquote_plus
     import Queue as queue
     from streamlink.utils.shutil_which import shutil_which
     which = shutil_which.backport_which
@@ -61,5 +61,5 @@ getargspec = getattr(inspect, "getfullargspec", inspect.getargspec)
 __all__ = [
     "is_py2", "is_py3", "is_py33", "is_win32", "str", "bytes", "urlparse", "urlunparse", "urljoin", "parse_qsl",
     "quote", "unquote", "queue", "range", "urlencode", "devnull", "which", "izip", "urlsplit", "urlunsplit",
-    "getargspec", "html_unescape", "OrderedDict"
+    "getargspec", "html_unescape", "OrderedDict", "unquote_plus"
 ]

@@ -1,3 +1,20 @@
+05/11/2019 v1.2.1
+Removed:
+Ddown
+one23movies
+Hdvix
+
+Fixed:
+piratebay(rd)
+pirateiro(rd)
+watchseries
+
+Added:
+moviejes
+idope(rd)
+twoddl (rd)
+
+
 16/07/2019 v1.2.0
 Fixed: 
 Quality issue pirateiro

@@ -17,8 +17,6 @@
 		<setting id="Cmovies_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="CoolTV" type="lsep"/>
 		<setting id="CoolTV_enabled" type="bool" label="Enabled" default="true"/>
-		<setting label="DirectDownload" type="lsep"/>
-		<setting id="DirectDownload_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="ExtraMovies" type="lsep"/>
 		<setting id="ExtraMovies_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="EZTV" type="lsep"/>
@@ -27,14 +25,14 @@
 		<setting id="FreeMusic_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="GoWatchSeries" type="lsep"/>
 		<setting id="GoWatchSeries_enabled" type="bool" label="Enabled" default="true"/>
-		<setting label="HDvix" type="lsep"/>
-		<setting id="HDvix_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Idope" type="lsep"/>
+		<setting id="Idope_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Movie Jesus" type="lsep"/>
+		<setting id="Movie Jesus_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="MP3guild" type="lsep"/>
 		<setting id="MP3guild_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="OceanofMovies" type="lsep"/>
 		<setting id="OceanofMovies_enabled" type="bool" label="Enabled" default="true"/>
-		<setting label="One23moviesHubz" type="lsep"/>
-		<setting id="One23moviesHubz_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="one337x" type="lsep"/>
 		<setting id="one337x_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="PirateBay" type="lsep"/>
@@ -53,6 +51,8 @@
 		<setting id="SeriesOnline8_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="SwatchSeries" type="lsep"/>
 		<setting id="SwatchSeries_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="TwoDDL" type="lsep"/>
+		<setting id="TwoDDL_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="WatchEpisodes4" type="lsep"/>
 		<setting id="WatchEpisodes4_enabled" type="bool" label="Enabled" default="true"/>
 		<setting label="WatchEpSeries" type="lsep"/>

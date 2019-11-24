@@ -20,8 +20,8 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="318" />
-    <setting id="noteMessage" value="There&apos;s [B]less than two weeks[/B] left before our [B]VPN&#x0A;provider[/B] of choice raises their rates again...&#x0A;&#x0A;Subscribe today to [B]get locked into $3.49/month[/B]&#x0A;pricing, while [B]supporting our community[/B]!&#x0A;&#x0A;* [B]Bypass[/B] Censorship&#x0A;* Stream TV[B] Worldwide[/B]&#x0A;* Hide Your [B]IP Address[/B]&#x0A;* [B]Location[/B] Spoofing&#x0A;* [B]Torrent[/B]/P2P Safely&#x0A;&#x0A;[B][COLOR yellow]Best VPN for Kodi:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteImage" value="331" />
+    <setting id="noteMessage" value="If you wish to [B]get the most[/B] of your streaming experience,&#x0A;a [B]VPN is necessary[/B]. It&apos;s a good thing Black Friday is here:&#x0A;&#x0A;For the next two weeks, signup at [B]only $3.49/month[/B] and get&#x0A;an additional [B]3 months of free service[/B]!&#x0A;&#x0A;Using a VPN will enable you to [B]bypass site blocking[/B] (for&#x0A;more [B]working streams[/B]) by rerouting your internet through&#x0A;encrypted, anonymized offshore servers.&#x0A;&#x0A;This system will also allow you to [B]be anonymous[/B] online!&#x0A;&#x0A;[B][COLOR yellow]Protect 6 Devices:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
     <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />

@@ -64,7 +64,7 @@ class piriro(Scraper):
             #r=scraper.get(start_url, headers=headers)
             r = client.request(start_url, headers=headers)
             #print r
-            Endlinks=re.compile('class="imagnet icon16" href="(.+?)">.+?<font color=#004E98>(.+?)</font>.+?><b>(.+?)</b></a',re.DOTALL).findall(r)
+            Endlinks=re.compile('class="imagnet icon16"   href="(.+?)">.+?<font color=#004E98>(.+?)</font>.+?><b>(.+?)</b></a',re.DOTALL).findall(r)
             #print 'scraperchk - scrape_movie - EndLinks: '+str(Endlinks)
             for Magnet,size, quality in Endlinks:
                 #Magnet=Magnet.replace('https://mylink.me.uk/?url=', '')

@@ -22,6 +22,8 @@ class CDNBG(Plugin):
             inlife\.bg|
             mmtvmusic\.com/live|
             mu-vi\.tv/LiveStreams/pages/Live\.aspx|
+            videochanel\.bstv\.bg|
+            live\.bstv\.bg|
             bloombergtv.bg/video
         )/?
     """, re.VERBOSE)
