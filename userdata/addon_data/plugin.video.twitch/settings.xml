@@ -37,6 +37,8 @@
     <setting id="oauth_clientid" value="" />
     <setting id="oauth_redirecturi" value="" />
     <setting id="oauth_token" value="" />
+    <setting id="private_oauth_clientid" value="kimne78kx3ncx6brgo4mv6wki5h1ko" />
+    <setting id="private_oauth_token" value="" />
     <setting id="refresh_cache" value="false" />
     <setting id="refresh_interval" value="10" />
     <setting id="refresh_previews" value="false" />

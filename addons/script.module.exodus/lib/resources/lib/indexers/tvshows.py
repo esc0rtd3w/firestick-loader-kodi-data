@@ -53,7 +53,7 @@ class tvshows:
 
         self.search_link = 'https://api.trakt.tv/search/show?limit=20&page=1&query='
         self.tvmaze_info_link = 'https://api.tvmaze.com/shows/%s'
-        self.tvdb_info_link = 'https://thetvdb.com/api/%s/series/%s/%s.zip.xml' % (self.tvdb_key, '%s', self.lang)
+        self.tvdb_info_link = 'https://thetvdb.com/api/%s/series/%s/%s.xml' % (self.tvdb_key, '%s', self.lang)
         self.fanart_tv_art_link = 'https://webservice.fanart.tv/v3/tv/%s'
         self.fanart_tv_level_link = 'https://webservice.fanart.tv/v3/level'
         self.tvdb_by_imdb = 'https://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
