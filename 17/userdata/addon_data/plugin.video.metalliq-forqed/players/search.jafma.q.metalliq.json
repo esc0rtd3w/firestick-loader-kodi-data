@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Jafma ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.jafma",
+ "priority"     : 900,
+ "id"           : "search.jafma.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.jafma/?description&amp;fanart=special://home/addons/plugin.video.jafma/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.jafma/icon.png&amp;mode=11&amp;name=Search&amp;url={title_+}",
+    "steps"     : [
+     "><{title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.jafma/?description&amp;fanart=special://home/addons/plugin.video.jafma/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.jafma/icon.png&amp;mode=6&amp;name=Search&amp;url=http%3a%2f%2fabcmovies.eu%2fmovie%2ffilter%2fseasons%2flatest%2fall%2fall%2fall%2fall%2f",
+    "steps"     : [
+     "><{clearname}.*Season.{season}",
+     "><Episode.{episode}:.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

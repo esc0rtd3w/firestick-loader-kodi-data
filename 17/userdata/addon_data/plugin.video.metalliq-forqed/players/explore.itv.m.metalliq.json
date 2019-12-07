@@ -1,0 +1,24 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] ITV ([COLOR FF0084FF]M[/COLOR])",
+ "repository"   : "repository.xunitytalk",
+ "plugin"       : "plugin.video.itv",
+ "priority"     : 700,
+ "id"           : "explore.itv.m",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.itv/",
+    "steps"     : [
+     "{name}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

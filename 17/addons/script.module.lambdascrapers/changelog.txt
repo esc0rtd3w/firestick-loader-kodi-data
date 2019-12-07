@@ -1,0 +1,4 @@
+Lambdascrapers Module Changelog:
+2.0.0
+- CivitasScrapers-0.0.5.8 base
+- Initial commit

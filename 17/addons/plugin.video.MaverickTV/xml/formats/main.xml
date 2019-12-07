@@ -1,0 +1,43 @@
+<xml>
+  <dir>
+    <title>Movies</title>
+    <link>file://movies.xml</link>
+  </dir>
+
+  <dir>
+    <title>TV</title>
+    <link>file://tv.xml</link>
+  </dir>
+
+  <dir>
+    <title>Lists</title>
+    <link>file://lists.xml</link>
+  </dir>
+
+  <dir>
+    <title>Actors</title>
+    <link>file://actors.xml</link>
+  </dir>
+
+  <dir>
+    <title>Music</title>
+    <link>file://music.xml</link>
+  </dir>
+
+  <dir>
+    <title>Search Trakt</title>
+    <trakt>search</trakt>
+  </dir>
+
+  <dir>
+    <title>Search TMDB</title>
+    <tmdb>search</tmdb>
+  </dir>
+
+  <plugin>
+    <name>Testings</name>
+    <link>plugin://plugin.video.jenplugin/?action=developer</link>
+    <thumbnail></thumbnail>
+    <summary>Testings</summary>
+  </plugin>
+</xml>

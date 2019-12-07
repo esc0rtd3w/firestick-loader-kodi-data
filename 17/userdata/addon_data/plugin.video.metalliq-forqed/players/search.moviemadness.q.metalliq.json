@@ -1,0 +1,24 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Movie Madness ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.moviemadness",
+ "priority"     : 900,
+ "id"           : "search.moviemadness.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.moviemadness/?description&amp;fanart=special://home/addons/plugin.video.moviemadness/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.moviemadness/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fmovietube.top%2f%3fs%3d{title_+}",
+    "steps"     : [
+     "><{title}..{year}."
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

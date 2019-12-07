@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct -[COLOR ff0084ff] Torrenter [/COLOR]([COLOR gold]YP[/COLOR])",
+ "repository"   : "repository.myshows.me",
+ "plugin"       : "plugin.video.torrenter",
+ "priority"     : 200,
+ "id"           : "Torrenter",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.torrenter/?action=search&url={title}",
+    "steps"     : ["(.*(1080p|720p).*(bluray|web-dl).*)"],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.torrenter/?action=search&url={name}",
+    "steps"     : [".*(1080p|720p|480p).*"],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

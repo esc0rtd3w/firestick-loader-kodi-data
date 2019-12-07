@@ -1,0 +1,22 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Spinz Strictly HD ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.SpinzTV",
+ "plugin"       : "plugin.video.spinzstrictlyhd",
+ "priority"     : 200,
+ "id"           : "Spinz Strictly HD",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.spinzstrictlyhd/?source=search&title={title_+}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

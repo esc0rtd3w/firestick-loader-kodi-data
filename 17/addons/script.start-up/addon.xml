@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="script.start-up"
+       name="[B][COLOR lime]Start[/COLOR]-Up[/B]"
+       version="1.0.0"
+       provider-name="Team Open-source">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/> 
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+		<summary lang="en">Disable startup services on Kodi and improving internal speed.</summary>
+		<description lang="en"></description>
+    </extension>
+</addon>

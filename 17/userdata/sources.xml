@@ -1,0 +1,75 @@
+<sources>
+  <programs>
+    <default pathversion="1" />
+  </programs>
+  <video>
+    <default pathversion="1" />
+    <source>
+      <name>[COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed Movies</name>
+      <path pathversion="1">special://profile/addon_data/plugin.video.metalliq-forqed/Movies/</path>
+      <thumbnail pathversion="1">http://cellardoortv.com/style/themes/default/movies.png</thumbnail>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>[COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed Music videos</name>
+      <path pathversion="1">special://profile/addon_data/plugin.video.metalliq-forqed/Music/</path>
+      <thumbnail pathversion="1">http://cellardoortv.com/style/themes/default/musicvideos.png</thumbnail>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>[COLOR limegreen]M[/COLOR]etalli[COLOR limegreen]Q[/COLOR] 4[COLOR limegreen]Q[/COLOR]ed Channels</name>
+      <path pathversion="1">special://profile/addon_data/plugin.video.metalliq-forqed/Live/</path>
+      <thumbnail pathversion="1">http://cellardoortv.com/style/themes/default/live.png</thumbnail>
+      <allowsharing>true</allowsharing>
+    </source>
+  </video>
+  <music>
+    <default pathversion="1" />
+  </music>
+  <pictures>
+    <default pathversion="1" />
+  </pictures>
+  <files>
+    <default pathversion="1" />
+    <source>
+      <name>mavrepo</name>
+      <path pathversion="1">http://mavericktv.net/mavrepo</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>repoexre</name>
+      <path pathversion="1">https://i-a-c.github.io/repo</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>secret</name>
+      <path pathversion="1">http://ajbuilds.uk/secret</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>repoclowns</name>
+      <path pathversion="1">http://www.13clowns.com/repo</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>Repou1</name>
+      <path pathversion="1">http://ukodi1.com/Repo</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>zips</name>
+      <path pathversion="1">http://legionworldtv.com/zips/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>rbj</name>
+      <path pathversion="1">http://repo.rubyjewelwizard.com/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+    <source>
+      <name>Lkodi</name>
+      <path pathversion="1">http://lazykodi.com/</path>
+      <allowsharing>true</allowsharing>
+    </source>
+  </files>
+</sources>

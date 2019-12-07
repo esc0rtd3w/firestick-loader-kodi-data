@@ -1,0 +1,620 @@
+[2019-01-23 02:24:22] 2019-01-23 02:24:22.412408
+[2019-01-23 02:24:23] Continuing Start Up Script
+[2019-01-23 02:24:23] [Path Check] Started
+[2019-01-23 02:24:23] [Path Check] Good!
+[2019-01-23 02:24:23] [Auto Install Repo] Started
+[2019-01-23 02:24:23] [Auto Install Repo] Not Enabled
+[2019-01-23 02:24:23] [Auto Update Wizard] Started
+[2019-01-23 02:24:23] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:23] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:24] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:24] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:25] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:25] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:26] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:26] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:27] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 02:24:28] [Auto Update Wizard] No New Version vFalse
+[2019-01-23 02:24:28] [Notifications] Started
+[2019-01-23 02:24:28] [Notifications] URL(http://): False
+[2019-01-23 02:24:28] [Installed Check] Started
+[2019-01-23 02:24:28] [Installed Check] Not Enabled
+[2019-01-23 02:24:28] [Build Check] Started
+[2019-01-23 02:24:28] [Build Check] First Run
+[2019-01-23 02:25:15] [Check Updates] [User Selected: Open Build Menu] [Next Check: 2019-01-23]
+[2019-01-23 02:25:16] [Trakt Data] Started
+[2019-01-23 02:25:16] [Trakt Data] Saving all Data
+[2019-01-23 02:25:16] [Real Debrid Data] Started
+[2019-01-23 02:25:16] [Real Debrid Data] Saving all Data
+[2019-01-23 02:25:16] [Login Data] Started
+[2019-01-23 02:25:16] [Login Data] Not Enabled
+[2019-01-23 02:25:16] [Auto Clean Up] Started
+[2019-01-23 02:25:16] [Auto Clean Up] Cache: On
+[2019-01-23 02:25:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-01-23 02:25:16] Ignore Log File: kodi.log
+[2019-01-23 02:25:16] Ignore Log File: kodi.old.log
+[2019-01-23 02:25:16] [Auto Clean Up] Old Thumbs: On
+[2019-01-23 02:25:16] 0 total thumbs cleaned up.
+[2019-01-23 02:25:16] [Auto Clean Up] Packages: On
+[2019-01-23 14:07:47] 2019-01-23 14:07:47.522387
+[2019-01-23 14:07:48] Continuing Start Up Script
+[2019-01-23 14:07:48] [Path Check] Started
+[2019-01-23 14:07:48] [Path Check] Good!
+[2019-01-23 14:07:48] [Auto Install Repo] Started
+[2019-01-23 14:07:49] [Auto Install Repo] Not Enabled
+[2019-01-23 14:07:49] [Auto Update Wizard] Started
+[2019-01-23 14:07:49] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:49] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:50] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:50] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:51] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:52] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:52] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:53] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:53] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:07:54] [Auto Update Wizard] No New Version vFalse
+[2019-01-23 14:07:54] [Notifications] Started
+[2019-01-23 14:07:54] [Notifications] URL(http://): False
+[2019-01-23 14:07:54] [Installed Check] Started
+[2019-01-23 14:07:54] [Installed Check] Not Enabled
+[2019-01-23 14:07:54] [Build Check] Started
+[2019-01-23 14:07:54] [Trakt Data] Started
+[2019-01-23 14:07:54] [Trakt Data] Not Enabled
+[2019-01-23 14:07:54] [Real Debrid Data] Started
+[2019-01-23 14:07:54] [Real Debrid Data] Not Enabled
+[2019-01-23 14:07:54] [Login Data] Started
+[2019-01-23 14:07:54] [Login Data] Not Enabled
+[2019-01-23 14:07:54] [Auto Clean Up] Started
+[2019-01-23 14:07:54] [Auto Clean Up] Cache: On
+[2019-01-23 14:07:58] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-01-23 14:07:58] Ignore Log File: kodi.log
+[2019-01-23 14:07:58] Ignore Log File: kodi.old.log
+[2019-01-23 14:07:58] [Auto Clean Up] Old Thumbs: On
+[2019-01-23 14:07:58] 0 total thumbs cleaned up.
+[2019-01-23 14:07:59] [Auto Clean Up] Packages: On
+[2019-01-23 14:19:50] 2019-01-23 14:19:50.705337
+[2019-01-23 14:19:51] Continuing Start Up Script
+[2019-01-23 14:19:51] [Path Check] Started
+[2019-01-23 14:19:51] [Path Check] Good!
+[2019-01-23 14:19:51] [Auto Install Repo] Started
+[2019-01-23 14:19:51] [Auto Install Repo] Not Enabled
+[2019-01-23 14:19:51] [Auto Update Wizard] Started
+[2019-01-23 14:19:52] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:52] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:53] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:54] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:54] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:55] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:55] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:56] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:57] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 14:19:57] [Auto Update Wizard] No New Version vFalse
+[2019-01-23 14:19:57] [Notifications] Started
+[2019-01-23 14:19:57] [Notifications] URL(http://): False
+[2019-01-23 14:19:57] [Installed Check] Started
+[2019-01-23 14:19:57] [Installed Check] Not Enabled
+[2019-01-23 14:19:57] [Build Check] Started
+[2019-01-23 14:19:57] [Trakt Data] Started
+[2019-01-23 14:19:57] [Trakt Data] Not Enabled
+[2019-01-23 14:19:57] [Real Debrid Data] Started
+[2019-01-23 14:19:57] [Real Debrid Data] Not Enabled
+[2019-01-23 14:19:57] [Login Data] Started
+[2019-01-23 14:19:57] [Login Data] Not Enabled
+[2019-01-23 14:19:57] [Auto Clean Up] Started
+[2019-01-23 14:19:58] [Auto Clean Up] Cache: On
+[2019-01-23 14:19:58] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-01-23 14:20:00] Ignore Log File: kodi.log
+[2019-01-23 14:20:00] Ignore Log File: kodi.old.log
+[2019-01-23 14:20:00] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-01-23 14:20:00] [Auto Clean Up] Old Thumbs: On
+[2019-01-23 14:20:04] 0 total thumbs cleaned up.
+[2019-01-23 14:20:05] [Auto Clean Up] Packages: On
+[2019-01-23 22:32:04] 2019-01-23 22:32:04.270422
+[2019-01-23 22:32:04] Continuing Start Up Script
+[2019-01-23 22:32:04] [Path Check] Started
+[2019-01-23 22:32:04] [Path Check] Good!
+[2019-01-23 22:32:04] [Auto Install Repo] Started
+[2019-01-23 22:32:05] [Auto Install Repo] Not Enabled
+[2019-01-23 22:32:05] [Auto Update Wizard] Started
+[2019-01-23 22:32:05] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:05] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:06] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:07] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:07] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:08] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:08] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:09] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:09] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-23 22:32:10] [Auto Update Wizard] No New Version vFalse
+[2019-01-23 22:32:10] [Notifications] Started
+[2019-01-23 22:32:10] [Notifications] URL(http://): False
+[2019-01-23 22:32:10] [Installed Check] Started
+[2019-01-23 22:32:10] [Installed Check] Not Enabled
+[2019-01-23 22:32:10] [Build Check] Started
+[2019-01-23 22:32:10] [Trakt Data] Started
+[2019-01-23 22:32:10] [Trakt Data] Not Enabled
+[2019-01-23 22:32:10] [Real Debrid Data] Started
+[2019-01-23 22:32:10] [Real Debrid Data] Not Enabled
+[2019-01-23 22:32:10] [Login Data] Started
+[2019-01-23 22:32:10] [Login Data] Not Enabled
+[2019-01-23 22:32:10] [Auto Clean Up] Started
+[2019-01-23 22:32:10] [Auto Clean Up] Cache: On
+[2019-01-23 22:32:15] Ignore Log File: kodi.log
+[2019-01-23 22:32:15] Ignore Log File: kodi.old.log
+[2019-01-23 22:32:15] [Auto Clean Up] Old Thumbs: On
+[2019-01-23 22:32:15] 0 total thumbs cleaned up.
+[2019-01-23 22:32:15] [Auto Clean Up] Packages: On
+[2019-01-30 19:16:21] 2019-01-30 19:16:21.523547
+[2019-01-30 19:16:22] Continuing Start Up Script
+[2019-01-30 19:16:22] [Path Check] Started
+[2019-01-30 19:16:22] [Path Check] Good!
+[2019-01-30 19:16:22] [Auto Install Repo] Started
+[2019-01-30 19:16:22] [Auto Install Repo] Not Enabled
+[2019-01-30 19:16:22] [Auto Update Wizard] Started
+[2019-01-30 19:16:22] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:22] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:23] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:24] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:24] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:25] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:26] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:26] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:27] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:16:27] [Auto Update Wizard] No New Version vFalse
+[2019-01-30 19:16:27] [Notifications] Started
+[2019-01-30 19:16:27] [Notifications] URL(http://): False
+[2019-01-30 19:16:27] [Installed Check] Started
+[2019-01-30 19:16:27] [Installed Check] Not Enabled
+[2019-01-30 19:16:27] [Build Check] Started
+[2019-01-30 19:16:27] [Trakt Data] Started
+[2019-01-30 19:16:27] [Trakt Data] Not Enabled
+[2019-01-30 19:16:27] [Real Debrid Data] Started
+[2019-01-30 19:16:28] [Real Debrid Data] Not Enabled
+[2019-01-30 19:16:28] [Login Data] Started
+[2019-01-30 19:16:28] [Login Data] Not Enabled
+[2019-01-30 19:16:28] [Auto Clean Up] Started
+[2019-01-30 19:16:28] [Auto Clean Up] Cache: On
+[2019-01-30 19:16:29] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-01-30 19:16:29] Ignore Log File: kodi.log
+[2019-01-30 19:16:29] Ignore Log File: kodi.old.log
+[2019-01-30 19:16:29] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-01-30 19:16:29] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-01-30 19:16:29] [Auto Clean Up] Old Thumbs: On
+[2019-01-30 19:16:32] 0 total thumbs cleaned up.
+[2019-01-30 19:16:32] [Auto Clean Up] Packages: On
+[2019-01-30 19:17:08] 2019-01-30 19:17:08.552097
+[2019-01-30 19:17:09] Continuing Start Up Script
+[2019-01-30 19:17:09] [Path Check] Started
+[2019-01-30 19:17:09] [Path Check] Good!
+[2019-01-30 19:17:09] [Auto Install Repo] Started
+[2019-01-30 19:17:09] [Auto Install Repo] Not Enabled
+[2019-01-30 19:17:09] [Auto Update Wizard] Started
+[2019-01-30 19:17:09] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:10] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:10] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:11] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:12] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:12] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:13] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:14] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:14] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-01-30 19:17:15] [Auto Update Wizard] No New Version vFalse
+[2019-01-30 19:17:15] [Notifications] Started
+[2019-01-30 19:17:15] [Notifications] URL(http://): False
+[2019-01-30 19:17:15] [Installed Check] Started
+[2019-01-30 19:17:15] [Installed Check] Not Enabled
+[2019-01-30 19:17:15] [Build Check] Started
+[2019-01-30 19:17:15] [Trakt Data] Started
+[2019-01-30 19:17:15] [Trakt Data] Not Enabled
+[2019-01-30 19:17:15] [Real Debrid Data] Started
+[2019-01-30 19:17:15] [Real Debrid Data] Not Enabled
+[2019-01-30 19:17:15] [Login Data] Started
+[2019-01-30 19:17:15] [Login Data] Not Enabled
+[2019-01-30 19:17:15] [Auto Clean Up] Started
+[2019-01-30 19:17:15] [Auto Clean Up] Cache: On
+[2019-01-30 19:17:19] Ignore Log File: kodi.log
+[2019-01-30 19:17:19] Ignore Log File: kodi.old.log
+[2019-01-30 19:17:19] [Auto Clean Up] Old Thumbs: On
+[2019-01-30 19:17:28] 0 total thumbs cleaned up.
+[2019-01-30 19:17:28] [Auto Clean Up] Packages: On
+[2019-02-04 06:08:09] 2019-02-04 06:08:09.432613
+[2019-02-04 06:08:10] Continuing Start Up Script
+[2019-02-04 06:08:10] [Path Check] Started
+[2019-02-04 06:08:10] [Path Check] Good!
+[2019-02-04 06:08:10] [Auto Install Repo] Started
+[2019-02-04 06:08:10] [Auto Install Repo] Not Enabled
+[2019-02-04 06:08:10] [Auto Update Wizard] Started
+[2019-02-04 06:08:10] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:10] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:11] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:11] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:12] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:12] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 06:08:13] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [2019-02-04 19:37:29] 2019-02-04 19:37:29.216368
+[2019-02-04 19:37:30] Continuing Start Up Script
+[2019-02-04 19:37:30] [Path Check] Started
+[2019-02-04 19:37:30] [Path Check] Good!
+[2019-02-04 19:37:30] [Auto Install Repo] Started
+[2019-02-04 19:37:30] [Auto Install Repo] Not Enabled
+[2019-02-04 19:37:30] [Auto Update Wizard] Started
+[2019-02-04 19:37:30] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:31] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:32] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:32] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:33] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:33] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:34] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:34] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:35] Working Url Error: <urlopen error [Errno 7] No address associated with hostname> [http:// autobuilds.txt]
+[2019-02-04 19:37:35] [Auto Update Wizard] No New Version vFalse
+[2019-02-04 19:37:35] [Notifications] Started
+[2019-02-04 19:37:35] [Notifications] URL(http://): False
+[2019-02-04 19:37:35] [Installed Check] Started
+[2019-02-04 19:37:35] [Installed Check] Not Enabled
+[2019-02-04 19:37:35] [Build Check] Started
+[2019-02-04 19:37:35] [Build Check] First Run
+[2019-02-04 19:37:50] [First Run] [User Selected: Ignore Build Menu] [Next Check: 2019-02-04]
+[2019-02-04 19:37:51] [Trakt Data] Started
+[2019-02-04 19:37:51] [Trakt Data] Saving all Data
+[2019-02-04 19:37:51] [Real Debrid Data] Started
+[2019-02-04 19:37:51] [Real Debrid Data] Saving all Data
+[2019-02-04 19:37:51] [Login Data] Started
+[2019-02-04 19:37:51] [Login Data] Not Enabled
+[2019-02-04 19:37:51] [Auto Clean Up] Started
+[2019-02-04 19:37:51] [Auto Clean Up] Cache: On
+[2019-02-04 19:37:51] Ignore Log File: kodi.log
+[2019-02-04 19:37:51] Ignore Log File: kodi.old.log
+[2019-02-04 19:37:51] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-02-04 19:37:51] [Auto Clean Up] Old Thumbs: On
+[2019-02-04 19:37:51] 0 total thumbs cleaned up.
+[2019-02-04 19:37:51] [Auto Clean Up] Packages: On
+[2019-02-06 15:07:31] 2019-02-06 15:07:31.035551
+[2019-02-06 15:07:32] Continuing Start Up Script
+[2019-02-06 15:07:32] [Path Check] Started
+[2019-02-06 15:07:32] [Path Check] Good!
+[2019-02-06 15:07:32] [Auto Install Repo] Started
+[2019-02-06 15:07:32] [Auto Install Repo] Not Enabled
+[2019-02-06 15:07:32] [Auto Update Wizard] Started
+[2019-02-06 15:07:33] [Auto Update Wizard] Not Enabled
+[2019-02-06 15:07:33] [Notifications] Started
+[2019-02-06 15:07:33] [Notifications] Not Enabled
+[2019-02-06 15:07:33] [Installed Check] Started
+[2019-02-06 15:07:33] [Installed Check] Not Enabled
+[2019-02-06 15:07:33] [Build Check] Started
+[2019-02-06 15:07:33] [Trakt Data] Started
+[2019-02-06 15:07:33] [Trakt Data] Next Auto Save isnt until: 2019-02-07 / TODAY is: 2019-02-06
+[2019-02-06 15:07:33] [Real Debrid Data] Started
+[2019-02-06 15:07:33] [Real Debrid Data] Next Auto Save isnt until: 2019-02-07 / TODAY is: 2019-02-06
+[2019-02-06 15:07:33] [Login Data] Started
+[2019-02-06 15:07:33] [Login Data] Not Enabled
+[2019-02-06 15:07:33] Ignore Log File: kodi.log
+[2019-02-06 15:07:33] Ignore Log File: kodi.old.log
+[2019-02-06 15:07:35] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-06 15:07:36] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-06 15:07:37] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-08 23:14:53] 2019-02-08 23:14:53.642969
+[2019-02-08 23:14:55] Continuing Start Up Script
+[2019-02-08 23:14:55] [Path Check] Started
+[2019-02-08 23:14:55] [Path Check] Good!
+[2019-02-08 23:14:55] [Auto Install Repo] Started
+[2019-02-08 23:14:55] [Auto Install Repo] Not Enabled
+[2019-02-08 23:14:55] [Auto Update Wizard] Started
+[2019-02-08 23:14:55] [Auto Update Wizard] Not Enabled
+[2019-02-08 23:14:55] [Notifications] Started
+[2019-02-08 23:14:55] [Notifications] Not Enabled
+[2019-02-08 23:14:55] [Installed Check] Started
+[2019-02-08 23:14:55] [Installed Check] Not Enabled
+[2019-02-08 23:14:55] [Build Check] Started
+[2019-02-08 23:14:55] [Trakt Data] Started
+[2019-02-08 23:14:55] [Trakt Data] Saving all Data
+[2019-02-08 23:14:55] [Real Debrid Data] Started
+[2019-02-08 23:14:55] [Real Debrid Data] Saving all Data
+[2019-02-08 23:14:55] [Login Data] Started
+[2019-02-08 23:14:55] [Login Data] Not Enabled
+[2019-02-08 23:14:56] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-02-08 23:15:02] Ignore Log File: kodi.log
+[2019-02-08 23:15:02] Ignore Log File: kodi.old.log
+[2019-02-08 23:15:06] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-08 23:15:07] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-08 23:15:07] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-09 12:36:47] 2019-02-09 12:36:47.155791
+[2019-02-09 12:36:48] Continuing Start Up Script
+[2019-02-09 12:36:48] [Path Check] Started
+[2019-02-09 12:36:48] [Path Check] Good!
+[2019-02-09 12:36:48] [Auto Install Repo] Started
+[2019-02-09 12:36:48] [Auto Install Repo] Not Enabled
+[2019-02-09 12:36:48] [Auto Update Wizard] Started
+[2019-02-09 12:36:48] [Auto Update Wizard] Not Enabled
+[2019-02-09 12:36:48] [Notifications] Started
+[2019-02-09 12:36:48] [Notifications] Not Enabled
+[2019-02-09 12:36:48] [Installed Check] Started
+[2019-02-09 12:36:48] [Installed Check] Not Enabled
+[2019-02-09 12:36:48] [Build Check] Started
+[2019-02-09 12:36:48] [Trakt Data] Started
+[2019-02-09 12:36:48] [Trakt Data] Next Auto Save isnt until: 2019-02-11 / TODAY is: 2019-02-09
+[2019-02-09 12:36:48] [Real Debrid Data] Started
+[2019-02-09 12:36:48] [Real Debrid Data] Next Auto Save isnt until: 2019-02-11 / TODAY is: 2019-02-09
+[2019-02-09 12:36:48] [Login Data] Started
+[2019-02-09 12:36:48] [Login Data] Not Enabled
+[2019-02-09 12:36:52] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-02-09 12:36:52] Ignore Log File: kodi.log
+[2019-02-09 12:36:52] Ignore Log File: kodi.old.log
+[2019-02-09 12:36:52] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-02-09 12:36:58] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-09 12:36:58] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-09 12:36:58] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-10 18:53:34] 2019-02-10 18:53:34.676633
+[2019-02-10 18:53:35] Continuing Start Up Script
+[2019-02-10 18:53:35] [Path Check] Started
+[2019-02-10 18:53:36] [Path Check] Good!
+[2019-02-10 18:53:36] [Auto Install Repo] Started
+[2019-02-10 18:53:36] [Auto Install Repo] Not Enabled
+[2019-02-10 18:53:36] [Auto Update Wizard] Started
+[2019-02-10 18:53:36] [Auto Update Wizard] Not Enabled
+[2019-02-10 18:53:37] [Notifications] Started
+[2019-02-10 18:53:37] [Notifications] Not Enabled
+[2019-02-10 18:53:37] [Installed Check] Started
+[2019-02-10 18:53:37] [Installed Check] Not Enabled
+[2019-02-10 18:53:37] [Build Check] Started
+[2019-02-10 18:53:37] [Trakt Data] Started
+[2019-02-10 18:53:37] [Trakt Data] Next Auto Save isnt until: 2019-02-11 / TODAY is: 2019-02-10
+[2019-02-10 18:53:37] [Real Debrid Data] Started
+[2019-02-10 18:53:37] [Real Debrid Data] Next Auto Save isnt until: 2019-02-11 / TODAY is: 2019-02-10
+[2019-02-10 18:53:37] [Login Data] Started
+[2019-02-10 18:53:37] [Login Data] Not Enabled
+[2019-02-10 18:53:45] Ignore Log File: kodi.log
+[2019-02-10 18:53:45] Ignore Log File: kodi.old.log
+[2019-02-10 18:53:47] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-10 18:53:47] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-10 18:53:47] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-11 23:45:10] 2019-02-11 23:45:10.471987
+[2019-02-11 23:45:11] Continuing Start Up Script
+[2019-02-11 23:45:11] [Path Check] Started
+[2019-02-11 23:45:11] [Path Check] Good!
+[2019-02-11 23:45:11] [Auto Install Repo] Started
+[2019-02-11 23:45:11] [Auto Install Repo] Not Enabled
+[2019-02-11 23:45:11] [Auto Update Wizard] Started
+[2019-02-11 23:45:11] [Auto Update Wizard] Not Enabled
+[2019-02-11 23:45:11] [Notifications] Started
+[2019-02-11 23:45:11] [Notifications] Not Enabled
+[2019-02-11 23:45:11] [Installed Check] Started
+[2019-02-11 23:45:11] [Installed Check] Not Enabled
+[2019-02-11 23:45:11] [Build Check] Started
+[2019-02-11 23:45:11] [Trakt Data] Started
+[2019-02-11 23:45:11] [Trakt Data] Saving all Data
+[2019-02-11 23:45:12] [Real Debrid Data] Started
+[2019-02-11 23:45:12] [Real Debrid Data] Saving all Data
+[2019-02-11 23:45:12] [Login Data] Started
+[2019-02-11 23:45:12] [Login Data] Not Enabled
+[2019-02-11 23:45:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-02-11 23:45:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-02-11 23:45:16] Ignore Log File: kodi.log
+[2019-02-11 23:45:16] Ignore Log File: kodi.old.log
+[2019-02-11 23:45:16] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-02-11 23:45:19] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-11 23:45:20] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-11 23:45:20] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-11 23:48:28] 2019-02-11 23:48:28.781731
+[2019-02-11 23:48:30] Continuing Start Up Script
+[2019-02-11 23:48:30] [Path Check] Started
+[2019-02-11 23:48:30] [Path Check] Good!
+[2019-02-11 23:48:30] [Auto Install Repo] Started
+[2019-02-11 23:48:30] [Auto Install Repo] Not Enabled
+[2019-02-11 23:48:30] [Auto Update Wizard] Started
+[2019-02-11 23:48:30] [Auto Update Wizard] Not Enabled
+[2019-02-11 23:48:30] [Notifications] Started
+[2019-02-11 23:48:30] [Notifications] Not Enabled
+[2019-02-11 23:48:30] [Installed Check] Started
+[2019-02-11 23:48:30] [Installed Check] Not Enabled
+[2019-02-11 23:48:30] [Build Check] Started
+[2019-02-11 23:48:30] [Trakt Data] Started
+[2019-02-11 23:48:30] [Trakt Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-11
+[2019-02-11 23:48:30] [Real Debrid Data] Started
+[2019-02-11 23:48:30] [Real Debrid Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-11
+[2019-02-11 23:48:30] [Login Data] Started
+[2019-02-11 23:48:30] [Login Data] Not Enabled
+[2019-02-11 23:48:35] Ignore Log File: kodi.log
+[2019-02-11 23:48:35] Ignore Log File: kodi.old.log
+[2019-02-11 23:48:35] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-02-11 23:48:52] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-11 23:48:52] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-11 23:48:52] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-13 00:59:34] 2019-02-13 00:59:34.191829
+[2019-02-13 00:59:35] Continuing Start Up Script
+[2019-02-13 00:59:36] [Path Check] Started
+[2019-02-13 00:59:36] [Path Check] Good!
+[2019-02-13 00:59:36] [Auto Install Repo] Started
+[2019-02-13 00:59:36] [Auto Install Repo] Not Enabled
+[2019-02-13 00:59:36] [Auto Update Wizard] Started
+[2019-02-13 00:59:36] [Auto Update Wizard] Not Enabled
+[2019-02-13 00:59:36] [Notifications] Started
+[2019-02-13 00:59:36] [Notifications] Not Enabled
+[2019-02-13 00:59:36] [Installed Check] Started
+[2019-02-13 00:59:36] [Installed Check] Not Enabled
+[2019-02-13 00:59:36] [Build Check] Started
+[2019-02-13 00:59:36] [Trakt Data] Started
+[2019-02-13 00:59:36] [Trakt Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 00:59:36] [Real Debrid Data] Started
+[2019-02-13 00:59:36] [Real Debrid Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 00:59:36] [Login Data] Started
+[2019-02-13 00:59:36] [Login Data] Not Enabled
+[2019-02-13 00:59:40] Ignore Log File: kodi.log
+[2019-02-13 00:59:40] Ignore Log File: kodi.old.log
+[2019-02-13 00:59:40] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-02-13 00:59:43] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-13 00:59:43] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-13 00:59:43] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-13 15:23:18] 2019-02-13 15:23:18.706155
+[2019-02-13 15:23:20] Continuing Start Up Script
+[2019-02-13 15:23:20] [Path Check] Started
+[2019-02-13 15:23:20] [Path Check] Good!
+[2019-02-13 15:23:20] [Auto Install Repo] Started
+[2019-02-13 15:23:20] [Auto Install Repo] Not Enabled
+[2019-02-13 15:23:20] [Auto Update Wizard] Started
+[2019-02-13 15:23:20] [Auto Update Wizard] Not Enabled
+[2019-02-13 15:23:20] [Notifications] Started
+[2019-02-13 15:23:20] [Notifications] Not Enabled
+[2019-02-13 15:23:20] [Installed Check] Started
+[2019-02-13 15:23:20] [Installed Check] Not Enabled
+[2019-02-13 15:23:20] [Build Check] Started
+[2019-02-13 15:23:20] [Trakt Data] Started
+[2019-02-13 15:23:20] [Trakt Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 15:23:20] [Real Debrid Data] Started
+[2019-02-13 15:23:20] [Real Debrid Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 15:23:20] [Login Data] Started
+[2019-02-13 15:23:20] [Login Data] Not Enabled
+[2019-02-13 15:23:22] Ignore Log File: kodi.log
+[2019-02-13 15:23:22] Ignore Log File: kodi.old.log
+[2019-02-13 15:23:27] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-13 15:23:27] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-13 15:23:27] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-13 21:46:18] 2019-02-13 21:46:18.879054
+[2019-02-13 21:46:20] Continuing Start Up Script
+[2019-02-13 21:46:20] [Path Check] Started
+[2019-02-13 21:46:20] [Path Check] Good!
+[2019-02-13 21:46:20] [Auto Install Repo] Started
+[2019-02-13 21:46:20] [Auto Install Repo] Not Enabled
+[2019-02-13 21:46:20] [Auto Update Wizard] Started
+[2019-02-13 21:46:20] [Auto Update Wizard] Not Enabled
+[2019-02-13 21:46:20] [Notifications] Started
+[2019-02-13 21:46:20] [Notifications] Not Enabled
+[2019-02-13 21:46:20] [Installed Check] Started
+[2019-02-13 21:46:20] [Installed Check] Not Enabled
+[2019-02-13 21:46:20] [Build Check] Started
+[2019-02-13 21:46:20] [Trakt Data] Started
+[2019-02-13 21:46:20] [Trakt Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 21:46:20] [Real Debrid Data] Started
+[2019-02-13 21:46:20] [Real Debrid Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 21:46:20] [Login Data] Started
+[2019-02-13 21:46:20] [Login Data] Not Enabled
+[2019-02-13 21:46:30] Ignore Log File: kodi.log
+[2019-02-13 21:46:30] Ignore Log File: kodi.old.log
+[2019-02-13 21:46:31] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-13 21:46:31] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-13 21:46:31] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-13 23:33:09] 2019-02-13 23:33:08.967778
+[2019-02-13 23:33:10] Continuing Start Up Script
+[2019-02-13 23:33:10] [Path Check] Started
+[2019-02-13 23:33:10] [Path Check] Good!
+[2019-02-13 23:33:10] [Auto Install Repo] Started
+[2019-02-13 23:33:10] [Auto Install Repo] Not Enabled
+[2019-02-13 23:33:10] [Auto Update Wizard] Started
+[2019-02-13 23:33:10] [Auto Update Wizard] Not Enabled
+[2019-02-13 23:33:10] [Notifications] Started
+[2019-02-13 23:33:10] [Notifications] Not Enabled
+[2019-02-13 23:33:10] [Installed Check] Started
+[2019-02-13 23:33:10] [Installed Check] Not Enabled
+[2019-02-13 23:33:10] [Build Check] Started
+[2019-02-13 23:33:10] [Trakt Data] Started
+[2019-02-13 23:33:10] [Trakt Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 23:33:10] [Real Debrid Data] Started
+[2019-02-13 23:33:10] [Real Debrid Data] Next Auto Save isnt until: 2019-02-14 / TODAY is: 2019-02-13
+[2019-02-13 23:33:10] [Login Data] Started
+[2019-02-13 23:33:10] [Login Data] Not Enabled
+[2019-02-13 23:33:12] Ignore Log File: kodi.log
+[2019-02-13 23:33:12] Ignore Log File: kodi.old.log
+[2019-02-13 23:33:15] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-13 23:33:15] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-13 23:33:15] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-17 14:02:01] 2019-02-17 14:02:01.216763
+[2019-02-17 14:02:02] Continuing Start Up Script
+[2019-02-17 14:02:02] [Path Check] Started
+[2019-02-17 14:02:02] [Path Check] Good!
+[2019-02-17 14:02:03] [Auto Install Repo] Started
+[2019-02-17 14:02:03] [Auto Install Repo] Not Enabled
+[2019-02-17 14:02:03] [Auto Update Wizard] Started
+[2019-02-17 14:02:03] [Auto Update Wizard] Not Enabled
+[2019-02-17 14:02:03] [Notifications] Started
+[2019-02-17 14:02:03] [Notifications] Not Enabled
+[2019-02-17 14:02:03] [Installed Check] Started
+[2019-02-17 14:02:03] [Installed Check] Not Enabled
+[2019-02-17 14:02:03] [Build Check] Started
+[2019-02-17 14:02:03] [Trakt Data] Started
+[2019-02-17 14:02:03] [Trakt Data] Saving all Data
+[2019-02-17 14:02:03] [Real Debrid Data] Started
+[2019-02-17 14:02:03] [Real Debrid Data] Saving all Data
+[2019-02-17 14:02:03] [Login Data] Started
+[2019-02-17 14:02:03] [Login Data] Not Enabled
+[2019-02-17 14:02:05] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-02-17 14:02:05] Ignore Log File: kodi.log
+[2019-02-17 14:02:05] Ignore Log File: kodi.old.log
+[2019-02-17 14:02:05] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-02-17 14:02:16] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-17 14:02:17] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-17 14:02:17] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-18 19:24:19] 2019-02-18 19:24:19.498386
+[2019-02-18 19:24:21] Continuing Start Up Script
+[2019-02-18 19:24:21] [Path Check] Started
+[2019-02-18 19:24:21] [Path Check] Good!
+[2019-02-18 19:24:21] [Auto Install Repo] Started
+[2019-02-18 19:24:21] [Auto Install Repo] Not Enabled
+[2019-02-18 19:24:21] [Auto Update Wizard] Started
+[2019-02-18 19:24:21] [Auto Update Wizard] Not Enabled
+[2019-02-18 19:24:21] [Notifications] Started
+[2019-02-18 19:24:21] [Notifications] Not Enabled
+[2019-02-18 19:24:21] [Installed Check] Started
+[2019-02-18 19:24:22] [Installed Check] Not Enabled
+[2019-02-18 19:24:22] [Build Check] Started
+[2019-02-18 19:24:22] [Trakt Data] Started
+[2019-02-18 19:24:22] [Trakt Data] Next Auto Save isnt until: 2019-02-20 / TODAY is: 2019-02-18
+[2019-02-18 19:24:22] [Real Debrid Data] Started
+[2019-02-18 19:24:22] [Real Debrid Data] Next Auto Save isnt until: 2019-02-20 / TODAY is: 2019-02-18
+[2019-02-18 19:24:22] [Login Data] Started
+[2019-02-18 19:24:22] [Login Data] Not Enabled
+[2019-02-18 19:24:29] Ignore Log File: kodi.log
+[2019-02-18 19:24:29] Ignore Log File: kodi.old.log
+[2019-02-18 19:24:37] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-18 19:24:38] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-18 19:24:38] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-20 22:51:47] 2019-02-20 22:51:47.730069
+[2019-02-20 22:51:48] Continuing Start Up Script
+[2019-02-20 22:51:48] [Path Check] Started
+[2019-02-20 22:51:48] [Path Check] Good!
+[2019-02-20 22:51:48] [Auto Install Repo] Started
+[2019-02-20 22:51:48] [Auto Install Repo] Not Enabled
+[2019-02-20 22:51:48] [Auto Update Wizard] Started
+[2019-02-20 22:51:48] [Auto Update Wizard] Not Enabled
+[2019-02-20 22:51:48] [Notifications] Started
+[2019-02-20 22:51:48] [Notifications] Not Enabled
+[2019-02-20 22:51:48] [Installed Check] Started
+[2019-02-20 22:51:48] [Installed Check] Not Enabled
+[2019-02-20 22:51:48] [Build Check] Started
+[2019-02-20 22:51:48] [Trakt Data] Started
+[2019-02-20 22:51:48] [Trakt Data] Saving all Data
+[2019-02-20 22:51:49] [Real Debrid Data] Started
+[2019-02-20 22:51:49] [Real Debrid Data] Saving all Data
+[2019-02-20 22:51:49] [Login Data] Started
+[2019-02-20 22:51:49] [Login Data] Not Enabled
+[2019-02-20 22:52:02] Ignore Log File: kodi.log
+[2019-02-20 22:52:02] Ignore Log File: kodi.old.log
+[2019-02-20 22:52:05] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-20 22:52:06] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-20 22:52:06] [Auto Cleaner] Thumbs Cleaner Triggered
+[2019-02-25 17:15:53] 2019-02-25 17:15:53.306347
+[2019-02-25 17:15:54] Continuing Start Up Script
+[2019-02-25 17:15:54] [Path Check] Started
+[2019-02-25 17:15:54] [Path Check] Good!
+[2019-02-25 17:15:54] [Auto Install Repo] Started
+[2019-02-25 17:15:55] [Auto Install Repo] Not Enabled
+[2019-02-25 17:15:55] [Auto Update Wizard] Started
+[2019-02-25 17:15:55] [Auto Update Wizard] Not Enabled
+[2019-02-25 17:15:55] [Notifications] Started
+[2019-02-25 17:15:55] [Notifications] Not Enabled
+[2019-02-25 17:15:55] [Installed Check] Started
+[2019-02-25 17:15:55] [Installed Check] Not Enabled
+[2019-02-25 17:15:55] [Build Check] Started
+[2019-02-25 17:15:55] [Trakt Data] Started
+[2019-02-25 17:15:55] [Trakt Data] Saving all Data
+[2019-02-25 17:15:55] [Real Debrid Data] Started
+[2019-02-25 17:15:55] [Real Debrid Data] Saving all Data
+[2019-02-25 17:15:55] [Login Data] Started
+[2019-02-25 17:15:55] [Login Data] Not Enabled
+[2019-02-25 17:15:59] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-02-25 17:15:59] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-02-25 17:15:59] Ignore Log File: kodi.log
+[2019-02-25 17:15:59] Ignore Log File: kodi.old.log
+[2019-02-25 17:15:59] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-02-25 17:16:04] [Success] wiped cache in /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.exodus/cache.db
+[2019-02-25 17:16:05] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/Database/onechannelcache.db
+[2019-02-25 17:16:05] [Auto Cleaner] Thumbs Cleaner Triggered

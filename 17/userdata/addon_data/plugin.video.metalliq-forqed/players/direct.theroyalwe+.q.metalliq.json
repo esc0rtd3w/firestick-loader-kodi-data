@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] The Royal We ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dudehere.plugins",
+ "plugin"       : "plugin.video.theroyalwe",
+ "priority"     : 200,
+ "id"           : "direct.theroyalwe.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.theroyalwe/?imdb_id={imdb}&mode=get_movie_sources&title={title}&tmdb_id={id}&year={year}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.theroyalwe/?display={episode}.%20{title}&episode={episode}&imdb_id={imdb}&mode=get_episode_sources&season={season}&showtitle={showname}&tmdb_id={tmdb}&trakt_id={trakt}&year={year}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

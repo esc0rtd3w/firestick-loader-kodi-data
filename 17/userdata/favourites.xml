@@ -1,0 +1,22 @@
+<favourites>
+    <favourite name="UK Turk Playlists" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.ukturk/icon.png">RunAddon(plugin.video.ukturk)</favourite>
+    <favourite name=" Neptune Rising" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.neptune/icon.png">RunAddon(plugin.video.neptune)</favourite>
+    <favourite name="[COLOR blue]Gen-X[/COLOR]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.Gen-X/icon.png">RunAddon(plugin.video.Gen-X)</favourite>
+    <favourite name="[COLORaqua]R2D2[/COLOR]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.r2d2/icon.png">RunAddon(plugin.video.r2d2)</favourite>
+    <favourite name="[COLORlime]Maverick TV[/COLOR]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.MaverickTV/icon.png">RunAddon(plugin.video.MaverickTV)</favourite>
+    <favourite name="[COLORlime]MaverickLive[/COLOR]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/script.module.MaverickLive/icon.png">RunAddon(script.module.MaverickLive)</favourite>
+    <favourite name="[COLORred]ATF Live[/COLOR]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/script.module.ATFTV/icon.png">RunAddon(script.module.ATFTV)</favourite>
+    <favourite name="cCloud TV" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.ccloudtv/icon.png">RunAddon(plugin.video.ccloudtv)</favourite>
+    <favourite name="Disclose.tv" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.disclosetv/resources/images/icon.png">RunAddon(plugin.video.disclosetv)</favourite>
+    <favourite name="Exodus" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.exodus/icon.png">RunAddon(plugin.video.exodus)</favourite>
+    <favourite name="Exodus Redux" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.exodusredux/icon.png">RunAddon(plugin.video.exodusredux)</favourite>
+    <favourite name="Falcon Reborn" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.falconreborn/icon.png">RunAddon(plugin.video.falconreborn)</favourite>
+    <favourite name="Fitness Blender" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.fitnessblenderv2/resources/images/icon.png">RunAddon(plugin.video.fitnessblenderv2)</favourite>
+    <favourite name="Infowars" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.infowars/icon.png">RunAddon(plugin.video.infowars)</favourite>
+    <favourite name="Limitless" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.limitless/icon.png">RunAddon(plugin.video.limitless)</favourite>
+    <favourite name="NetTV" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.nettv/icon.png">RunAddon(plugin.video.nettv)</favourite>
+    <favourite name="PrimeWire" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.1channel/icon.png">RunAddon(plugin.video.1channel)</favourite>
+    <favourite name="Smithsonian Channel" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.smithsonian/icon.png">RunAddon(plugin.video.smithsonian)</favourite>
+    <favourite name="Space Telescope" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.spacetelescope/icon.png">RunAddon(plugin.video.spacetelescope)</favourite>
+    <favourite name="[B][COLOR red]13Clowns[/COLOR] Video[/B]" thumb="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.13clowns/icon.gif">RunAddon(plugin.video.13clowns)</favourite>
+</favourites>

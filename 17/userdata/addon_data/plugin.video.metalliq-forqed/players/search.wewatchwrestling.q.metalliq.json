@@ -1,0 +1,24 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] We Watch Wrestling ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdwww",
+ "priority"     : 900,
+ "id"           : "search.wewatchwrestling.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdwww/?description&iconimage=special://home/addons/plugin.video.mdwww/icon.png&mode=8&name=&url=http://watchwrestling.club/?s={title}",
+    "steps"     : [
+     "($$.*$$){title}.*{year}.*($$.*$$)"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

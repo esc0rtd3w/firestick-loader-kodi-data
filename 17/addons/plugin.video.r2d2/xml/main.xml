@@ -1,0 +1,61 @@
+
+<dir>
+    <name>Movies</name>
+    <link>http://ajbuilds.uk/r2d2/moviesr2d2.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/movies.png</thumbnail>
+</dir>
+
+
+<dir>
+    <name>Tv Shows</name>
+    <link>http://ajbuilds.uk/r2d2/tvshows_r2d2.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/tvshows.png</thumbnail>
+</dir>
+
+
+<dir>
+    <name>My Movies</name>
+    <link>http://ajbuilds.uk/r2d2/trakt_movies.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/mymovies.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>My Tv Shows</title>
+    <link>http://ajbuilds.uk/r2d2/trakt_tv.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/mytvshows.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Networks</title>
+    <link>http://ajbuilds.uk/r2d2/networks%20.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/networks.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>New Movies</title>
+    <imdburl>movies/new</imdburl>
+    <thumbnail>http://ajbuilds.uk/art/latest-movies.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>New Episodes</title>
+    <tmdb>tv/today</tmdb>
+    <thumbnail>http://ajbuilds.uk/art/latest-episodes.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>Tools</title>
+    <link>http://ajbuilds.uk/r2d2/accounts.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/tools.png</thumbnail>
+</dir>
+
+
+<dir>
+    <title>Search</title>
+    <link>http://ajbuilds.uk/r2d2/search.xml</link>
+    <thumbnail>http://ajbuilds.uk/art/search.png</thumbnail>
+</dir>

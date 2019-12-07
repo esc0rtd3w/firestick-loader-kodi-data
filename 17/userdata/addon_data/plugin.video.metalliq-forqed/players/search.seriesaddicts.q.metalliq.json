@@ -1,0 +1,25 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] seriesaddicts Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.seriesaddicts",
+ "priority"     : 900,
+ "id"           : "search.seriesaddicts.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.seriesaddicts/?description&amp;fanart=special://home/addons/plugin.video.seriesaddicts/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.seriesaddicts/icon.png&amp;mode=20&amp;name=TVShows&amp;query={clearname_+}",
+    "steps"     : [
+     "><{clearname}.*",
+     "><Season {season} - Episode {episode}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

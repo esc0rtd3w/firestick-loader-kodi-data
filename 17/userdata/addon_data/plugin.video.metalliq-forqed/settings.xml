@@ -1,0 +1,91 @@
+<settings>
+    <setting id="airdate_offset" value="0" />
+    <setting id="aired_unknown" value="false" />
+    <setting id="auto_hide_dialogs" value="true" />
+    <setting id="auto_hide_dialogs_info" value="true" />
+    <setting id="auto_hide_dialogs_keyboard" value="true" />
+    <setting id="auto_hide_dialogs_progress" value="true" />
+    <setting id="autopatch" value="false" />
+    <setting id="autopatches" value='[[], [&quot;plugin.video.bennu&quot;, &quot;plugin.video.boxsetkings&quot;, &quot;plugin.video.covenant&quot;, &quot;plugin.video.exodus&quot;, &quot;plugin.video.flixnet&quot;, &quot;plugin.video.genesisreborn&quot;, &quot;plugin.video.gurzil&quot;, &quot;plugin.video.poseidon&quot;, &quot;plugin.video.redpill&quot;, &quot;plugin.video.sedundnes&quot;, &quot;plugin.video.showboxarize&quot;, &quot;plugin.video.tinklepad&quot;], [&quot;plugin.video.salts&quot;], [&quot;script.module.dudehere.routines&quot;]]' />
+    <setting id="background" value="Custom" />
+    <setting id="background_custom_folder" value="http://cellardoortv.com/style/themes/default/" />
+    <setting id="episodes_view" value="50" />
+    <setting id="force_view" value="false" />
+    <setting id="include_specials" value="false" />
+    <setting id="items_per_page" value="20" />
+    <setting id="language_id" value="system" />
+    <setting id="lastfm_api_key" value="" />
+    <setting id="lastfm_api_shared_secret" value="" />
+    <setting id="library_set_date" value="false" />
+    <setting id="library_sync_collection" value="false" />
+    <setting id="library_sync_watchlist" value="false" />
+    <setting id="library_tags" value="" />
+    <setting id="library_titles" value="true" />
+    <setting id="library_updates" value="true" />
+    <setting id="list_view" value="50" />
+    <setting id="live_default_auto_add" value="true" />
+    <setting id="live_default_channeler" value="default_guide" />
+    <setting id="live_default_player" value="default_main" />
+    <setting id="live_default_player_from_context" value="default_context" />
+    <setting id="live_default_player_from_library" value="default_library" />
+    <setting id="live_enabled_channelers" value='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.itv.m&quot;, &quot;explore.jericho.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.adriansports.q&quot;, &quot;navigate.ccloudtv.q&quot;, &quot;navigate.channelpear.q&quot;, &quot;navigate.dnatv.q&quot;, &quot;navigate.evolve.q&quot;, &quot;navigate.ftv.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.notfilmon.q&quot;, &quot;navigate.phoenix.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;navigate.uktvagain.q&quot;, &quot;navigate.ustvnow.q&quot;, &quot;search.vidtime.c&quot;]' />
+    <setting id="live_enabled_players" value='[&quot;Borg&quot;, &quot;CCloud TV&quot;, &quot;USTVnow plus&quot;]' />
+    <setting id="live_library_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/Live/" />
+    <setting id="live_playlist_folder" value="special://profile/playlists/mixed/Channels/" />
+    <setting id="live_view" value="50" />
+    <setting id="main_view" value="50" />
+    <setting id="movies_batch_add_file_path" value="special://profile/addon_data/plugin.video.metalliq-forqed/movies_to_add.txt" />
+    <setting id="movies_default_auto_add" value="true" />
+    <setting id="movies_default_channeler" value="default_guide" />
+    <setting id="movies_default_player" value="default_main" />
+    <setting id="movies_default_player_from_context" value="default_context" />
+    <setting id="movies_default_player_from_library" value="default_library" />
+    <setting id="movies_enabled_channelers" value='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.dandyboxset.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.hd-movie14.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.m4u.m&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.tromachannel.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.afdah.q&quot;, &quot;search.cartoons8.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.fineanddandy.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.genvideos.q&quot;, &quot;search.hdbox.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.moviemadness.q&quot;, &quot;search.niter.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.scenepeeper.m&quot;, &quot;search.solarmoviegw.q&quot;, &quot;search.watch32hd.q&quot;, &quot;search.wewatchwrestling.q&quot;]' />
+    <setting id="movies_enabled_players" value='[&quot;direct.13clowns.cdtv&quot;, &quot;Borg&quot;, &quot;Exodus&quot;, &quot;direct.exodusredux.a4k&quot;, &quot;Neptune&quot;, &quot;Placenta&quot;, &quot;Exodus&quot;]' />
+    <setting id="movies_library_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/Movies/" />
+    <setting id="movies_played_by_add" value="false" />
+    <setting id="movies_playlist_folder" value="special://profile/playlists/video/Movies/" />
+    <setting id="movies_view" value="50" />
+    <setting id="music_default_player" value="default_main" />
+    <setting id="music_default_player_from_context" value="default_context" />
+    <setting id="music_default_player_from_library" value="default_library" />
+    <setting id="music_enabled_players" value='[&quot;Borg&quot;]' />
+    <setting id="music_library_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/Music/" />
+    <setting id="music_playlist_folder" value="special://profile/playlists/music/Artist/" />
+    <setting id="music_view" value="50" />
+    <setting id="musicvideos_default_player" value="default_main" />
+    <setting id="musicvideos_default_player_from_context" value="default_context" />
+    <setting id="musicvideos_default_player_from_library" value="default_library" />
+    <setting id="musicvideos_enabled_players" value='[&quot;YouTube&quot;]' />
+    <setting id="musicvideos_library_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/Musicvideos/" />
+    <setting id="musicvideos_playlist_folder" value="special://profile/playlists/video/MusicVideos" />
+    <setting id="players_update_url" value="http://cellardoortv.com/metalliq/players/" />
+    <setting id="pool_size" value="10" />
+    <setting id="preferred_music_type" value="audio" />
+    <setting id="preferred_toggle" value="skin" />
+    <setting id="random_pages" value="1" />
+    <setting id="seasons_view" value="50" />
+    <setting id="style" value="Default" />
+    <setting id="style_custom_folder" value="http://cellardoortv.com/style/themes/default/" />
+    <setting id="sync_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/Sync/" />
+    <setting id="tmdb_api" value="0afc169ab40ca614af43a7b9c0a61e9b" />
+    <setting id="total_setup_done" value="true" />
+    <setting id="trakt_api_client_id" value="988f3835e5410b3f5e5e90b922a8a0016ef21ec65a2fc63f68e44a6b03041fe7" />
+    <setting id="trakt_api_client_secret" value="556510aeb941dbf23a2eaaa3aae089f928f0112b2a86d328190c280e3dcfd419" />
+    <setting id="trakt_period" value="monthly" />
+    <setting id="tv_batch_add_file_path" value="special://profile/addon_data/plugin.video.metalliq-forqed/shows_to_add.txt" />
+    <setting id="tv_default_auto_add" value="true" />
+    <setting id="tv_default_channeler" value="default_guide" />
+    <setting id="tv_default_player" value="default_main" />
+    <setting id="tv_default_player_from_context" value="default_context" />
+    <setting id="tv_default_player_from_library" value="default_library" />
+    <setting id="tv_enabled_channelers" value='[&quot;default_context&quot;, &quot;default_library&quot;, &quot;default_main&quot;, &quot;direct.alluc.q&quot;, &quot;direct.bennu.d&quot;, &quot;direct.bob.unleashed.m&quot;, &quot;direct.boxsetkings.q&quot;, &quot;direct.bubbles.q&quot;, &quot;direct.covenant.o&quot;, &quot;direct.duckpool.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.flixnet.o&quot;, &quot;direct.genesisreborn.o&quot;, &quot;direct.gurzil.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.mdws.q&quot;, &quot;direct.notsure.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.poseidon.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.salts.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.showboxarize.o&quot;, &quot;direct.specto.q&quot;, &quot;direct.streamhub.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.velvethotdog.o&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.crackler.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.teevee.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.cartoonson.q&quot;, &quot;navigate.dandymedia.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.cartoons8.q&quot;, &quot;search.dizibox.q&quot;, &quot;search.filmemporium_gw.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.hevcvideoclub.q&quot;, &quot;search.jafma.q&quot;, &quot;search.m4u.m&quot;, &quot;search.movieecho.q&quot;, &quot;search.openloadmovies.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.safehouse.q&quot;, &quot;search.seriesaddicts.q&quot;, &quot;search.watch32hd.q&quot;]' />
+    <setting id="tv_enabled_players" value='[&quot;direct.13clowns.cdtv&quot;, &quot;Borg&quot;, &quot;Exodus&quot;, &quot;direct.exodusredux.a4k&quot;, &quot;Neptune&quot;, &quot;Placenta&quot;, &quot;Exodus&quot;]' />
+    <setting id="tv_library_folder" value="special://profile/addon_data/plugin.video.metalliq-forqed/TVShows/" />
+    <setting id="tv_played_by_add" value="false" />
+    <setting id="tv_playlist_folder" value="special://profile/playlists/video/TVShows" />
+    <setting id="tvdb_api" value="301109AD42360880" />
+    <setting id="tvshows_view" value="50" />
+    <setting id="update_library_interval" value="8" />
+    <setting id="use_simple_selector" value="true" />
+</settings>

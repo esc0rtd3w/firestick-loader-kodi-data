@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Death Streams ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.deathstreams",
+ "plugin"       : "plugin.video.blamo",
+ "priority"     : 200,
+ "id"           : "Deathstreams",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.blamo/?title={title_+}&video_type=Movie&trakt_id={trakt}&mode=select_source&dialog=False&year={year}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.blamo/?ep_airdate={firstaired}&trakt_id={trakt}&episode={episode}&mode=select_source&dialog=False&title={clearname_+}&ep_title={title_+}&season={season}&year={year}&video_type=Episode",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

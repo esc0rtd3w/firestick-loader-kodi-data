@@ -1,0 +1,24 @@
+{
+ "name"         : "Navigate [COLOR ff0084ff]-[/COLOR] IP Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.watchipmov",
+ "priority"     : 800,
+ "id"           : "search.watchipmov.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.watchipmov/?description&amp;fanart=special://home/addons/plugin.video.watchipmov/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.watchipmov/icon.png&amp;mode=5&amp;name=Year&amp;url=http%3a%2f%2fwww.freefullmovies.tv%2f{year}.html",
+    "steps"     : [
+     "><{title}.*{year}.*"
+     ],
+    "action"    : "RUN"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

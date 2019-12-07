@@ -1,0 +1,25 @@
+{
+ "name"         : "Navigate - [COLOR ff0084ff]Rising Tides[/COLOR] - ([COLOR gold]YP[/COLOR])",
+ "repository"   : "NA",
+ "plugin"       : "plugin.video.Rising.Tides",
+ "priority"     : 800,
+ "id"           : "navigate.risingtides.YP",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.Rising.Tides/?fanart=http%3a%2f%2fmullafabz.net.rw%2fHOST%2fIcons%2fiptvfanart.jpg&amp;iconimage=http%3a%2f%2fmullafabz.net.rw%2fHOST%2fIcons%2fIPTVs.jpg&amp;mode=1&amp;name=%5bCOLOR%20pink%5d%5bB%5dI%5b%2fB%5d%5b%2fCOLOR%5d%5bCOLOR%20white%5d%5bB%5dPTV%5b%2fB%5d%5b%2fCOLOR%5d%20%5bCOLOR%20red%5d%5bB%5dH%5b%2fB%5d%5b%2fCOLOR%5d%5bCOLOR%20white%5d%5bB%5deaven%5b%2fB%5d%5b%2fCOLOR%5d&amp;url=http%3a%2f%2fbit.ly%2f2vqKbGi",
+    "steps"     : [
+     "@Anycontaining: 'LIST'",
+	 ".*{name}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] DandyMedia Boxsets ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.dandyboxset",
+ "priority"     : 700,
+ "id"           : "explore.dandyboxset.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandyboxset/",
+    "steps"     : [
+     "><Just Great Movies",
+     "><{title}.*{year}."
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandyboxset/",
+    "steps"     : [
+     "@any",
+     "><{title}.*{year}."
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

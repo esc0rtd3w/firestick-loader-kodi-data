@@ -1,0 +1,2500 @@
+[2019-06-08 19:34:48] [Notifications] Started
+[2019-06-08 19:34:50] [Notification] NotifyID 117 Remind Me Later
+[2019-06-08 19:34:51] [Installed Check] Started
+[2019-06-08 19:34:51] [Installed Check] Not Enabled
+[2019-06-08 19:34:51] [Build Check] Started
+[2019-06-08 19:34:51] [Trakt Data] Started
+[2019-06-08 19:34:51] [Trakt Data] Not Enabled
+[2019-06-08 19:34:51] [Real Debrid Data] Started
+[2019-06-08 19:34:51] [Real Debrid Data] Not Enabled
+[2019-06-08 19:34:51] [Login Data] Started
+[2019-06-08 19:34:51] [Login Data] Not Enabled
+[2019-06-08 19:34:52] [Auto Clean Up] Started
+[2019-06-08 19:34:52] [Auto Clean Up] Cache: On
+[2019-06-08 19:34:53] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-08 19:34:53] Ignore Log File: kodi.log
+[2019-06-08 19:34:53] Ignore Log File: kodi.old.log
+[2019-06-08 19:34:53] [Auto Clean Up] Old Thumbs: On
+[2019-06-08 19:34:53] 0 total thumbs cleaned up.
+[2019-06-08 19:34:54] [Auto Clean Up] Packages: On
+[2019-06-08 22:42:16] 2019-06-08 22:42:16.058226
+[2019-06-08 22:42:18] Continuing Start Up Script
+[2019-06-08 22:42:18] [Path Check] Started
+[2019-06-08 22:42:18] [Path Check] Good!
+[2019-06-08 22:42:18] [Auto Install Repo] Started
+[2019-06-08 22:42:18] [Auto Install Repo] Not Enabled
+[2019-06-08 22:42:18] [Auto Update Wizard] Started
+[2019-06-08 22:42:20] [Auto Update Wizard] No New Version vFalse
+[2019-06-08 22:42:20] [Notifications] Started
+[2019-06-08 22:42:23] [Notification] NotifyID 117 Remind Me Later
+[2019-06-08 22:42:23] [Installed Check] Started
+[2019-06-08 22:42:24] [Installed Check] Not Enabled
+[2019-06-08 22:42:24] [Build Check] Started
+[2019-06-08 22:42:24] [Trakt Data] Started
+[2019-06-08 22:42:24] [Trakt Data] Not Enabled
+[2019-06-08 22:42:24] [Real Debrid Data] Started
+[2019-06-08 22:42:24] [Real Debrid Data] Not Enabled
+[2019-06-08 22:42:24] [Login Data] Started
+[2019-06-08 22:42:24] [Login Data] Not Enabled
+[2019-06-08 22:42:24] [Auto Clean Up] Started
+[2019-06-08 22:42:24] [Auto Clean Up] Cache: On
+[2019-06-08 22:42:25] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-08 22:42:26] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-08 22:42:26] Ignore Log File: kodi.log
+[2019-06-08 22:42:26] Ignore Log File: kodi.old.log
+[2019-06-08 22:42:26] [Auto Clean Up] Old Thumbs: On
+[2019-06-08 22:42:26] 0 total thumbs cleaned up.
+[2019-06-08 22:42:26] [Auto Clean Up] Packages: On
+[2019-06-09 11:37:49] 2019-06-09 11:37:48.968507
+[2019-06-09 11:37:50] Continuing Start Up Script
+[2019-06-09 11:37:50] [Path Check] Started
+[2019-06-09 11:37:50] [Path Check] Good!
+[2019-06-09 11:37:50] [Auto Install Repo] Started
+[2019-06-09 11:37:50] [Auto Install Repo] Not Enabled
+[2019-06-09 11:37:50] [Auto Update Wizard] Started
+[2019-06-09 11:37:52] [Auto Update Wizard] No New Version vFalse
+[2019-06-09 11:37:52] [Notifications] Started
+[2019-06-09 11:37:55] [Notification] NotifyID 117 Remind Me Later
+[2019-06-09 11:37:56] [Installed Check] Started
+[2019-06-09 11:37:56] [Installed Check] Not Enabled
+[2019-06-09 11:37:56] [Build Check] Started
+[2019-06-09 11:37:56] [Trakt Data] Started
+[2019-06-09 11:37:56] [Trakt Data] Not Enabled
+[2019-06-09 11:37:56] [Real Debrid Data] Started
+[2019-06-09 11:37:56] [Real Debrid Data] Not Enabled
+[2019-06-09 11:37:56] [Login Data] Started
+[2019-06-09 11:37:56] [Login Data] Not Enabled
+[2019-06-09 11:37:56] [Auto Clean Up] Started
+[2019-06-09 11:37:56] [Auto Clean Up] Cache: On
+[2019-06-09 11:38:01] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-09 11:38:09] Ignore Log File: kodi.log
+[2019-06-09 11:38:09] Ignore Log File: kodi.old.log
+[2019-06-09 11:38:09] [Auto Clean Up] Old Thumbs: On
+[2019-06-09 11:38:09] 233 total thumbs cleaned up.
+[2019-06-09 11:38:11] [Auto Clean Up] Packages: On
+[2019-06-09 16:02:02] 2019-06-09 16:02:02.755687
+[2019-06-09 16:02:03] Continuing Start Up Script
+[2019-06-09 16:02:03] [Path Check] Started
+[2019-06-09 16:02:04] [Path Check] Good!
+[2019-06-09 16:02:04] [Auto Install Repo] Started
+[2019-06-09 16:02:04] [Auto Install Repo] Not Enabled
+[2019-06-09 16:02:04] [Auto Update Wizard] Started
+[2019-06-09 16:02:07] [Auto Update Wizard] No New Version vFalse
+[2019-06-09 16:02:07] [Notifications] Started
+[2019-06-09 16:02:11] [Notification] NotifyID 117 Remind Me Later
+[2019-06-09 16:02:11] [Installed Check] Started
+[2019-06-09 16:02:11] [Installed Check] Not Enabled
+[2019-06-09 16:02:11] [Build Check] Started
+[2019-06-09 16:02:11] [Trakt Data] Started
+[2019-06-09 16:02:12] [Trakt Data] Not Enabled
+[2019-06-09 16:02:12] [Real Debrid Data] Started
+[2019-06-09 16:02:12] [Real Debrid Data] Not Enabled
+[2019-06-09 16:02:12] [Login Data] Started
+[2019-06-09 16:02:12] [Login Data] Not Enabled
+[2019-06-09 16:02:12] [Auto Clean Up] Started
+[2019-06-09 16:02:13] [Auto Clean Up] Cache: On
+[2019-06-09 16:02:14] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-09 16:02:15] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-09 16:02:15] Ignore Log File: kodi.log
+[2019-06-09 16:02:15] Ignore Log File: kodi.old.log
+[2019-06-09 16:02:15] [Auto Clean Up] Old Thumbs: On
+[2019-06-09 16:02:15] 0 total thumbs cleaned up.
+[2019-06-09 16:02:15] [Auto Clean Up] Packages: On
+[2019-06-09 18:30:24] 2019-06-09 18:30:24.587911
+[2019-06-09 18:30:25] Continuing Start Up Script
+[2019-06-09 18:30:25] [Path Check] Started
+[2019-06-09 18:30:26] [Path Check] Good!
+[2019-06-09 18:30:26] [Auto Install Repo] Started
+[2019-06-09 18:30:26] [Auto Install Repo] Not Enabled
+[2019-06-09 18:30:26] [Auto Update Wizard] Started
+[2019-06-09 18:30:27] [Auto Update Wizard] No New Version vFalse
+[2019-06-09 18:30:27] [Notifications] Started
+[2019-06-09 18:30:30] [Notification] NotifyID 117 Remind Me Later
+[2019-06-09 18:30:30] [Installed Check] Started
+[2019-06-09 18:30:30] [Installed Check] Not Enabled
+[2019-06-09 18:30:30] [Build Check] Started
+[2019-06-09 18:30:30] [Trakt Data] Started
+[2019-06-09 18:30:30] [Trakt Data] Not Enabled
+[2019-06-09 18:30:30] [Real Debrid Data] Started
+[2019-06-09 18:30:31] [Real Debrid Data] Not Enabled
+[2019-06-09 18:30:31] [Login Data] Started
+[2019-06-09 18:30:31] [Login Data] Not Enabled
+[2019-06-09 18:30:31] [Auto Clean Up] Started
+[2019-06-09 18:30:32] [Auto Clean Up] Cache: On
+[2019-06-09 18:30:33] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-09 18:30:33] Ignore Log File: kodi.log
+[2019-06-09 18:30:33] Ignore Log File: kodi.old.log
+[2019-06-09 18:30:33] [Auto Clean Up] Old Thumbs: On
+[2019-06-09 18:30:33] 0 total thumbs cleaned up.
+[2019-06-09 18:30:33] [Auto Clean Up] Packages: On
+[2019-06-10 20:09:22] 2019-06-10 20:09:22.488211
+[2019-06-10 20:09:23] Continuing Start Up Script
+[2019-06-10 20:09:23] [Path Check] Started
+[2019-06-10 20:09:23] [Path Check] Good!
+[2019-06-10 20:09:23] [Auto Install Repo] Started
+[2019-06-10 20:09:23] [Auto Install Repo] Not Enabled
+[2019-06-10 20:09:23] [Auto Update Wizard] Started
+[2019-06-10 20:09:25] [Auto Update Wizard] No New Version vFalse
+[2019-06-10 20:09:25] [Notifications] Started
+[2019-06-10 20:10:27] [Notification] NotifyID 117 Dismissed
+[2019-06-10 20:10:27] [Installed Check] Started
+[2019-06-10 20:10:27] [Installed Check] Not Enabled
+[2019-06-10 20:10:27] [Build Check] Started
+[2019-06-10 20:10:27] [Trakt Data] Started
+[2019-06-10 20:10:27] [Trakt Data] Not Enabled
+[2019-06-10 20:10:27] [Real Debrid Data] Started
+[2019-06-10 20:10:27] [Real Debrid Data] Not Enabled
+[2019-06-10 20:10:27] [Login Data] Started
+[2019-06-10 20:10:27] [Login Data] Not Enabled
+[2019-06-10 20:10:27] [Auto Clean Up] Started
+[2019-06-10 20:10:27] [Auto Clean Up] Cache: On
+[2019-06-10 20:10:27] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-10 20:10:28] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-06-10 20:10:28] Ignore Log File: kodi.log
+[2019-06-10 20:10:28] Ignore Log File: kodi.old.log
+[2019-06-10 20:10:28] [Auto Clean Up] Old Thumbs: On
+[2019-06-10 20:10:28] 49 total thumbs cleaned up.
+[2019-06-10 20:10:28] [Auto Clean Up] Packages: On
+[2019-06-11 06:08:06] 2019-06-11 06:08:06.626406
+[2019-06-11 06:08:08] Continuing Start Up Script
+[2019-06-11 06:08:08] [Path Check] Started
+[2019-06-11 06:08:08] [Path Check] Good!
+[2019-06-11 06:08:08] [Auto Install Repo] Started
+[2019-06-11 06:08:08] [Auto Install Repo] Not Enabled
+[2019-06-11 06:08:08] [Auto Update Wizard] Started
+[2019-06-11 06:08:09] [Auto Update Wizard] No New Version vFalse
+[2019-06-11 06:08:09] [Notifications] Started
+[2019-06-11 06:08:10] [Notifications] id[117] Dismissed
+[2019-06-11 06:08:10] [Installed Check] Started
+[2019-06-11 06:08:10] [Installed Check] Not Enabled
+[2019-06-11 06:08:10] [Build Check] Started
+[2019-06-11 06:08:11] [Trakt Data] Started
+[2019-06-11 06:08:11] [Trakt Data] Not Enabled
+[2019-06-11 06:08:11] [Real Debrid Data] Started
+[2019-06-11 06:08:11] [Real Debrid Data] Not Enabled
+[2019-06-11 06:08:11] [Login Data] Started
+[2019-06-11 06:08:11] [Login Data] Not Enabled
+[2019-06-11 06:08:11] [Auto Clean Up] Started
+[2019-06-11 06:08:11] [Auto Clean Up] Cache: On
+[2019-06-11 06:08:12] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-11 06:08:14] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-06-11 06:08:14] Ignore Log File: kodi.log
+[2019-06-11 06:08:14] Ignore Log File: kodi.old.log
+[2019-06-11 06:08:14] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-06-11 06:08:14] [Auto Clean Up] Old Thumbs: On
+[2019-06-11 06:08:16] 92 total thumbs cleaned up.
+[2019-06-11 06:08:19] [Auto Clean Up] Packages: On
+[2019-06-11 15:32:18] 2019-06-11 15:32:18.200073
+[2019-06-11 15:32:19] Continuing Start Up Script
+[2019-06-11 15:32:19] [Path Check] Started
+[2019-06-11 15:32:19] [Path Check] Good!
+[2019-06-11 15:32:19] [Auto Install Repo] Started
+[2019-06-11 15:32:19] [Auto Install Repo] Not Enabled
+[2019-06-11 15:32:19] [Auto Update Wizard] Started
+[2019-06-11 15:32:21] [Auto Update Wizard] No New Version vFalse
+[2019-06-11 15:32:21] [Notifications] Started
+[2019-06-11 15:32:22] [Notifications] id[117] Dismissed
+[2019-06-11 15:32:22] [Installed Check] Started
+[2019-06-11 15:32:22] [Installed Check] Not Enabled
+[2019-06-11 15:32:22] [Build Check] Started
+[2019-06-11 15:32:22] [Trakt Data] Started
+[2019-06-11 15:32:22] [Trakt Data] Not Enabled
+[2019-06-11 15:32:22] [Real Debrid Data] Started
+[2019-06-11 15:32:22] [Real Debrid Data] Not Enabled
+[2019-06-11 15:32:22] [Login Data] Started
+[2019-06-11 15:32:22] [Login Data] Not Enabled
+[2019-06-11 15:32:22] [Auto Clean Up] Started
+[2019-06-11 15:32:22] [Auto Clean Up] Cache: On
+[2019-06-11 15:32:24] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-11 15:32:27] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-11 15:32:27] Ignore Log File: kodi.log
+[2019-06-11 15:32:27] Ignore Log File: kodi.old.log
+[2019-06-11 15:32:27] [Auto Clean Up] Old Thumbs: On
+[2019-06-11 15:32:27] 0 total thumbs cleaned up.
+[2019-06-11 15:32:28] [Auto Clean Up] Packages: On
+[2019-06-11 19:41:12] 2019-06-11 19:41:12.168896
+[2019-06-11 19:41:13] Continuing Start Up Script
+[2019-06-11 19:41:13] [Path Check] Started
+[2019-06-11 19:41:13] [Path Check] Good!
+[2019-06-11 19:41:13] [Auto Install Repo] Started
+[2019-06-11 19:41:13] [Auto Install Repo] Not Enabled
+[2019-06-11 19:41:13] [Auto Update Wizard] Started
+[2019-06-11 19:41:15] [Auto Update Wizard] No New Version vFalse
+[2019-06-11 19:41:15] [Notifications] Started
+[2019-06-11 19:41:16] [Notifications] id[117] Dismissed
+[2019-06-11 19:41:16] [Installed Check] Started
+[2019-06-11 19:41:16] [Installed Check] Not Enabled
+[2019-06-11 19:41:16] [Build Check] Started
+[2019-06-11 19:41:17] [Trakt Data] Started
+[2019-06-11 19:41:17] [Trakt Data] Not Enabled
+[2019-06-11 19:41:17] [Real Debrid Data] Started
+[2019-06-11 19:41:17] [Real Debrid Data] Not Enabled
+[2019-06-11 19:41:17] [Login Data] Started
+[2019-06-11 19:41:17] [Login Data] Not Enabled
+[2019-06-11 19:41:17] [Auto Clean Up] Started
+[2019-06-11 19:41:17] [Auto Clean Up] Cache: On
+[2019-06-11 19:41:21] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-11 19:41:22] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-11 19:41:22] Ignore Log File: kodi.log
+[2019-06-11 19:41:22] Ignore Log File: kodi.old.log
+[2019-06-11 19:41:22] [Auto Clean Up] Old Thumbs: On
+[2019-06-11 19:41:22] 0 total thumbs cleaned up.
+[2019-06-11 19:41:22] [Auto Clean Up] Packages: On
+[2019-06-13 16:59:00] 2019-06-13 16:59:00.036839
+[2019-06-13 16:59:01] Continuing Start Up Script
+[2019-06-13 16:59:01] [Path Check] Started
+[2019-06-13 16:59:01] [Path Check] Good!
+[2019-06-13 16:59:01] [Auto Install Repo] Started
+[2019-06-13 16:59:01] [Auto Install Repo] Not Enabled
+[2019-06-13 16:59:01] [Auto Update Wizard] Started
+[2019-06-13 16:59:03] [Auto Update Wizard] No New Version vFalse
+[2019-06-13 16:59:03] [Notifications] Started
+[2019-06-13 16:59:03] [Notifications] id[117] Dismissed
+[2019-06-13 16:59:03] [Installed Check] Started
+[2019-06-13 16:59:03] [Installed Check] Not Enabled
+[2019-06-13 16:59:04] [Build Check] Started
+[2019-06-13 16:59:04] [Trakt Data] Started
+[2019-06-13 16:59:04] [Trakt Data] Not Enabled
+[2019-06-13 16:59:04] [Real Debrid Data] Started
+[2019-06-13 16:59:04] [Real Debrid Data] Not Enabled
+[2019-06-13 16:59:04] [Login Data] Started
+[2019-06-13 16:59:04] [Login Data] Not Enabled
+[2019-06-13 16:59:04] [Auto Clean Up] Started
+[2019-06-13 16:59:04] [Auto Clean Up] Cache: On
+[2019-06-13 16:59:07] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-13 16:59:12] Ignore Log File: kodi.log
+[2019-06-13 16:59:12] Ignore Log File: kodi.old.log
+[2019-06-13 16:59:12] [Auto Clean Up] Old Thumbs: On
+[2019-06-13 16:59:18] 33 total thumbs cleaned up.
+[2019-06-13 16:59:20] [Auto Clean Up] Packages: On
+[2019-06-13 21:35:55] 2019-06-13 21:35:55.629507
+[2019-06-13 21:35:56] Continuing Start Up Script
+[2019-06-13 21:35:56] [Path Check] Started
+[2019-06-13 21:35:56] [Path Check] Good!
+[2019-06-13 21:35:57] [Auto Install Repo] Started
+[2019-06-13 21:35:57] [Auto Install Repo] Not Enabled
+[2019-06-13 21:35:57] [Auto Update Wizard] Started
+[2019-06-13 21:35:58] [Auto Update Wizard] No New Version vFalse
+[2019-06-13 21:35:58] [Notifications] Started
+[2019-06-13 21:35:59] [Notifications] id[117] Dismissed
+[2019-06-13 21:35:59] [Installed Check] Started
+[2019-06-13 21:35:59] [Installed Check] Not Enabled
+[2019-06-13 21:35:59] [Build Check] Started
+[2019-06-13 21:35:59] [Trakt Data] Started
+[2019-06-13 21:35:59] [Trakt Data] Not Enabled
+[2019-06-13 21:35:59] [Real Debrid Data] Started
+[2019-06-13 21:35:59] [Real Debrid Data] Not Enabled
+[2019-06-13 21:35:59] [Login Data] Started
+[2019-06-13 21:35:59] [Login Data] Not Enabled
+[2019-06-13 21:36:00] [Auto Clean Up] Started
+[2019-06-13 21:36:00] [Auto Clean Up] Cache: On
+[2019-06-13 21:36:01] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-13 21:36:05] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-13 21:36:05] Ignore Log File: kodi.log
+[2019-06-13 21:36:05] Ignore Log File: kodi.old.log
+[2019-06-13 21:36:05] [Auto Clean Up] Old Thumbs: On
+[2019-06-13 21:36:05] 0 total thumbs cleaned up.
+[2019-06-13 21:36:05] [Auto Clean Up] Packages: On
+[2019-06-14 20:32:12] 2019-06-14 20:32:12.679082
+[2019-06-14 20:32:13] Continuing Start Up Script
+[2019-06-14 20:32:13] [Path Check] Started
+[2019-06-14 20:32:14] [Path Check] Good!
+[2019-06-14 20:32:14] [Auto Install Repo] Started
+[2019-06-14 20:32:14] [Auto Install Repo] Not Enabled
+[2019-06-14 20:32:14] [Auto Update Wizard] Started
+[2019-06-14 20:32:16] [Auto Update Wizard] No New Version vFalse
+[2019-06-14 20:32:16] [Notifications] Started
+[2019-06-14 20:32:17] [Notifications] id[117] Dismissed
+[2019-06-14 20:32:17] [Installed Check] Started
+[2019-06-14 20:32:17] [Installed Check] Not Enabled
+[2019-06-14 20:32:17] [Build Check] Started
+[2019-06-14 20:32:17] [Trakt Data] Started
+[2019-06-14 20:32:17] [Trakt Data] Not Enabled
+[2019-06-14 20:32:17] [Real Debrid Data] Started
+[2019-06-14 20:32:17] [Real Debrid Data] Not Enabled
+[2019-06-14 20:32:17] [Login Data] Started
+[2019-06-14 20:32:17] [Login Data] Not Enabled
+[2019-06-14 20:32:17] [Auto Clean Up] Started
+[2019-06-14 20:32:17] [Auto Clean Up] Cache: On
+[2019-06-14 20:32:18] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-14 20:32:24] Ignore Log File: kodi.log
+[2019-06-14 20:32:24] Ignore Log File: kodi.old.log
+[2019-06-14 20:32:25] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-06-14 20:32:25] [Auto Clean Up] Old Thumbs: On
+[2019-06-14 20:32:27] 0 total thumbs cleaned up.
+[2019-06-14 20:32:27] [Auto Clean Up] Packages: On
+[2019-06-15 13:18:15] 2019-06-15 13:18:15.626569
+[2019-06-15 13:18:16] Continuing Start Up Script
+[2019-06-15 13:18:17] [Path Check] Started
+[2019-06-15 13:18:17] [Path Check] Good!
+[2019-06-15 13:18:17] [Auto Install Repo] Started
+[2019-06-15 13:18:17] [Auto Install Repo] Not Enabled
+[2019-06-15 13:18:17] [Auto Update Wizard] Started
+[2019-06-15 13:18:19] [Auto Update Wizard] No New Version vFalse
+[2019-06-15 13:18:20] [Notifications] Started
+[2019-06-15 13:18:21] [Notifications] id: 118
+[2019-06-15 13:18:27] [Notification] NotifyID 118 Remind Me Later
+[2019-06-15 13:18:28] [Notifications] Complete
+[2019-06-15 13:18:29] [Installed Check] Started
+[2019-06-15 13:18:29] [Installed Check] Not Enabled
+[2019-06-15 13:18:29] [Build Check] Started
+[2019-06-15 13:18:30] [Trakt Data] Started
+[2019-06-15 13:18:30] [Trakt Data] Not Enabled
+[2019-06-15 13:18:30] [Real Debrid Data] Started
+[2019-06-15 13:18:30] [Real Debrid Data] Not Enabled
+[2019-06-15 13:18:31] [Login Data] Started
+[2019-06-15 13:18:33] [Login Data] Not Enabled
+[2019-06-15 13:18:33] [Auto Clean Up] Started
+[2019-06-15 13:18:33] [Auto Clean Up] Cache: On
+[2019-06-15 13:18:37] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-15 13:18:44] Ignore Log File: kodi.log
+[2019-06-15 13:18:44] Ignore Log File: kodi.old.log
+[2019-06-15 13:18:44] [Auto Clean Up] Old Thumbs: On
+[2019-06-15 13:18:44] 0 total thumbs cleaned up.
+[2019-06-15 13:18:45] [Auto Clean Up] Packages: On
+[2019-06-15 18:45:07] 2019-06-15 18:45:07.013630
+[2019-06-15 18:45:09] Continuing Start Up Script
+[2019-06-15 18:45:10] [Path Check] Started
+[2019-06-15 18:45:10] [Path Check] Good!
+[2019-06-15 18:45:10] [Auto Install Repo] Started
+[2019-06-15 18:45:10] [Auto Install Repo] Not Enabled
+[2019-06-15 18:45:10] [Auto Update Wizard] Started
+[2019-06-15 18:45:11] [Auto Update Wizard] No New Version vFalse
+[2019-06-15 18:45:11] [Notifications] Started
+[2019-06-15 18:45:15] [Notification] NotifyID 118 Remind Me Later
+[2019-06-15 18:45:15] [Installed Check] Started
+[2019-06-15 18:45:15] [Installed Check] Not Enabled
+[2019-06-15 18:45:15] [Build Check] Started
+[2019-06-15 18:45:15] [Trakt Data] Started
+[2019-06-15 18:45:15] [Trakt Data] Not Enabled
+[2019-06-15 18:45:16] [Real Debrid Data] Started
+[2019-06-15 18:45:16] [Real Debrid Data] Not Enabled
+[2019-06-15 18:45:16] [Login Data] Started
+[2019-06-15 18:45:17] [Login Data] Not Enabled
+[2019-06-15 18:45:17] [Auto Clean Up] Started
+[2019-06-15 18:45:17] [Auto Clean Up] Cache: On
+[2019-06-15 18:45:18] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-15 18:45:18] Ignore Log File: kodi.log
+[2019-06-15 18:45:18] Ignore Log File: kodi.old.log
+[2019-06-15 18:45:18] [Auto Clean Up] Old Thumbs: On
+[2019-06-15 18:45:18] 0 total thumbs cleaned up.
+[2019-06-15 18:45:18] [Auto Clean Up] Packages: On
+[2019-06-15 22:21:49] 2019-06-15 22:21:49.905032
+[2019-06-15 22:21:51] Continuing Start Up Script
+[2019-06-15 22:21:51] [Path Check] Started
+[2019-06-15 22:21:51] [Path Check] Good!
+[2019-06-15 22:21:51] [Auto Install Repo] Started
+[2019-06-15 22:21:51] [Auto Install Repo] Not Enabled
+[2019-06-15 22:21:51] [Auto Update Wizard] Started
+[2019-06-15 22:21:54] [Auto Update Wizard] No New Version vFalse
+[2019-06-15 22:21:54] [Notifications] Started
+[2019-06-15 22:21:57] [Notification] NotifyID 118 Remind Me Later
+[2019-06-15 22:21:57] [Installed Check] Started
+[2019-06-15 22:21:57] [Installed Check] Not Enabled
+[2019-06-15 22:21:57] [Build Check] Started
+[2019-06-15 22:21:57] [Trakt Data] Started
+[2019-06-15 22:21:57] [Trakt Data] Not Enabled
+[2019-06-15 22:21:57] [Real Debrid Data] Started
+[2019-06-15 22:21:57] [Real Debrid Data] Not Enabled
+[2019-06-15 22:21:57] [Login Data] Started
+[2019-06-15 22:21:57] [Login Data] Not Enabled
+[2019-06-15 22:21:57] [Auto Clean Up] Started
+[2019-06-15 22:21:57] [Auto Clean Up] Cache: On
+[2019-06-15 22:21:58] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-15 22:21:58] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-06-15 22:21:58] Ignore Log File: kodi.log
+[2019-06-15 22:21:58] Ignore Log File: kodi.old.log
+[2019-06-15 22:21:58] [Auto Clean Up] Old Thumbs: On
+[2019-06-15 22:21:58] 0 total thumbs cleaned up.
+[2019-06-15 22:21:58] [Auto Clean Up] Packages: On
+[2019-06-16 13:13:21] 2019-06-16 13:13:21.199220
+[2019-06-16 13:13:22] Continuing Start Up Script
+[2019-06-16 13:13:22] [Path Check] Started
+[2019-06-16 13:13:22] [Path Check] Good!
+[2019-06-16 13:13:22] [Auto Install Repo] Started
+[2019-06-16 13:13:22] [Auto Install Repo] Not Enabled
+[2019-06-16 13:13:23] [Auto Update Wizard] Started
+[2019-06-16 13:13:24] [Auto Update Wizard] No New Version vFalse
+[2019-06-16 13:13:24] [Notifications] Started
+[2019-06-16 13:13:25] [Notifications] id: 119
+[2019-06-16 13:13:28] [Notification] NotifyID 119 Remind Me Later
+[2019-06-16 13:13:28] [Notifications] Complete
+[2019-06-16 13:13:28] [Installed Check] Started
+[2019-06-16 13:13:28] [Installed Check] Not Enabled
+[2019-06-16 13:13:28] [Build Check] Started
+[2019-06-16 13:13:28] [Trakt Data] Started
+[2019-06-16 13:13:29] [Trakt Data] Not Enabled
+[2019-06-16 13:13:29] [Real Debrid Data] Started
+[2019-06-16 13:13:29] [Real Debrid Data] Not Enabled
+[2019-06-16 13:13:29] [Login Data] Started
+[2019-06-16 13:13:29] [Login Data] Not Enabled
+[2019-06-16 13:13:29] [Auto Clean Up] Started
+[2019-06-16 13:13:30] [Auto Clean Up] Cache: On
+[2019-06-16 13:13:31] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-16 13:13:36] Ignore Log File: kodi.log
+[2019-06-16 13:13:36] Ignore Log File: kodi.old.log
+[2019-06-16 13:13:36] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-16 13:13:36] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-06-16 13:13:36] [Auto Clean Up] Old Thumbs: On
+[2019-06-16 13:13:37] 0 total thumbs cleaned up.
+[2019-06-16 13:13:37] [Auto Clean Up] Packages: On
+[2019-06-17 02:05:01] 2019-06-17 02:05:01.029957
+[2019-06-17 02:05:02] Continuing Start Up Script
+[2019-06-17 02:05:02] [Path Check] Started
+[2019-06-17 02:05:02] [Path Check] Good!
+[2019-06-17 02:05:02] [Auto Install Repo] Started
+[2019-06-17 02:05:02] [Auto Install Repo] Not Enabled
+[2019-06-17 02:05:02] [Auto Update Wizard] Started
+[2019-06-17 02:05:04] [Auto Update Wizard] No New Version vFalse
+[2019-06-17 02:05:04] [Notifications] Started
+[2019-06-17 02:05:08] [Notification] NotifyID 119 Dismissed
+[2019-06-17 02:05:08] [Installed Check] Started
+[2019-06-17 02:05:08] [Installed Check] Not Enabled
+[2019-06-17 02:05:08] [Build Check] Started
+[2019-06-17 02:05:08] [Trakt Data] Started
+[2019-06-17 02:05:08] [Trakt Data] Not Enabled
+[2019-06-17 02:05:08] [Real Debrid Data] Started
+[2019-06-17 02:05:08] [Real Debrid Data] Not Enabled
+[2019-06-17 02:05:09] [Login Data] Started
+[2019-06-17 02:05:09] [Login Data] Not Enabled
+[2019-06-17 02:05:09] [Auto Clean Up] Started
+[2019-06-17 02:05:09] [Auto Clean Up] Cache: On
+[2019-06-17 02:05:11] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-17 02:05:14] Ignore Log File: kodi.log
+[2019-06-17 02:05:14] Ignore Log File: kodi.old.log
+[2019-06-17 02:05:14] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-06-17 02:05:14] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-06-17 02:05:14] [Auto Clean Up] Old Thumbs: On
+[2019-06-17 02:05:15] 3 total thumbs cleaned up.
+[2019-06-17 02:05:16] [Auto Clean Up] Packages: On
+[2019-06-18 23:01:16] 2019-06-18 23:01:15.864952
+[2019-06-18 23:01:17] Continuing Start Up Script
+[2019-06-18 23:01:17] [Path Check] Started
+[2019-06-18 23:01:17] [Path Check] Good!
+[2019-06-18 23:01:17] [Auto Install Repo] Started
+[2019-06-18 23:01:17] [Auto Install Repo] Not Enabled
+[2019-06-18 23:01:17] [Auto Update Wizard] Started
+[2019-06-18 23:01:19] [Auto Update Wizard] No New Version vFalse
+[2019-06-18 23:01:19] [Notifications] Started
+[2019-06-18 23:01:20] [Notifications] id[119] Dismissed
+[2019-06-18 23:01:20] [Installed Check] Started
+[2019-06-18 23:01:20] [Installed Check] Not Enabled
+[2019-06-18 23:01:20] [Build Check] Started
+[2019-06-18 23:01:20] [Trakt Data] Started
+[2019-06-18 23:01:20] [Trakt Data] Not Enabled
+[2019-06-18 23:01:20] [Real Debrid Data] Started
+[2019-06-18 23:01:21] [Real Debrid Data] Not Enabled
+[2019-06-18 23:01:21] [Login Data] Started
+[2019-06-18 23:01:21] [Login Data] Not Enabled
+[2019-06-18 23:01:21] [Auto Clean Up] Started
+[2019-06-18 23:01:21] [Auto Clean Up] Cache: On
+[2019-06-18 23:01:22] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-18 23:01:29] Ignore Log File: kodi.log
+[2019-06-18 23:01:29] Ignore Log File: kodi.old.log
+[2019-06-18 23:01:29] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-06-18 23:01:29] [Auto Clean Up] Old Thumbs: On
+[2019-06-18 23:01:33] 64 total thumbs cleaned up.
+[2019-06-18 23:01:33] [Auto Clean Up] Packages: On
+[2019-06-22 22:59:58] 2019-06-22 22:59:58.670110
+[2019-06-22 22:59:59] Continuing Start Up Script
+[2019-06-22 22:59:59] [Path Check] Started
+[2019-06-22 23:00:00] [Path Check] Good!
+[2019-06-22 23:00:00] [Auto Install Repo] Started
+[2019-06-22 23:00:00] [Auto Install Repo] Not Enabled
+[2019-06-22 23:00:00] [Auto Update Wizard] Started
+[2019-06-22 23:00:02] [Auto Update Wizard] No New Version vFalse
+[2019-06-22 23:00:02] [Notifications] Started
+[2019-06-22 23:00:03] [Notifications] id: 120
+[2019-06-22 23:00:06] [Notification] NotifyID 120 Remind Me Later
+[2019-06-22 23:00:06] [Notifications] Complete
+[2019-06-22 23:00:06] [Installed Check] Started
+[2019-06-22 23:00:06] [Installed Check] Not Enabled
+[2019-06-22 23:00:06] [Build Check] Started
+[2019-06-22 23:00:06] [Trakt Data] Started
+[2019-06-22 23:00:06] [Trakt Data] Not Enabled
+[2019-06-22 23:00:06] [Real Debrid Data] Started
+[2019-06-22 23:00:06] [Real Debrid Data] Not Enabled
+[2019-06-22 23:00:06] [Login Data] Started
+[2019-06-22 23:00:06] [Login Data] Not Enabled
+[2019-06-22 23:00:06] [Auto Clean Up] Started
+[2019-06-22 23:00:06] [Auto Clean Up] Cache: On
+[2019-06-22 23:00:07] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-22 23:00:08] Ignore Log File: kodi.log
+[2019-06-22 23:00:08] Ignore Log File: kodi.old.log
+[2019-06-22 23:00:08] [Auto Clean Up] Old Thumbs: On
+[2019-06-22 23:00:08] 213 total thumbs cleaned up.
+[2019-06-22 23:00:09] [Auto Clean Up] Packages: On
+[2019-06-23 23:23:38] 2019-06-23 23:23:38.049236
+[2019-06-23 23:23:39] Continuing Start Up Script
+[2019-06-23 23:23:39] [Path Check] Started
+[2019-06-23 23:23:40] [Path Check] Good!
+[2019-06-23 23:23:40] [Auto Install Repo] Started
+[2019-06-23 23:23:40] [Auto Install Repo] Not Enabled
+[2019-06-23 23:23:40] [Auto Update Wizard] Started
+[2019-06-23 23:23:43] [Auto Update Wizard] No New Version vFalse
+[2019-06-23 23:23:43] [Notifications] Started
+[2019-06-23 23:23:51] [Notification] NotifyID 120 Remind Me Later
+[2019-06-23 23:23:51] [Installed Check] Started
+[2019-06-23 23:23:51] [Installed Check] Not Enabled
+[2019-06-23 23:23:51] [Build Check] Started
+[2019-06-23 23:23:51] [Trakt Data] Started
+[2019-06-23 23:23:51] [Trakt Data] Not Enabled
+[2019-06-23 23:23:51] [Real Debrid Data] Started
+[2019-06-23 23:23:51] [Real Debrid Data] Not Enabled
+[2019-06-23 23:23:51] [Login Data] Started
+[2019-06-23 23:23:51] [Login Data] Not Enabled
+[2019-06-23 23:23:51] [Auto Clean Up] Started
+[2019-06-23 23:23:51] [Auto Clean Up] Cache: On
+[2019-06-23 23:23:51] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-23 23:23:58] Ignore Log File: kodi.log
+[2019-06-23 23:23:58] Ignore Log File: kodi.old.log
+[2019-06-23 23:23:58] [Auto Clean Up] Old Thumbs: On
+[2019-06-23 23:24:03] 59 total thumbs cleaned up.
+[2019-06-23 23:24:06] [Auto Clean Up] Packages: On
+[2019-06-25 19:00:42] 2019-06-25 19:00:40.138149
+[2019-06-25 19:00:45] Continuing Start Up Script
+[2019-06-25 19:00:45] [Path Check] Started
+[2019-06-25 19:00:45] [Path Check] Good!
+[2019-06-25 19:00:46] [Auto Install Repo] Started
+[2019-06-25 19:00:46] [Auto Install Repo] Not Enabled
+[2019-06-25 19:00:46] [Auto Update Wizard] Started
+[2019-06-25 19:00:47] [Auto Update Wizard] No New Version vFalse
+[2019-06-25 19:00:47] [Notifications] Started
+[2019-06-25 19:00:54] [Notification] NotifyID 120 Dismissed
+[2019-06-25 19:00:54] [Installed Check] Started
+[2019-06-25 19:00:54] [Installed Check] Not Enabled
+[2019-06-25 19:00:54] [Build Check] Started
+[2019-06-25 19:00:54] [Trakt Data] Started
+[2019-06-25 19:00:55] [Trakt Data] Not Enabled
+[2019-06-25 19:00:55] [Real Debrid Data] Started
+[2019-06-25 19:00:55] [Real Debrid Data] Not Enabled
+[2019-06-25 19:00:55] [Login Data] Started
+[2019-06-25 19:00:55] [Login Data] Not Enabled
+[2019-06-25 19:00:55] [Auto Clean Up] Started
+[2019-06-25 19:00:55] [Auto Clean Up] Cache: On
+[2019-06-25 19:00:57] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-25 19:00:59] Ignore Log File: kodi.log
+[2019-06-25 19:00:59] Ignore Log File: kodi.old.log
+[2019-06-25 19:00:59] [Auto Clean Up] Old Thumbs: On
+[2019-06-25 19:01:00] 197 total thumbs cleaned up.
+[2019-06-25 19:01:00] [Auto Clean Up] Packages: On
+[2019-06-25 23:46:56] 2019-06-25 23:46:56.383211
+[2019-06-25 23:46:57] Continuing Start Up Script
+[2019-06-25 23:46:57] [Path Check] Started
+[2019-06-25 23:46:57] [Path Check] Good!
+[2019-06-25 23:46:57] [Auto Install Repo] Started
+[2019-06-25 23:46:57] [Auto Install Repo] Not Enabled
+[2019-06-25 23:46:57] [Auto Update Wizard] Started
+[2019-06-25 23:46:59] [Auto Update Wizard] No New Version vFalse
+[2019-06-25 23:46:59] [Notifications] Started
+[2019-06-25 23:47:00] [Notifications] id[120] Dismissed
+[2019-06-25 23:47:00] [Installed Check] Started
+[2019-06-25 23:47:00] [Installed Check] Not Enabled
+[2019-06-25 23:47:00] [Build Check] Started
+[2019-06-25 23:47:00] [Trakt Data] Started
+[2019-06-25 23:47:00] [Trakt Data] Not Enabled
+[2019-06-25 23:47:00] [Real Debrid Data] Started
+[2019-06-25 23:47:00] [Real Debrid Data] Not Enabled
+[2019-06-25 23:47:00] [Login Data] Started
+[2019-06-25 23:47:00] [Login Data] Not Enabled
+[2019-06-25 23:47:00] [Auto Clean Up] Started
+[2019-06-25 23:47:00] [Auto Clean Up] Cache: On
+[2019-06-25 23:47:01] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-25 23:47:06] Ignore Log File: kodi.log
+[2019-06-25 23:47:06] Ignore Log File: kodi.old.log
+[2019-06-25 23:47:06] [Auto Clean Up] Old Thumbs: On
+[2019-06-25 23:47:06] 0 total thumbs cleaned up.
+[2019-06-25 23:47:06] [Auto Clean Up] Packages: On
+[2019-06-26 06:40:05] 2019-06-26 06:40:05.264984
+[2019-06-26 06:40:06] Continuing Start Up Script
+[2019-06-26 06:40:06] [Path Check] Started
+[2019-06-26 06:40:06] [Path Check] Good!
+[2019-06-26 06:40:06] [Auto Install Repo] Started
+[2019-06-26 06:40:06] [Auto Install Repo] Not Enabled
+[2019-06-26 06:40:06] [Auto Update Wizard] Started
+[2019-06-26 06:40:08] [Auto Update Wizard] No New Version vFalse
+[2019-06-26 06:40:08] [Notifications] Started
+[2019-06-26 06:40:10] [Notifications] id[120] Dismissed
+[2019-06-26 06:40:10] [Installed Check] Started
+[2019-06-26 06:40:10] [Installed Check] Not Enabled
+[2019-06-26 06:40:10] [Build Check] Started
+[2019-06-26 06:40:10] [Trakt Data] Started
+[2019-06-26 06:40:10] [Trakt Data] Not Enabled
+[2019-06-26 06:40:10] [Real Debrid Data] Started
+[2019-06-26 06:40:10] [Real Debrid Data] Not Enabled
+[2019-06-26 06:40:10] [Login Data] Started
+[2019-06-26 06:40:10] [Login Data] Not Enabled
+[2019-06-26 06:40:10] [Auto Clean Up] Started
+[2019-06-26 06:40:10] [Auto Clean Up] Cache: On
+[2019-06-26 06:40:12] Ignore Log File: kodi.log
+[2019-06-26 06:40:12] Ignore Log File: kodi.old.log
+[2019-06-26 06:40:12] [Auto Clean Up] Old Thumbs: On
+[2019-06-26 06:40:12] 0 total thumbs cleaned up.
+[2019-06-26 06:40:12] [Auto Clean Up] Packages: On
+[2019-06-26 16:40:37] 2019-06-26 16:40:37.295034
+[2019-06-26 16:40:38] Continuing Start Up Script
+[2019-06-26 16:40:38] [Path Check] Started
+[2019-06-26 16:40:38] [Path Check] Good!
+[2019-06-26 16:40:38] [Auto Install Repo] Started
+[2019-06-26 16:40:38] [Auto Install Repo] Not Enabled
+[2019-06-26 16:40:38] [Auto Update Wizard] Started
+[2019-06-26 16:40:40] [Auto Update Wizard] No New Version vFalse
+[2019-06-26 16:40:40] [Notifications] Started
+[2019-06-26 16:40:41] [Notifications] id[120] Dismissed
+[2019-06-26 16:40:41] [Installed Check] Started
+[2019-06-26 16:40:41] [Installed Check] Not Enabled
+[2019-06-26 16:40:41] [Build Check] Started
+[2019-06-26 16:40:41] [Trakt Data] Started
+[2019-06-26 16:40:41] [Trakt Data] Not Enabled
+[2019-06-26 16:40:41] [Real Debrid Data] Started
+[2019-06-26 16:40:41] [Real Debrid Data] Not Enabled
+[2019-06-26 16:40:41] [Login Data] Started
+[2019-06-26 16:40:41] [Login Data] Not Enabled
+[2019-06-26 16:40:41] [Auto Clean Up] Started
+[2019-06-26 16:40:41] [Auto Clean Up] Cache: On
+[2019-06-26 16:40:45] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-26 16:40:47] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-06-26 16:40:47] Ignore Log File: kodi.log
+[2019-06-26 16:40:47] Ignore Log File: kodi.old.log
+[2019-06-26 16:40:47] [Auto Clean Up] Old Thumbs: On
+[2019-06-26 16:40:49] 0 total thumbs cleaned up.
+[2019-06-26 16:40:49] [Auto Clean Up] Packages: On
+[2019-06-29 20:39:18] 2019-06-29 20:39:17.847258
+[2019-06-29 20:39:19] Continuing Start Up Script
+[2019-06-29 20:39:19] [Path Check] Started
+[2019-06-29 20:39:19] [Path Check] Good!
+[2019-06-29 20:39:19] [Auto Install Repo] Started
+[2019-06-29 20:39:19] [Auto Install Repo] Not Enabled
+[2019-06-29 20:39:19] [Auto Update Wizard] Started
+[2019-06-29 20:39:21] [Auto Update Wizard] No New Version vFalse
+[2019-06-29 20:39:21] [Notifications] Started
+[2019-06-29 20:39:22] [Notifications] id[120] Dismissed
+[2019-06-29 20:39:22] [Installed Check] Started
+[2019-06-29 20:39:22] [Installed Check] Not Enabled
+[2019-06-29 20:39:22] [Build Check] Started
+[2019-06-29 20:39:22] [Trakt Data] Started
+[2019-06-29 20:39:22] [Trakt Data] Not Enabled
+[2019-06-29 20:39:22] [Real Debrid Data] Started
+[2019-06-29 20:39:22] [Real Debrid Data] Not Enabled
+[2019-06-29 20:39:22] [Login Data] Started
+[2019-06-29 20:39:22] [Login Data] Not Enabled
+[2019-06-29 20:39:22] [Auto Clean Up] Started
+[2019-06-29 20:39:22] [Auto Clean Up] Cache: On
+[2019-06-29 20:39:27] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-06-29 20:39:29] Ignore Log File: kodi.log
+[2019-06-29 20:39:29] Ignore Log File: kodi.old.log
+[2019-06-29 20:39:29] [Auto Clean Up] Old Thumbs: On
+[2019-06-29 20:39:34] 78 total thumbs cleaned up.
+[2019-06-29 20:39:38] [Auto Clean Up] Packages: On
+[2019-06-30 23:14:22] 2019-06-30 23:14:21.643214
+[2019-06-30 23:14:23] Continuing Start Up Script
+[2019-06-30 23:14:23] [Path Check] Started
+[2019-06-30 23:14:23] [Path Check] Good!
+[2019-06-30 23:14:23] [Auto Install Repo] Started
+[2019-06-30 23:14:23] [Auto Install Repo] Not Enabled
+[2019-06-30 23:14:23] [Auto Update Wizard] Started
+[2019-06-30 23:14:25] [Auto Update Wizard] No New Version vFalse
+[2019-06-30 23:14:25] [Notifications] Started
+[2019-06-30 23:14:26] [Notifications] id[120] Dismissed
+[2019-06-30 23:14:26] [Installed Check] Started
+[2019-06-30 23:14:26] [Installed Check] Not Enabled
+[2019-06-30 23:14:26] [Build Check] Started
+[2019-06-30 23:14:26] [Trakt Data] Started
+[2019-06-30 23:14:26] [Trakt Data] Not Enabled
+[2019-06-30 23:14:26] [Real Debrid Data] Started
+[2019-06-30 23:14:26] [Real Debrid Data] Not Enabled
+[2019-06-30 23:14:26] [Login Data] Started
+[2019-06-30 23:14:26] [Login Data] Not Enabled
+[2019-06-30 23:14:26] [Auto Clean Up] Started
+[2019-06-30 23:14:26] [Auto Clean Up] Cache: On
+[2019-06-30 23:14:28] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-06-30 23:14:32] Ignore Log File: kodi.log
+[2019-06-30 23:14:32] Ignore Log File: kodi.old.log
+[2019-06-30 23:14:32] [Auto Clean Up] Old Thumbs: On
+[2019-06-30 23:14:32] 0 total thumbs cleaned up.
+[2019-06-30 23:14:32] [Auto Clean Up] Packages: On
+[2019-07-06 21:38:24] 2019-07-06 21:38:24.345747
+[2019-07-06 21:38:25] Continuing Start Up Script
+[2019-07-06 21:38:25] [Path Check] Started
+[2019-07-06 21:38:25] [Path Check] Good!
+[2019-07-06 21:38:25] [Auto Install Repo] Started
+[2019-07-06 21:38:26] [Auto Install Repo] Not Enabled
+[2019-07-06 21:38:26] [Auto Update Wizard] Started
+[2019-07-06 21:38:28] [Auto Update Wizard] No New Version vFalse
+[2019-07-06 21:38:28] [Notifications] Started
+[2019-07-06 21:38:29] [Notifications] id: 121
+[2019-07-06 21:38:31] [Notification] NotifyID 121 Remind Me Later
+[2019-07-06 21:38:32] [Notifications] Complete
+[2019-07-06 21:38:32] [Installed Check] Started
+[2019-07-06 21:38:32] [Installed Check] Not Enabled
+[2019-07-06 21:38:32] [Build Check] Started
+[2019-07-06 21:38:32] [Trakt Data] Started
+[2019-07-06 21:38:32] [Trakt Data] Not Enabled
+[2019-07-06 21:38:32] [Real Debrid Data] Started
+[2019-07-06 21:38:32] [Real Debrid Data] Not Enabled
+[2019-07-06 21:38:32] [Login Data] Started
+[2019-07-06 21:38:32] [Login Data] Not Enabled
+[2019-07-06 21:38:32] [Auto Clean Up] Started
+[2019-07-06 21:38:32] [Auto Clean Up] Cache: On
+[2019-07-06 21:38:33] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-06 21:38:40] Ignore Log File: kodi.log
+[2019-07-06 21:38:40] Ignore Log File: kodi.old.log
+[2019-07-06 21:38:40] [Auto Clean Up] Old Thumbs: On
+[2019-07-06 21:38:49] 306 total thumbs cleaned up.
+[2019-07-06 21:38:51] [Auto Clean Up] Packages: On
+[2019-07-07 12:30:37] 2019-07-07 12:30:36.896014
+[2019-07-07 12:30:38] Continuing Start Up Script
+[2019-07-07 12:30:38] [Path Check] Started
+[2019-07-07 12:30:38] [Path Check] Good!
+[2019-07-07 12:30:38] [Auto Install Repo] Started
+[2019-07-07 12:30:38] [Auto Install Repo] Not Enabled
+[2019-07-07 12:30:38] [Auto Update Wizard] Started
+[2019-07-07 12:30:40] [Auto Update Wizard] No New Version vFalse
+[2019-07-07 12:30:40] [Notifications] Started
+[2019-07-07 12:31:01] [Notification] NotifyID 121 Remind Me Later
+[2019-07-07 12:31:01] [Installed Check] Started
+[2019-07-07 12:31:01] [Installed Check] Not Enabled
+[2019-07-07 12:31:01] [Build Check] Started
+[2019-07-07 12:31:01] [Trakt Data] Started
+[2019-07-07 12:31:01] [Trakt Data] Not Enabled
+[2019-07-07 12:31:01] [Real Debrid Data] Started
+[2019-07-07 12:31:01] [Real Debrid Data] Not Enabled
+[2019-07-07 12:31:01] [Login Data] Started
+[2019-07-07 12:31:01] [Login Data] Not Enabled
+[2019-07-07 12:31:01] [Auto Clean Up] Started
+[2019-07-07 12:31:02] [Auto Clean Up] Cache: On
+[2019-07-07 12:31:02] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-07 12:31:02] Ignore Log File: kodi.log
+[2019-07-07 12:31:02] Ignore Log File: kodi.old.log
+[2019-07-07 12:31:02] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-07 12:31:02] [Auto Clean Up] Old Thumbs: On
+[2019-07-07 12:31:02] 0 total thumbs cleaned up.
+[2019-07-07 12:31:02] [Auto Clean Up] Packages: On
+[2019-07-08 22:58:47] 2019-07-08 22:58:47.500832
+[2019-07-08 22:58:49] Continuing Start Up Script
+[2019-07-08 22:58:49] [Path Check] Started
+[2019-07-08 22:58:49] [Path Check] Good!
+[2019-07-08 22:58:49] [Auto Install Repo] Started
+[2019-07-08 22:58:49] [Auto Install Repo] Not Enabled
+[2019-07-08 22:58:49] [Auto Update Wizard] Started
+[2019-07-08 22:58:51] [Auto Update Wizard] No New Version vFalse
+[2019-07-08 22:58:51] [Notifications] Started
+[2019-07-08 22:58:55] [Notification] NotifyID 121 Dismissed
+[2019-07-08 22:58:55] [Installed Check] Started
+[2019-07-08 22:58:55] [Installed Check] Not Enabled
+[2019-07-08 22:58:55] [Build Check] Started
+[2019-07-08 22:58:55] [Trakt Data] Started
+[2019-07-08 22:58:55] [Trakt Data] Not Enabled
+[2019-07-08 22:58:55] [Real Debrid Data] Started
+[2019-07-08 22:58:55] [Real Debrid Data] Not Enabled
+[2019-07-08 22:58:55] [Login Data] Started
+[2019-07-08 22:58:55] [Login Data] Not Enabled
+[2019-07-08 22:58:55] [Auto Clean Up] Started
+[2019-07-08 22:58:55] [Auto Clean Up] Cache: On
+[2019-07-08 22:58:57] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-08 22:59:02] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-07-08 22:59:02] Ignore Log File: kodi.log
+[2019-07-08 22:59:02] Ignore Log File: kodi.old.log
+[2019-07-08 22:59:02] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-08 22:59:02] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-07-08 22:59:02] [Auto Clean Up] Old Thumbs: On
+[2019-07-08 22:59:04] 10 total thumbs cleaned up.
+[2019-07-08 22:59:05] [Auto Clean Up] Packages: On
+[2019-07-10 22:56:09] 2019-07-10 22:56:09.708588
+[2019-07-10 22:56:11] Continuing Start Up Script
+[2019-07-10 22:56:11] [Path Check] Started
+[2019-07-10 22:56:11] [Path Check] Good!
+[2019-07-10 22:56:11] [Auto Install Repo] Started
+[2019-07-10 22:56:11] [Auto Install Repo] Not Enabled
+[2019-07-10 22:56:11] [Auto Update Wizard] Started
+[2019-07-10 22:56:13] [Auto Update Wizard] No New Version vFalse
+[2019-07-10 22:56:13] [Notifications] Started
+[2019-07-10 22:56:14] [Notifications] id: 122
+[2019-07-10 22:56:19] [Notification] NotifyID 122 Remind Me Later
+[2019-07-10 22:56:19] [Notifications] Complete
+[2019-07-10 22:56:19] [Installed Check] Started
+[2019-07-10 22:56:19] [Installed Check] Not Enabled
+[2019-07-10 22:56:19] [Build Check] Started
+[2019-07-10 22:56:19] [Trakt Data] Started
+[2019-07-10 22:56:19] [Trakt Data] Not Enabled
+[2019-07-10 22:56:19] [Real Debrid Data] Started
+[2019-07-10 22:56:19] [Real Debrid Data] Not Enabled
+[2019-07-10 22:56:19] [Login Data] Started
+[2019-07-10 22:56:19] [Login Data] Not Enabled
+[2019-07-10 22:56:19] [Auto Clean Up] Started
+[2019-07-10 22:56:20] [Auto Clean Up] Cache: On
+[2019-07-10 22:56:21] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-10 22:56:30] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-10 22:56:30] Ignore Log File: kodi.log
+[2019-07-10 22:56:30] Ignore Log File: kodi.old.log
+[2019-07-10 22:56:30] [Auto Clean Up] Old Thumbs: On
+[2019-07-10 22:56:30] 3 total thumbs cleaned up.
+[2019-07-10 22:56:30] [Auto Clean Up] Packages: On
+[2019-07-12 21:13:08] 2019-07-12 21:13:07.632640
+[2019-07-12 21:13:09] Continuing Start Up Script
+[2019-07-12 21:13:09] [Path Check] Started
+[2019-07-12 21:13:09] [Path Check] Good!
+[2019-07-12 21:13:09] [Auto Install Repo] Started
+[2019-07-12 21:13:09] [Auto Install Repo] Not Enabled
+[2019-07-12 21:13:09] [Auto Update Wizard] Started
+[2019-07-12 21:13:11] [Auto Update Wizard] No New Version vFalse
+[2019-07-12 21:13:11] [Notifications] Started
+[2019-07-12 21:13:14] [Notification] NotifyID 122 Remind Me Later
+[2019-07-12 21:13:14] [Installed Check] Started
+[2019-07-12 21:13:14] [Installed Check] Not Enabled
+[2019-07-12 21:13:14] [Build Check] Started
+[2019-07-12 21:13:14] [Trakt Data] Started
+[2019-07-12 21:13:14] [Trakt Data] Not Enabled
+[2019-07-12 21:13:14] [Real Debrid Data] Started
+[2019-07-12 21:13:14] [Real Debrid Data] Not Enabled
+[2019-07-12 21:13:15] [Login Data] Started
+[2019-07-12 21:13:15] [Login Data] Not Enabled
+[2019-07-12 21:13:15] [Auto Clean Up] Started
+[2019-07-12 21:13:15] [Auto Clean Up] Cache: On
+[2019-07-12 21:13:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-12 21:13:23] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-12 21:13:23] Ignore Log File: kodi.log
+[2019-07-12 21:13:23] Ignore Log File: kodi.old.log
+[2019-07-12 21:13:23] [Auto Clean Up] Old Thumbs: On
+[2019-07-12 21:13:25] 0 total thumbs cleaned up.
+[2019-07-12 21:13:25] [Auto Clean Up] Packages: On
+[2019-07-14 17:36:53] 2019-07-14 17:36:53.348979
+[2019-07-14 17:36:54] Continuing Start Up Script
+[2019-07-14 17:36:54] [Path Check] Started
+[2019-07-14 17:36:54] [Path Check] Good!
+[2019-07-14 17:36:54] [Auto Install Repo] Started
+[2019-07-14 17:36:54] [Auto Install Repo] Not Enabled
+[2019-07-14 17:36:54] [Auto Update Wizard] Started
+[2019-07-14 17:36:56] [Auto Update Wizard] No New Version vFalse
+[2019-07-14 17:36:57] [Notifications] Started
+[2019-07-14 17:37:00] [Notification] NotifyID 122 Remind Me Later
+[2019-07-14 17:37:00] [Installed Check] Started
+[2019-07-14 17:37:00] [Installed Check] Not Enabled
+[2019-07-14 17:37:00] [Build Check] Started
+[2019-07-14 17:37:00] [Trakt Data] Started
+[2019-07-14 17:37:00] [Trakt Data] Not Enabled
+[2019-07-14 17:37:00] [Real Debrid Data] Started
+[2019-07-14 17:37:00] [Real Debrid Data] Not Enabled
+[2019-07-14 17:37:00] [Login Data] Started
+[2019-07-14 17:37:01] [Login Data] Not Enabled
+[2019-07-14 17:37:01] [Auto Clean Up] Started
+[2019-07-14 17:37:01] [Auto Clean Up] Cache: On
+[2019-07-14 17:37:04] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-14 17:37:09] Ignore Log File: kodi.log
+[2019-07-14 17:37:09] Ignore Log File: kodi.old.log
+[2019-07-14 17:37:09] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-14 17:37:09] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-07-14 17:37:09] [Auto Clean Up] Old Thumbs: On
+[2019-07-14 17:37:11] 0 total thumbs cleaned up.
+[2019-07-14 17:37:11] [Auto Clean Up] Packages: On
+[2019-07-16 20:57:49] 2019-07-16 20:57:49.530665
+[2019-07-16 20:57:50] Continuing Start Up Script
+[2019-07-16 20:57:50] [Path Check] Started
+[2019-07-16 20:57:50] [Path Check] Good!
+[2019-07-16 20:57:51] [Auto Install Repo] Started
+[2019-07-16 20:57:51] [Auto Install Repo] Not Enabled
+[2019-07-16 20:57:51] [Auto Update Wizard] Started
+[2019-07-16 20:57:53] [Auto Update Wizard] No New Version vFalse
+[2019-07-16 20:57:53] [Notifications] Started
+[2019-07-16 20:57:56] [Notification] NotifyID 122 Remind Me Later
+[2019-07-16 20:57:56] [Installed Check] Started
+[2019-07-16 20:57:56] [Installed Check] Not Enabled
+[2019-07-16 20:57:56] [Build Check] Started
+[2019-07-16 20:57:56] [Trakt Data] Started
+[2019-07-16 20:57:56] [Trakt Data] Not Enabled
+[2019-07-16 20:57:56] [Real Debrid Data] Started
+[2019-07-16 20:57:56] [Real Debrid Data] Not Enabled
+[2019-07-16 20:57:56] [Login Data] Started
+[2019-07-16 20:57:57] [Login Data] Not Enabled
+[2019-07-16 20:57:57] [Auto Clean Up] Started
+[2019-07-16 20:57:57] [Auto Clean Up] Cache: On
+[2019-07-16 20:57:57] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-16 20:57:58] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-07-16 20:57:59] Ignore Log File: kodi.log
+[2019-07-16 20:58:00] Ignore Log File: kodi.old.log
+[2019-07-16 20:58:00] [Auto Clean Up] Old Thumbs: On
+[2019-07-16 20:58:01] 9 total thumbs cleaned up.
+[2019-07-16 20:58:02] [Auto Clean Up] Packages: On
+[2019-07-21 11:35:44] 2019-07-21 11:35:44.775603
+[2019-07-21 11:35:45] Continuing Start Up Script
+[2019-07-21 11:35:46] [Path Check] Started
+[2019-07-21 11:35:46] [Path Check] Good!
+[2019-07-21 11:35:46] [Auto Install Repo] Started
+[2019-07-21 11:35:46] [Auto Install Repo] Not Enabled
+[2019-07-21 11:35:46] [Auto Update Wizard] Started
+[2019-07-21 11:35:47] [Auto Update Wizard] No New Version vFalse
+[2019-07-21 11:35:47] [Notifications] Started
+[2019-07-21 11:36:03] [Notification] NotifyID 122 Remind Me Later
+[2019-07-21 11:36:03] [Installed Check] Started
+[2019-07-21 11:36:03] [Installed Check] Not Enabled
+[2019-07-21 11:36:03] [Build Check] Started
+[2019-07-21 11:36:03] [Trakt Data] Started
+[2019-07-21 11:36:03] [Trakt Data] Not Enabled
+[2019-07-21 11:36:03] [Real Debrid Data] Started
+[2019-07-21 11:36:03] [Real Debrid Data] Not Enabled
+[2019-07-21 11:36:03] [Login Data] Started
+[2019-07-21 11:36:03] [Login Data] Not Enabled
+[2019-07-21 11:36:03] [Auto Clean Up] Started
+[2019-07-21 11:36:03] [Auto Clean Up] Cache: On
+[2019-07-21 11:36:03] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-21 11:36:03] Ignore Log File: kodi.log
+[2019-07-21 11:36:03] Ignore Log File: kodi.old.log
+[2019-07-21 11:36:03] [Auto Clean Up] Old Thumbs: On
+[2019-07-21 11:36:03] 69 total thumbs cleaned up.
+[2019-07-21 11:36:04] [Auto Clean Up] Packages: On
+[2019-07-21 12:43:19] 2019-07-21 12:43:19.827751
+[2019-07-21 12:43:20] Continuing Start Up Script
+[2019-07-21 12:43:20] [Path Check] Started
+[2019-07-21 12:43:20] [Path Check] Good!
+[2019-07-21 12:43:21] [Auto Install Repo] Started
+[2019-07-21 12:43:21] [Auto Install Repo] Not Enabled
+[2019-07-21 12:43:21] [Auto Update Wizard] Started
+[2019-07-21 12:43:22] [Auto Update Wizard] No New Version vFalse
+[2019-07-21 12:43:22] [Notifications] Started
+[2019-07-21 12:43:23] [Notifications] id: 123
+[2019-07-21 12:43:27] [Notification] NotifyID 123 Remind Me Later
+[2019-07-21 12:43:27] [Notifications] Complete
+[2019-07-21 12:43:27] [Installed Check] Started
+[2019-07-21 12:43:27] [Installed Check] Not Enabled
+[2019-07-21 12:43:28] [Build Check] Started
+[2019-07-21 12:43:28] [Trakt Data] Started
+[2019-07-21 12:43:28] [Trakt Data] Not Enabled
+[2019-07-21 12:43:28] [Real Debrid Data] Started
+[2019-07-21 12:43:28] [Real Debrid Data] Not Enabled
+[2019-07-21 12:43:28] [Login Data] Started
+[2019-07-21 12:43:28] [Login Data] Not Enabled
+[2019-07-21 12:43:28] [Auto Clean Up] Started
+[2019-07-21 12:43:29] [Auto Clean Up] Cache: On
+[2019-07-21 12:43:29] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-21 12:43:29] Ignore Log File: kodi.log
+[2019-07-21 12:43:29] Ignore Log File: kodi.old.log
+[2019-07-21 12:43:29] [Auto Clean Up] Old Thumbs: On
+[2019-07-21 12:43:29] 0 total thumbs cleaned up.
+[2019-07-21 12:43:29] [Auto Clean Up] Packages: On
+[2019-07-21 19:40:04] 2019-07-21 19:40:04.452495
+[2019-07-21 19:40:05] Continuing Start Up Script
+[2019-07-21 19:40:05] [Path Check] Started
+[2019-07-21 19:40:05] [Path Check] Good!
+[2019-07-21 19:40:05] [Auto Install Repo] Started
+[2019-07-21 19:40:05] [Auto Install Repo] Not Enabled
+[2019-07-21 19:40:05] [Auto Update Wizard] Started
+[2019-07-21 19:40:08] [Auto Update Wizard] No New Version vFalse
+[2019-07-21 19:40:08] [Notifications] Started
+[2019-07-21 19:40:14] [Notification] NotifyID 123 Dismissed
+[2019-07-21 19:40:14] [Installed Check] Started
+[2019-07-21 19:40:14] [Installed Check] Not Enabled
+[2019-07-21 19:40:14] [Build Check] Started
+[2019-07-21 19:40:14] [Trakt Data] Started
+[2019-07-21 19:40:14] [Trakt Data] Not Enabled
+[2019-07-21 19:40:14] [Real Debrid Data] Started
+[2019-07-21 19:40:14] [Real Debrid Data] Not Enabled
+[2019-07-21 19:40:14] [Login Data] Started
+[2019-07-21 19:40:14] [Login Data] Not Enabled
+[2019-07-21 19:40:14] [Auto Clean Up] Started
+[2019-07-21 19:40:14] [Auto Clean Up] Cache: On
+[2019-07-21 19:40:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-21 19:40:17] Ignore Log File: kodi.log
+[2019-07-21 19:40:17] Ignore Log File: kodi.old.log
+[2019-07-21 19:40:17] [Auto Clean Up] Old Thumbs: On
+[2019-07-21 19:40:17] 0 total thumbs cleaned up.
+[2019-07-21 19:40:17] [Auto Clean Up] Packages: On
+[2019-07-21 22:14:13] 2019-07-21 22:14:13.527796
+[2019-07-21 22:14:14] Continuing Start Up Script
+[2019-07-21 22:14:14] [Path Check] Started
+[2019-07-21 22:14:14] [Path Check] Good!
+[2019-07-21 22:14:14] [Auto Install Repo] Started
+[2019-07-21 22:14:14] [Auto Install Repo] Not Enabled
+[2019-07-21 22:14:14] [Auto Update Wizard] Started
+[2019-07-21 22:14:16] [Auto Update Wizard] No New Version vFalse
+[2019-07-21 22:14:16] [Notifications] Started
+[2019-07-21 22:14:17] [Notifications] id[123] Dismissed
+[2019-07-21 22:14:17] [Installed Check] Started
+[2019-07-21 22:14:17] [Installed Check] Not Enabled
+[2019-07-21 22:14:17] [Build Check] Started
+[2019-07-21 22:14:17] [Trakt Data] Started
+[2019-07-21 22:14:17] [Trakt Data] Not Enabled
+[2019-07-21 22:14:17] [Real Debrid Data] Started
+[2019-07-21 22:14:17] [Real Debrid Data] Not Enabled
+[2019-07-21 22:14:17] [Login Data] Started
+[2019-07-21 22:14:17] [Login Data] Not Enabled
+[2019-07-21 22:14:17] [Auto Clean Up] Started
+[2019-07-21 22:14:17] [Auto Clean Up] Cache: On
+[2019-07-21 22:14:20] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-07-21 22:14:20] Ignore Log File: kodi.log
+[2019-07-21 22:14:20] Ignore Log File: kodi.old.log
+[2019-07-21 22:14:20] [Auto Clean Up] Old Thumbs: On
+[2019-07-21 22:14:20] 0 total thumbs cleaned up.
+[2019-07-21 22:14:20] [Auto Clean Up] Packages: On
+[2019-07-23 22:14:33] 2019-07-23 22:14:33.297723
+[2019-07-23 22:14:34] Continuing Start Up Script
+[2019-07-23 22:14:34] [Path Check] Started
+[2019-07-23 22:14:34] [Path Check] Good!
+[2019-07-23 22:14:34] [Auto Install Repo] Started
+[2019-07-23 22:14:34] [Auto Install Repo] Not Enabled
+[2019-07-23 22:14:34] [Auto Update Wizard] Started
+[2019-07-23 22:14:36] [Auto Update Wizard] No New Version vFalse
+[2019-07-23 22:14:36] [Notifications] Started
+[2019-07-23 22:14:37] [Notifications] id[123] Dismissed
+[2019-07-23 22:14:37] [Installed Check] Started
+[2019-07-23 22:14:37] [Installed Check] Not Enabled
+[2019-07-23 22:14:37] [Build Check] Started
+[2019-07-23 22:14:37] [Trakt Data] Started
+[2019-07-23 22:14:37] [Trakt Data] Not Enabled
+[2019-07-23 22:14:37] [Real Debrid Data] Started
+[2019-07-23 22:14:37] [Real Debrid Data] Not Enabled
+[2019-07-23 22:14:37] [Login Data] Started
+[2019-07-23 22:14:37] [Login Data] Not Enabled
+[2019-07-23 22:14:37] [Auto Clean Up] Started
+[2019-07-23 22:14:37] [Auto Clean Up] Cache: On
+[2019-07-23 22:14:42] Ignore Log File: kodi.log
+[2019-07-23 22:14:42] Ignore Log File: kodi.old.log
+[2019-07-23 22:14:42] [Auto Clean Up] Old Thumbs: On
+[2019-07-23 22:14:47] 113 total thumbs cleaned up.
+[2019-07-23 22:14:51] [Auto Clean Up] Packages: On
+[2019-07-24 16:25:19] 2019-07-24 16:25:19.239512
+[2019-07-24 16:25:20] Continuing Start Up Script
+[2019-07-24 16:25:20] [Path Check] Started
+[2019-07-24 16:25:20] [Path Check] Good!
+[2019-07-24 16:25:20] [Auto Install Repo] Started
+[2019-07-24 16:25:20] [Auto Install Repo] Not Enabled
+[2019-07-24 16:25:21] [Auto Update Wizard] Started
+[2019-07-24 16:25:22] [Auto Update Wizard] No New Version vFalse
+[2019-07-24 16:25:22] [Notifications] Started
+[2019-07-24 16:25:23] [Notifications] id[123] Dismissed
+[2019-07-24 16:25:23] [Installed Check] Started
+[2019-07-24 16:25:23] [Installed Check] Not Enabled
+[2019-07-24 16:25:23] [Build Check] Started
+[2019-07-24 16:25:23] [Trakt Data] Started
+[2019-07-24 16:25:23] [Trakt Data] Not Enabled
+[2019-07-24 16:25:23] [Real Debrid Data] Started
+[2019-07-24 16:25:23] [Real Debrid Data] Not Enabled
+[2019-07-24 16:25:24] [Login Data] Started
+[2019-07-24 16:25:24] [Login Data] Not Enabled
+[2019-07-24 16:25:24] [Auto Clean Up] Started
+[2019-07-24 16:25:24] [Auto Clean Up] Cache: On
+[2019-07-24 16:25:25] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-24 16:25:32] Ignore Log File: kodi.log
+[2019-07-24 16:25:32] Ignore Log File: kodi.old.log
+[2019-07-24 16:25:32] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-24 16:25:32] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-07-24 16:25:32] [Auto Clean Up] Old Thumbs: On
+[2019-07-24 16:25:32] 0 total thumbs cleaned up.
+[2019-07-24 16:25:33] [Auto Clean Up] Packages: On
+[2019-07-25 15:10:00] 2019-07-25 15:09:59.875444
+[2019-07-25 15:10:01] Continuing Start Up Script
+[2019-07-25 15:10:01] [Path Check] Started
+[2019-07-25 15:10:01] [Path Check] Good!
+[2019-07-25 15:10:01] [Auto Install Repo] Started
+[2019-07-25 15:10:01] [Auto Install Repo] Not Enabled
+[2019-07-25 15:10:01] [Auto Update Wizard] Started
+[2019-07-25 15:10:04] [Auto Update Wizard] No New Version vFalse
+[2019-07-25 15:10:04] [Notifications] Started
+[2019-07-25 15:10:06] [Notifications] id[123] Dismissed
+[2019-07-25 15:10:06] [Installed Check] Started
+[2019-07-25 15:10:06] [Installed Check] Not Enabled
+[2019-07-25 15:10:06] [Build Check] Started
+[2019-07-25 15:10:06] [Trakt Data] Started
+[2019-07-25 15:10:06] [Trakt Data] Not Enabled
+[2019-07-25 15:10:06] [Real Debrid Data] Started
+[2019-07-25 15:10:06] [Real Debrid Data] Not Enabled
+[2019-07-25 15:10:06] [Login Data] Started
+[2019-07-25 15:10:06] [Login Data] Not Enabled
+[2019-07-25 15:10:06] [Auto Clean Up] Started
+[2019-07-25 15:10:06] [Auto Clean Up] Cache: On
+[2019-07-25 15:10:08] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-25 15:10:09] Ignore Log File: kodi.log
+[2019-07-25 15:10:09] Ignore Log File: kodi.old.log
+[2019-07-25 15:10:10] [Auto Clean Up] Old Thumbs: On
+[2019-07-25 15:10:12] 25 total thumbs cleaned up.
+[2019-07-25 15:10:13] [Auto Clean Up] Packages: On
+[2019-07-30 00:47:16] 2019-07-30 00:47:16.675117
+[2019-07-30 00:47:17] Continuing Start Up Script
+[2019-07-30 00:47:17] [Path Check] Started
+[2019-07-30 00:47:17] [Path Check] Good!
+[2019-07-30 00:47:17] [Auto Install Repo] Started
+[2019-07-30 00:47:17] [Auto Install Repo] Not Enabled
+[2019-07-30 00:47:17] [Auto Update Wizard] Started
+[2019-07-30 00:47:19] [Auto Update Wizard] No New Version vFalse
+[2019-07-30 00:47:19] [Notifications] Started
+[2019-07-30 00:47:20] [Notifications] id[123] Dismissed
+[2019-07-30 00:47:20] [Installed Check] Started
+[2019-07-30 00:47:20] [Installed Check] Not Enabled
+[2019-07-30 00:47:20] [Build Check] Started
+[2019-07-30 00:47:20] [Trakt Data] Started
+[2019-07-30 00:47:20] [Trakt Data] Not Enabled
+[2019-07-30 00:47:20] [Real Debrid Data] Started
+[2019-07-30 00:47:20] [Real Debrid Data] Not Enabled
+[2019-07-30 00:47:20] [Login Data] Started
+[2019-07-30 00:47:20] [Login Data] Not Enabled
+[2019-07-30 00:47:20] [Auto Clean Up] Started
+[2019-07-30 00:47:20] [Auto Clean Up] Cache: On
+[2019-07-30 00:47:29] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-07-30 00:47:29] Ignore Log File: kodi.log
+[2019-07-30 00:47:29] Ignore Log File: kodi.old.log
+[2019-07-30 00:47:29] [Auto Clean Up] Old Thumbs: On
+[2019-07-30 00:47:30] 54 total thumbs cleaned up.
+[2019-07-30 00:47:31] [Auto Clean Up] Packages: On
+[2019-07-31 15:15:34] 2019-07-31 15:15:34.719319
+[2019-07-31 15:15:35] Continuing Start Up Script
+[2019-07-31 15:15:36] [Path Check] Started
+[2019-07-31 15:15:36] [Path Check] Good!
+[2019-07-31 15:15:36] [Auto Install Repo] Started
+[2019-07-31 15:15:36] [Auto Install Repo] Not Enabled
+[2019-07-31 15:15:36] [Auto Update Wizard] Started
+[2019-07-31 15:15:37] [Auto Update Wizard] No New Version vFalse
+[2019-07-31 15:15:37] [Notifications] Started
+[2019-07-31 15:15:38] [Notifications] id[123] Dismissed
+[2019-07-31 15:15:38] [Installed Check] Started
+[2019-07-31 15:15:38] [Installed Check] Not Enabled
+[2019-07-31 15:15:38] [Build Check] Started
+[2019-07-31 15:15:38] [Trakt Data] Started
+[2019-07-31 15:15:38] [Trakt Data] Not Enabled
+[2019-07-31 15:15:38] [Real Debrid Data] Started
+[2019-07-31 15:15:38] [Real Debrid Data] Not Enabled
+[2019-07-31 15:15:38] [Login Data] Started
+[2019-07-31 15:15:38] [Login Data] Not Enabled
+[2019-07-31 15:15:38] [Auto Clean Up] Started
+[2019-07-31 15:15:38] [Auto Clean Up] Cache: On
+[2019-07-31 15:15:39] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-07-31 15:15:44] Ignore Log File: kodi.log
+[2019-07-31 15:15:44] Ignore Log File: kodi.old.log
+[2019-07-31 15:15:44] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-07-31 15:15:44] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-07-31 15:15:44] [Auto Clean Up] Old Thumbs: On
+[2019-07-31 15:15:46] 0 total thumbs cleaned up.
+[2019-07-31 15:15:47] [Auto Clean Up] Packages: On
+[2019-08-06 12:02:20] 2019-08-06 12:02:20.543118
+[2019-08-06 12:02:22] Continuing Start Up Script
+[2019-08-06 12:02:22] [Path Check] Started
+[2019-08-06 12:02:22] [Path Check] Good!
+[2019-08-06 12:02:22] [Auto Install Repo] Started
+[2019-08-06 12:02:22] [Auto Install Repo] Not Enabled
+[2019-08-06 12:02:22] [Auto Update Wizard] Started
+[2019-08-06 12:02:26] [Auto Update Wizard] No New Version vFalse
+[2019-08-06 12:02:26] [Notifications] Started
+[2019-08-06 12:02:29] [Notifications] id[123] Dismissed
+[2019-08-06 12:02:29] [Installed Check] Started
+[2019-08-06 12:02:30] [Installed Check] Not Enabled
+[2019-08-06 12:02:30] [Build Check] Started
+[2019-08-06 12:02:30] [Trakt Data] Started
+[2019-08-06 12:02:30] [Trakt Data] Not Enabled
+[2019-08-06 12:02:30] [Real Debrid Data] Started
+[2019-08-06 12:02:30] [Real Debrid Data] Not Enabled
+[2019-08-06 12:02:30] [Login Data] Started
+[2019-08-06 12:02:30] [Login Data] Not Enabled
+[2019-08-06 12:02:30] [Auto Clean Up] Started
+[2019-08-06 12:02:30] [Auto Clean Up] Cache: On
+[2019-08-06 12:02:36] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-08-06 12:02:36] Ignore Log File: kodi.log
+[2019-08-06 12:02:36] Ignore Log File: kodi.old.log
+[2019-08-06 12:02:36] [Auto Clean Up] Old Thumbs: On
+[2019-08-06 12:02:38] 57 total thumbs cleaned up.
+[2019-08-06 12:02:39] [Auto Clean Up] Packages: On
+[2019-08-07 22:39:49] 2019-08-07 22:39:49.224845
+[2019-08-07 22:39:50] Continuing Start Up Script
+[2019-08-07 22:39:50] [Path Check] Started
+[2019-08-07 22:39:50] [Path Check] Good!
+[2019-08-07 22:39:50] [Auto Install Repo] Started
+[2019-08-07 22:39:50] [Auto Install Repo] Not Enabled
+[2019-08-07 22:39:50] [Auto Update Wizard] Started
+[2019-08-07 22:39:52] [Auto Update Wizard] No New Version vFalse
+[2019-08-07 22:39:52] [Notifications] Started
+[2019-08-07 22:39:58] [Notifications] id[123] Dismissed
+[2019-08-07 22:39:59] [Installed Check] Started
+[2019-08-07 22:39:59] [Installed Check] Not Enabled
+[2019-08-07 22:39:59] [Build Check] Started
+[2019-08-07 22:39:59] [Trakt Data] Started
+[2019-08-07 22:39:59] [Trakt Data] Not Enabled
+[2019-08-07 22:39:59] [Real Debrid Data] Started
+[2019-08-07 22:39:59] [Real Debrid Data] Not Enabled
+[2019-08-07 22:39:59] [Login Data] Started
+[2019-08-07 22:39:59] [Login Data] Not Enabled
+[2019-08-07 22:39:59] [Auto Clean Up] Started
+[2019-08-07 22:39:59] [Auto Clean Up] Cache: On
+[2019-08-07 22:40:03] Ignore Log File: kodi.log
+[2019-08-07 22:40:03] Ignore Log File: kodi.old.log
+[2019-08-07 22:40:03] [Auto Clean Up] Old Thumbs: On
+[2019-08-07 22:40:03] 17 total thumbs cleaned up.
+[2019-08-07 22:40:03] [Auto Clean Up] Packages: On
+[2019-08-08 15:44:12] 2019-08-08 15:44:12.288518
+[2019-08-08 15:44:13] Continuing Start Up Script
+[2019-08-08 15:44:13] [Path Check] Started
+[2019-08-08 15:44:13] [Path Check] Good!
+[2019-08-08 15:44:13] [Auto Install Repo] Started
+[2019-08-08 15:44:13] [Auto Install Repo] Not Enabled
+[2019-08-08 15:44:14] [Auto Update Wizard] Started
+[2019-08-08 15:44:18] [Auto Update Wizard] No New Version vFalse
+[2019-08-08 15:44:18] [Notifications] Started
+[2019-08-08 15:44:20] [Notifications] id[123] Dismissed
+[2019-08-08 15:44:20] [Installed Check] Started
+[2019-08-08 15:44:20] [Installed Check] Not Enabled
+[2019-08-08 15:44:20] [Build Check] Started
+[2019-08-08 15:44:20] [Trakt Data] Started
+[2019-08-08 15:44:20] [Trakt Data] Not Enabled
+[2019-08-08 15:44:20] [Real Debrid Data] Started
+[2019-08-08 15:44:20] [Real Debrid Data] Not Enabled
+[2019-08-08 15:44:20] [Login Data] Started
+[2019-08-08 15:44:20] [Login Data] Not Enabled
+[2019-08-08 15:44:20] [Auto Clean Up] Started
+[2019-08-08 15:44:20] [Auto Clean Up] Cache: On
+[2019-08-08 15:44:21] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-08 15:44:27] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-08-08 15:44:27] Ignore Log File: kodi.log
+[2019-08-08 15:44:27] Ignore Log File: kodi.old.log
+[2019-08-08 15:44:28] [Auto Clean Up] Old Thumbs: On
+[2019-08-08 15:44:31] 3 total thumbs cleaned up.
+[2019-08-08 15:44:31] [Auto Clean Up] Packages: On
+[2019-08-08 20:44:31] 2019-08-08 20:44:31.180173
+[2019-08-08 20:44:32] Continuing Start Up Script
+[2019-08-08 20:44:32] [Path Check] Started
+[2019-08-08 20:44:32] [Path Check] Good!
+[2019-08-08 20:44:33] [Auto Install Repo] Started
+[2019-08-08 20:44:33] [Auto Install Repo] Not Enabled
+[2019-08-08 20:44:33] [Auto Update Wizard] Started
+[2019-08-08 20:44:34] [Auto Update Wizard] No New Version vFalse
+[2019-08-08 20:44:34] [Notifications] Started
+[2019-08-08 20:44:35] [Notifications] id: 124
+[2019-08-08 20:44:37] [Notification] NotifyID 124 Remind Me Later
+[2019-08-08 20:44:38] [Notifications] Complete
+[2019-08-08 20:44:38] [Installed Check] Started
+[2019-08-08 20:44:38] [Installed Check] Not Enabled
+[2019-08-08 20:44:38] [Build Check] Started
+[2019-08-08 20:44:38] [Trakt Data] Started
+[2019-08-08 20:44:38] [Trakt Data] Not Enabled
+[2019-08-08 20:44:38] [Real Debrid Data] Started
+[2019-08-08 20:44:38] [Real Debrid Data] Not Enabled
+[2019-08-08 20:44:38] [Login Data] Started
+[2019-08-08 20:44:38] [Login Data] Not Enabled
+[2019-08-08 20:44:38] [Auto Clean Up] Started
+[2019-08-08 20:44:38] [Auto Clean Up] Cache: On
+[2019-08-08 20:44:44] Ignore Log File: kodi.log
+[2019-08-08 20:44:44] Ignore Log File: kodi.old.log
+[2019-08-08 20:44:44] [Auto Clean Up] Old Thumbs: On
+[2019-08-08 20:44:44] 0 total thumbs cleaned up.
+[2019-08-08 20:44:44] [Auto Clean Up] Packages: On
+[2019-08-10 21:31:56] 2019-08-10 21:31:56.785220
+[2019-08-10 21:31:58] Continuing Start Up Script
+[2019-08-10 21:31:58] [Path Check] Started
+[2019-08-10 21:31:58] [Path Check] Good!
+[2019-08-10 21:31:58] [Auto Install Repo] Started
+[2019-08-10 21:31:58] [Auto Install Repo] Not Enabled
+[2019-08-10 21:31:58] [Auto Update Wizard] Started
+[2019-08-10 21:32:01] [Auto Update Wizard] No New Version vFalse
+[2019-08-10 21:32:01] [Notifications] Started
+[2019-08-10 21:32:05] [Notification] NotifyID 124 Dismissed
+[2019-08-10 21:32:05] [Installed Check] Started
+[2019-08-10 21:32:05] [Installed Check] Not Enabled
+[2019-08-10 21:32:05] [Build Check] Started
+[2019-08-10 21:32:05] [Trakt Data] Started
+[2019-08-10 21:32:05] [Trakt Data] Not Enabled
+[2019-08-10 21:32:05] [Real Debrid Data] Started
+[2019-08-10 21:32:05] [Real Debrid Data] Not Enabled
+[2019-08-10 21:32:05] [Login Data] Started
+[2019-08-10 21:32:05] [Login Data] Not Enabled
+[2019-08-10 21:32:05] [Auto Clean Up] Started
+[2019-08-10 21:32:05] [Auto Clean Up] Cache: On
+[2019-08-10 21:32:05] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-10 21:32:06] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-08-10 21:32:06] Ignore Log File: kodi.log
+[2019-08-10 21:32:06] Ignore Log File: kodi.old.log
+[2019-08-10 21:32:06] [Auto Clean Up] Old Thumbs: On
+[2019-08-10 21:32:06] 0 total thumbs cleaned up.
+[2019-08-10 21:32:06] [Auto Clean Up] Packages: On
+[2019-08-25 23:27:49] 2019-08-25 23:27:49.049416
+[2019-08-25 23:27:50] Continuing Start Up Script
+[2019-08-25 23:27:50] [Path Check] Started
+[2019-08-25 23:27:50] [Path Check] Good!
+[2019-08-25 23:27:50] [Auto Install Repo] Started
+[2019-08-25 23:27:50] [Auto Install Repo] Not Enabled
+[2019-08-25 23:27:51] [Auto Update Wizard] Started
+[2019-08-25 23:27:53] [Auto Update Wizard] No New Version vFalse
+[2019-08-25 23:27:53] [Notifications] Started
+[2019-08-25 23:27:54] [Notifications] id[124] Dismissed
+[2019-08-25 23:27:54] [Installed Check] Started
+[2019-08-25 23:27:54] [Installed Check] Not Enabled
+[2019-08-25 23:27:54] [Build Check] Started
+[2019-08-25 23:27:54] [Trakt Data] Started
+[2019-08-25 23:27:54] [Trakt Data] Not Enabled
+[2019-08-25 23:27:54] [Real Debrid Data] Started
+[2019-08-25 23:27:54] [Real Debrid Data] Not Enabled
+[2019-08-25 23:27:54] [Login Data] Started
+[2019-08-25 23:27:54] [Login Data] Not Enabled
+[2019-08-25 23:27:55] [Auto Clean Up] Started
+[2019-08-25 23:27:55] [Auto Clean Up] Cache: On
+[2019-08-25 23:28:09] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-25 23:28:15] Ignore Log File: kodi.log
+[2019-08-25 23:28:15] Ignore Log File: kodi.old.log
+[2019-08-25 23:28:15] [Auto Clean Up] Old Thumbs: On
+[2019-08-25 23:28:18] 139 total thumbs cleaned up.
+[2019-08-25 23:28:26] [Auto Clean Up] Packages: On
+[2019-08-26 23:36:15] 2019-08-26 23:36:15.056104
+[2019-08-26 23:36:16] Continuing Start Up Script
+[2019-08-26 23:36:16] [Path Check] Started
+[2019-08-26 23:36:16] [Path Check] Good!
+[2019-08-26 23:36:16] [Auto Install Repo] Started
+[2019-08-26 23:36:16] [Auto Install Repo] Not Enabled
+[2019-08-26 23:36:16] [Auto Update Wizard] Started
+[2019-08-26 23:36:18] [Auto Update Wizard] No New Version vFalse
+[2019-08-26 23:36:18] [Notifications] Started
+[2019-08-26 23:36:18] [Notifications] id[124] Dismissed
+[2019-08-26 23:36:18] [Installed Check] Started
+[2019-08-26 23:36:19] [Installed Check] Not Enabled
+[2019-08-26 23:36:19] [Build Check] Started
+[2019-08-26 23:36:19] [Trakt Data] Started
+[2019-08-26 23:36:19] [Trakt Data] Not Enabled
+[2019-08-26 23:36:19] [Real Debrid Data] Started
+[2019-08-26 23:36:19] [Real Debrid Data] Not Enabled
+[2019-08-26 23:36:19] [Login Data] Started
+[2019-08-26 23:36:19] [Login Data] Not Enabled
+[2019-08-26 23:36:19] [Auto Clean Up] Started
+[2019-08-26 23:36:19] [Auto Clean Up] Cache: On
+[2019-08-26 23:36:20] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-26 23:36:23] Ignore Log File: kodi.log
+[2019-08-26 23:36:23] Ignore Log File: kodi.old.log
+[2019-08-26 23:36:23] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-08-26 23:36:23] [Auto Clean Up] Old Thumbs: On
+[2019-08-26 23:36:24] 0 total thumbs cleaned up.
+[2019-08-26 23:36:24] [Auto Clean Up] Packages: On
+[2019-08-28 15:16:59] 2019-08-28 15:16:59.318472
+[2019-08-28 15:17:00] Continuing Start Up Script
+[2019-08-28 15:17:00] [Path Check] Started
+[2019-08-28 15:17:00] [Path Check] Good!
+[2019-08-28 15:17:00] [Auto Install Repo] Started
+[2019-08-28 15:17:00] [Auto Install Repo] Not Enabled
+[2019-08-28 15:17:00] [Auto Update Wizard] Started
+[2019-08-28 15:17:02] [Auto Update Wizard] No New Version vFalse
+[2019-08-28 15:17:02] [Notifications] Started
+[2019-08-28 15:17:03] [Notifications] id[124] Dismissed
+[2019-08-28 15:17:03] [Installed Check] Started
+[2019-08-28 15:17:03] [Installed Check] Not Enabled
+[2019-08-28 15:17:03] [Build Check] Started
+[2019-08-28 15:17:03] [Trakt Data] Started
+[2019-08-28 15:17:03] [Trakt Data] Not Enabled
+[2019-08-28 15:17:03] [Real Debrid Data] Started
+[2019-08-28 15:17:03] [Real Debrid Data] Not Enabled
+[2019-08-28 15:17:03] [Login Data] Started
+[2019-08-28 15:17:03] [Login Data] Not Enabled
+[2019-08-28 15:17:03] [Auto Clean Up] Started
+[2019-08-28 15:17:03] [Auto Clean Up] Cache: On
+[2019-08-28 15:17:04] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-28 15:17:08] Ignore Log File: kodi.log
+[2019-08-28 15:17:08] Ignore Log File: kodi.old.log
+[2019-08-28 15:17:08] [Auto Clean Up] Old Thumbs: On
+[2019-08-28 15:17:10] 0 total thumbs cleaned up.
+[2019-08-28 15:17:10] [Auto Clean Up] Packages: On
+[2019-08-29 20:46:43] 2019-08-29 20:46:43.320318
+[2019-08-29 20:46:44] Continuing Start Up Script
+[2019-08-29 20:46:44] [Path Check] Started
+[2019-08-29 20:46:44] [Path Check] Good!
+[2019-08-29 20:46:44] [Auto Install Repo] Started
+[2019-08-29 20:46:45] [Auto Install Repo] Not Enabled
+[2019-08-29 20:46:45] [Auto Update Wizard] Started
+[2019-08-29 20:46:46] [Auto Update Wizard] No New Version vFalse
+[2019-08-29 20:46:46] [Notifications] Started
+[2019-08-29 20:46:47] [Notifications] id[124] Dismissed
+[2019-08-29 20:46:47] [Installed Check] Started
+[2019-08-29 20:46:47] [Installed Check] Not Enabled
+[2019-08-29 20:46:47] [Build Check] Started
+[2019-08-29 20:46:47] [Trakt Data] Started
+[2019-08-29 20:46:47] [Trakt Data] Not Enabled
+[2019-08-29 20:46:47] [Real Debrid Data] Started
+[2019-08-29 20:46:47] [Real Debrid Data] Not Enabled
+[2019-08-29 20:46:47] [Login Data] Started
+[2019-08-29 20:46:47] [Login Data] Not Enabled
+[2019-08-29 20:46:47] [Auto Clean Up] Started
+[2019-08-29 20:46:47] [Auto Clean Up] Cache: On
+[2019-08-29 20:46:49] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-29 20:46:52] Ignore Log File: kodi.log
+[2019-08-29 20:46:52] Ignore Log File: kodi.old.log
+[2019-08-29 20:46:52] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-08-29 20:46:52] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-08-29 20:46:52] [Auto Clean Up] Old Thumbs: On
+[2019-08-29 20:46:53] 0 total thumbs cleaned up.
+[2019-08-29 20:46:54] [Auto Clean Up] Packages: On
+[2019-08-30 14:37:52] 2019-08-30 14:37:52.160295
+[2019-08-30 14:37:53] Continuing Start Up Script
+[2019-08-30 14:37:53] [Path Check] Started
+[2019-08-30 14:37:53] [Path Check] Good!
+[2019-08-30 14:37:53] [Auto Install Repo] Started
+[2019-08-30 14:37:53] [Auto Install Repo] Not Enabled
+[2019-08-30 14:37:53] [Auto Update Wizard] Started
+[2019-08-30 14:37:55] [Auto Update Wizard] No New Version vFalse
+[2019-08-30 14:37:55] [Notifications] Started
+[2019-08-30 14:37:56] [Notifications] id[124] Dismissed
+[2019-08-30 14:37:57] [Installed Check] Started
+[2019-08-30 14:37:57] [Installed Check] Not Enabled
+[2019-08-30 14:37:57] [Build Check] Started
+[2019-08-30 14:37:57] [Trakt Data] Started
+[2019-08-30 14:37:57] [Trakt Data] Not Enabled
+[2019-08-30 14:37:57] [Real Debrid Data] Started
+[2019-08-30 14:37:57] [Real Debrid Data] Not Enabled
+[2019-08-30 14:37:57] [Login Data] Started
+[2019-08-30 14:37:57] [Login Data] Not Enabled
+[2019-08-30 14:37:57] [Auto Clean Up] Started
+[2019-08-30 14:37:57] [Auto Clean Up] Cache: On
+[2019-08-30 14:37:57] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-08-30 14:38:03] Ignore Log File: kodi.log
+[2019-08-30 14:38:03] Ignore Log File: kodi.old.log
+[2019-08-30 14:38:03] [Auto Clean Up] Old Thumbs: On
+[2019-08-30 14:38:04] 0 total thumbs cleaned up.
+[2019-08-30 14:38:05] [Auto Clean Up] Packages: On
+[2019-09-05 17:33:57] 2019-09-05 17:33:57.422176
+[2019-09-05 17:33:58] Continuing Start Up Script
+[2019-09-05 17:33:58] [Path Check] Started
+[2019-09-05 17:33:58] [Path Check] Good!
+[2019-09-05 17:33:58] [Auto Install Repo] Started
+[2019-09-05 17:33:58] [Auto Install Repo] Not Enabled
+[2019-09-05 17:33:58] [Auto Update Wizard] Started
+[2019-09-05 17:34:01] [Auto Update Wizard] No New Version vFalse
+[2019-09-05 17:34:02] [Notifications] Started
+[2019-09-05 17:34:04] [Notifications] id: 126
+[2019-09-06 13:16:20] 2019-09-06 13:16:20.696547
+[2019-09-06 13:16:22] Continuing Start Up Script
+[2019-09-06 13:16:22] [Path Check] Started
+[2019-09-06 13:16:22] [Path Check] Good!
+[2019-09-06 13:16:22] [Auto Install Repo] Started
+[2019-09-06 13:16:22] [Auto Install Repo] Not Enabled
+[2019-09-06 13:16:22] [Auto Update Wizard] Started
+[2019-09-06 13:16:24] [Auto Update Wizard] No New Version vFalse
+[2019-09-06 13:16:24] [Notifications] Started
+[2019-09-15 22:13:10] 2019-09-15 22:13:10.138054
+[2019-09-15 22:13:13] Continuing Start Up Script
+[2019-09-15 22:13:13] [Path Check] Started
+[2019-09-15 22:13:13] [Path Check] Good!
+[2019-09-15 22:13:13] [Auto Install Repo] Started
+[2019-09-15 22:13:13] [Auto Install Repo] Not Enabled
+[2019-09-15 22:13:13] [Auto Update Wizard] Started
+[2019-09-15 22:13:16] [Auto Update Wizard] No New Version vFalse
+[2019-09-15 22:13:16] [Notifications] Started
+[2019-09-15 22:13:17] [Notifications] id: 128
+[2019-09-15 22:14:04] [Notification] NotifyID 128 Dismissed
+[2019-09-15 22:16:44] 2019-09-15 22:16:44.787047
+[2019-09-15 22:16:45] Continuing Start Up Script
+[2019-09-15 22:16:45] [Path Check] Started
+[2019-09-15 22:16:45] [Path Check] Good!
+[2019-09-15 22:16:45] [Auto Install Repo] Started
+[2019-09-15 22:16:45] [Auto Install Repo] Not Enabled
+[2019-09-15 22:16:45] [Auto Update Wizard] Started
+[2019-09-15 22:16:47] [Auto Update Wizard] No New Version vFalse
+[2019-09-15 22:16:48] [Notifications] Started
+[2019-09-15 22:16:49] [Notifications] id[128] Dismissed
+[2019-09-15 22:16:49] [Installed Check] Started
+[2019-09-15 22:16:49] [Installed Check] Not Enabled
+[2019-09-15 22:16:49] [Build Check] Started
+[2019-09-15 22:16:49] [Trakt Data] Started
+[2019-09-15 22:16:49] [Trakt Data] Not Enabled
+[2019-09-15 22:16:49] [Real Debrid Data] Started
+[2019-09-15 22:16:49] [Real Debrid Data] Not Enabled
+[2019-09-15 22:16:49] [Login Data] Started
+[2019-09-15 22:16:49] [Login Data] Not Enabled
+[2019-09-15 22:16:49] [Auto Clean Up] Started
+[2019-09-15 22:16:49] [Auto Clean Up] Cache: On
+[2019-09-15 22:16:49] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-09-15 22:16:50] Ignore Log File: kodi.log
+[2019-09-15 22:16:50] Ignore Log File: kodi.old.log
+[2019-09-15 22:16:50] [Auto Clean Up] Old Thumbs: On
+[2019-09-15 22:16:50] 108 total thumbs cleaned up.
+[2019-09-15 22:16:50] [Auto Clean Up] Packages: On
+[2019-09-17 02:08:50] 2019-09-17 02:08:50.354410
+[2019-09-17 02:08:51] Continuing Start Up Script
+[2019-09-17 02:08:51] [Path Check] Started
+[2019-09-17 02:08:51] [Path Check] Good!
+[2019-09-17 02:08:51] [Auto Install Repo] Started
+[2019-09-17 02:08:51] [Auto Install Repo] Not Enabled
+[2019-09-17 02:08:51] [Auto Update Wizard] Started
+[2019-09-17 02:08:53] [Auto Update Wizard] No New Version vFalse
+[2019-09-17 02:08:53] [Notifications] Started
+[2019-09-17 02:08:53] [Notifications] id[128] Dismissed
+[2019-09-17 02:08:53] [Installed Check] Started
+[2019-09-17 02:08:53] [Installed Check] Not Enabled
+[2019-09-17 02:08:53] [Build Check] Started
+[2019-09-17 02:08:53] [Trakt Data] Started
+[2019-09-17 02:08:53] [Trakt Data] Not Enabled
+[2019-09-17 02:08:54] [Real Debrid Data] Started
+[2019-09-17 02:08:54] [Real Debrid Data] Not Enabled
+[2019-09-17 02:08:54] [Login Data] Started
+[2019-09-17 02:08:54] [Login Data] Not Enabled
+[2019-09-17 02:08:54] [Auto Clean Up] Started
+[2019-09-17 02:08:54] [Auto Clean Up] Cache: On
+[2019-09-17 02:08:55] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-09-17 02:09:07] Ignore Log File: kodi.log
+[2019-09-17 02:09:07] Ignore Log File: kodi.old.log
+[2019-09-17 02:09:07] [Auto Clean Up] Old Thumbs: On
+[2019-09-17 02:09:09] 0 total thumbs cleaned up.
+[2019-09-17 02:09:09] [Auto Clean Up] Packages: On
+[2019-09-28 22:30:39] 2019-09-28 22:30:39.350138
+[2019-09-28 22:30:40] Continuing Start Up Script
+[2019-09-28 22:30:40] [Path Check] Started
+[2019-09-28 22:30:40] [Path Check] Good!
+[2019-09-28 22:30:40] [Auto Install Repo] Started
+[2019-09-28 22:30:41] [Auto Install Repo] Not Enabled
+[2019-09-28 22:30:41] [Auto Update Wizard] Started
+[2019-09-28 22:30:42] [Auto Update Wizard] No New Version vFalse
+[2019-09-28 22:30:42] [Notifications] Started
+[2019-09-28 22:30:43] [Notifications] id[128] Dismissed
+[2019-09-28 22:30:43] [Installed Check] Started
+[2019-09-28 22:30:43] [Installed Check] Not Enabled
+[2019-09-28 22:30:43] [Build Check] Started
+[2019-09-28 22:30:43] [Trakt Data] Started
+[2019-09-28 22:30:43] [Trakt Data] Not Enabled
+[2019-09-28 22:30:43] [Real Debrid Data] Started
+[2019-09-28 22:30:43] [Real Debrid Data] Not Enabled
+[2019-09-28 22:30:43] [Login Data] Started
+[2019-09-28 22:30:43] [Login Data] Not Enabled
+[2019-09-28 22:30:43] [Auto Clean Up] Started
+[2019-09-28 22:30:43] [Auto Clean Up] Cache: On
+[2019-09-28 22:30:44] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-09-28 22:30:53] Ignore Log File: kodi.log
+[2019-09-28 22:30:53] Ignore Log File: kodi.old.log
+[2019-09-28 22:30:53] [Auto Clean Up] Old Thumbs: On
+[2019-09-28 22:30:58] 171 total thumbs cleaned up.
+[2019-09-28 22:31:05] [Auto Clean Up] Packages: On
+[2019-09-30 08:52:54] 2019-09-30 08:52:54.695547
+[2019-09-30 08:52:56] Continuing Start Up Script
+[2019-09-30 08:52:56] [Path Check] Started
+[2019-09-30 08:52:56] [Path Check] Good!
+[2019-09-30 08:52:56] [Auto Install Repo] Started
+[2019-09-30 08:52:56] [Auto Install Repo] Not Enabled
+[2019-09-30 08:52:56] [Auto Update Wizard] Started
+[2019-09-30 08:52:58] [Auto Update Wizard] No New Version vFalse
+[2019-09-30 08:52:58] [Notifications] Started
+[2019-09-30 08:52:58] [Notifications] id[128] Dismissed
+[2019-09-30 08:52:58] [Installed Check] Started
+[2019-09-30 08:52:59] [Installed Check] Not Enabled
+[2019-09-30 08:52:59] [Build Check] Started
+[2019-09-30 08:52:59] [Trakt Data] Started
+[2019-09-30 08:52:59] [Trakt Data] Not Enabled
+[2019-09-30 08:52:59] [Real Debrid Data] Started
+[2019-09-30 08:52:59] [Real Debrid Data] Not Enabled
+[2019-09-30 08:52:59] [Login Data] Started
+[2019-09-30 08:52:59] [Login Data] Not Enabled
+[2019-09-30 08:52:59] [Auto Clean Up] Started
+[2019-09-30 08:52:59] [Auto Clean Up] Cache: On
+[2019-09-30 08:53:02] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-09-30 08:53:08] Ignore Log File: kodi.log
+[2019-09-30 08:53:08] Ignore Log File: kodi.old.log
+[2019-09-30 08:53:08] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-09-30 08:53:08] [Auto Clean Up] Old Thumbs: On
+[2019-09-30 08:53:10] 0 total thumbs cleaned up.
+[2019-09-30 08:53:10] [Auto Clean Up] Packages: On
+[2019-09-30 20:18:32] 2019-09-30 20:18:32.254894
+[2019-09-30 20:18:33] Continuing Start Up Script
+[2019-09-30 20:18:33] [Path Check] Started
+[2019-09-30 20:18:33] [Path Check] Good!
+[2019-09-30 20:18:33] [Auto Install Repo] Started
+[2019-09-30 20:18:33] [Auto Install Repo] Not Enabled
+[2019-09-30 20:18:33] [Auto Update Wizard] Started
+[2019-09-30 20:18:35] [Auto Update Wizard] No New Version vFalse
+[2019-09-30 20:18:35] [Notifications] Started
+[2019-09-30 20:18:36] [Notifications] id[128] Dismissed
+[2019-09-30 20:18:36] [Installed Check] Started
+[2019-09-30 20:18:36] [Installed Check] Not Enabled
+[2019-09-30 20:18:37] [Build Check] Started
+[2019-09-30 20:18:37] [Trakt Data] Started
+[2019-09-30 20:18:37] [Trakt Data] Not Enabled
+[2019-09-30 20:18:37] [Real Debrid Data] Started
+[2019-09-30 20:18:37] [Real Debrid Data] Not Enabled
+[2019-09-30 20:18:37] [Login Data] Started
+[2019-09-30 20:18:37] [Login Data] Not Enabled
+[2019-09-30 20:18:37] [Auto Clean Up] Started
+[2019-09-30 20:18:37] [Auto Clean Up] Cache: On
+[2019-09-30 20:18:37] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-09-30 20:18:44] Ignore Log File: kodi.log
+[2019-09-30 20:18:44] Ignore Log File: kodi.old.log
+[2019-09-30 20:18:45] [Auto Clean Up] Old Thumbs: On
+[2019-09-30 20:18:45] 0 total thumbs cleaned up.
+[2019-09-30 20:18:46] [Auto Clean Up] Packages: On
+[2019-10-01 02:17:21] 2019-10-01 02:17:21.754312
+[2019-10-01 02:17:23] Continuing Start Up Script
+[2019-10-01 02:17:23] [Path Check] Started
+[2019-10-01 02:17:23] [Path Check] Good!
+[2019-10-01 02:17:23] [Auto Install Repo] Started
+[2019-10-01 02:17:23] [Auto Install Repo] Not Enabled
+[2019-10-01 02:17:23] [Auto Update Wizard] Started
+[2019-10-01 02:17:25] [Auto Update Wizard] No New Version vFalse
+[2019-10-01 02:17:25] [Notifications] Started
+[2019-10-01 02:17:26] [Notifications] id[128] Dismissed
+[2019-10-01 02:17:26] [Installed Check] Started
+[2019-10-01 02:17:26] [Installed Check] Not Enabled
+[2019-10-01 02:17:26] [Build Check] Started
+[2019-10-01 02:17:26] [Trakt Data] Started
+[2019-10-01 02:17:26] [Trakt Data] Not Enabled
+[2019-10-01 02:17:26] [Real Debrid Data] Started
+[2019-10-01 02:17:26] [Real Debrid Data] Not Enabled
+[2019-10-01 02:17:26] [Login Data] Started
+[2019-10-01 02:17:26] [Login Data] Not Enabled
+[2019-10-01 02:17:26] [Auto Clean Up] Started
+[2019-10-01 02:17:26] [Auto Clean Up] Cache: On
+[2019-10-01 02:17:26] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-01 02:17:26] Ignore Log File: kodi.log
+[2019-10-01 02:17:26] Ignore Log File: kodi.old.log
+[2019-10-01 02:17:26] [Auto Clean Up] Old Thumbs: On
+[2019-10-01 02:17:26] 0 total thumbs cleaned up.
+[2019-10-01 02:17:26] [Auto Clean Up] Packages: On
+[2019-10-02 15:49:11] 2019-10-02 15:49:11.689530
+[2019-10-02 15:49:13] Continuing Start Up Script
+[2019-10-02 15:49:13] [Path Check] Started
+[2019-10-02 15:49:13] [Path Check] Good!
+[2019-10-02 15:49:13] [Auto Install Repo] Started
+[2019-10-02 15:49:13] [Auto Install Repo] Not Enabled
+[2019-10-02 15:49:13] [Auto Update Wizard] Started
+[2019-10-02 15:49:15] [Auto Update Wizard] No New Version vFalse
+[2019-10-02 15:49:15] [Notifications] Started
+[2019-10-02 15:49:16] [Notifications] id[128] Dismissed
+[2019-10-02 15:49:16] [Installed Check] Started
+[2019-10-02 15:49:16] [Installed Check] Not Enabled
+[2019-10-02 15:49:16] [Build Check] Started
+[2019-10-02 15:49:16] [Trakt Data] Started
+[2019-10-02 15:49:16] [Trakt Data] Not Enabled
+[2019-10-02 15:49:17] [Real Debrid Data] Started
+[2019-10-02 15:49:17] [Real Debrid Data] Not Enabled
+[2019-10-02 15:49:17] [Login Data] Started
+[2019-10-02 15:49:17] [Login Data] Not Enabled
+[2019-10-02 15:49:17] [Auto Clean Up] Started
+[2019-10-02 15:49:17] [Auto Clean Up] Cache: On
+[2019-10-02 15:49:19] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-02 15:49:22] Ignore Log File: kodi.log
+[2019-10-02 15:49:22] Ignore Log File: kodi.old.log
+[2019-10-02 15:49:22] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-02 15:49:22] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-02 15:49:22] [Auto Clean Up] Old Thumbs: On
+[2019-10-02 15:49:23] 0 total thumbs cleaned up.
+[2019-10-02 15:49:23] [Auto Clean Up] Packages: On
+[2019-10-03 16:52:44] 2019-10-03 16:52:43.719000
+[2019-10-03 16:52:45] Continuing Start Up Script
+[2019-10-03 16:52:45] [Path Check] Started
+[2019-10-03 16:52:45] [Path Check] Good!
+[2019-10-03 16:52:45] [Auto Install Repo] Started
+[2019-10-03 16:52:45] [Auto Install Repo] Not Enabled
+[2019-10-03 16:52:45] [Auto Update Wizard] Started
+[2019-10-03 16:52:47] [Auto Update Wizard] No New Version vFalse
+[2019-10-03 16:52:47] [Notifications] Started
+[2019-10-03 16:52:48] [Notifications] id[128] Dismissed
+[2019-10-03 16:52:48] [Installed Check] Started
+[2019-10-03 16:52:48] [Installed Check] Not Enabled
+[2019-10-03 16:52:49] [Build Check] Started
+[2019-10-03 16:52:49] [Trakt Data] Started
+[2019-10-03 16:52:49] [Trakt Data] Not Enabled
+[2019-10-03 16:52:49] [Real Debrid Data] Started
+[2019-10-03 16:52:49] [Real Debrid Data] Not Enabled
+[2019-10-03 16:52:49] [Login Data] Started
+[2019-10-03 16:52:49] [Login Data] Not Enabled
+[2019-10-03 16:52:49] [Auto Clean Up] Started
+[2019-10-03 16:52:49] [Auto Clean Up] Cache: On
+[2019-10-03 16:52:53] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-03 16:52:53] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-03 16:52:53] Ignore Log File: kodi.log
+[2019-10-03 16:52:53] Ignore Log File: kodi.old.log
+[2019-10-03 16:52:53] [Auto Clean Up] Old Thumbs: On
+[2019-10-03 16:52:53] 0 total thumbs cleaned up.
+[2019-10-03 16:52:53] [Auto Clean Up] Packages: On
+[2019-10-04 16:33:15] 2019-10-04 16:33:15.122856
+[2019-10-04 16:33:16] Continuing Start Up Script
+[2019-10-04 16:33:16] [Path Check] Started
+[2019-10-04 16:33:16] [Path Check] Good!
+[2019-10-04 16:33:16] [Auto Install Repo] Started
+[2019-10-04 16:33:16] [Auto Install Repo] Not Enabled
+[2019-10-04 16:33:16] [Auto Update Wizard] Started
+[2019-10-04 16:33:18] [Auto Update Wizard] No New Version vFalse
+[2019-10-04 16:33:19] [Notifications] Started
+[2019-10-04 16:33:19] [Notifications] id[128] Dismissed
+[2019-10-04 16:33:19] [Installed Check] Started
+[2019-10-04 16:33:19] [Installed Check] Not Enabled
+[2019-10-04 16:33:19] [Build Check] Started
+[2019-10-04 16:33:19] [Trakt Data] Started
+[2019-10-04 16:33:19] [Trakt Data] Not Enabled
+[2019-10-04 16:33:19] [Real Debrid Data] Started
+[2019-10-04 16:33:19] [Real Debrid Data] Not Enabled
+[2019-10-04 16:33:19] [Login Data] Started
+[2019-10-04 16:33:19] [Login Data] Not Enabled
+[2019-10-04 16:33:19] [Auto Clean Up] Started
+[2019-10-04 16:33:19] [Auto Clean Up] Cache: On
+[2019-10-04 16:33:23] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-04 16:33:23] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-04 16:33:23] Ignore Log File: kodi.log
+[2019-10-04 16:33:23] Ignore Log File: kodi.old.log
+[2019-10-04 16:33:23] [Auto Clean Up] Old Thumbs: On
+[2019-10-04 16:33:24] 0 total thumbs cleaned up.
+[2019-10-04 16:33:24] [Auto Clean Up] Packages: On
+[2019-10-04 20:03:43] 2019-10-04 20:03:43.555655
+[2019-10-04 20:03:44] Continuing Start Up Script
+[2019-10-04 20:03:44] [Path Check] Started
+[2019-10-04 20:03:44] [Path Check] Good!
+[2019-10-04 20:03:44] [Auto Install Repo] Started
+[2019-10-04 20:03:44] [Auto Install Repo] Not Enabled
+[2019-10-04 20:03:44] [Auto Update Wizard] Started
+[2019-10-04 20:03:46] [Auto Update Wizard] No New Version vFalse
+[2019-10-04 20:03:46] [Notifications] Started
+[2019-10-04 20:03:47] [Notifications] id[128] Dismissed
+[2019-10-04 20:03:47] [Installed Check] Started
+[2019-10-04 20:03:47] [Installed Check] Not Enabled
+[2019-10-04 20:03:47] [Build Check] Started
+[2019-10-04 20:03:47] [Trakt Data] Started
+[2019-10-04 20:03:47] [Trakt Data] Not Enabled
+[2019-10-04 20:03:47] [Real Debrid Data] Started
+[2019-10-04 20:03:47] [Real Debrid Data] Not Enabled
+[2019-10-04 20:03:47] [Login Data] Started
+[2019-10-04 20:03:47] [Login Data] Not Enabled
+[2019-10-04 20:03:47] [Auto Clean Up] Started
+[2019-10-04 20:03:48] [Auto Clean Up] Cache: On
+[2019-10-04 20:03:56] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-04 20:03:56] Ignore Log File: kodi.log
+[2019-10-04 20:03:56] Ignore Log File: kodi.old.log
+[2019-10-04 20:03:56] [Auto Clean Up] Old Thumbs: On
+[2019-10-04 20:03:56] 0 total thumbs cleaned up.
+[2019-10-04 20:03:56] [Auto Clean Up] Packages: On
+[2019-10-05 10:08:54] 2019-10-05 10:08:54.516841
+[2019-10-05 10:08:55] Continuing Start Up Script
+[2019-10-05 10:08:55] [Path Check] Started
+[2019-10-05 10:08:55] [Path Check] Good!
+[2019-10-05 10:08:56] [Auto Install Repo] Started
+[2019-10-05 10:08:56] [Auto Install Repo] Not Enabled
+[2019-10-05 10:08:56] [Auto Update Wizard] Started
+[2019-10-05 10:08:58] [Auto Update Wizard] No New Version vFalse
+[2019-10-05 10:08:58] [Notifications] Started
+[2019-10-05 10:08:59] [Notifications] id[128] Dismissed
+[2019-10-05 10:08:59] [Installed Check] Started
+[2019-10-05 10:08:59] [Installed Check] Not Enabled
+[2019-10-05 10:08:59] [Build Check] Started
+[2019-10-05 10:08:59] [Trakt Data] Started
+[2019-10-05 10:08:59] [Trakt Data] Not Enabled
+[2019-10-05 10:08:59] [Real Debrid Data] Started
+[2019-10-05 10:08:59] [Real Debrid Data] Not Enabled
+[2019-10-05 10:08:59] [Login Data] Started
+[2019-10-05 10:08:59] [Login Data] Not Enabled
+[2019-10-05 10:08:59] [Auto Clean Up] Started
+[2019-10-05 10:08:59] [Auto Clean Up] Cache: On
+[2019-10-05 10:09:03] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-05 10:09:04] Ignore Log File: kodi.log
+[2019-10-05 10:09:04] Ignore Log File: kodi.old.log
+[2019-10-05 10:09:04] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-05 10:09:04] [Auto Clean Up] Old Thumbs: On
+[2019-10-05 10:09:08] 0 total thumbs cleaned up.
+[2019-10-05 10:09:08] [Auto Clean Up] Packages: On
+[2019-10-05 15:59:04] 2019-10-05 15:59:04.955762
+[2019-10-05 15:59:06] Continuing Start Up Script
+[2019-10-05 15:59:06] [Path Check] Started
+[2019-10-05 15:59:06] [Path Check] Good!
+[2019-10-05 15:59:06] [Auto Install Repo] Started
+[2019-10-05 15:59:06] [Auto Install Repo] Not Enabled
+[2019-10-05 15:59:06] [Auto Update Wizard] Started
+[2019-10-05 15:59:08] [Auto Update Wizard] No New Version vFalse
+[2019-10-05 15:59:08] [Notifications] Started
+[2019-10-05 15:59:09] [Notifications] id[128] Dismissed
+[2019-10-05 15:59:09] [Installed Check] Started
+[2019-10-05 15:59:09] [Installed Check] Not Enabled
+[2019-10-05 15:59:09] [Build Check] Started
+[2019-10-05 15:59:09] [Trakt Data] Started
+[2019-10-05 15:59:09] [Trakt Data] Not Enabled
+[2019-10-05 15:59:09] [Real Debrid Data] Started
+[2019-10-05 15:59:09] [Real Debrid Data] Not Enabled
+[2019-10-05 15:59:09] [Login Data] Started
+[2019-10-05 15:59:09] [Login Data] Not Enabled
+[2019-10-05 15:59:09] [Auto Clean Up] Started
+[2019-10-05 15:59:09] [Auto Clean Up] Cache: On
+[2019-10-05 15:59:19] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-05 15:59:20] Ignore Log File: kodi.log
+[2019-10-05 15:59:20] Ignore Log File: kodi.old.log
+[2019-10-05 15:59:20] [Auto Clean Up] Old Thumbs: On
+[2019-10-05 15:59:20] 0 total thumbs cleaned up.
+[2019-10-05 15:59:20] [Auto Clean Up] Packages: On
+[2019-10-05 22:26:41] 2019-10-05 22:26:41.709192
+[2019-10-05 22:26:42] Continuing Start Up Script
+[2019-10-05 22:26:42] [Path Check] Started
+[2019-10-05 22:26:43] [Path Check] Good!
+[2019-10-05 22:26:43] [Auto Install Repo] Started
+[2019-10-05 22:26:43] [Auto Install Repo] Not Enabled
+[2019-10-05 22:26:43] [Auto Update Wizard] Started
+[2019-10-05 22:26:46] [Auto Update Wizard] No New Version vFalse
+[2019-10-05 22:26:46] [Notifications] Started
+[2019-10-05 22:26:47] [Notifications] id[128] Dismissed
+[2019-10-05 22:26:47] [Installed Check] Started
+[2019-10-05 22:26:47] [Installed Check] Not Enabled
+[2019-10-05 22:26:47] [Build Check] Started
+[2019-10-05 22:26:47] [Trakt Data] Started
+[2019-10-05 22:26:47] [Trakt Data] Not Enabled
+[2019-10-05 22:26:47] [Real Debrid Data] Started
+[2019-10-05 22:26:47] [Real Debrid Data] Not Enabled
+[2019-10-05 22:26:47] [Login Data] Started
+[2019-10-05 22:26:47] [Login Data] Not Enabled
+[2019-10-05 22:26:47] [Auto Clean Up] Started
+[2019-10-05 22:26:48] [Auto Clean Up] Cache: On
+[2019-10-05 22:26:49] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-05 22:26:50] Ignore Log File: kodi.log
+[2019-10-05 22:26:50] Ignore Log File: kodi.old.log
+[2019-10-05 22:26:50] [Auto Clean Up] Old Thumbs: On
+[2019-10-05 22:26:50] 0 total thumbs cleaned up.
+[2019-10-05 22:26:50] [Auto Clean Up] Packages: On
+[2019-10-06 09:40:48] 2019-10-06 09:40:48.409138
+[2019-10-06 09:40:49] Continuing Start Up Script
+[2019-10-06 09:40:49] [Path Check] Started
+[2019-10-06 09:40:49] [Path Check] Good!
+[2019-10-06 09:40:49] [Auto Install Repo] Started
+[2019-10-06 09:40:49] [Auto Install Repo] Not Enabled
+[2019-10-06 09:40:50] [Auto Update Wizard] Started
+[2019-10-06 09:40:51] [Auto Update Wizard] No New Version vFalse
+[2019-10-06 09:40:51] [Notifications] Started
+[2019-10-06 09:40:52] [Notifications] id[128] Dismissed
+[2019-10-06 09:40:52] [Installed Check] Started
+[2019-10-06 09:40:52] [Installed Check] Not Enabled
+[2019-10-06 09:40:52] [Build Check] Started
+[2019-10-06 09:40:52] [Trakt Data] Started
+[2019-10-06 09:40:52] [Trakt Data] Not Enabled
+[2019-10-06 09:40:52] [Real Debrid Data] Started
+[2019-10-06 09:40:52] [Real Debrid Data] Not Enabled
+[2019-10-06 09:40:52] [Login Data] Started
+[2019-10-06 09:40:52] [Login Data] Not Enabled
+[2019-10-06 09:40:52] [Auto Clean Up] Started
+[2019-10-06 09:40:54] [Auto Clean Up] Cache: On
+[2019-10-06 09:40:54] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-06 09:40:58] Ignore Log File: kodi.log
+[2019-10-06 09:40:58] Ignore Log File: kodi.old.log
+[2019-10-06 09:40:58] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-06 09:40:58] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-06 09:40:58] [Auto Clean Up] Old Thumbs: On
+[2019-10-06 09:40:58] 0 total thumbs cleaned up.
+[2019-10-06 09:40:59] [Auto Clean Up] Packages: On
+[2019-10-07 01:26:55] 2019-10-07 01:26:55.753029
+[2019-10-07 01:26:57] Continuing Start Up Script
+[2019-10-07 01:26:57] [Path Check] Started
+[2019-10-07 01:26:57] [Path Check] Good!
+[2019-10-07 01:26:57] [Auto Install Repo] Started
+[2019-10-07 01:26:57] [Auto Install Repo] Not Enabled
+[2019-10-07 01:26:57] [Auto Update Wizard] Started
+[2019-10-07 01:26:59] [Auto Update Wizard] No New Version vFalse
+[2019-10-07 01:26:59] [Notifications] Started
+[2019-10-07 01:26:59] [Notifications] id[128] Dismissed
+[2019-10-07 01:26:59] [Installed Check] Started
+[2019-10-07 01:26:59] [Installed Check] Not Enabled
+[2019-10-07 01:26:59] [Build Check] Started
+[2019-10-07 01:26:59] [Trakt Data] Started
+[2019-10-07 01:26:59] [Trakt Data] Not Enabled
+[2019-10-07 01:26:59] [Real Debrid Data] Started
+[2019-10-07 01:26:59] [Real Debrid Data] Not Enabled
+[2019-10-07 01:26:59] [Login Data] Started
+[2019-10-07 01:26:59] [Login Data] Not Enabled
+[2019-10-07 01:26:59] [Auto Clean Up] Started
+[2019-10-07 01:27:00] [Auto Clean Up] Cache: On
+[2019-10-07 01:27:02] Ignore Log File: kodi.log
+[2019-10-07 01:27:02] Ignore Log File: kodi.old.log
+[2019-10-07 01:27:02] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-07 01:27:02] [Auto Clean Up] Old Thumbs: On
+[2019-10-07 01:27:03] 5 total thumbs cleaned up.
+[2019-10-07 01:27:04] [Auto Clean Up] Packages: On
+[2019-10-07 19:44:38] 2019-10-07 19:44:38.855620
+[2019-10-07 19:44:40] Continuing Start Up Script
+[2019-10-07 19:44:40] [Path Check] Started
+[2019-10-07 19:44:40] [Path Check] Good!
+[2019-10-07 19:44:40] [Auto Install Repo] Started
+[2019-10-07 19:44:40] [Auto Install Repo] Not Enabled
+[2019-10-07 19:44:40] [Auto Update Wizard] Started
+[2019-10-07 19:44:42] [Auto Update Wizard] No New Version vFalse
+[2019-10-07 19:44:42] [Notifications] Started
+[2019-10-07 19:44:44] [Notifications] id[128] Dismissed
+[2019-10-07 19:44:44] [Installed Check] Started
+[2019-10-07 19:44:45] [Installed Check] Not Enabled
+[2019-10-07 19:44:45] [Build Check] Started
+[2019-10-07 19:44:45] [Trakt Data] Started
+[2019-10-07 19:44:45] [Trakt Data] Not Enabled
+[2019-10-07 19:44:45] [Real Debrid Data] Started
+[2019-10-07 19:44:45] [Real Debrid Data] Not Enabled
+[2019-10-07 19:44:45] [Login Data] Started
+[2019-10-07 19:44:45] [Login Data] Not Enabled
+[2019-10-07 19:44:45] [Auto Clean Up] Started
+[2019-10-07 19:44:45] [Auto Clean Up] Cache: On
+[2019-10-07 19:44:47] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-07 19:44:47] Ignore Log File: kodi.log
+[2019-10-07 19:44:47] Ignore Log File: kodi.old.log
+[2019-10-07 19:44:47] [Auto Clean Up] Old Thumbs: On
+[2019-10-07 19:44:48] 0 total thumbs cleaned up.
+[2019-10-07 19:44:48] [Auto Clean Up] Packages: On
+[2019-10-10 15:16:19] 2019-10-10 15:16:19.270674
+[2019-10-10 15:16:20] Continuing Start Up Script
+[2019-10-10 15:16:21] [Path Check] Started
+[2019-10-10 15:16:21] [Path Check] Good!
+[2019-10-10 15:16:21] [Auto Install Repo] Started
+[2019-10-10 15:16:21] [Auto Install Repo] Not Enabled
+[2019-10-10 15:16:21] [Auto Update Wizard] Started
+[2019-10-10 15:16:23] [Auto Update Wizard] No New Version vFalse
+[2019-10-10 15:16:23] [Notifications] Started
+[2019-10-10 15:16:24] [Notifications] id[128] Dismissed
+[2019-10-10 15:16:24] [Installed Check] Started
+[2019-10-10 15:16:24] [Installed Check] Not Enabled
+[2019-10-10 15:16:24] [Build Check] Started
+[2019-10-10 15:16:24] [Trakt Data] Started
+[2019-10-10 15:16:24] [Trakt Data] Not Enabled
+[2019-10-10 15:16:24] [Real Debrid Data] Started
+[2019-10-10 15:16:24] [Real Debrid Data] Not Enabled
+[2019-10-10 15:16:25] [Login Data] Started
+[2019-10-10 15:16:25] [Login Data] Not Enabled
+[2019-10-10 15:16:25] [Auto Clean Up] Started
+[2019-10-10 15:16:25] [Auto Clean Up] Cache: On
+[2019-10-10 15:16:26] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-10 15:16:31] Ignore Log File: kodi.log
+[2019-10-10 15:16:31] Ignore Log File: kodi.old.log
+[2019-10-10 15:16:31] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-10 15:16:31] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-10 15:16:31] [Auto Clean Up] Old Thumbs: On
+[2019-10-10 15:16:35] 75 total thumbs cleaned up.
+[2019-10-10 15:16:38] [Auto Clean Up] Packages: On
+[2019-10-11 12:44:42] 2019-10-11 12:44:41.910618
+[2019-10-11 12:44:43] Continuing Start Up Script
+[2019-10-11 12:44:43] [Path Check] Started
+[2019-10-11 12:44:43] [Path Check] Good!
+[2019-10-11 12:44:43] [Auto Install Repo] Started
+[2019-10-11 12:44:43] [Auto Install Repo] Not Enabled
+[2019-10-11 12:44:43] [Auto Update Wizard] Started
+[2019-10-11 12:44:45] [Auto Update Wizard] No New Version vFalse
+[2019-10-11 12:44:45] [Notifications] Started
+[2019-10-11 12:44:46] [Notifications] id[128] Dismissed
+[2019-10-11 12:44:46] [Installed Check] Started
+[2019-10-11 12:44:46] [Installed Check] Not Enabled
+[2019-10-11 12:44:46] [Build Check] Started
+[2019-10-11 12:44:47] [Trakt Data] Started
+[2019-10-11 12:44:47] [Trakt Data] Not Enabled
+[2019-10-11 12:44:47] [Real Debrid Data] Started
+[2019-10-11 12:44:47] [Real Debrid Data] Not Enabled
+[2019-10-11 12:44:47] [Login Data] Started
+[2019-10-11 12:44:47] [Login Data] Not Enabled
+[2019-10-11 12:44:47] [Auto Clean Up] Started
+[2019-10-11 12:44:47] [Auto Clean Up] Cache: On
+[2019-10-11 12:45:03] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-11 12:45:03] Ignore Log File: kodi.log
+[2019-10-11 12:45:03] Ignore Log File: kodi.old.log
+[2019-10-11 12:45:04] [Auto Clean Up] Old Thumbs: On
+[2019-10-11 12:45:05] 6 total thumbs cleaned up.
+[2019-10-11 12:45:05] [Auto Clean Up] Packages: On
+[2019-10-11 20:40:57] 2019-10-11 20:40:57.811296
+[2019-10-11 20:40:59] Continuing Start Up Script
+[2019-10-11 20:40:59] [Path Check] Started
+[2019-10-11 20:40:59] [Path Check] Good!
+[2019-10-11 20:40:59] [Auto Install Repo] Started
+[2019-10-11 20:40:59] [Auto Install Repo] Not Enabled
+[2019-10-11 20:40:59] [Auto Update Wizard] Started
+[2019-10-11 20:41:02] [Auto Update Wizard] No New Version vFalse
+[2019-10-11 20:41:02] [Notifications] Started
+[2019-10-11 20:41:03] [Notifications] id[128] Dismissed
+[2019-10-11 20:41:03] [Installed Check] Started
+[2019-10-11 20:41:03] [Installed Check] Not Enabled
+[2019-10-11 20:41:03] [Build Check] Started
+[2019-10-11 20:41:03] [Trakt Data] Started
+[2019-10-11 20:41:03] [Trakt Data] Not Enabled
+[2019-10-11 20:41:03] [Real Debrid Data] Started
+[2019-10-11 20:41:03] [Real Debrid Data] Not Enabled
+[2019-10-11 20:41:03] [Login Data] Started
+[2019-10-11 20:41:04] [Login Data] Not Enabled
+[2019-10-11 20:41:04] [Auto Clean Up] Started
+[2019-10-11 20:41:04] [Auto Clean Up] Cache: On
+[2019-10-11 20:41:07] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-10-11 20:41:08] Ignore Log File: kodi.log
+[2019-10-11 20:41:08] Ignore Log File: kodi.old.log
+[2019-10-11 20:41:08] [Success] cleared 2 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-11 20:41:08] [Auto Clean Up] Old Thumbs: On
+[2019-10-11 20:41:09] 0 total thumbs cleaned up.
+[2019-10-11 20:41:10] [Auto Clean Up] Packages: On
+[2019-10-12 20:52:20] 2019-10-12 20:52:20.216483
+[2019-10-12 20:52:21] Continuing Start Up Script
+[2019-10-12 20:52:21] [Path Check] Started
+[2019-10-12 20:52:21] [Path Check] Good!
+[2019-10-12 20:52:21] [Auto Install Repo] Started
+[2019-10-12 20:52:21] [Auto Install Repo] Not Enabled
+[2019-10-12 20:52:22] [Auto Update Wizard] Started
+[2019-10-12 20:52:24] [Auto Update Wizard] No New Version vFalse
+[2019-10-12 20:52:24] [Notifications] Started
+[2019-10-12 20:52:25] [Notifications] id: 129
+[2019-10-12 20:52:28] [Notification] NotifyID 129 Remind Me Later
+[2019-10-12 20:52:28] [Notifications] Complete
+[2019-10-12 20:52:28] [Installed Check] Started
+[2019-10-12 20:52:28] [Installed Check] Not Enabled
+[2019-10-12 20:52:28] [Build Check] Started
+[2019-10-12 20:52:28] [Trakt Data] Started
+[2019-10-12 20:52:28] [Trakt Data] Not Enabled
+[2019-10-12 20:52:28] [Real Debrid Data] Started
+[2019-10-12 20:52:28] [Real Debrid Data] Not Enabled
+[2019-10-12 20:52:28] [Login Data] Started
+[2019-10-12 20:52:28] [Login Data] Not Enabled
+[2019-10-12 20:52:28] [Auto Clean Up] Started
+[2019-10-12 20:52:28] [Auto Clean Up] Cache: On
+[2019-10-12 20:52:28] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-12 20:52:28] Ignore Log File: kodi.log
+[2019-10-12 20:52:28] Ignore Log File: kodi.old.log
+[2019-10-12 20:52:28] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-12 20:52:28] [Auto Clean Up] Old Thumbs: On
+[2019-10-12 20:52:32] 0 total thumbs cleaned up.
+[2019-10-12 20:52:33] [Auto Clean Up] Packages: On
+[2019-10-13 14:19:29] 2019-10-13 14:19:29.572832
+[2019-10-13 14:19:30] Continuing Start Up Script
+[2019-10-13 14:19:30] [Path Check] Started
+[2019-10-13 14:19:31] [Path Check] Good!
+[2019-10-13 14:19:31] [Auto Install Repo] Started
+[2019-10-13 14:19:31] [Auto Install Repo] Not Enabled
+[2019-10-13 14:19:31] [Auto Update Wizard] Started
+[2019-10-13 14:19:33] [Auto Update Wizard] No New Version vFalse
+[2019-10-13 14:19:33] [Notifications] Started
+[2019-10-13 14:19:43] [Notification] NotifyID 129 Dismissed
+[2019-10-13 14:19:43] [Installed Check] Started
+[2019-10-13 14:19:43] [Installed Check] Not Enabled
+[2019-10-13 14:19:43] [Build Check] Started
+[2019-10-13 14:19:43] [Trakt Data] Started
+[2019-10-13 14:19:43] [Trakt Data] Not Enabled
+[2019-10-13 14:19:43] [Real Debrid Data] Started
+[2019-10-13 14:19:44] [Real Debrid Data] Not Enabled
+[2019-10-13 14:19:44] [Login Data] Started
+[2019-10-13 14:19:44] [Login Data] Not Enabled
+[2019-10-13 14:19:44] [Auto Clean Up] Started
+[2019-10-13 14:19:44] [Auto Clean Up] Cache: On
+[2019-10-13 14:19:46] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-13 14:19:46] Ignore Log File: kodi.log
+[2019-10-13 14:19:46] Ignore Log File: kodi.old.log
+[2019-10-13 14:19:46] [Auto Clean Up] Old Thumbs: On
+[2019-10-13 14:19:47] 36 total thumbs cleaned up.
+[2019-10-13 14:19:48] [Auto Clean Up] Packages: On
+[2019-10-15 18:37:09] 2019-10-15 18:37:08.927648
+[2019-10-15 18:37:10] Continuing Start Up Script
+[2019-10-15 18:37:10] [Path Check] Started
+[2019-10-15 18:37:10] [Path Check] Good!
+[2019-10-15 18:37:10] [Auto Install Repo] Started
+[2019-10-15 18:37:11] [Auto Install Repo] Not Enabled
+[2019-10-15 18:37:11] [Auto Update Wizard] Started
+[2019-10-15 18:37:13] [Auto Update Wizard] No New Version vFalse
+[2019-10-15 18:37:13] [Notifications] Started
+[2019-10-15 18:37:14] [Notifications] id[129] Dismissed
+[2019-10-15 18:37:14] [Installed Check] Started
+[2019-10-15 18:37:14] [Installed Check] Not Enabled
+[2019-10-15 18:37:14] [Build Check] Started
+[2019-10-15 18:37:14] [Trakt Data] Started
+[2019-10-15 18:37:14] [Trakt Data] Not Enabled
+[2019-10-15 18:37:14] [Real Debrid Data] Started
+[2019-10-15 18:37:14] [Real Debrid Data] Not Enabled
+[2019-10-15 18:37:14] [Login Data] Started
+[2019-10-15 18:37:14] [Login Data] Not Enabled
+[2019-10-15 18:37:14] [Auto Clean Up] Started
+[2019-10-15 18:37:15] [Auto Clean Up] Cache: On
+[2019-10-15 18:37:16] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-15 18:37:20] Ignore Log File: kodi.log
+[2019-10-15 18:37:20] Ignore Log File: kodi.old.log
+[2019-10-15 18:37:21] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-15 18:37:21] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-15 18:37:21] [Auto Clean Up] Old Thumbs: On
+[2019-10-15 18:37:22] 85 total thumbs cleaned up.
+[2019-10-15 18:37:26] [Auto Clean Up] Packages: On
+[2019-10-16 04:56:47] 2019-10-16 04:56:47.359435
+[2019-10-16 04:56:48] Continuing Start Up Script
+[2019-10-16 04:56:48] [Path Check] Started
+[2019-10-16 04:56:49] [Path Check] Good!
+[2019-10-16 04:56:49] [Auto Install Repo] Started
+[2019-10-16 04:56:49] [Auto Install Repo] Not Enabled
+[2019-10-16 04:56:49] [Auto Update Wizard] Started
+[2019-10-16 04:56:51] [Auto Update Wizard] No New Version vFalse
+[2019-10-16 04:56:51] [Notifications] Started
+[2019-10-16 04:56:51] [Notifications] id[129] Dismissed
+[2019-10-16 04:56:51] [Installed Check] Started
+[2019-10-16 04:56:51] [Installed Check] Not Enabled
+[2019-10-16 04:56:51] [Build Check] Started
+[2019-10-16 04:56:51] [Trakt Data] Started
+[2019-10-16 04:56:51] [Trakt Data] Not Enabled
+[2019-10-16 04:56:51] [Real Debrid Data] Started
+[2019-10-16 04:56:51] [Real Debrid Data] Not Enabled
+[2019-10-16 04:56:51] [Login Data] Started
+[2019-10-16 04:56:51] [Login Data] Not Enabled
+[2019-10-16 04:56:51] [Auto Clean Up] Started
+[2019-10-16 04:56:52] [Auto Clean Up] Cache: On
+[2019-10-16 04:56:52] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-16 04:56:52] Ignore Log File: kodi.log
+[2019-10-16 04:56:52] Ignore Log File: kodi.old.log
+[2019-10-16 04:56:52] [Auto Clean Up] Old Thumbs: On
+[2019-10-16 04:56:53] 0 total thumbs cleaned up.
+[2019-10-16 04:56:53] [Auto Clean Up] Packages: On
+[2019-10-23 21:48:50] 2019-10-23 21:48:50.597322
+[2019-10-23 21:48:52] Continuing Start Up Script
+[2019-10-23 21:48:52] [Path Check] Started
+[2019-10-23 21:48:52] [Path Check] Good!
+[2019-10-23 21:48:52] [Auto Install Repo] Started
+[2019-10-23 21:48:52] [Auto Install Repo] Not Enabled
+[2019-10-23 21:48:52] [Auto Update Wizard] Started
+[2019-10-23 21:48:54] [Auto Update Wizard] No New Version vFalse
+[2019-10-23 21:48:54] [Notifications] Started
+[2019-10-23 21:48:55] [Notifications] id[129] Dismissed
+[2019-10-23 21:48:55] [Installed Check] Started
+[2019-10-23 21:48:55] [Installed Check] Not Enabled
+[2019-10-23 21:48:55] [Build Check] Started
+[2019-10-23 21:48:55] [Trakt Data] Started
+[2019-10-23 21:48:55] [Trakt Data] Not Enabled
+[2019-10-23 21:48:55] [Real Debrid Data] Started
+[2019-10-23 21:48:55] [Real Debrid Data] Not Enabled
+[2019-10-23 21:48:55] [Login Data] Started
+[2019-10-23 21:48:55] [Login Data] Not Enabled
+[2019-10-23 21:48:55] [Auto Clean Up] Started
+[2019-10-23 21:48:56] [Auto Clean Up] Cache: On
+[2019-10-23 21:48:57] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-23 21:48:57] Ignore Log File: kodi.log
+[2019-10-23 21:48:57] Ignore Log File: kodi.old.log
+[2019-10-23 21:48:57] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-10-23 21:48:57] [Auto Clean Up] Old Thumbs: On
+[2019-10-23 21:49:08] 451 total thumbs cleaned up.
+[2019-10-23 21:49:09] [Auto Clean Up] Packages: On
+[2019-10-24 14:59:48] 2019-10-24 14:59:48.628595
+[2019-10-24 14:59:50] Continuing Start Up Script
+[2019-10-24 14:59:50] [Path Check] Started
+[2019-10-24 14:59:50] [Path Check] Good!
+[2019-10-24 14:59:50] [Auto Install Repo] Started
+[2019-10-24 14:59:50] [Auto Install Repo] Not Enabled
+[2019-10-24 14:59:50] [Auto Update Wizard] Started
+[2019-10-24 14:59:52] [Auto Update Wizard] No New Version vFalse
+[2019-10-24 14:59:52] [Notifications] Started
+[2019-10-24 14:59:54] [Notifications] id[129] Dismissed
+[2019-10-24 14:59:54] [Installed Check] Started
+[2019-10-24 14:59:54] [Installed Check] Not Enabled
+[2019-10-24 14:59:54] [Build Check] Started
+[2019-10-24 14:59:54] [Trakt Data] Started
+[2019-10-24 14:59:54] [Trakt Data] Not Enabled
+[2019-10-24 14:59:54] [Real Debrid Data] Started
+[2019-10-24 14:59:54] [Real Debrid Data] Not Enabled
+[2019-10-24 14:59:54] [Login Data] Started
+[2019-10-24 14:59:54] [Login Data] Not Enabled
+[2019-10-24 14:59:54] [Auto Clean Up] Started
+[2019-10-24 14:59:54] [Auto Clean Up] Cache: On
+[2019-10-24 14:59:57] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-24 15:00:08] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-24 15:00:08] Ignore Log File: kodi.log
+[2019-10-24 15:00:08] Ignore Log File: kodi.old.log
+[2019-10-24 15:00:09] [Auto Clean Up] Old Thumbs: On
+[2019-10-24 15:00:09] 0 total thumbs cleaned up.
+[2019-10-24 15:00:09] [Auto Clean Up] Packages: On
+[2019-10-26 22:11:48] 2019-10-26 22:11:47.235844
+[2019-10-26 22:11:50] Continuing Start Up Script
+[2019-10-26 22:11:50] [Path Check] Started
+[2019-10-26 22:11:50] [Path Check] Good!
+[2019-10-26 22:11:50] [Auto Install Repo] Started
+[2019-10-26 22:11:50] [Auto Install Repo] Not Enabled
+[2019-10-26 22:11:51] [Auto Update Wizard] Started
+[2019-10-26 22:11:53] [Auto Update Wizard] No New Version vFalse
+[2019-10-26 22:11:53] [Notifications] Started
+[2019-10-26 22:11:54] [Notifications] id[129] Dismissed
+[2019-10-26 22:11:54] [Installed Check] Started
+[2019-10-26 22:11:54] [Installed Check] Not Enabled
+[2019-10-26 22:11:54] [Build Check] Started
+[2019-10-26 22:11:54] [Trakt Data] Started
+[2019-10-26 22:11:54] [Trakt Data] Not Enabled
+[2019-10-26 22:11:54] [Real Debrid Data] Started
+[2019-10-26 22:11:55] [Real Debrid Data] Not Enabled
+[2019-10-26 22:11:55] [Login Data] Started
+[2019-10-26 22:11:55] [Login Data] Not Enabled
+[2019-10-26 22:11:55] [Auto Clean Up] Started
+[2019-10-26 22:11:55] [Auto Clean Up] Cache: On
+[2019-10-26 22:12:00] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-10-26 22:12:00] Ignore Log File: kodi.log
+[2019-10-26 22:12:00] Ignore Log File: kodi.old.log
+[2019-10-26 22:12:00] [Auto Clean Up] Old Thumbs: On
+[2019-10-26 22:12:02] 0 total thumbs cleaned up.
+[2019-10-26 22:12:02] [Auto Clean Up] Packages: On
+[2019-10-28 23:24:36] 2019-10-28 23:24:36.235178
+[2019-10-28 23:24:37] Continuing Start Up Script
+[2019-10-28 23:24:37] [Path Check] Started
+[2019-10-28 23:24:37] [Path Check] Good!
+[2019-10-28 23:24:37] [Auto Install Repo] Started
+[2019-10-28 23:24:37] [Auto Install Repo] Not Enabled
+[2019-10-28 23:24:37] [Auto Update Wizard] Started
+[2019-10-28 23:24:40] [Auto Update Wizard] No New Version vFalse
+[2019-10-28 23:24:41] [Notifications] Started
+[2019-10-28 23:24:42] [Notifications] id: 130
+[2019-10-28 23:25:03] [Notification] NotifyID 130 Dismissed
+[2019-10-28 23:25:03] [Notifications] Complete
+[2019-10-28 23:25:03] [Installed Check] Started
+[2019-10-28 23:25:03] [Installed Check] Not Enabled
+[2019-10-28 23:25:03] [Build Check] Started
+[2019-10-28 23:25:03] [Trakt Data] Started
+[2019-10-28 23:25:03] [Trakt Data] Not Enabled
+[2019-10-28 23:25:03] [Real Debrid Data] Started
+[2019-10-28 23:25:03] [Real Debrid Data] Not Enabled
+[2019-10-28 23:25:03] [Login Data] Started
+[2019-10-28 23:25:03] [Login Data] Not Enabled
+[2019-10-28 23:25:03] [Auto Clean Up] Started
+[2019-10-28 23:25:03] [Auto Clean Up] Cache: On
+[2019-10-28 23:25:03] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-10-28 23:25:03] Ignore Log File: kodi.log
+[2019-10-28 23:25:03] Ignore Log File: kodi.old.log
+[2019-10-28 23:25:03] [Auto Clean Up] Old Thumbs: On
+[2019-10-28 23:25:03] 0 total thumbs cleaned up.
+[2019-10-28 23:25:03] [Auto Clean Up] Packages: On
+[2019-11-02 20:24:48] 2019-11-02 20:24:48.183681
+[2019-11-02 20:24:49] Continuing Start Up Script
+[2019-11-02 20:24:49] [Path Check] Started
+[2019-11-02 20:24:49] [Path Check] Good!
+[2019-11-02 20:24:49] [Auto Install Repo] Started
+[2019-11-02 20:24:50] [Auto Install Repo] Not Enabled
+[2019-11-02 20:24:50] [Auto Update Wizard] Started
+[2019-11-02 20:24:52] [Auto Update Wizard] No New Version vFalse
+[2019-11-02 20:24:52] [Notifications] Started
+[2019-11-02 20:24:53] [Notifications] id[130] Dismissed
+[2019-11-02 20:24:53] [Installed Check] Started
+[2019-11-02 20:24:53] [Installed Check] Not Enabled
+[2019-11-02 20:24:53] [Build Check] Started
+[2019-11-02 20:24:53] [Trakt Data] Started
+[2019-11-02 20:24:53] [Trakt Data] Not Enabled
+[2019-11-02 20:24:53] [Real Debrid Data] Started
+[2019-11-02 20:24:53] [Real Debrid Data] Not Enabled
+[2019-11-02 20:24:53] [Login Data] Started
+[2019-11-02 20:24:53] [Login Data] Not Enabled
+[2019-11-02 20:24:53] [Auto Clean Up] Started
+[2019-11-02 20:24:53] [Auto Clean Up] Cache: On
+[2019-11-02 20:25:04] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-02 20:25:08] Ignore Log File: kodi.log
+[2019-11-02 20:25:08] Ignore Log File: kodi.old.log
+[2019-11-02 20:25:08] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-11-02 20:25:08] [Success] cleared 3 files from /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp
+[2019-11-02 20:25:09] [Auto Clean Up] Old Thumbs: On
+[2019-11-02 20:25:14] 73 total thumbs cleaned up.
+[2019-11-02 20:25:17] [Auto Clean Up] Packages: On
+[2019-11-05 13:01:21] 2019-11-05 13:01:21.363492
+[2019-11-05 13:01:22] Continuing Start Up Script
+[2019-11-05 13:01:22] [Path Check] Started
+[2019-11-05 13:01:22] [Path Check] Good!
+[2019-11-05 13:01:23] [Auto Install Repo] Started
+[2019-11-05 13:01:23] [Auto Install Repo] Not Enabled
+[2019-11-05 13:01:23] [Auto Update Wizard] Started
+[2019-11-05 13:01:26] [Auto Update Wizard] No New Version vFalse
+[2019-11-05 13:01:26] [Notifications] Started
+[2019-11-05 13:01:27] [Notifications] id[130] Dismissed
+[2019-11-05 13:01:27] [Installed Check] Started
+[2019-11-05 13:01:27] [Installed Check] Not Enabled
+[2019-11-05 13:01:27] [Build Check] Started
+[2019-11-05 13:01:27] [Trakt Data] Started
+[2019-11-05 13:01:27] [Trakt Data] Not Enabled
+[2019-11-05 13:01:27] [Real Debrid Data] Started
+[2019-11-05 13:01:27] [Real Debrid Data] Not Enabled
+[2019-11-05 13:01:27] [Login Data] Started
+[2019-11-05 13:01:28] [Login Data] Not Enabled
+[2019-11-05 13:01:28] [Auto Clean Up] Started
+[2019-11-05 13:01:29] [Auto Clean Up] Cache: On
+[2019-11-05 13:01:36] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-05 13:01:45] Ignore Log File: kodi.log
+[2019-11-05 13:01:45] Ignore Log File: kodi.old.log
+[2019-11-05 13:01:45] [Auto Clean Up] Old Thumbs: On
+[2019-11-05 13:01:46] 0 total thumbs cleaned up.
+[2019-11-05 13:01:46] [Auto Clean Up] Packages: On
+[2019-11-06 22:12:43] 2019-11-06 22:12:43.639527
+[2019-11-06 22:12:44] Continuing Start Up Script
+[2019-11-06 22:12:44] [Path Check] Started
+[2019-11-06 22:12:45] [Path Check] Good!
+[2019-11-06 22:12:45] [Auto Install Repo] Started
+[2019-11-06 22:12:45] [Auto Install Repo] Not Enabled
+[2019-11-06 22:12:45] [Auto Update Wizard] Started
+[2019-11-06 22:12:47] [Auto Update Wizard] No New Version vFalse
+[2019-11-06 22:12:47] [Notifications] Started
+[2019-11-06 22:12:48] [Notifications] id[130] Dismissed
+[2019-11-06 22:12:48] [Installed Check] Started
+[2019-11-06 22:12:48] [Installed Check] Not Enabled
+[2019-11-06 22:12:48] [Build Check] Started
+[2019-11-06 22:12:48] [Trakt Data] Started
+[2019-11-06 22:12:48] [Trakt Data] Not Enabled
+[2019-11-06 22:12:48] [Real Debrid Data] Started
+[2019-11-06 22:12:48] [Real Debrid Data] Not Enabled
+[2019-11-06 22:12:48] [Login Data] Started
+[2019-11-06 22:12:48] [Login Data] Not Enabled
+[2019-11-06 22:12:48] [Auto Clean Up] Started
+[2019-11-06 22:12:48] [Auto Clean Up] Cache: On
+[2019-11-06 22:12:50] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-06 22:12:52] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-11-06 22:12:52] Ignore Log File: kodi.log
+[2019-11-06 22:12:52] Ignore Log File: kodi.old.log
+[2019-11-06 22:12:53] [Auto Clean Up] Old Thumbs: On
+[2019-11-06 22:12:53] 128 total thumbs cleaned up.
+[2019-11-06 22:12:53] [Auto Clean Up] Packages: On
+[2019-11-11 00:04:57] 2019-11-11 00:04:56.940634
+[2019-11-11 00:04:58] Continuing Start Up Script
+[2019-11-11 00:04:58] [Path Check] Started
+[2019-11-11 00:04:58] [Path Check] Good!
+[2019-11-11 00:04:58] [Auto Install Repo] Started
+[2019-11-11 00:04:58] [Auto Install Repo] Not Enabled
+[2019-11-11 00:04:58] [Auto Update Wizard] Started
+[2019-11-11 00:05:00] [Auto Update Wizard] No New Version vFalse
+[2019-11-11 00:05:00] [Notifications] Started
+[2019-11-11 00:05:01] [Notifications] id[130] Dismissed
+[2019-11-11 00:05:02] [Installed Check] Started
+[2019-11-11 00:05:02] [Installed Check] Not Enabled
+[2019-11-11 00:05:02] [Build Check] Started
+[2019-11-11 00:05:02] [Trakt Data] Started
+[2019-11-11 00:05:02] [Trakt Data] Not Enabled
+[2019-11-11 00:05:02] [Real Debrid Data] Started
+[2019-11-11 00:05:03] [Real Debrid Data] Not Enabled
+[2019-11-11 00:05:03] [Login Data] Started
+[2019-11-11 00:05:03] [Login Data] Not Enabled
+[2019-11-11 00:05:03] [Auto Clean Up] Started
+[2019-11-11 00:05:03] [Auto Clean Up] Cache: On
+[2019-11-11 00:05:03] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-11 00:05:03] Ignore Log File: kodi.log
+[2019-11-11 00:05:03] Ignore Log File: kodi.old.log
+[2019-11-11 00:05:03] [Auto Clean Up] Old Thumbs: On
+[2019-11-11 00:05:03] 30 total thumbs cleaned up.
+[2019-11-11 00:05:03] [Auto Clean Up] Packages: On
+[2019-11-16 13:57:55] 2019-11-16 13:57:54.870005
+[2019-11-16 13:57:56] Continuing Start Up Script
+[2019-11-16 13:57:56] [Path Check] Started
+[2019-11-16 13:57:56] [Path Check] Good!
+[2019-11-16 13:57:56] [Auto Install Repo] Started
+[2019-11-16 13:57:56] [Auto Install Repo] Not Enabled
+[2019-11-16 13:57:56] [Auto Update Wizard] Started
+[2019-11-16 13:57:58] [Auto Update Wizard] No New Version vFalse
+[2019-11-16 13:57:58] [Notifications] Started
+[2019-11-16 13:57:59] [Notifications] id: 133
+[2019-11-16 13:58:02] [Notification] NotifyID 133 Dismissed
+[2019-11-16 13:58:02] [Notifications] Complete
+[2019-11-16 13:58:02] [Installed Check] Started
+[2019-11-16 13:58:02] [Installed Check] Not Enabled
+[2019-11-16 13:58:03] [Build Check] Started
+[2019-11-16 13:58:03] [Trakt Data] Started
+[2019-11-16 13:58:03] [Trakt Data] Not Enabled
+[2019-11-16 13:58:03] [Real Debrid Data] Started
+[2019-11-16 13:58:03] [Real Debrid Data] Not Enabled
+[2019-11-16 13:58:03] [Login Data] Started
+[2019-11-16 13:58:04] [Login Data] Not Enabled
+[2019-11-16 13:58:04] [Auto Clean Up] Started
+[2019-11-16 13:58:04] [Auto Clean Up] Cache: On
+[2019-11-16 13:58:07] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-16 13:58:09] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-11-16 13:58:10] Ignore Log File: kodi.log
+[2019-11-16 13:58:10] Ignore Log File: kodi.old.log
+[2019-11-16 13:58:10] [Auto Clean Up] Old Thumbs: On
+[2019-11-16 13:58:12] 14 total thumbs cleaned up.
+[2019-11-16 13:58:13] [Auto Clean Up] Packages: On
+[2019-11-16 19:02:42] 2019-11-16 19:02:42.190521
+[2019-11-16 19:02:43] Continuing Start Up Script
+[2019-11-16 19:02:43] [Path Check] Started
+[2019-11-16 19:02:43] [Path Check] Good!
+[2019-11-16 19:02:43] [Auto Install Repo] Started
+[2019-11-16 19:02:43] [Auto Install Repo] Not Enabled
+[2019-11-16 19:02:43] [Auto Update Wizard] Started
+[2019-11-16 19:02:45] [Auto Update Wizard] No New Version vFalse
+[2019-11-16 19:02:45] [Notifications] Started
+[2019-11-16 19:02:46] [Notifications] id: 134
+[2019-11-16 19:02:51] [Notification] NotifyID 134 Remind Me Later
+[2019-11-16 19:02:51] [Notifications] Complete
+[2019-11-16 19:02:51] [Installed Check] Started
+[2019-11-16 19:02:51] [Installed Check] Not Enabled
+[2019-11-16 19:02:51] [Build Check] Started
+[2019-11-16 19:02:51] [Trakt Data] Started
+[2019-11-16 19:02:51] [Trakt Data] Not Enabled
+[2019-11-16 19:02:51] [Real Debrid Data] Started
+[2019-11-16 19:02:51] [Real Debrid Data] Not Enabled
+[2019-11-16 19:02:51] [Login Data] Started
+[2019-11-16 19:02:51] [Login Data] Not Enabled
+[2019-11-16 19:02:51] [Auto Clean Up] Started
+[2019-11-16 19:02:51] [Auto Clean Up] Cache: On
+[2019-11-16 19:02:53] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-11-16 19:02:53] Ignore Log File: kodi.log
+[2019-11-16 19:02:53] Ignore Log File: kodi.old.log
+[2019-11-16 19:02:53] [Auto Clean Up] Old Thumbs: On
+[2019-11-16 19:02:53] 0 total thumbs cleaned up.
+[2019-11-16 19:02:54] [Auto Clean Up] Packages: On
+[2019-11-19 00:19:07] 2019-11-19 00:19:06.724137
+[2019-11-19 00:19:08] Continuing Start Up Script
+[2019-11-19 00:19:08] [Path Check] Started
+[2019-11-19 00:19:08] [Path Check] Good!
+[2019-11-19 00:19:08] [Auto Install Repo] Started
+[2019-11-19 00:19:08] [Auto Install Repo] Not Enabled
+[2019-11-19 00:19:08] [Auto Update Wizard] Started
+[2019-11-19 00:19:12] [Auto Update Wizard] No New Version vFalse
+[2019-11-19 00:19:12] [Notifications] Started
+[2019-11-19 00:19:25] [Notification] NotifyID 134 Dismissed
+[2019-11-19 00:19:25] [Installed Check] Started
+[2019-11-19 00:19:25] [Installed Check] Not Enabled
+[2019-11-19 00:19:25] [Build Check] Started
+[2019-11-19 00:19:25] [Trakt Data] Started
+[2019-11-19 00:19:25] [Trakt Data] Not Enabled
+[2019-11-19 00:19:25] [Real Debrid Data] Started
+[2019-11-19 00:19:25] [Real Debrid Data] Not Enabled
+[2019-11-19 00:19:25] [Login Data] Started
+[2019-11-19 00:19:25] [Login Data] Not Enabled
+[2019-11-19 00:19:25] [Auto Clean Up] Started
+[2019-11-19 00:19:27] [Auto Clean Up] Cache: On
+[2019-11-19 00:19:35] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-11-19 00:19:35] Ignore Log File: kodi.log
+[2019-11-19 00:19:35] Ignore Log File: kodi.old.log
+[2019-11-19 00:19:36] [Auto Clean Up] Old Thumbs: On
+[2019-11-19 00:19:38] 12 total thumbs cleaned up.
+[2019-11-19 00:19:40] [Auto Clean Up] Packages: On
+[2019-11-19 15:41:11] 2019-11-19 15:41:11.350983
+[2019-11-19 15:41:12] Continuing Start Up Script
+[2019-11-19 15:41:12] [Path Check] Started
+[2019-11-19 15:41:12] [Path Check] Good!
+[2019-11-19 15:41:12] [Auto Install Repo] Started
+[2019-11-19 15:41:12] [Auto Install Repo] Not Enabled
+[2019-11-19 15:41:12] [Auto Update Wizard] Started
+[2019-11-19 15:41:14] [Auto Update Wizard] No New Version vFalse
+[2019-11-19 15:41:14] [Notifications] Started
+[2019-11-19 15:41:16] [Notifications] id[134] Dismissed
+[2019-11-19 15:41:16] [Installed Check] Started
+[2019-11-19 15:41:16] [Installed Check] Not Enabled
+[2019-11-19 15:41:16] [Build Check] Started
+[2019-11-19 15:41:16] [Trakt Data] Started
+[2019-11-19 15:41:16] [Trakt Data] Not Enabled
+[2019-11-19 15:41:16] [Real Debrid Data] Started
+[2019-11-19 15:41:16] [Real Debrid Data] Not Enabled
+[2019-11-19 15:41:16] [Login Data] Started
+[2019-11-19 15:41:16] [Login Data] Not Enabled
+[2019-11-19 15:41:16] [Auto Clean Up] Started
+[2019-11-19 15:41:16] [Auto Clean Up] Cache: On
+[2019-11-19 15:41:19] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-19 15:41:22] Ignore Log File: kodi.log
+[2019-11-19 15:41:22] Ignore Log File: kodi.old.log
+[2019-11-19 15:41:22] [Auto Clean Up] Old Thumbs: On
+[2019-11-19 15:41:23] 0 total thumbs cleaned up.
+[2019-11-19 15:41:23] [Auto Clean Up] Packages: On
+[2019-11-23 18:44:22] 2019-11-23 18:44:22.709021
+[2019-11-23 18:44:23] Continuing Start Up Script
+[2019-11-23 18:44:23] [Path Check] Started
+[2019-11-23 18:44:23] [Path Check] Good!
+[2019-11-23 18:44:23] [Auto Install Repo] Started
+[2019-11-23 18:44:23] [Auto Install Repo] Not Enabled
+[2019-11-23 18:44:23] [Auto Update Wizard] Started
+[2019-11-23 18:44:26] [Auto Update Wizard] No New Version vFalse
+[2019-11-23 18:44:26] [Notifications] Started
+[2019-11-23 18:44:27] [Notifications] id: 136
+[2019-11-23 18:45:12] [Notification] NotifyID 136 Remind Me Later
+[2019-11-23 18:45:12] [Notifications] Complete
+[2019-11-23 18:45:12] [Installed Check] Started
+[2019-11-23 18:45:12] [Installed Check] Not Enabled
+[2019-11-23 18:45:12] [Build Check] Started
+[2019-11-23 18:45:12] [Trakt Data] Started
+[2019-11-23 18:45:12] [Trakt Data] Not Enabled
+[2019-11-23 18:45:12] [Real Debrid Data] Started
+[2019-11-23 18:45:12] [Real Debrid Data] Not Enabled
+[2019-11-23 18:45:12] [Login Data] Started
+[2019-11-23 18:45:12] [Login Data] Not Enabled
+[2019-11-23 18:45:12] [Auto Clean Up] Started
+[2019-11-23 18:45:12] [Auto Clean Up] Cache: On
+[2019-11-23 18:45:12] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.urlresolver/cache 
+[2019-11-23 18:45:12] Ignore Log File: kodi.log
+[2019-11-23 18:45:12] Ignore Log File: kodi.old.log
+[2019-11-23 18:45:12] [Auto Clean Up] Old Thumbs: On
+[2019-11-23 18:45:12] 0 total thumbs cleaned up.
+[2019-11-23 18:45:12] [Auto Clean Up] Packages: On
+[2019-11-25 12:19:55] 2019-11-25 12:19:55.356758
+[2019-11-25 12:19:56] Continuing Start Up Script
+[2019-11-25 12:19:57] [Path Check] Started
+[2019-11-25 12:19:57] [Path Check] Good!
+[2019-11-25 12:19:57] [Auto Install Repo] Started
+[2019-11-25 12:19:57] [Auto Install Repo] Not Enabled
+[2019-11-25 12:19:57] [Auto Update Wizard] Started
+[2019-11-25 12:19:59] [Auto Update Wizard] No New Version vFalse
+[2019-11-25 12:19:59] [Notifications] Started
+[2019-11-25 12:20:42] [Notification] NotifyID 136 Dismissed
+[2019-11-25 12:20:42] [Installed Check] Started
+[2019-11-25 12:20:42] [Installed Check] Not Enabled
+[2019-11-25 12:20:42] [Build Check] Started
+[2019-11-25 12:20:42] [Trakt Data] Started
+[2019-11-25 12:20:42] [Trakt Data] Not Enabled
+[2019-11-25 12:20:42] [Real Debrid Data] Started
+[2019-11-25 12:20:42] [Real Debrid Data] Not Enabled
+[2019-11-25 12:20:42] [Login Data] Started
+[2019-11-25 12:20:42] [Login Data] Not Enabled
+[2019-11-25 12:20:42] [Auto Clean Up] Started
+[2019-11-25 12:20:42] [Auto Clean Up] Cache: On
+[2019-11-25 12:20:43] [Success] wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.resolveurl/cache 
+[2019-11-25 12:20:43] Ignore Log File: kodi.log
+[2019-11-25 12:20:43] Ignore Log File: kodi.old.log
+[2019-11-25 12:20:43] [Wiped] /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/commoncache.db
+[2019-11-25 12:20:43] [Auto Clean Up] Old Thumbs: On
+[2019-11-25 12:20:43] 31 total thumbs cleaned up.
+[2019-11-25 12:20:43] [Auto Clean Up] Packages: On

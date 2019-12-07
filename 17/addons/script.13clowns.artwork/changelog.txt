@@ -1,0 +1,12 @@
+[B]1.0.5[/B]
+- remove covenant
+- remove exuary
+- remove incursion
+- remove stealth
+[B]1.0.4[/B]
+- Add 13Clowns
+- Add Zanni
+[B]1.0.2[/B]
+- Adjust Icons
+[B]1.0.1[/B]
+- Initial version

@@ -1,0 +1,9 @@
+[2017.06.08]
+- Rebrand Zen to Elysium
+
+[1.0.0]
+Initial Release
+Forked from MuckyDuck Modules
+
+[1.4.0]
+- Tweak net modules and requests

@@ -1,0 +1,26 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] DiziBox ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mddizibox",
+ "priority"     : 900,
+ "id"           : "search.dizibox.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mddizibox/?description&iconimage=special://home/addons/plugin.video.mddizibo/icon.png&mode=1&name=&url=http://www.dizibox.com/?s={clearname}",
+    "steps"     : [
+     "($$.*$$){clearname}($$.*$$)",
+     "($$.*$$)Season {season}($$.*$$)",
+     "($$.*$$)Season {season}($$.*$$ $$.*$$)Episode  {episode}($$.*$$)"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

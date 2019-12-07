@@ -1,0 +1,47 @@
+{
+ "name"         : "Navigate - [COLOR ff0084ff]MorePower[/COLOR] - ([COLOR gold]Movies[/COLOR])",
+ "repository"   : "repository.wolfpack",
+ "plugin"       : "plugin.video.wolfpack",
+ "priority"     : 30,
+ "id"           : "MorePower",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.wolfpack/?action=directory&amp;content=addons&amp;url=http%3a%2f%2fwolfpackcrew.co.uk%2fseeddata%2fmorepower%2fMorePower_Directory.xml",
+    "steps"     : [
+	     "@anycontaining: Movies | HD",
+		 ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.wolfpack/?action=directory&amp;content=addons&amp;url=http%3a%2f%2fwolfpackcrew.co.uk%2fseeddata%2fmorepower%2fMorePower_Directory.xml",
+    "steps"     : [
+	     ".*Box Sets.*",
+		 "@any",
+		 ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.wolfpack/?action=directory&amp;content=addons&amp;url=http%3a%2f%2fwolfpackcrew.co.uk%2fseeddata%2fmorepower%2fMorePower_Directory.xml",
+    "steps"     : [
+	     "@anycontaining: Movies",
+		 ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+   ,
+   {
+    "link"      : "plugin://plugin.video.wolfpack/?action=directory&amp;content=addons&amp;url=http%3a%2f%2fwolfpackcrew.co.uk%2fseeddata%2fmorepower%2fMorePower_Directory.xml",
+    "steps"     : [
+	     "@anycontaining: Films",
+		 ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

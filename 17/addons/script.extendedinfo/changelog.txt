@@ -1,0 +1,402 @@
+- [COLORlime]To get your favorite add-on in the Movie selector go to EIM 4Qed settings and clear simple selector then rerun total setup in MetalliQ 4Qed settings.[/COLOR] 
+
+v100.2.0 
+- Many builds/configurations had been scratched out or overwritten by other forks with higher version number
+- Version number changed to fix EIM4QED
+
+v100.0.4
+- New Trakt Api
+- Fixed treanding shows
+
+v100.0.3
+- Fixed Library
+- Fixed TV Shows simple selector
+- Fixed a few bugs
+- No need to disable auto updates any longer
+
+v6.0.5
+- Added new TMDb key
+- Added missing code
+- Fixed Movies extended info section
+- Fixed Movies simple selector
+- Shout out to a good friend of mine Mr Hatter for helping with the fix
+
+v5.0.4
+- Fixed trailer from contextmenu in script interface
+- Fixed error on YouTube-playback
+- Fixed extended info skintegration
+
+v5.0.3
+- Added widget-path for favourited filters, to use: manually change "info=filtered" to "info=filteredwidget" in pluginpath
+- Added thumbnail to filter favouriting (stored in special://profile/addon_data/script.extendedinfo/posters/)
+- Added option to clear simple selector (in settings under "Delete cache")
+- Fixed vote-info in extended infoscreen (credits to Midraal)
+
+v5.0.2
+- Added filter-favouriting for movies and tvshows in main script interface
+- Fixed crash when query is empty
+- Changed youtube language filter to region filter
+
+v5.0.1
+- Enhanced Youtube statistic handling
+- Fixed Trakt trending movies section
+
+v5.0.0
+- Changed youtube playback to use kodi's default youtube plugin
+- Fixed krypton incompatibility (thanks Midraal)
+
+v4.9.9h
+- Added conditional visiblity to login-dependent buttons
+- Added library-dirs in plugin-section
+- Added "MetalliQ"-button in movie-infoscreen, links to query by title (TMDb)
+- Fixed login.
+
+v4.9.9g
+- Added "Library" & "Favourite"-buttons to infoscreen (library for movies & tvshows, favourite for seasons & episodes)
+- Changed default for "open as script"-setting to false for more familiar default behaviour
+- Fixed settings-button
+- Fixed missing thumbnails for favourites made from plugin-entries
+- Fixed wrong content for "Rated movies"
+
+v4.9.9f
+- Added "open as script"-option for all entries in plugin-part
+- Added setting to open plugin-sections in script interface (enabled by default)
+- Fixed infoscreen not opening
+- Fixed contextmenu on TVShows
+- Updated ReadMe
+- Upped number of list-items to 20
+
+v4.9.9e
+- Added contextmenu-options
+- Added description to seasons and episodes (if available)
+- Added simple selector
+- Added themecolor to library-marks and videoinfo
+- Fixed blackscreen issues
+- Fixed re-appearing infoscreen
+- Fixed lock-ups in youtube & video-list
+- Removed RottenTomatoes
+
+v4.9.9c
+- RottenTomatoes no longer provides external ids so back to crappy resolution posters otherwise loading a list would simply take too long.
+- Replaced all instances of && with & for [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR]-player compatibility
+- Fixed white letters on white background in youtubebrowser (reverted to dark background)
+
+v4.9.9b
+- Added context options to sets and similar.
+- Added option to add TMDb-listitems to kodi library, both seperate as entire list.
+- Fixed afteradd so library-indicator is visible directly after re-entering EIM.
+
+v4.9.9a
+- Fixed widget-content
+- Fixed lists in video-addon section
+- Corrected readme
+- Added [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] to settings-dialog
+
+v4.9.9
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Final Helix/Isengard version, if there are going to be updates after this, it will be bugfixes only (at best).
+- Replaced all playback & library options with [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR]'s, player to be used can be configured in EIM's settings
+- Re-arranged lay-out of main interface to have sets, similar, lists and youtube-videos first
+- Added Play-button to seasons & episodes linked to [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR]
+- Added Browse-button to tvshows and seasons linked to [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR]
+- Added context-options in main list-interface
+
+v4.7.6
+- Fixed TVShows
+- Added my repo as a dependency
+
+v4.7.5
+- Fixed alternate play
+- Fixed tvshow-youtube vids 
+
+v4.7.4
+- Added 1Channel to LibraryAddons
+- Added Online Movies Pro to Alternate Movie Addons
+- Added Quasar to LibraryAddons
+- Added Salts RD Lite
+- Added UMP, does not work well as MainTVShowAddon, works much better as Alternate TVShowAddon so add to library first using 1Channel, iSTREAM, Salts(HD/RD Lite) or Specto. As MainMovieAddon it works pretty well
+- Changed default settings: PulsarMode to "Play", ClassicSearch to "True"
+- Edited Phoenix to the v3.0-update
+- Fixed The Royal We
+- Fixed SALTS
+- Fixed 1Channel
+- Fixed RottenTomatoes Posters. Crappy quality now but better then no posters, right?
+- Fixed runtime & duration for RT & Trakt (synced from official version)
+- Made custom iSearches accessible from outside (see Readme for details)
+- Put all addons in alphabetical order (except for trailer)
+- Rehaul of play & auto-return functions
+- Removed Genesis
+
+v4.7.3
+- Fixed Quasar in AlternatePlay and for TVShows in main script.
+- Fixed "Edit Query" by making a new function for it which also refreshes container so the change in Query is actually visible now.
+
+v4.7.2
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Added theme color to sidemenu
+- Added Quasar, for Helix: set to use Pulsar as Quasar's id was still pulsar then, for Isengard or higher, set to use Quasar.
+- Added Trailer to main TVaddons
+- Added Super Favourites v1.0.48 as dependency
+- Changed default colors to match Qonfluence
+- Fixed "Edit Query" in custom iSearches
+
+v4.7.1
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Added option to open custom lists in script-mode (see ReadMe for details)
+- Made colors in script-mode configurable (see settings)
+- Changed default settings ("add" for tvshows, "play" with "auto-add" off for movies)
+
+v4.7.0
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed update-loop
+
+v4.6.8
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed non-responsiveness when playback fails or is cancelled. Auto-returning to script might take a bit longer in those cases though it will return within 120s max starting from script-close.
+- Added setting to use classic keyboard instead of t9.
+- Added added custom entries to README.md
+
+v4.6.7
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed Exodus & Specto Alternate play for TVShows.
+- Added purple instead of white throughout, not just in basic script interface
+- Added "Edit Query" to custom iSearches.
+- Added option to use classic keyboard by default.
+
+v4.6.6
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Upped version number to 4.6.6 to override auto-update of official version on Jarvis
+- Fixed empty query error.
+- Added TV-Trailers.
+
+v4.1.6
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed Add/Play for TVShows.
+- Fixed Add/Play with auto-add disabled.
+- Fixed Add/Play when set to just add.
+- Fixed returning history (again ironicly).
+- Changed defaults.
+- Added to LibraryAddons: Salts HD Lite & Specto.
+- Added to MainAddons: Exodus, Salts HD Lite & Specto.
+- Added custom(izable) iSearches. Only under Add/Play, enabled by default but you can disable seperately for movies/tvshows in settings. The lists can be found @ special://home/addons/script.extendedinfo/resources/extras/, if you want to add your own, make an appropriate entry and add it in the appropriate list.
+- Added Extended Youtube: Only under AppIntegration, enabled by default but you can disable seperately for movies/tvshows in settings. Search Extended's YoutubeBrowser using selected title as query. Choose Video/Channel/Playlist or disable so only Video is visible.
+- Probably broke some shit, let me know if you find something broken, please include a full debug log.
+
+v4.1.5
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Synced with official github
+- Minor bugfixes in preparation of expanded addon compatibility list
+
+v4.1.4
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed Search
+- Fixed reappearing history
+- Set default to iSearch (Add/Play uses imdb_id, AppIntegration uses Title/TVShowTitle)
+
+v4.1.3
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Fixed: incompatibility with Helix
+- Fixed: now works on skins with built-in xml for extended info
+- Fixed: posters on rottentomatoes
+
+v4.1.2
+[COLOR FF8ABEE2]Open[/COLOR][COLOR FF757677]ELEQ[/COLOR]
+- Added "Add/Play"-button (will auto-return to Extended Info if video is started within 2 minutes of script close)
+- Added "AppIntegration"-button (will close Extended Info)
+- Added "Alternate Play" for Kodi-Library (based on MySubscriptions)
+- Removed studio-logos with non-ascii in filename to make it compatible with various wizards
+
+v3.1.4
+- remove AutoCompletion part
+- fix duration values for RT / Trakt
+
+v3.1.3
+- RottenTomatoes poster fix
+- kodi python api dependency bump
+- localization work
+- trailer button fix
+- remove AutoCompletion part
+
+v3.1.2
+- fixes for LastFM and Youtube API
+- misc fixes
+
+v3.1.1
+- hebrew fix for keyboard
+- more minor bugfixes
+- url-quote login data for TMDB
+
+v3.1.0
+- added additional properties for db movies
+- added actor age for ActorInfo dialog
+- fixed movie poster not appearing on some occasions
+- fixed behavour in case no remote info is available
+- fixed linebreaks at beginning of some biographies
+- fixed list bounce for info dialogs in case of fast repitition
+- fixed autocomplete exception in case result is empty
+- reworked image slideshow (now allows moving through list)
+- siginificant faster dialog loading times (async youtube list filling)
+- visual tweaks for TMDB browser list viewtype
+- improvements for movie info dialog local check
+- navigation fix for TV show info dialog
+- changed credit dialog order
+- texture cleanup
+
+v3.0.0
+- API CHANGE: "imdbid" param for script call is now "imdb_id"
+- new add-on extension point: Video plugin
+- added 24 movie / TV show listings from different content providers to plugin
+- added T9 Live Search for TMDB browser (also works via remote)
+- added Google AutoCompletions for TMDB browser search
+- added script call for Google AutoCompletions
+- added script calls for TMDB starred/rated movies and TV shows
+- added genre label for tvshows
+- added context menu entry for posters / backdrops (allows using them as local artwork)
+- added local-check for Trakt and RT movie lists
+- added button id 10 to play trailer for movie info dialog
+- added genre, country and plot InfoLabels for TMDB movies
+- added local check for tvshows
+- added browsing tvshow credits (via selectdialog)
+- added infodialogs.active property for home
+- added certification for tvshows
+- added date label to episodes
+- added ability to download youtube / trailer videos via context menu
+- added option to override onback behaviour by skinners
+- added additional second list layout for TMDB Browser
+- added option to force native dialog layouts
+- added ability to remove single filters in browser dialog
+- fixed onclick for Trakt calendar items
+- fixed limit param for some script calls
+- fixed biography dialog for actors
+- fixed RT json parsing in case premiered is not available
+- fixed MovieDB TV show favourites processing
+- fixed similarlocal call
+- fixed maps.browser call
+- fixed onclick for Trakt calendar items
+- fixed character InfoLabel for tvshow roles
+- filter out duplicates for crew roles (and merge job strings)
+- put cache files into subdirectories
+- improved dialog open/close behaviour
+- higher image resolution for episode stills
+- reworked settings
+- open tvshow in library when available (depends on skin setting)
+- merge duplicates for some actor / crew lists
+- some visual tweaks for infodialogs
+- localization
+- Code cleanup
+- lot more stuff I forgot
+
+v2.0.10
+- fixed tv show lookup with year in brackets attached to lookup string
+- fixed "Premiered" property for trakt calls
+- skin compatibility
+- fixed some wrong string ids
+- some new InfoLabels for AudioDB album items
+- Added person image thumb for "choose-person" select dialog
+- Added infodialogs.active property
+
+v2.0.9
+- fixed Trakt ratings (0-10 instead of 0-1)
+- fixed Trakt TvShow Widget Click Action
+- fixed busydialog for extendedactorinfo call by name when several actors found
+- localization
+
+v2.0.8
+- adjusted youtube user videos to API V3
+- fixed c & h webcomics
+- fixed actor info call by name
+- adjust Trakt to API v2
+- skip dialog for writermovies / directormovies when called from skin
+- show age of death instead of actual age for dead persons
+- code cosmetics, small bugfixes
+- localization
+
+v2.0.7
+- added RateMedia call
+- fixes for special chars in search terms for some calls
+- fix specials episodes
+- fix for case when no data available
+- fix for filter window page change logic
+- updated C & H URL range to include latest images
+- show list title in filter window
+- instantly show busydialog when using extendedactorinfo
+- fix onclick for tvshow infodialog calls
+- code cleanup, small bugfixes
+- localization
+
+v2.0.6
+- fixes concerning plugin handling
+- new look for movie set part from movie info dialog
+- fixes for movie lists (also for removing / refreshing listitems)
+- some more fixes for filter window
+- fixed 0.0 rating (not allowed)
+- context menu fixes
+- some more small stuff
+
+v2.0.5
+- added "Remove from list" context menu entry
+
+v2.0.4
+- fixed infodialog option
+- better matching for movie info dialog
+- fixed iconpanel call
+- fixed Android - Helix errors
+- de-activated Buggalo Script for now
+- fixed RottenTomatoes low-quality thumbs
+- added similartvshows call (TheMovieDB)
+- also clear prop cache when clearing cache
+- allow missing containers for movieinfo dialog
+- some more bugfixes
+
+v2.0.3
+- fixed auth token caching
+- skin compatibility
+- bg loading for list images, no bg load for poster
+- fixed tvshow keyword call
+- fixed trakt rating
+- param process fixes
+- bounce effect for list end
+- fixes for actor search
+- fixed escape chars for plots in info dialogs
+- some more small fixes
+
+v2.0.2
+- skin compatibility
+- fixed some param/id parsing stuff
+- fixed manage dialog
+- missing translations
+- use original_language tag for country property
+- fix session_id caching
+- adjusted some cache time values
+- fixed wrong onclick action in account menu
+
+v2.0.1
+- small fixes
+- repo release version
+
+v2.0.0
+- Standalone part: MovieDB Browser, extended Info dialogs for movies / TV /seasons / episodes / actors
+- localization
+- too much to count
+
+v1.0.0
+- new calls
+- rewritten caching engine
+
+v0.8.0
+- many Bugfixes
+- removed GoogleMaps functionality and daemon mode
+- exchanged API key
+- some new functions (mostlovedtracks, albumshouts)
+
+v0.0.5
+Fixes & Additions for various info lists from Rotten Tomatoes, TheMovieDB and Trakt.tv (See README file for details).
+
+v0.0.3
+Modified Utils.py and default.py to fix the issues with movie sets in Gotham.
+
+v0.0.2
+File handling updates.
+
+v0.0.1
+Initial Release.

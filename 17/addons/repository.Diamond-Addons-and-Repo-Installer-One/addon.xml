@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.Diamond-Addons-and-Repo-Installer-One" name="[COLOR crimson]D[COLOR silver]irect Access To 3rd Party Repos - I Shut It Down, Too Many Repo Idiots[/COLOR]" version="19.08.22" provider-name="SomeBody">
+	<extension point="xbmc.addon.repository" name="Direct Access To 3rd Party Repositories - All add-ons are hosted by the individual devs">
+
+	<dir>
+	<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+	<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+	<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+	</dir>
+
+	<dir>
+	<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+	<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+	<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+	</dir>
+
+	<dir>
+	<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+	<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+	<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+	</dir>
+
+	</extension>
+	<extension point="xbmc.addon.metadata">
+	<summary lang="en">Direct Access To 3rd Party Repositories - All add-ons are hosted by the individual devs.</summary>
+	<description lang="en">Direct Access To 3rd Party Repositories - All add-ons are hosted by the individual devs.</description>
+	<disclaimer lang="en">[COLOR red][B]The author does not zip, store, modify, host or distribute any of the content displayed by this Repository, The author does not have any affiliation with addons displayed by this Repository, The author does not have any affiliation with the content provider(s), All add-ons are hosted by the individual devs.[/B][/COLOR]</disclaimer>
+	<platform>all</platform>
+	</extension>
+</addon>

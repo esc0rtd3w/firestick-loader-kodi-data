@@ -1,0 +1,25 @@
+{
+ "name"         : "Navigate [COLOR ff0084ff]-[/COLOR] In the Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.inthemovies",
+ "priority"     : 800,
+ "id"           : "navigate.inthemovies.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.inthemovies/",
+    "steps"     : [
+     "@any",
+     "><{title}.*{year}."
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

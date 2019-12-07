@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">100</defaultcontrol>
+	<coordinates>
+		<posx>pos_x</posx>
+		<posy>pos_y</posy>
+	</coordinates>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>dialog_width</width>
+			<height>dialog_height</height>
+			<texture border="40" colordiffuse="PK_TransparencyPK_Color">PK_Fanart</texture>
+		</control>
+		<control type="image">
+			<description>Dialog Header image</description>
+			<posx>40</posx>
+			<posy>16</posy>
+			<width>text_width</width>
+			<height>40</height>
+			<texture>dialogheader.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>header label</description>
+			<posx>40</posx>
+			<posy>20</posy>
+			<width>text_width</width>
+			<height>30</height>
+			<font>font13_title</font>
+			<label>$INFO[Window(Home).Property(PK_Header)]</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>PK_Header_Color</textcolor>
+			<shadowcolor>FF000000</shadowcolor>
+		</control>
+		<control type="button" id="98">
+			<description>Close Window button</description>
+			<posx>0</posx>
+			<posy>15</posy>
+			<width>64</width>
+			<height>32</height>
+			<label>-</label>
+			<font>-</font>
+			<onclick>PreviousMenu</onclick>
+			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<onleft>100</onleft>
+			<onright>100</onright>
+			<onup>100</onup>
+			<ondown>100</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+		<control type="group">
+			<control type="image">
+				<description>Icon image</description>
+				<posx>PK_I_X</posx>
+				<posy>65</posy>
+				<width>150</width>
+				<height>150</height>
+				<texture>PK_Icon</texture>
+			</control>
+			<control type="textbox" id="15">
+				<description>terms details</description>
+				<posx>30</posx>
+				<posy>75</posy>
+				<width>text_width</width>
+				<height>text_height</height>
+				<label>$INFO[Window(Home).Property(PK_Main_Text)]</label>
+				<font>font13</font>
+				<align>justify</align>
+				<textcolor>PK_Text_Color</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<pagecontrol>99</pagecontrol>
+			</control>
+			<control type="scrollbar" id="99">
+				<posx>scroll_pos</posx>
+				<posy>73</posy>
+				<width>25</width>
+				<height>text_height</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>101</onleft>
+				<onright>100</onright>
+				<ondown>100</ondown>
+				<onup>98</onup>
+				<showonepage>true</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+<!-- buttons -->
+		</control>
+	</controls>
+</window>

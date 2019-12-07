@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct - [COLOR ff0084ff]Magnetic  [Torrents][/COLOR] - ([COLOR gold]YP[/COLOR])",
+ "repository"   : "repository.magnetic.mirror",
+ "plugin"       : "script.module.magnetic",
+ "priority"     : 210,
+ "id"           : "Magnetic",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://script.module.magnetic?search=movie&imdb={imdb}&title={title|ws(%20)}&year={year}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://script.module.magnetic?search=episode&title={clearname|ws(%20)}&season={season}&episode={episode}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

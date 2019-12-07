@@ -1,0 +1,27 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] B99TV ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.b99tv_gw",
+ "priority"     : 800,
+ "id"           : "navigate.b99tv.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+
+    "link"      : "plugin://plugin.video.b99tv_gw/",
+    "steps"     : [
+     "($$.*$$)Cartoon Series($$.*$$)",
+     "($$.*$$){clearname}($$.*$$)@page:($$.*$$)Next Page>>>($$.*$$)",
+     "($$.*$$){title}($$.*$$)@page:($$.*$$)Next Page>>>($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

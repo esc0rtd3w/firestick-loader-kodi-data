@@ -1,0 +1,38 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] ExtendedInfo's YouTube ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.q",
+ "plugin"       : "script.extendedinfo",
+ "priority"     : 700,
+ "id"           : "ExtendedInfo's YouTube",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

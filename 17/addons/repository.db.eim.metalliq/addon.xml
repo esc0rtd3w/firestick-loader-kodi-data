@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.db.eim.metalliq" name="[COLOR crimson]D[COLOR silver]B Repo For EIM/MetalliQ - [B]Will Overwrite Other Versions[/B][/COLOR]" version="1.0.3" provider-name="SomeBody">
+
+
+
+
+
+
+
+<extension point="xbmc.addon.repository" name="we try">
+
+<dir>
+<info compressed="false">http://m3u.xyz/repo-files/db-eim/addons.xml</info>
+<checksum>http://m3u.xyz/repo-files/db-eim/addons.xml.md5</checksum>
+<datadir zip="true">http://repo.rubyjewelwizard.com/repo/diamond/db-eim/</datadir>
+<hashes>false</hashes>
+</dir>
+
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+</dir>
+
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/</datadir>
+<hashes>false</hashes>
+</dir>
+
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+</dir>
+
+<dir>
+<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+</dir>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary>Welcome to the DB Repository For EIM/MetalliQ</summary>
+<description></description>
+<platform>all</platform>
+</extension>
+</addon>

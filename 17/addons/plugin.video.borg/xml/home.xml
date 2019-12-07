@@ -1,0 +1,33 @@
+
+<xml>
+<dir><title>Movies</title><link>http://bullzeyebuildz.uk/borg/movies.xml</link><thumbnails>http://ajbuilds.uk/art/movies-logo%5B1%5D.jpg</thumbnails><fanart></fanart>
+</dir>
+
+<dir>
+<title>TV Shows</title>
+<link>http://bullzeyebuildz.uk/borg/genre_tv.xml</link>
+<thumbnails>http://bullzeyebuildz.uk/data/art/TV shows.png</thumbnails>
+<fanart></fanart>
+</dir>
+
+<dir>
+<title>Borg Documentaries</title>
+<link>http://bullzeyebuildz.uk/borg/docs.xml</link>
+<thumbnails>http://bullzeyebuildz.uk/data/art/DOCS.png</thumbnails>
+<fanart></fanart>
+</dir>
+
+<dir>
+<title>Kids Area</title>
+<link>http://bullzeyebuildz.uk/borg/production.xml</link>
+<thumbnails>http://bullzeyebuildz.uk/data/art/kidds .png</thumbnails>
+<fanart></fanart>
+</dir>
+
+<dir>
+<title>Networks</title>
+<link>http://bullzeyebuildz.uk/borg/networks%20.xml</link>
+<thumbnails>http://bullzeyebuildz.uk/data/art/network.png</thumbnails>
+<fanart></fanart>
+</dir>
+</xml>

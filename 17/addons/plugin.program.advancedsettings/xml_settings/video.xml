@@ -1,0 +1,137 @@
+<video>
+  <subsdelayrange>10</subsdelayrange>  <!-- Delay range for subtitles, in seconds. -->
+  <audiodelayrange>10</audiodelayrange>  <!-- Delay range for audio/video sync, in seconds. -->
+  <smallstepbackseconds>7</smallstepbackseconds>  <!-- Length of the small skip back when playing a video -->
+  <usetimeseeking>true</usetimeseeking>  <!-- Whether to use time based or percentage based seeking. -->
+  <timeseekforward>30</timeseekforward>  <!-- Time to seek forward in seconds when doing a short seek.  Defaults to 30. -->
+  <timeseekbackward>-30</timeseekbackward>  <!-- Time to seek backward in seconds when doing a short seek.  Defaults to -30. -->
+  <timeseekforwardbig>600</timeseekforwardbig>  <!-- Time to seek forward in seconds when doing a long seek.  Defaults to 600 (10 minutes). -->
+  <timeseekbackwardbig>-600</timeseekbackwardbig>  <!-- Time to seek forward in seconds when doing a long seek.  Defaults to -600 (10 minutes). -->
+  <percentseekforward>2</percentseekforward>  <!-- Amount to seek forward as a percentage, when doing a short seek.  Defaults to 2. -->
+  <percentseekbackward>-2</percentseekbackward>  <!-- Amount to seek backward as a percentage, when doing a short seek.  Defaults to -2. -->
+  <percentseekforwardbig>10</percentseekforwardbig>  <!-- Amount to seek forward as a percentage, when doing a long seek.  Defaults to 10. -->
+  <percentseekbackwardbig>-10</percentseekbackwardbig>  <!-- Amount to seek forward as a percentage, when doing a long seek.  Defaults to -10. -->
+  <blackbarcolour>1</blackbarcolour>  <!-- colour of the black bars (0->255), (black->white) on videos. -->
+  <fullscreenonmoviestart>true</fullscreenonmoviestart> <!-- Whether to go to fullscreen or not when starting a movie. Defaults to true. -->
+  <defaultplayer>dvdplayer</defaultplayer> <!-- Set the default video player: dvdplayer or extplayer. -->
+  <excludefromscan> <!-- Regular expressions that if evaluated to true won't be added to library. -->
+    <regexp>[-\._ ](sample|trailer)[-\._ ]</regexp>
+  </excludefromscan>
+  <excludefromlisting> <!-- Regular expressions that if evaluated to true won't be displayed in Files View -->
+    <regexp>[-\._ ](sample|trailer)[-\._ ]</regexp>
+  </excludefromlisting>
+  <playcountminimumpercent>90</playcountminimumpercent> <!--Minimum percentage that has to be played before it is marked as watched. Set to 101 to never auto-mark items as watched -->
+  <ignoresecondsatstart>180</ignoresecondsatstart> <!-- Number of seconds to ignore at video start after which a resume point is created -->
+  <ignorepercentatend>8</ignorepercentatend>
+  <!-- percentage of video to ignore at the end. If you stop watching the video here no resume point is created. Set to 101 to never save a resume point. The video is already marked as watched at 90%, see above. -->
+ 
+  <vdpauscaling>true</vdpauscaling>
+  <!-- scales with vdpau instead of opengl and turns on its HQ scaler when available, enabling this might slow down rendering and cause framedrops especially on ION systems,
+ this setting requires a vdpau feature set C gpu-->
+ 
+  <enablehighqualityhwscalers>true</enablehighqualityhwscalers> <!-- allow turning on the spline36 and lanczos3 shader (for GL builds) -->
+  <ppffmpegdeinterlacing>linblenddeint</ppffmpegdeinterlacing> <!-- override the deinterlacing options passed to libpostproc -->
+  <ppffmpegpostprocessing>ha:128:7,va,dr</ppffmpegpostprocessing> <!-- override the post processing options passed to libpostproc when 'Video post-processing' is activated in GUI Videos-Settings-Playback -->
+  <allowmpeg4vdpau>true</allowmpeg4vdpau> <!-- allows mpeg4 decoding with vdpau, currently broken -->
+  <allowmpeg4vaapi>true</allowmpeg4vaapi> <!-- allows mpeg4 decoding with vaapi, currently broken on Nvidia cards, not implemented on Intel -->
+  <autoscalemaxfps>30</autoscalemaxfps> <!-- when scaling method is set to auto, bilinear is chosen when the fps is higher than this limit, the default is 30 -->
+
+
+  <!-- Settings for when "Adjust refreshrate to match video fps" is enabled, available since r33806. -->
+  <!-- NOT available in the Dharma release or any release before that -->
+  <adjustrefreshrate>
+
+    <!-- "Adjust refreshrate to match video fps" will try to select the best refreshrate for the video fps -->
+    <!-- but it doesn't always get it right, for example it might switch to an unsupported refreshrate. -->
+
+    <!-- You can add overrides here to switch to a certain refreshrate based on video fps -->
+    <!-- It's possible to add as many overrides as you need. -->
+    <!-- Overrides are processed in order, if the first one doesn't match the fps or no refreshrates match -->
+    <!-- that override, it will try the next one until no overrides are left -->
+
+    <override>
+      <fps>23.976</fps>       <!-- if the fps is between 23.966 and 23.986 -->
+      <refresh>60.0</refresh> <!-- switch to the first found refreshrate that is between 59.99 and 60.01 -->
+    </override>
+
+    <override>
+      <fpsmin>29.96</fpsmin>        <!-- You can also specify the fps range yourself -->
+      <fpsmax>30.01</fpsmax>
+      <refreshmin>59.0</refreshmin> <!-- Same for the refreshrate -->
+      <refreshmax>61.0</refreshmax>
+    </override>
+   
+    <!-- It none of the overrides match, or none of the refreshrates match any of the fps matching overrides, -->
+    <!-- it will choose a fallback refreshrate. Fallbacks are process in order, if the first fallback doesn't match -->
+    <!-- any refreshrate, it will try the next one until no fallbacks are left -->
+    <fallback>
+      <refresh>50.0</refresh> <!-- switch to the first found refreshrate that is between 49.99 and 50.01. -->
+    </fallback>
+
+    <!-- You can also specify the range for the fallback yourself -->
+    <fallback>
+      <refreshmin>49.0</refreshmin>
+      <refreshmax>51.0</refreshmax>
+    </fallback>
+
+    <!-- If none of the overrides match the video fps, or no refreshrates match any of the fps matching overrides, -->
+    <!-- and no fallbacks are specified or no refreshrates match any fallbacks, -->
+    <!-- it will automatically choose the best refreshrate (same as having no overrides and fallbacks). -->
+  </adjustrefreshrate>
+ 
+  <checkdxvacompatibility>value</checkdxvacompatibility>
+  <!-- Advanced setting not present: let xbmc autodetect cards that support H264 profile > L4.1. Set value to false to enable DXVA no matter what.
+ Set value to true if xbmc doesn't autodetect that the graphics card doesn't support > L4.1 -->
+
+  <useocclusionquery>-1</useocclusionquery> <!--Use an occlusion query when capturing videoframes, -1 means auto detect, 0 means disabled, 1 means enabled, the default is -1.-->
+  <fpsdetect>1</fpsdetect> <!-- fps detection for video playback, 0 = trust codec fps, 1 = recalculate from video timestamps with uniform spacing, 2 = recalculate from video timestamps always -->
+
+  <!-- Compensate display latency (video lag). Latency is given in msecs. -->
+  <!-- Requires XBMC 11.0 (Eden) or later. -->
+  <latency>
+
+    <!-- Global default display latency -->
+    <delay>0</delay>
+
+    <!--
+     Override latency for given display (not video) refresh rates.
+     When XBMC is in windowed mode, override is ignored. Multiple
+     overrides are allowed.
+
+     Syntax of an override entry:
+       <refresh>
+         <min>, <max> refresh rate range, OR
+         <rate> exact refresh rate
+         <delay> display latency for the given refresh rate
+       </refresh>
+    -->
+
+    <!-- Example: display has 125 msec latency at 23-24 Hz -->
+    <refresh>
+      <min>23</min>
+      <max>24</max>
+      <delay>125</delay>
+    </refresh>
+
+    <!-- Example: display has 50 msec latency at 50 (+/-0.01) Hz -->
+    <refresh>
+      <rate>50</rate>
+      <delay>50</delay>
+    </refresh>
+
+  </latency>
+    <!-- Filename triggers for 3D (stereoscopic) mode. -->
+    <stereoscopicregex3d>[-. _]3d[-. _]</stereoscopicregex3d>
+    <stereoscopicregexsbs>[-. _]h?sbs[-. _]</stereoscopicregexsbs>
+    <stereoscopicregextab>[-. _]h?tab[-. _]</stereoscopicregextab>
+    <stagefright>
+      <!--  -1 is default, 0 is never used this codec, 1 is always use this codec, bypassing blacklist -->
+      <useavccodec>-1</useavccodec>
+      <usevc1codec>-1</usevc1codec>
+      <usevpxcodec>-1</usevpxcodec>
+      <usemp4codec>-1</usemp4codec>
+      <usempeg2codec>-1</usempeg2codec>
+      <useswrenderer>false</useswrenderer>
+    </stagefright>
+    <disablehi10pmultithreading>false</disablehi10pmultithreading> <!-- If you want hi10p decoded only on one CPU, set this to true. It will be renamed to disableswmultithreading in v14 Helix -->
+</video>

@@ -1,0 +1,39 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Shout Factory TV ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.shoutfactorytv",
+ "priority"     : 800,
+ "id"           : "Shout Factory TV",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.shoutfactorytv/",
+    "steps"     : [
+     "Film",
+     "@any",
+     "({title}|.{shorttitle})"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.shoutfactorytv/",
+    "steps"     : [
+     "TV",
+     "@any",
+     "{clearname}",
+     "(.|)({title}|.* {episode})"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

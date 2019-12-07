@@ -1,0 +1,32 @@
+======[B][COLOR green]Status: SUPPORTED[/COLOR][/B]========
+
+[B][COLOR red]13Clowns[/COLOR][/B] now gives you the option of Civitas Scrapers or Global Srapers!!! 
+Welcome to the swiss army knife of addons.
+
+=======[B]SUPPORT[/B]========
+Telegram: https://t.me/Clowns13
+Twitter: @1clowns
+
+=======[B]CHANGE LOG[/B]=======
+[B]1.3[/B]
+- Lambda Scrappers are removed. Let him RIP
+- Civitas Srapers added - COMMUNITY BASED
+- Navigation changes, hide almost anything, customize it.
+- fixed episode displaying
+- monthly / favorites changed so that monthly addon updates not needed, done remotely.
+- added cartoon collections
+prior changelog in git
+
+=======[B]CREDITS[/B]========
+@mreggman for support, help and sharing 
+Frankenstien Bc for answering random newbie questions and driving him crazy
+Dr know for Global Scrapers
+@A1wolfgirl3 and @mr000iconz Amazing Artwork
+@tantrumdev for giving BOZO constructive crap!
+u/drinfernoo for wizard and support
+@slamious for support
+I-A-C for Scraper template
+Jsergio for ResolveURL
+
+Fans, Supporters, and all the ones that hate!!! Yes you, you know who you are….lol
+

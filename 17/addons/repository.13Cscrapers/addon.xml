@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.13Cscrapers" name="[B][COLOR red]13Clowns[/COLOR] Scraper Repo[/B]" version="0.0.3" provider-name="13Clowns">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="13Clowns">
+            <info compressed="false">https://raw.githubusercontent.com/13Clowns/_scrapers/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/13Clowns/_scrapers/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/13Clowns/_scrapers/master/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en">[B][COLOR red]13Clowns[/COLOR] Lambda Scraper FORK[/B] is a fork of I-A-C github. Its being updated as much as possible. Please add your "WORKING" pull requests to keep it going!!!</summary>
+        <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+        <screenshot></screenshot>
+    </assets>
+    <news></news>
+    </extension>
+</addon>

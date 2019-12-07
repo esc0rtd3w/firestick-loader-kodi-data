@@ -1,0 +1,22 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Velvet Hotdog ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmchub",
+ "plugin"       : "plugin.video.velvethotdog",
+ "priority"     : 200,
+ "id"           : "Velvet Hotdog",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.velvethotdog/?imdb={imdb}&mode=play_velvethotdog_movie&rand={now}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

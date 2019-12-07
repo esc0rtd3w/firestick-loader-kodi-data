@@ -1,0 +1,41 @@
+{
+ "name"         : "Search - [COLOR ff0084ff]Movix [HebDub][/COLOR] - ([COLOR gold]YP[/COLOR])",
+ "repository"   : "repository.movix",
+ "plugin"       : "plugin.video.ebs_movixws",
+ "priority"     : 40,
+ "id"           : "Movix",
+ "filters"      : {},
+ "postprocess"  : "",
+  "movies"       : [
+  [
+   {
+    "language": "he",
+    "link"      : "plugin://plugin.video.ebs_movixws/?description&amp;iconimage=https%3a%2f%2fencrypted-tbn1.gstatic.com%2fimages%3fq%3dtbn%3aANd9GcQlAUVuxDFwhHYzmwfhcUEBgQXkkWi5XnM4ZyKxGecol952w-Rp&amp;isprem=False&amp;mode=13&amp;name=Search%20-%20%d7%97%d7%99%d7%a4%d7%95%d7%a9&amp;url=1&quot",
+    "steps"     : [
+					"@keyboard: {title} )מדובב(",
+					".*{title}.*",
+					".*- ניגון אוטומטי.*"
+					],
+    "action"    : "PLAY"
+ 
+   }
+  ]
+ ],
+"tvshows"       : [
+  [
+   {
+    "language": "he",
+    "link"      : "plugin://plugin.video.ebs_movixws/?description&amp;iconimage=https%3a%2f%2fencrypted-tbn1.gstatic.com%2fimages%3fq%3dtbn%3aANd9GcQlAUVuxDFwhHYzmwfhcUEBgQXkkWi5XnM4ZyKxGecol952w-Rp&amp;isprem=False&amp;mode=13&amp;name=Search%20-%20%d7%97%d7%99%d7%a4%d7%95%d7%a9&amp;url=2&quot",
+    "steps"     : [
+     "@keyboard: {clearname}",
+	 "{clearname}",
+	 ".*עונה {season}.*",
+	 ".*פרק {episode}.*",
+	 ".*- ניגון אוטומטי.*"
+     ],
+    "action"    : "PLAY"
+ 
+   }
+  ]
+ ] 
+}

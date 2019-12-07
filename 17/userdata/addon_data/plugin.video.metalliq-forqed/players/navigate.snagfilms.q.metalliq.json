@@ -1,0 +1,37 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Snagfilms ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.snagfilms",
+ "priority"     : 800,
+ "id"           : "Snagfilms",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.snagfilms/",
+    "steps"     : [
+     "@anyexcept:TV Shows",
+     "({title}|.{shorttitle})"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.snagfilms/",
+    "steps"     : [
+     "TV Shows",
+     "{clearname}",
+     "(S. {season} Ep. {episode} .*|Ep. {episode} .*|.*{title})"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,49 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Channel PEAR ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.podgod",
+ "plugin"       : "plugin.video.channelpear",
+ "priority"     : 800,
+ "id"           : "Channel PEAR",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.channelpear/",
+    "steps"     : [
+     ".*Channels.*",
+     "{name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.channelpear/",
+    "steps"     : [
+     ".*Channels.*",
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.channelpear/",
+    "steps"     : [
+     ".*Channels.*",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.channelpear/",
+    "steps"     : [
+     ".*Channels.*",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

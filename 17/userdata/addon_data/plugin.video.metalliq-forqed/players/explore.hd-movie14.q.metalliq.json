@@ -1,0 +1,37 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] HD-Movie14 ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdhdmovie14",
+ "priority"     : 700,
+ "id"           : "explore.hd-movie14.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdhdmovie14/?mode=1&url=http://hdmovie14.net/search%3fkey%3d{title}",
+    "steps"     : [
+     "($$.*$$){title}($$.*$$)",
+     ".*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdhdmovie14/?mode=1&url=http://hdmovie14.net/search%3fkey%3d{clearname}",
+    "steps"     : [
+     "($$.*$$){clearname}($$.*$$).*($$.*$$)Season {season}($$.*$$)",
+     "($$.*$$).* {episode}($$.*$$)",
+     ".*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,47 @@
+{
+ "name"         : "Navigate [COLOR ff0084ff]-[/COLOR] CartoonsOn ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.cartoonson",
+ "priority"     : 700,
+ "id"           : "navigate.cartoonson.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoonson/",
+    "steps"     : [
+     "($$.*$$)Series($$.*$$)",
+     "($$.*$$)({title}.*{year}.*|{title}.*)($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoonson/",
+    "steps"     : [
+     "($$.*$$)Series($$.*$$)",
+     "($$.*$$){clearname|replace(Æ,Ae)}.*Season.{season}($$.*$$)",
+     "($$.*$$)Season {season} Episode {episode:02d}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.cartoonson/",
+    "steps"     : [
+     "($$.*$$)Series($$.*$$)",
+     "><{clearname|replace(Æ,Ae)}",
+     "($$.*$$)Season {season}($$.*$$)",
+     "($$.*$$)Season {season} Episode {episode:02d}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

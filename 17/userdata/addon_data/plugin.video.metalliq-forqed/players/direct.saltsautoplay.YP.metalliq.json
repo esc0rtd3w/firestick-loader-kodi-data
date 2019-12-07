@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct - [COLOR ff0084ff]SALTS Autoplay[/COLOR] ([COLOR gold]YP[/COLOR])",
+ "repository"   : "repository.tknorris",
+ "plugin"       : "plugin.video.salts",
+ "priority"     : 200,
+ "id"           : "SALTS Autoplay",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.salts/?title={title_+}&video_type=Movie&trakt_id={trakt}&mode=autoplay&dialog=False&year={year}",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.salts/?ep_airdate={firstaired}&trakt_id={trakt}&episode={episode}&mode=autoplay&dialog=False&title={clearname_+}&ep_title={title_+}&season={season}&year={year}&video_type=Episode",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

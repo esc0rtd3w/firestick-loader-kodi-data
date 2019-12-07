@@ -1,0 +1,51 @@
+<dir>
+  <title>Blind Guardian Albums</title>
+  <lastfm>artist/blind guardian/albums</lastfm>
+</dir>
+
+<dir>
+  <title>Disturbed Tracks</title>
+  <lastfm>artist/disturbed/tracks</lastfm>
+</dir>
+
+
+<dir>
+  <title>Sabaton</title>
+  <lastfm>artist/sabaton/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Iced Earth</title>
+  <lastfm>artist/iced earth/tracks</lastfm>
+</dir>
+
+
+<dir>
+  <title>Artist Chart</title>
+  <lastfm>chart/artists</lastfm>
+</dir>
+
+<dir>
+  <title>Track Chart</title>
+  <lastfm>chart/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Tag Chart</title>
+  <lastfm>chart/tags</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Tracks</title>
+  <lastfm>tag/metal/tracks</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Artists</title>
+  <lastfm>tag/metal/artists</lastfm>
+</dir>
+
+<dir>
+  <title>Metal Albums</title>
+  <lastfm>tag/metal/albums</lastfm>
+</dir>

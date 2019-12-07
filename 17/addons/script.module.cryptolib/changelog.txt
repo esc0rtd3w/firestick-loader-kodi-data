@@ -1,0 +1,8 @@
+[B]Version 1.1.1[/B]
+- Removed SHA256 due to dependency hell
+
+[B]Version 1.1.0[/B]
+- Add SHA256
+
+[B]Version 1.0.0[/B]
+ * Initial release

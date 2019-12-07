@@ -1,0 +1,52 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] Icefilms ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.eldorado",
+ "plugin"       : "plugin.video.icefilms",
+ "priority"     : 700,
+ "id"           : "Icefilms",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=2&name=A&url=http://www.icefilms.info/movies/a-z/{sorttitle[0]}",
+    "steps"     : [
+     "{title}.*{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=2&name=A&url=http://www.icefilms.info/movies/a-z/1",
+    "steps"     : [
+     "{title}.*{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=11&name=A&url=http://www.icefilms.info/tv/a-z/{sortname[0]}",
+    "steps"     : [
+     "{clearname}$$.*",
+     ".*Season$${season}$$.*",
+     "{season}x{episode:02d}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=11&name=A&url=http://www.icefilms.info/tv/a-z/1",
+    "steps"     : [
+     "{clearname}$$.*",
+     ".*Season$${season}$$.*",
+     "{season}x{episode:02d}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

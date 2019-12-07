@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+	<allowoverlay>no</allowoverlay>
+	<defaultcontrol always="false">4002</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+
+    <controls>
+
+        <control type="image">
+            <posx>150</posx>
+            <posy>100</posy>
+            <width>1010</width>
+            <height>510</height>
+            <texture>ustvnow-menu.png</texture>
+        </control>
+        <control type="image">
+            <posx>150</posx>
+            <posy>100</posy>
+            <width>1010</width>
+            <height>510</height>
+            <texture>ustvnow-menu.png</texture>
+        </control>
+		
+		<control type="label">
+            <description>Help and Tips</description>
+            <posx>423</posx>
+            <posy>120</posy>
+            <width>180</width>
+            <height>50</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+			<align>left</align>
+            <aligny>top</aligny>
+			<label>HELP &amp; TIPS</label>
+        </control>
+		
+		<control type="label">
+            <description>Help and Tips</description>
+            <posx>423</posx>
+            <posy>150</posy>
+            <width>706</width>
+            <height>400</height>
+            <textcolor>ffffffff</textcolor>
+            <font>font13</font>
+			<align>justify</align>
+            <aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll time="3600" delay="6000" repeat="6000">true</autoscroll>
+			<label>
+Use the Record option to schedule the selected program for recording. Shows that are scheduled for recording will be highlighted red. If you set a show to recurring from this EPG only the current show that you have scheduled to record will be highlighted in red. 
+
+If you would like to cancel the recording simply open this menu while the program is selected and click "Don't Record". If you need to turn off recurring for a show use the Recurring section of USTVnow Plus.
+
+Keep in mind that shows that are set to record within USTVnow Plus itself will not show as scheduled to record in this EPG. If a recording is cancelled in USTVnow Plus it will not show as not being scheduled to record in this EPG if it was originally scheduled from this EPG.
+
+For additional help please visit:
+https://tvaddons.co/forums/</label>
+        </control>
+			
+        <control type="image" id="4100">
+            <posx>160</posx>
+            <posy>130</posy>
+            <width>240</width>
+            <height>80</height>
+            <aspectratio>keep</aspectratio>
+			<visible>true</visible>
+        </control>
+        <control type="label" id="4101">
+            <posx>160</posx>
+            <posy>100</posy>
+            <width>240</width>
+            <height>50</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+
+        <control type="button" id="4000"><!-- Watch Stream -->
+            <posx>160</posx>
+            <posy>228</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>4005</onup>
+            <ondown>4001</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+			<visible>false</visible>
+        </control>
+
+        <control type="button" id="4001"><!-- Choose Stream -->
+            <posx>160</posx>
+            <posy>280</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>4000</onup>
+            <ondown>4002</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ustvnow.plus.guide 30304]</label>
+			<visible>false</visible>
+        </control>
+        <control type="label"><!-- Choose Stream Text -->
+            <posx>20</posx>
+            <posy>260</posy>
+            <width>240</width>
+            <height>200</height>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ustvnow.plus.guide 30305]</label>
+            <wrapmultiline>true</wrapmultiline>
+			<visible>false</visible>
+        </control>
+
+        <control type="label" id="4102"><!-- Show Title -->
+            <posx>20</posx>
+            <posy>420</posy>
+            <width>240</width>
+            <height>50</height>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+			<visible>false</visible>
+        </control>
+        <control type="button" id="4002"><!-- REMINDER -->
+            <posx>160</posx>
+            <posy>228</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>4001</onup>
+            <ondown>4003</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+        </control>
+        <control type="button" id="4003"><!-- View Recordings -->
+            <posx>160</posx>
+            <posy>278</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>4002</onup>
+            <ondown>80000</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ustvnow.plus.guide 30307]</label>
+        </control>
+
+        <control type="button" id="4005"><!-- watch from beginning -->
+            <posx>160</posx>
+            <posy>178</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>8002</onup>
+            <ondown>4000</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>Watch from beginning</label>
+			<visible>false</visible>
+        </control>
+		
+        <control type="button" id="80000"><!-- View Scheduled -->
+            <posx>160</posx>
+            <posy>328</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>4002</onup>
+            <ondown>80001</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+			<label>$ADDON[script.ustvnow.plus.guide 80000]</label>
+
+        </control>
+
+        <control type="button" id="80001"><!-- View Recurring -->
+            <posx>160</posx>
+            <posy>378</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>80000</onup>
+            <ondown>80002</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+			<label>$ADDON[script.ustvnow.plus.guide 80001]</label>
+			<visible>true</visible>
+
+        </control>
+		
+		<control type="button" id="80002"><!-- GUIDE SETTINGS -->
+            <posx>160</posx>
+            <posy>428</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>80001</onup>
+            <ondown>4004</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+			<label>$ADDON[script.ustvnow.plus.guide 80002]</label>
+
+        </control>
+
+        <control type="button" id="4004"><!-- QUIT -->
+            <posx>160</posx>
+            <posy>478</posy>
+            <width>240</width>
+            <height>50</height>
+            <texturefocus>ustvnow-menu-grey-focus.png</texturefocus>
+            <texturenofocus>ustvnow-menu-grey.png</texturenofocus>
+            <onup>80002</onup>
+            <ondown>4002</ondown>
+            <align>center</align>
+            <aligny>center</aligny>
+            <font>font13</font>
+            <textcolor>ffffffff</textcolor>
+            <label>$ADDON[script.ustvnow.plus.guide 30308]</label>
+			<visible>true</visible>
+        </control>
+		
+		
+
+    </controls>
+</window>

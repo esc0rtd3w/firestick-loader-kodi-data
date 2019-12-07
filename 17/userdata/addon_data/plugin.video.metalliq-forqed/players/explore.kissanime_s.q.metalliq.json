@@ -1,0 +1,236 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] KissAnime Subbed ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.thehighway",
+ "plugin"       : "plugin.video.kissanime",
+ "priority"     : 700,
+ "id"           : "KissAnime Subbed",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Sub.*",
+     "Movie.*",
+     ".*1080.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Sub.*",
+     "Movie.*",
+     ".*720.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Sub.*",
+     "Movie.*",
+     ".*480.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Sub.*",
+     "Movie.*",
+     ".*360.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Dub.*",
+     "Movie.*",
+     ".*1080.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Dub.*",
+     "Movie.*",
+     ".*720.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Dub.*",
+     "Movie.*",
+     ".*480.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*Dub.*",
+     "Movie.*",
+     ".*360.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*1080.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*720.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*480.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*360.*"
+     ],
+    "action"    : "Play"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Sub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*1080.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Sub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*720.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Sub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*480.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Sub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*360.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Dub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*1080.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Dub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*720.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Dub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*480.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*(Dub).*",
+     "Episode {absolute_number:03d}.*",
+     ".*360.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*1080.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*720.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*480.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kissanime/?description=special://home/addons/plugin.video.kissanime/fanart.jpg&iconimage=special://home/addons/plugin.video.kissanime/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*360.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

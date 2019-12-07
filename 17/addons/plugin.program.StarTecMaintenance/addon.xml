@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.StarTecMaintenance" 
+	     name="StarTec Maintenance" 
+	     version="1.0.1" 
+	     provider-name="StarTec">
+  <requires>
+  	<import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension> 
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">THE MAINTENANCE TOOL Y'All WILL EVER NEED!!!</summary>
+    <description lang="en"> Does all the Maintenance needed for a smooth kodi with out all the fluff. Features Auto Cache delete at every start up, notifies you when package and thumbs get full (Sizes are changable) cuts down on your devices read/writes on the ROM. Also has tons of Backup/Restore Options and a Speed test, plus other great features!! THX goes to surfacingx and TDB for the code used </description>
+    <disclaimer lang="en"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+  </extension>
+</addon>

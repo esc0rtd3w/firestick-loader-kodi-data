@@ -1,0 +1,26 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] What the Furk ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.Kinkin",
+ "plugin"       : "plugin.video.whatthefurk",
+ "priority"     : 200,
+ "id"           : "What the Furk",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.whatthefurk/?iconimage=&imdb={imdb}&mode=1000&name={title_escaped}%20({year})&parms&rootname={title_escaped}%20({year})&start=1&url=imdb&videotype=movies",
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.whatthefurk/?iconimage=http%3a%2f%2fthetvdb.com%2fbanners%2fposters%2f{id}-1.jpg&imdb={imdb}&mode=1000&name=S{season:02d}E{episode:02d}%20-%20{title_escaped}&parms=na&rootname={clearname_escaped}%20({year})&start=na&url=url&videotype=tvshows",
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "live"         : []
+}

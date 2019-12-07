@@ -1,0 +1,8 @@
+<settings>
+    <category label="General">
+        <setting label="Autoplay" type="bool" id="autoplay" default="true"/>
+        <setting label="Use livestreamer" type="bool" id="livestreamer" default="false"/>
+        <setting label="Use inputstream.adaptive" type="bool" id="inputstream" default="false"/>
+        <setting label="Cache time (Hours)" type="slider" id="cache_time" default="8" range="0,80" option="int"/>
+    </category>
+</settings>

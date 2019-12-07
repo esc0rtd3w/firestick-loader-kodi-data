@@ -1,0 +1,47 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Classic Cinema ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.classiccinema",
+ "priority"     : 800,
+ "id"           : "Classic Cinema",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.classiccinema/",
+    "steps"     : [
+     "@anyexcept:Serials",
+     "@any",
+     "({title} .{year}.|.{shorttitle} .{year}.)"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.classiccinema/",
+    "steps"     : [
+     "@anyexcept:Serials",
+     "@any",
+     "({title} .{year}.*|.{shorttitle} .{year}.*)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.classiccinema/",
+    "steps"     : [
+     "Serials",
+     "{clearname} .{year}.",
+     "(.*{title}|.* {episode}&colon;.*)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

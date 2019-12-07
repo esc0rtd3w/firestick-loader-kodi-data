@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<stream>
+
+<item>
+<title>[COLOR yellow][B][I] Name of TV channel 1 [/I][/B][/COLOR]</title>
+<link>http://sample_link_to_tv_channel.m3u8</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>Name of News channel 2</title>
+<link>http://sample_link_to_news_channel.m3u8</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>YouTube - Video Link</title>
+<link>https://www.youtube.com/watch?v=xxxxxxxx</link>
+<thumbnail></thumbnail>
+</item>
+
+<item>
+<title>YouTube - Video Link</title>
+<link>plugin://plugin.video.youtube/play/?video_id=xxxxxxxx</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - Video Link</title>
+<link>plugin://plugin.video.youtube/?action=play_video&amp;videoid=xxxxxxxx</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - Video Link</title>
+<link>plugin://plugin.video.youtube/?path=/root/video&amp;action=play_video&amp;videoid=xxxxxxxx</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - User (playlists)</title>
+<link>https://www.youtube.com/user/UserName</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - User (playlists)</title>
+<link>plugin://plugin.video.youtube/user/UserName</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - Channel (playlists)</title>
+<link>https://www.youtube.com/channel/ChannelName</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>YouTube - Channel (playlists)</title>
+<link>plugin://plugin.video.youtube/channel/ChannelName</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>DailyMotion - Video Link</title>
+<link>http://www.dailymotion.com/video/yyyyy_xxxx-xxx-xxx-xxx_xxxxx</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>DailyMotion - Video Link</title>
+<link>http://www.dailymotion.com/video/yyyyy</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+<item>
+<title>DailyMotion - Video Link</title>
+<link>plugin://plugin.video.dailymotion_com/?mode=playVideo&amp;url=yyyyy</link>
+<thumbnail>http://www.link to thumbnail</thumbnail>
+</item>
+
+</stream>
+
+
+
+
+
+

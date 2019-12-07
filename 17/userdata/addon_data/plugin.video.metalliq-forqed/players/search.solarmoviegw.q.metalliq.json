@@ -1,0 +1,24 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] SolarMovie ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.solarmoviegw",
+ "priority"     : 900,
+ "id"           : "search.solarmoviegw.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.solarmoviegw/?description&amp;fanart=special://home/addons/plugin.video.solarmoviegw/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.solarmoviegw/icon.png&amp;mode=6&amp;name=Search&amp;query={title_+}",
+    "steps"     : [
+     "><{title} .{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

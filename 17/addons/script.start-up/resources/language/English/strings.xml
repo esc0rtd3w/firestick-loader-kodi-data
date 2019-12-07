@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+	<string id="30000">Startup</string>
+	<string id="30001">You can disable services from Kodi startup</string>
+</strings>

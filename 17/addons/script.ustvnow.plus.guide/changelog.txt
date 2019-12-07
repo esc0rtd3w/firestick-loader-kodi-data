@@ -1,0 +1,382 @@
+--------------------------
+USTVnow Guide - 1.3.8
+--------------------------
++ Fixed issue with addon.xml
+
+--------------------------
+USTVnow Guide - 1.3.7
+--------------------------
++ Added support for MavTV, NASA TV, and The Weather Channel
+
+--------------------------
+USTVnow Guide - 1.3.6
+--------------------------
++ Added option to determine if guide is downloaded from secure connection or not
+
+--------------------------
+USTVnow Guide - 1.3.5
+--------------------------
++ Set OSD default to false
+
+--------------------------
+USTVnow Guide - 1.3.4
+--------------------------
++ Minor server fix
+
+--------------------------
+USTVnow Guide - 1.3.3
+--------------------------
++ Removed uneeded recording notification
++ Changed Settings link to go to the USTVnow Plus settings
+
+--------------------------
+USTVnow Guide - 1.3.2
+--------------------------
++ Updated branding
+
+--------------------------
+USTVnow Guide - 1.3.1
+--------------------------
++ Updated branding
+
+--------------------------
+USTVnow Guide - 1.3.0
+--------------------------
++ Fix for SPMC
+
+--------------------------
+USTVnow Guide - 1.2.9
+--------------------------
++ Code Tweaks
+
+--------------------------
+USTVnow Guide - 1.2.8
+--------------------------
++ Updated to pull xmltv guide from different server
+
+--------------------------
+USTVnow Guide - 1.2.7
+--------------------------
++ Fixed issue with recording notifications
+
+--------------------------
+USTVnow Guide - 1.2.6
+--------------------------
++ Updated TV ADDONS graphics
+
+--------------------------
+USTVnow Guide - 1.2.5
+--------------------------
++ Fixed Channel sort order to be alphabetical without case sensitivity
+
+--------------------------
+USTVnow Guide - 1.2.4
+--------------------------
++ Added Go To Now option in context menu
+
+--------------------------
+USTVnow Guide - 1.2.3
+--------------------------
++ Updated addon.xml
+
+--------------------------
+USTVnow Guide - 1.2.2
+--------------------------
++ Updated fanart to have TVADDONS logo
++ Updated addon.xml file with TVADDONS branding
+
+--------------------------
+USTVnow Guide - 1.2.1
+--------------------------
++ Set channels to always be in alphabetical order
+
+--------------------------
+USTVnow Guide - 1.2.0
+--------------------------
++ Renamed all skin images to fix cache conflict with FTV Guide
++ Minor UI tweaks for context menu and program artwork position
+
+--------------------------
+USTVnow Guide - 1.1.9
+--------------------------
++ Bumping version number to hopefully fix dependency issue
+
+--------------------------
+USTVnow Guide - 1.1.8
+--------------------------
++ Added Yes/No dialog for Recording options
++ Updated Help & Tips
+
+--------------------------
+USTVnow Guide - 1.1.7
+--------------------------
++ Added ability to add and cancel recordings!
++ Removed option to rearrange/hide channels in favor of a cleaner interface for recording options
++ Added links to USTVnow Plus Recordings, Scheduled, and Recurring sections
+
+--------------------------
+USTVnow Guide - 1.1.6
+--------------------------
++ Set default download interval to Every Start
++ Removed all download interval options except Every Start and 12 hours
+
+--------------------------
+USTVnow Guide - 1.1.5
+--------------------------
++ Very minor artwork updates
+
+--------------------------
+USTVnow Guide - 1.1.4
+--------------------------
++ Added option to disable OSD
+
+--------------------------
+USTVnow Guide - 1.1.3
+--------------------------
++ Fixed OSD issue
+
+--------------------------
+USTVnow Guide - 1.1.2
+--------------------------
++ Added link to USTVnow Plus
+
+--------------------------
+USTVnow Guide - 1.1.1
+--------------------------
++ Fixed missing settings
+
+--------------------------
+USTVnow Guide - 1.1.0
+--------------------------
++ Fixed missing settings
+
+--------------------------
+USTVnow Guide - 1.0.9
+--------------------------
++ Fixed missing settings
+
+--------------------------
+USTVnow Guide - 1.0.8
+--------------------------
++ Fixed missing settings
++ Added OSD option
+
+--------------------------
+USTVnow Guide - 1.0.7
+--------------------------
++ Updated dependencies
+
+--------------------------
+USTVnow Guide - 1.0.6
+--------------------------
++ Updated dependencies
+
+--------------------------
+USTVnow Guide - 1.0.5
+--------------------------
++ Updated dependencies
+
+--------------------------
+USTVnow Guide - 1.0.4
+--------------------------
++ Updated dependencies
+
+--------------------------
+USTVnow Guide - 1.0.3
+--------------------------
++ Added code to check USTVnow Plus Account Type
++ Added option to open USTVnow Plus settings from context menu
++ Updated Settings messages to give more info on when to use the Reset option
++ Updated artwork
+
+--------------------------
+USTVnow Guide - 1.0.2
+--------------------------
++ Code clean-up
++ Set USTVnow Plus as optional dependency
+
+--------------------------
+USTVnow Guide - 1.0.1
+--------------------------
++ Initial Release
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+Below is the changelog from the original FTV Guide that
+USTVnow Plus TV Guide is based on
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+--------------------------
+FTV Guide - 2.0.22
+--------------------------
++ Merged Pull Request #5: further meta integration  (Thanks midraal)
+
+--------------------------
+FTV Guide - 2.0.21
+--------------------------
++ Merged Pull Request #4: add support for meta live players (Thanks midraal)
+
+--------------------------
+FTV Guide - 2.0.20
+--------------------------
++ Added Background Update Service
++ Improved file downloading again
+
+--------------------------
+FTV Guide - 2.0.19e
+--------------------------
++ Added "refresh on start" setting for custom guides
++ Improved Custom Guide fetching to work with remote files
++ Hardened the handling of channel IDs
+
+--------------------------
+FTV Guide - 2.0.18
+--------------------------
++ Added access to Kodi Video Library and Video Add-ons
++ Added 'On-Demand' features to skins (except Eminence)
+
+--------------------------
+FTV Guide - 2.0.17
+--------------------------
++ System time stamp added to all skins
+
+--------------------------
+FTV Guide - 2.0.16
+--------------------------
++ Android workaround no longer needed for Kodi 15
++ Restore logo if no programme image
++ Fixed ghosting with local XMLTV file
+
+--------------------------
+FTV Guide - 2.0.15
+--------------------------
++ Bugfix - Guide data not loading
+
+--------------------------
+FTV Guide - 2.0.14
+--------------------------
++ Workaround - Android setSettings() not working - see Kodi bug:
+ #13913 - [android/python] addons can not save settings  [http://trac.kodi.tv/ticket/13913]
+
+--------------------------
+FTV Guide - 2.0.13
+--------------------------
++ Bugfix - new type selection had an error
+
+--------------------------
+FTV Guide - 2.0.12
+--------------------------
++ Guide type selection through new ini-file
++ Bugfix - Mouse nav-bar disappearing
+
+--------------------------
+FTV Guide - 2.0.11
+--------------------------
++ Bugfix - Database lock causes Kodi to freeze on exit (Thanks "newguy"!)
+
+--------------------------
+FTV Guide - 2.0.10
+--------------------------
++ Catch connection issues to server
++ Add Autostart setting
+
+--------------------------
+FTV Guide - 2.0.9
+--------------------------
++ Updated Eminence Skin
+
+--------------------------
+FTV Guide - 2.0.8
+--------------------------
++ Bugfix - [ESC] key not working correctly
++ Enhancement - Improved timezones handling
+
+--------------------------
+FTV Guide - 2.0.7
+--------------------------
++ Bugfix - touch devices cannot open context menu
+
+--------------------------
+FTV Guide - 2.0.6
+--------------------------
++ Bugfix - folder in profile now created automatically
+
+--------------------------
+FTV Guide - 2.0.5
+--------------------------
++ Support for custom local addons.ini file
++ Favourites now get loaded from user profile, not always MASTER
+
+--------------------------
+FTV Guide - 2.0.4
+--------------------------
++ Fix for ghosting issue
+
+--------------------------
+FTV Guide - 2.0.3
+--------------------------
++ Even more skins
++ Support for local Channel logos folder (requires database reset!)
++ updated all headers to comply with the licence
+
+--------------------------
+FTV Guide - 2.0.2
+--------------------------
++ Support for custom local XMLTV files
++ More skins
++ Removed need to edit settings.xml when new skin is added
+
+--------------------------
+FTV Guide - 2.0.1
+--------------------------
++ Some bug fixes
+
+--------------------------
+FTV Guide - 2.0.0
+--------------------------
++ Re-branding and new skins
++ Support for changing skins in the settings
++ Setting to switch off channel logos
++ addons.ini now also gets downloaded using interval setting
++ Database-reset feature (Thanks to Podgod)
++ Removed buggalo dependency
+
+--------------------------
+FTV Guide - 1.0.6
+--------------------------
++ Added extra source options
++ Slight change to default skin
++ Removed 'total_seconds' command to avoid Android errors
+
+--------------------------
+FTV Guide - 1.0.5
+--------------------------
++ Added source selection
++ Added guide downloads
+
+--------------------------
+FTV Guide - 1.0.4
+--------------------------
++ New default skin
++ Expanded favourites to include non 'PlayMedia' items
+
+--------------------------
+FTV Guide - 1.0.3
+--------------------------
++ Change to source location (Thanks to Jonc)
+
+--------------------------
+FTV Guide - 1.0.2
+--------------------------
++ Minor changes
+
+--------------------------
+FTV Guide - 1.0.1
+--------------------------
++ Minor changes
+
+--------------------------
+FTV Guide - 1.0.0
+--------------------------
++ Initial Release

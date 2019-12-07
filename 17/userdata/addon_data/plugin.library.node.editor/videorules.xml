@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rules>
+	<node name="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/library/video/tvshows" />
+	<node name="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/library/video/musicvideos" />
+	<node name="/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/library/video/movies" />
+</rules>

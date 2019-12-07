@@ -1,0 +1,21 @@
+[B]1.0.7[/B]
+- Show notification when search history is cleared
+[B]1.0.6[/B]
+- clean up from git merge
+[B]1.0.5a[/B]
+- added documentary
+[B]1.0.5[/B]
+- fix in theaters
+- fix link to providers
+- change information & News to "No Stream HELP!"
+- Credits sections
+[B]1.0.4[/B]
+- added Lambda setting to main menu
+- strings for Lambda
+[B]1.0.3[/B]
+- Added Debrid Services to Tools menu
+- Updated Information & How to!!!(text)
+[B]1.0.2[/B]
+- Minor Changes
+[B]1.0.1[/B]
+- Initial version

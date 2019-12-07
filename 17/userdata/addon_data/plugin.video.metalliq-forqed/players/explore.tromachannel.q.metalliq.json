@@ -1,0 +1,31 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] XvBMC's Troma Channel ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xvbmc",
+ "plugin"       : "plugin.video.xvbmc.troma",
+ "priority"     : 700,
+ "id"           : "XvBMC's Troma Channel",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.xvbmc.troma/",
+    "steps"     : [
+     "{title|replace( &colon;,&colon;)}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.xvbmc.troma/",
+    "steps"     : [
+     "({title|replace( &colon;,&colon;)}.*|.*{title|replace( &colon;,&colon;)}.*|.*{sorttitle|replace( &colon;,&colon;)}.*)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

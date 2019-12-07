@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="griffin" name="Griffin Repo" version="0.0.7" provider-name="griffin_303">
+	<extension point="xbmc.addon.repository" name="Griffin Repository">
+            <dir>
+            <info compressed="false">https://bitbucket.org/griffin303/griffin/raw/master/zips/addons.xml</info>
+            <checksum>https://bitbucket.org/griffin303/griffin/raw/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://bitbucket.org/griffin303/griffin/raw/master/zips/</datadir>
+            <hashes>false</hashes>
+            </dir>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+            </dir>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+            </dir>
+			<dir>
+                <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            </dir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>The Griffin Repo</summary>
+            <description>Home of FinalGear, Joshua and Uranus</description>
+            <platform>all</platform>
+            <genre>movies</genre>
+    </extension>
+</addon>

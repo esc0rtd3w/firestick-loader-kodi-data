@@ -1,0 +1,94 @@
+{
+ "name"         : "Navigate [COLOR ff0084ff]-[/COLOR] Dandymedia ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.dandymedia",
+ "priority"     : 800,
+ "id"           : "navigate.dandymedia.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><Top Documentary",
+     "><{title}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "@anycontaining:1080",
+     "($$.*$$){title}.({year}|).*($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "@anycontaining:720",
+     "($$.*$$){title}.({year}|).*($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><HD TV Shows",
+     "><Search HDTV",
+     "@keyboard:{clearname}",
+     "><{clearname|replace(Æ,Ae)}.-.SEASON.{season}",
+     "><.*S{season:02d}E{episode:02d}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><Popular TV Shows",
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season.{season}.*",
+     "><Episode.{episode}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><Children.*",
+     "><{clearname|replace(Æ,Ae)}.*",
+     "><Season.{season}.*",
+     "><Episode.{episode:02d}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><HD Concerts",
+     "><{artist}.*{album}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.dandymedia/",
+    "steps"     : [
+     "><HD Concerts",
+     "><.*{artist}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,45 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Toonjet ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.toonjet",
+ "priority"     : 800,
+ "id"           : "Toonjet",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.toonjet/",
+    "steps"     : [
+     "@anyexcept:[B]Youtube Channel[/B]|[COLOR red]Most Viewed[/COLOR]|[B]Highest Rated[/B]",
+     "(.*|)({title}|.{shorttitle})@page:($$.*$$)$LOCALIZE[33078] .($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.toonjet/",
+    "steps"     : [
+     "@any",
+     "(.*|)({title}|.{shorttitle})@page:($$.*$$)$LOCALIZE[33078] .($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.toonjet/",
+    "steps"     : [
+     "@anyexcept:[B]Youtube Channel[/B]|[COLOR red]Most Viewed[/COLOR]|[B]Highest Rated[/B]",
+     "{clearname}",
+     "(.|){title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

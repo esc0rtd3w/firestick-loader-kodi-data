@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.ustvnow.tva" name="USTVnow Plus" provider-name="mhancoc7" version="14.9.4">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+    </requires>
+    <extension library="main.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Watch Major American Television Networks Live for Free!</summary>
+        <description lang="en_GB">Please visit https://www.tvaddons.co for addon support! Watch Major American
+            Television Networks Live! Entirely Legal and Free! You can also record content with a paid DVR account or by
+            using DVR referral points. Signup for a free account through the following link today:
+            http://watch.ustvnow.com
+        </description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <forum>https://www.tvaddons.co/forums/</forum>
+        <website>https://ustvnow.tvaddons.co/</website>
+        <news>-14.9.4 [CR]Removed optional dependency on USTVnow Guide due to issue with Kodi 18[CR][CR]See the changelog.txt file for
+            previous updates.
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/images/screenshots/screenshot-1.png</screenshot>
+            <screenshot>resources/images/screenshots/screenshot-2.png</screenshot>
+            <screenshot>resources/images/screenshots/screenshot-3.png</screenshot>
+        </assets>
+    </extension>
+</addon>

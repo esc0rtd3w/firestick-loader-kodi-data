@@ -1,0 +1,51 @@
+{
+ "name"         : "Search [COLOR FF0084FF]-[/COLOR] GDrive-Testing ([COLOR FF0084FF]R[/COLOR])",
+ "repository"   : "repository.ddurdle-testing",
+ "plugin"       : "plugin.video.gdrive-testing",
+ "priority"     : 900,
+ "id"           : "GDrive-Testing",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.gdrive-testing/?content_type=video&instance=gdrive1&mode=search&title={title}+%28{year}",
+    "steps"     : [".*(avi|mp4|mkv|mpg|mov|ts)"],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.gdrive-testing/?content_type=video&instance=gdrive1&mode=search&title={clearname}.*S{season:02d}E{episode:02d}",
+    "steps"     : ["{clearname}.*S{season:02d}E{episode:02d}.*(avi|mp4|mkv|mpg|mov|ts)"],
+    "action"    : "PLAY"
+    },
+    {
+    "link"      : "plugin://plugin.video.gdrive-testing/?content_type=video&instance=gdrive1&mode=search&title={clearname}.*{epyear}.{epmonth:02d}.{epday:02d}",
+    "steps"     : ["{clearname}.{epyear}.{epmonth:02d}.{epday:02d}.*(avi|mp4|mkv|mpg|mov|ts)"],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.gdrive-testing/?content_type=video&instance=gdrive1&mode=search&title={clearartist}+%28{cleartrack}",
+    "steps"     : [".*(avi|mp4|mkv|mpg|mov|ts)"],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.video.gdrive-testing/?content_type=audio&instance=gdrive1&mode=search&title={clearartist}+%28{cleartrack}",
+    "steps"     : [".*(mp3|flac|ogg|ac3)"],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

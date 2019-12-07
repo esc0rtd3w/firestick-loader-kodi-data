@@ -1,0 +1,407 @@
+[2019-01-23 02:24:24] 2019-01-23 02:24:24.182937
+[2019-01-23 02:24:25] Continuing Start Up Script
+[2019-01-23 02:24:25] [Path Check] Started
+[2019-01-23 02:24:25] [Path Check] Good!
+[2019-01-23 02:24:25] [Auto Install Repo] Started
+[2019-01-23 02:24:25] [Auto Install Repo] Not Enabled
+[2019-01-23 02:24:25] [Auto Update Wizard] Started
+[2019-01-23 02:24:27] [Auto Update Wizard] No New Version v0.2.5
+[2019-01-23 02:24:27] [Notifications] Started
+[2019-01-23 02:24:28] [Notifications] id: 92
+[2019-01-23 02:24:31] [Notification] NotifyID 92 Dismissed
+[2019-01-23 02:24:31] [Notifications] Complete
+[2019-01-23 02:24:31] [Installed Check] Started
+[2019-01-23 02:24:31] [Installed Check] Not Enabled
+[2019-01-23 02:24:31] [Build Check] Started
+[2019-01-23 02:24:31] [Build Check] First Run
+[2019-01-23 02:24:50] [First Run] [User Selected: Ignore Build Menu] [Next Check: 2019-01-23]
+[2019-01-23 02:24:50] [Trakt Data] Started
+[2019-01-23 02:24:50] [Trakt Data] Not Enabled
+[2019-01-23 02:24:50] [Real Debrid Data] Started
+[2019-01-23 02:24:50] [Real Debrid Data] Not Enabled
+[2019-01-23 02:24:50] [Login Data] Started
+[2019-01-23 02:24:50] [Login Data] Not Enabled
+[2019-01-23 14:07:37] 2019-01-23 14:07:37.596486
+[2019-01-23 14:07:38] Continuing Start Up Script
+[2019-01-23 14:07:38] [Path Check] Started
+[2019-01-23 14:07:38] [Path Check] Good!
+[2019-01-23 14:07:38] [Auto Install Repo] Started
+[2019-01-23 14:07:38] [Auto Install Repo] Not Enabled
+[2019-01-23 14:07:38] [Auto Update Wizard] Started
+[2019-01-23 14:07:40] [Auto Update Wizard] No New Version v0.2.5
+[2019-01-23 14:07:40] [Notifications] Started
+[2019-01-23 14:07:41] [Notifications] id[92] Dismissed
+[2019-01-23 14:07:41] [Installed Check] Started
+[2019-01-23 14:07:41] [Installed Check] Not Enabled
+[2019-01-23 14:07:41] [Build Check] Started
+[2019-01-23 14:07:42] [Trakt Data] Started
+[2019-01-23 14:07:42] [Trakt Data] Not Enabled
+[2019-01-23 14:07:42] [Real Debrid Data] Started
+[2019-01-23 14:07:42] [Real Debrid Data] Not Enabled
+[2019-01-23 14:07:42] [Login Data] Started
+[2019-01-23 14:07:42] [Login Data] Not Enabled
+[2019-01-23 14:20:05] 2019-01-23 14:20:05.200620
+[2019-01-23 14:20:06] Continuing Start Up Script
+[2019-01-23 14:20:06] [Path Check] Started
+[2019-01-23 14:20:06] [Path Check] Good!
+[2019-01-23 14:20:06] [Auto Install Repo] Started
+[2019-01-23 14:20:06] [Auto Install Repo] Not Enabled
+[2019-01-23 14:20:06] [Auto Update Wizard] Started
+[2019-01-23 14:20:08] [Auto Update Wizard] No New Version v0.2.5
+[2019-01-23 14:20:09] [Notifications] Started
+[2019-01-23 14:20:10] [Notifications] id[92] Dismissed
+[2019-01-23 14:20:10] [Installed Check] Started
+[2019-01-23 14:20:10] [Installed Check] Not Enabled
+[2019-01-23 14:20:10] [Build Check] Started
+[2019-01-23 14:20:10] [Trakt Data] Started
+[2019-01-23 14:20:10] [Trakt Data] Not Enabled
+[2019-01-23 14:20:10] [Real Debrid Data] Started
+[2019-01-23 14:20:10] [Real Debrid Data] Not Enabled
+[2019-01-23 14:20:10] [Login Data] Started
+[2019-01-23 14:20:10] [Login Data] Not Enabled
+[2019-01-23 22:32:01] 2019-01-23 22:32:01.398026
+[2019-01-23 22:32:02] Continuing Start Up Script
+[2019-01-23 22:32:02] [Path Check] Started
+[2019-01-23 22:32:02] [Path Check] Good!
+[2019-01-23 22:32:02] [Auto Install Repo] Started
+[2019-01-23 22:32:02] [Auto Install Repo] Not Enabled
+[2019-01-23 22:32:02] [Auto Update Wizard] Started
+[2019-01-23 22:32:04] [Auto Update Wizard] No New Version v0.2.5
+[2019-01-23 22:32:04] [Notifications] Started
+[2019-01-23 22:32:05] [Notifications] id[92] Dismissed
+[2019-01-23 22:32:05] [Installed Check] Started
+[2019-01-23 22:32:05] [Installed Check] Not Enabled
+[2019-01-23 22:32:05] [Build Check] Started
+[2019-01-23 22:32:05] [Trakt Data] Started
+[2019-01-23 22:32:05] [Trakt Data] Not Enabled
+[2019-01-23 22:32:05] [Real Debrid Data] Started
+[2019-01-23 22:32:05] [Real Debrid Data] Not Enabled
+[2019-01-23 22:32:05] [Login Data] Started
+[2019-01-23 22:32:05] [Login Data] Not Enabled
+[2019-01-30 19:16:27] 2019-01-30 19:16:27.602718
+[2019-01-30 19:16:28] Continuing Start Up Script
+[2019-01-30 19:16:28] [Path Check] Started
+[2019-01-30 19:16:28] [Path Check] Good!
+[2019-01-30 19:16:28] [Auto Install Repo] Started
+[2019-01-30 19:16:28] [Auto Install Repo] Not Enabled
+[2019-01-30 19:16:28] [Auto Update Wizard] Started
+[2019-01-30 19:16:30] [Auto Update Wizard] No New Version v0.2.5
+[2019-01-30 19:16:30] [Notifications] Started
+[2019-01-30 19:16:32] [Notifications] id[92] Dismissed
+[2019-01-30 19:16:32] [Installed Check] Started
+[2019-01-30 19:16:32] [Installed Check] Not Enabled
+[2019-01-30 19:16:32] [Build Check] Started
+[2019-01-30 19:16:32] [Trakt Data] Started
+[2019-01-30 19:16:32] [Trakt Data] Not Enabled
+[2019-01-30 19:16:32] [Real Debrid Data] Started
+[2019-01-30 19:16:32] [Real Debrid Data] Not Enabled
+[2019-01-30 19:16:32] [Login Data] Started
+[2019-01-30 19:16:32] [Login Data] Not Enabled
+[2019-02-04 06:07:49] 2019-02-04 06:07:49.790496
+[2019-02-04 06:07:51] Continuing Start Up Script
+[2019-02-04 06:07:51] [Path Check] Started
+[2019-02-04 06:07:51] [Path Check] Good!
+[2019-02-04 06:07:51] [Auto Install Repo] Started
+[2019-02-04 06:07:51] [Auto Install Repo] Not Enabled
+[2019-02-04 06:07:51] [Auto Update Wizard] Started
+[2019-02-04 06:07:52] [Auto Update Wizard] No New Version v0.2.5
+[2019-02-04 06:07:52] [Notifications] Started
+[2019-02-04 06:07:54] [Notifications] id[92] Dismissed
+[2019-02-04 06:07:54] [Installed Check] Started
+[2019-02-04 06:07:54] [Installed Check] Not Enabled
+[2019-02-04 06:07:54] [Build Check] Started
+[2019-02-04 06:07:54] [Trakt Data] Started
+[2019-02-04 06:07:54] [Trakt Data] Not Enabled
+[2019-02-04 06:07:54] [Real Debrid Data] Started
+[2019-02-04 06:07:54] [Real Debrid Data] Not Enabled
+[2019-02-04 06:07:54] [Login Data] Started
+[2019-02-04 06:07:54] [Login Data] Not Enabled
+[2019-02-04 19:37:24] 2019-02-04 19:37:24.342086
+[2019-02-04 19:37:25] Continuing Start Up Script
+[2019-02-04 19:37:25] [Path Check] Started
+[2019-02-04 19:37:25] [Path Check] Good!
+[2019-02-04 19:37:25] [Auto Install Repo] Started
+[2019-02-04 19:37:25] [Auto Install Repo] Not Enabled
+[2019-02-04 19:37:25] [Auto Update Wizard] Started
+[2019-02-04 19:37:28] [Auto Update Wizard] Install New Wizard Ignored: 0.2.6
+[2019-02-04 19:37:28] [Notifications] Started
+[2019-02-04 19:37:28] [Notifications] id[92] Dismissed
+[2019-02-04 19:37:28] [Installed Check] Started
+[2019-02-04 19:37:29] [Installed Check] Not Enabled
+[2019-02-04 19:37:29] [Build Check] Started
+[2019-02-04 19:37:29] [Trakt Data] Started
+[2019-02-04 19:37:29] [Trakt Data] Not Enabled
+[2019-02-04 19:37:29] [Real Debrid Data] Started
+[2019-02-04 19:37:29] [Real Debrid Data] Not Enabled
+[2019-02-04 19:37:29] [Login Data] Started
+[2019-02-04 19:37:29] [Login Data] Not Enabled
+[2019-02-06 15:07:36] 2019-02-06 15:07:36.091804
+[2019-02-06 15:07:38] Continuing Start Up Script
+[2019-02-06 15:07:38] [Path Check] Started
+[2019-02-06 15:07:38] [Path Check] Good!
+[2019-02-06 15:07:38] [Auto Install Repo] Started
+[2019-02-06 15:07:38] [Auto Install Repo] Not Enabled
+[2019-02-06 15:07:38] [Auto Update Wizard] Started
+[2019-02-06 15:07:40] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-06 15:07:40] [Notifications] Started
+[2019-02-06 15:07:40] [Notifications] id[92] Dismissed
+[2019-02-06 15:07:40] [Installed Check] Started
+[2019-02-06 15:07:41] [Installed Check] Not Enabled
+[2019-02-06 15:07:41] [Build Check] Started
+[2019-02-06 15:07:41] [Trakt Data] Started
+[2019-02-06 15:07:41] [Trakt Data] Not Enabled
+[2019-02-06 15:07:41] [Real Debrid Data] Started
+[2019-02-06 15:07:41] [Real Debrid Data] Not Enabled
+[2019-02-06 15:07:41] [Login Data] Started
+[2019-02-06 15:07:41] [Login Data] Not Enabled
+[2019-02-08 23:14:35] 2019-02-08 23:14:35.461417
+[2019-02-08 23:14:36] Continuing Start Up Script
+[2019-02-08 23:14:36] [Path Check] Started
+[2019-02-08 23:14:36] [Path Check] Good!
+[2019-02-08 23:14:36] [Auto Install Repo] Started
+[2019-02-08 23:14:36] [Auto Install Repo] Not Enabled
+[2019-02-08 23:14:36] [Auto Update Wizard] Started
+[2019-02-08 23:14:38] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-08 23:14:38] [Notifications] Started
+[2019-02-08 23:14:40] [Notifications] id[92] Dismissed
+[2019-02-08 23:14:40] [Installed Check] Started
+[2019-02-08 23:14:40] [Installed Check] Not Enabled
+[2019-02-08 23:14:40] [Build Check] Started
+[2019-02-08 23:14:40] [Trakt Data] Started
+[2019-02-08 23:14:40] [Trakt Data] Not Enabled
+[2019-02-08 23:14:40] [Real Debrid Data] Started
+[2019-02-08 23:14:40] [Real Debrid Data] Not Enabled
+[2019-02-08 23:14:40] [Login Data] Started
+[2019-02-08 23:14:40] [Login Data] Not Enabled
+[2019-02-09 12:37:03] 2019-02-09 12:37:03.704053
+[2019-02-09 12:37:04] Continuing Start Up Script
+[2019-02-09 12:37:04] [Path Check] Started
+[2019-02-09 12:37:04] [Path Check] Good!
+[2019-02-09 12:37:04] [Auto Install Repo] Started
+[2019-02-09 12:37:04] [Auto Install Repo] Not Enabled
+[2019-02-09 12:37:04] [Auto Update Wizard] Started
+[2019-02-09 12:37:07] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-09 12:37:07] [Notifications] Started
+[2019-02-09 12:37:07] [Notifications] id[92] Dismissed
+[2019-02-09 12:37:07] [Installed Check] Started
+[2019-02-09 12:37:07] [Installed Check] Not Enabled
+[2019-02-09 12:37:07] [Build Check] Started
+[2019-02-09 12:37:08] [Trakt Data] Started
+[2019-02-09 12:37:08] [Trakt Data] Not Enabled
+[2019-02-09 12:37:08] [Real Debrid Data] Started
+[2019-02-09 12:37:08] [Real Debrid Data] Not Enabled
+[2019-02-09 12:37:08] [Login Data] Started
+[2019-02-09 12:37:08] [Login Data] Not Enabled
+[2019-02-10 18:53:32] 2019-02-10 18:53:32.463181
+[2019-02-10 18:53:33] Continuing Start Up Script
+[2019-02-10 18:53:33] [Path Check] Started
+[2019-02-10 18:53:33] [Path Check] Good!
+[2019-02-10 18:53:33] [Auto Install Repo] Started
+[2019-02-10 18:53:33] [Auto Install Repo] Not Enabled
+[2019-02-10 18:53:33] [Auto Update Wizard] Started
+[2019-02-10 18:53:35] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-10 18:53:35] [Notifications] Started
+[2019-02-10 18:53:37] [Notifications] id[92] Dismissed
+[2019-02-10 18:53:37] [Installed Check] Started
+[2019-02-10 18:53:37] [Installed Check] Not Enabled
+[2019-02-10 18:53:37] [Build Check] Started
+[2019-02-10 18:53:37] [Trakt Data] Started
+[2019-02-10 18:53:37] [Trakt Data] Not Enabled
+[2019-02-10 18:53:37] [Real Debrid Data] Started
+[2019-02-10 18:53:37] [Real Debrid Data] Not Enabled
+[2019-02-10 18:53:37] [Login Data] Started
+[2019-02-10 18:53:37] [Login Data] Not Enabled
+[2019-02-11 23:45:09] 2019-02-11 23:45:09.126412
+[2019-02-11 23:45:10] Continuing Start Up Script
+[2019-02-11 23:45:10] [Path Check] Started
+[2019-02-11 23:45:10] [Path Check] Good!
+[2019-02-11 23:45:10] [Auto Install Repo] Started
+[2019-02-11 23:45:10] [Auto Install Repo] Not Enabled
+[2019-02-11 23:45:10] [Auto Update Wizard] Started
+[2019-02-11 23:45:12] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-11 23:45:12] [Notifications] Started
+[2019-02-11 23:45:14] [Notifications] id[92] Dismissed
+[2019-02-11 23:45:14] [Installed Check] Started
+[2019-02-11 23:45:14] [Installed Check] Not Enabled
+[2019-02-11 23:45:14] [Build Check] Started
+[2019-02-11 23:45:14] [Trakt Data] Started
+[2019-02-11 23:45:14] [Trakt Data] Not Enabled
+[2019-02-11 23:45:14] [Real Debrid Data] Started
+[2019-02-11 23:45:14] [Real Debrid Data] Not Enabled
+[2019-02-11 23:45:16] [Login Data] Started
+[2019-02-11 23:45:16] [Login Data] Not Enabled
+[2019-02-11 23:49:02] 2019-02-11 23:49:02.463990
+[2019-02-11 23:49:03] Continuing Start Up Script
+[2019-02-11 23:49:03] [Path Check] Started
+[2019-02-11 23:49:04] [Path Check] Good!
+[2019-02-11 23:49:04] [Auto Install Repo] Started
+[2019-02-11 23:49:04] [Auto Install Repo] Not Enabled
+[2019-02-11 23:49:04] [Auto Update Wizard] Started
+[2019-02-11 23:49:06] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-11 23:49:06] [Notifications] Started
+[2019-02-11 23:49:08] [Notifications] id[92] Dismissed
+[2019-02-11 23:49:08] [Installed Check] Started
+[2019-02-11 23:49:08] [Installed Check] Not Enabled
+[2019-02-11 23:49:08] [Build Check] Started
+[2019-02-11 23:49:08] [Trakt Data] Started
+[2019-02-11 23:49:08] [Trakt Data] Not Enabled
+[2019-02-11 23:49:08] [Real Debrid Data] Started
+[2019-02-11 23:49:08] [Real Debrid Data] Not Enabled
+[2019-02-11 23:49:08] [Login Data] Started
+[2019-02-11 23:49:08] [Login Data] Not Enabled
+[2019-02-13 00:59:42] 2019-02-13 00:59:42.680000
+[2019-02-13 00:59:44] Continuing Start Up Script
+[2019-02-13 00:59:44] [Path Check] Started
+[2019-02-13 00:59:44] [Path Check] Good!
+[2019-02-13 00:59:44] [Auto Install Repo] Started
+[2019-02-13 00:59:44] [Auto Install Repo] Not Enabled
+[2019-02-13 00:59:44] [Auto Update Wizard] Started
+[2019-02-13 00:59:45] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-13 00:59:46] [Notifications] Started
+[2019-02-13 00:59:46] [Notifications] id[92] Dismissed
+[2019-02-13 00:59:46] [Installed Check] Started
+[2019-02-13 00:59:46] [Installed Check] Not Enabled
+[2019-02-13 00:59:46] [Build Check] Started
+[2019-02-13 00:59:46] [Trakt Data] Started
+[2019-02-13 00:59:46] [Trakt Data] Not Enabled
+[2019-02-13 00:59:46] [Real Debrid Data] Started
+[2019-02-13 00:59:46] [Real Debrid Data] Not Enabled
+[2019-02-13 00:59:46] [Login Data] Started
+[2019-02-13 00:59:46] [Login Data] Not Enabled
+[2019-02-13 15:23:27] 2019-02-13 15:23:27.725963
+[2019-02-13 15:23:29] Continuing Start Up Script
+[2019-02-13 15:23:29] [Path Check] Started
+[2019-02-13 15:23:29] [Path Check] Good!
+[2019-02-13 15:23:29] [Auto Install Repo] Started
+[2019-02-13 15:23:29] [Auto Install Repo] Not Enabled
+[2019-02-13 15:23:29] [Auto Update Wizard] Started
+[2019-02-13 15:23:31] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-13 15:23:31] [Notifications] Started
+[2019-02-13 15:23:32] [Notifications] id[92] Dismissed
+[2019-02-13 15:23:32] [Installed Check] Started
+[2019-02-13 15:23:32] [Installed Check] Not Enabled
+[2019-02-13 15:23:32] [Build Check] Started
+[2019-02-13 15:23:32] [Trakt Data] Started
+[2019-02-13 15:23:32] [Trakt Data] Not Enabled
+[2019-02-13 15:23:32] [Real Debrid Data] Started
+[2019-02-13 15:23:32] [Real Debrid Data] Not Enabled
+[2019-02-13 15:23:32] [Login Data] Started
+[2019-02-13 15:23:33] [Login Data] Not Enabled
+[2019-02-13 21:46:18] 2019-02-13 21:46:18.139482
+[2019-02-13 21:46:19] Continuing Start Up Script
+[2019-02-13 21:46:19] [Path Check] Started
+[2019-02-13 21:46:19] [Path Check] Good!
+[2019-02-13 21:46:19] [Auto Install Repo] Started
+[2019-02-13 21:46:19] [Auto Install Repo] Not Enabled
+[2019-02-13 21:46:19] [Auto Update Wizard] Started
+[2019-02-13 21:46:20] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-13 21:46:20] [Notifications] Started
+[2019-02-13 21:46:21] [Notifications] id[92] Dismissed
+[2019-02-13 21:46:21] [Installed Check] Started
+[2019-02-13 21:46:21] [Installed Check] Not Enabled
+[2019-02-13 21:46:21] [Build Check] Started
+[2019-02-13 21:46:21] [Trakt Data] Started
+[2019-02-13 21:46:21] [Trakt Data] Not Enabled
+[2019-02-13 21:46:21] [Real Debrid Data] Started
+[2019-02-13 21:46:21] [Real Debrid Data] Not Enabled
+[2019-02-13 21:46:21] [Login Data] Started
+[2019-02-13 21:46:21] [Login Data] Not Enabled
+[2019-02-13 23:32:58] 2019-02-13 23:32:58.472043
+[2019-02-13 23:32:59] Continuing Start Up Script
+[2019-02-13 23:32:59] [Path Check] Started
+[2019-02-13 23:32:59] [Path Check] Good!
+[2019-02-13 23:32:59] [Auto Install Repo] Started
+[2019-02-13 23:32:59] [Auto Install Repo] Not Enabled
+[2019-02-13 23:32:59] [Auto Update Wizard] Started
+[2019-02-13 23:33:01] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-13 23:33:01] [Notifications] Started
+[2019-02-13 23:33:02] [Notifications] id[92] Dismissed
+[2019-02-13 23:33:02] [Installed Check] Started
+[2019-02-13 23:33:02] [Installed Check] Not Enabled
+[2019-02-13 23:33:02] [Build Check] Started
+[2019-02-13 23:33:02] [Trakt Data] Started
+[2019-02-13 23:33:02] [Trakt Data] Not Enabled
+[2019-02-13 23:33:02] [Real Debrid Data] Started
+[2019-02-13 23:33:03] [Real Debrid Data] Not Enabled
+[2019-02-13 23:33:03] [Login Data] Started
+[2019-02-13 23:33:03] [Login Data] Not Enabled
+[2019-02-17 14:02:06] 2019-02-17 14:02:06.463522
+[2019-02-17 14:02:07] Continuing Start Up Script
+[2019-02-17 14:02:07] [Path Check] Started
+[2019-02-17 14:02:07] [Path Check] Good!
+[2019-02-17 14:02:07] [Auto Install Repo] Started
+[2019-02-17 14:02:07] [Auto Install Repo] Not Enabled
+[2019-02-17 14:02:07] [Auto Update Wizard] Started
+[2019-02-17 14:02:10] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-17 14:02:10] [Notifications] Started
+[2019-02-17 14:02:12] [Notifications] id: 97
+[2019-02-17 14:02:22] [Notification] NotifyID 97 Remind Me Later
+[2019-02-17 14:02:22] [Notifications] Complete
+[2019-02-17 14:02:22] [Installed Check] Started
+[2019-02-17 14:02:22] [Installed Check] Not Enabled
+[2019-02-17 14:02:22] [Build Check] Started
+[2019-02-17 14:02:22] [Trakt Data] Started
+[2019-02-17 14:02:22] [Trakt Data] Not Enabled
+[2019-02-17 14:02:22] [Real Debrid Data] Started
+[2019-02-17 14:02:22] [Real Debrid Data] Not Enabled
+[2019-02-17 14:02:22] [Login Data] Started
+[2019-02-17 14:02:22] [Login Data] Not Enabled
+[2019-02-18 19:24:33] 2019-02-18 19:24:32.621209
+[2019-02-18 19:24:34] Continuing Start Up Script
+[2019-02-18 19:24:34] [Path Check] Started
+[2019-02-18 19:24:34] [Path Check] Good!
+[2019-02-18 19:24:34] [Auto Install Repo] Started
+[2019-02-18 19:24:34] [Auto Install Repo] Not Enabled
+[2019-02-18 19:24:35] [Auto Update Wizard] Started
+[2019-02-18 19:24:38] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-18 19:24:38] [Notifications] Started
+[2019-02-18 19:24:42] [Notification] NotifyID 97 Dismissed
+[2019-02-18 19:24:42] [Installed Check] Started
+[2019-02-18 19:24:42] [Installed Check] Not Enabled
+[2019-02-18 19:24:42] [Build Check] Started
+[2019-02-18 19:24:42] [Trakt Data] Started
+[2019-02-18 19:24:42] [Trakt Data] Not Enabled
+[2019-02-18 19:24:42] [Real Debrid Data] Started
+[2019-02-18 19:24:42] [Real Debrid Data] Not Enabled
+[2019-02-18 19:24:42] [Login Data] Started
+[2019-02-18 19:24:42] [Login Data] Not Enabled
+[2019-02-20 22:52:03] 2019-02-20 22:52:03.579203
+[2019-02-20 22:52:04] Continuing Start Up Script
+[2019-02-20 22:52:04] [Path Check] Started
+[2019-02-20 22:52:04] [Path Check] Good!
+[2019-02-20 22:52:04] [Auto Install Repo] Started
+[2019-02-20 22:52:04] [Auto Install Repo] Not Enabled
+[2019-02-20 22:52:04] [Auto Update Wizard] Started
+[2019-02-20 22:52:07] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-20 22:52:07] [Notifications] Started
+[2019-02-20 22:52:07] [Notifications] id[97] Dismissed
+[2019-02-20 22:52:08] [Installed Check] Started
+[2019-02-20 22:52:08] [Installed Check] Not Enabled
+[2019-02-20 22:52:08] [Build Check] Started
+[2019-02-20 22:52:08] [Trakt Data] Started
+[2019-02-20 22:52:08] [Trakt Data] Not Enabled
+[2019-02-20 22:52:08] [Real Debrid Data] Started
+[2019-02-20 22:52:08] [Real Debrid Data] Not Enabled
+[2019-02-20 22:52:08] [Login Data] Started
+[2019-02-20 22:52:08] [Login Data] Not Enabled
+[2019-02-25 17:16:04] 2019-02-25 17:16:04.019529
+[2019-02-25 17:16:05] Continuing Start Up Script
+[2019-02-25 17:16:05] [Path Check] Started
+[2019-02-25 17:16:05] [Path Check] Good!
+[2019-02-25 17:16:06] [Auto Install Repo] Started
+[2019-02-25 17:16:06] [Auto Install Repo] Not Enabled
+[2019-02-25 17:16:06] [Auto Update Wizard] Started
+[2019-02-25 17:16:07] [Auto Update Wizard] No New Version v0.2.6
+[2019-02-25 17:16:07] [Notifications] Started
+[2019-02-25 17:16:08] [Notifications] id: 101
+[2019-02-25 17:16:15] [Notification] NotifyID 101 Dismissed
+[2019-02-25 17:16:15] [Notifications] Complete
+[2019-02-25 17:16:15] [Installed Check] Started
+[2019-02-25 17:16:15] [Installed Check] Not Enabled
+[2019-02-25 17:16:15] [Build Check] Started
+[2019-02-25 17:16:15] [Trakt Data] Started
+[2019-02-25 17:16:15] [Trakt Data] Not Enabled
+[2019-02-25 17:16:15] [Real Debrid Data] Started
+[2019-02-25 17:16:15] [Real Debrid Data] Not Enabled
+[2019-02-25 17:16:15] [Login Data] Started
+[2019-02-25 17:16:15] [Login Data] Not Enabled

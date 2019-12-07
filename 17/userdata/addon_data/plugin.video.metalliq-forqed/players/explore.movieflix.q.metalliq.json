@@ -1,0 +1,36 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] MovieFlix ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdmovieflix",
+ "priority"     : 698,
+ "id"           : "explore.movieflix.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdmovieflix/?description&iconimage=special://home/addons/plugin.video.mdmovieflix/icon.png&mode=2&name=&url=http://movieflix.to/search?q={title}",
+    "steps"     : [
+     "($$.*$$){title}($$.*$$).{year}.($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdmovieflix/?description&iconimage=special://home/addons/plugin.video.mdmovieflix/icon.png&mode=2&name=&url=http://movieflix.to/search?q={clearname}",
+    "steps"     : [
+     "($$.*$$){clearname}($$.*$$).*",
+     "($$.*$$)Season {season}($$.*$$)",
+     "($$.*$$)Episode{episode}:($$.*$$){title}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

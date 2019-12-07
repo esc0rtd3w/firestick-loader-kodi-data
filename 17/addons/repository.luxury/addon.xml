@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <addon id="repository.luxury" name="Luxury Repository" version="1.6" provider-name="Luxury">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Luxury Repository">
+            <info compressed="false">http://luxurywizard.space/_repo/addons.xml</info>
+            <checksum>http://luxurywizard.space/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://luxurywizard.space/_repo/</datadir>
+            <hashes>false</hashes>
+	     <dir>
+			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+		</dir>	
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		</extension>
+	<extension point="xbmc.addon.metadata">
+        <summary>Luxury Repo</summary>
+        <description>The Home Of Luxury</description>
+        <platform>all</platform>
+	</extension>
+</addon>

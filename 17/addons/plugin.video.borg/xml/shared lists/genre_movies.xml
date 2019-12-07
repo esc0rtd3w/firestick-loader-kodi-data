@@ -1,0 +1,95 @@
+<dir>
+  <title>Action</title>
+  <tmdb>genre/movies/28</tmdb>
+</dir>
+
+<dir>
+  <title>Adventure</title>
+  <tmdb>genre/movies/12</tmdb>
+</dir>
+
+<dir>
+  <title>Animation</title>
+  <tmdb>genre/movies/16</tmdb>
+</dir>
+
+<dir>
+  <title>Comedy</title>
+  <tmdb>genre/movies/35</tmdb>
+</dir>
+
+<dir>
+  <title>Crime</title>
+  <tmdb>genre/movies/80</tmdb>
+</dir>
+
+<dir>
+  <title>Documentary</title>
+  <tmdb>genre/movies/99</tmdb>
+</dir>
+
+<dir>
+  <title>Drama</title>
+  <tmdb>genre/movies/18</tmdb>
+</dir>
+
+<dir>
+  <title>Family</title>
+  <tmdb>genre/movies/10751</tmdb>
+</dir>
+
+<dir>
+  <title>Fantasy</title>
+  <tmdb>genre/movies/14</tmdb>
+</dir>
+
+<dir>
+  <title>History</title>
+  <tmdb>genre/movies/36</tmdb>
+</dir>
+
+<dir>
+  <title>Horror</title>
+  <tmdb>genre/movies/27</tmdb>
+</dir>
+
+<dir>
+  <title>Music</title>
+  <tmdb>genre/movies/10402</tmdb>
+</dir>
+
+<dir>
+  <title>Mystery</title>
+  <tmdb>genre/movies/9648</tmdb>
+</dir>
+
+<dir>
+  <title>Romance</title>
+  <tmdb>genre/movies/10749</tmdb>
+</dir>
+
+<dir>
+  <title>Science Fiction</title>
+  <tmdb>genre/movies/878</tmdb>
+</dir>
+
+<dir>
+  <title>TV Movie</title>
+  <tmdb>genre/movies/10770</tmdb>
+</dir>
+
+<dir>
+  <title>Thriller</title>
+  <tmdb>genre/movies/53</tmdb>
+</dir>
+
+<dir>
+  <title>War</title>
+  <tmdb>genre/movies/10752</tmdb>
+</dir>
+
+<dir>
+  <title>Western</title>
+  <tmdb>genre/movies/37</tmdb>
+</dir>
+

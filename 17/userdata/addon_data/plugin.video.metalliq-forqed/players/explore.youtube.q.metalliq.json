@@ -1,0 +1,38 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] YouTube ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.youtube",
+ "priority"     : 700,
+ "id"           : "YouTube",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.youtube/kodion/search/query/?q={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.youtube/kodion/search/query/?q={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.youtube/kodion/search/query/?q={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

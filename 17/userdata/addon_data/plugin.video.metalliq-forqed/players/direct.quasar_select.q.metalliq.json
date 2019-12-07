@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Quasar Select ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.unofficialquasar",
+ "plugin"       : "plugin.video.quasar",
+ "priority"     : 200,
+ "id"           : "Quasar Select",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.quasar/movie/{tmdb}/links",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.quasar/show/{tmdb}/season/{season}/episode/{episode}/links",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

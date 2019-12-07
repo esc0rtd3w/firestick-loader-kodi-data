@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Red Beard [+][-] ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dudehere.plugins",
+ "plugin"       : "plugin.video.redbeard",
+ "priority"     : 200,
+ "id"           : "Red Beard",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.redbeard/?rand=0.{year[1]}{year[2]}{year[3]}{year[2]}{year[1]}{year[0]}{year[1]}{year[2]}{year[3]}{year[2]}{year[1]}&tmdb_id={tmdb}&title={title}&imdb_id={imdb}&mode=play_movie&year={year}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.redbeard/?rand=0.{year[3]}{year[1]}{year[2]}{year[3]}{year[2]}{year[1]}{year[0]}{year[1]}{year[2]}{year[3]}{year[2]}{year[1]}&episode={episode}&mode=play_episode&tmdb_id={tmdb}&year={year}&season={season}&display={season}x{episode}.+{firstaired}+-+{title_+}&showtitle={clearname_+}&imdb_id={imdb}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

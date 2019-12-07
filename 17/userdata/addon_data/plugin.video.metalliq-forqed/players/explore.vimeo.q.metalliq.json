@@ -1,0 +1,162 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] Vimeo ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.vimeo",
+ "priority"     : 700,
+ "id"           : "Vimeo",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={name}",
+    "steps"     : [
+     "{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={title}",
+    "steps"     : [
+     "{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+{absolute_number}",
+    "steps"     : [
+     ".*{clearname}.*{absolute_number}.*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+{absolute_number}",
+    "steps"     : [
+     ".*{absolute_number}.*{title}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+{season}x{episode}",
+    "steps"     : [
+     "{clearname}.*{season}x{episode}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+s{season}e{episode}",
+    "steps"     : [
+     "{clearname}.*s{season}e{episode}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+{season}{episode:02d}",
+    "steps"     : [
+     "{clearname}.*{season}{episode:02d}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}+{absolute_number}",
+    "steps"     : [
+     ".*{absolute_number}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={clearname}",
+    "steps"     : [
+     ".*{clearname}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : [
+  [
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={name}",
+    "steps"     : [
+     "{name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={name}",
+    "steps"     : [
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={name}",
+    "steps"     : [
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.vimeo/kodion/search/query/?q={name}",
+    "steps"     : [
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

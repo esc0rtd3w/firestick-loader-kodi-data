@@ -1,0 +1,19 @@
+<dir>
+  <title>Bryan Cranston Movies Trakt</title>
+  <trakt>https://api.trakt.tv/people/bryan-cranston/movies</trakt>
+</dir>
+
+<dir>
+  <title>Bryan Cranston shows Trakt</title>
+  <trakt>https://api.trakt.tv/people/bryan-cranston/shows</trakt>
+</dir>
+
+<dir>
+  <title>Bryan Cranston Shows TMDB</title>
+  <tmdb>person/shows/17419</tmdb>
+</dir>
+
+<dir>
+  <title>Bryan Cranston Movies TMDB</title>
+  <tmdb>person/movies/17419</tmdb>
+</dir>

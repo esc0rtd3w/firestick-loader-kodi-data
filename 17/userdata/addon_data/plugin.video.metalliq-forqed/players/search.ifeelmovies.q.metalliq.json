@@ -1,0 +1,24 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] I FeelMovies([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.ifeelmovies",
+ "priority"     : 900,
+ "id"           : "search.ifeelmovies.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ifeelmovies/?description&amp;iconimage=special://home/addons/plugin.video.ifeelmovies/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fifeelmovies.com%2findex.php%3fs%3d{title_+}",
+    "steps"     : [
+     ".*{title_+}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

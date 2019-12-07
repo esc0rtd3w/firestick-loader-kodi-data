@@ -1,0 +1,5 @@
+Exodus Redux Repo Changelog:
+1.0.9 - Added Venom repo
+1.0.8 - Added a4k-openproject repo
+1.0.7 - Added icon
+1.0.6 - Moved zip folder location

@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] SafeHouse Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.safehouse",
+ "priority"     : 900,
+ "id"           : "search.safehouse.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.safehouse/?description&amp;fanart=special://home/addons/plugin.video.safehouse/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.safehouse/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fpubfilm.today%2fsearch%2f{title|ws(-)}",
+    "steps"     : [
+     "><{title}.*{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.safehouse/?description&amp;fanart=special://home/addons/plugin.video.safehouse/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.safehouse/icon.png&amp;mode=7&amp;name=TVShows&amp;url=http%3a%2f%2fpubfilm.today%2flist%2fdrama%2f",
+    "steps"     : [
+     "($$.*$$)({clearname}...Season.{season}|{clearname}).*($$.*$$)@page:($$.*$$)Next Page.*($$.*$$)",
+     "><Episode.({episode}|{episode:02d}).*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,36 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Watch32HD ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdwatch32hd",
+ "priority"     : 900,
+ "id"           : "search.watch32hd.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdwatch32hd/?description&iconimage=special://home/addons/plugin.video.mdwatch32hd/icon.png&mode=1&name=&url=http://watch32hd.co/results?q={title}",
+    "steps"     : [
+     "($$.*$$){title}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdpubfilm/?description&iconimage=special://home/addons/plugin.video.mdpubfilm/icon.png&mode=8&name=&url=url",
+    "steps"     : [
+     "@keyboard:{clearname}",
+     "($$.*$$){clearname}($$.*$$)$$ Season {season}.*$$($$.*$$)",
+     "($$.*$$)Episode ($$.*$$){episode}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

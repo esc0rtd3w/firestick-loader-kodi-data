@@ -1,0 +1,38 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] ClickPlay's YouTube ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.blamo",
+ "plugin"       : "script.clickplay",
+ "priority"     : 700,
+ "id"           : "ClickPlay's YouTube",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://script.clickplay/?info=youtubesearch&id={artist}+{album}+{track}",
+    "steps"     : [
+     ".*{artist}.*{album}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://script.clickplay/?info=youtubesearch&id={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://script.clickplay/?info=youtubesearch&id={track}",
+    "steps"     : [
+     ".*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

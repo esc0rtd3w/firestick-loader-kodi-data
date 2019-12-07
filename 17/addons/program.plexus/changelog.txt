@@ -1,0 +1,38 @@
+13/5/2018 - Version 0.1.8
+-Restored stable sopcast version
+-Fixed killing sopcast process
+
+05/5/2016 - Version 0.1.7
+-Shutdown acestream engine to false.
+
+1/12/2016 - Version 0.1.6.a
+-Minor dialog update
+
+30/11/2016 - Version 0.1.6
+-Added AceStream Media (Engine) and Torrent Stream Controller apks download options
+-Removed obsolete Engine bundle, old AceStream Engine and Ace Player apks from add-on settings 
+and from plexus-dependencies modules
+-Android: changed, fixed, added and cleaned code related to Android
+-Updated English translations
+-Added Spanish translation
+
+18/11/2016 - Version 0.1.5
+-Forked plexus-dependencies
+-Updated some modules (rpi, android)
+-Android: AceStream Media (Engine) app is opened instead of old Ace Player
+
+10/2/2015 - Version 0.1.4
+-transfer to TVA repo
+-fix for downloading modules
+
+19/8/2015 - Version 0.1.1 & 0.1.2 & 0.1.3
+-Raspberry PI 2 fixes
+
+19/8/2015 - Version 0.1.0 (first beta)
+-Removed parsers and lists
+-Added stream manager
+-Added support for the Raspberry PI 2
+-Fixed stop
+-New translation system
+-Repository moved to a new location
+-Plenty of other fixes

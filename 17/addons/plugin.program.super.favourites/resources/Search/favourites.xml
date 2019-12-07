@@ -1,0 +1,89 @@
+<favourites>
+
+<favourite name="Exodus TV" thumb="special://home/addons/script.exodus.artwork\resources\media\exodus\search.png">ActivateWindow(10025,&quot;plugin://plugin.video.exodus/?action=tvshows&amp;url=http%3A%2F%2Fapi-v2launch.trakt.tv%2Fsearch%3Ftype%3Dshow%26limit%3D100%26query%3D[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.exodus%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+
+<favourite name="Exodus Movies" thumb="special://home/addons/script.exodus.artwork\resources\media\exodus\search.png">ActivateWindow(10025,&quot;plugin://plugin.video.exodus/?action=movies&amp;url=http%3A%2F%2Fapi-v2launch.trakt.tv%2Fsearch%3Ftype%3Dmovie%26limit%3D100%26query%3D[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.exodus%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+
+<favourite name="Exodus Movies (by Actor)" thumb="special://home/addons/script.exodus.artwork\resources\media\exodus\people-search.png">ActivateWindow(10025,&quot;plugin://plugin.video.exodus/?action=moviePersons&amp;url=http%3A%2F%2Fwww.imdb.com%2Fsearch%2Fname%3Fcount%3D100%26name%3D[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.exodus%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Exodus TV (by Actor)" thumb="special://home/addons/script.exodus.artwork\resources\media\exodus\people-search.png">ActivateWindow(10025,&quot;plugin://plugin.video.exodus/?action=tvPersons&amp;url=http%3A%2F%2Fwww.imdb.com%2Fsearch%2Fname%3Fcount%3D100%26name%3D[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.exodus%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+
+<favourite name="iPlayer" thumb="special://home\addons\plugin.video.bbciplayer\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.bbciplayer/?IPID&amp;description&amp;iconimage&amp;mode=9&amp;name=Search&amp;url=[%SF%]&amp;sf_options=fanart%3Dhttp%3A%2F%2Fultimategamingparadise.com%2Fwp-content%2Fuploads%2F2014%2F01%2Fbbc_iplayer.jpg%26desc%3DBBC+iPlayer+tv+and+live+tv%26_options_sf&quot;)</favourite>
+
+<favourite name="iPlayer WWW" thumb="special://home/addons\plugin.video.iplayerwww\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.iplayerwww/?mode=104&amp;url=url&amp;keyword=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.iplayerwww%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+
+<favourite name="Global Search" thumb="special://home\addons\script.globalsearch\icon.png">RunScript(&quot;script.globalsearch&quot;,searchstring:[%SF%])?sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cscript.globalsearch%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+
+<favourite name="YouTube 5.x.x" thumb="special://home\addons\plugin.video.youtube\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/kodion/search/query/?q=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.youtube%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Icefilms" thumb="special://home\addons\plugin.video.icefilms\resources\art\search.png">ActivateWindow(10025,&quot;plugin://plugin.video.icefilms/?mode=5555&amp;name=Search&amp;url=http%3a%2f%2fwww.icefilms.info%2f&amp;nextPage=0&amp;search=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.icefilms%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="1Channel Movies" thumb="special://home\addons\plugin.video.1channel\art\themes\Glossy_Black\search.png">ActivateWindow(10025,&quot;plugin://plugin.video.1channel/?mode=Search&amp;section=movies&amp;query=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="1Channel TV" thumb="special://home\addons\plugin.video.1channel\art\themes\Glossy_Black\search.png">ActivateWindow(10025,&quot;plugin://plugin.video.1channel/?mode=Search&amp;section=tv&amp;query=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.1channel%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="XBMCtorrent" thumb="special://home\addons\plugin.video.xbmctorrent\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.xbmctorrent/tpb/search?query=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.xbmctorrent%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+
+<favourite name="MP3 Artists" thumb="special://home\addons\plugin.audio.mp3streams\icon.png">ActivateWindow(10502,&quot;plugin://plugin.audio.mp3streams/?mode=27&amp;name=[%SF%]&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.mp3streams%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="MP3 Albums" thumb="special://home\addons\plugin.audio.mp3streams\icon.png">ActivateWindow(10502,&quot;plugin://plugin.audio.mp3streams/?mode=25&amp;name=[%SF%]&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.mp3streams%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="MP3 Songs" thumb="special://home\addons\plugin.audio.mp3streams\icon.png">ActivateWindow(10502,&quot;plugin://plugin.audio.mp3streams/?mode=26&amp;name=[%SF%]&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.mp3streams%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Bin@ural Artist" thumb="http://kinkin-xbmc-repository.googlecode.com/svn/trunk/zips/plugin.audio.binaural/art/search.png">ActivateWindow(10501,&quot;plugin://plugin.audio.binaural/?artist&amp;iconimage=http%3a%2f%2fkinkin-xbmc-repository.googlecode.com%2fsvn%2ftrunk%2fzips%2fplugin.audio.binaural%2fart%2fsearch.png&amp;mode=27&amp;name=[%SF%]&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.binaural%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Bin@ural Album" thumb="http://kinkin-xbmc-repository.googlecode.com/svn/trunk/zips/plugin.audio.binaural/art/search.png">ActivateWindow(10501,&quot;plugin://plugin.audio.binaural/?artist&amp;iconimage=http%3a%2f%2fkinkin-xbmc-repository.googlecode.com%2fsvn%2ftrunk%2fzips%2fplugin.audio.binaural%2fart%2fsearch.png&amp;mode=25&amp;name=[%SF%]&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.binaural%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Bin@ural Song" thumb="http://kinkin-xbmc-repository.googlecode.com/svn/trunk/zips/plugin.audio.binaural/art/search.png">ActivateWindow(10501,&quot;plugin://plugin.audio.binaural/?artist&amp;iconimage=http%3a%2f%2fkinkin-xbmc-repository.googlecode.com%2fsvn%2ftrunk%2fzips%2fplugin.audio.binaural%2fart%2fsearch.png&amp;mode=26&amp;name=[%SF%]&amp;artist=1&amp;url=url&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.audio.binaural%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Funnier Moments" thumb="special://home/addons\plugin.video.funniermoments\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.funniermoments/?image=C%3a%5cDocuments%20and%20Settings%5cSeanP%5cApplication%20Data%5cXBMC%5caddons%5cplugin.video.funniermoments%5cresources%5cartwork%5csearch.png&amp;mode=800&amp;page=1&amp;title=Search%20Moments&amp;keyword=[%SF%]&amp;sf_options=fanart%3Dhttp%3A%2F%2Fhivewallpaper.com%2Fwallpaper%2F2015%2F03%2Fhanna-barbera-cartoons-27-high-resolution-wallpaper.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="Super Cartoons" thumb="special://home/addons\plugin.video.supercartoons\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.supercartoons/?image=C%3a%5cDocuments%20and%20Settings%5cSeanP%5cApplication%20Data%5cXBMC%5caddons%5cplugin.video.supercartoons%5cresources%5cartwork%5csearch.png&amp;mode=1100&amp;page=1&amp;title=Search&amp;keyword=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.supercartoons%5Cfanart.jpg%26_options_sf&quot;)</favourite>
+	
+<favourite name="PFTV Search All" thumb="special://home/addons\plugin.video.projectfreetv/icons/Search.png">ActivateWindow(10025,&quot;plugin://plugin.video.projectfreetv/?mode=search&amp;section=all&amp;name=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.projectfreetv%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="PFTV Movies" thumb="special://home/addons\plugin.video.projectfreetv/icons/Search.png">ActivateWindow(10025,&quot;plugin://plugin.video.projectfreetv/?mode=search&amp;section=movies&amp;name=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.projectfreetv%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="PFTV TV Shows" thumb="special://home/addons\plugin.video.projectfreetv/icons/Search.png">ActivateWindow(10025,&quot;plugin://plugin.video.projectfreetv/?mode=search&amp;section=shows&amp;name=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.projectfreetv%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="SALTS Movies" thumb="special://home\addons\plugin.video.salts\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.salts/?query=[%SF%]&amp;section=Movies&amp;mode=search_results&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.salts%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="SALTS TV Shows" thumb="special://home\addons\plugin.video.salts\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.salts/?query=[%SF%]&amp;section=TV&amp;mode=search_results&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.salts%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="Google Images" thumb="special://home/addons\plugin.image.google\icon.png">	ActivateWindow(10025,&quot;plugin://plugin.image.google/?mode=103&amp;name=Search%20icon&amp;page=1&amp;url=q%3d[%SF+%]&quot;,return)</favourite>
+
+<favourite name="Google Images (Wallpaper)" thumb="special://home/addons\plugin.image.google\icon.png">	ActivateWindow(10025,&quot;plugin://plugin.image.google/?mode=103&amp;page=1&amp;name=Search%20icon&amp;url=q%3d[%SF+%]%2bWallpaper&quot;,return)</favourite>
+
+<favourite name="Pulsar TV Shows" thumb="special://home/addons/plugin.video.pulsar/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.pulsar/shows/search?q=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.pulsar%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="Pulsar Movies" thumb="special://home/addons/plugin.video.pulsar/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.pulsar/movies/search?q=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.pulsar%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+
+<favourite name="Quasar TV Shows" thumb="special://home/addons/plugin.video.quasar/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.quasar/shows/search?q=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.quasar%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+    
+<favourite name="Quasar Movies" thumb="special://home/addons/plugin.video.quasar/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.quasar/movies/search?q=[%SF%]&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.quasar%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+	
+<favourite name="4Players Video" thumb="special://home/addons/plugin.video.4players/icon.png">ActivateWindow(10025,"plugin://plugin.video.4players/search/[%SF%]?",return)</favourite>
+    
+<favourite name="Apple iTunes Podcasts" thumb="special://home/addons/plugin.video.itunes_podcasts/icon.png">ActivateWindow(10025,"plugin://plugin.video.itunes_podcasts/*/podcasts/search/[%SF%]/?",return)</favourite>
+
+<favourite name="Break Videos" thumb="special://home/addons/plugin.video.break_com/icon.png">ActivateWindow(10025,"plugin://plugin.video.break_com/search/query/?q=[%SF%]",return)</favourite>
+
+<favourite name="CBSnews.com" thumb="special://home/addons/plugin.video.cbsnews_com/icon.png">ActivateWindow(10025,"plugin://plugin.video.cbsnews_com/?mode=listVideos&offset=0&type=search&value=[%SF%]",return)</favourite>
+
+<favourite name="Engineering TV" thumb="special://home/addons/plugin.video.engineeringtv/icon.png">ActivateWindow(10025,"plugin://plugin.video.engineeringtv/?action=Videos&url=/search/?search=[%SF%]",return)</favourite>
+
+<favourite name="IGN.com" thumb="special://home/addons/plugin.video.ign_com/icon.png">ActivateWindow(10025,"plugin://plugin.video.ign_com/?mode=list_search_results&url=http%3A%2F%2Fwww.ign.com%2Fsearch?q%3D[%SF+%]&page%3D0&count%3D10&type%3Dvideo",return)</favourite>
+	
+<favourite name="Red Bull TV" thumb="special://home/addons/plugin.video.redbull.tv/icon.png">ActivateWindow(10025,"plugin://plugin.video.redbull.tv/kodion/search/query/?q=[%SF%]",return)</favourite>
+	
+<favourite name="TED Talks" thumb="special://home/addons/plugin.video.ted.talks/icon.png">ActivateWindow(10025,"plugin://plugin.video.ted.talks/?mode=searchMore&search_term=[%SF%]&page=0",return)</favourite>
+	
+<favourite name="TheHollywoodReporter" thumb="special://home/addons/plugin.video.hollywoodreporter/icon.png">ActivateWindow(10025,"plugin://plugin.video.hollywoodreporter/search/[%SF%]/?page=0",return)</favourite>
+	
+<favourite name="TIME.com" thumb="special://home/addons/plugin.video.time_com/icon.png">ActivateWindow(10025,"plugin://plugin.video.time_com/?mode=listVideos&url=http%3a%2f%2fapi.brightcove.com%2fservices%2flibrary%3fcommand%3dfind_videos_by_text%26text%3dtest%26get_item_count%3dtrue%26page_number%3d0%26page_size%3d50%26video_fields%3did%2cname%2cthumbnailURL%2creferenceId%2cshortDescription%2clongDescription%2ctags%2clength%26custom_fields%3drelatedtopics%2cvideoredirect%26callback%3d%26token%3dSvy7-e9mdkTCJdeOamQnB3soRQtQLA6s1Ypb2wtmE2g.",return)</favourite>
+
+<favourite name="Meta Movies" thumb="special://home/addons\plugin.video.meta\resources\img\movies.png">ActivateWindow(10025,&quot;plugin://plugin.video.meta/movies/search_term/[%SF%]/1?sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.meta%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+
+<favourite name="Meta TV Shows" thumb="special://home/addons\plugin.video.meta\resources\img\tv.png">ActivateWindow(10025,&quot;plugin://plugin.video.meta/tv/search_term/[%SF%]/1?sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.meta%5Cfanart.jpg%26_options_sf&quot;,return)</favourite>
+
+</favourites>

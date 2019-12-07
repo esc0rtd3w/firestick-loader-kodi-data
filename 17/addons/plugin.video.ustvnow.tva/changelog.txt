@@ -1,0 +1,670 @@
+[B]Version 14.9.4[/B]
+- Removed optional dependency on USTVnow Guide due to issue with Kodi 18
+
+[B]Version 14.9.3[/B]
+- Set USTVnow Guide as optional dependency
+
+[B]Version 14.9.2[/B]
+- Fixed issues with addon.xml
+
+[B]Version 14.9.1[/B]
+- Updated for MavTV, NASA TV, and The Weather Channel
+
+[B]Version 14.9.0[/B]
+- Removed NBC and FOX from the Free listing since these are no longer included in Free package
+
+[B]Version 14.8.9[/B]
+- Minor tweaks for playlist.m3u8 issue in TV Guide
+
+[B]Version 14.8.8[/B]
+- Updated to fix issue with TV Guide not showing playlist.m3u8 instead of Channel title
+
+[B]Version 14.8.7[/B]
+- Updated Paramount Network logo
+
+[B]Version 14.8.6[/B]
+- Added support for new Paramount Network channel (paid accounts)
+
+[B]Version 14.8.5[/B]
+- Added access to the USTVnow Guide settings from the USTVnow Plus settings
+
+[B]Version 14.8.4[/B]
+- Removed 45 day old account message from Recordings
+
+[B]Version 14.8.3[/B]
+- Fixed issue with emails with uppercase letters
+
+[B]Version 14.8.2[/B]
+- Removed 45 day old account message
+- Removed forced email lower case code. Apparently USTVnow allows emails with uppercase letters
+
+[B]Version 14.8.1[/B]
+- Added error message for Free Accounts over 45 days old
+- Fixed a few issues with playing recordings
+
+[B]Version 14.8.0[/B]
+- Simplified main screen with sections for Movies, Sports, and DVR
+
+[B]Version 14.7.9[/B]
+- Fixed addon.xml
+
+[B]Version 14.7.8[/B]
+- Set recordings to show as watched
+- Set recordings to allow resume
+
+[B]Version 14.7.7[/B]
+- Remove uneeded code
+
+[B]Version 14.7.6[/B]
+- Remove uneeded code
+
+[B]Version 14.7.4[/B]
+- Added Advanced Settings
+- Added option to 'Force Clear Token' To Advanced Settings
+
+[B]Version 14.7.3[/B]
+- Fixed typo
+
+[B]Version 14.7.2[/B]
+- Updated screenshots
+
+[B]Version 14.7.1[/B]
+- Updated branding
+
+[B]Version 14.7.0[/B]
+- Updated branding
+
+[B]Version 14.6.9[/B]
+- Fixed issue with TV Guide icon
+- Added screenshots and other meta data
+- Fixed issue with channel logo
+
+[B]Version 14.6.8[/B]
+- Fixed issue with missing dependency
+
+[B]Version 14.6.7[/B]
+- Updated login method
+
+[B]Version 14.6.6[/B]
+- Removed check for age of account
+- Removed forced quality settings for 45 day old free accounts
+
+[B]Version 14.6.5[/B]
+- Added check to force email to lowercase
+- Fixed bug with Settings option showing warnings for Paid accounts that were over 45 days old
+
+[B]Version 14.6.4[/B]
+- Added check for Free Accounts over 45 days old to turn quality to Low and alert user to potential issues
+- Added option to suppress the "account warnings" such as the 45 day limit for Free accounts
+
+[B]Version 14.6.3[/B]
+- Added Random User Agent function to use for login method
+
+[B]Version 14.6.2[/B]
+- Reverting back to original login method
+
+[B]Version 14.6.1[/B]
+- More refinements to new auth method
+
+[B]Version 14.6.0[/B]
+- Refinements to new auth method
+
+[B]Version 14.5.9[/B]
+- Updated with new authentication method to hopefully solve the Free account issues with streaming
+- Refactored some of the common functions into one function
+
+[B]Version 14.5.8[/B]
+- Refactored to optimize the way the streams are pulled in for HD (Live TV) and High (Recordings)
+
+[B]Version 14.5.7[/B]
+- Set Live TV section to be sorted alphabetically
+
+[B]Version 14.5.6[/B]
+- Fixed minor bug in the Sports on Now section
+
+[B]Version 14.5.5[/B]
+- Fixed issue with channel logos
+
+[B]Version 14.5.4[/B]
+- Updated to support the new USTVnow channel lineup
+- Removed the strm files
+- Removed the TV Guide (List) section
+- Minor code cleanp-up
+
+[B]Version 14.5.3[/B]
+- Added check for Apple TV users so they can skip the install wizard and enter settings manually
+- Removed left over code from the Force Clear token option
+- Moved some of the settings around
+- Removed the option to enable/disable the Live TV extended context menu since this will not work in Kodi 17
+- Minor tweaks to wording in settings and install wizard
+
+[B]Version 14.5.2[/B]
+- Update language file from .xml to .po to fix issues in Kodi 17
+
+[B]Version 14.5.1[/B]
+- Fixed issue with Live TV section due to change in USTVnow API
+- Removed Force Clear Token option as it is not really needed anymore
+
+[B]Version 14.5.0[/B]
+- Updated graphics
+
+[B]Version 14.4.9[/B]
+- Updated USTVnow API endpoint
+
+[B]Version 14.4.8[/B]
+- Updated Recordings and Scheduled sections sort order (Thanks to fjans for this code change suggestion!)
+
+[B]Version 14.4.7[/B]
+- Updated code to start streams to be much more efficient (Thanks to fjans for this code change suggestion!)
+
+[B]Version 14.4.6[/B]
+- Cleaned up description
+- Updated notification branding
+
+[B]Version 14.4.5[/B]
+- Removed the Live TV and Recordings Streaming Method Option since the Alternate option is no longer working for all channels
+
+[B]Version 14.4.4[/B]
+- Added branding dialog
+
+[B]Version 14.4.3[/B]
+- Added episode titles to the Sports Sections
+
+[B]Version 14.4.2[/B]
+- Added the Olympics and Paralympics to the sports array
+
+[B]Version 14.4.1[/B]
+- Updated channel logos. Thanks jokster!
+- Updated icons for skins to have the same highlight as new channel logos. Thanks jokster!
+- Updated fanart
+- Updated addon.xml file
+
+[B]Version 14.4.0[/B]
+- Fixed setcontent issue with Estuary skin
+
+[B]Version 14.3.9[/B]
+- Bumping version number to hopefully fix dependency issue
+
+[B]Version 14.3.8[/B]
+- Updated for new USTVnow Guide features
+
+[B]Version 14.3.7[/B]
+- renamed TV Guide to TV guide (EPG)
+- re-added built in TV Guide and named it TV Guide (List)
+- added option to hide/show TV Guide (List) hidden by default
+- increased the TV Guide (List) to show 24 hours of listings
+
+[B]Version 14.3.6[/B]
+- very minor artwork updates
+
+[B]Version 14.3.5[/B]
+- updated to work with new USTVnow Guide addon
+
+[B]Version 14.3.4[/B]
+- updated Alternate Stream method to work with USTVnow changes
+
+[B]Version 14.3.3[/B]
+- added support for "comped" USTVnow accounts
+
+[B]Version 14.3.2[/B]
+- removed checkbox and set to not mark streams as watched
+- some skins still show an empty checkbox
+
+[B]Version 14.3.1[/B]
+- added option to delete recordings from recording section when recuring recording is set
+
+[B]Version 14.3.0[/B]
+- added support for internal USTVnow accounts
+- added full DVR support for Legacy Nittany accounts
+- fixed issue with HD/SD indicators showing correctly
+- added strms for users wanting to integrate with TV Guides
+
+[B]Version 14.2.9[/B]
+- refactored token check, account renewal check, account activation check, stream check, get pass key, and account type check into functions
+
+[B]Version 14.2.8[/B]
+- added check for account renewal
+
+[B]Version 14.2.7[/B]
+- added check for account activation
+
+[B]Version 14.2.6[/B]
+- fixed bug with Sports on Now section
+- fixed typo in addons.xml
+- code clean up
+- added new Simple (Stylish) icon skin
+
+[B]Version 14.2.5[/B]
+- fixed issue with Increase/Decrease Quality context menu options from showing when Recording Options were disabled
+
+[B]Version 14.2.4[/B]
+- fixed bug in the Sports sections not showing correct sports
+
+[B]Version 14.2.3[/B]
+- added better error handling for login failures
+- fixed issue with opening settings if you have entered the wrong login creds
+
+[B]Version 14.2.2[/B]
+- adjusted list refresh after record, delete, and recurring actions
+- set Recordings, Scheduled, and Recurring lists to be sorted alphabetically
+- fixed typo in quick quality change dialogs
+- seperated Stream Quality into Live TV Quality and Recordings Quality
+- since Recordings are only availabe in SD it made more sense to have the ability to set the quality independently
+- added quick quality change option to context menu for Live TV and Recordings
+- renamed stream 'Quality' in Settings to Low, Medium, High, and HD
+- very minor update to settings text
+
+[B]Version 14.2.1[/B]
+- Free Accounts now able to stream in HD for the first 45 days after account activation
+- PBS and My9 are not available in HD so they will be SD
+- added 'Account Info' to settings
+- this gives information on the USTVnow Account including Account Status, total DVR Points, etc
+- udpated addon description to be more accurate
+- added 'Version Info' to settings
+- will hopefully make it easier for users to know what version they are using
+- added option in 'Advanced Settings' to force clear the current token
+- added option in 'Advanced Settings' to view/edit the current token
+- fixed issue with special characters in show/movie data
+
+[B]Version 14.2.0[/B]
+- forgot to clear out the invalid tokens in the last update.
+- added code to clear out all previous tokens to ensure that a fresh one is grabbed
+- code clean-up
+
+[B]Version 14.1.9[/B]
+- updated login and alternate login methods to fix token issues seen by Free Account users
+
+[B]Version 14.1.8[/B]
+- added option to use "Alternate" stream option for Live TV (old stream method)
+- added option to use "Alternate" stream option for Recordings (old stream method)
+
+[B]Version 14.1.7[/B]
+- more streaming function fixes for live streams and recordings streams
+- there are multiple variations on what accounts return via the API
+- this release addresses all known cases
+
+[B]Version 14.1.6[/B]
+- added stream check to ensure that token can pull in streams
+- added alternate login method to use if stream check fails
+
+[B]Version 14.1.5[/B]
+- updated glossy skin with larger icons
+- updated outline skin with larger icons
+- added "No Icons" skin
+
+[B]Version 14.1.4[/B]
+- major update to Live TV streaming functions
+- live streams are now pulled using playlist.m3u8 files directly from the USTVnow API
+- My9 is the only channel that has some issues. it is forced to no higher than 1024kbps Stream Quality
+- major update to Recordings streaming functions
+- recordings streams are now pulled using playlist.m3u8 files directly from the USTVnow API
+- this change eliminates the need/ability to set Recordings Stream Type
+	
+[B]Version 14.1.3[/B]
+- fix for USTVnow Legacy paid accounts showing as free accounts
+
+[B]Version 14.1.2[/B]
+- new glossy skin (credits: https://www.iconfinder.com/iconsets/DarkGlass_Reworked)
+- new outline skin (credits: https://www.iconfinder.com/iconsets/bitsies)
+- updated Live TV Artwork to pull from USTVnow cache
+- possible fix for Kodi restart needed after display settings changes
+- removed Settings note to restart Kodi after some settings changes. Issue appears to resolved
+
+[B]Version 14.1.1[/B]
+- added new TV Guide section with full recording features!
+- added option to enable full context menu for Live TV
+- rearranged Settings
+- resized all Channel Logos to Kodi standards 256x256
+- added new icons for sections
+
+[B]Version 14.1.0[/B]
+- increased Free Account Stream Quality maximum to 1024kbps
+
+[B]Version 14.0.9[/B]
+- better fix for Free Accounts not working
+- this fix basically sets the user-agent header for the json requests
+
+[B]Version 14.0.8[/B]
+- fix for Free Accounts not working
+
+[B]Version 14.0.7[/B]
+- first official release!
+- changed addon id for official release
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+Below is the changelog from the BETA releases
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+[B]Version 1.6.8[/B]
+- updated Alternate Stream method to work with USTVnow changes
+
+[B]Version 1.6.7[/B]
+- added support for "comped" USTVnow accounts
+
+[B]Version 1.6.6[/B]
+- removed checkbox and set to not mark streams as watched
+- some skins still show an empty checkbox
+
+[B]Version 1.6.5[/B]
+- added option to delete recordings from recording section when recuring recording is set
+
+[B]Version 1.6.4[/B]
+- fixed strm files for BETA and not Official Release
+
+[B]Version 1.6.3[/B]
+- added support for internal USTVnow accounts
+- added full DVR support for Legacy Nittany accounts
+- fixed issue with HD/SD indicators showing correctly
+- added strms for users wanting to integrate with TV Guides
+
+[B]Version 1.6.2[/B]
+- refactored token check, account renewal check, account activation check, stream check, get pass key, and account type check into functions
+
+[B]Version 1.6.1[/B]
+- added check for account renewal
+
+[B]Version 1.6.0[/B]
+- added check for account activation
+
+[B]Version 1.5.9[/B]
+- fixed bug with Sports on Now section
+- fixed typo in addons.xml
+- code clean up
+
+[B]Version 1.5.8[/B]
+- added new Simple (Stylish) icon skin
+
+[B]Version 1.5.7[/B]
+- fixed issue with Increase/Decrease Quality context menu options from showing when Recording Options were disabled
+
+[B]Version 1.5.6[/B]
+- fixed bug in the Sports sections not showing correct sports
+
+[B]Version 1.5.5[/B]
+- added better error handling for login failures
+- fixed issue with opening settings if you have entered the wrong login creds
+
+[B]Version 1.5.4[/B]
+- adjusted list refresh after record, delete, and recurring actions
+- set Recordings, Scheduled, and Recurring lists to be sorted alphabetically
+
+[B]Version 1.5.3[/B]
+- fixed typo in quick quality change dialogs
+
+[B]Version 1.5.2[/B]
+- seperated Stream Quality into Live TV Quality and Recordings Quality
+- since Recordings are only availabe in SD it made more sense to have the ability to set the quality independently
+- added quick quality change option to context menu for Live TV and Recordings
+
+[B]Version 1.5.1[/B]
+- renamed stream 'Quality' in Settings to Low, Medium, High, and HD
+
+[B]Version 1.5.0[/B]
+- very minor update to settings text
+
+[B]Version 1.4.9[/B]
+- Free Accounts now able to stream in HD for the first 45 days after account activation
+- PBS and My9 are not available in HD so they will be SD
+
+[B]Version 1.4.8[/B]
+- added 'Account Info' to settings
+- this gives information on the USTVnow Account including Account Status, total DVR Points, etc
+- udpated addon description to be more accurate
+
+[B]Version 1.4.7[/B]
+- added 'Version Info' to settings
+- will hopefully make it easier for users to know what version they are using
+
+[B]Version 1.4.6[/B]
+- added option in 'Advanced Settings' to force clear the current token
+- added option in 'Advanced Settings' to view/edit the current token
+
+[B]Version 1.4.5[/B]
+- fixed issue with special characters in show/movie data
+
+[B]Version 1.4.4[/B]
+- forgot to clear out the invalid tokens in the last update.
+- added code to clear out all previous tokens to ensure that a fresh one is grabbed
+- code clean-up
+
+[B]Version 1.4.3[/B]
+- updated login and alternate login methods to fix token issues seen by Free Account users
+
+[B]Version 1.4.2[/B]
+- added option to use "Alternate" stream option for Live TV (old stream method)
+- added option to use "Alternate" stream option for Recordings (old stream method)
+
+[B]Version 1.4.1[/B]
+- more streaming function fixes for live streams and recordings streams
+- there are multiple variations on what accounts return via the API
+- this release addresses all known cases
+
+[B]Version 1.4.0[/B]
+- added stream check to ensure that token can pull in streams
+- added alternate login method to use if stream check fails
+
+[B]Version 1.3.9[/B]
+- updated glossy skin with larger icons
+- updated outline skin with larger icons
+- added "No Icons" skin
+
+[B]Version 1.3.8[/B]
+- major update to Recordings streaming functions
+- recordings streams are now pulled using playlist.m3u8 files directly from the USTVnow API
+- this change eliminates the need/ability to set Recordings Stream Type
+
+[B]Version 1.3.7[/B]
+- major update to Live TV streaming functions
+- live streams are now pulled using playlist.m3u8 files directly from the USTVnow API
+- My9 is the only channel that has some issues. it is forced to no higher than 1024kbps Stream Quality
+
+[B]Version 1.3.6[/B]
+- fix for USTVnow Legacy paid accounts showing as free accounts
+
+[B]Version 1.3.5[/B]
+- removed Settings note to restart Kodi after some settings changes. Issue appears to resolved
+
+[B]Version 1.3.4[/B]
+- new glossy skin (credits: https://www.iconfinder.com/iconsets/DarkGlass_Reworked)
+- new outline skin (credits: https://www.iconfinder.com/iconsets/bitsies)
+- updated Live TV Artwork to pull from USTVnow cache
+- possible fix for Kodi restart needed after display settings changes
+
+[B]Version 1.3.3[/B]
+- added new icons for sections
+
+[B]Version 1.3.2[/B]
+- added new TV Guide section with full recording features!
+- added option to enable full context menu for Live TV
+- rearranged Settings
+- resized all Channel Logos to Kodi standards 256x256
+
+[B]Version 1.3.1[/B]
+- increased Free Account Stream Quality maximum to 1024kbps
+- added BETA to name to make it easier to distinguish between Official and BETA releases
+
+[B]Version 1.3.0[/B]
+- better fix for Free Accounts not working
+- this fix basically sets the user-agent header for the json requests
+
+[B]Version 1.2.9[/B]
+- fix for Free Accounts not working
+
+[B]Version 1.2.8[/B]
+- added Kodi restart message in Settings (until I can sort out a better refresh after settings change)
+- updated provider info in addon.xml
+
+[B]Version 1.2.7[/B]
+- added option to set Stream Type for Recordings (RTMP has better quality - RTSP allows for fast-foward, re-wind, and resume)
+- more timestamp adjustments for Recordings and Scheduled sections
+- removed leading 0 from dates on all date stamps
+- minor UI adjustments
+
+[B]Version 1.2.6[/B]
+- minor fixes to installation process to keep in line with official release
+
+[B]Version 1.2.5[/B]
+- time format fix for Windows
+- simplified installation for previous USTVnow Live users (preparing for official release)
+- updates to messaging prompts
+
+[B]Version 1.2.4[/B]
+- fixed issue with show/hide toggles not updating main page
+- refactored package checks and login to cache the login (reduces login attempts needed)
+- set Recording Options to true by default
+- set Main screen to hide Recordings, Scheduled, and Recurring if Recording Options turned off
+
+[B]Version 1.2.3[/B]
+- installation and messaging updates
+
+[B]Version 1.2.2[/B]
+- updated Main screen to refresh after Settings changes
+- updated all times to 12 hour time
+
+[B]Version 1.2.1[/B]
+- added Sports Sections!!!
+- updated installation prompts and messaging
+- added options to show/hide Movies and Sports sections
+- sports section hidden by default
+- added start time to Live TV listings
+- removed "Experimental" label from Live TV Recording
+- some general UI tweaks
+
+[B]Version 1.2.0[/B]
+- limited DVR for non-DVR accounts to the FREE account level channels
+- set all recording options including Delete recording behind the Live TV Recording setting.
+- updated installation prompts and messaging
+
+[B]Version 1.1.9[/B]
+- updated DVR package detection
+- Live TV Recording now available for all account types
+
+[B]Version 1.1.8[/B]
+- set Upcoming Movies section to use Movie Posters
+- set Live TV Artwork option to Show/Movie Poster by default
+- general UI clean-up 
+- general code clean-up
+
+[B]Version 1.1.7[/B]
+- added Upcoming Movies sections!!!
+
+[B]Version 1.1.6[/B]
+- set Recurring recording to not be available for movies
+- set Recurring recording to only be available for paid accounts
+- only show Delete Scheduled recording option if Recurring is not turned on
+
+[B]Version 1.1.5[/B]
+- added Recurring recording feature!
+- code clean up
+- added Expire date and time to Recordings
+
+[B]Version 1.1.4[/B]
+- removed unnecessary imports from addon.xml
+
+[B]Version 1.1.3[/B]
+- added error handling for Live TV recordings
+- added error handling for Deleting recordings
+
+[B]Version 1.1.2[/B]
+- code clean up
+- new cleaner channel logos
+- randomized live stream src
+
+[B]Version 1.1.1[/B]
+- added mediatype to Recordings to get correct Show Poster for recordings
+
+[B]Version 1.1.0[/B]
+- updated record live tv endpoint
+- added api check for account type (no need to manually set account type!)
+- set default stream quality to 750kbps (seems like a good default)
+
+[B]Version 1.0.9[/B]
+- removed setup gui with simple clean xbmcgui.dialog()
+- some code clean up
+- updated to more stable USTVnow endpoint
+- now all data is pulled from json
+
+[B]Version 1.0.8[/B]
+- refactored stream scaper to use m.ustvnow.com fully
+- refactored login method to use m.ustvnow fully
+- fixed issue with json on android
+
+[B]Version 1.0.7[/B]
+- updated settings messaging for Live TV recordings
+
+[B]Version 1.0.6[/B]
+- removed Live TV recording option for Free account types
+
+[B]Version 1.0.5[/B]
+- adjustments to message dialogs
+
+[B]Version 1.0.4[/B]
+- added busy dialog to delete recordings
+- added busy dialog to record live tv
+- set delete and record options to faster method
+
+[B]Version 1.0.3[/B]
+- added Scheduled recordings section
+
+[B]Version 1.0.2[/B]
+- fixed missing rec_url variable from Free account types
+- adjusted login to be faster
+- refactored account type check
+
+[B]Version 1.0.1[/B]
+- Added option to record Live TV (Experimental)
+
+[B]Version 1.0.0[/B]
+- started with USTVnow Live version as base
+- addon id changed
+- addon name changed
+- removed stream type option
+- set live streams to rtmp
+- set recordings streams to rstp
+- added Free vs Paid setting
+- set Free accounts to only show free channels
+- set Free accounts be limited to 400kbps
+- set recordings to play at a maximum of 1024kbps
+- added Settings link in addon
+- updated messaging
+- fixed duplicate channels
+- fixed issue with & in titles
+- added option to set channel image to channel logo or show art
+- set channel logos to local pngs
+- removed Food Network from channel list
+- added TV show episode name to title when available
+- added plot for shows when available
+- updated error messaging
+- tons of misc tweaks
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+Below is the changelog from the previous USTVnow Live Version
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+[B]Version 11.0.4[/B]
+- addon id changed
+- addon name changed
+
+[B]Version 0.3.8[/B]
+- changed way in which channel titles for streams are displayed
+- Added HD for new server in settings (VinManJSV))
+- New setup routine
+
+[B]Version 0.3.0[/B]
+- change method of finding streams
+- only show available streams (my9 reported by site as available free, but not actually available)
+
+[B]Version 0.2.0[/B]
+- add ability to view recordings you have previously made on ustvnow.com
+- fix bug with quality settings
+
+[B]Version 0.1.1[/B]
+- Fix breakage due to site changes by implementing logins
+- add setting to choose rtmp or rtsp streams
+
+[B]Version 0.1.0[/B]
+- Initial version

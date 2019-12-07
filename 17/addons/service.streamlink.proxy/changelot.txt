@@ -1,0 +1,45 @@
++ 4.1.1
+- Added plugins here as dependency, instead of base module
+- Bumped base module dependency to latest
+
++ 4.1.0
+- Removed simpleplugin, replace functions with plain xbmc ones
+- Added a way to enter settings via control module
+- Updated dependencies
+
++ 4.0.1
+- Updated dependencies
+
++ 4.0.0
+- Rebased service.py from beardypig's script
+  > https://github.com/beardypig/plugin.video.streamlink/blob/master/service.py
+
++ 3.0.7
+- Fixed issue which caused Kodi to hang up when closing
+- Default port is set to 50165
+
++ 3.0.6
+- Forked & created necessary source repo
+- Code cosmetics
+- Updated simpleplugin to latest version
+
++ 3.0.5
+- added an option to redirect the hls url instead of writing it into the buffer
+  > it does not work for every stream but it should be faster where it works.
+
++ 3.0.4
+- update params: q for quality
+- try buffer instead of shutil again
+
++ 3.0.3
+- Fixed issue where Kodi wouldn't close another method tried
+
++ 3.0.2
+- Fixed Kodi Error after an update.
+- log cleanup
+
++ 3.0.1
+- try shutil for stream.open
+
++ 3.0.0
+- First Version

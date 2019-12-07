@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="10000">
+        <setting type="lsep" label="20001" />
+            <setting id="email" type="text" label="30102" default="" subsetting="true"/>
+            <setting id="password" type="text" label="30103" option="hidden" default="" subsetting="true"/>
+	    <setting id="free_package" type="bool" default="true" visible="false"/>
+	    <setting id="dvr" type="bool" default="false" visible="false"/>
+
+        <setting type="lsep" label="20000" />
+            <setting id="quality" type="enum" label="30100" values="Low|Medium|High|HD" default="1" subsetting="true"/>
+            <setting id="rec_quality" type="enum" label="30110" values="Low|Medium|High" default="1" subsetting="true"/>
+    
+        <setting type="lsep" label="200002" />
+        <setting type="lsep" label="200003" />
+
+        <setting id="setup" default="false" visible="false" />
+        <setting id="setup_new" default="false" visible="false" />
+    </category>
+
+    <category label="10005">
+        <setting type="lsep" label="20009" />
+            <setting id="guide_settings" type="action" label="20010" option="close" action="RunScript($CWD/guidesettings.py)" subsetting="true"/>
+    </category>
+
+    <category label="10002">
+        <setting id="skin" type="enum" label="40008" values="Refreshed (Default)|Glossy|Outline|Simple (Stylish)|Simple (Original)|No Icons" default="0" />
+        <setting id="logo" type="enum" label="40000" values="Channel Logo|Show/Movie Poster" default="1" />
+        <setting id="show_tv_guide_epg" type="bool" label="40006" default="true" />
+        <setting id="show_movies_section" type="bool" label="40002" default="true" />
+        <setting id="show_sports_section" type="bool" label="40003" default="false" />
+        <setting id="show_settings_option" type="bool" label="40004" default="true" />
+        <setting id="rec_live" type="bool" label="40001" default="true" />
+    </category>
+
+    <category label="10001">
+            <setting type="lsep" label="200005" />
+	        <setting id="clear_token" type="bool" label="40011" default="false" subsetting="true"/>
+	        <setting id="token" type="text" label="40012" default="" subsetting="true"/>
+    </category>
+
+    <category label="10003">
+        <setting id="account_status" type="text" label="40017" default="" />
+        <setting id="date_opened" type="text" label="40018" default="" />
+        <setting id="account_name" type="text" label="40013" default="" />
+        <setting id="account_plan" type="text" label="40015" default="" />
+        <setting id="dvr_points" type="text" label="40016" default="" />
+    </category>
+
+    <category label="10004">
+        <setting id="addon_name" type="text" label="40013" default="" />
+        <setting id="version" type="text" label="40014" default="" />
+    </category>
+
+    <setting id="notify" default="0" visible="false" />
+
+</settings>

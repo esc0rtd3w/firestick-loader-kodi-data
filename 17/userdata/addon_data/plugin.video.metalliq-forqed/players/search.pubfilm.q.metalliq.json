@@ -1,0 +1,36 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] PubFilm ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdpubfilm",
+ "priority"     : 900,
+ "id"           : "search.pubfilm.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdpubfilm/?description&iconimage=special://home/addons/plugin.video.mdpubfilm/icon.png&mode=2&name=&url=http://pubfilm.com/?s={title}",
+    "steps"     : [
+     "($$.*$$){title} ($$.*$$).*{year}.*($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdpubfilm/?description&iconimage=special://home/addons/plugin.video.mdpubfilm/icon.png&mode=8&name=&url=url",
+    "steps"     : [
+     "@keyboard:{clearname}",
+     "($$.*$$){clearname}($$.*$$)$$ Season {season}.*$$($$.*$$)",
+     "($$.*$$)Episode ($$.*$$){episode}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

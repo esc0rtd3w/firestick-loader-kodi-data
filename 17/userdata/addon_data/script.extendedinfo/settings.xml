@@ -1,0 +1,21 @@
+<settings>
+    <setting id="LanguageID" value="en" />
+    <setting id="autocomplete_lang" value="en" />
+    <setting id="autocomplete_lang_local" value="en" />
+    <setting id="autocomplete_provider" value="youtube" />
+    <setting id="changelog_version" value="900.9.1.4.b" />
+    <setting id="classic_search" value="true" />
+    <setting id="colormain" value="ff000000" />
+    <setting id="colorthemed" value="ff0084ff" />
+    <setting id="fav_thumb" value="true" />
+    <setting id="first_start_infodialog" value="True" />
+    <setting id="infodialog_onclick" value="true" />
+    <setting id="player_main_movie" value="library" />
+    <setting id="player_main_tv" value="library" />
+    <setting id="plugin_script" value="false" />
+    <setting id="resume" value="true" />
+    <setting id="trakt.refresh" value="" />
+    <setting id="trakt.token" value="" />
+    <setting id="trakt_debug" value="false" />
+    <setting id="window_mode" value="false" />
+</settings>

@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Cartoons8 ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.metalkettle",
+ "plugin"       : "plugin.video.cartoons8",
+ "priority"     : 900,
+ "id"           : "Cartoons8",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoons8/?description=special://home/addons/plugin.video.cartoons8/fanart.jpg&iconimage=special://home/addons/plugin.video.cartoons8/icon.png&mode=9&name=Search&url=http://cartoons8.me/search/page/1?s={title}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.cartoons8/?description=special://home/addons/plugin.video.cartoons8/fanart.jpg&iconimage=special://home/addons/plugin.video.cartoons8/icon.png&mode=9&name=Search&url=http://cartoons8.me/search/page/1?s={clearname}",
+    "steps"     : [
+     "{clearname} Season {season} .*",
+     "Episode {episode}.*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

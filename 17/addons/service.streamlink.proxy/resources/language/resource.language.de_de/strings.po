@@ -1,0 +1,49 @@
+# Kodi Media Center language file
+# Addon Name: Streamlink Proxy
+# Addon id: service.streamlink.proxy
+# Addon Provider: neverreply
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: neverreply@example.com\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/kodi-main/language/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "streamlink"
+msgstr ""
+
+msgctxt "#30101"
+msgid "HTTP Listen Port"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Username"
+msgstr "Benutzername"
+
+msgctxt "#30103"
+msgid "Password"
+msgstr "Passwort"
+
+msgctxt "#30200"
+msgid "Works only with a valid Internet address."
+msgstr "Funktioniert nur mit einer gültigen Internetadresse."
+
+msgctxt "#30201"
+msgid "This video is currently unavailable."
+msgstr "Dieses Video ist momentan nicht verfügbar."
+
+msgctxt "#30202"
+msgid "Warning"
+msgstr "Warnung"
+
+msgctxt "#30203"
+msgid "Information"
+msgstr "Information"

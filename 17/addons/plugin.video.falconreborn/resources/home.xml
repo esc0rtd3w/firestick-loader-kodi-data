@@ -1,0 +1,33 @@
+<xml>
+
+  <plugin>
+    <title>[COLORwhite]***[/COLOR]  [COLORorange]Live TV[/COLOR]  [COLORwhite]***[/COLOR]</title>
+    <link>plugin://script.module.ultratv</link>
+	<thumbnail></thumbnail>
+    <fanart></fanart>
+  </plugin>
+  
+    <dir>
+    <title>[COLORwhite]***[/COLOR]  [COLORorange]Invasion[/COLOR]  [COLORwhite]***[/COLOR]</title>
+    <link>http://ajbuilds.uk/offthewall/home.xml</link>
+	<thumbnail></thumbnail>
+    <fanart></fanart>
+  </dir>
+
+  
+    <plugin>
+    <title>[COLORwhite]***[/COLOR]  [COLORorange]Eyasess[/COLOR]  [COLORwhite]***[/COLOR]</title>
+    <link>plugin://plugin.video.pauls_world</link>
+	<thumbnail></thumbnail>
+    <fanart></fanart>
+  </plugin>
+  
+  
+    <dir>
+    <title>[COLORwhite]***[/COLOR]  [COLORorange]Playground[/COLOR]  [COLORwhite]***[/COLOR]</title>
+    <link>http://ajbuilds.uk/playground/home.xml</link>
+	<thumbnail></thumbnail>
+    <fanart></fanart>
+  </dir>
+  
+ </xml>

@@ -1,0 +1,65 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] BBC iPlayer ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.bbciplayer",
+ "priority"     : 900,
+ "id"           : "BBC iPlayer",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.bbciplayer/?IPID&description={plot_+}&iconimage={poster}&mode=8&name={title_+}&url=http%3a%2f%2fwww.bbc.co.uk%2fiplayer%2fsearch%3fq%3d{title|ws(%2520)}",
+    "steps"     : [
+     "{title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.bbciplayer/?IPID&description={plot_+}&iconimage={poster}&mode=8&name={title_+}&url=http%3a%2f%2fwww.bbc.co.uk%2fiplayer%2fsearch%3fq%3d{title|ws(%2520)}",
+    "steps"     : [
+     "{clearname}.*{season}.{episode}.*{title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+    [
+      {
+        "link":"plugin://plugin.video.bbciplayer/?IPID&description&iconimage=special://home/addons/plugin.video.bbciplayer/icon.png&mode=2&name={name}&url=url",
+        "steps":[
+          "{name}"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.bbciplayer/?IPID&description&iconimage=special://home/addons/plugin.video.bbciplayer/icon.png&mode=2&name={name}&url=url",
+        "steps":[
+          ".*{name}.*"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.bbciplayer/?IPID&description&iconimage=special://home/addons/plugin.video.bbciplayer/icon.png&mode=2&name={name}&url=url",
+        "steps":[
+          ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.bbciplayer/?IPID&description&iconimage=special://home/addons/plugin.video.bbciplayer/icon.png&mode=2&name={name}&url=url",
+        "steps":[
+          ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+        ],
+        "action":"PLAY"
+      }
+    ]
+  ]
+}

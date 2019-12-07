@@ -1,0 +1,25 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Scene Peeper ([COLOR FF0084FF]M[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdscenepeeper",
+ "priority"     : 900,
+ "id"           : "search.scenepeeper.m",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdscenepeeper/?description&iconimage=special://home/addons/plugin.video.mdscenepeeper/icon.png&mode=4&name=&url=url",
+    "steps"     : [
+     "keyboard:{title}",
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

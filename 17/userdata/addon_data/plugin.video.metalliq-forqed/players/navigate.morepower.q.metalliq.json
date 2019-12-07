@@ -1,0 +1,87 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] MorePower ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "na",
+ "plugin"       : "plugin.video.morepower",
+ "priority"     : 800,
+ "id"           : "MorePower",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anynotcontaining:.*signup.*|.*read.*",
+     "($$.*$$){title}.*{year}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anynotcontaining:.*signup.*|.*read.*",
+     "($$.*$$){title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anycontaining:.*TV.*",
+     "($$.*$$)({clearname}.*{year}|{clearname}).*",
+     "($$.*$$).*(S{season}E{episode:02d}|S{season:02d}E{episode:02d}|Ep.{episode}).*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anycontaining:.*TV.*",
+     "($$.*$$)({clearname}.*{year}|{clearname}).*",
+     "($$.*$$).*(S{season}E{episode:02d}|S{season:02d}E{episode:02d}|Ep.{episode}).*",
+     ".*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anycontaining:.*TV.*",
+     "($$.*$$)({clearname}.*{year}|{clearname}).*",
+     "($$.*$$).*Season.{season}.*",
+     "($$.*$$).*(S{season}E{episode:02d}|S{season:02d}E{episode:02d}|Ep.{episode}).*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anycontaining:.*TV.*",
+     "($$.*$$)({clearname}.*{year}|{clearname}).*",
+     "($$.*$$).*Season.{season}.*",
+     "($$.*$$).*(S{season}E{episode:02d}|S{season:02d}E{episode:02d}|Ep.{episode}).*",
+     ".*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://plugin.video.morepower/",
+    "steps"     : [
+     "@anycontaining",
+     "{clearartist}.*{album}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,230 @@
+1 NBC
+2 CBS
+3 ABC
+4 FOX
+5 The CW
+8 HBO
+9 Showtime
+10 Adult Swim
+11 Cartoon Network
+13 FX
+14 TNT
+15 BBC America
+16 Syfy
+17 Starz
+18 Lifetime
+19 Cinemax
+20 AMC
+21 El Rey Network
+22 MTV
+23 Comedy Central
+25 Disney XD
+26 FreeForm
+27 Nickelodeon
+28 WGN America
+29 A&E
+30 USA Network
+31 Audience Network
+32 TBS
+33 Sundance TV
+34 Paramount Network
+39 ESPN
+40 CNN
+42 National Geographic Channel
+43 E!
+47 FXX
+50 Hallmark Channel
+52 Bravo
+53 History
+55 VH1
+56 BET
+57 TV Land
+58 Centric
+62 nick@nite
+65 IFC
+66 Discovery Channel
+70 UPN
+71 The WB
+72 Syndication
+73 Nicktoons
+74 H2
+75 REELZ
+77 Science
+78 Disney Channel
+79 Oxygen
+80 tlc TLC
+81 Food Network
+82 Travel Channel
+83 National Geographic WILD
+84 TruTV
+85 PBS
+86 Smithsonian Channel
+88 Pop
+89 Investigation Discovery
+90 DIY Network
+92 Animal Planet
+93 CNBC
+95 Fox Sports 1
+101 TeenNick
+103 Great American Country
+104 NBCSN
+107 Destination America
+117 Logo TV
+122 We TV
+125 fyi
+138 Pay-Per-View
+142 Velocity
+145 MTV2
+169 Al Jazeera America
+170 AXS TV
+171 Big Ten Network
+172 Bloomberg TV< 
+173 CMT
+174 Cooking Channel
+175 Create
+176 Discovery Family
+177 Discovery Life Channel
+178 Encore
+179 ASPiRE
+180 ESPN2
+181 ESPNEWS
+182 ESPNU
+183 ESPN Deportes
+184 Esquire Network
+185 FOX News Channel
+186 FUSE TV
+187 Fusion
+188 Golf Channel
+189 Game Show Network
+190 HBO Family
+191 HBO Signature
+192 HGTV
+193 HLN
+194 ION Television
+195 ION Life
+196 Live Well Network
+197 The Longhorn Network
+198 Me-TV
+199 MLB Network
+200 MoreMax
+201 MSNBC
+203 MyNetworkTV
+204 NBA TV
+205 NFL Network
+206 Nick Jr.
+207 Outdoor Channel
+208 Ovation
+210 PAC-12 Network
+211 Pivot
+212 Qubo
+213 RFD-TV
+214 SEC Network
+215 Showtime 2
+216 Showtime Extreme
+217 Sportsman Channel
+218 Turner Classic Movies
+219 Telemundo
+220 Tennis Channel
+221 The Movie Channel
+222 The Movie Channel Xtra
+223 Toon Disney
+224 TV One
+225 UniMás
+226 Univision
+227 UP TV
+228 The Weather Channel
+229 AHC
+232 Lifetime Movie Network
+233 LrW<
+236 Oprah Winfrey Network
+248 G4
+252 Hallmark Movies & Mysteries
+253 Epix
+254 Starz Edge
+255 Starz Cinema
+256 Starz Comedy
+257 Starz InBlack
+258 Starz Kids & Family
+260 Showtime Women
+261 BOUNCE TV
+272 CBS Sports Network
+284 Speed TV
+319 Style TV
+340 Current TV
+342 Universal Kids
+354 The Family Channel
+357 ESPN Classic
+378 FM
+386 Fox Sports 2
+395 PBS SoCal
+396 Chiller
+400 The Hub
+430 World
+455 TV Guide Channel
+456 Boomerang
+466 Fearnet
+467 BYU Television
+488 TCM
+507 EVINE Live
+515 Fox Soccer
+516 NHL Network
+520 REVOLT
+524 Fox Business Network
+525 Lionsgate Television
+535 Estrella TV
+540 PBS Kids
+555 CNBC World
+557 VH1 Classic
+660 insp
+712 NBC Universo
+719 Biography Channel
+733 Pursuit Channel
+734 Universal Sports Network
+735 Universal HD
+736 Palladia< 
+739 MAVTV
+741 MSG
+745 Discovery Kids
+749 DuMont Television Network
+757 MASN
+758 TBN
+778 Antenna TV
+975 KCET
+987 Fox Family
+988 Here TV
+993 RLTV
+1006 Viceland
+1007 MHz Worldview
+1009 C-SPAN
+1035 Playboy TV
+1039 Disney Junior
+1047 Fox Sports SUN
+1061 Fox Reality Channel
+1085 Bandamax
+1089 WGBH-TV
+1233 NuvoTV
+1275 MTV Classic
+1296 National Educational Television
+1310 Home Shopping Network
+1311 EWTN
+1313 MTV Live
+1318 AWE
+1321 Light TV
+1330 Z Living
+1336 NESN
+1337 NESN Plus
+1339 American Sports Network
+1368 Ora TV
+1380 Soapnet
+1383 KCLV Channel 2
+1434 Mojo HD
+1457 Fox Kids
+1464 Mnet America
+1485 Myx TV
+1489 Cloo
+1492 SHOWTIME Showcase
+1509 Prime Time Entertainment
+1511 Bohbot Kids Network
+1513 Christian Broadcasting Network
+1514 C-SPAN2
+1532 Mega TV

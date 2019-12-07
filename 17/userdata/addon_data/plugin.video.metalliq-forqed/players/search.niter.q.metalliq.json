@@ -1,0 +1,25 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Niter ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdniter",
+ "priority"     : 900,
+ "id"           : "search.niter.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdniter/?description&iconimage=special://home/addons/plugin.video.mdniter/icon.png&mode=4&name=&url=url",
+    "steps"     : [
+     "@keyboard:{title}",
+     "($$.*$$){title}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

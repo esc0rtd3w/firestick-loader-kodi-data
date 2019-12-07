@@ -1,0 +1,15 @@
+ExodusRedux is a fork of Exodus. It has the same basic look and feel as the original Exodus with functionality and themes incorporated from the various iterations of Exodus.  The project builds on the efforts of the developers listed below.
+
+- Lambda
+- TKNorris
+- Mr.Blamo
+- Nixgates
+- I-A-C
+- WilsonMagic
+- 13Clowns
+- Eggman
+- Jor-El
+- Maud'Dib
+- Jewbmx
+- Team Supremacy
+- and any others i may have missed!

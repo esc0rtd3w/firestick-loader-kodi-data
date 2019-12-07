@@ -1,0 +1,54 @@
+{
+  "name":"Navigate [COLOR FF0084FF]-[/COLOR] FilmOn Simple ([COLOR FF0084FF]Cy[/COLOR])",
+  "repository":"repository.xbmchub",
+  "plugin":"plugin.video.filmon.simple",
+  "priority":800,
+  "id":"FilmOn Simple",
+  "filters":{
+  },
+  "postprocess":"",
+  "movies":[
+  ],
+  "tvshows":[
+  ],
+  "musicvideos":[
+  ],
+  "music":[
+  ],
+  "live":[
+    [
+      {
+        "link":"plugin://plugin.video.filmon.simple/",
+        "steps":[
+          "@any",
+          "{name}"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.filmon.simple/",
+        "steps":[
+          "@any",
+          ".*{name}.*"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.filmon.simple/",
+        "steps":[
+          "@any",
+          ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+        ],
+        "action":"PLAY"
+      },
+      {
+        "link":"plugin://plugin.video.filmon.simple/",
+        "steps":[
+          "@any",
+          ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+        ],
+        "action":"PLAY"
+      }
+    ]
+  ]
+}

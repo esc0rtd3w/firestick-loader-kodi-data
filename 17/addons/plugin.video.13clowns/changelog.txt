@@ -1,0 +1,80 @@
+[B]1.3.1[/B]
+- adjust episode viewing SxExx
+- add New Episodes/My Shows/My Movies back in main menu (Toggle in Settings, default off)
+- Fixed 80's movies
+- adjusted Zanni/Exodis Artwork
+- Added Kids Icon for Cartonns on 13Clowns
+[B]1.3.0.1[/B]
+- fixed double genere in settings
+[B]1.3.0[/B]
+- Lambda Scrappers are removed. Let him RIP
+- Civitas Srapers added - COMMUNITY BASED
+- Navigation changes, hide almost anything, customize it.
+- fixed episode displaying
+- monthly / favorites changed so that monthly addon updates not needed, done remotely.
+- added cartoon collections
+[B]1.2.9[/B]
+- Rearrange menus for my liking (template), thanks Frankenstien Bc
+- added artwork, Thanks @Wolfgir08604753 and @mr000iconz
+- Fixed Fitness/Kids Corner/Etc., Thanks @tantrumdev
+- updated wizard in preperation of Kodi 18, Thanks to the Dr.(u/drinfernoo)
+- added 50, 60, 70s movies links
+- added Car Movies to Box Collections
+- added Superheros to Box Collections
+- Monthly Spotlight Actor/Actress/Movie/etc
+- added 13Clowns Favorites list....lol
+- added choice of Lambda or Global Scrapers!!!
+- Added Youtube sections with many areas. (PLEASE CONTRIBUTE, LEARN and GIVE BACK to the COMMUNITY)see below
+----You can start slowly and build upon the knowledge you gain. Github, fork the XML folder, make changes/additions and submit a pull request and see how it works!!!
+----Learn scraper testing, fixing, etc. more videos coming soon. Under Kodi section. (if you ahve any you want to add add them)
+- thank you to all of you for support, contributions and giving me hell. I enjoy this hobby and all of you!
+
+=======Lost Track=====
+   1.2.5 - 1.2.8
+=======Lost Track=====
+
+[B]1.2.5[/B]
+- Rearrange menus for my liking
+- setup defaults
+[B]1.2.2[/B]
+- Added Channels
+- Added Boxsets
+- fixed pre-emptive termination
+[B]1.2.1[/B]
+- show unaired season/episode option for S00
+[B]1.2[/B]
+- default autoplay on source
+- default to 1080
+- default 13clowns theme
+- kodi 18 fixes
+====================================================
+[B]1.0.10[/B]
+- ensure Lambda is default grey out field
+[B]1.0.9[/B]
+- fix screw ups
+[B]1.0.8[/B]
+- ensure Lambda is default
+[B]1.0.7[/B]
+- clean up from git merge
+[B]1.0.6[/B]
+- clean up from git merge
+[B]1.0.5a[/B]
+- added documentary
+[B]1.0.5[/B]
+- icon change
+- fix in theaters
+- fix link to providers
+- change information & News to "No Stream HELP!"
+- Credits sections
+- trailers off by default
+[B]1.0.4[/B]
+- scraper fault 30
+- premium source indicator (red)
+- URL Resolver menu relocation
+- Information & News changes
+[B]1.0.3[/B]
+- Minor Changes
+[B]1.0.2[/B]
+- Minor Changes
+[B]1.0.1[/B]
+- Initial version

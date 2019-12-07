@@ -1,0 +1,83 @@
+{
+ "name"         : "Explore [COLOR FF0084FF]-[/COLOR] KissCartoon ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.thehighway",
+ "plugin"       : "plugin.video.kisscartoon",
+ "priority"     : 700,
+ "id"           : "KissCartoon",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*1080.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*720.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*480.*"
+     ],
+    "action"    : "Play"
+   },
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={title}",
+    "steps"     : [
+     ".*{title}.*",
+     "Movie.*",
+     ".*360.*"
+     ],
+    "action"    : "Play"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*720.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*480.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.kisscartoon/?description=special://home/addons/plugin.video.kisscartoon/fanart.jpg&iconimage=special://home/addons/plugin.video.kisscartoon/icon.png&mode=Search&title={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     "Episode {absolute_number:03d}.*",
+     ".*360.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

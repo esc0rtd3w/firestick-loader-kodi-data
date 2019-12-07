@@ -1,0 +1,57 @@
+{
+ "name"         : "Explore [COLOR ff0084ff]-[/COLOR] Imperial Streams ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdimperialstreams",
+ "priority"     : 700,
+ "id"           : "explore.imperialstreams.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/SEARCH_MOVIES.png&mode=2&name=&url=http://megashare.live/%3fs%3d{title}",
+    "steps"     : [
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/SEARCH_MOVIES.png&mode=2&name=&url=http://megashare.live/%3fs%3d{title}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/SEARCH_MOVIES.png&mode=41&name=&url=http://freecartoons.co/%3fs%3d{title}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/SEARCH_MOVIES.png&mode=41&name=&url=http://watchfreeanime.org/%3fs%3d{title}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdimperialstreams/?description&iconimage=special://home/addons/plugin.video.mdimperialstreams/resources/art/SEARCH.png&mode=21&name=&url=http://episodetube.com/?s={clearname}",
+    "steps"     : [
+     ".*$${clearname}.*",
+     ".*{season}.*",
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

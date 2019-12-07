@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] Duckpool ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.duckpool",
+ "plugin"       : "script.icechannel",
+ "priority"     : 200,
+ "id"           : "direct.duckpool.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://script.icechannel/?name={title_+}&title={title_+}+%28{year}%29&item_title={title_+}+%28{year}%29&video_type=movie&indexer=movies&imdb_id={imdb}&mode=file_hosts&year={year}&item_mode=file_hosts&type=movies&library=true",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://script.icechannel/?episode={episode}&name={clearname_+}&title={title_+}&season={season}&indexer=tv_shows&library=true&imdb_id={imdb}&video_type=episode&year={year}&type=tv_episodes&mode=file_hosts",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category label="30101">
+
+        <setting id="xmltv.interval" label="30128" type="enum" default="2" lvalues="30129|30130" />
+        <setting id="secure" label="30160" type="bool" default="false" />
+
+	</category>
+	
+	
+	<category label="30114">
+        <setting id="autostart" label="30900" type="bool" default="false" />
+	<setting id="notifications.enabled" label="30106" type="bool" default="false" visible="false" />
+        <setting id="enable.osd" label="30118" type="bool" default="false" />
+	<setting label="30119" type="lsep" />
+	</category>
+
+	<category label="30140">
+		<setting type="lsep" label="30137"/>
+		<setting type="lsep" label="30138"/>
+        <setting label="30139" type="action" action="RunScript($CWD/ResetDatabase.py)" />
+    </category>
+</settings>

@@ -1,0 +1,22 @@
+{
+ "name"         : "Direct [COLOR ff0084ff]-[/COLOR] MD.Watchseries ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdws",
+ "priority"     : 200,
+ "id"           : "direct.mdws.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdws/?mode=4&name=Episode%20{episode}%20%20%20{title|ws(%20)}%20(%20{epday}%2f{epmonth}%2f{epyear})&url=http://watchseries.vc/episode/{clearname|ws(_)}_s{season}_e{episode}.html",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

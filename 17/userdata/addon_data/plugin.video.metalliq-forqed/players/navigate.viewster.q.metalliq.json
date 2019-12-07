@@ -1,0 +1,39 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Viewster ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmc.org",
+ "plugin"       : "plugin.video.viewster",
+ "priority"     : 800,
+ "id"           : "Viewster",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.viewster/",
+    "steps"     : [
+     "@anyexcept:[COLOR red]Search TV Shows[/COLOR]|[COLOR red]Search Movies[/COLOR]",
+     "Movies",
+     "({title}|.{shorttitle})"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.viewster/",
+    "steps"     : [
+     "@anyexcept:[COLOR red]Search TV Shows[/COLOR]|[COLOR red]Search Movies[/COLOR]",
+     "Tv-Series",
+     "{clearname}",
+     "(.|){title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

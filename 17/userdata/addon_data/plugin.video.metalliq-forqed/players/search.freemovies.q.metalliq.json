@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Free Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.mdfm",
+ "priority"     : 900,
+ "id"           : "search.freemovies.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdfm/?description&iconimage=special://home/addons/plugin.video.mdfm/icon.png&mode=1&name=&url=http://fmovies.to/search?keyword={title}",
+    "steps"     : [
+     "($$.*$$){title}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.mdfm/?description&iconimage=special://home/addons/plugin.video.mdfm/icon.png&mode=2&name=&url=http://fmovies.to/search?keyword={clearname}",
+    "steps"     : [
+     "($$.*$$){clearname} {season} ($$.*$$).*",
+     "($$.*$$)Episode ($$.*$$){episode:02d}($$.*$$)"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

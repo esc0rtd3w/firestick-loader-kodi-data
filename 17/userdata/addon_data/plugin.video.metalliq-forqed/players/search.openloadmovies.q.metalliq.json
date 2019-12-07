@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Openload Movies ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.openloadmovies",
+ "priority"     : 900,
+ "id"           : "search.openloadmovies.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.openloadmovies/?description&amp;fanart=special://home/addons/plugin.video.openloadmovies/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.openloadmovies/icon.png&amp;mode=11&amp;name=Search&amp;url=http%3a%2f%2fpubfilmonline.net%2f%3fs%3d{title_+}",
+    "steps"     : [
+     "><{title}..{year}."
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.openloadmovies/?description&amp;fanart=special://home/addons/plugin.video.openloadmovies/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.openloadmovies/icon.png&amp;mode=11&amp;name=Search&amp;url=http%3a%2f%2fpubfilmonline.net%2f%3fs%3d{clearname_+}",
+    "steps"     : [
+     "><{clearname}",
+     "><{season}...{episode} .*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

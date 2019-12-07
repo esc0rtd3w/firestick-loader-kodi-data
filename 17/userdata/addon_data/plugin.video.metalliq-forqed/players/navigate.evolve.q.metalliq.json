@@ -1,0 +1,53 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] Evolve ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.goliath",
+ "plugin"       : "plugin.video.Evolve",
+ "priority"     : 800,
+ "id"           : "navigate.evolve.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.Evolve/",
+    "steps": [
+     ".*orts.*",
+     "@anycontaining:pack|bein",
+     "{name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Evolve/",
+    "steps": [
+     ".*orts.*",
+     "@anycontaining:pack|bein",
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Evolve/",
+    "steps": [
+     ".*orts.*",
+     "@anycontaining:pack|bein",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.Evolve/",
+    "steps": [
+     ".*orts.*",
+     "@anycontaining:pack|bein",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

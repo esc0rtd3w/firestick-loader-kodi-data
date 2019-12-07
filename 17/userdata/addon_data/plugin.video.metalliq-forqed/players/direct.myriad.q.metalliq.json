@@ -1,0 +1,30 @@
+{
+ "name"         : "Direct [COLOR FF0084FF]-[/COLOR] MYRIAD ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.myriad_gw",
+ "priority"     : 200,
+ "id"           : "direct.myriad_gw.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.myriad_gw/?description={plot}&episode&iconimage={poster}&mode=80&name={title}+({year})&season&title={title}&url={imdb}&year=({year})",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      :"plugin://plugin.video.myriad_gw/?description={plot}&episode=%5bS{season:02d}%20E{episode:02d}%5d&iconimage={thumbnail}&mode=90&name=S{season:02d}E{episode:02d}+{title}&season&title={clearname}&url={clearname}&year={year}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

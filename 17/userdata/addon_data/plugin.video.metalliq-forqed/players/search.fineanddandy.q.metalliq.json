@@ -1,0 +1,24 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Fine and Dandy ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.fineanddandy",
+ "priority"     : 900,
+ "id"           : "search.fineanddandy.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.fineanddandy/?description&amp;iconimage=special://home/addons/plugin.video.fineanddandy/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fwww.mydownloadtube.com%2fsearch%2fmovies%2f{title|replace( ,%20)}",
+    "steps"     : [
+     "><{title}.*{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

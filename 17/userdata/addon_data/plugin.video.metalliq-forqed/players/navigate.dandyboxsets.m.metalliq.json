@@ -1,0 +1,25 @@
+{
+ "name"         : "Navigate [COLOR FF0084FF]-[/COLOR] DandyMedia Boxsets ([COLOR FF0084FF]M[/COLOR])",
+ "repository"   : "repository.xunitytalk",
+ "plugin"       : "plugin.video.dandyboxset",
+ "priority"     : 800,
+ "id"           : "navigate.dandyboxset.m",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.dandyboxset",
+    "steps"     : [
+     "@any",
+     "{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

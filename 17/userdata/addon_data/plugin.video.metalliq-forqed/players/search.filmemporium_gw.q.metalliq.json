@@ -1,0 +1,35 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Film Emporium ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.filmemporium_gw",
+ "priority"     : 900,
+ "id"           : "search.filmemporium_gw.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.filmemporium_gw/?description&amp;iconimage=special://home/addons/plugin.video.filmemporium_gw/icon.png&amp;mode=15&amp;name=Search&amp;url=https%3a%2f%2fwww2.thewatchseries.cc%2fsearch.html%3fkeyword%3d{title|replace( ,%20)}",
+    "steps"     : [
+     "><{title}"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.filmemporium_gw/?description&amp;iconimage=special://home/addons/plugin.video.filmemporium_gw/icon.png&amp;mode=15&amp;name=Search&amp;url=https%3a%2f%2fwww2.thewatchseries.cc%2fsearch.html%3fkeyword%3d{clearname|replace( ,%20)}",
+    "steps"     : [
+     "><{clearname}.*Season.{season}",
+     "><Episode.{episode:02d}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

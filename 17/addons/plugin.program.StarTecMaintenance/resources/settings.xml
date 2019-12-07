@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Maintenance">
+		<setting id="clearcache" type="bool" label="Clear Cache at Startup" default="true" />
+		<setting type="lsep" label="Package Folder Limits" />
+		<setting id="filesize_alert" type="slider" label="Max Folder Size MB" default="150" range="25,25,500" option="int" />
+		<setting type="lsep" label="Thumbnails Folder Limits" />
+		<setting id="filesizethumb_alert" type="slider" label="Max Folder Size MB" default="500" range="100,50,1500" option="int" />
+	</category>
+	<category label="Backups">
+		<setting type="lsep" label="[COLOR=dodgerblue]Backup Location [COLOR=red] Dont change![/COLOR]"/>
+		<setting id="zip" type="folder"    label="Dont change unless you know what your doing!!!!"      default="special://home/backupdir"/>
+   	</category>
+</settings>

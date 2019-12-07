@@ -1,0 +1,5 @@
+0.8.6
+Fixed cachemembuffer when set to 0
+
+0.8.5
+Initial Release

@@ -1,0 +1,36 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] Movie Echo ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.movieecho",
+ "priority"     : 900,
+ "id"           : "search.movieecho.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.movieecho/?description&amp;fanart=special://home/addons/plugin.video.movieecho/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.movieecho/icon.png&amp;mode=5&amp;name=Search&amp;url=http%3a%2f%2fwww.movieecho.com%2f%3fsearch_keywords%3d{title_+}",
+    "steps"     : [
+     "><{title}..{year}.."
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.movieecho/?description&amp;fanart=special://home/addons/plugin.video.movieecho/fanart.jpg&amp;iconimage=special://home/addons/plugin.video.movieecho/icon.png&amp;mode=7&amp;name=Search&amp;url=http%3a%2f%2fwww.movieecho.com%2f%3ftv%3d%26search_keywords%3d{clearname_+}",
+    "steps"     : [
+     "><{clearname_+}",
+     "><Season.{season}",
+     "><E{episode}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

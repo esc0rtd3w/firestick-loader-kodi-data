@@ -1,0 +1,30 @@
+{
+ "name"         : "Zonal [COLOR FF0084FF]-[/COLOR] SALTS ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.tknorris.release",
+ "plugin"       : "plugin.video.salts",
+ "priority"     : 700,
+ "id"           : "SALTS",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.salts/?query={title_+}&section=Movies&mode=search_results",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.salts/?mode=episodes&random={epyear[::-1]}{epyear}{epyear[3]}{epyear[2]}.{epyear[1]}{epyear[0]}&season={season}&trakt_id={trakt}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

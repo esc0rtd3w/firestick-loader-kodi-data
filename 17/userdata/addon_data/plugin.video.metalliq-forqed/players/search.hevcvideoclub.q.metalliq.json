@@ -1,0 +1,34 @@
+{
+ "name"         : "Search [COLOR ff0084ff]-[/COLOR] HEVC VideoClub([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.dandymedia",
+ "plugin"       : "plugin.video.hevcvideoclub",
+ "priority"     : 900,
+ "id"           : "search.hevcvideoclub.q",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.hevcvideoclub/?description&amp;iconimage=special://home/addons/plugin.video.hevcvideoclub/icon.png&amp;mode=7&amp;name=Search&amp;url=http%3a%2f%2f300mbmovies4u.co%2f%3fs%3d{title|ws(%20)}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.hevcvideoclub/?description&amp;iconimage=special://home/addons/plugin.video.hevcvideoclub/icon.png&amp;mode=7&amp;name=Search&amp;url=http%3a%2f%2f300mbmovies4u.co%2f%3fs%3d{clearname|ws(%20)}%20s{season:02d}e{episode:02d}",
+    "steps"     : [
+     "><{clearname}.*s{season:02d}e{episode:02d}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

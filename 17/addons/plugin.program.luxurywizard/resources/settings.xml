@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="Build Options">
+		<setting type="lsep" label="Current Build:"/>
+		<setting id="buildname" type="text" label="Installed Build: " enable="false" default=""/>
+		<setting id="buildversion" type="text" label="Installed Version: " enable="false" default=""/>
+		<setting id="buildtheme" type="text" label="Current Theme: " enable="false" default=""/>
+		<setting id="latestversion" type="text" label="Latest Version: " enable="false" default=""/>
+		<setting id="lastbuildcheck" type="text" label="Next check for build update: " enable="false" default=""/>
+		<setting id="disableupdate" type="bool" label="Disable Update Notification" default="false"/>
+		<setting id="installmethod" type="enum" label="Which method would you like to use after Install?" values="Always Ask|Reload Profile|Force Close" enable="!eq(-4,false)"/>
+		<setting type="lsep" label="Show Builds:"/>
+		<setting id="show15" type="bool" label="Show Isengard(v15.0) and Below Builds" default="true"/>
+		<setting id="show16" type="bool" label="Show Jarvis(v16.0) Builds" default="true"/>
+		<setting id="show17" type="bool" label="Show Krypton(v17.0) Builds" default="true"/>
+		<setting id="show18" type="bool" label="Show Leia(v18.0) Builds" default="true"/>
+		<setting id="seperate" type="bool" label="Do not seperate based off version" default="false"/>
+		<setting id="installed" type="bool" label="Build Installed" visible="false" default="false" />
+		<setting id="extract" type="text" label="Extract Build %" visible="false" default="100" />
+		<setting id="errors" type="text" label="Extract Error" visible="false" default="" />
+		<setting id="defaultskin" type="text" label="Default Skin: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinname" type="text" label="Default Skin Name: " enable="false" default="" visible="false"/>
+		<setting id="defaultskinignore" type="bool" label="Ignore default skin check:" enable="false" default="false" visible="false"/>
+		<setting id="default.enablerssfeeds" type="text" label="Default lookandfeel.enablerssfeeds:" enable="false" default="" visible="false"/>
+		<setting id="default.font" type="text" label="Default lookandfeel.font:" enable="false" default="" visible="false"/>
+		<setting id="default.rssedit" type="text" label="Default lookandfeel.rssedit:" enable="false" default="" visible="false"/>
+		<setting id="default.skincolors" type="text" label="Default lookandfeel.skincolors:" enable="false" default="" visible="false"/>
+		<setting id="default.skintheme" type="text" label="Default lookandfeel.skintheme:" enable="false" default="" visible="false"/>
+		<setting id="default.skinzoom" type="text" label="Default lookandfeel.skinzoom:" enable="false" default="" visible="false"/>
+		<setting id="default.soundskin" type="text" label="Default lookandfeel.soundskin:" enable="false" default="" visible="false"/>
+		<setting id="default.startupwindow" type="text" label="Default lookandfeel.startupwindow:" enable="false" default="" visible="false"/>
+		<setting id="default.stereostrength" type="text" label="Default lookandfeel.stereostrength:" enable="false" default="" visible="false"/>
+		<setting id="default.addonupdate" type="text" label="Default general.addonupdate:" enable="false" default="" visible="false"/>
+		<setting id="pvrclient" type="text" label="Enabled PVR:" enable="false" default="" visible="false"/>
+	</category>
+
+	<category label="Maintenance">
+		<setting type="lsep" label="Upload Log: "/>
+		<setting id="email" type="text" label="E-Mail Address" />
+		<setting id="oldlog" type="bool" label="Include Kodi.Old.Log" default="false"/>
+		<setting id="wizlog" type="bool" label="Include Wizard Logs" default="false"/>
+		<setting id="crashlog" type="bool" label="Include Kodi Crash Logs" default="false"/>
+		<setting type="lsep" label="Maintenance Menu: "/>
+		<setting id="showmaint" type="bool" label="Show All Maintenance Sections" default="false"/>
+		<setting type="lsep" label="Backup Location: "/>
+		<setting id="path" type="folder" label="Choose Backup Storage Location" default=""/>
+		<setting type="lsep" label="Auto Cleanup On Startup:"/>
+		<setting id="autoclean" type="bool" label="Enable Auto Clean" default="true"/>
+		<setting id="clearcache" type="bool" label="Clear Cache on Startup" default="true" enable="!eq(-1,false)"/>
+		<setting id="clearpackages" type="bool" label="Clear Packages on Startup" default="true" enable="!eq(-2,false)"/>
+		<setting id="clearthumbs" type="bool" label="Clear Week Old Thumbnails on Startup" default="true" enable="!eq(-3,false)"/>
+		<setting id="autocleanfeq" type="enum" label="How often would you like to Auto Clean on Startup?" values="Always|Daily|3 Days|Weekly" enable="!eq(-4,false)"/>
+		<setting id="nextautocleanup" type="text" label="Next Auto Clean Up: " enable="false" visible="false" default=""/>
+		<setting type="lsep" label="Clearing Video Cache:"/>
+		<setting id="includevideo" type="bool" label="Include Video Addons in Clear Cache: " default="true"/>
+		<setting id="includeall" type="bool" label="Include All Addons: " default="true" enable="!eq(-1,false)" visible="!eq(-1,false)"/>
+		<setting id="includeyoda" type="bool" label="Include Yoda Cache DB: " default="true" enable="!eq(-2,false)" visible="!eq(-2,false)"/>
+		<setting id="includeuranus" type="bool" label="Include Uranus Cache DB: " default="true" enable="!eq(-3,false)" visible="!eq(-3,false)"/>
+		<setting id="includeplacenta" type="bool" label="Include Placenta Cache DB: " default="true" enable="!eq(-4,false)" visible="!eq(-4,false)"/>
+		<setting id="includedeathstreams" type="bool" label="Include Death Streams Cache DB: " default="true" enable="!eq(-5,false)" visible="!eq(-5,false)"/>
+		<setting id="includedeathrd" type="bool" label="Include DeathStreams RD Cache DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
+		<setting id="includeneptune" type="bool" label="Include Neptune Cache DB: " default="true" enable="!eq(-7,false)" visible="!eq(-7,false)"/>
+		<setting id="includeincursion" type="bool" label="Include Incursion Cache DB: " default="true" enable="!eq(-8,false)" visible="!eq(-8,false)"/>
+		<setting id="includeonechan" type="bool" label="Include OneChannel Cache DB: " default="true" enable="!eq(-9,false)" visible="!eq(-9,false)"/>
+	</category>
+
+	<category label="Install Settings">
+		<setting type="lsep" label="Keep Settings When Installing Build:"/>
+		<setting id="keepfavourites" type="bool" label="Keep My Favourites" default="false"/>
+		<setting id="keepsources" type="bool" label="Keep My Sources" default="false"/>
+		<setting id="keepprofiles" type="bool" label="Keep My Profiles" default="false"/>
+		<setting id="keepadvanced" type="bool" label="Keep My AdvancedSettings.xml" default="false"/>
+		<setting id="keeprepos" type="bool" label="Keep Installed Repositories" default="false"/>
+		<setting id="keepsuper" type="bool" label="Keep Super Favourites" default="false"/>
+		<setting id="keepwhitelist" type="bool" label="Keep My Whitelist Addons" default="true"/>
+		<setting type="lsep" label="Third Party Wizard Support:"/>
+		<setting id="enable3rd" type="bool" label="Enable 3rd Party Wizards" default="false"/>
+		<setting id="wizard1name" type="text" label="Wizard 1 Name: " enable="true" visible="!eq(-1,false)" default=""/>
+		<setting id="wizard1url" type="text" label="Wizard 1 URL: " enable="true" visible="!eq(-2,false)" default=""/>
+		<setting id="wizard2name" type="text" label="Wizard 2 Name: " enable="true" visible="!eq(-3,false)" default=""/>
+		<setting id="wizard2url" type="text" label="Wizard 2 URL: " enable="true" visible="!eq(-4,false)" default=""/>
+		<setting id="wizard3name" type="text" label="Wizard 3 Name: " enable="true" visible="!eq(-5,false)" default=""/>
+		<setting id="wizard3url" type="text" label="Wizard 3 URL: " enable="true" visible="!eq(-6,false)" default=""/>
+	</category>
+
+	<category label="Trakt Settings">
+		<setting type="lsep" label="Save Trakt Data:"/>
+		<setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="false"/>
+		<setting id="placenta" type="text" label="Placenta: " enable="false" default=""/>
+		<setting id="chappaai" type="text" label="Chappaai: " enable="false" default=""/>
+		<setting id="deathstreams" type="text" label="DeathStreams: " enable="false" default=""/>
+		<setting id="blamord" type="text" label="DeathStreams RD: " enable="false" default=""/>
+		<setting id="neptune" type="text" label="Neptune Rising: " enable="false" default=""/>
+  <setting id="yoda" type="text" label="Yoda: " enable="false" default=""/>
+    <setting id="jorel" type="text" label="Jor-El: " enable="false" default=""/>
+    <setting id="lega" type="text" label="Legacy: " enable="false" default=""/>
+		<setting id="incursion" type="text" label="Incursion: " enable="false" default=""/>
+    <setting id="numers" type="text" label="Numbers: " enable="false" default=""/>
+  <setting id="atomic" type="text" label="Atomic: " enable="false" default=""/>
+  <setting id="uranus" type="text" label="Uranus: " enable="false" default=""/>
+  <setting id="krotas" type="text" label="The Kratos: " enable="false" default=""/>
+  <setting id="metalk" type="text" label="Metallik: " enable="false" default=""/>
+  <setting id="gmetalliq" type="text" label="Metalliq Golden: " enable="false" default=""/>
+  <setting id="benel" type="text" label="Benelli: " enable="false" default=""/>
+  <setting id="rebirth" type="text" label="Rebirth: " enable="false" default=""/>
+		<setting id="trakt" type="text" label="Trakt: " enable="false" default=""/>
+		<setting id="traktlastsave" type="text" label="Last Time Trakt Saved: " enable="false" default=""/>
+	</category>
+
+	<category label="Real Debrid Settings">
+		<setting type="lsep" label="Save Real Debrid Data:"/>
+		<setting id="keepdebrid" type="bool" label="Keep My Real Debrid Data" default="false"/>
+		<setting id="resolve" type="text" label="ResolveUrl: " enable="false" default=""/>
+		<setting id="urlresolver" type="text" label="Url Resolver: " enable="false" default=""/>
+		<setting id="debridlastsave" type="text" label="Last Time Real Debrid Saved: " enable="false" default=""/>
+	</category>
+
+	<category label="Login Settings">
+		<setting type="lsep" label="Save Login Data:"/>
+		<setting id="keeplogin" type="bool" label="Keep My Login Data" default="false"/>
+		<setting type="lsep" label="IPTV:"/>
+  <setting id="loginvaders" type="text" label="Vader Streams: " enable="false" default=""/>
+  <setting id="loginsmoothstreams" type="text" label="Smooth Streams: " enable="false" default=""/>
+  <setting id="loginpowertv" type="text"
+label="Power Tv: "enable="false"
+default=""/>
+  <setting id="loginmcktv" type="text" label="Mcktv Sports Plus: " enable="false" default=""/>
+  <setting id="loginsportsmania" type="text" label="SportsMania: " enable="false" default=""/>
+  	<setting id="loginsportsnationhd" type="text" label="SportsNationHD: " enable="false" default=""/>
+		<setting id="loginultimatemania" type="text" label="UltimateMania: " enable="false" default=""/>
+  <setting id="logingears" type="text" label="Gears TV: " enable="false" default=""/>
+  <setting id="loginflawless" type="text" label="Flawless IPTV: " enable="false" default=""/>
+  <setting id="loginsportsaccess" type="text" label="SportsAccess: " enable="false" default=""/>
+  <setting id="loginlimitless" type="text" label="Limitless IPTV: " enable="false" default=""/>
+		<setting id="loginotttv" type="text" label="Over The Top TV: " enable="false" default=""/>
+		<setting type="lsep" label="TV Guide:"/>
+		<setting id="loginontapptv" type="text" label="On-Tapp TV Guide: " enable="false" default=""/>
+		<setting id="loginlastsave" type="text" label="Last Time Login Saved: " enable="false" default=""/>
+	</category>
+
+	<category label="Misc Settings">
+		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default=""/>
+		<setting id="adult" type="bool" label="Show Adult Addons: " enable="true" default="true"/>
+		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
+		<setting id="viewType" type="number" label="View Type" default="50" enable="!eq(-1,false)"/>
+		<setting type="lsep" label="Notification Window on Startup:"/>
+		<setting id="notify" type="bool" label="Disable Notification on Startup" />
+		<setting id="noteid" type="text" label="Latest Notification" visible="false" />
+		<setting id="notedismiss" type="bool" label="Dismiss or Remind me later" visible="false" />
+	</category>
+
+	<category label="Logging Settings">
+		<setting type="lsep" label="Event Logging in the Wizard:"/>
+		<setting id="addon_debug" type="bool" label="Enable Addon Debugging: " enable="true" default="true"/>
+		<setting type="lsep" visible="!eq(-1,false)" label="Level 0: No Logging"/>
+		<setting type="lsep" visible="!eq(-2,false)" label="Level 1: Normal Logging"/>
+		<setting type="lsep" visible="!eq(-3,false)" label="Level 2: Full Logging"/>
+		<setting id="debuglevel" type="enum" label="What level would you like the wizard to log?" visible="!eq(-4,false)" enable="!eq(-1,false)" values="Level 0|Level 1|Level 2" default="2"/>
+		<setting id="wizardlog" type="bool" label="Enable Writing to Wizard.Log: " visible="!eq(-5,false)" enable="true" default="true"/>
+		<setting id="autocleanwiz" type="bool" label="Automatically Clean up Wizard.Log: " visible="!eq(-6,false)" enable="!eq(-1,false)" default="true"/>
+		<setting id="wizlogcleanby" type="enum" label="How would you like to clean up the log wizard?" visible="!eq(-1,false)" values="By Days|By Size|By Lines" default="1"/>
+		<setting id="wizlogcleandays" type="enum" label="Keep how many days of wizard.log?" visible="eq(-1,0)+!eq(-2,false)" values="1 Day|2 Days|3 Days|7 Days" default="2"/>
+		<setting id="wizlogcleansize" type="enum" label="Max file size for wizard.log?" visible="eq(-2,1)+!eq(-3,false)" values="100 KB|200 KB|300 KB|400 KB|500 KB|1 MB" default="1"/>
+		<setting id="wizlogcleanlines" type="enum" label="Keep how many lines of wizard.log?" visible="eq(-3,2)+!eq(-4,false)" values="100|200|300|400|500" default="2"/>
+		<setting id="nextcleandate" type="text" label="Next Time Wizard Log Cleaned:" visible="false" default=""/>
+	</category>
+</settings>

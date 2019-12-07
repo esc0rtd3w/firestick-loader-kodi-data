@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="General">
+    <setting id="listen_port" label="30101" type="number" default="50165" />
+  </category>
+  <category label="Zattoo Plugin">
+    <setting id="zattoo_email" label="30102" type="text" default="" />
+    <setting id="zattoo_password" label="30103" type="text" option="hidden" default="" />
+  </category>
+</settings>

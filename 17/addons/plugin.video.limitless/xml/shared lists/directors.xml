@@ -1,0 +1,780 @@
+<xml>
+    <item>
+        <title>[COLOR white](A)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Adam Mckay</title>
+        <tmdb>person/movies/55710</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//pwc6pHC5d3y8NVsphURkKK8y2fL.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Akira Kurosawa</title>
+        <tmdb>person/movies/5026</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//svZ0HBsRMVgN65EemiP3Fo5f5MC.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Alfred Hitchcock</title>
+        <tmdb>person/movies/2636</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//rKYyX58azJv1SZNXQWOJyNyvB9F.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Andrei Tarkovsky</title>
+        <tmdb>person/movies/8452</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//cEfzcvS6ZfSlpdn4SHsxZsVG0a3.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Andrew Stanton</title>
+        <tmdb>person/movies/7</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//pvQWsu0qc8JFQhMVJkTHuexUAa1.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ang Lee</title>
+        <tmdb>person/movies/1614</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uTX0uIBLl3JIQunuAMDRHLorffh.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](B)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Barry Levinson</title>
+        <tmdb>person/movies/8246</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//AvPOBBODhSCtUJAqxeq2s0nYnTw.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ben Affleck</title>
+        <tmdb>list/69970</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//7Zy12dUasr43oF8hyU5iBz5iOpO.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ben Stiller</title>
+        <tmdb>list/69877</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//o9M2PyoF7QDSMq1OwW0D892fIkV.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Bernardo Bertolucci</title>
+        <tmdb>person/movies/4956</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//vu7dxDDRRjytIfGuQxDYj1eJULa.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Billy Wilder</title>
+        <tmdb>person/movies/3146</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//nWV9BDDCbRegP7etiPjl3vYnJEq.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Blake Edwards</title>
+        <tmdb>person/movies/1927</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//tQ13izDBcErAV2qSz9KGjQbV5p9.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Brad Bird</title>
+        <tmdb>person/movies/7087</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2XwJyYs6XNLaQuC1O2gbEHT3jxx.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Brian De Palma</title>
+        <tmdb>person/movies/1150</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//zTbQGFu5udsrX2i7BgmTgB0aJ1E.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Bryan Singer</title>
+        <tmdb>person/movies/9032</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//to8mWJabPoWkphkbYKoutCVSj06.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Buster Katon</title>
+        <tmdb>person/movies/8635</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//8weZnW4cxkbMxtFAtO1NhfTrM9D.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](C)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Carl Theodor Dreyer</title>
+        <tmdb>person/movies/11572</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//6QE1xx1ghtqLTZD06rvPaXypvy6.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Cecil B. Demille</title>
+        <tmdb>person/movies/8636</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//hQHlLlfyKbPGw2dS28JFvGjhXR5.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Charlie Chaplin</title>
+        <tmdb>person/movies/13848</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//pcvSg2LqnyVFel9dPIwTRagpfur.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Chuck Jones</title>
+        <tmdb>person/movies/100888</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//6JpwLPN4ugD5sw5Z0zjPQf6nhh8.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Christopher Nolan</title>
+        <tmdb>person/movies/525</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//7OGmfDF4VHLLgbjxuEwTj3ga0uQ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Clint Eastwood</title>
+        <tmdb>list/65494</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//n8h4ZHteFFXfmzUW6OEaPWanDnm.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](D)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Danny Boyle</title>
+        <tmdb>person/movies/2034</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//b5qQpFHmgNyvV1t81ou17Jt2fRj.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Darren Aronofsky</title>
+        <tmdb>person/movies/6431</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//AtBEqPkWw5txAuMJ5vk4dFhmMrR.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>David Cronenberg</title>
+        <tmdb>person/movies/224</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//nFHIlkIuile5RmtSqbyCB4w8SpH.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>David Fincher</title>
+        <tmdb>person/movies/7467</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dcBHejOsKvzVZVozWJAPzYthb8X.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>David Lean</title>
+        <tmdb>person/movies/12238</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//iUTtDo1gl0Phe342xxoPq2w643R.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>David Lynch</title>
+        <tmdb>person/movies/5602</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//3xMyM3kvPqrIgcFQsHT7hVmIwwf.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Denis Villeneuve</title>
+        <tmdb>person/movies/137427</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//433lXlkdMGXzrpwnKM4Ul1sln15.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Don Siegel</title>
+        <tmdb>person/movies/14773</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//vylrJ53CsYbxECA8c2CDEqkYKge.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](E)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Edgar Wright</title>
+        <tmdb>person/movies/11090</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//912vB9enhaErCSMpJpyWAB4yOOH.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ethan Coen</title>
+        <tmdb>person/movies/1224</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//AH5YwNZC5txyJKyjVZhA4ZXFzP.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](F)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Federico Fellini</title>
+        <tmdb>person/movies/4415</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//iNuDmm889WbZDK4k0qxsjeNnNhV.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Francis Ford Coppola</title>
+        <tmdb>person/movies/1776</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//vEGwqahu7UlI6OwELy92xbXk9Kd.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Frank Capra</title>
+        <tmdb>person/movies/2662</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//hvPrtfKnJs9arck1zKGnG8uRkBC.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Frank Darabont</title>
+        <tmdb>person/movies/4027</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//9KVvZtDyy8DXacw2TTsjC9VLxQi.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Fritz Lang</title>
+        <tmdb>person/movies/68</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//fQAlhdBDnUYXzkezvyzjLB72pvw.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>F.W. Murnau</title>
+        <tmdb>person/movies/9076</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//1b1z38x56Hns01JDVA7DVw5ReGq.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](G)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>George A. Romero</title>
+        <tmdb>person/movies/14999</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//zNP7wdy48eNNJAAmM0pYbSelUAd.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>George Cukor</title>
+        <tmdb>person/movies/14674</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//s6OKrb7REayEl3NHAQVJXvD9KrX.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>George Lucas</title>
+        <tmdb>person/movies/1</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//8qxin8urtFE0NqaZNFWOuV537bH.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>George Miller</title>
+        <tmdb>person/movies/20629</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//4FyQESSzuu1VkPup9CmMjdnUyhv.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>George Roy hill</title>
+        <tmdb>person/movies/9577</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//p2CQkWZo3AXFPQ9gussyEC3BEPh.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Guillermo Del Toro</title>
+        <tmdb>person/movies/10828</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//aBPPwt3jcFw2ridEkKTgchfPaic.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Gus Van Sant</title>
+        <tmdb>person/movies/5216</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//3vLQK7nbmOTBVJrdfrmySCYZFJX.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Guy Ritchie</title>
+        <tmdb>person/movies/956</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uLpiixgcko2W5GLsqBEvSfluyEs.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](H)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Hal Ashby</title>
+        <tmdb>person/movies/4964</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//5VRhD4ZMsTyoAsMmxkNuTg41Sta.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Harold Ramis</title>
+        <tmdb>person/movies/1524</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dFERLL9HGBw9xGMwDQRuhUgAneI.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Hayao Miyazaki</title>
+        <tmdb>person/movies/608</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//1OBQPIwR88n49oAEzk47k0fhhOV.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Howard Hawks</title>
+        <tmdb>person/movies/11435</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//yekSHa7JRzGMg0M7X4HP530GeyV.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](I)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Ingmar Bergman</title>
+        <tmdb>person/movies/6648</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//rHYYP3N2ivz6WTuTHsLX58Gab7G.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ivan Reitman</title>
+        <tmdb>person/movies/8858</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//vYT8xpWCzKZc9F02Oqihxx1GFyg.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](J)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>James Cameron</title>
+        <tmdb>person/movies/2710</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//zy2foCd8PEtvCcsX48cROdQdDLB.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>James Wan</title>
+        <tmdb>person/movies/2127</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//d1LSKfzi5J6QngWS7niN1zPJdud.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>James Whale</title>
+        <tmdb>person/movies/2917</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//xyJ2YCs8eUZoPQ5SUHGadFosEWR.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Jean-Luc Godard</title>
+        <tmdb>person/movies/3776</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//40irqwjSgDaxts68tdV63m4Ls4n.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Jean Renoir</title>
+        <tmdb>person/movies/11528</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//jiMgUC1NWlXjGvfyYHPL3VBpseE.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Jim Jarmusch</title>
+        <tmdb>person/movies/4429</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//kCGt4RCjVyyhusGeKsZp97HAxfQ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>J.J. Abrams</title>
+        <tmdb>person/movies/15344</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uiEVOx3QclxnN76t8PU6v5IcUUP.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Joel Coen</title>
+        <tmdb>person/movies/1223</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//rgVaJNkZCgMarUcZuUAsVfXMWk3.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Carpenter</title>
+        <tmdb>person/movies/11770</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//jGprVNNSmlJzLNhm2tcdmjquLyL.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Cassavetes</title>
+        <tmdb>person/movies/11147</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dvW9LHWNcgvRLqCom5jhx2T3aIG.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Ford</title>
+        <tmdb>person/movies/8500</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dEOu7wZjE9BH4kdADWh9eTM10U.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Frankenheimer</title>
+        <tmdb>person/movies/13776</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//q1TaCOAFmC1KNLHDVZhJhkvTSrr.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Huston</title>
+        <tmdb>person/movies/6593</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//1YV2m0943zGmgQaHHgtFuQhOEKl.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Hughes</title>
+        <tmdb>person/movies/11505</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dFVgYYRY1R0aUCYvfEah00Iwzlt.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Landis</title>
+        <tmdb>person/movies/4610</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//4MVt3MDXZzW2TsiQNvZCGv1ivRx.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Lasseter</title>
+        <tmdb>person/movies/7879</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//7EdqiNbr4FRjIhKHyPPdFfEEEFG.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Sturges</title>
+        <tmdb>person/movies/14520</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//69nD2UYoNGFpDBYUKrEiutWKDgO.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>John Woo</title>
+        <tmdb>person/movies/11401</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//d1ovGZj05qWU1MjVKAePVj7ZMRh.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Jonathan Demme</title>
+        <tmdb>person/movies/16294</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//17dEjoWccPf9NDm43XP44vhSTEd.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Joss Whedon</title>
+        <tmdb>person/movies/12891</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dTiVsuaTVTeGmvkhcyJvKp2A5kr.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Judd Apatow</title>
+        <tmdb>person/movies/41039</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//iXlnv4NvZkmhB7bJBXea5T21gBT.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](K)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Kathryn Bigelow</title>
+        <tmdb>person/movies/14392</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//7wiMnFR6WP9SK870AvNQ3LccLi7.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Kenneth Branagh</title>
+        <tmdb>person/movies/11181</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//bmpGjbqvAVNOK3ggiuET2Jl96tZ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Kevin Smith</title>
+        <tmdb>person/movies/80406</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//l7KogriQez3orpLpq3mPKUB077.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](L)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Lana Wachowski</title>
+        <tmdb>person/movies/9340</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//fxZ7SpJCZ9DgJERWEpGmn5a4mdp.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Lars Von Trier</title>
+        <tmdb>person/movies/42</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//nuPnYmzGuGwFvKF4LBakUehr4Nh.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Lilly Wachowski</title>
+        <tmdb>person/movies/9339</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//qofqjT1drfmB5VNstWqSSfEJOLD.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Luc Besson</title>
+        <tmdb>person/movies/59</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2TzRsqSx0xb1DK3HsEQKSXhRGcu.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](M)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Martin Campbell</title>
+        <tmdb>person/movies/10702</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//qhx0AySf8yH3kiHrinWknUJbr1y.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Martin Scorsese</title>
+        <tmdb>person/movies/1032</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//4Xwx5XL1RJj0JQmEo8Fhr6nkpOg.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Matthew Vaughn</title>
+        <tmdb>person/movies/957</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//Dnbz3B7yy4u0abixuD5LakZgsy.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Mel Brooks</title>
+        <tmdb>person/movies/14639</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//ndFo3LOYNCUghQTK833N1Wtuynr.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Mel Gibson</title>
+        <tmdb>list/65491</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//6VGgL0bBvPIJ9vDOyyGf5nK2zL4.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Michael Curtiz</title>
+        <tmdb>person/movies/4109</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//3rQXKSKx1IV7Lg9LwPaJicQdAkC.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Michael Haneke</title>
+        <tmdb>person/movies/6011</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uRcHQ895xDeeaXoSRPoPgjbLe9L.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Michael Mann</title>
+        <tmdb>person/movies/638</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//nKmUpRpuQIsYubR7vIxVKhkbaTW.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Michelangelo Antonioni</title>
+        <tmdb>person/movies/15189</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//hidC1Wcy0uM9yOy0sHEvvl2vRB6.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Mike Judge</title>
+        <tmdb>person/movies/17403</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2ZNDYQTtOLQPQNad9trtXosYoVP.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Mike Nichols</title>
+        <tmdb>person/movies/5342</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//eJgJEVil7iOJ9sTAXLCVRKfeKKM.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](O)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Oliver Stone</title>
+        <tmdb>person/movies/1152</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uHdNGBkrI74eYfUP2Uie7nuo0Nn.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Orson Welles</title>
+        <tmdb>person/movies/40</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//k7a0gp3HKWT5uBmfirM74vackiV.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Otto Preminger</title>
+        <tmdb>person/movies/834</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//t9eetEzRgKAanGRDCSEF9h3KyTW.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](P)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Paul Thomas Anderson</title>
+        <tmdb>person/movies/4762</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//wKAs2LtLYSUzt3ZZ8pnxMwuEWuR.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Paul Verhoeven</title>
+        <tmdb>person/movies/10491</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//mlIV2V9OYcnmudqv1iZw7QrdSSh.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Peter Weir</title>
+        <tmdb>person/movies/2690</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//bQzmyhBOqCSrnSmCaRmi2T2b4Zf.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Preston Sturges</title>
+        <tmdb>person/movies/30249</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//zCpTn3GcPD6T1gYyYOyIUEEMnjP.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](Q)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Quentin Tarantino</title>
+        <tmdb>person/movies/138</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//9ci4NBvHXJktxjALdJsrtasqgtV.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](R)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Richard Attenborough</title>
+        <tmdb>person/movies/4786</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//Abo8fAcdruACs344ut6PNSKH7N4.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Richard Donner</title>
+        <tmdb>person/movies/7187</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2G0gyLVJzLmRl4W3sFyaVfxppJJ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Richard linklater</title>
+        <tmdb>person/movies/564</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//wNijRefhQCp0BkNqM5qhhdazDgx.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ridley Scott</title>
+        <tmdb>person/movies/578</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//oTAL0z0vsjipCruxXUsDUIieuhk.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Robert Altman</title>
+        <tmdb>person/movies/9789</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//xA6n9OVD5pVrctLtmxwyhtVFcEf.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Robert Redford</title>
+        <tmdb>list/69771</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//bmpGjbqvAVNOK3ggiuET2Jl96tZ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Robert Wise</title>
+        <tmdb>person/movies/1744</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//6EPkRgYsDMQOYmE9s1vZt2O470R.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Robert Zemeckis</title>
+        <tmdb>person/movies/24</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//isCuZ9PWIOyXzdf3ihodXzjIumL.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Rob Reiner</title>
+        <tmdb>person/movies/3026</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2zw9Iq9uo4vZiTQNQWdNFwbA1TA.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Roman Polanski</title>
+        <tmdb>person/movies/3556</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//qI12N0XzSQanAUv6sTucTLWi3az.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Ron Howard</title>
+        <tmdb>person/movies/6159</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//qdtdnNLSsaXZmpwOqXuQB3xU2uL.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](S)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Sam Mendes</title>
+        <tmdb>person/movies/39</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//5z89X9rB76JDblqMQ52fviwXxAN.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sam Peckinpah</title>
+        <tmdb>person/movies/7767</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//lZyAbQbUUumxC2L4YSG9T7q8Let.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sam Raimi</title>
+        <tmdb>person/movies/7623</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uEAaCUJzyMI8N5mOVyLtaOPKoEf.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sergei M. Eisenstein</title>
+        <tmdb>person/movies/9603</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//v3M6T24xd2FEOp8Y262lkc1gsGu.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sergio Leone</title>
+        <tmdb>person/movies/4385</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//AhQ1Y67fCiEzntFbiHb2EAM8DgQ.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sidney Lumet</title>
+        <tmdb>person/movies/39996</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//sOo8jatHC3heDbC2FAOteBXe3z2.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Sofia Coppola</title>
+        <tmdb>person/movies/1769</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//zG1WS4sS5jvYkObHMxsK6fGK7Uk.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Spike Jonze</title>
+        <tmdb>person/movies/5953</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//1gsdqWauZctl7h65N1wg4IKNmhl.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Spike Lee</title>
+        <tmdb>person/movies/5281</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//2LmTDMa6ewhkyP4LDBWFdDYDfUv.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Stanley Kubrick</title>
+        <tmdb>person/movies/240</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//ywoN9gI2lFOA5EAxxyRbQ1R4GQ6.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Steven Soderbergh</title>
+        <tmdb>person/movies/1884</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//dxdMRsAosaGlMRd7EMmm9lrXXsW.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Steven Spielberg</title>
+        <tmdb>person/movies/488</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//pOK15UNaw75Bzj7BQO1ulehbPPm.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](T)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Terrence Malick</title>
+        <tmdb>person/movies/30715</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//4w0C0RaJ3qS6YZ7Ons6VZcEdfl7.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Terry Gilliam</title>
+        <tmdb>person/movies/280</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//cFno5isSPvfPEkSdVoEzOs0pJCh.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Terry Jones</title>
+        <tmdb>person/movies/10707</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//7YaQ0k5BmUU3MmFvDL72tXl2G0B.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Tim Burton</title>
+        <tmdb>person/movies/510</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//yHEHAHQpN9PfSEQx1UxZPczhcAi.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Todd Phillips</title>
+        <tmdb>person/movies/57130</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//427q515P1ppOrJrQmQwxj16zZZ6.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Tony Scott</title>
+        <tmdb>person/movies/893</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//hL7Tt1faZvA68G4bw9hC4X0Zp7d.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](V)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Victor fleming</title>
+        <tmdb>person/movies/9049</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//Lq3Hb5VsmTSIEaYvgfbpK8r8Tk.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Vittorio De Sica</title>
+        <tmdb>person/movies/12329</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//pbgQNb5bRKANI7gJ8etE5kp0bTj.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](W)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Werner Herzog</title>
+        <tmdb>person/movies/6818</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//uzVcWEmasjz1Wl7w5mBF5vmmHlK.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Wes Anderson</title>
+        <tmdb>person/movies/5655</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//s03CeUeC5yAXyB1acqP0zGNo2SC.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Wes Craven</title>
+        <tmdb>person/movies/5140</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//vffssPtgNn2ZwoMfLCCDJAxlXGI.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>William Friedkin</title>
+        <tmdb>person/movies/15175</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//1iBd92izRHpkSH4hOhcUBmF2cv7.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>William Wyler</title>
+        <tmdb>person/movies/10001</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//AvxH2K3FDzui3je0wQZBKN3IUTt.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Wim Wenders</title>
+        <tmdb>person/movies/2303</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//ruRe7v4OaDE0zG6PLbwHDomhVLq.jpg</thumbnail>
+    </dir>
+    <dir>
+        <title>Woody Allen</title>
+        <tmdb>person/movies/1243</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//wpcOUlaszvJoVRf1yLbDtu7u4FI.jpg</thumbnail>
+    </dir>
+    <item>
+        <title>[COLOR white](Y)[/COLOR]</title>
+        <heading></heading>
+    </item>
+    <dir>
+        <title>Yorgos Lanthimos</title>
+        <tmdb>person/movies/122423</tmdb>
+        <thumbnail>https://image.tmdb.org/t/p/w1280//qUjyfVUwX8XFXlhSSJtFXMeXi2X.jpg</thumbnail>
+    </dir>
+</xml>                                                                                           

@@ -1,0 +1,13 @@
+[B]Last Update:[/B] Mar 13, 2019
+
+plugin.video.exodusredux - 2.0.3
+[I]- Added Greek + English provider setting option[/I]
+[I]- Enabled My Lists by default[/I]
+
+
+script.module.exodusredux - 2.0.3
+[I]- Fix Trakt and IMDb lists[/I]
+
+
+[B]Important!![/B] Reset ExodusRedux settings to Defaults if you are experiencing issues.
+If you reset to Defaults, Trakt will need to be re-authorized and IMDb credentials re-entered.

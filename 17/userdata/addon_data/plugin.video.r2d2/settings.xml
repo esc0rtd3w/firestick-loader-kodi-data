@@ -1,0 +1,38 @@
+<settings>
+    <setting id="allow_debrid" value="false" />
+    <setting id="allow_openload" value="false" />
+    <setting id="allow_the_video_me" value="false" />
+    <setting id="allow_vidup_me" value="false" />
+    <setting id="autostart_queue" value="true" />
+    <setting id="cache_folder" value="special://profile/addon_data/plugin.video.r2d2/" />
+    <setting id="current_version" value="0" />
+    <setting id="debug" value="false" />
+    <setting id="default_link" value="BOTH" />
+    <setting id="disable_messages" value="false" />
+    <setting id="disable_metadata_dialog" value="false" />
+    <setting id="disable_service" value="true" />
+    <setting id="dlimage" value="false" />
+    <setting id="enable_gifs" value="false" />
+    <setting id="enable_notification" value="true" />
+    <setting id="enable_offensive" value="false" />
+    <setting id="first_run" value="false" />
+    <setting id="hide_help" value="false" />
+    <setting id="include_watched_queue" value="false" />
+    <setting id="language_id" value="system" />
+    <setting id="lastfm_api_key" value="API KEY GOES HERE" />
+    <setting id="lastfm_secret" value="API KEY GOES HERE" />
+    <setting id="link_fallthrough" value="true" />
+    <setting id="metadata" value="true" />
+    <setting id="movie_metadata_provider" value="Trakt" />
+    <setting id="news_win" value="false" />
+    <setting id="root_xml" value="http://ajbuilds.uk/r2d2/home_r2d2.xml" />
+    <setting id="search_db_location" value="" />
+    <setting id="settings_context" value="true" />
+    <setting id="tmdb_api_key" value="0ffb816d0335449603d0a9461bb34983" />
+    <setting id="trailer_context" value="true" />
+    <setting id="trakt_api_client_id" value="d4e6dc150375365a7a8bfd132c52fcd580bbb0499639ea8c3764cc95afebdba4" />
+    <setting id="trakt_api_client_secret" value="API KEY GOES HERE" />
+    <setting id="tv_metadata_provider" value="Trakt" />
+    <setting id="tvdb_api_key" value="ZRIXQ6E3ZX0TSXTN" />
+    <setting id="use_link_dialog" value="true" />
+</settings>
