@@ -94,7 +94,7 @@
     <setting id="lookandfeel.enablerssfeeds" default="true">false</setting>
     <setting id="lookandfeel.font" default="true">Default</setting>
     <setting id="lookandfeel.rssedit" default="true"></setting>
-    <setting id="lookandfeel.skin" default="true">skin.estuary</setting>
+    <setting id="lookandfeel.skin">skin.confluence</setting>
     <setting id="lookandfeel.skincolors" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.skintheme" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.skinzoom" default="true">0</setting>
@@ -429,7 +429,7 @@
             <level>0</level>
             <showhigherlevels>true</showhigherlevels>
         </eventlog>
-        <systemtotaluptime>0</systemtotaluptime>
+        <systemtotaluptime>11</systemtotaluptime>
     </general>
     <resolutions />
     <defaultvideosettings>

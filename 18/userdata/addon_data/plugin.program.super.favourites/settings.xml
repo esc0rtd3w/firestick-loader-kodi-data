@@ -1,0 +1,60 @@
+<settings version="2">
+    <setting id="ALLOW_PLAYLIST_DELETE" default="true">false</setting>
+    <setting id="ALPHA_SORT" default="true">false</setting>
+    <setting id="ART_BANNER" default="true">0</setting>
+    <setting id="ART_LANDSCAPE" default="true">0</setting>
+    <setting id="ART_POSTER" default="true">0</setting>
+    <setting id="AUTOSTART" default="true">false</setting>
+    <setting id="CACHE" default="true">0</setting>
+    <setting id="CACHERECOMMEND">true</setting>
+    <setting id="CONTENTTYPE" default="true"></setting>
+    <setting id="CONTEXT" default="true">false</setting>
+    <setting id="CONTEXT_STYLE" default="true">0</setting>
+    <setting id="COPY_PLAYLISTS" default="true">false</setting>
+    <setting id="DEBUG" default="true">false</setting>
+    <setting id="DEFAULT_FANART" default="true">0</setting>
+    <setting id="DEFAULT_IMAGE" default="true"></setting>
+    <setting id="DISABLEMOVIEVIEW" default="true">false</setting>
+    <setting id="DISPLAYNAME" default="true"></setting>
+    <setting id="FOLDER" default="true">special://profile/addon_data/plugin.program.super.favourites/</setting>
+    <setting id="HOTKEY" default="true"></setting>
+    <setting id="IMPORT_RESET" default="true">false</setting>
+    <setting id="INHERIT">true</setting>
+    <setting id="LABEL_NUMERIC" default="true">false</setting>
+    <setting id="LOCATION" default="true"></setting>
+    <setting id="MANUAL_ID" default="true">1</setting>
+    <setting id="MENU_ADDON_SETTINGS">true</setting>
+    <setting id="MENU_ADDTOFAVES">true</setting>
+    <setting id="MENU_COPY_PROPS">true</setting>
+    <setting id="MENU_DEF_ISEARCH">true</setting>
+    <setting id="MENU_EDITFAVE" default="true">false</setting>
+    <setting id="MENU_IRECOMMEND">true</setting>
+    <setting id="MENU_ISEARCH">true</setting>
+    <setting id="MENU_MSG">true</setting>
+    <setting id="MENU_PLUGINS">true</setting>
+    <setting id="MENU_QUICKLAUNCH">true</setting>
+    <setting id="MENU_SF_SETTINGS">true</setting>
+    <setting id="MENU_STD_MENU">true</setting>
+    <setting id="MENU_VIEW_IMAGES">true</setting>
+    <setting id="METARECOMMEND">true</setting>
+    <setting id="PLAY_PLAYLISTS">true</setting>
+    <setting id="RECOMMENDFIRST" default="true">false</setting>
+    <setting id="REMOTE" default="true">false</setting>
+    <setting id="SHOW_FANART">true</setting>
+    <setting id="SHOW_STARTUP_TXT" default="true">false</setting>
+    <setting id="SHOWIEXPLORE">true</setting>
+    <setting id="SHOWIMPORT" default="true">false</setting>
+    <setting id="SHOWIPLAY">true</setting>
+    <setting id="SHOWNEW">true</setting>
+    <setting id="SHOWRECOMMEND">true</setting>
+    <setting id="SHOWREMEMBER">true</setting>
+    <setting id="SHOWSEP">true</setting>
+    <setting id="SHOWSS">true</setting>
+    <setting id="SHOWUNAVAIL" default="true">false</setting>
+    <setting id="SHOWXBMC">true</setting>
+    <setting id="STARTUP_TXT" default="true">[COLOR chartreuse][B]Please enter the startup message[CR]you would like to display[/B][/COLOR]</setting>
+    <setting id="STRIPNUMBERS">true</setting>
+    <setting id="SYNOPSRECOMMEND">true</setting>
+    <setting id="VERSION" default="true">0.0.0</setting>
+    <setting id="VIEWTYPE" default="true">0</setting>
+</settings>

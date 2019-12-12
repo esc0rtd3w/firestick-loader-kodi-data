@@ -1,0 +1,7 @@
+<settings version="2">
+    <setting id="apiv2.clientid">TR3KoPDBlGqnt73TMnVO7zK6BzlXd0W0</setting>
+    <setting id="apiv2.locale" default="true">0</setting>
+    <setting id="audio.format">2</setting>
+    <setting id="search.history.size" default="true">10</setting>
+    <setting id="search.items.size" default="true">20</setting>
+</settings>

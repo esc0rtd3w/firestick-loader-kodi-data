@@ -1,0 +1,23 @@
+<settings>
+    <setting id="automusicfullscreen.enabled" type="bool">false</setting>
+    <setting id="globalrss.top" type="bool">false</setting>
+    <setting id="globalrss.bottom" type="bool">false</setting>
+    <setting id="osdmusicalt.enabled" type="bool">false</setting>
+    <setting id="usedbvolume" type="bool">false</setting>
+    <setting id="videoosd.ontop" type="bool">false</setting>
+    <setting id="osd.hideweatherclock" type="bool">false</setting>
+    <setting id="osd.hidechapterinfo" type="bool">false</setting>
+    <setting id="cdart.enabled" type="bool">false</setting>
+    <setting id="autoscroll.disable" type="bool">false</setting>
+    <setting id="osd.hidefilestreampath" type="bool">false</setting>
+    <setting id="kioskmode" type="bool">false</setting>
+    <setting id="backgroundvideo" type="bool">false</setting>
+    <setting id="hidefanart" type="bool">false</setting>
+    <setting id="guide.hideweather" type="bool">false</setting>
+    <setting id="guide.hideclock" type="bool">false</setting>
+    <setting id="guide.hideclockdate" type="bool">false</setting>
+    <setting id="spincontrol.default" type="bool">false</setting>
+    <setting id="GlobalBackdropSingle" type="string"></setting>
+    <setting id="globalbackdropmulti" type="string"></setting>
+    <setting id="GlobalOverlay" type="string"></setting>
+</settings>

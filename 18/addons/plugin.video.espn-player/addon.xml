@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.espn-player"
+       version="1.0.5"
+       name="ESPN Player"
+       provider-name="emilsvennesson">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+    <import addon="script.module.m3u8" version="0.2.10"/>
+    <import addon="script.module.xmltodict" version="0.9.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <description lang="en">Watch content from ESPN Player's NCAA College Pass, IndyCar Series and ESPN Select.</description>
+    <news>2018.08.21 v1.0.5
+    + Fixed for espnplayer changes</news>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <source>https://github.com/emilsvennesson/kodi-espnplayer</source>
+    <forum>http://forum.kodi.tv/showthread.php?tid=291607</forum>
+    <disclaimer>This addon requires you to have a subscription to ESPN Player.[CR]This addon is completely unofficial and is not endorsed by ESPN in any way.</disclaimer>
+  </extension>
+</addon>
