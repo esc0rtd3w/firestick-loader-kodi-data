@@ -20,9 +20,9 @@
     <setting id="hasran" value="false" />
     <setting id="maint_check_folders" value="true" />
     <setting id="newest" value="true" />
-    <setting id="noteImage" value="" />
-    <setting id="noteMessage" value="" />
-    <setting id="noteType" value="" />
+    <setting id="noteImage" value="345" />
+    <setting id="noteMessage" value="Want to [B]get more[/B] out of Kodi? How about [B]more&#x0A;working streams[/B] in your favorite Kodi addons?&#x0A;&#x0A;Subscribe to VPN service for [B]only $3.49/month[/B]&#x0A;today, and get [B]3 months free[/B]!&#x0A;&#x0A;This service protects [B]6 devices[/B] at a time, and&#x0A;will also guarantee [B]your privacy[/B] online by&#x0A;[B]hiding your IP address[/B] and location.&#x0A;&#x0A;[B][COLOR yellow]3 Months Free:[/COLOR][/B] [B][COLOR lime]https://www.tvaddons.co/vpn[/COLOR][/B]" />
+    <setting id="noteType" value="t" />
     <setting id="notifications-on-startup" value="false" />
     <setting id="notify" value="1" />
     <setting id="packagesmb" value="0" />

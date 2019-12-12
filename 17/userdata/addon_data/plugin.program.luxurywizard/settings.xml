@@ -81,10 +81,10 @@
     <setting id="loginvaders" value="" />
     <setting id="metalk" value="" />
     <setting id="neptune" value="" />
-    <setting id="nextautocleanup" value="2019-11-25" />
-    <setting id="nextcleandate" value="2019-11-26" />
+    <setting id="nextautocleanup" value="2019-12-11" />
+    <setting id="nextcleandate" value="2019-12-12" />
     <setting id="notedismiss" value="true" />
-    <setting id="noteid" value="136" />
+    <setting id="noteid" value="139" />
     <setting id="numers" value="" />
     <setting id="oldlog" value="false" />
     <setting id="path" value="" />
