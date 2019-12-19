@@ -1,0 +1,8 @@
+version 1.1:
+	fix search album english
+	fix backgrounds in menus
+	fix autoplay on playlists
+	add 99fm radio
+
+version 1.0:
+	initial addon

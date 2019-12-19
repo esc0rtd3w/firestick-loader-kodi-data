@@ -1,0 +1,11 @@
+[2019-12-19 02:01:23] Ignore Log File: kodi.log
+[2019-12-19 01:49:22] Ignore Log File: kodi.log
+[2019-12-19 01:48:36] [AUTO CLEAN UP][Packages: on]
+[2019-12-19 01:48:24] [COLOR red][Success]  3 Files Removed From /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/archive_cache [/COLOR]
+[2019-12-19 01:48:24] [COLOR red][Success]  3 Files Removed From /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/temp/temp [/COLOR]
+[2019-12-19 01:48:24] Ignore Log File: kodi.log
+[2019-12-19 01:48:23] [COLOR red][Success] Wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/cache [/COLOR]
+[2019-12-19 01:48:23] [COLOR red][Success] Wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/cache [/COLOR]
+[2019-12-19 01:48:23] [COLOR red][Success] Wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/cache [/COLOR]
+[2019-12-19 01:48:23] [COLOR red][Success] Wiped /storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/script.module.simplecache [/COLOR]
+[2019-12-19 01:48:22] [AUTO CLEAN UP][Cache: on]

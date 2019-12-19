@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30201">
+		<setting label="30102" type="text" id="blacklist" default=""/>
+		<setting type="sep"/>
+		<setting label="30231" type="lsep"/>
+		<setting label="30103" type="folder" id="cacheDir" default=""/>
+		<setting label="30104" type="slider" id="cacheLong" default="1" range="1,1,21" option="int"/>
+		<setting type="sep"/>
+		<setting label="30232" type="lsep"/>
+		<setting label="30105" type="bool" id="showInfo" default="true"/>
+		<setting label="30106" type="enum" id="infoType" enable="eq(-1,true)" values="VideoOSD|Notification" default="1"/>
+		<setting label="30107" type="number" id="infoDelay" enable="eq(-2,true)" default="12"/>
+		<setting label="30108" type="number" id="infoDuration" enable="eq(-3,true)" default="12"/>
+		<setting type="sep"/>
+		<setting label="30233" type="lsep"/>
+		<setting label="30109" type="bool" id="useThumbAsFanart" default="true"/>
+	</category>
+	<category label="30202">
+		<setting label="30234" type="lsep"/>
+		<setting label="30140" type="labelenum" id="deezerSearch_count" values="30|40|50|60|80|100" default="50"/>
+		<setting label="30141" type="labelenum" id="deezerVideos_count" values="30|40|50|60|80|100" default="50"/>
+		<setting label="30235" type="lsep"/>
+		<setting label="30236" type="text" option="readable"/>
+	</category>
+	<category label="30203">
+		<setting label="30238" type="lsep"/>
+		<setting label="30111" type="bool" id="itunesShowSubGenres" default="true"/>
+		<setting label="30112" type="bool" id="itunesForceCountry" default="false"/>
+		<setting label="30113" type="text" id="itunesCountry" enable="eq(-1,true)" default=""/>
+		<setting type="sep"/>
+		<setting label="30239" type="lsep"/>
+		<setting label="30114" type="bool" id="spotifyForceCountry" default="false"/>
+		<setting label="30115" type="text" id="spotifyCountry" enable="eq(-1,true)" default=""/>
+	</category>
+	<category label="30204">
+		<setting label="30240" type="lsep"/>
+		<setting label="30116" type="bool" id="forceView" default="false"/>
+		<setting label="30117" type="number" id="viewIDGenres" enable="eq(-1,true)" default="500"/>
+		<setting label="30118" type="number" id="viewIDPlaylists" enable="eq(-2,true)" default="500"/>
+		<setting label="30119" type="number" id="viewIDVideos" enable="eq(-3,true)" default="500"/>
+	</category>
+</settings>

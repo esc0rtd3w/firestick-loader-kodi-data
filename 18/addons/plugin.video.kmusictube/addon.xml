@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.kmusictube"
+       name="KMusic Tube"
+       version="1.1"
+       provider-name="deran">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.t0mm0.common" version="2.1.1"/>        
+        <import addon="script.module.requests" version="1.1.0"/>
+		<import addon="plugin.video.youtube" optional="true" />
+    </requires>
+	
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video audio</provides>
+    </extension>
+	
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>The ultimate mash-up between MP3Streams and YouTube music addons with a Israeli twist.</summary>
+        <description>Browse and streams an endless music library via YouTube. Manage favourites artists, albums and songs.</description>
+    </extension>
+	
+</addon>

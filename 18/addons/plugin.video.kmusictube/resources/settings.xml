@@ -1,0 +1,29 @@
+<settings>
+    <category label="30201">
+        <setting id="blacklist" type="text" label="30102" default=""/>
+        <setting id="showInfo" type="bool" label="30103" default="true"/>
+        <setting id="infoType" type="enum" label="30104" enable="eq(-1,true)" values="InfoView|Notification" default="1"/>
+        <setting id="infoDelay" type="number" label="30105" enable="eq(-2,true)" default="5"/>
+        <setting id="infoDuration" type="number" label="30106" enable="eq(-3,true)" default="5"/>
+        <setting id="cacheDir" type="folder" label="30111" default="special://profile/addon_data/plugin.video.kmusictube/cache"/>
+    </category>
+    <category label="30202">
+        <setting id="itunesShowSubGenres" type="bool" label="30112" default="true"/>
+        <setting id="itunesForceCountry" type="bool" label="30113" default="false"/>
+        <setting id="itunesCountry" type="text" label="30114" enable="eq(-1,true)" default=""/>
+    </category>
+    <category label="30203">
+        <setting id="spotifyForceCountry" type="bool" label="30115" default="false"/>
+        <setting id="spotifyCountry" type="text" label="30116" enable="eq(-1,true)" default=""/>
+    </category>
+    <category label="30204">
+        <setting id="forceView" type="bool" label="30107" default="true"/>
+        <setting id="viewIDVideos" enable="eq(-1,true)" type="number" label="30108" default="500"/>
+        <setting id="viewIDPlaylists" enable="eq(-2,true)" type="number" label="30109" default="500"/>
+        <setting id="viewIDGenres" enable="eq(-3,true)" type="number" label="30110" default="500"/>
+    </category>
+	<category label="Favourites settings">
+		<setting id="custom_directory" type="bool" label="10000" default="false" />
+        <setting id="music_dir" type="folder" label="10001" default="set" enable="!eq(-1,false)"/>
+	</category>
+</settings>

@@ -1,0 +1,159 @@
+<strings>
+	<!-- Settings -->
+	<string id="10007">Use alternative Gotham playing method (pre-cache)</string>
+	<string id="10008">Amount to pre-cache</string>
+	<string id="10010">Keep all downloaded tracks</string>
+	<string id="10000">Custom Music Directory</string>
+	<string id="10001">Music Directory</string>
+	<string id="10009">Artist/Album Folder Structure</string>
+	<string id="10002">Queue songs on selection</string>
+	<string id="10003">Queue albums on selection</string>
+	<string id="10004">Select XBMC Player</string>
+	<string id="10005">Use alternate source (disabled if pre-cache enabled)</string>
+	<string id="10006">Hide fanart when playing</string>
+
+	<string id="30001">Next Page</string>
+	<string id="30002">Billboard Charts</string>
+	<string id="30004">Add to queue</string>
+	<string id="30005">Hot 100</string>
+	<string id="30006">Genres</string>
+	<string id="30007">Countries</string>
+	<string id="30008">Other</string>
+	<string id="30009">Pop</string>
+	<string id="30010">Rock</string>
+	<string id="30011">Alternative</string>
+	<string id="30012">R&B/Hip-Hop</string>
+	<string id="30013">R&B</string>
+	<string id="30014">Rap</string>
+	<string id="30015">Country</string>
+	<string id="30016">Latin</string>
+	<string id="30017">Smooth Jazz</string>
+	<string id="30018">Dance/Club</string>
+	<string id="30019">Dance/Electronic</string>
+	<string id="30020">Breaking and Entering</string>
+	<string id="30021">Canada Hot50</string>
+	<string id="30022">K-Pop Hot50</string>
+	<string id="30023">Japan Hot50</string>
+	<string id="30024">Germany</string>
+	<string id="30025">France</string>
+	<string id="30026">U.K.</string>
+	<string id="30027">Uncharted</string>
+	<string id="30028">Radio</string>
+	<string id="30029">Digital</string>
+	<string id="30030">Streaming</string>
+	<string id="30031">On-Demand</string>
+	<string id="30040">Spotify</string>
+	<string id="30041">Toplists</string>
+	<string id="30042">Featured</string>
+	<string id="30043">iTunes Charts</string>
+	<string id="30044">Spotify Playlists</string>
+	<string id="30101">Region</string>
+	<string id="30102">Blacklist filter (seperated by ',')</string>
+	<string id="30103">Show info on video playback</string>
+	<string id="30104">Type</string>
+	<string id="30105">Delay in seconds</string>
+	<string id="30106">Duration in seconds</string>
+	<string id="30107">Force View</string>
+	<string id="30108">ViewID (Videos)</string>
+	<string id="30109">ViewID (Playlists)</string>
+	<string id="30110">ViewID (Genres)</string>
+	<string id="30111">Cache Directory</string>
+	<string id="30112">iTunes: Show subgenres</string>
+	<string id="30113">iTunes: Force region</string>
+	<string id="30114">iTunes: Region ('us' for example)</string>
+	<string id="30115">Spotify: Force region</string>
+	<string id="30116">Spotify: Region ('us' for example)</string>
+	<string id="30201">General</string>
+	<string id="30202">iTunes</string>
+	<string id="30203">Spotify</string>
+	<string id="30204">Views</string>
+	
+	<string id="40000">Israeli Music</string>
+	<string id="40001">All Music</string>
+	<string id="40002">Charts and Websites</string>
+	<string id="40003">Youtube Playlists Search</string>
+	<string id="40004">Favourites</string>
+	
+	<string id="40010">Artists</string>
+	<string id="40011">Songs</string>
+	<string id="40012">Youtube Playlists</string>
+	<string id="40013">Mix Favourite Albums</string>
+	<string id="40014">Mix Favourite Songs</string>
+	<string id="40015">Clean Favourites</string>
+	<string id="40016">Albums</string>
+	
+	<string id="40020">Artists</string>
+	<string id="40021">Popular Albums</string>
+	<string id="40022">New Albums</string>
+	<string id="40023">Compliations</string>
+	<string id="40024">Search</string>
+	
+	<string id="40030">Billboard</string>
+	<string id="40031">Hype Machine</string>
+	<string id="40032">Itunes</string>
+	<string id="40033">Spotify</string>
+	<string id="40034">Galgalatz</string>
+	<string id="40035">1FM</string>
+	<string id="40036">DiSi</string>	
+	
+	<string id="40040">Search Artist</string>
+	<string id="40041">Search Album</string>
+	<string id="40042">Search Song</string>	
+	
+	<string id="40050">All Songs</string>	
+	<string id="40051">All Artists</string>	
+	<string id="40052">Top Artists</string>	
+	<string id="40053">Next Page>>></string>	
+	
+	<string id="40060">Hot Albums</string>	
+	<string id="40061">New Albums</string>	
+	<string id="40062">Top Albums</string>	
+	
+	<string id="40070">Best Compilations</string>	
+	<string id="40071">New Compilations</string>	
+	<string id="40072">Top hits</string>	
+	<string id="40073">Club Hits</string>	
+	<string id="40074">Chillout Hits</string>	
+	<string id="40075">Chillout Hits</string>	
+	<string id="40076">Covers and Tributes</string>	
+	<string id="40077">Events</string>	
+	
+	<string id="40080">Popular: Now</string>	
+	<string id="40081">Popular: Last Week</string>	
+	<string id="40082">Time Machine</string>	
+	
+	<string id="40090">Play Radio</string>	
+	
+	<string id="400100">Playlist</string>	
+	<string id="400101">Recently Played</string>	
+	<string id="400102">Live Radio</string>	
+	
+	<string id="400200">Play All</string>	
+	<string id="400201">Play Top 10</string>	
+	<string id="400202">Play Top 20</string>	
+	<string id="400203">Play Top 30</string>	
+	<string id="400204">Play Top 40</string>	
+	<string id="400205">Play Top 50</string>	
+	
+	<string id="400300">Clean Favourite Artists</string>	
+	<string id="400301">Clean Favourite Albums</string>	
+	<string id="400302">Clean Favourite Songs</string>
+	<string id="400303">Clean Favourite Youtube Playlists</string>		
+	
+	<string id="400400">Favourite File Is Empty</string>	
+	<string id="400401">Removed From Favourites </string>	
+	<string id="400402">Added To favourites</string>	
+	<string id="400403">Number of Songs In Playlist </string>	
+	<string id="400404">Select Group</string>	
+	<string id="400405">Add New Group</string>	
+	<string id="400406">All</string>	
+	<string id="400407">Add To Favourite Artists</string>	
+	<string id="400408">Remove From Favourite Artists</string>	
+	<string id="400409">Add To Favourite Albums</string>	
+	<string id="400410">Remove From Favourite Albums</string>	
+	<string id="400411">Play Album - Shuffle</string>	
+	<string id="400412">Add To Favourite Songs</string>	
+	<string id="400413">Remove From Favourite Songs</string>	
+	<string id="400414">Create New Group</string>	
+		
+</strings>

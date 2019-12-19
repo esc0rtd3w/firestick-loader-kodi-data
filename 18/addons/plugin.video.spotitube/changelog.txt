@@ -1,0 +1,116 @@
+﻿1.0.0
+- Initial release
+
+1.0.1
+- Changed default folder icon
+
+1.0.2
+- Changed name to "Youtube Music"
+- Removed info when not using Autoplay mode
+- Added support for iTunes Charts
+- Added support for Billboard
+
+1.0.3
+- Fixed setting: "iTunes: Force region"
+- Changed iTunes Charts listing (xml->json)
+- Added support for Official Charts Company (UK)
+- Added support for Beatport
+
+1.0.4
+- Billboard: small encoding bugfix
+
+1.0.5
+- Added support for Hype Machine
+- Added setting to select youtube addon
+
+1.0.6 by skatulskijean
+- Fix Youtube Video_ID access
+- Fix officialcharts.com regex
+- Remove officialcharts.com Catalogue and Scottish since no more aviable
+
+1.0.7 by skatulskijean
+- Fix Beatport (regex)
+- Fix Hype Machine
+
+1.0.8 by L0RE
+- Fix for Empty Playlists
+
+1.0.9 / 1.0.10 ???
+
+[B]Version 2.0.1  (12.12.2016)[/B] by realvito
+- Changed many codes and cleanup the script
+- added: More German-Translations
+- added: Icons for the sources in Mainmenu
+- added: More sources from Official Charts Company/removed: old sources
+- added: Settings in days for automatic CACHE-File deleting
+- fixed: Playing Videos via Youtube
+- fixed: Beatport-Playlists
+- fixed: Hypem-Title and Hypem-Images
+- fixed: Spotify-Genres and Spotify-Playlist-Images
+- fixed: showing more TitleImages from the sources and also better quality
+- removed: old Youtube-Addon settings, because there are no different versions furthermore
+- Tested on Win 8.1/64 bit Kodi-KRYPTON 17beta6, installed "plugin.video.youtube" Version 5.3.6 and "script.module.requests" Version 2.9.1
+
+[B]Version 2.0.2  (18.12.2016)[/B] by realvito
+- VideoLinks werden schneller geöffnet - URL-Abfrage hakt nicht mehr
+- Bei Problemen mit Kodi-JARVIS 16 bitte README.md beachten !
+
+[B]Version 2.0.3  (04.03.2017)[/B] by realvito
+- fixed: Beatport not showing Genres
+- fixed: Billboard-Archive-Videos take a long time to load
+- fixed: Showing duplicate Title-Entrys in Billboard-Archive-Videos / if Title and Artist have the same Entry, they are not shown since now
+- removed: Weblink "k-pop-hot-100" in Billboard-Genres (because of no results) + added: Entry "tropical" and "soundtracks"
+- fixed: Showing duplicate Title-Entrys in iTunes-Videos
+- fixed: Spotify-Playlist-Images
+- added: Spotify-Search for: Artists, Songs, Albums + Settings for: Spotify-Search (many Users require it)
+
+- comment: If the Spotify-Search does not show as much results as was selected in the settings, then duplicate entries were filtered out !!!
+
+- added: Videos without "Audio" or "audio" in the YOUTUBE-description are preferred for playback
+- fixed: Notification (VideoOSD) for TitleInfo does not automatically close on some Systems
+- fixed: Cache-Links for Youtube queries shortened because of problems with character limit > 255 on some Windows operating systems
+- Many other light Changes
+
+[B]Version 2.0.4 + 2.0.5  (26.04.2017)[/B] by realvito
+- changed: Billboard - represent information from RSS-Feeds to represent information of the HTML-Page *
+- *(Because often errors appear in the RSS-Feeds of Billboard)
+- fixed: Spotify-Genres and Spotify-Playlists are NOT opened and errors are displayed *
+- *(urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:590))
+- added: Spotify-Search for: Playlists - not public (on special request !)
+- quickfix: typing error in the script
+
+[B]Version 2.0.6  (12.08.2017)[/B] by realvito
+- changed: Beatport - show Subgenres and Title-ReleaseDates
+- fixed: Billboard - not showing "New in the last 24 hours"
+- fixed: Billboard - text errors in "Billboard-Archive-Videos"
+- fixed: Hypem - show HIDDEN Video-Images (not the colored ones)
+- removed: complete Spotify-Search (because a diffcult LOGIN is required since 29.05.17 and their policies don't allow the distribution of specialcodes)
+- added: Deezer-Search for: Artists, Songs, Albums, Playlists, User + Settings for: Deezer-Search (not as good as Spotify, but interesting)
+
+[B]Version 2.0.7  (10.09.2017)[/B] by realvito
+- fixed: Billboard - Categories are not opened and error is displayed
+- removed: Billboard Entry -  "Top 140 Trending", "New in the last 24 hours", "TOP on Twitter" since no more available
+- added: Billboard Entry - "Billboard 200" and "TOP on Youtube"
+
+[B]Version 2.0.8  (27.10.2017)[/B] by realvito
+- fixed: Billboard - a few Links were changed
+- fixed: Billboard - text errors and some folders are empty in "Billboard-Archive-Videos"
+- fixed: Hypem - all clicked folders are empty
+- * Hypem - NO Video-Images at the time/because they were removed completely *
+- changed: Deezer-Search - apiURL and increase Searchlimit to "100" in settings
+
+[B]Version 2.0.9  (25.02.2018)[/B] by realvito
+- fixed: Beatport - text errors in genres and Video-Images are not displayed
+- removed: Beatport - subgenres, since no more available
+- fixed: Billboard-Archive because of webpage changes
+- added: German-DJ-Playlist (on special request !)
+- fixed: Hypem - "Popular: Last Week" and "Time-Machine" listing (html > json)
+- added: "https://spotifycharts.com" under "SPOTIFY - International" with *VIRAL top 50* and *TOP Streams* of many countries
+- changed: new Addon-fanart.jpg
+
+[B]Version 2.1.0  (18.05.2018)[/B] by realvito
+- fixed: German-DJ-Playlist - Video-Images are not displayed
+
+[B]Version 2.1.1  (18.06.2018)[/B] by realvito
+- fixed: Videolists under "SPOTIFY - Regional" are emty (Website changes)
+- removed: Regional in German-DJ-Playlist International (don't exist anymore)

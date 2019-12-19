@@ -1,0 +1,11 @@
+0.8.8
+updated
+
+0.8.7
+updated with fix from gnekoz
+
+0.8.6
+Updated with art by jokster
+
+0.8.5
+First release

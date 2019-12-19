@@ -33,12 +33,21 @@
 		<action>ActivateWindow(Settings)</action>
 	</shortcut>
 	<shortcut>
+		<defaultID />
+		<label>Maintenance</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Programs,"plugin://resource.skidmaintenance/?url=maintenance&amp;mode=1&amp;name=Run+Maintenance+Now&amp;iconimage=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ficon.png&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ffanart.jpg&amp;description=",return)</action>
+	</shortcut>
+	<shortcut>
 		<defaultID>20077</defaultID>
 		<label>20077</label>
 		<label2 />
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(SkinSettings)</action>
+		<disabled>True</disabled>
 	</shortcut>
 	<shortcut>
 		<defaultID>130</defaultID>

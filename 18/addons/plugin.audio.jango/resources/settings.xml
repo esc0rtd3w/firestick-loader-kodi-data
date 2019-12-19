@@ -1,0 +1,7 @@
+<settings>
+	<category label="Settings">
+        <setting id="jango_account" type="bool" label="10001" default="false" />
+        <setting id="username" type="text" label="10002" default=""  enable="eq(-1,true)"/>
+        <setting id="password" type="text" label="10003" default=""  enable="eq(-2,true)"/>
+	</category>
+</settings>

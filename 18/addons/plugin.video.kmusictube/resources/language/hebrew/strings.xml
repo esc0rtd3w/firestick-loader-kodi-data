@@ -1,0 +1,151 @@
+<strings>
+	<!-- Settings -->		
+	<string id="10000">שינוי מיקום ספריית מוסיקה</string>
+	<string id="10001">ספריית מוסיקה</string>		
+
+	<string id="30001">דף הבא</string>
+	<string id="30002">מצעדי בילבורד</string>
+	<string id="30004">הוסף לתור</string>
+	<string id="30005">100 החמים</string>
+	<string id="30006">ז'אנרים</string>
+	<string id="30007">ארצות</string>
+	<string id="30008">אחר</string>
+	<string id="30009">פופ</string>
+	<string id="30010">רוק</string>
+	<string id="30011">אלטרנטיבי</string>
+	<string id="30012">היפ הופ</string>
+	<string id="30013">אר אנד בי</string>
+	<string id="30014">ראפ</string>
+	<string id="30015">קאנטרי</string>
+	<string id="30016">לאטיני</string>
+	<string id="30017">ג'אז</string>
+	<string id="30018">דאנס מועדונים</string>
+	<string id="30019">דאנס אלקטרוני</string>
+	<string id="30020">Breaking and Entering</string>
+	<string id="30021">קנדה טופ 50</string>
+	<string id="30022">קיי-פופ טופ 50</string>
+	<string id="30023">יפן טופ 50</string>
+	<string id="30024">גרמניה</string>
+	<string id="30025">צרפת</string>
+	<string id="30026">בריטניה</string>
+	<string id="30027">לא מדורג</string>
+	<string id="30028">רדיו</string>
+	<string id="30029">דיגיטאלי</string>
+	<string id="30030">סטרימינג</string>
+	<string id="30031">לפי בקשה</string>
+	<string id="30040">ספוטיפיי</string>
+	<string id="30041">רשימות חמות</string>
+	<string id="30042">Featured</string>
+	<string id="30043">מצעדי אייטיונס</string>
+	<string id="30044">רשימות השמעה ספוטיפיי</string>
+	<string id="30101">אזור</string>
+	<string id="30102">רשימה שחורה (הפרדה ע"י ,)</string>
+	<string id="30103">הראה מדיע בזמן ניגון</string>
+	<string id="30104">סוג</string>
+	<string id="30105">השהייה בשניות</string>
+	<string id="30106">זמן בשניות</string>
+	<string id="30107">הכרח תצוגה</string>
+	<string id="30108">אינדקס תצוגה (וידאו)</string>
+	<string id="30109">אינדקס תצוגה (רשימות השמעה)</string>
+	<string id="30110">אינדקס תצוגה (ז'אנרים)</string>
+	<string id="30111">Cache Directory</string>
+	<string id="30112">אייטיונס: הצג תת ז'אנרים</string>
+	<string id="30113">אייטיונס: הכרח איזור</string>
+	<string id="30114">אייטיונס: אזור (לדוגמא 'us')</string>
+	<string id="30115">ספוטיפיי: הכרח איזור</string>
+	<string id="30116">ספוטיפיי: איזור (לדוגמא 'us')</string>
+	<string id="30201">כללי</string>
+	<string id="30202">אייטיונס</string>
+	<string id="30203">ספוטיפיי</string>
+	<string id="30204">תצוגות</string>
+	
+	<string id="40000">מוזיקה ישראלית</string>
+	<string id="40001">מוזיקה לועזית</string>
+	<string id="40002">מצעדים ואתרים</string>
+	<string id="40003">חיפוש רשימות השמעה ביוטיוב</string>
+	<string id="40004">מועדפים</string>
+	
+	<string id="40010">אמנים</string>	
+	<string id="40011">שירים</string>
+	<string id="40012">רשימות השמעה מיוטיוב</string>
+	<string id="40013">מיקס אלבומים מועדפים</string>
+	<string id="40014">מיקס שירים מועדפים</string>
+	<string id="40015">ניקוי מועדפים</string>
+	<string id="40016">אלבומים</string>
+	
+	<string id="40020">אמנים</string>
+	<string id="40021">אלבומים פופולארים</string>
+	<string id="40022">אלבומים חדשים</string>
+	<string id="40023">אוספים</string>
+	<string id="40024">חיפוש</string>
+	
+	<string id="40030">בילבורד</string>
+	<string id="40031">Hype Machine</string>
+	<string id="40032">אייטיונס</string>
+	<string id="40033">ספוטיפיי</string>
+	<string id="40034">גלגל"צ</string>
+	<string id="40035">1FM</string>
+	<string id="40036">דיסי</string>	
+	
+	<string id="40040">חיפוש אמן</string>
+	<string id="40041">חיפוש אלבום</string>
+	<string id="40042">חיפוש שיר</string>	
+	
+	<string id="40050">כל השירים</string>	
+	<string id="40051">כל האמנים</string>	
+	<string id="40052">אמנים מובילים</string>	
+	<string id="40053">דף הבא >>></string>	
+	
+	<string id="40060">הכי חמים</string>	
+	<string id="40061">אלבומים חדשים</string>	
+	<string id="40062">אלבומים מובילים</string>	
+	
+	<string id="40070">האוספים הכי טובים</string>	
+	<string id="40071">אוספים חדשים</string>	
+	<string id="40072">להיטים חזקים</string>	
+	<string id="40073">להיטי מועדונים</string>	
+	<string id="40074">להיטי צ'ילאאוט</string>	
+	<string id="40075">להיטי צ'ילאאוט</string>	
+	<string id="40076">חידושים</string>	
+	<string id="40077">אירועים</string>	
+	
+	<string id="40080">פופולארי: עכשיו</string>	
+	<string id="40081">פופולארי: שבוע שעבר</string>	
+	<string id="40082">מכונת זמן</string>	
+	
+	<string id="40090">נגן רדיו</string>	
+	
+	<string id="400100">פלייליסט</string>	
+	<string id="400101">נוגן לאחרונה</string>	
+	<string id="400102">שידור חי</string>	
+	
+	<string id="400200">נגן הכל</string>	
+	<string id="400201">נגן 10 הגדולים</string>	
+	<string id="400202">נגן 20 הגדולים</string>	
+	<string id="400203">נגן 30 הגדולים</string>	
+	<string id="400204">נגן 40 הגדולים</string>	
+	<string id="400205">נגן 50 הגדולים</string>	
+	
+	<string id="400300">ניקוי אמנים</string>	
+	<string id="400301">ניקוי אלבומים</string>	
+	<string id="400302">ניקוי שירים</string>
+	<string id="400303">ניקוי רשימות יוטיוב</string>		
+	
+	<string id="400400">קובץ מועדפים ריק</string>	
+	<string id="400401">הוסר מהמועדפים </string>	
+	<string id="400402">הוסף למועדפים</string>	
+	<string id="400403">כמות שירים ברשימת הניגון </string>	
+	<string id="400404">בחר קבוצה</string>	
+	<string id="400405">הוסף קבוצה חדשה</string>	
+	<string id="400406">הכל</string>	
+	<string id="400407">הוסף לאמנים מועדפים</string>	
+	<string id="400408">הסר מאמנים מועדפים</string>	
+	<string id="400409">הוסף לאלבומים מועדפים</string>	
+	<string id="400410">הסר מאלבומים מועדפים</string>	
+	<string id="400411">נגן אלבום שלם - מעורבב</string>	
+	<string id="400412">הוסף לשירים מועדפים</string>	
+	<string id="400413">הסר משירים מועדפים</string>	
+	<string id="400414">צור קבוצה חדשה</string>		
+	
+		
+</strings>

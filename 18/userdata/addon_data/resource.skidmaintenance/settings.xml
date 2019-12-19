@@ -1,0 +1,5 @@
+<settings version="2">
+    <setting id="autoclean">true</setting>
+    <setting id="clearcache">false</setting>
+    <setting id="clearpackages">true</setting>
+</settings>
