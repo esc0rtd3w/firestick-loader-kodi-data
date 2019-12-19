@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.oauth.helper"
+       name="OAuth Helper"
+       version="0.0.9"
+       provider-name="Rick Phillips (ruuk)">
+  <requires>
+    <import addon="xbmc.python" version="2.14.0"/>
+	<import addon="script.module.requests" version="2.3.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Provides simple google device OAuth handling and generic device OAuth via my server</summary>
+    <description lang="en">This module provides simple OAuth handling. The module handles all user interaction.
+
+PicasaWeb example:
+
+helper = OAuthHelper.GoogleOAuthorizer.(
+    addon_id='plugin.image.picasa',
+    client_id='blahblah342980723405.apps.googleusercontent.com',
+    client_secret='2349057829034572',
+    auth_scope='https://picasaweb.google.com/data/'
+)
+
+token = helper.getToken()
+
+If you want to use the generic handling, contact me.
+    </description>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <source>https://github.com/ruuk/script.module.oauth.helper</source>
+  </extension>
+</addon>

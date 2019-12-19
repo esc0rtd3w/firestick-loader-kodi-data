@@ -99,4 +99,4 @@ One limitation of it, though, is that it can't manage multiple skin strings comb
 
 It's also worth noting that only menu items - not the additional properties associated with the menu items - are shared between skins. This means it is totally safe to use localised strings for backgrounds, widgets, custom properties and so forth.
 
-***Quick links*** - [Readme](../../README.md) - [Getting Started](./started/Getting Started.md) - [Advanced Usage](./advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

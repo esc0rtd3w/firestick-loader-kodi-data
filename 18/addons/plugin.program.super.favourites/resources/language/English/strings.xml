@@ -2,6 +2,7 @@
 <strings>
 	<string id="30000">Super Favourites</string>
 	<string id="30001">Super Favourite</string>
+	<string id="30002">Super Favourites Menu</string>
 	<string id="30004">Create new Super Folder</string>
 	<string id="30005">Super Favourite settings</string>
 	<string id="30006">Add to %s favourites</string>
@@ -61,10 +62,10 @@
 	<string id="30063">Show iRecommend menu item</string>		
 	<string id="30064">Show fanart</string>
 	<string id="30065">          Show in root folder only</string>
-    <string id="30066">[B]iSearch - %s[/B] [I](Click to edit search term)[/I]</string>
+	<string id="30066">[B]iSearch - %s[/B] [I](Click to edit search term)[/I]</string>
 	<string id="30067">Edit Super Folder</string>
 	<string id="30068">Edit Super Favourite</string>
-	<string id="30069">Enter password to temporarily unlock %s</string>
+	<string id="30069">Enter password to temporarily unlock folder</string>
 	<string id="30070">General</string>
 	<string id="30071">Cache locked folder passwords for</string>	
 	<string id="30072">Never</string>	
@@ -73,10 +74,10 @@
 	<string id="30075">15 minutes</string>	
 	<string id="30076">Lock Super Folder</string>	
 	<string id="30077">Remove lock</string>	
-	<string id="30078">Enter the password to the remove lock from %s</string>	
-	<string id="30079">Enter the password you wish to use to lock %s</string>	
-	<string id="30080">Sorry the password entered was incorrect.</string>	
-	<string id="30081">Super Folder lock has been permanently removed.</string>	
+	<string id="30078">Enter the password to the remove lock</string>	
+	<string id="30079">Enter the password you wish to use to lock folder</string>	
+	<string id="30080">Sorry the password entered was incorrect</string>	
+	<string id="30081">Super Folder lock has been permanently removed</string>	
 	<string id="30082">Advanced</string>	
 	<string id="30083">Automatically play playlists</string>	
 	<string id="30084">Play playlist</string>	
@@ -105,7 +106,7 @@
 	<string id="30107">Choose fanart</string>
 	<string id="30108">Remove fanart</string>
 	<string id="30109">Timeout in %d seconds...</string>
-	<string id="30110">Press a key to assign it to the Super Favourites now</string>
+	<string id="30110">Press a key to assign it to the Super Favourites hotkey</string>
 	<string id="30111">Programmable</string>
 	<string id="30112">[COLOR springgreen]Click to program hotkey[/COLOR]</string>
 	<string id="30113">Default fanart</string>
@@ -136,7 +137,7 @@
 	<string id="30138">Show unavailable addons</string>
 	<string id="30139">Show import remote file</string>	
 	<string id="30140">Importing %s from</string>
-	<string id="30141">Please wait, this may take a while.</string>	
+	<string id="30141">Please wait, this may take a while</string>	
 	<string id="30142">Play Media</string>
 	<string id="30143">Activate Window (try if Play Media fails)</string>
 	<string id="30144">Run Plugin (try if video repeats)</string>
@@ -177,14 +178,14 @@
 	<string id="30184">as a link or copy the complete folder?</string>
 	<string id="30185">Copy</string>
 	<string id="30186">Link</string>
-    <string id="30187">Super Folders cannot be 'cut' to %s favourites.</string>
-    <string id="30188">Do you want to create a link to the %s</string>
-    <string id="30189">Super Folder instead?</string>
-    <string id="30190">Cancel</string>	
-    <string id="30191">Failed to paste the %s Super Folder, please check logs</string>
-    <string id="30192">%s - Copy %d</string>	
-    <string id="30193">ExecuteBuiltin</string>	
-    <string id="30194">Edit description</string>	
+   	<string id="30187">Super Folders cannot be 'cut' to %s favourites</string>
+	<string id="30188">Do you want to create a link to the %s</string>
+	<string id="30189">Super Folder instead?</string>
+   	<string id="30190">Cancel</string>	
+	<string id="30191">Failed to paste the %s Super Folder, please check logs</string>
+   	<string id="30192">%s - Copy %d</string>	
+	<string id="30193">ExecuteBuiltin</string>	
+	<string id="30194">Edit description</string>	
 	<string id="30195">Quickly search all the popular addons from one place.[CR]Also provides access to the iRecommend and iRemember features.</string>	
 	<string id="30196">Browse your playlists.[CR]Copy playlists to Super Favourites.[CR]Link to online playlists.</string>	
 	<string id="30197">Browse your Kodi favourites.[CR]Launch or edit your Kodi favourites directly from within Super Favourites.[CR]Copy your Kodi favourites to Super Favourites.</string>	
@@ -197,9 +198,9 @@
 	<string id="30204">Remember current view type</string>		
 	<string id="30205">Perform a keyword IMDB search using [I]%s.[/I]</string>		
 	<string id="30206">Search %s for [I]%s.[/I]</string>	
-	<string id="30207">Would you like to disable caching on this favourite?[CR]Particularly useful for 'Search' type favourites.</string>
-	<string id="30208">Disable 'movie content' view - prevents rectangular thumbnails.</string>		
-	<string id="30209">Copy image(s) and description</string>		
+	<string id="30207">Would you like to disable caching on this favourite?[CR]Particularly useful for 'Search' type favourites</string>
+	<string id="30208">Disable 'movie content' view - prevents rectangular thumbnails</string>		
+	<string id="30209">Copy item and metadata</string>		
 	<string id="30210">Paste thumbnail</string>		
 	<string id="30211">Paste fanart</string>		
 	<string id="30212">Paste description</string>		
@@ -223,14 +224,47 @@
 	<string id="30230">Play from here</string>	
 	<string id="30231">Play folder</string>	
 	<string id="30232">Play Super Folder</string>	
-    <string id="30233">Enable autoplay</string>	
-    <string id="30234">Disable autoplay</string>
+	<string id="30233">Enable autoplay</string>	
+	<string id="30234">Disable autoplay</string>
 	<string id="30235">Explore Super Folder</string>	
-    <string id="30236"> (play folder)</string>
-    <string id="30237">Set sort order</string>	
-    <string id="30238">Default (see settings)</string>	
-    <string id="30239">Alphabetical</string>	
-    <string id="30240">Manual</string>				
+	<string id="30236"> (play folder)</string>
+	<string id="30237">Set sort order</string>	
+	<string id="30238">Default (see settings)</string>	
+	<string id="30239">Alphabetical</string>	
+	<string id="30240">Manual</string>
+	<string id="30241">Download</string>	
+	<string id="30242">          Download folder</string>	
+	<string id="30243">Do you wish to stop the current playback?</string>
+	<string id="30244">(This maybe necessary to allow download)</string>
+	<string id="30245">[COLOR springgreen]Download succeeded[/COLOR]</string>
+	<string id="30246">[COLOR red]Download failed[/COLOR]</string>
+	<string id="30247">Download failed</string>
+	<string id="30248">No response from server</string>
+	<string id="30249">Unknown filesize</string>
+	<string id="30250">Unable to download</string>
+	<string id="30251">%s - Confirm Download</string>
+	<string id="30252">Complete file is %dMB</string>
+	<string id="30253">Continue with download?</string>
+	<string id="30254">Confirm</string>
+	<string id="30255">%s - Download Progress - %s%%</string>
+	<string id="30256">Download folder does not exists</string>
+	<string id="30257">Please configure a valid download folder now</string>
+	<string id="30258">Paste item</string>
+	<string id="30259">Download using Super Favourites</string>
+	<string id="30260">No valid item to add to Super Favourites</string>
+	<string id="30261">No valid item to download via Super Favourites</string>
+	<string id="30262">Paste metadata</string>
+        <string id="30263">Remove metadata</string>
+        <string id="30264">Description</string>
+        <string id="30265">Metadata</string>
+        <string id="30266">Thumbnail</string>
+        <string id="30267">Fanart</string>
+        <string id="30268">iSearch - </string>
+        <string id="30269">Hotkey assignment cancelled</string>
+        <string id="30270">Hotkey successfully assigned</string>
+        <string id="30271">This will only work if [COLOR springgreen]%s[/COLOR] is setup as a source</string>
+        <string id="30272">Do you wish to continue?</string>
+        <string id="30273">ShowPicture</string>
 	
 	<string id="35000">Global Menu</string>
 	<string id="35001">Enable global Super Favourites menu</string>
@@ -242,7 +276,7 @@
 	<string id="35007">Default iSearch (search using the first addon in the list)</string>
 	<string id="35008">iSearch</string>
 	<string id="35009">iRecommend</string>
-	<string id="35010">Copy item properties</string>
+	<string id="35010">Copy item and metadata</string>
 	<string id="35011">View item images</string>
 	<string id="35012">Super Favourite settings</string>
 	<string id="35013">Selected addon settings</string>
@@ -252,9 +286,9 @@
 	<string id="35017">Would you like to configure it now?</string>	
 	<string id="35018">Edit name when adding to Super Favourites</string>
 	<string id="35019">Extensions</string>	
-	<string id="35020">Quick launch</string>	
+	<string id="35020">Quick launch</string>
 		
-    <string id="35021">Artwork settings</string>	
+	<string id="35021">Artwork settings</string>	
 	<string id="35022">Thumbnail</string>
 	<string id="35023">Fanart</string>	
 	<string id="35024">None</string>	
@@ -272,4 +306,16 @@
 	<string id="35035">Episodes</string>
 	<string id="35036">Music videos</string>
 	<string id="35037">Default</string>
+	<string id="35038">Show Super Favourites menu item on standard context menu</string>
+	
+	<string id="35040">Addons on the whitelist will not display the global Super Favourites menu</string>
+	<string id="35041">Add to whitelist</string>
+	<string id="35042">Remove from whitelist</string>
+	
+	<string id="35043">          Label numerically on quick launch menu</string>
+        <string id="35044">          Remember previous folder</string>
+
+	<string id="35045">          Show menu item on standard context menu</string>
+
+	<string id="35046">          Show on Super Favourites context menu</string>	
 </strings>

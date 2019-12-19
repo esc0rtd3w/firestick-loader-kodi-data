@@ -29,41 +29,98 @@ import utils
 GETTEXT = utils.GETTEXT
 ICON    = utils.ICON
 
+
+ACTION_MOVE_LEFT          = 1
+ACTION_MOVE_RIGHT         = 2
+ACTION_MOVE_UP            = 3
+ACTION_MOVE_DOWN          = 4
+ACTION_SELECT_ITEM        = 7
+ACTION_MOUSE_LEFT_CLICK   = 100
+ACTION_MOUSE_DOUBLE_CLICK = 103
+ACTION_MOUSE_MOVE         = 107
+
+ACTION_PARENT_DIR         = 9
+ACTION_PREVIOUS_MENU      = 10
+ACTION_NAV_BACK           = 92
+
 TIMEOUT = 10
 
 class KeyListener(xbmcgui.WindowXMLDialog):
 
     def __new__(cls):
-        return super(KeyListener, cls).__new__(cls, 'DialogKaiToast.xml', '')
+        try: 
+            ret = super(KeyListener, cls).__new__(cls, 'DialogProgress.xml', '')
+        except:
+            ret   = super(KeyListener, cls).__new__(cls, 'DialogConfirm.xml', '')
+        return ret 
 
 
     def __init__(self):
-        self.key = 0
+        self.key     = 0
+        self.timeout = TIMEOUT
+        self.setTimer()
+
+
+    def close(self):
+        self.timer.cancel()
+        xbmcgui.WindowXML.close(self)
 
 
     def onInit(self):
-        timeout = GETTEXT(30109) % TIMEOUT
-        label   = GETTEXT(30110)
+        try:
+            self.getControl(20).setVisible(False)
+            self.getControl(10).setLabel(xbmc.getLocalizedString(222))
+            self.setFocus(self.getControl(10))
+            self.getControl(11).setVisible(False)
+            self.getControl(12).setVisible(False)
+        except:
+            pass
 
-        self.getControl(401).addLabel(label)
-        self.getControl(402).addLabel(timeout)
-        self.getControl(400).setImage(ICON)
-        
+
+        self.onUpdate()
+
+
+    def onUpdate(self):
+        text  = GETTEXT(30110) + '[CR]'
+        text += GETTEXT(30109) % self.timeout
+        self.getControl(9).setText(text)
+
 
     def onAction(self, action):
+        actionId = action.getId()     
+
+        if actionId in [ACTION_MOVE_LEFT, ACTION_MOVE_RIGHT, ACTION_MOVE_UP, ACTION_MOVE_DOWN, ACTION_SELECT_ITEM, ACTION_MOUSE_LEFT_CLICK, ACTION_MOUSE_DOUBLE_CLICK , ACTION_MOUSE_MOVE         ]:
+            return
+
+        if actionId in [ACTION_PARENT_DIR, ACTION_PREVIOUS_MENU, ACTION_NAV_BACK]:
+            return self.close()
+       
         self.key = action.getButtonCode()
         self.close()
 
 
+    def onClick(self, controlId):
+        self.close()
+
+
+    def onTimer(self):
+        self.timeout -= 1
+        if self.timeout < 0:
+            return self.close()
+
+        self.onUpdate()
+        self.setTimer()
+
+
+    def setTimer(self):
+        self.timer = Timer(1, self.onTimer)
+        self.timer.start()
+
+
 def recordKey():
     dialog  = KeyListener()
-    timeout = Timer(TIMEOUT, dialog.close)
-
-    timeout.start()
 
     dialog.doModal()
-
-    timeout.cancel()
 
     key = dialog.key
 
@@ -78,13 +135,14 @@ def main():
 
     key = recordKey()
     if key < 1:
+        utils.DialogOK(GETTEXT(30269))
         return
 
     start = 'key id="%d"' % key
     end   = 'key'
 
     if utils.WriteKeymap(start, end):
-        xbmc.sleep(1000)
+        utils.DialogOK(GETTEXT(30270))
         xbmc.executebuiltin('Action(reloadkeymaps)')  
 
     

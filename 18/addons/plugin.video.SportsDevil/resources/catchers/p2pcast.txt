@@ -1,0 +1,105 @@
+item_info_name=id
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','.*stream/(\w+)\.html)
+item_info_build=%s
+
+item_info_name=title
+item_info_from=id
+item_info_build=P2PCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=%s
+
+item_info_name=page
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','(.*)','@REFERER@')
+#item_info_convert=getInfo('%s','.*\b(?:url|trap|torque|tambor)\s*=\s*["']([^"']+).*','@REFERER@')
+#item_info_convert=getInfo('%s','.*\w+\s*=\s*"(http[^"]+m3u8[^"]+)";.*?\w+\s*=\s*"(.*?php)"','@REFERER@','file_|turl_')
+#item_info_convert=getInfo('%s','.*(\w+)="([^"]+)";.*?(\w+)\s*=\s*atob\(\1\).*?Clappr\.Player\(\{source:\3','@REFERER@','j1|f1|j2')
+#item_info_convert=getInfo('%s','.*(\w+)\s+=\s+"([^"]+).*?isInArray\(hostname.*?\$.ajax\(\{.*?url\s*:\satob\(rSt\(\1\)\)','@REFERER@','j1|f1|j2')
+#item_info_convert=decodeBase64
+#item_info_convert=debug
+item_info_build=%s
+
+item_info_name=file.tmp
+item_info_from=page
+item_info_convert=parseText('%s','.*(\w+)\s*=\s*"([^"]+).*?isInArray\(hostname.*?\$\.ajax\(\{url\s*:\s*atob\(rSt\(\1','j1|f1')
+item_info_build=%s
+
+item_info_name=rex1
+item_info_from=j1
+item_info_build=.*%sa\s*=\s*"([^"]+)
+
+item_info_name=file1
+item_info_from=f1+'
+item_info_convert=reverse
+item_info_convert=decodeBase64
+#item_info_convert=debug
+item_info_build=%s
+
+item_info_name=file2
+item_info_from=page
+item_info_convert=parseText('%s','@rex1@')
+item_info_convert=reverse
+item_info_convert=decodeBase64
+#item_info_convert=debug
+item_info_build=%s
+
+
+# item_info_name=turl.tmp
+# item_info_from=pageUrl
+# item_info_convert=getInfo('%s','.*;(\w+)="([^"]+).*?getJSON\(atob\(\1','@REFERER@','j1|t1')
+# item_info_build=%s
+
+# item_info_name=turl_
+# item_info_from=t1
+# item_info_convert=decodeBase64
+# item_info_build=%s
+
+# item_info_name=file
+# item_info_from=f1
+# item_info_convert=decodeBase64
+# #item_info_convert=debug
+# item_info_build=%s
+
+# item_info_name=host
+# item_info_from=pageUrl
+# item_info_convert=parseText('%s','(https://.*?)/')
+# item_info_convert=debug
+# item_info_build=%s
+
+# item_info_name=tokUrl
+# item_info_from=turl_
+# #item_info_convert=debug
+# item_info_build=https:%s
+
+# item_info_name=tok
+# item_info_from=tokUrl
+# item_info_convert=getXML('%s','.*"(&token=[^"]+)','@pageUrl@')
+# #item_info_convert=debug
+# item_info_build=%s
+
+item_info_name=ref2
+item_info_from=pageUrl
+item_info_build=%s
+
+item_info_name=file_
+item_info_from=file1+file2+'
+item_info_build=https:%s
+
+item_info_name=file3
+item_info_from=file_
+item_info_convert=getInfo('%s','.*"(.*)"','@ref2@')
+item_info_convert=reverse
+item_info_build=%s
+
+item_info_name=file
+item_info_from=file1+file3+'
+item_info_convert=replace('%s','ssl7','ssl1')
+item_info_build=https:%s
+
+item_info_name=url
+item_info_from=file+'|Referer='+ref2+'&Origin=https://telerium.tv&User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36
+item_info_build=%s
+

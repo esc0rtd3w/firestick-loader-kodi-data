@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.venom" version="3.3.6" name="[COLOR red]Venom[/COLOR]" provider-name="Venom">
+
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.requests" version="2.19.1" />
+		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+		<import addon="script.module.metahandler" version="2.9.0" />
+		<import addon="plugin.video.youtube" version="6.2.0"/>
+		<import addon="script.module.resolveurl" version="5.0.27"/>
+		<import addon="script.module.openscrapers" />
+		<import addon="script.module.addon.signals" version="0.0.3"/>
+	</requires>
+
+	<extension point="xbmc.python.pluginsource" library="venom.py">
+		<provides>video</provides>
+	</extension>
+
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/lib/"/>
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">[B][COLOR red]Venom[/COLOR][/B] - We do not host any of the contents streamed</summary>
+		<description lang="en">[B]Venom[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot01a.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot02a.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot03a.jpg</screenshot>
+		</assets>
+		<news>
+[B][COLOR red]Update - v3.3.6 - Dec. 18, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added new function to move traceback error logging to
+    addon log vs. kodi log.[/I]
+[COLOR yellow]--[/COLOR][I] Added .setCast() to player.[/I]
+[COLOR yellow]--[/COLOR][I] Added automated setup to add "Venom Library folders"
+    to Kodi Sources under "Settings-Library".  A notice will
+    also pop up requesting this automated setup if folders
+    were not added to Kodi sources and you attempt to
+    import lists to library.[/I]
+[COLOR yellow]--[/COLOR][I] Added ability to Import Trakt user lists and liked lists for
+    Movies and TV Shows. This is also added as a service
+    to update any titles later added online to Trakt account.[/I]
+[COLOR yellow]--[/COLOR][I] "Add to Library" and "Update Libray" now respect setting options
+    for "Show Unaired" and "Season Special(Season0)".[/I]
+[COLOR yellow]--[/COLOR][I] Added option to "Tools-Library" for "Clean Library".[/I]
+		</news>
+	</extension>
+</addon>

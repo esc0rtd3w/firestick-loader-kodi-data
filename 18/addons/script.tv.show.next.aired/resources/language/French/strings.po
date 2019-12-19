@@ -8,17 +8,17 @@ msgstr ""
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: French (http://www.transifex.com/projects/p/xbmc-addons/language/fr/)\n"
+"Last-Translator: Guilouz\n"
+"Language-Team: Guilouz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "Addon Summary"
 msgid "Get info for TV Shows Next Aired."
-msgstr "Obtenir les prochaines dates de diffusion de vos séries TV."
+msgstr "Obtenir les informations de diffusion des séries TV."
 
 msgctxt "Addon Description"
 msgid "Get info for TV Shows Next Aired. You'll never miss one again."
@@ -30,7 +30,7 @@ msgstr "Affichage"
 
 msgctxt "#32001"
 msgid "Thumbnail type"
-msgstr "Type de miniatures"
+msgstr "Type de vignettes"
 
 msgctxt "#32002"
 msgid "Download banners (Artwork Downloader required)"
@@ -42,23 +42,23 @@ msgstr "Télécharger les logos (Artwork Downloader requis)"
 
 msgctxt "#32004"
 msgid "Enable background fanart"
-msgstr "Activer le fanart d'arrière-plan"
+msgstr "Activer les arrière-plans"
 
 msgctxt "#32005"
 msgid "Enable 16:9 preview thumbs"
-msgstr "Activer les miniatures d'aperçus 16:9"
+msgstr "Activer les vignettes 16:9"
 
 msgctxt "#32006"
 msgid "Download 16:9 preview thumbs (Artwork Downloader required)"
-msgstr "Télécharger les miniatures d'aperçus 16:9 (Artwork Downloader requis)"
+msgstr "Télécharger les vignettes 16:9 (Artwork Downloader requis)"
 
 msgctxt "#32007"
 msgid "Update the TV information now"
-msgstr "Mettre à jour les dates de sortie maintenant"
+msgstr "Mettre à jour les informations maintenant"
 
 msgctxt "#32008"
 msgid "Download TV information:"
-msgstr "Télécharger les informations TV :"
+msgstr "Téléchargement des informations :"
 
 msgctxt "#32009"
 msgid "In the background every [N] hours"
@@ -66,7 +66,7 @@ msgstr "Exécuter en fond toutes les [N] heures"
 
 msgctxt "#32010"
 msgid "On entering the guide if data is over [N] hours old"
-msgstr "En entrant dans le guide si celui-ci n'a pas été mis à jour depuis [N] heures"
+msgstr "En entrant dans le guide si les données n'ont pas été mise à jour depuis [N] heures"
 
 msgctxt "#32011"
 msgid "Download posters (Artwork Downloader required)"
@@ -74,15 +74,15 @@ msgstr "Télécharger les posters (Artwork Downloader requis)"
 
 msgctxt "#32012"
 msgid "**Reset all data** and update the TV information now"
-msgstr "**Réinitialiser toutes les données** et mettre à jour les dates de sorties"
+msgstr "**Réinitialiser toutes les données** et mettre à jour les informations"
 
 msgctxt "#32013"
 msgid "Show All TV Shows for home screen (needs skin Support)"
-msgstr "Montrer toutes les séries TV sur la page d'accueil (nécessite un thème compatible)"
+msgstr "Montrer toutes les séries TV sur l'écran d'accueil (nécessite un thème compatible)"
 
 msgctxt "#32014"
 msgid "Use day-of-week and month names in dates instead of just numbers (for a skin that needs help)"
-msgstr "Utiliser les jours de la semaine et le nom des mois au lieu de chiffres (si le skin le supporte)"
+msgstr "Utiliser les jours de la semaine et le nom des mois au lieu des nombres (si le skin le supporte)"
 
 msgctxt "#32015"
 msgid "Number of next-aired days to include in the TV Guide"
@@ -90,11 +90,11 @@ msgstr "Nombre de jours à afficher dans le guide"
 
 msgctxt "#32016"
 msgid "Start the TV Guide week based on Today instead of Monday"
-msgstr "Commencer le guide à \"aujourd'hui\" au lieu de \"Lundi\""
+msgstr "Commencer le guide à \"Aujourd'hui\" au lieu de \"Lundi\""
 
 msgctxt "#32017"
 msgid "Include Yesterday in the Today-style TV Guide"
-msgstr "Inclure \"Hier\" dans le guide TV"
+msgstr "Inclure \"Hier\" dans le guide"
 
 msgctxt "#32018"
 msgid "Yesterday"
@@ -118,11 +118,13 @@ msgstr "Omettre les séries (numéros d'identification TVDB)"
 
 msgctxt "#32023"
 msgid "Ignore \"Specials\" (requires a reset)"
-msgstr "Ignorer « Épisodes spéciaux » (redémarrage requis)"
+msgstr "Ignorer les \"Episodes spéciaux\" (redémarrage requis)"
 
 msgctxt "#32024"
 msgid "Search language on TVDB"
 msgstr "Chercher la langue sur TVDB"
+
+#empty strings from id 32025 to 32100
 
 msgctxt "#32101"
 msgid "TV Show - Next Aired"
@@ -130,7 +132,7 @@ msgstr "TV Show - Next Aired"
 
 msgctxt "#32102"
 msgid "Getting information..."
-msgstr "Obtention d'informations..."
+msgstr "Obtention des informations..."
 
 msgctxt "#32103"
 msgid "CANCELLED"
@@ -148,13 +150,15 @@ msgctxt "#32106"
 msgid "The update failed (we'll retry again later)."
 msgstr "La mise à jour a échoué (nouvel essai plus tard)."
 
+#empty strings from id 32107 to 32200
+
 msgctxt "#32201"
 msgid "Returning Series"
 msgstr "En diffusion"
 
 msgctxt "#32202"
 msgid "Cancelled/Ended"
-msgstr "Annulé / terminé"
+msgstr "Annulé/Terminé"
 
 msgctxt "#32203"
 msgid "TBD/On The Bubble"
@@ -182,11 +186,11 @@ msgstr "En pause"
 
 msgctxt "#32209"
 msgid "Pilot Ordered"
-msgstr "Pilote commandé"
+msgstr "Pilot commandé"
 
 msgctxt "#32210"
 msgid "Pilot Rejected"
-msgstr "Pilote rejeté"
+msgstr "Pilot rejeté"
 
 msgctxt "#32211"
 msgid "Cancelled"
@@ -195,3 +199,15 @@ msgstr "Annulé"
 msgctxt "#32212"
 msgid "Ended"
 msgstr "Terminé"
+
+msgctxt "#32213"
+msgid "Are you sure you want to continue ?\nThis should only be needed if you experience some issues."
+msgstr "Etes-vous sûr de vouloir continuer ?\nCela ne devrait être nécessaire que si vous rencontrez des problèmes."
+
+msgctxt "#32214"
+msgid "Please wait while we refresh all data in the cache,\nthis can take a while..."
+msgstr "Veuillez patienter pendant l'actualisation des données dans le cache,\ncela peut prendre un certain temps..."
+
+msgctxt "#32215"
+msgid "Please wait while we update all data in the cache"
+msgstr "Veuillez patienter pendant la mise à jour des données dans le cache"

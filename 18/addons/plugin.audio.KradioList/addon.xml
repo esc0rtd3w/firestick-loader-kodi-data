@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<addon id="plugin.audio.KradioList" name="[COLOR lime]KradioList[/COLOR]" version="1.0.1" provider-name="DNA">
+		<requires>
+			<import addon="xbmc.python" version="2.1.0"/>
+			<import addon="xbmc.addon" version="12.1.0"/>
+		</requires>
+		<extension point="xbmc.python.pluginsource" library="default.py">
+			<provides>audio</provides>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">The best radio stations on the net</summary>
+			<description lang="en">Tune in to the best radio stations on the net.Send your radio links to:holymankodi@gmail.com</description>
+			<disclaimer lang="en">We do not own or publish the content delivered by the plugin</disclaimer>
+			<platform>all</platform>
+			<license>http://www.gnu.org/licenses/</license>
+			<language>en</language>
+			<forum></forum>
+			<website></website>
+			<email>holymankodi@gmail.com</email>
+			<source></source>
+		</extension>
+	</addon>

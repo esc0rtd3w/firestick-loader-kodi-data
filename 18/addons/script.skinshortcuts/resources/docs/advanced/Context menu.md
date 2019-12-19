@@ -16,7 +16,7 @@ To enable it for multiple controls, include the `<enableon />` element multiple 
 
 ## Choosing controls for the context menu
 
-Any default control or control id linked to a [custom shortcut property](./Custom shortcut properties.md) can be included in the context menu by including the following within the <contextmenu /> element:-
+Any default control or control id linked to a [custom shortcut property](./Custom%20shortcut%20properties.md) can be included in the context menu by including the following within the <contextmenu /> element:-
 
 `<item control="[control id]" condition="[condition]">[label]</item>`
 
@@ -45,4 +45,4 @@ Please note, however, that if you include the `<contextmenu />` element in your 
 	<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">Enable</item>
 </contextmenu>```
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

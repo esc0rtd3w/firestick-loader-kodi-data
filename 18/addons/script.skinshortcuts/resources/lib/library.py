@@ -2103,7 +2103,7 @@ class LibraryFunctions():
 # ==============================
 
     # With gui 312, we're finding a number of plugins aren't returning updated content after media is played. This function adds
-    # a widgetReload property - managed by Skin Helper Service - to plugins to help display updated content
+    # a widgetReload property - managed by Skin Helper Widgets - to plugins to help display updated content
 
     def addWidgetReload( self, widgetPath ):
         if "plugin://" not in widgetPath or "reload=" in widgetPath.lower() or "script.extendedinfo" in widgetPath.lower():
@@ -2113,12 +2113,26 @@ class LibraryFunctions():
 
         # Depending whether it already has additional components or not, we may need to use a ? or a & to extend the path
         # with the new reload parameter
-        reloadParameter = "?"
+        reloadSplitter = "?"
         if "?" in widgetPath:
-            reloadParameter = "&"
-
+            reloadSplitter = "&"
+            
+        # We have seperate reload params for each content type
+        # default: refresh at every library change/video playback (widgetreload) + every 10 minutes (widgetreload2)
+        reloadParam = "$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]"
+        if "movie" in widgetPath:
+            reloadParam = "$INFO[Window(Home).Property(widgetreload-movies)]"
+        elif "episode" in widgetPath:
+            reloadParam = "$INFO[Window(Home).Property(widgetreload-episodes)]"
+        elif "tvshow" in widgetPath:
+            reloadParam = "$INFO[Window(Home).Property(widgetreload-episodes)]"
+        elif "musicvideo" in widgetPath:
+            reloadParam = "$INFO[Window(Home).Property(widgetreload-musicvideos)]"
+        elif "music" in widgetPath or "song" in widgetPath:
+            reloadParam = "$INFO[Window(Home).Property(widgetreload-music)]"
+            
         # And return it all
-        return "%s%sreload=$INFO[Window(Home).Property(widgetreload)]" %( widgetPath, reloadParameter )
+        return "%s%sreload=%s" %( widgetPath, reloadSplitter, reloadParam )
 
 # ============================
 # === PRETTY SELECT DIALOG ===

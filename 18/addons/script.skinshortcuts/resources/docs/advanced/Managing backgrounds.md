@@ -48,7 +48,7 @@ You may wish to set a default background to one or more menu items. These will b
 
 ## Let the user select a background
 
-To let the user select a background, include button 310 in your [Management Dialog](../started/Management Dialog.md).
+To let the user select a background, include button 310 in your [Management Dialog](../started/Management%20Dialog.md).
 
 ## Set submenu background to mainmenu background
 
@@ -66,4 +66,4 @@ If you have defined background styles, you can use a StringCompare to decide whe
 
 If you are using direct background images, you can use the `background` property as the `<imagepath />` in a multi-image control.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

@@ -13,4 +13,4 @@ visualization
 For a detailed description of options as well as instructions for skin and addon
 integration, see:
 
-  http://wiki.xbmc.org/index.php?title=Add-on:Artist_Slideshow
+  http://wiki.xbmc.org/index.php?title=Add-on:Artist_Slideshow 

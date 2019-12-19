@@ -1,0 +1,181 @@
+<settings version="2">
+    <setting id="addon_debug" default="true">false</setting>
+    <setting id="api.language" default="true">English</setting>
+    <setting id="appearance.1" default="true">Venom</setting>
+    <setting id="auto.playlistcreate">true</setting>
+    <setting id="autoplay.sd" default="true">false</setting>
+    <setting id="autoTraktOnStart" default="true">false</setting>
+    <setting id="bookmarks">true</setting>
+    <setting id="bookmarks.auto" default="true">false</setting>
+    <setting id="bookmarks.trakt" default="true">false</setting>
+    <setting id="clear.all.cache" default="true"></setting>
+    <setting id="clear.bookmarks.cache" default="true"></setting>
+    <setting id="clear.cache" default="true"></setting>
+    <setting id="clear.metacache" default="true"></setting>
+    <setting id="clear.search.cache" default="true"></setting>
+    <setting id="clear.sources" default="true"></setting>
+    <setting id="clear.sources2" default="true"></setting>
+    <setting id="crefresh" default="true">false</setting>
+    <setting id="debrid.only" default="true">false</setting>
+    <setting id="debug.location">1</setting>
+    <setting id="disable.fanarttv" default="true">false</setting>
+    <setting id="disable.fanarttv.notice" default="true"></setting>
+    <setting id="disable.player.art" default="true">false</setting>
+    <setting id="downloads" default="true">false</setting>
+    <setting id="enable.upnext" default="true">false</setting>
+    <setting id="fanart">true</setting>
+    <setting id="fanart.tv.user" default="true"></setting>
+    <setting id="first.info" default="true">false</setting>
+    <setting id="flatten.tvshows" default="true">false</setting>
+    <setting id="HEVC">true</setting>
+    <setting id="hidecinema" default="true">false</setting>
+    <setting id="hidecinema.rollback">6</setting>
+    <setting id="hosts.captcha" default="true">false</setting>
+    <setting id="hosts.mode">1</setting>
+    <setting id="hosts.quality" default="true">0</setting>
+    <setting id="hosts.sort.provider">true</setting>
+    <setting id="icon.logos" default="true">Traditional</setting>
+    <setting id="imdb.user" default="true"></setting>
+    <setting id="index.labels">true</setting>
+    <setting id="indicators" default="true">0</setting>
+    <setting id="indicators.alt">1</setting>
+    <setting id="library.check">true</setting>
+    <setting id="library.check_episode" default="true">false</setting>
+    <setting id="library.check_movie" default="true">false</setting>
+    <setting id="library.general.notification">true</setting>
+    <setting id="library.importdelay">true</setting>
+    <setting id="library.include_unknown">true</setting>
+    <setting id="library.movie" default="true">special://userdata/addon_data/plugin.video.venom/Movies</setting>
+    <setting id="library.service.lists.update">true</setting>
+    <setting id="library.service.notification">true</setting>
+    <setting id="library.service.update">true</setting>
+    <setting id="library.tv" default="true">special://userdata/addon_data/plugin.video.venom/TVShows</setting>
+    <setting id="library.update">true</setting>
+    <setting id="message1" default="true"></setting>
+    <setting id="message2" default="true"></setting>
+    <setting id="message3" default="true"></setting>
+    <setting id="message4" default="true"></setting>
+    <setting id="module.provider" default="true">Openscrapers Scrapers</setting>
+    <setting id="movie.download.path" default="true"></setting>
+    <setting id="mylists.widget">true</setting>
+    <setting id="navi.anime" default="true">false</setting>
+    <setting id="navi.changelog">true</setting>
+    <setting id="navi.movie.collections">true</setting>
+    <setting id="navi.movie.imdb.boxoffice">true</setting>
+    <setting id="navi.movie.imdb.certificates">true</setting>
+    <setting id="navi.movie.imdb.featured">true</setting>
+    <setting id="navi.movie.imdb.genres">true</setting>
+    <setting id="navi.movie.imdb.intheater">true</setting>
+    <setting id="navi.movie.imdb.languages">true</setting>
+    <setting id="navi.movie.imdb.mostvoted">true</setting>
+    <setting id="navi.movie.imdb.oscarnominees">true</setting>
+    <setting id="navi.movie.imdb.oscarwinners">true</setting>
+    <setting id="navi.movie.imdb.people">true</setting>
+    <setting id="navi.movie.imdb.popular">true</setting>
+    <setting id="navi.movie.imdb.years">true</setting>
+    <setting id="navi.movie.tmdb.nowplaying">true</setting>
+    <setting id="navi.movie.tmdb.popular">true</setting>
+    <setting id="navi.movie.tmdb.toprated">true</setting>
+    <setting id="navi.movie.tmdb.upcoming">true</setting>
+    <setting id="navi.movie.trakt.anticipated">true</setting>
+    <setting id="navi.movie.trakt.boxoffice">true</setting>
+    <setting id="navi.movie.trakt.popular">true</setting>
+    <setting id="navi.movie.trakt.recommended">true</setting>
+    <setting id="navi.movie.trakt.trending">true</setting>
+    <setting id="navi.news">true</setting>
+    <setting id="navi.originals" default="true">false</setting>
+    <setting id="navi.tv.imdb.airingtoday">true</setting>
+    <setting id="navi.tv.imdb.certificates">true</setting>
+    <setting id="navi.tv.imdb.genres">true</setting>
+    <setting id="navi.tv.imdb.highlyrated">true</setting>
+    <setting id="navi.tv.imdb.languages">true</setting>
+    <setting id="navi.tv.imdb.mostvoted">true</setting>
+    <setting id="navi.tv.imdb.newtvshows">true</setting>
+    <setting id="navi.tv.imdb.popular">true</setting>
+    <setting id="navi.tv.imdb.returningtvshows">true</setting>
+    <setting id="navi.tv.tmdb.airingtoday">true</setting>
+    <setting id="navi.tv.tmdb.ontv">true</setting>
+    <setting id="navi.tv.tmdb.popular">true</setting>
+    <setting id="navi.tv.tmdb.toprated">true</setting>
+    <setting id="navi.tv.trakt.popular">true</setting>
+    <setting id="navi.tv.trakt.recommended">true</setting>
+    <setting id="navi.tv.trakt.trending">true</setting>
+    <setting id="navi.tv.tvmaze.calendar">true</setting>
+    <setting id="navi.tv.tvmaze.networks">true</setting>
+    <setting id="navi.xmascollections" default="true">false</setting>
+    <setting id="navi.youtube" default="true">false</setting>
+    <setting id="newmovies.widget">5</setting>
+    <setting id="notification.sound" default="true">false</setting>
+    <setting id="open.settings" default="true"></setting>
+    <setting id="open.UpNext" default="true"></setting>
+    <setting id="open.urlResolver" default="true"></setting>
+    <setting id="page.item.limit">20</setting>
+    <setting id="preemptive.limit">10</setting>
+    <setting id="preemptive.res">2</setting>
+    <setting id="preemptive.termination" default="true">false</setting>
+    <setting id="prem.identify">6</setting>
+    <setting id="progress.dialog" default="true">0</setting>
+    <setting id="progress.dialog.free.color">1</setting>
+    <setting id="progress.dialog.prem.color">5</setting>
+    <setting id="providers.lang" default="true">English</setting>
+    <setting id="remove.3D.sources" default="true">false</setting>
+    <setting id="remove.CamSd.sources" default="true">false</setting>
+    <setting id="remove.duplicates">true</setting>
+    <setting id="schedTraktTime" default="true">0</setting>
+    <setting id="schedTraktTime.message" default="true"></setting>
+    <setting id="scrapers.timeout.1">30</setting>
+    <setting id="sec.identify">4</setting>
+    <setting id="showunaired">true</setting>
+    <setting id="sort.calendar.order">1</setting>
+    <setting id="sort.calendar.type">4</setting>
+    <setting id="sort.movies.order">1</setting>
+    <setting id="sort.movies.type">4</setting>
+    <setting id="sort.progress.order">1</setting>
+    <setting id="sort.progress.type">4</setting>
+    <setting id="sort.shows.order">1</setting>
+    <setting id="sort.shows.type">6</setting>
+    <setting id="sourcelist.multiline">true</setting>
+    <setting id="sources.extrainfo">true</setting>
+    <setting id="subtitles" default="true">false</setting>
+    <setting id="subtitles.lang.1" default="true">English</setting>
+    <setting id="subtitles.lang.2" default="true">English</setting>
+    <setting id="subtitles.utf" default="true">false</setting>
+    <setting id="tm.user" default="true"></setting>
+    <setting id="tmdb.message" default="true">[B][COLOR FFA0C12C]$ADDON[plugin.video.venom 35397][/COLOR][/B]</setting>
+    <setting id="tmdb.password" default="true"></setting>
+    <setting id="tmdb.session_id" default="true"></setting>
+    <setting id="tmdb.username" default="true"></setting>
+    <setting id="torrent.enabled">true</setting>
+    <setting id="torrent.identify">5</setting>
+    <setting id="torrent.min.seeders">1</setting>
+    <setting id="torrent.resolveurl" default="true"></setting>
+    <setting id="torrent.resolveurl2" default="true"></setting>
+    <setting id="torrent.sort.them.up">true</setting>
+    <setting id="trakt.auth" default="true"></setting>
+    <setting id="trakt.notifications">true</setting>
+    <setting id="trakt.rating" default="true">0</setting>
+    <setting id="trakt.refresh" default="true"></setting>
+    <setting id="trakt.token" default="true"></setting>
+    <setting id="trakt.user" default="true"></setting>
+    <setting id="trakt.userHidden" default="true"></setting>
+    <setting id="tv.download.path" default="true"></setting>
+    <setting id="tv.specials">true</setting>
+    <setting id="tv.widget">1</setting>
+    <setting id="tv.widget.alt">2</setting>
+    <setting id="tvdb.jw" default="true"></setting>
+    <setting id="tvdb.user" default="true">HARD CODED</setting>
+    <setting id="tvshows.air.bold">true</setting>
+    <setting id="tvshows.air.day">1</setting>
+    <setting id="tvshows.air.enabled" default="true">false</setting>
+    <setting id="tvshows.air.format">2</setting>
+    <setting id="tvshows.air.location" default="true">0</setting>
+    <setting id="tvshows.air.time">2</setting>
+    <setting id="tvshows.air.zone" default="true">0</setting>
+    <setting id="tvshows.direct" default="true">false</setting>
+    <setting id="tvshows.networks.view">1</setting>
+    <setting id="tvshows.seasoncount.enabled" default="true">false</setting>
+    <setting id="tvshows.unwatched.enabled" default="true">false</setting>
+    <setting id="unaired.identify">8</setting>
+    <setting id="upnext.notice" default="true">[B][COLOR FFA0C12C]$ADDON[plugin.video.venom 35397][/COLOR][/B]</setting>
+    <setting id="upnext.time">60</setting>
+</settings>

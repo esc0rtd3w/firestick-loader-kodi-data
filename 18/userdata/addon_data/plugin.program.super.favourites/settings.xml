@@ -1,4 +1,5 @@
 <settings version="2">
+    <setting id="ADDTOFAVES_ON_STD" default="true">false</setting>
     <setting id="ALLOW_PLAYLIST_DELETE" default="true">false</setting>
     <setting id="ALPHA_SORT" default="true">false</setting>
     <setting id="ART_BANNER" default="true">0</setting>
@@ -9,29 +10,38 @@
     <setting id="CACHERECOMMEND">true</setting>
     <setting id="CONTENTTYPE" default="true"></setting>
     <setting id="CONTEXT" default="true">false</setting>
+    <setting id="CONTEXT_STD" default="true">false</setting>
     <setting id="CONTEXT_STYLE" default="true">0</setting>
+    <setting id="CONTEXTRECOMMEND" default="true">false</setting>
+    <setting id="CONTEXTSS" default="true">false</setting>
     <setting id="COPY_PLAYLISTS" default="true">false</setting>
     <setting id="DEBUG" default="true">false</setting>
     <setting id="DEFAULT_FANART" default="true">0</setting>
     <setting id="DEFAULT_IMAGE" default="true"></setting>
     <setting id="DISABLEMOVIEVIEW" default="true">false</setting>
     <setting id="DISPLAYNAME" default="true"></setting>
-    <setting id="FOLDER" default="true">special://profile/addon_data/plugin.program.super.favourites/</setting>
+    <setting id="DOWNLOAD_FOLDER" default="true">special://profile/addon_data/plugin.program.super.favourites/downloads</setting>
+    <setting id="DOWNLOAD_ON_STD" default="true">false</setting>
+    <setting id="DUMMY" default="true"></setting>
+    <setting id="FOLDER">special://profile/addon_data/plugin.program.super.favourites/</setting>
     <setting id="HOTKEY" default="true"></setting>
     <setting id="IMPORT_RESET" default="true">false</setting>
     <setting id="INHERIT">true</setting>
     <setting id="LABEL_NUMERIC" default="true">false</setting>
+    <setting id="LABEL_NUMERIC_QL" default="true">false</setting>
     <setting id="LOCATION" default="true"></setting>
     <setting id="MANUAL_ID" default="true">1</setting>
     <setting id="MENU_ADDON_SETTINGS">true</setting>
     <setting id="MENU_ADDTOFAVES">true</setting>
     <setting id="MENU_COPY_PROPS">true</setting>
     <setting id="MENU_DEF_ISEARCH">true</setting>
+    <setting id="MENU_DOWNLOADS">true</setting>
     <setting id="MENU_EDITFAVE" default="true">false</setting>
     <setting id="MENU_IRECOMMEND">true</setting>
     <setting id="MENU_ISEARCH">true</setting>
     <setting id="MENU_MSG">true</setting>
     <setting id="MENU_PLUGINS">true</setting>
+    <setting id="MENU_PREV_LOCN" default="true">false</setting>
     <setting id="MENU_QUICKLAUNCH">true</setting>
     <setting id="MENU_SF_SETTINGS">true</setting>
     <setting id="MENU_STD_MENU">true</setting>
@@ -40,6 +50,7 @@
     <setting id="PLAY_PLAYLISTS">true</setting>
     <setting id="RECOMMENDFIRST" default="true">false</setting>
     <setting id="REMOTE" default="true">false</setting>
+    <setting id="SFRUNNING" default="true">-1-0</setting>
     <setting id="SHOW_FANART">true</setting>
     <setting id="SHOW_STARTUP_TXT" default="true">false</setting>
     <setting id="SHOWIEXPLORE">true</setting>
@@ -57,4 +68,5 @@
     <setting id="SYNOPSRECOMMEND">true</setting>
     <setting id="VERSION" default="true">0.0.0</setting>
     <setting id="VIEWTYPE" default="true">0</setting>
+    <setting id="WHITELIST" default="true"></setting>
 </settings>

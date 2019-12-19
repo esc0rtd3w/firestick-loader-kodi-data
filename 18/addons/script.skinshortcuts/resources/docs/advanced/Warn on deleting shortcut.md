@@ -12,4 +12,4 @@ You can do this by providing the following element in the skins [overrides.xml](
 | `[message]` | | The message in the Yes/No dialog that will be shown to the user (can be a localised string) |
 | `[action]` | | The action of the existing shortcut that will trigger this message when the user tries to delete/replace it, or edit its action |
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

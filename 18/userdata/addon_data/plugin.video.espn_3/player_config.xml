@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	
+	<playerModule>com/espn/video/watch/player/modules/web/view/WatchEspn.swf</playerModule>
+	<loadingLogo>http://a.espncdn.com/espn360/watchespn/images/watchESPN_loading.jpg</loadingLogo>
+	<showDebugUrls>false</showDebugUrls>
+	<modules>
+		<module id="espn3-player-core">
+			<loginUrl><![CDATA[https://r.espn.com/espn/memberservices/pc/login]]></loginUrl>
+			<logoutUrl><![CDATA[https://r.espn.com/espn/logout]]></logoutUrl>
+			<logoutFromMbUrl><![CDATA[http://myespn.com/dir-app/ptLogout.aspx?webtag=espnmb]]></logoutFromMbUrl>
+			<userDataUrl><![CDATA[https://broadband.espn.com/espn3/auth/watchespn/userData?format=xml]]></userDataUrl>
+			<affiliateLogoBaseUrl><![CDATA[http://a.espncdn.com/espn360/images/affiliates/]]></affiliateLogoBaseUrl>
+			<authenticators><authenticator authenticatorClass="com.espn.video.watch.player.core.auth.mvpd.adobePass.AdobePassAuthenticator" priority="2"><metadata><object key="accessEnablerUrl"><![CDATA[http://entitlement.auth.adobe.com/entitlement/AccessEnabler.swf]]></object><object key="authUrl"><![CDATA[http://www.espn.com/watchespn/adobepass/login?attempt=1&passenv=prod&mvpd=]]></object><object key="requestorId"><![CDATA[ESPN]]></object></metadata></authenticator><authenticator authenticatorClass="com.espn.video.watch.player.core.auth.mvpd.espn.EspnAuthenticator" priority="1"/></authenticators>
+			<liveEventFeedPollingIntervalInMs>60000</liveEventFeedPollingIntervalInMs>
+			<upcomingEventFeedPollingIntervalInMs>300000</upcomingEventFeedPollingIntervalInMs>
+			<replayEventFeedPollingIntervalInMs>300000</replayEventFeedPollingIntervalInMs>
+			<eventFeedMonitorIntervalInMs>15000</eventFeedMonitorIntervalInMs>
+			<eventStatusEnabled>true</eventStatusEnabled>
+			<eventStatusTimeout>10000</eventStatusTimeout>
+			<networks><network id="n321" name="accextra" playerId="domestic" streamType="event" convivaPlayerName="ESPN3" defaultCdn="PRIMARY_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="false" hasReplays="true" hasClosedCaptions="false" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="replay" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n360" name="espn3" playerId="domestic" streamType="event" convivaPlayerName="ESPN3" defaultCdn="PRIMARY_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="false" hasReplays="true" hasClosedCaptions="false" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="replay" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n501" name="espn1" playerId="espnNetworks" streamType="linear" convivaPlayerName="ESPN-TVE" defaultCdn="ESPN1_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n502" name="espn2" playerId="espnNetworks" streamType="linear" convivaPlayerName="ESPN2-TVE" defaultCdn="ESPN2_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n599" name="espnu" playerId="espnNetworks" streamType="linear" convivaPlayerName="ESPNU-TVE" defaultCdn="ESPNU_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="ngl" name="goalline" playerId="espnNetworks" streamType="linear" convivaPlayerName="BUZZER-BEATER-TVE" defaultCdn="BUZZER_BEATER_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="false" hasVideoAds="false" hasBannerAds="false"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="nbb" name="buzzerbeater" playerId="espnNetworks" streamType="linear" convivaPlayerName="BUZZER-BEATER-TVE" defaultCdn="BUZZER_BEATER_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="false" hasVideoAds="false" hasBannerAds="false"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n504" name="espnews" playerId="espnNetworks" streamType="linear" convivaPlayerName="ESPNEWS-TVE" defaultCdn="ESPNEWS_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n534" name="espndeportes" playerId="espnNetworks" streamType="linear" convivaPlayerName="ESPNDEPORTES-TVE" defaultCdn="ESPNDEPORTES_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n523" name="sec" playerId="espnNetworks" streamType="linear" convivaPlayerName="SEC-TVE" defaultCdn="SEC_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="false" hasReplays="false" hasClosedCaptions="true" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n323" name="secplus" playerId="domestic" streamType="event" convivaPlayerName="SECPLUS" defaultCdn="SECPLUS_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="false" hasReplays="true" hasClosedCaptions="false" hasVideoAds="true" hasBannerAds="true"><bitrateLimit eventType="replay" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network><network id="n542" name="longhorn" playerId="espnNetworks" streamType="linear" convivaPlayerName="LHN_LIVE_TVE" defaultCdn="LHN_LIVE_AB_AKAMAI" programSwitchMaxTimeoutInSeconds="30" hasStreamCuePoints="true" hasReplays="false" hasClosedCaptions="true" hasVideoAds="false" hasBannerAds="false"><bitrateLimit eventType="live" standardMax="-1" pipMax="-1" mosaicMax="-1" standardFullScreenMax="-1" pipFullScreenMax="-1" mosaicFullScreenMax="-1" /></network></networks>
+			<streamDefinitions></streamDefinitions>
+			<noCuePointTimeoutInMs>15000</noCuePointTimeoutInMs>
+			<streamLimitingPartners>
+					<streamLimitingPartner id="AdobeMaiTai" enabled="true">
+						<metadata><object key="baseUrl" value="https://streams.adobeprimetime.com/v1" /><object key="errorLimit" value="3" /><object key="initiator" value="ESPN" /><object key="programmer" value="ESPN" /></metadata>
+						
+					</streamLimitingPartner>
+				</streamLimitingPartners>
+			
+			<osmfPlugins>
+				<osmfPlugin id="conviva" enabled="true">
+					<source><![CDATA[http://livepassdl.conviva.com/OSMF/c3.ESPN/ConvivaOSMFPlugin_OSMF2_0_FP10_1.swf]]></source>
+					<metadata><object key="customerId" value="c3.ESPN" /><object key="enableLivePassMetrics" value="true" /><object key="serviceUrl" value="http://livepass.conviva.com" /><object key="url" value="http://www.conviva.com" /></metadata>
+				</osmfPlugin><osmfPlugin id="freeWheel" enabled="true">
+					<source><![CDATA[com.espn.video.watch.player.core.ads.videoAd.plugin.FreeWheelPluginInfo]]></source>
+					<metadata></metadata>
+				</osmfPlugin><osmfPlugin id="espnNetworks" enabled="true">
+					<source><![CDATA[com.espn.video.watch.player.core.videoPlayback.player.plugin.EspnNetworksPlugin]]></source>
+					<metadata></metadata>
+				</osmfPlugin><osmfPlugin id="espnVideo" enabled="true">
+					<source><![CDATA[com.espn.video.watch.player.core.videoPlayback.player.plugin.EspnVideoPlugin]]></source>
+					<metadata></metadata>
+				</osmfPlugin><osmfPlugin id="omniture" enabled="false">
+					<source><![CDATA[http://www.espn.com/watchespn/player/omniture.swf?s.configURL=http://www.espn.com/watchespn/player/omniture.xml]]></source>
+					<metadata></metadata>
+				</osmfPlugin><osmfPlugin id="videoPlugin" enabled="true">
+					<source><![CDATA[com.espn.video.watch.player.core.videoPlayback.player.plugin.VideoPlugin]]></source>
+					<metadata></metadata>
+				</osmfPlugin><osmfPlugin id="solaAnalytics" enabled="true">
+					<source><![CDATA[com.akamai.playeranalytics.osmf.OSMFCSMALoaderInfo]]></source>
+					<metadata></metadata>
+				</osmfPlugin>
+			</osmfPlugins><closedCaptionEnabled>true</closedCaptionEnabled>
+			<socialMedia>
+			
+				<shareLink><![CDATA[http://www.espn.com/watchespn/index?id={id}]]></shareLink>
+				<twitter><message sportCode="" league=""><![CDATA[Watching {name} on #WatchESPN {link}]]></message><message sportCode="so" league="fifa"><![CDATA[Watching {name} on WatchESPN #WorldCup {link}]]></message></twitter>
+			</socialMedia>
+			<milestoneEnabledEvents><milestoneEnabledEvent sportCode="fb" league="ncaaf" /><milestoneEnabledEvent sportCode="so" league="mls" /><milestoneEnabledEvent sportCode="so" /><milestoneEnabledEvent sportCode="so" /></milestoneEnabledEvents>
+			<showEventTitleBar>false</showEventTitleBar>
+			<showSchedule>true</showSchedule>
+			<adPassThroughEnabled>true</adPassThroughEnabled>
+		</module>
+		
+		<module id="milestone">
+			<milestoneTimerRefreshInMs>10000</milestoneTimerRefreshInMs>
+			<milestoneBaseUrl><![CDATA[ ]]></milestoneBaseUrl>
+			<milestoneFlvVideoLqKey>FLV_400K_480X270_SD</milestoneFlvVideoLqKey>
+			<milestoneFlvVideoHqKey>FLV_800K_576X324_SD</milestoneFlvVideoHqKey>
+			<milestoneMp4VideoLqKey>MP4_400K_320x180</milestoneMp4VideoLqKey>
+			<milestoneMp4VideoHqKey>MP4_800K_768x432</milestoneMp4VideoHqKey>
+    		<milestoneHdsVideoHqKey>hds</milestoneHdsVideoHqKey>
+		</module>
+		
+		<module id="espn3-player-caster">
+			<enabled>true</enabled>
+			<host>site.caster.espn.com</host>
+			<port>80</port>
+			<globalSession>ESPN3_GLOBAL</globalSession>
+			<eventSession>ESPN3_EVENT</eventSession>
+			<closedCaptionSession>ESPN3_CC</closedCaptionSession>
+			<closedCaptionHeartbeat>ESPN_CC_KEEPALIVE</closedCaptionHeartbeat>
+			<dataTimeoutInMs>60000</dataTimeoutInMs>
+			<globalSessionAccessFilter>4</globalSessionAccessFilter>
+		</module>
+		
+		<module id="espn3-player-ads">
+			<enabled>true</enabled>
+			<adServerUrl><![CDATA[http://bd0dc.v.fwmrm.net/ad/p/1]]></adServerUrl>
+			<adManagerUrl><![CDATA[http://adm.fwmrm.net/p/watchespn_prod/AdManager.swf]]></adManagerUrl>
+			
+			<networkId>87146</networkId>
+			<profileId>:watchespn_osmf</profileId>
+			<cacheBuster>600000</cacheBuster>
+			<videoAds>
+				<adTimeMarginOfError>0</adTimeMarginOfError>
+				<preRollEnabled>true</preRollEnabled>
+				<companionAdUnits><adUnit id="ad300x250" height="250" width="300"/><adUnit id="ad300x600" height="600" width="300"/><adUnit id="ad728x90" height="90" width="728"/></companionAdUnits>
+			</videoAds>
+			<staticAds>
+				<eventTriggeredAdUnits></eventTriggeredAdUnits>
+				
+				<sliderAdUnit id="sliderAdUnit" width="480" height="70" firstShowInterval="300000" refreshInterval="900000" visibleTime="15000"/>
+				
+			</staticAds>
+		</module>
+		<module id="omniture-tracking">
+			<enabled>true</enabled><trackingServer><![CDATA[sw88.espn.com]]></trackingServer><heartbeatServer><![CDATA[espn.hb.omtrdc.net]]></heartbeatServer><marketingCloudOrg><![CDATA[EE0201AC512D2BE80A490D4C@AdobeOrg]]></marketingCloudOrg><playerName><![CDATA[watchespn]]></playerName><playerNameAlt><![CDATA[watchespn]]></playerNameAlt><playerVersion><![CDATA[3.0]]></playerVersion><playerType><![CDATA[watchespn Player]]></playerType><channel><![CDATA[espn]]></channel><siteSection><![CDATA[watchespn]]></siteSection><account><![CDATA[wdgesp360]]></account><pageUrl><![CDATA[https://www.espn.com/espn3/player]]></pageUrl></module>
+		<module id="watchespn-player-comscore">
+			<enabled>true</enabled><clientId><![CDATA[3000005]]></clientId><beaconUrl><![CDATA[http://b.scorecardresearch.com/p]]></beaconUrl><c1><![CDATA[1]]></c1><c2><![CDATA[3000005]]></c2><c3><![CDATA[*null]]></c3><c4><![CDATA[13258521]]></c4><c5><![CDATA[TBD]]></c5><c6><![CDATA[TBD]]></c6><cv><![CDATA[TBD]]></cv><rn><![CDATA[TBD]]></rn><c4StreamSense><![CDATA[watchespncom]]></c4StreamSense><ns_st_pu><![CDATA[*null]]></ns_st_pu><ns_st_pr><![CDATA[*null]]></ns_st_pr><ns_st_ep><![CDATA[*null]]></ns_st_ep><ns_st_cu><![CDATA[none]]></ns_st_cu><ns_st_ci><![CDATA[0]]></ns_st_ci></module>
+		<module id="espn3-player-nielsen">
+			<enabled>true</enabled><apid><![CDATA[P99DBB4CE-5B3E-4909-AB80-BD7D15E83270]]></apid><nsdkv><![CDATA[511]]></nsdkv><apn><![CDATA[OSMF]]></apn><sfcode><![CDATA[dcr]]></sfcode><nol_sdkDebug><![CDATA[ERROR]]></nol_sdkDebug><apiUrl><![CDATA[http://api-app.espn.com/v1/watch/listings]]></apiUrl><swfUrl><![CDATA[http://a.espncdn.com/espn360/builds/nielsen/ggce370.swf]]></swfUrl></module>
+		<module id="sola-analytics">
+			<enabled>true</enabled><swfUrl><![CDATA[http://79423.analytics.edgekey.net/csma/plugin/espn2014/csma.swf]]></swfUrl><configUrl><![CDATA[http://ma123-r.analytics.edgesuite.net/config/beacon-6164.xml]]></configUrl></module>
+		
+	</modules>
+	<environment>
+		<selectedEnvironment>prod</selectedEnvironment>
+		<prod><feed id="adobePassProviders"><![CDATA[http://api-app.espn.com/v1/watch/clients/watchespn-flash/providers?_accept=text/xml&mvpd=true]]></feed><feed id="bulkLoader"><![CDATA[https://www.espn.com/watchespn/feeds/bulkLoader]]></feed><feed id="liveEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=live]]></feed><feed id="maintainSession"><![CDATA[https://broadband.espn.com/espn3/auth/watchespn/maintainSession?v=1.5]]></feed><feed id="milestones"><![CDATA[https://secure.espn.com/espn3/feeds/marker/getMarkers]]></feed><feed id="provider"><![CDATA[http://api-app.espn.com/v1/watch/clients/watchespn-flash/providers?_accept=text/xml&mvpd=false]]></feed><feed id="replayEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=replay]]></feed><feed id="searchEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=search]]></feed><feed id="singleEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=event]]></feed><feed id="startSession"><![CDATA[https://broadband.espn.com/espn3/auth/watchespn/startSession?v=1.5]]></feed><feed id="startupEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=event]]></feed><feed id="switchSession"><![CDATA[https://broadband.espn.com/espn3/auth/watchespn/switchSession?v=1.5]]></feed><feed id="upcomingEvent"><![CDATA[https://secure.espn.com/watchespn/feeds/startup?action=upcoming]]></feed><feed id="userData"><![CDATA[https://broadband.espn.com/espn3/auth/watchespn/userData?format=xml]]></feed><feed id="blackout"><![CDATA[https://www.espn.com/watchespn/faq#blackout]]></feed></prod>
+	</environment>
+	
+</config>

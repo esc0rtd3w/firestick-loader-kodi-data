@@ -1,0 +1,258 @@
+# Kodi language file
+# Addon Name: Metadata and Artwork module
+# Addon id: script.module.metadatautils
+# Addon Provider: marcelveldt
+msgid ""
+msgstr ""
+"Project-Id-Version: script.module.metadatautils\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: 2017-09-24 12:43+0300\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.3\n"
+
+msgctxt "#32000"
+msgid "PVR Artwork"
+msgstr "גרפיקה PVR"
+
+msgctxt "#32001"
+msgid "PVR metadata/artwork scraper - needs skin or addon support!"
+msgstr "אוסף המידע PVR במידע-מטא/גרפיקה - צריך תמיכה במעטפת או בהרחבה!"
+
+msgctxt "#32002"
+msgid "Enable PVR artwork/metadata only for TV recordings"
+msgstr "אפשר גרפיקה/מטא-נתונים רק עבור הקלטות טלוויזיה PVR"
+
+msgctxt "#32003"
+msgid "Enable online scraper (tvdb,tmdb,fanart.tv)"
+msgstr "אפשר אוספי מידע מקוונים (tvdb,tmdb,fanart.tv)"
+
+msgctxt "#32004"
+msgid "Allow Google Images as fallback for thumbs if primary scraping fails"
+msgstr "אפשר שימוש בגוגל תמונות לתמונות ממוזערות, אם אוספי הנתונים נכשלים"
+
+msgctxt "#32005"
+msgid "Lookup artwork in a custom folder (e.g. recordings folder)"
+msgstr "בדוק גרפיקה בתיקייה מותאם אישית (כגון תיקיית הקלטות)"
+
+msgctxt "#32006"
+msgid "Path to the custom folder"
+msgstr "נתיב לתיקיה מותאמת אישית"
+
+msgctxt "#32007"
+msgid "Download artwork to my custom folder"
+msgstr "הורד גרפיקה לתיקיה שלי המותאמת אישית"
+
+msgctxt "#32008"
+msgid "Advanced section: finetune the scraper"
+msgstr "מתקדם: כיוונון עדין לאוסף הנתונים"
+
+msgctxt "#32009"
+msgid "Use | as delimiter to enter multiple values"
+msgstr "תשתמש ב-| כמפריד להזנת ערכים מרובים"
+
+msgctxt "#32010"
+msgid "Channels to ignore"
+msgstr "ערוצים להתעלמות"
+
+msgctxt "#32011"
+msgid "Titles to ignore"
+msgstr "שמות להתעלמות"
+
+msgctxt "#32012"
+msgid "Split title on character (use only first part)"
+msgstr "פצל את השם לתווים (שימוש בחלק הראשון בלבד)"
+
+msgctxt "#32013"
+msgid "Characters to replace by space in title"
+msgstr "תווים בשם שיוחלפו על ידי רווח "
+
+msgctxt "#32014"
+msgid "Characters to strip from title"
+msgstr "תווים שיוסרו מהשם"
+
+msgctxt "#32015"
+msgid "Music Artwork"
+msgstr "גרפיקת מוזיקה"
+
+msgctxt "#32016"
+msgid "Provides rich metadata and artwork for skins and addons"
+msgstr "מספק מידע-מטא עשיר ויצירות אמנות עבור מעטפות והרחבות"
+
+msgctxt "#32017"
+msgid "Works with both library and online sources (radio)"
+msgstr "עובד עם ספריה וגם עם מקורות מקוונים (רדיו)"
+
+msgctxt "#32018"
+msgid "Enable online scraper"
+msgstr "אפשר אוסף נתונים מקוון"
+
+msgctxt "#32019"
+msgid "Lookup artwork in a custom folder"
+msgstr "בדוק גרפיקה בתיקייה מותאמת אישית"
+
+msgctxt "#32020"
+msgid "Path to the custom folder"
+msgstr "נתיב לתיקיה מותאמת אישית"
+
+msgctxt "#32021"
+msgid "Lookup artwork in my music folders (library)"
+msgstr "בדיקת הגרפיקה בתיקיות המוסיקה שלי (ספרייה)"
+
+msgctxt "#32022"
+msgid "Download (missing) artwork to my music folders"
+msgstr "הורד גרפיקה (חסרה) לתיקיות המוזיקה שלי"
+
+msgctxt "#32023"
+msgid "Download (missing) artwork to my custom folder"
+msgstr "הורד גרפיקה (חסרה) לתיקיה שלי המותאמת אישית"
+
+msgctxt "#32024"
+msgid "Use custom Musicbrainz mirror"
+msgstr "שימוש במראה Musicbrainz מותאם אישית"
+
+msgctxt "#32025"
+msgid "Skip if genre contains any of these genres"
+msgstr "דלג אם הסגנון מכיל כל הסגנונות הללו"
+
+msgctxt "#32026"
+msgid "Skip news/weather/sports/commercial etc. (depends on correct epg info)"
+msgstr "דלג על חדשות/מזג אוויר/ספורט/מסחר וכדומה (תלוי במידע נכון של epg)"
+
+msgctxt "#32027"
+msgid "One or more filters are active for this item. Are you sure you want to proceed ?"
+msgstr "מסנן אחד או יותר פעילים עבור פריט זה. האם אתה בטוח שברצונך להמשיך?"
+
+msgctxt "#32028"
+msgid "Refresh (auto lookup)"
+msgstr "רענון (בדיקת מידע אוטומטית)"
+
+msgctxt "#32029"
+msgid "Refresh (manual lookup)"
+msgstr "רענון (בדיקת מידע ידנית)"
+
+msgctxt "#32030"
+msgid "Remove channel from ignore list"
+msgstr "הסר ערוץ מרשימת התעלמות"
+
+msgctxt "#32031"
+msgid "Add channel to ignore list"
+msgstr "הוסף ערוץ לרשימת התעלמות"
+
+msgctxt "#32032"
+msgid "Remove title from ignore list"
+msgstr "הסר שם מרשימת התעלמות"
+
+msgctxt "#32033"
+msgid "Add title to ignore list"
+msgstr "הוסף שם לרשימת התעלמות"
+
+msgctxt "#32034"
+msgid "Configure advanced settings"
+msgstr "קביעת תצורה של הגדרות מתקדמות"
+
+msgctxt "#32035"
+msgid "Settings for PVR artwork"
+msgstr "הגדרות עבור גרפיקה PVR"
+
+msgctxt "#32036"
+msgid "Manual configure artwork"
+msgstr "הגדרת גרפיקה ידנית"
+
+msgctxt "#32037"
+msgid "Continuing"
+msgstr "ממשיך"
+
+msgctxt "#32038"
+msgid "Ended"
+msgstr "הסתיים"
+
+msgctxt "#32040"
+msgid "Released"
+msgstr "שוחרר"
+
+msgctxt "#32041"
+msgid "Is the selected PVR Title a movie or tvshow ?"
+msgstr "האם השם שנבחר ל-PVR הוא של סרט או סדרה?"
+
+msgctxt "#32042"
+msgid "Movie"
+msgstr "סרט"
+
+msgctxt "#32043"
+msgid "Tvshow"
+msgstr "סדרה"
+
+msgctxt "#32044"
+msgid "Other"
+msgstr "אחר"
+
+msgctxt "#32045"
+msgid "Personal API key for Fanart.TV"
+msgstr "מפתח API מותאם אישית ל-Fanart.tv"
+
+msgctxt "#32046"
+msgid "see www.fanart.tv for more details about personal and VIP memberships"
+msgstr "בדוק את www.fanart.tv לקבלת פרטים נוספים אודות מפתח API אישי וחברויות VIP"
+
+msgctxt "#32047"
+msgid "Scraper settings"
+msgstr "הגדרות אוסף נתונים"
+
+msgctxt "#32048"
+msgid "Enable theaudiodb for metadata/artwork"
+msgstr "אפשר שימוש ב-theaudiodb לקבלת מידע-מטא/גרפיקה"
+
+msgctxt "#32049"
+msgid "Enable TheAudioDb for metadata/artwork"
+msgstr "אפשר שימוש ב-TheAudioDb לקבלת מידע-מטא/גרפיקה"
+
+msgctxt "#32050"
+msgid "Enable last.fm for metadata"
+msgstr "אפשר שימוש ב-last.fm לקבלת מידע-מטא"
+
+msgctxt "#32051"
+msgid "Enable fanart.tv for artwork"
+msgstr "אפשר שימוש ב-fanart.tv לקבלת גרפיקה"
+
+msgctxt "#32052"
+msgid "API keys"
+msgstr "מפתחות API"
+
+msgctxt "#32053"
+msgid "Unlock full features by providing custom API keys"
+msgstr "בטל את הנעילה של תכונות מלאות, על ידי מתן מפתחות API מותאמים אישית"
+
+msgctxt "#32054"
+msgid "Patreon API-key for omdbapi.com"
+msgstr "מפתח Patreon API -עבור omdbapi.com"
+
+msgctxt "#32055"
+msgid "Personal developer API-key for TMDB"
+msgstr "מפתח API אישי של מפתח (developer) עבור TMDB"
+
+msgctxt "#32056"
+msgid "Consider donating to these great projects providing you with great metadata"
+msgstr "שקול תרומה לפרויקטים הענקיים הללו שמספקים לך מידע-מטא אדיר"
+
+msgctxt "#32057"
+msgid "Info"
+msgstr "‎מידע"
+
+msgctxt "#32058"
+msgid "This modules uses the following sites/services to grab metadata"
+msgstr "המודולים הללו משתמשים באתרים/השירותים הבאים כדי למשוך מידע-מטא"
+
+msgctxt "#32059"
+msgid "Enable debug logging (regardless of Kodi log level)"
+msgstr "הפעל רישום של איתור באגים (ללא קשר להגדרה בקודי של רמת יומן)"
+
+msgctxt "#32060"
+msgid "Limit number of extrafanarts to download (0 is no limit)"
+msgstr "להגביל מספר אקסטרה פאנארט להורדה (0 = ללא הגבלה)"

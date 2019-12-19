@@ -9,4 +9,4 @@ You can ask the script to check whether a shortcut with a given action is presen
 | `[propertyName]` | | The name of the skin boolean that will be set or cleared, dependant on existance of action |
 | `[action]` | | The action to check for |
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.aresmusic"
+       name="[COLORblue]Ares[/COLOR] [COLORwhite]Music[/COLOR]"
+       version="1.0.3"
+       provider-name="[COLORblue]Ares[/COLOR][COLORwhite]Project[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+    <import addon="script.module.livestreamer" optional="true"/>
+    <import addon="script.module.pyamf" optional="true"/>
+    <import addon="script.module.addon.common" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>audio video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>A MUSIC SOURCE FOR ALL</summary>
+    <description>A one stop shop for all music needs brought to you from  [COLORblue]Ares[/COLOR][COLORwhite]Project[/COLOR], Formerly The-Music-Source so big thanks to Matt for this..    
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>

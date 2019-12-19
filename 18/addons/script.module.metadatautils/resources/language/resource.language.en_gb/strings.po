@@ -220,3 +220,38 @@ msgctxt "#32051"
 msgid "Enable fanart.tv for artwork"
 msgstr ""
 
+msgctxt "#32052"
+msgid "API keys"
+msgstr ""
+
+msgctxt "#32053"
+msgid "Unlock full features by providing custom API keys"
+msgstr ""
+
+msgctxt "#32054"
+msgid "Patreon API-key for omdbapi.com"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Personal developer API-key for TMDB"
+msgstr ""
+
+msgctxt "#32056"
+msgid "Consider donating to these great projects providing you with great metadata"
+msgstr ""
+
+msgctxt "#32057"
+msgid "Info"
+msgstr ""
+
+msgctxt "#32058"
+msgid "This modules uses the following sites/services to grab metadata"
+msgstr ""
+
+msgctxt "#32059"
+msgid "Enable debug logging (regardless of Kodi log level)"
+msgstr ""
+
+msgctxt "#32060"
+msgid "Limit number of extrafanarts to download (0 is no limit)"
+msgstr ""

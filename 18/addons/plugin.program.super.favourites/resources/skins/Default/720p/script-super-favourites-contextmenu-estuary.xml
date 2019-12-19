@@ -1,0 +1,110 @@
+<window>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<include>Animation_DialogPopupOpenClose</include>
+	
+	<controls>
+		<control type="group" id="5000">
+			<posx>470</posx>
+			<posy>255</posy> 
+			
+			<control type="image">
+				<left>-1920</left>
+				<top>-1080</top>
+				<width>5760</width>
+				<height>3240</height>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<texture colordiffuse="B0FFFFFF" fallback="fallback/black.png">colors/black.png</texture>
+			</control>
+			
+			<control type="image" id="5001">
+				<description>Background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>342</width>
+				<height>0</height>						       
+				<texture border="2" fallback="fallback/dialog-bg-solid.png">dialogs/dialog-bg-solid.png</texture>
+			</control>
+			
+			<control type="list" id="3000">
+				<description>List to hold 'buttons'</description>
+				<posx>20</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>628</height>
+				<onright>3001</onright>
+				<onleft>3001</onleft>  
+				
+				<itemlayout width="300" height="38">                
+					<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>38</height>
+					<texture fallback="fallback/separator.png">lists/separator.png</texture>
+					</control>
+				
+					<control type="label">
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>38</height>
+					<font>fontContextMenu</font>
+					<textcolor>white</textcolor>
+					<aligny>center</aligny>		    
+					<align>center</align>
+					<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+			
+				<focusedlayout width="300" height="38">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>38</height>
+						<texture fallback="fallback/separator.png">lists/separator.png</texture>
+						</control>    
+						<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>280</width>
+						<height>38</height>
+						<font>fontContextMenu</font>
+						<textcolor>white</textcolor>
+						<aligny>center</aligny>		    
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>
+				
+					<control type="image">
+						<visible>Control.HasFocus(3000)</visible>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<height>38</height>                                        
+						<texture colordiffuse="button_focus" fallback="fallback/focus.png">lists/focus.png</texture>
+					</control>
+				
+					<control type="label">
+						<visible>Control.HasFocus(3000)</visible>
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>280</width>
+						<height>38</height>
+						<font>fontContextMenu</font>
+						<textcolor>white</textcolor>
+						<aligny>center</aligny>		    
+						<align>center</align>
+						<info>ListItem.Label</info>
+					</control>                           
+				</focusedlayout>
+			</control>					
+		</control>		
+	</controls>
+</window>

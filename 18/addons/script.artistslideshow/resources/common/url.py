@@ -2,41 +2,41 @@
 
 import socket
 import requests as _requests
-    
 
-class URL():
+
+class URL( object ):
 
     def __init__( self, returntype='text', headers='', timeout=10 ):
         self.timeout = timeout
         self.headers = headers
         self.returntype = returntype
 
-    
+
     def Get( self, url, **kwargs ):
         params, data = self._unpack_args( kwargs )
         return self._urlcall( url, params, '', 'get' )
-    
-    
+
+
     def Post( self, url, **kwargs ):
         params, data = self._unpack_args( kwargs )
-        return self._urlcall( url, params, data, 'post' ) 
-    
-    
+        return self._urlcall( url, params, data, 'post' )
+
+
     def Delete( self, url, **kwargs ):
         params, data = self._unpack_args( kwargs )
         return self._urlcall( url, params, data, 'delete' )
-    
-    
+
+
     def _urlcall( self, url, params, data, urltype ):
-        loglines = []        
+        loglines = []
         urldata = ''
         try:
             if urltype == "get":
-                urldata = _requests.get( url, params=params, timeout=self.timeout, verify=False )
+                urldata = _requests.get( url, params=params, timeout=self.timeout )
             elif urltype == "post":
-                urldata = _requests.post( url, params=params, data=data, headers=self.headers, timeout=self.timeout, verify=False )
+                urldata = _requests.post( url, params=params, data=data, headers=self.headers, timeout=self.timeout )
             elif urltype == "delete":
-                urldata = _requests.delete( url, params=params, data=data, headers=self.headers, timeout=self.timeout, verify=False )
+                urldata = _requests.delete( url, params=params, data=data, headers=self.headers, timeout=self.timeout )
             loglines.append( "the url is: " + urldata.url )
             loglines.append( 'the params are: ')
             loglines.append( params )
@@ -60,14 +60,13 @@ class URL():
         if urldata:
             success = True
             loglines.append( 'returning URL as ' + self.returntype )
-            try:
-                if self.returntype == 'text':
-                    data = urldata.text
-                elif self.returntype == 'binary':
-                    data = urldata.content
-                elif self.returntype == 'json':
-                    data = urldata.json()
-            except:
+            if self.returntype == 'text':
+                data = urldata.text
+            elif self.returntype == 'binary':
+                data = urldata.content
+            elif self.returntype == 'json':
+                data = urldata.json()
+            else:
                 success = False
                 data = ''
                 loglines.append( 'unable to convert returned object to acceptable type' )
@@ -78,16 +77,16 @@ class URL():
         loglines.append( '-----URL OBJECT RETURNED-----' )
         loglines.append( data )
         return success, loglines, data
-    
-    
+
+
     def _unpack_args( self, kwargs ):
         try:
             params = kwargs['params']
-        except:
+        except IndexError:
             params = {}
         try:
             data = kwargs['data']
-        except:
+        except KeyError:
             if self.returntype == 'json':
                 data = []
             else:

@@ -1,6 +1,6 @@
 # Additional shortcuts to choose from
 
-You may wish to provide additional shortcuts for the user to choose from. There are two methods that can be used for this, either using [Custom Groupings](./Custom groupings.md), or by specifying additional shortcuts in the skins [overrides.xml](./overrides.md) file.
+You may wish to provide additional shortcuts for the user to choose from. There are two methods that can be used for this, either using [Custom Groupings](./Custom%20groupings.md), or by specifying additional shortcuts in the skins [overrides.xml](./overrides.md) file.
 
 `<shortcut label="[label]" type="[type]" grouping="[grouping]" thumbnail="[thumbnail]" icon="[icon]" condition="[Boolean condition]">[action]</shortcut>`
 
@@ -37,4 +37,4 @@ Shortcut groupings within the management dialog are made up of several smaller g
  
 If you do not specify a grouping, it will be added to the end of the common group.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

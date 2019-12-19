@@ -152,6 +152,11 @@ class Template():
                     if "name" in element.attrib and element.attrib.get( "name" ) == "labelID":
                         visibilityName = element.text
                         break
+
+                # Handle auto visibility condition if the labelID is a number that translates to 
+                # a localised string
+                if visibilityName.isdigit() and xbmc.getLocalizedString(int(visibilityName)) != "":
+                    visibilityName = "$LOCALIZE[%s]" %(visibilityName)
                 
                 finalVisibility = "[%s + %s(Container(::SUBMENUCONTAINER::).ListItem.Property(labelID),%s)]" %( visibilityCondition, STRINGCOMPARE, visibilityName )
 

@@ -1,14 +1,13 @@
-#v.0.1.0
+#v.0.3.0
 
-import os, time, sys, random, xbmc, xbmcvfs
-from ..common.url import URL
-from ..common.fileops import readFile, writeFile, deleteFile, checkPath
-if sys.version_info >= (2, 7):
-    import json as _json
-else:
-    import simplejson as _json
+import base64, os, time, random
+from kodi_six import xbmcvfs
+from resources.common.url import URL
+from resources.common.fileops import readFile, writeFile, deleteFile, checkPath
+from kodi_six.utils import py2_encode
+import json as _json
 try:
-    import fanarttv_info as settings
+    from . import fanarttv_info as settings
 except ImportError:
     clowncar = ''
 try:
@@ -16,7 +15,7 @@ try:
 except AttributeError:
     clowncar = ''
 
-class objectConfig():
+class objectConfig( object ):
     def __init__( self ):
         secsinweek = int( 7*24*60*60 )
         self.URL = 'http://webservice.fanart.tv/v3/music/'
@@ -35,8 +34,8 @@ class objectConfig():
 
     def provides( self ):
         return ['images']
-        
-        
+
+
     def getImageList( self, img_params ):
         self.loglines = []
         url_params = {}
@@ -44,7 +43,7 @@ class objectConfig():
         filepath = os.path.join( img_params.get( 'infodir', '' ), self.FILENAME )
         cachefilepath = os.path.join( img_params.get( 'infodir', '' ), self.CACHETIMEFILENAME )
         url = self.URL + img_params.get( 'mbid', '' )
-        url_params['api_key'] = clowncar.decode( 'base64' )
+        url_params['api_key'] = base64.b64decode(clowncar.encode('ascii')).decode('ascii')
         if img_params.get( 'clientapikey', False ):
             self.HASCLIENTKEY = True
             url_params['client_key'] = img_params.get( 'clientapikey', '' )
@@ -54,7 +53,7 @@ class objectConfig():
                 self.CACHEEXPIRE['high'] = self.CACHEEXPIREWITHDONATION
             else:
                 self.CACHEEXPIRE['low'] = self.CACHEEXPIREWITHCLIENTKEY
-                self.CACHEEXPIRE['high'] = self.CACHEEXPIREWITHCLIENTKEY            
+                self.CACHEEXPIRE['high'] = self.CACHEEXPIREWITHCLIENTKEY
         json_data = self._get_data( filepath, cachefilepath, url, url_params )
         if json_data:
             image_list = json_data.get( 'artistbackground', [] )
@@ -77,7 +76,7 @@ class objectConfig():
         else:
             success = self._put_cache_time( cachefilepath )
         if success:
-            rloglines, rawdata = readFile( cachefilepath ) 
+            rloglines, rawdata = readFile( cachefilepath )
             self.loglines.extend( rloglines )
         try:
             cachetime = int( rawdata )
@@ -98,7 +97,7 @@ class objectConfig():
             success, uloglines, json_data = self.JSONURL.Get( url, params=url_params )
             self.loglines.extend( uloglines )
             if success:
-                success, wloglines = writeFile( _json.dumps( json_data ).encode( 'utf-8' ), filepath )
+                success, wloglines = writeFile( py2_encode( _json.dumps( json_data ) ), filepath )
                 self.loglines.extend( wloglines )
         exists, cloglines = checkPath( filepath, False )
         self.loglines.extend( cloglines )

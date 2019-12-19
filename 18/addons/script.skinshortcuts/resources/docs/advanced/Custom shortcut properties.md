@@ -4,7 +4,7 @@ You can use Skin Shortcuts to add a custom property to any shortcut. You can eit
 
 ## Set to a specific value
 
-To set the property to a specific value, include button 404 in your [Management Dialog](../started/Management Dialog.md). Set the window property `customProperty` to the name of the property you want to set, `customValue` to the value of the property, and send a click to 404.
+To set the property to a specific value, include button 404 in your [Management Dialog](../started/Management%20Dialog.md). Set the window property `customProperty` to the name of the property you want to set, `customValue` to the value of the property, and send a click to 404.
 
 ```
 <onclick>SetProperty(customProperty,myCustomProperty)</onclick>
@@ -100,7 +100,7 @@ Note:- This will be applied to all shortcuts when the menu is built, and will sh
 
 ## Let user choose a property
 
-If using a `<propertySettings />` you can define the ID of the button that will allow the user to select the custom property. Just include a button with the ID you specify in your Management Dialog or include it in the [context menu](./Context menu.md).
+If using a `<propertySettings />` you can define the ID of the button that will allow the user to select the custom property. Just include a button with the ID you specify in your Management Dialog or include it in the [context menu](./Context%20menu.md).
 
 Otherwise, you need to include button 404 in your Management Dialog, then set the window property `chooseProperty` to the `[Property]` you want to set, and send a click to 404.
 
@@ -110,4 +110,4 @@ When using `<propertySettings />`, it's possible to set the `buttonID` to the sa
 
 In this case, the property select dialog will be shown to the user after the normal action associated with that button has completed. However, the property select dialog will *not* show if the user cancels, or if they select a 'None' option provided by the default control.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

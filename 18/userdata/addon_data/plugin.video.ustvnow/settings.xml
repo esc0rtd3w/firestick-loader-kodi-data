@@ -1,0 +1,8 @@
+<settings version="2">
+    <setting id="Enable_Debugging" default="true">false</setting>
+    <setting id="uEPG_Settings" default="true"></setting>
+    <setting id="User_Device">9e7bbd6b-a9ba-4a3c-aa7b-a7682674e48b</setting>
+    <setting id="User_Email" default="true"></setting>
+    <setting id="User_Password" default="true"></setting>
+    <setting id="User_Token">e04783b5-da80-4087-a399-e728b006ee92</setting>
+</settings>

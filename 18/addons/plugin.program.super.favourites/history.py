@@ -54,7 +54,7 @@ def contains(keyword):
     return False
 
 
-def add(keyword, image, fanart):
+def add(keyword, image, fanart, meta):
     if not exists():
         try:
             sfile.makedirs(FILEPATH)
@@ -65,10 +65,12 @@ def add(keyword, image, fanart):
         return False
 
     newFave = []
+    
+    cmd = 'fanart=%s&meta=%s' % (fanart, urllib.quote_plus(meta))
 
     newFave.append(keyword)
     newFave.append(image)
-    newFave.append('%s?sf_options=fanart=%s_options_sf' % (keyword, urllib.quote_plus(fanart)))
+    newFave.append('%s?sf_options=%s_options_sf' % (keyword, urllib.quote_plus(cmd)))
 
     return favourite.addFave(FILENAME, newFave)
 

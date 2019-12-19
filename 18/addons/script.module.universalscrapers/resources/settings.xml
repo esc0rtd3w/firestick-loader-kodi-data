@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	 <category label = "General">
+		<setting id="cache_enabled" type="bool" label="Enable Caching" default="true"/>
+		<setting id="tmdb_test" type="text" label="TMDB list url (just last 5 digits)" default=""/>
+		<setting id="dev_log" type="bool" label="Enable Scraper Log [DEV]" default="false"/>
+		<setting label="Disable All" type="action" option="close" action="RunPlugin(plugin://script.module.universalscrapers/?mode=DisableAll)"/>
+		<setting label="Enable All" type="action" option="close" action="RunPlugin(plugin://script.module.universalscrapers/?mode=EnableAll)"/>
+		<setting label="Deletelog" type="action" option="close" action="RunPlugin(plugin://script.module.universalscrapers/?mode=Deletelog)"/>
+	</category>
+	<category label="Scrapers 1">
+		<setting label="AnimeToon" type="lsep"/>
+		<setting id="AnimeToon_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="BNWmovies" type="lsep"/>
+		<setting id="BNWmovies_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Cmovies" type="lsep"/>
+		<setting id="Cmovies_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="CoolTV" type="lsep"/>
+		<setting id="CoolTV_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="ExtraMovies" type="lsep"/>
+		<setting id="ExtraMovies_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="EZTV" type="lsep"/>
+		<setting id="EZTV_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="FreeMusic" type="lsep"/>
+		<setting id="FreeMusic_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="GoWatchSeries" type="lsep"/>
+		<setting id="GoWatchSeries_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Idope" type="lsep"/>
+		<setting id="Idope_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Movie Jesus" type="lsep"/>
+		<setting id="Movie Jesus_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="MP3guild" type="lsep"/>
+		<setting id="MP3guild_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="OceanofMovies" type="lsep"/>
+		<setting id="OceanofMovies_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="one337x" type="lsep"/>
+		<setting id="one337x_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="PirateBay" type="lsep"/>
+		<setting id="PirateBay_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="PirateIro" type="lsep"/>
+		<setting id="PirateIro_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Primewire" type="lsep"/>
+		<setting id="Primewire_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="PutlockerOnline" type="lsep"/>
+		<setting id="PutlockerOnline_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Putlockers" type="lsep"/>
+		<setting id="Putlockers_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="SeeHD" type="lsep"/>
+		<setting id="SeeHD_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="SeriesOnline8" type="lsep"/>
+		<setting id="SeriesOnline8_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="SwatchSeries" type="lsep"/>
+		<setting id="SwatchSeries_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="TwoDDL" type="lsep"/>
+		<setting id="TwoDDL_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="WatchEpisodes4" type="lsep"/>
+		<setting id="WatchEpisodes4_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="WatchEpSeries" type="lsep"/>
+		<setting id="WatchEpSeries_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="WatchSeries" type="lsep"/>
+		<setting id="WatchSeries_enabled" type="bool" label="Enabled" default="true"/>
+		<setting label="Zooqle" type="lsep"/>
+		<setting id="Zooqle_enabled" type="bool" label="Enabled" default="true"/>
+	</category>
+</settings>

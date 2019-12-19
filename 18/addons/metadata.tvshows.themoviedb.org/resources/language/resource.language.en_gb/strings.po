@@ -51,3 +51,11 @@ msgstr ""
 msgctxt "#30010"
 msgid "Also get ratings from IMDb"
 msgstr ""
+
+msgctxt "#30011"
+msgid "Certification Prefix"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Certification Country"
+msgstr ""

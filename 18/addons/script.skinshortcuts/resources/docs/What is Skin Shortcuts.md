@@ -10,4 +10,4 @@ Skin Shortcuts writes an additional file into the skins directory - script-skins
 
 The additional properties - for widgets, backgrounds and so forth - can be used by the skinner to decide what other 'furniture' should be displayed, and to fill the contents of it, such as the texture in an image control.
 
-***Quick links*** - [Readme](../../README.md) - [Getting Started](./started/Getting Started.md) - [Advanced Usage](./advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

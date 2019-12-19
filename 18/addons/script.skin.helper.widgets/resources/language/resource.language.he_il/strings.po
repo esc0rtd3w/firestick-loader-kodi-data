@@ -1,4 +1,4 @@
-﻿# Kodi language file
+# Kodi language file
 # Addon Name: Skin Helper Widgets
 # Addon id: script.skin.helper.widgets
 # Addon Provider: marcelveldt
@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: 2014-10-26 17:05+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: tomer953 <tomer953@gmail.com>\n"
-"Language-Team: LANGUAGE\n"
+"PO-Revision-Date: 2017-10-17 16:36+0300\n"
+"Last-Translator: A. Dambledore\n"
+"Language-Team: Eng2Heb\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.4\n"
 
 msgctxt "#32000"
 msgid "Favourites"
@@ -26,7 +27,7 @@ msgstr "מדיה מהמועדפים"
 
 msgctxt "#32002"
 msgid "Next Episodes"
-msgstr "פרקים הבאים"
+msgstr "vפרקים הבאים"
 
 msgctxt "#32003"
 msgid "Recommended Movies"
@@ -47,6 +48,18 @@ msgstr "סרטים דומים"
 msgctxt "#32007"
 msgid "In progress and Recommended Media"
 msgstr "מדיה בתהליך ומדיה מומלצת"
+
+msgctxt "#32008"
+msgid "Random Episodes"
+msgstr "פרקים באקראי"
+
+msgctxt "#32009"
+msgid "Recommended Episodes"
+msgstr "‎פרקים מומלצים"
+
+msgctxt "#32010"
+msgid "In progress and recommended Episodes"
+msgstr "התקדמות פרקים, פרקים מומלצים"
 
 msgctxt "#32011"
 msgid "In progress Media"
@@ -74,23 +87,23 @@ msgstr "שירים מומלצים"
 
 msgctxt "#32017"
 msgid "PVR Channel groups"
-msgstr ""
+msgstr "קבוצות ערוצי PVR"
 
 msgctxt "#32018"
 msgid "Recent recordings"
-msgstr ""
+msgstr "הקלטות אחרונות"
 
 msgctxt "#32019"
 msgid "Next unwatched recordings"
-msgstr ""
+msgstr "הקלטות הבאות שטרם ניצפו"
 
 msgctxt "#32020"
 msgid "TV Channels"
-msgstr ""
+msgstr "ערוצי טלוויזיה"
 
 msgctxt "#32021"
 msgid "Timers"
-msgstr ""
+msgstr "תזמונים"
 
 msgctxt "#32022"
 msgid "Similar Media"
@@ -102,7 +115,7 @@ msgstr "יישומונים"
 
 msgctxt "#32024"
 msgid "Enable artwork lookups"
-msgstr ""
+msgstr "לאפשר איתור גרפיקה"
 
 msgctxt "#32025"
 msgid "Show specials in episode widgets"
@@ -126,12 +139,168 @@ msgstr "סרטים בתהליך וסרטים מומלצים"
 
 msgctxt "#32030"
 msgid "TV Channels (with artwork)"
-msgstr ""
+msgstr "ערוצי טלוויזיה (עם גרפיקה)"
 
 msgctxt "#32031"
 msgid "Next unwatched recordings (reversed)"
-msgstr ""
+msgstr "הקלטות הבאות שטרם ניצפו (הפוך)"
 
 msgctxt "#32032"
 msgid "In-progress and random movies"
 msgstr "סרטים בתהליך וסרטים אקראיים"
+
+msgctxt "#32033"
+msgid "Random albums"
+msgstr "‎אלבומים אקראיים"
+
+msgctxt "#32034"
+msgid "Random songs"
+msgstr "שירים אקראיים"
+
+msgctxt "#32035"
+msgid "Hide watched items in video widgets"
+msgstr "הסתר פריטים שנצפו ביישומון הווידאו"
+
+msgctxt "#32036"
+msgid "Only use in-progress shows in next episodes widget"
+msgstr "תשתמש רק בסדרות שבתהליך, ליישומון הפרק הבא"
+
+msgctxt "#32037"
+msgid "Recommended Tv Shows"
+msgstr "סדרות מומלצות"
+
+msgctxt "#32038"
+msgid "Recently added movies"
+msgstr "סרטים שנוספו לאחרונה"
+
+msgctxt "#32039"
+msgid "Recently added episodes"
+msgstr "פרקים שנוספו לאחרונה"
+
+msgctxt "#32040"
+msgid "Recently added musicvideos"
+msgstr "‎סרטוני מוזיקה שנוספו לאחרונה"
+
+msgctxt "#32041"
+msgid "Random Tv Shows"
+msgstr "סדרות אקראיות"
+
+msgctxt "#32042"
+msgid "Unaired episodes"
+msgstr "פרקים שטרם שודרו"
+
+msgctxt "#32043"
+msgid "Next airing episodes"
+msgstr "הפרקים הבאים שישודרו"
+
+msgctxt "#32044"
+msgid "In progress TV shows"
+msgstr "סדרות בתהליך צפייה"
+
+msgctxt "#32045"
+msgid "Recently added TV shows"
+msgstr "סדרות שנוספו לאחרונה"
+
+msgctxt "#32046"
+msgid "IMDB Top 250 movies in library"
+msgstr "250 הסרטים המובילים של IMDB בספרייה"
+
+msgctxt "#32047"
+msgid "IMDB Top 250 Tv shows in library"
+msgstr "250 הסדרות המובילות של IMDB בספרייה"
+
+msgctxt "#32048"
+msgid "Random movies"
+msgstr "סרטים אקראיים"
+
+msgctxt "#32049"
+msgid "In progress and random Episodes"
+msgstr "פרקים אקראיים ובתהליך"
+
+msgctxt "#32050"
+msgid "Group items in recent episodes widget"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Browse TV Show"
+msgstr "עיין בסדרה"
+
+msgctxt "#32052"
+msgid "Browse Season"
+msgstr "עיון בעונה"
+
+msgctxt "#32053"
+msgid "Default number of items to show in widget"
+msgstr "מספר ברירת המחדל של פריטים להצגה ביישומון"
+
+msgctxt "#32054"
+msgid "PVR"
+msgstr "מקליט ווידאו אישי PVR"
+
+msgctxt "#32055"
+msgid "Similar songs"
+msgstr "שירים דומים"
+
+msgctxt "#32056"
+msgid "Similar albums"
+msgstr "אלבומים דומים"
+
+msgctxt "#32057"
+msgid "Mixed Media"
+msgstr "מדיה מעורבת"
+
+msgctxt "#32058"
+msgid "Movies and Tvshows in IMDB Top250"
+msgstr ""
+
+msgctxt "#32059"
+msgid "Random media"
+msgstr "מדיה אקראית"
+
+msgctxt "#32060"
+msgid "In progress and Random media"
+msgstr "מדיה אקראית ובתהליך"
+
+msgctxt "#32061"
+msgid "In progress music videos"
+msgstr "סרטוני מוזיקה בתהליך"
+
+msgctxt "#32062"
+msgid "Random music videos"
+msgstr "סרטוני מוזיקה אקראיים"
+
+msgctxt "#32063"
+msgid "Recently added artists"
+msgstr "‎אמנים שנוספו לאחרונה"
+
+msgctxt "#32064"
+msgid "Random artists"
+msgstr "אמנים אקראיים"
+
+msgctxt "#32065"
+msgid "Recommended artists"
+msgstr "אמנים מומלצים"
+
+msgctxt "#32066"
+msgid "Unwatched movies"
+msgstr "סרטים שלא נצפו"
+
+msgctxt "#32067"
+msgid "Hide watched items in recent items listings"
+msgstr "הסתר פריטים שנצפו ברשימת הפריטים האחרונים"
+
+msgctxt "#32068"
+msgid "Episodes airing today"
+msgstr "פרקים שמשודרים היום"
+
+msgctxt "#32069"
+msgid "Recently played TV channels"
+msgstr "ערוצים שנוגנו לאחרונה"
+
+msgctxt "#32070"
+msgid "In progress TV shows and movies"
+msgstr "סדרות וסרטים בתהליך"
+
+msgctxt "#32071"
+msgid "Enable aggresive refresh of widgets"
+msgstr "אפשר רענון אגרסיבי של יישומונים"

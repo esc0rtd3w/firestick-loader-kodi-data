@@ -1,11 +1,4 @@
 <settings>
-    <setting id="usecustombackground" type="bool">false</setting>
-    <setting id="hidebackgroundfanart" type="bool">false</setting>
-    <setting id="showbackgroundvideo" type="bool">false</setting>
-    <setting id="showbackgroundvis" type="bool">false</setting>
-    <setting id="autoscroll" type="bool">false</setting>
-    <setting id="show_profileavatar" type="bool">false</setting>
-    <setting id="show_profilename" type="bool">false</setting>
     <setting id="firsttimerun" type="bool">true</setting>
     <setting id="skinhelper.disablescreensaveronfullscreenmusic" type="bool">false</setting>
     <setting id="skinhelper.enableextendedart" type="bool">false</setting>
@@ -31,7 +24,12 @@
     <setting id="masterhomemenunogamesbutton" type="bool">false</setting>
     <setting id="homemenunovideosbutton" type="bool">false</setting>
     <setting id="masterhomemenunovideosbutton" type="bool">false</setting>
-    <setting id="masterhomemenunomoviebutton" type="bool">false</setting>
+    <setting id="showbackgroundvideo" type="bool">false</setting>
+    <setting id="show_profileavatar" type="bool">false</setting>
+    <setting id="autoscroll" type="bool">false</setting>
+    <setting id="showbackgroundvis" type="bool">false</setting>
+    <setting id="hidebackgroundfanart" type="bool">false</setting>
+    <setting id="show_profilename" type="bool">false</setting>
     <setting id="masterhomemenunotvshowbutton" type="bool">false</setting>
     <setting id="homemenunomusicbutton" type="bool">false</setting>
     <setting id="masterhomemenunomusicbutton" type="bool">false</setting>
@@ -44,6 +42,8 @@
     <setting id="hidefilenameflagging" type="bool">false</setting>
     <setting id="hideepgwithrds" type="bool">false</setting>
     <setting id="hidevisualizationfanart" type="bool">false</setting>
+    <setting id="masterhomemenunomoviebutton" type="bool">false</setting>
+    <setting id="usecustombackground" type="bool">false</setting>
     <setting id="custombackgroundpath" type="string"></setting>
     <setting id="MasterCustomBackgroundPath" type="string"></setting>
     <setting id="skinhelper.autoclosevideoosd" type="string"></setting>

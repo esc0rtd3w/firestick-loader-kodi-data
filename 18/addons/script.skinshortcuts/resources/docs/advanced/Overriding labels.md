@@ -10,4 +10,4 @@ You can change the label of any available shortcut in the management dialog via 
 | `[New Label]` | | The label you want to replace the default label with (can be a localised string) |
 | `[type]` | Yes | The new label for the type of shortcut (displayed in select dialog as label2) |
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

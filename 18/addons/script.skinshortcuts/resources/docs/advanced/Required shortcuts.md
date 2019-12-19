@@ -17,4 +17,4 @@ These are specified in your skins [overrides.xml](./overrides.md) file.
 
 The type property will be set to the id of your skin (skin.name) to indicate that it is specific to the skin.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

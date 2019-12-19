@@ -1,0 +1,47 @@
+<sources>
+	<programs>
+		<default pathversion="1" />
+	</programs>
+	<video>
+		<default pathversion="1" />
+		<source>
+			<name>OpenMeta Movies</name>
+			<path pathversion="1">special://profile/addon_data/plugin.video.openmeta/Movies/</path>
+			<thumbnail pathversion="1">/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.openmeta/resources/media/movies.png</thumbnail>
+			<allowsharing>true</allowsharing>
+		</source>
+		<source>
+			<name>OpenMeta TV shows</name>
+			<path pathversion="1">special://profile/addon_data/plugin.video.openmeta/TVShows/</path>
+			<thumbnail pathversion="1">/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.openmeta/resources/media/tv.png</thumbnail>
+			<allowsharing>true</allowsharing>
+		</source>
+	</video>
+	<music>
+		<default pathversion="1" />
+	</music>
+	<pictures>
+		<default pathversion="1" />
+	</pictures>
+	<files>
+		<default pathversion="1" />
+		<source>
+			<name>Nixgates</name>
+			<path pathversion="1">http://nixgates.github.io/packages/</path>
+			<allowsharing>true</allowsharing>
+		</source>
+		<source>
+			<name>Redux</name>
+			<path pathversion="1">https://i-a-c.github.io/</path>
+			<allowsharing>true</allowsharing>
+		</source>
+		<source>
+			<name>LLTVV</name>
+			<path pathversion="1">http://www.lvtvv.com/repo</path>
+			<allowsharing>true</allowsharing>
+		</source>
+	</files>
+	<games>
+		<default pathversion="1" />
+	</games>
+</sources>

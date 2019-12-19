@@ -20,6 +20,7 @@
 
 import xbmc
 import xbmcgui
+import xbmcaddon
 
 
 import favourite
@@ -34,25 +35,69 @@ PLAYMEDIA_MODE      = utils.PLAYMEDIA_MODE
 ACTIVATEWINDOW_MODE = utils.ACTIVATEWINDOW_MODE
 RUNPLUGIN_MODE      = utils.RUNPLUGIN_MODE
 ACTION_MODE         = utils.ACTION_MODE
+SHOWPICTURE_MODE    = utils.SHOWPICTURE_MODE
 
-PLAY_PLAYLISTS = ADDON.getSetting('PLAY_PLAYLISTS') == 'true'
+PLAY_PLAYLISTS = ADDON.getSetting('PLAY_PLAYLISTS') == 'true'    
+
+
+def getParentCommand(cmd):
+    parents = []
+
+    import re
+    try:
+        plugin = re.compile('plugin://(.+?)/').search(cmd.replace('?', '/')).group(1)
+
+        md5 = utils.generateMD5(plugin)
+        
+        if md5 not in parents:
+            return None
+
+        if xbmc.getCondVisibility('System.HasAddon(%s)' % plugin) == 1:
+            return 'plugin://%s' % plugin
+
+    except Exception, e:
+        pass 
+  
+    return None
+
+
+def processParentCommand(cmd):
+    parent = getParentCommand(cmd)
+
+    if not parent:
+        return
+
+    xbmc.executebuiltin('Container.Update(%s)' % parent)
+    while not xbmc.getInfoLabel('Container.FolderPath').startswith(parent):
+        xbmc.sleep(50)
+    
 
 
 def playCommand(originalCmd, contentMode=False):
     try:
         xbmc.executebuiltin('Dialog.Close(busydialog)') #Isengard fix
-
+ 
         cmd = favourite.tidy(originalCmd)
-        
+
+        if cmd.lower().startswith('executebuiltin'):
+            cmd = cmd.replace('"', '')
+            cmd = cmd.lower()
+            cmd = cmd.replace('"', '')
+            cmd = cmd.replace('executebuiltin(', '')
+            if cmd.endswith('))'):
+                cmd = cmd[:-1]
+            if cmd.endswith(')') and '(' not  in cmd:
+                cmd = cmd[:-1]
+     
         #if a 'Super Favourite' favourite just do it
-        if ADDONID in cmd:
-             return xbmc.executebuiltin(cmd)
+        #if ADDONID in cmd:
+        #     return xbmc.executebuiltin(cmd)
 
         #if in contentMode just do it
         if contentMode:
             xbmc.executebuiltin('ActivateWindow(Home)') #some items don't play nicely if launched from wrong window
             if cmd.lower().startswith('activatewindow'):
-                cmd = cmd.replace('")', '",return)') #just in case return is missing                
+                cmd = cmd.replace('")', '",return)') #just in case return is missing    
             return xbmc.executebuiltin(cmd)
 
         if cmd.startswith('RunScript'):    
@@ -71,13 +116,6 @@ def playCommand(originalCmd, contentMode=False):
 
         if 'PlayMedia' in cmd:
             return playMedia(originalCmd)
-
-        if cmd.lower().startswith('executebuiltin'):
-            try:    
-                cmd = cmd.split('"', 1)[-1]
-                cmd = cmd.rsplit('")')[0]
-            except:
-                pass
 
         xbmc.executebuiltin(cmd)
 
@@ -111,22 +149,28 @@ def activateWindowCommand(cmd):
     if id not in activate:
         xbmc.executebuiltin(activate)
 
-    if plugin: 
+    if plugin:
+        #processParentCommand(plugin)
         xbmc.executebuiltin('Container.Update(%s)' % plugin)
 
 
-def playMedia(original): 
+def playMedia(original):
     import re
-    cmd = favourite.tidy(original).replace(',', '') #remove spurious commas
-    
+    cmd = favourite.tidy(original) #.replace(',', '') #remove spurious commas
+    processParentCommand(cmd)
+
     try:    mode = int(favourite.getOption(original, 'mode'))
     except: mode = 0
 
-    if mode == PLAYMEDIA_MODE:       
+    if mode == PLAYMEDIA_MODE:  
         xbmc.executebuiltin(cmd)
         return
 
     plugin = re.compile('"(.+?)"').search(cmd).group(1)
+
+    if mode == SHOWPICTURE_MODE:  
+        xbmc.executebuiltin('ShowPicture(%s)' % plugin)
+        return
 
     if len(plugin) < 1:
         xbmc.executebuiltin(cmd)
@@ -155,3 +199,5 @@ def playMedia(original):
 
     #if all else fails just execute it
     xbmc.executebuiltin(cmd)
+
+   

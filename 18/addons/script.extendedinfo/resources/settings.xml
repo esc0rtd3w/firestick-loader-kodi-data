@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<category label="General">
+		<setting label="Interface" type="lsep"/>
+		<setting label="Alternative browser layout (does not affect all skins)" type="bool" id="alt_browser_layout"/>
+		<setting label="Experimental" type="lsep"/>
+		<setting label="Netflix view" type="bool" id="netflix_view"/>
+		<setting label="Automatically play trailers (affects only Netflix view)" type="bool" enable="eq(-1,true)" id="autoplay_trailer"/>
+		<setting label="TMDB" type="lsep"/>
+		<setting label="Language" type="select" values="bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh" id="LanguageID" default="en"/>
+		<setting label="Include adult?" type="bool" id="include_adults"/>
+        <setting label="API key" id="tmdb_api" type="text" default=""/>
+		<setting label="Maintenance" type="lsep"/>
+		<setting label="Clear cache..." type="action" action="RunScript(script.extendedinfo,info=deletecache)"/>
+	</category>
+</settings>

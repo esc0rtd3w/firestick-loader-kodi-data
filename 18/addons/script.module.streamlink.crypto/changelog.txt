@@ -1,0 +1,11 @@
+[B]Version 1.4.0[/B]
+- Reverted back to 1.1.0 base
+
+[B]Version 1.2.0[/B]
+- Updated Crypto library from site-packages
+
+[B]Version 1.1.0[/B]
+ * Addition of RSA and PKCS1_v1_5 to support the daisuki plugin.
+
+[B]Version 1.0.0[/B]
+ * Initial release

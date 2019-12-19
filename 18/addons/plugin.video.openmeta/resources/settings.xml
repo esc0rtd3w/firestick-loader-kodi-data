@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting label="Setup" type="lsep"/>
+		<setting label="Players URL" id="players_update_url" type="text" default="http://bit.ly/openplayers"/>
+		<setting label="Install or update players from URL..." type="action" subsetting="true" option="close" enable="!eq(-1,)" action="RunPlugin(plugin://plugin.video.openmeta/update_players)"/>
+		<setting label="Total setup..." option="close" type="action" action="RunPlugin(plugin://plugin.video.openmeta/setup/total)"/>
+        <setting label="Movies Default Play Action" type="enum" id="movies_default_action" values="Play|OpenInfo" default="0"/>
+        <setting label="Episodes Default Play Action" type="enum" id="tvshows_default_action" values="Play|OpenInfo(TV Show Info)|OpenInfo(Episode Info)" default="0"/>
+		<setting label="Set Default Players" type="action" action="RunPlugin(plugin://plugin.video.openmeta/defaultplayer)"/>
+        <setting label="Default Movie Player" type="text" subsetting="true" id="moviesdefault" enable="false" default="None"/>
+        <setting label="Default TV Show Player" type="text" subsetting="true" id="tvshowsdefault" enable="false" default="None"/>
+		<setting label="Total setup Done" id="total_setup_done" type="bool" default="false" visible="false"/>
+		<setting label="Include TV Show Specials" id="include_specials" type="bool" default="false"/>
+		<setting label="Show Unwatched Counts" id="countenabled" type="bool" default="true"/>
+		<setting label="Flatten TV Show Seasons" id="flatten.tvshows" type="enum" values="Never|If only one Season|Always" default="1"/>
+		<setting label="Enable Fanart" id="enablefanart" type="bool" default="true" />
+		<setting label="Library" type="lsep"/>
+		<setting label="Enable library updates?" id="library_updates" type="bool" default="true"/>
+		<setting label="Force library update..." type="action" subsetting="true" action="RunPlugin(plugin://plugin.video.openmeta/update_library_from_settings)" visible="eq(-1,true)"/>
+		<setting label="Movies library folder" id="movies_library_folder" type="folder" default="special://profile/addon_data/plugin.video.openmeta/Movies/"/>
+		<setting label="TV Shows library folder" id="tv_library_folder" type="folder" default="special://profile/addon_data/plugin.video.openmeta/TVShows/"/>
+        <setting label="Movies Batch Add File Path" id="movies_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.openmeta/movies_to_add.txt" visible="false"/>
+        <setting label="TV Shows Batch Add File Path" id="tv_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.openmeta/shows_to_add.txt" visible="false"/>
+		<setting label="Miscellaneous" type="lsep"/>
+        <setting label="Trakt Items Per Page" id="trakt_items_per_page" type="slider" range="10,1,100" option="int" default="10"/>
+		<setting label="Pages to consider for random playback" id="random_pages" type="number" default="3"/>
+		<setting label="Clear cache..." type="action" action="RunPlugin(plugin://plugin.video.openmeta/clear_cache)"/>
+	</category>
+	<category label="Trakt">
+		<setting label="Authenticate Trakt..." type="action" action="RunPlugin(plugin://plugin.video.openmeta/authenticate_trakt)"/>
+		<setting label="Clear Trakt account settings..." option="close" type="action" action="RunPlugin(plugin://plugin.video.openmeta/cleartrakt)"/>
+		<setting label="Sync your Trakt collections to Kodi library?" id="library_sync_collection" type="bool" default="false"/>
+		<setting label="trakt access token" id="trakt_access_token" type="text" default="" visible="false"/>
+		<setting label="trakt refresh token" id="trakt_refresh_token" type="text" default="" visible="false"/>
+		<setting label="trakt refresh token" id="trakt_expires_at" type="text" default="" visible="false"/>
+	</category>
+	<category label="API keys">
+		<setting label="Trakt" type="lsep"/>
+        <setting label="Client id" id="trakt_api_client_id" type="text" default=""/>
+        <setting label="Client secret" id="trakt_api_client_secret" type="text" default=""/>
+		<setting label="TMDB" type="lsep"/>
+        <setting label="API key" id="tmdb_api" type="text" default=""/>
+		<setting label="TVDB (v1), Keys for the v2 of TVDB's API will not work" type="lsep"/>
+        <setting label="API key" id="tvdb_api" type="text" default=""/>
+		<setting label="FANART.TV" type="lsep"/>
+        <setting label="API key" id="fanart.apikey" type="text" default=""/>
+	</category>
+</settings>

@@ -36,50 +36,38 @@ _SEARCHDEF    = 500
 _RECOMMEND    = 600
 _DOWNLOAD     = 700
 _PLAYLIST     = 800
-_COPYIMAGES   = 900
+_COPYITEM     = 900
 _SHOWIMAGE    = 1000
 _QUICKLAUNCH  = 1100
 
 _EXTRABASE    = 10000
 
+try:
+    import utils
+    ADDON   = utils.ADDON
+    ADDONID = utils.ADDONID
+    ROOT    = utils.ROOT
 
-import utils
-ADDON   = utils.ADDON
-ADDONID = utils.ADDONID
-ROOT    = utils.ROOT
+    GETTEXT = utils.GETTEXT
 
-GETTEXT = utils.GETTEXT
+    MENU_ADDTOFAVES     = ADDON.getSetting('MENU_ADDTOFAVES')     == 'true'
+    MENU_DEF_ISEARCH    = ADDON.getSetting('MENU_DEF_ISEARCH')    == 'true'
+    MENU_ISEARCH        = ADDON.getSetting('MENU_ISEARCH')        == 'true'
+    MENU_IRECOMMEND     = ADDON.getSetting('MENU_IRECOMMEND')     == 'true'
+    MENU_COPY_PROPS     = ADDON.getSetting('MENU_COPY_PROPS')     == 'true'
+    MENU_VIEW_IMAGES    = ADDON.getSetting('MENU_VIEW_IMAGES')    == 'true'
+    MENU_SF_SETTINGS    = ADDON.getSetting('MENU_SF_SETTINGS')    == 'true'
+    MENU_ADDON_SETTINGS = ADDON.getSetting('MENU_ADDON_SETTINGS') == 'true'
+    MENU_STD_MENU       = ADDON.getSetting('MENU_STD_MENU')       == 'true'
+    MENU_EDITFAVE       = ADDON.getSetting('MENU_EDITFAVE')       == 'true'
+    MENU_PLUGINS        = ADDON.getSetting('MENU_PLUGINS')        == 'true'
+    MENU_QUICKLAUNCH    = ADDON.getSetting('MENU_QUICKLAUNCH')    == 'true'
+    MENU_DOWNLOADS      = ADDON.getSetting('MENU_DOWNLOADS')      == 'true'
+except Exception, e:
+    try:    utils.log('Error initialising global menu : %s' % str(e))
+    except: print('Error initialising global menu : %s' % str(e))
+    ADDON = None
 
-MENU_ADDTOFAVES     = ADDON.getSetting('MENU_ADDTOFAVES')     == 'true'
-MENU_DEF_ISEARCH    = ADDON.getSetting('MENU_DEF_ISEARCH')    == 'true'
-MENU_ISEARCH        = ADDON.getSetting('MENU_ISEARCH')        == 'true'
-MENU_IRECOMMEND     = ADDON.getSetting('MENU_IRECOMMEND')     == 'true'
-MENU_COPY_PROPS     = ADDON.getSetting('MENU_COPY_PROPS')     == 'true'
-MENU_VIEW_IMAGES    = ADDON.getSetting('MENU_VIEW_IMAGES')    == 'true'
-MENU_SF_SETTINGS    = ADDON.getSetting('MENU_SF_SETTINGS')    == 'true'
-MENU_ADDON_SETTINGS = ADDON.getSetting('MENU_ADDON_SETTINGS') == 'true'
-MENU_STD_MENU       = ADDON.getSetting('MENU_STD_MENU')       == 'true'
-MENU_EDITFAVE       = ADDON.getSetting('MENU_EDITFAVE')       == 'true'
-MENU_PLUGINS        = ADDON.getSetting('MENU_PLUGINS')        == 'true'
-MENU_QUICKLAUNCH    = ADDON.getSetting('MENU_QUICKLAUNCH')    == 'true'
-
-
-def getText(title, text=''):
-    if text == None:
-        text = ''
-
-    kb = xbmc.Keyboard(text.strip(), title)
-    kb.doModal()
-
-    if not kb.isConfirmed():
-        return None
-
-    text = kb.getText().strip()
-
-    if len(text) < 1:
-        return None
-
-    return text
 
 
 def getDefaultSearch():
@@ -101,7 +89,8 @@ def doStandard(useScript=True):
     window = xbmcgui.getCurrentWindowId()
 
     if window == 10000: #home
-        return
+        if xbmc.getCondVisibility('Window.IsActive(favourites)') <> 1:
+            return
 
     if window == 12005: #video playing
         return activateWindow('videoplaylist')
@@ -115,28 +104,6 @@ def doStandard(useScript=True):
     else:
         xbmc.executebuiltin('Action(ContextMenu)')
     
-
-def copyFave(name, thumb, cmd):
-    import favourite
-
-    text = GETTEXT(30019)
-
-    folder = utils.GetFolder(text)
-    if not folder:
-        return False
-  
-    file  = os.path.join(folder, utils.FILENAME)   
-
-    if MENU_EDITFAVE:
-        name = getText(GETTEXT(30021), name)
-        
-    if not name:
-        return False
-    
-    fave = [name, thumb, cmd] 
-  
-    return favourite.copyFave(file, fave)
-
 
 def activateCommand(cmd):
     cmds = cmd.split(',', 1)
@@ -152,23 +119,6 @@ def activateCommand(cmd):
     
     xbmc.executebuiltin('Container.Update(%s)' % plugin)
 
-
-def getDescription():
-    labels = []
-    labels.append('ListItem.Plot')
-    labels.append('ListItem.Property(Addon.Description)')
-    labels.append('ListItem.Property(Addon.Summary)')
-    labels.append('ListItem.Property(Artist_Description)')
-    labels.append('ListItem.Property(Album_Description)')
-    labels.append('ListItem.Artist')
-    labels.append('ListItem.Comment')
-
-    for label in labels:
-        desc = xbmc.getInfoLabel(label)
-        if len(desc) > 0:
-            return desc
-
-    return ''
 
 
 def getPlugins():
@@ -216,35 +166,74 @@ def addPlugins(menu, plugins, params, base):
 
 
 def quickLaunch():
-    import chooser
-    if not chooser.GetFave('SF_QL'):
-        return False
+    #this doesn't work in Krypton
+    #import quicklaunch
+    #quicklaunch.run()
+    
+    #open via script
+    path   = utils.HOME
+    script = os.path.join(path, 'quicklaunch.py')
+    cmd    = 'AlarmClock(%s,RunScript(%s),%d,True)' % ('quicklaunch', script, 0)
+    xbmc.executebuiltin(cmd)  
 
-    path = xbmc.getInfoLabel('Skin.String(SF_QL.Path)')
 
-    if len(path) == 0 or path == 'noop':
+def whitelisted():   
+    #folder = xbmc.getInfoLabel('Container.FolderPath')
+    #if not folder.startswith('addons'):
+    #    return False
+
+    filename = xbmc.getInfoLabel('ListItem.FilenameAndPath')
+
+    try:
+        addon = filename.split('://', 1)[-1].split('/', 1)[0]  
+        if xbmc.getCondVisibility('System.HasAddon(%s)' % addon) == 1:
+            addon = xbmcaddon.Addon(addon).getAddonInfo('path')
+            addon = addon.rsplit(os.path.sep, 1)[-1]     
+     
+            return addon in ADDON.getSetting('WHITELIST')
+    except:
+        pass
+   
+    return False
+
+
+def launchDefaultSearch(keyword):
+    import search
+    fave = search.getDefaultSearch()
+    if not fave:
         return
 
-    if path.lower().startswith('activatewindow') and ',' in path: #i.e. NOT like ActivateWindow(filemanager)
-        xbmc.executebuiltin(path)
-        return
+    cmd = fave[2]
+    cmd = cmd.replace('[%SF%]',  keyword)
+    cmd = cmd.replace('[%SF+%]', keyword.replace('+', '%2b'))
 
-    import player
-    player.playCommand(path)
+    if cmd.startswith('RunScript'):
+        #special fix for GlobalSearch, use local launcher (globalsearch.py) to bypass keyboard
+        cmd = cmd.replace('script.globalsearch', os.path.join(HOME, 'globalsearch.py'))
+        #cmd = 'AlarmClock(%s,%s,%d,True)' % ('Default iSearch', cmd, 0)
+        xbmc.executebuiltin(cmd) 
+    else:
+        import re       
+        cmd = re.compile('"(.+?)"').search(cmd).group(1)
+        xbmc.executebuiltin('XBMC.Container.Update(%s)' % cmd)
 
-
+         
 def doMenu(mode):
+    import menuUtils
+
+    utils.log('**** Context Menu Information ****')
+
     window = xbmcgui.getCurrentWindowId()
 
-    #DEBUG = ADDON.getSetting('DEBUG') == 'true'
-    #if DEBUG:
-    #    utils.DialogOK('Current Window ID %d' % window)
+    DEBUG = ADDON.getSetting('DEBUG') == 'true'
+    if DEBUG:
+        utils.DialogOK('Current Window ID %d' % window)
 
-    #active = [0, 1, 2, 3, 25, 40, 500, 501, 502, 601]#, 2005] 12005 is video window
-    #utils.log('Window     : %d' % window)  
-    #if window-10000 not in active:
-    #    doStandard(useScript=False)
-    #    return
+    utils.log('Capture window\t: %d' % window)
+
+    if window > 12999:
+        doStandard(useScript=False)
+        return
 
     # to prevent master profile setting being used in other profiles
     if mode == 0 and ADDON.getSetting('CONTEXT') != 'true':
@@ -258,85 +247,45 @@ def doMenu(mode):
     if (ADDONID in folder) or (ADDONID in path):
         doStandard(useScript=False)
         return
-        
-    choice   = 0
-    label    = xbmc.getInfoLabel('ListItem.Label')
-    filename = xbmc.getInfoLabel('ListItem.FilenameAndPath')
-    thumb    = xbmc.getInfoLabel('ListItem.Thumb')    
-    icon     = xbmc.getInfoLabel('ListItem.ActualIcon')    
-    #thumb   = xbmc.getInfoLabel('ListItem.Art(thumb)')
-    playable = xbmc.getInfoLabel('ListItem.Property(IsPlayable)').lower() == 'true'
-    fanart   = xbmc.getInfoLabel('ListItem.Property(Fanart_Image)')
-    fanart   = xbmc.getInfoLabel('ListItem.Art(fanart)')
-    isFolder = xbmc.getCondVisibility('ListItem.IsFolder') == 1
-    hasVideo = xbmc.getCondVisibility('Player.HasVideo') == 1
-    desc     = getDescription()
 
-    if not thumb:
-        thumb = icon
+    if mode == 0 and whitelisted():
+        doStandard(useScript=False)
+        return
 
-    try:    file = xbmc.Player().getPlayingFile()
-    except: file = None
+    try:    params = menuUtils.getCurrentParams()
+    except: params = None
 
-    isStream = False
-   
-    if hasattr(xbmc.Player(), 'isInternetStream'):
-        isStream = xbmc.Player().isInternetStream()
-    elif file:
-        isStream = file.startswith('http')
+    if params == None:
+        doStandard(useScript=False)
+        return
 
-    if window == 10003: #filemanager
-        control = 0
-        if xbmc.getCondVisibility('Control.HasFocus(20)') == 1:
-            control = 20
-        elif xbmc.getCondVisibility('Control.HasFocus(21)') == 1:
-            control = 21
+    try:    meta = menuUtils.getCurrentMeta()
+    except: meta = {}
 
-        if control == 0:
-            return doStandard(useScript=False) #sjp was no param
+    utils.outputDict(params, 'Capture Parameters')
+    utils.outputDict(meta,   'Capture Metadata')
 
-        label    = xbmc.getInfoLabel('Container(%d).ListItem.Label' % control)
-        root     = xbmc.getInfoLabel('Container(%d).ListItem.Path'  % control)
-        path     = root + label
-        isFolder = True
-        thumb    = 'DefaultFolder.png'
-        #if not path.endswith(os.sep):
-        #    path += os.sep
+    folder   = params['folder']
+    path     = params['path']
+    label    = params['label']
+    filename = params['filename']
+    thumb    = params['thumb']
+    icon     = params['icon']
+    playable = params['isplayable']
+    fanart   = params['fanart']
+    isFolder = params['isfolder']
+    hasVideo = params['hasVideo']
+    desc     = params['description']       
+    window   = params['window']
+    file     = params['file']
+    isStream = params['isstream']
 
-    if isFolder:
-        path     = path.replace('\\', '\\\\')
-        filename = filename.replace('\\', '\\\\')
-
-    params                = {}
-    params['label']       = label
-    params['folder']      = folder
-    params['path']        = path
-    params['filename']    = filename
-    params['thumb']       = thumb
-    params['icon']        = icon
-    params['fanart']      = fanart
-    params['window']      = window
-    params['isplayable']  = playable
-    params['isfolder']    = isFolder
-    params['file']        = file
-    params['isstream']    = isStream
-    params['description'] = desc
-    params['hasVideo']    = hasVideo
-
-    utils.log('**** Context Menu Information ****')
-    for key in params:
-        utils.log('%s\t\t: %s' % (key, params[key]))
-
+    choice     = 0
     menu       = []
     localAddon = None
 
     if MENU_QUICKLAUNCH:
         menu.append((GETTEXT(30219), _QUICKLAUNCH))
-
-    #if hasVideo:
-    #    if isStream:
-    #        menu.append(('Download  %s' % label, _DOWNLOAD))
-    #        menu.append(('Now playing...',       _PLAYLIST))
 
     plugins    = []
     try:
@@ -364,17 +313,15 @@ def doMenu(mode):
                 menu.append((GETTEXT(30098) % default, _SEARCHDEF))
 
 
-        if MENU_ISEARCH: menu.append(   (GETTEXT(30054), _SEARCH))
+        if MENU_ISEARCH: menu.append((GETTEXT(30054), _SEARCH))
+
         if MENU_IRECOMMEND: menu.append((GETTEXT(30088), _RECOMMEND))
 
+        if MENU_COPY_PROPS: menu.append((GETTEXT(30209), _COPYITEM))   
 
-        if MENU_COPY_PROPS:
+        if MENU_VIEW_IMAGES: 
             if len(thumb) > 0 or len(fanart) > 0:
-                menu.append((GETTEXT(30209), _COPYIMAGES))   
-                if MENU_VIEW_IMAGES: menu.append((GETTEXT(30216), _SHOWIMAGE))
-            else:
-                if len(description) > 0: menu.append((GETTEXT(30209), _COPYIMAGES))   
-   
+                menu.append((GETTEXT(30216), _SHOWIMAGE))
 
     if MENU_SF_SETTINGS:
         menu.append((GETTEXT(30049), _SF_SETTINGS))
@@ -384,10 +331,19 @@ def doMenu(mode):
         if (len(path) > 0) or (window == 10034): #10034 is profile dialog
             stdMenu = True
             menu.append((GETTEXT(30048), _STD_MENU))
-        else:
-            if hasVideo:            
-                menu.append((xbmc.getLocalizedString(31040), _PLAYLIST)) #Now Playing
 
+    if hasVideo:
+        if MENU_DOWNLOADS and isStream:  
+            menu.append((GETTEXT(30259), _DOWNLOAD))       
+
+        if len(menu) == 0:
+            doStandard(useScript=False)
+            return 
+  
+        nowPlaying = GETTEXT(30220)
+        menu.append((nowPlaying, _PLAYLIST))
+        
+                    
     if len(menu) == 0 or (len(menu) == 1 and stdMenu):
         doStandard(useScript=False)
         return
@@ -401,9 +357,7 @@ def doMenu(mode):
     if dialog:
         choice = menus.selectMenu(utils.TITLE, menu)
     else:
-        choice = menus.showMenu(ADDONID, menu)
-
-    #xbmc.executebuiltin('Dialog.Close(all, true)')
+        choice = menus.showMenu(ADDONID, menu, useBuiltin=False) #False to allow right-click to std context menu
 
     utils.log('selection\t\t: %s' % choice)
     
@@ -419,60 +373,40 @@ def doMenu(mode):
         except Exception, e:
             utils.log('Error processing plugin: %s' % str(e))
 
+
     if choice == _QUICKLAUNCH:
         try:    quickLaunch()
         except: pass
 
+
     if choice == _STD_MENU:
         doStandard(useScript=True)
+
 
     if choice == _PLAYLIST:
         activateWindow('videoplaylist')
 
-    #if choice == _DOWNLOAD: 
-    #    import download
-    #    download.doDownload(file, 'c:\\temp\\file.mpg', 'Super Favourites', '', True)
+
+    if choice == _DOWNLOAD:
+        try:    menuUtils.doDownload(file)
+        except: pass
+            
 
     if choice == _SF_SETTINGS:
         utils.ADDON.openSettings()
 
+
     if choice == _SETTINGS:
         xbmcaddon.Addon(localAddon).openSettings()
 
+
     if choice == _ADDTOFAVES:
-        import favourite
-
-        if path.lower().startswith('addons://user/'):
-            path     = path.replace('addons://user/', 'plugin://')
-            isFolder = True
-            window   = 10025
-
-        if isFolder:
-            cmd =  'ActivateWindow(%d,"%s' % (window, path)
-        elif path.lower().startswith('script'):
-            #if path[-1] == '/':
-            #    path = path[:-1]
-            cmd = 'RunScript("%s' % path.replace('script://', '')
-        elif path.lower().startswith('videodb') and len(filename) > 0:
-            cmd = 'PlayMedia("%s' % filename
-        #elif path.lower().startswith('musicdb') and len(filename) > 0:
-        #    cmd = 'PlayMedia("%s")' % filename
-        elif path.lower().startswith('androidapp'):
-            cmd = 'StartAndroidActivity("%s")' % path.replace('androidapp://sources/apps/', '', 1)
-        else:            
-            cmd = 'PlayMedia("%s")' % path
-            cmd = favourite.updateSFOption(cmd, 'winID', window)
-
-        cmd = favourite.addFanart(cmd, fanart)
-        cmd = favourite.updateSFOption(cmd, 'desc', desc)
-
-        if isFolder:
-            cmd = cmd.replace('")', '",return)')
-
-        copyFave(label, thumb, cmd)
+        menuUtils.addToFaves(params, meta)
+        
 
     if choice == _LAUNCH_SF:
         utils.LaunchSF()
+
 
     if choice in [_SEARCH, _SEARCHDEF, _RECOMMEND]:
         if utils.ADDON.getSetting('STRIPNUMBERS') == 'true':
@@ -486,10 +420,10 @@ def doMenu(mode):
         _SUPERSEARCHDEF =   10
         _RECOMMEND_KEY  = 2700
 
-        videoID = 10025 #video
+        valid = [10001, 10002, 10025, 10502]
 
-        if window == 10000: #don't activate on home screen, push to video
-            window = videoID
+        if window not in valid:
+            window = 10025 #video window
 
         import urllib   
 
@@ -497,23 +431,29 @@ def doMenu(mode):
             mode = _RECOMMEND_KEY
         else:
             mode = _SUPERSEARCH if (choice == _SEARCH) else _SUPERSEARCHDEF
-            
-        cmd = 'ActivateWindow(%d,"plugin://%s/?mode=%d&keyword=%s&image=%s&fanart=%s")' % (window, ADDONID, mode, urllib.quote_plus(label), urllib.quote_plus(thumb), urllib.quote_plus(fanart))
+
+        if mode == _SUPERSEARCHDEF:
+            return launchDefaultSearch(label)
+
+        try:    meta = urllib.quote_plus(utils.convertDictToURL(meta))
+        except: meta = ''
+             
+        cmd = 'ActivateWindow(%d,"plugin://%s/?mode=%d&keyword=%s&image=%s&fanart=%s&meta=%s")' % (window, ADDONID, mode, urllib.quote_plus(label), urllib.quote_plus(thumb), urllib.quote_plus(fanart), meta)
 
         activateCommand(cmd)
 
-    if choice == _COPYIMAGES:  
-        if not fanart:
-            fanart = thumb
-      
-        xbmcgui.Window(10000).setProperty('SF_THUMB',       thumb)
-        xbmcgui.Window(10000).setProperty('SF_FANART',      fanart)
-        xbmcgui.Window(10000).setProperty('SF_DESCRIPTION', desc)
+    if choice == _COPYITEM:  
+        #if not fanart:
+        #    fanart = thumb
 
+        cmd = menuUtils.getCmd(path, fanart, desc, window, filename, isFolder, meta)
+
+        import clipboard
+        clipboard.setPasteProperties(thumb, fanart, desc, label, cmd, meta)
 
     if choice == _SHOWIMAGE:
-        if not fanart:
-            fanart = thumb
+        #if not fanart:
+        #    fanart = thumb
 
         import viewer
         viewer.show(fanart, thumb, ADDONID)
@@ -529,7 +469,7 @@ def menu(mode):
             utils.openSettings(ADDONID, 2.6)
             return
     
-    xbmc.executebuiltin('Dialog.Close(all, true)')
+    #xbmc.executebuiltin('Dialog.Close(all, true)')
     doMenu(mode) 
 
 
@@ -538,14 +478,25 @@ def main():
         return doStandard(useScript=False)
 
     mode = 0
-    if len(sys.argv) > 0 and sys.argv[0] == '':
-        mode = 1
-    
-    try:        
+   
+    if len(sys.argv) > 0:
+        if sys.argv[0] == '':
+            mode = 1 #launched via std context menu
+
+        if sys.argv[-1].lower() == 'launchsfmenu':
+            mode = 2 #launched via LaunchSFMenu script
+
+    try:   
         menu(mode)
     except Exception, e:
         utils.log('Exception in capture.py %s' % str(e))
+        doStandard(useScript=False)
 
-main()
-xbmc.sleep(1000)
-xbmcgui.Window(10000).clearProperty('SF_MENU_VISIBLE')
+
+progress = xbmc.getCondVisibility('Window.IsActive(progressdialog)') == 1
+if ADDON and not progress:
+    main()
+    xbmc.sleep(1000)
+    xbmcgui.Window(10000).clearProperty('SF_MENU_VISIBLE')
+else:
+    xbmc.executebuiltin('Action(ContextMenu)')

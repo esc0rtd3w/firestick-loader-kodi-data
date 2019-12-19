@@ -94,4 +94,4 @@ Skin Shortcuts adds automatic visibility conditions to relevant shortcuts - such
 
 It's always expected that user choice will be respected. That means that if a user has selected a particular shortcut, if it is overriden it should be clear why this is being done, or the option should be tied to a skin setting.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

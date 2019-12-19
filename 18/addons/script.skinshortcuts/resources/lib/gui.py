@@ -2088,7 +2088,7 @@ class GUI( xbmcgui.WindowXMLDialog ):
 
                         if "label" in elem.attrib:
                             labelValue = elem.attrib.get( "label" )
-                            if labelValue.startswith( "$INFO" ) or labelValue.startswith( "$VAR" ):
+                            if labelValue.startswith( "$INFO" ) or labelValue.startswith( "$VAR" ) or labelValue.startswith( "$NUMBER" ):
                                 propertyLabel.append( xbmc.getInfoLabel( labelValue ) )
                                 propertyPretty.append( LIBRARY._create( [ "", xbmc.getInfoLabel( labelValue ), "", iconImage ] ) )
                             else:

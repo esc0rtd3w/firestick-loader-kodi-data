@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">132</defaultcontrol>
+	<backgroundcolor>0</backgroundcolor>
+	<controls>
+		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<texture>common/black.png</texture>
+		</control>
+		<control type="group" id="33000">
+			<control type="group">
+				<visible>!Player.HasVideo | VideoPlayer.IsFullscreen</visible>
+				<left>585</left>
+				<width>1340</width>
+				<height>750</height>
+				<control type="image">
+					<visible>String.IsEqual(Window.Property(Type),tvshow) | String.IsEqual(Window.Property(Type),movie)</visible>
+					<texture diffuse="overlay/right_corner.png">$INFO[Window.Property(movie.fanart)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<visible>String.IsEqual(Window.Property(Type),season)</visible>
+					<texture diffuse="overlay/right_corner.png">$INFO[Window.Property(movie.poster_original)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+				<control type="image">
+					<visible>String.IsEqual(Window.Property(Type),episode)</visible>
+					<texture diffuse="overlay/right_corner.png">$INFO[Window.Property(movie.still_original)]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Player.HasVideo + !VideoPlayer.IsFullscreen</visible>
+				<top>-2</top>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,2.76)</visible>
+					<left>156</left>
+					<width>1766</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,2.55)</visible>
+					<left>290</left>
+					<width>1632</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,2.40)</visible>
+					<left>386</left>
+					<width>1536</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,2.35)</visible>
+					<left>418</left>
+					<width>1504</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,2.20)</visible>
+					<left>514</left>
+					<width>1408</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,1.85)</visible>
+					<left>738</left>
+					<width>1184</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,1.78)</visible>
+					<left>624</left>
+					<top>-90</top>
+					<width>1300</width>
+					<height>730</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,1.66)</visible>
+					<left>860</left>
+					<width>1062</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,1.37)</visible>
+					<left>1046</left>
+					<width>876</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>String.IsEqual(VideoPlayer.VideoAspect,1.33)</visible>
+					<left>1072</left>
+					<width>850</width>
+					<height>640</height>
+					<control type="videowindow"/>
+					<control type="image">
+						<texture colordiffuse="FF000000">overlay/left_corner.png</texture>
+					</control>
+				</control>
+			</control>
+			<control type="grouplist">	
+				<top>560</top>
+				<right>20</right>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<itemgap>10</itemgap>
+				<control type="image" id="900015">
+					<width>90</width>
+					<height>80</height>
+					<texture colordiffuse="FFFFFFFF">$INFO[Window.Property(movie.VideoAspect),flags/aspectratio/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="900014">
+					<width>90</width>
+					<height>80</height>
+					<texture colordiffuse="FFFFFFFF">$INFO[Window.Property(movie.VideoResolution),flags/resolution/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="900012">
+					<width>90</width>
+					<height>80</height>
+					<texture colordiffuse="FFFFFFFF">$INFO[Window.Property(movie.VideoCodec),flags/source/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="900013">
+					<width>90</width>
+					<height>80</height>
+					<texture colordiffuse="FFFFFFFF">$INFO[Window.Property(movie.AudioCodec),flags/audio/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>String.IsEqual(Window.Property(Type),tvshow)</visible>
+					<width>100</width>
+					<height>80</height>
+					<texture fallback="flags/source/default.png">$INFO[Container(1450).ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>!String.IsEmpty(Window.Property(movie.Rating))</visible>
+					<width>60</width>
+					<height>80</height>
+					<texture colordiffuse="FFFFFFFF">netflix/tmdb.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(Window.Property(movie.Rating))</visible>
+					<width>auto</width>
+					<height>80</height>
+					<aligny>center</aligny>
+					<label>[B]$INFO[Window.Property(movie.Rating)][/B]</label>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font12</font>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="32000">
+			<left>25</left>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,800" end="0,0" delay="0" tween="sine" time="800"/>
+				<effect type="fade" start="0,0" end="100" delay="0" tween="sine" time="1500"/>
+			</animation>
+			<control type="group">
+				<height>240</height>
+				<width>620</width>
+				<control type="image" id="32001">
+					<visible>String.IsEqual(Window.Property(Type),movie)</visible>
+					<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$ESCINFO[Window.Property(movie.Title)]&amp;type=clearlogo&amp;mediatype=movies</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image" id="32002">
+					<visible>String.IsEqual(Window.Property(Type),tvshow)</visible>
+					<texture background="true">http://localhost:52307/getpvrthumb&amp;title=$ESCINFO[Window.Property(movie.Title)]&amp;type=clearlogo&amp;mediatype=tvshow</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>String.IsEmpty(Control.GetLabel(32001)) | String.IsEmpty(Control.GetLabel(32002))</visible>
+					<label>$INFO[Window.Property(movie.Title)]</label>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font_MainMenu</font>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Window.Property(Type),season) | String.IsEqual(Window.Property(Type),episode)</visible>
+					<label>$INFO[Window.Property(movie.Title)]</label>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font_MainMenu</font>
+				</control>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Window.Property(Type),episode)</visible>
+				<top>130</top>
+				<width>900</width>
+				<height>150</height>
+				<label>[I]$INFO[Window.Property(movie.Season),Season ,]  $INFO[Window.Property(movie.Episode),Episode ,][/I]</label>
+				<textcolor>FF00FF7F</textcolor>
+				<font>font14</font>
+			</control>
+			<control type="label">
+				<visible>String.IsEqual(Window.Property(type),Season)</visible>
+				<top>130</top>
+				<width>180</width>
+				<height>50</height>
+				<label fallback="?">[B][I]$INFO[Container(2000).NumItems] Episodes[/B][/I]</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<font>font14</font>
+			</control>
+			<control type="grouplist">
+				<left>-10</left>
+				<top>240</top>
+				<width>1000</width>
+				<height>40</height>
+				<orientation>horizontal</orientation>
+				<itemgap>10</itemgap>
+				<control type="image">
+					<width>200</width>
+					<texture fallback="flags/stars/0.0.png" colordiffuse="FFFF0000">$INFO[Window.Property(movie.Rating),flags/stars/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(Window.Property(movie.release_date))</visible>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<label>[B][I]$INFO[Window.Property(movie.Status)][/I][/B]</label>
+					<textcolor>FFBFBFBF</textcolor>
+					<font>font12</font>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(Window.Property(movie.release_date))</visible>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<label>[B]$INFO[Window.Property(movie.release_date)][/B]</label> 
+					<textcolor>FFE6E6E6</textcolor>
+					<font>font12</font>
+				</control>
+				<control type="image">
+					<visible>String.IsEqual(Window.Property(type),movie) | String.IsEqual(Window.Property(type),tvshow)</visible>
+					<width>60</width>
+					<texture colordiffuse="FFE6E6E6" fallback="flags/rating/MPAA_NR_Certificate_US.png">$INFO[Window.Property(movie.mpaa),flags/rating/,.png]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<visible>String.IsEqual(Window.Property(Type),movie) + !String.IsEqual(Window.Property(movie.duration),0) + !String.IsEmpty(Window.Property(movie.duration))</visible>
+					<width>auto</width>
+					<aligny>center</aligny>
+					<label>[B]$INFO[Window.Property(movie.duration(hm))][/B]</label>
+					<textcolor>FFE6E6E6</textcolor>
+					<font>font12</font>
+				</control>
+			</control>
+			<control type="button" id="132">
+				<left>5</left>
+				<top>315</top>
+				<width>24</width>
+				<height>24</height>
+				<onup>5000</onup>
+				<ondown>5000</ondown>
+				<onleft>8</onleft>
+				<onright>445</onright>
+				<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+				<texturefocus colordiffuse="FFFF0000">netflix/info.png</texturefocus>
+				<texturenofocus>netflix/info.png</texturenofocus>
+			</control>
+			<control type="textbox">
+				<left>40</left>
+				<top>290</top>
+				<width>700</width>
+				<height>190</height>$INFO[ListItem.Episode,[B],[/B]]$INFO[ListItem.Label,[B].[/B]]$INFO[ListItem.Property(release_date),[CR][COLOR FF999999],[/COLOR]]
+				<label>[B]$INFO[Window.Property(movie.TagLine),[COLOR FFE6E6E6],[/COLOR]][CR][/B]$INFO[Window.Property(movie.Plot)]</label>
+				<textcolor>FFBFBFBF</textcolor>
+				<font>font12</font>
+				<autoscroll delay="2000" time="4000" repeat="2000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="5000">
+				<left>5</left>
+				<top>500</top>
+				<width>1000</width>
+				<height>80</height>
+				<onup>132</onup>
+				<ondown>4000</ondown>
+				<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<scrolltime>400</scrolltime>
+				<control type="radiobutton" id="7">
+					<visible>Player.HasVideo + !VideoPlayer.IsFullscreen + [String.IsEqual(Window.Property(Type),tvshow) | String.IsEqual(Window.Property(Type),movie)]</visible>
+					<onclick>SetFocus(77)</onclick>
+					<label>Screen</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/fullscreen.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/fullscreen.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/fullscreen.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/fullscreen.png</textureradioonnofocus>
+					<textoffsetx>20</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="8">
+					<visible>!Player.HasVideo + String.IsEqual(Window.Property(Type),movie) | String.IsEqual(Window.Property(Type),episode)</visible>
+					<label>Play</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonnofocus>
+					<textoffsetx>45</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="9">
+					<visible>!Player.HasVideo + String.IsEqual(Window.Property(Type),tvshow)</visible>
+					<label>Play</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonnofocus>
+					<textoffsetx>45</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="10">
+					<visible>!Player.HasVideo + String.IsEqual(Window.Property(Type),season)</visible>
+					<label>Play</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/play.png</textureradioonnofocus>
+					<textoffsetx>45</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="28">
+					<visible>!Player.HasVideo + [String.IsEqual(Window.Property(Type),tvshow) | String.IsEqual(Window.Property(Type),movie)]</visible>
+					<label>Trailer</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/trailer.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/trailer.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/trailer.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/trailer.png</textureradioonnofocus>
+					<textoffsetx>25</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="29">
+					<visible>Player.HasVideo + !VideoPlayer.IsFullscreen + [String.IsEqual(Window.Property(Type),tvshow) | String.IsEqual(Window.Property(Type),movie)]</visible>
+					<label>Trailer</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/stop.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/stop.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/stop.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/stop.png</textureradioonnofocus>
+					<textoffsetx>25</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="18">
+					<visible>String.IsEqual(Window.Property(Type),movie) + String.IsEmpty(Window.Property(movie.DBID))</visible>
+					<label>Library</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/add.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioonnofocus>
+					<textoffsetx>22</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="19">
+					<visible>String.IsEqual(Window.Property(Type),movie) + !String.IsEmpty(Window.Property(movie.DBID))</visible>
+					<label>Library</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioonnofocus>
+					<textoffsetx>22</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="20">
+					<visible>String.IsEqual(Window.Property(Type),tvshow) + String.IsEmpty(Window.Property(movie.DBID))</visible>
+					<label>Library</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/add.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/add.png</textureradioonnofocus>
+					<textoffsetx>25</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="21">
+					<visible>String.IsEqual(Window.Property(Type),tvshow) + !String.IsEmpty(Window.Property(movie.DBID))</visible>
+					<label>Library</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/remove.png</textureradioonnofocus>
+					<textoffsetx>25</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+				<control type="radiobutton" id="445">
+					<label>Settings</label>
+					<texturefocus colordiffuse="FFFF0000">netflix/button.png</texturefocus>
+					<texturenofocus colordiffuse="FF999999">netflix/button_border.png</texturenofocus>
+					<width>156</width>
+					<height>56</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font10</font>
+					<textcolor>FF999999</textcolor>
+					<focusedcolor>FFFFFFFF</focusedcolor>
+					<textureradioonfocus colordiffuse="FFFFFFFF">netflix/settings.png</textureradioonfocus>
+					<textureradioofffocus colordiffuse="FFFFFFFF">netflix/settings.png</textureradioofffocus>
+					<textureradiooffnofocus colordiffuse="FFFFFFFF">netflix/settings.png</textureradiooffnofocus>
+					<textureradioonnofocus colordiffuse="FFFFFFFF">netflix/settings.png</textureradioonnofocus>
+					<textoffsetx>10</textoffsetx>
+					<radioposx>10</radioposx>
+					<radiowidth>32</radiowidth>
+					<radioheight>32</radioheight>
+				</control>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(Window.Property(type),movie) | String.IsEqual(Window.Property(type),tvshow)</visible>
+				<left>5</left>
+				<top>580</top>
+				<height>30</height>
+				<control type="image">
+					<width>30</width>
+					<texture colordiffuse="FFFF0000">netflix/genres.png</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>45</left>
+					<width>1900</width>
+					<aligny>center</aligny>
+					<label>[I]$INFO[Window.Property(movie.genre)][/I]</label>
+					<textcolor>FF808080</textcolor>
+					<font>font12</font>
+				</control>
+			</control>
+		</control>
+		<control type="grouplist" id="4000">
+			<left>25</left>
+			<top>640</top>
+			<width>1920</width>
+			<height>520</height>
+			<itemgap>-10</itemgap>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine">450</scrolltime>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="600,100" end="0,0" delay="0" center="auto" tween="cubic" time="600"/>
+			</animation>
+			<control type="group" id="50114">
+				<visible>Integer.IsGreater(Container(2000).NumItems,0)</visible>
+				<left>5</left>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Episodes$INFO[Container(2000).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="2000">
+					<top>35</top>
+					<width>1900</width>
+					<height>440</height>
+					<onup>5000</onup>
+					<ondown>250</ondown>
+					<onleft>2000</onleft>
+					<onright>2000</onright>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>7</movement>
+					<itemlayout width="236">
+						<control type="image">
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>196</width>
+							<height>90</height>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Episode,[B],[/B]]$INFO[ListItem.Label,.]$INFO[ListItem.Property(release_date),[CR],]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="250">
+						<control type="image">
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<bordersize>3</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<bordersize>3</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>210</width>
+							<height>85</height>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Episode,[B],[/B]]$INFO[ListItem.Label,.]$INFO[ListItem.Property(release_date),[CR][COLOR FF999999],[/COLOR]]</label>
+							<align>center</align>
+							<autoscroll delay="1000" time="1500" repeat="1000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50113">
+				<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<visible>String.IsEmpty(Window.Property(movie.set.label))</visible>
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Seasons$INFO[Container(250).NumItems, (,)]</label>
+				</control>
+				<control type="label">
+					<visible>!String.IsEmpty(Window.Property(movie.set.label))</visible>
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>$INFO[Window.Property(movie.set.label)]$INFO[Container(250).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="250">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>2000</onup>
+					<ondown>1000</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>7</movement>
+					<itemlayout width="236">
+						<control type="image">
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<top>10</top>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true" colordiffuse="FF999999">flags/marked.png</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<top>10</top>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true">flags/local.png</texture>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>196</width>
+							<height>90</height>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="250">
+						<control type="image">
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true" colordiffuse="FF999999">flags/marked.png</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true">flags/local.png</texture>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>210</width>
+							<height>85</height>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<autoscroll delay="1000" time="1500" repeat="1000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50111">
+				<visible>Integer.IsGreater(Container(1000).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Cast$INFO[Container(1000).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="1000">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>250</onup>
+					<ondown>750</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>7</movement>
+					<itemlayout width="236">
+						<control type="image">
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoActor.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>196</width>
+							<height>90</height>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(character),[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="250">
+						<control type="image">
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<bordersize>3</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoActor.png</texture>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<bordersize>3</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>210</width>
+							<height>85</height>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(character),[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+							<autoscroll delay="1000" time="1500" repeat="1000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50115">
+				<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Crew$INFO[Container(750).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="750">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>1000</onup>
+					<ondown>150</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>7</movement>
+					<itemlayout width="236">
+						<control type="image">
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoActor.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>196</width>
+							<height>90</height>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(job),[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="250">
+						<control type="image">
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoActor.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>210</width>
+							<height>85</height>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Property(job),[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+							<autoscroll delay="1000" time="1500" repeat="1000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50112">
+				<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Similar$INFO[Container(150).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="150">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>750</onup>
+					<ondown>350</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>7</movement>
+					<itemlayout width="236">
+						<control type="image">
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>196</width>
+							<height>295</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<top>10</top>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true" colordiffuse="FF999999">flags/marked.png</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<top>10</top>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true" colordiffuse="FF999999">flags/local.png</texture>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>196</width>
+							<height>90</height>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="250">
+						<control type="image">
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>210</width>
+							<height>315</height>
+							<texture diffuse="diffuse/poster_diffuse.png">fallbacks/NoVideo.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true" colordiffuse="FF999999">flags/marked.png</texture>
+						</control>
+						<control type="image">
+							<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
+							<width>84</width>
+							<height>84</height>
+							<texture flipx="true">flags/local.png</texture>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>210</width>
+							<height>85</height>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]$INFO[ListItem.Year,[COLOR FF999999][CR],[/COLOR]]</label>
+							<align>center</align>
+							<autoscroll delay="1000" time="1500" repeat="1000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50116">
+				<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>YouTube videos$INFO[Container(350).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="350">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>150</onup>
+					<ondown>550</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>2</movement>
+					<itemlayout width="620">
+						<control type="image">
+							<top>10</top>
+							<width>580</width>
+							<height>295</height>
+							<texture diffuse="diffuse/fanart_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<top>10</top>
+							<width>580</width>
+							<height>295</height>
+							<texture diffuse="diffuse/fanart_diffuse.png">fallbacks/NoPreview.png</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>305</top>
+							<width>580</width>
+							<height>90</height>
+							<align>center</align>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="660">
+						<control type="image">
+							<width>620</width>
+							<height>315</height>
+							<texture diffuse="diffuse/fanart_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+							<width>620</width>
+							<height>315</height>
+							<texture diffuse="diffuse/fanart_diffuse.png">fallbacks/NoPreview.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>315</top>
+							<width>614</width>
+							<height>85</height>
+							<align>center</align>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50117">
+				<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<top>80</top>
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Studios$INFO[Container(550).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="550">
+					<top>115</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>350</onup>
+					<ondown>1450</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<itemlayout width="372">
+						<control type="image">
+							<top>10</top>
+							<width>332</width>
+							<height>160</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<top>30</top>
+							<width>332</width>
+							<height>120</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>180</top>
+							<width>332</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="414">
+						<control type="image">
+							<width>374</width>
+							<height>180</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<width>374</width>
+							<height>140</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>190</top>
+							<width>374</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50118">
+				<visible>Integer.IsGreater(Container(1450).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<top>80</top>
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Networks$INFO[Container(1450).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="1450">
+					<top>115</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>550</onup>
+					<ondown>850</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<itemlayout width="372">
+						<control type="image">
+							<top>10</top>
+							<width>332</width>
+							<height>160</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<top>30</top>
+							<width>332</width>
+							<height>120</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>180</top>
+							<width>332</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="414">
+						<control type="image">
+							<width>374</width>
+							<height>180</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<width>374</width>
+							<height>140</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>190</top>
+							<width>374</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50119">
+				<visible>Integer.IsGreater(Container(850).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<top>80</top>
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Genres$INFO[Container(850).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="850">
+					<top>115</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>1450</onup>
+					<ondown>1050</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<itemlayout width="372">
+						<control type="image">
+							<top>10</top>
+							<width>332</width>
+							<height>160</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="image">
+							<top>30</top>
+							<width>332</width>
+							<height>120</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>180</top>
+							<width>332</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="414">
+						<control type="image">
+							<width>374</width>
+							<height>180</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="image">
+							<top>20</top>
+							<width>374</width>
+							<height>140</height>
+							<texture fallback="flags/source/default.png">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>190</top>
+							<width>374</width>
+							<height>40</height>
+							<align>center</align>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50120">
+				<visible>Integer.IsGreater(Container(1050).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Reviews$INFO[Container(1050).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="1050">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>850</onup>
+					<ondown>1250</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<movement>2</movement>
+					<itemlayout width="620">
+						<control type="image">
+							<top>10</top>
+							<width>580</width>
+							<height>355</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+						<control type="textbox">
+							<top>20</top>
+							<left>10</left>
+							<width>560</width>
+							<height>335</height>
+							<align>center</align>
+							<textcolor>FF999999</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Author),[B],[/B]][CR]$INFO[ListItem.Property(Content)]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="660">
+						<control type="image">
+							<width>620</width>
+							<height>375</height>
+							<colordiffuse>FF1A1A1A</colordiffuse>
+							<texture diffuse="diffuse/fanart_diffuse.png">diffuse/fanart_diffuse.png</texture>
+							<bordersize>3</bordersize>
+							<bordertexture colordiffuse="FFFFFFFF" border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+						<control type="textbox">
+							<top>10</top>
+							<left>10</left>
+							<width>600</width>
+							<height>355</height>
+							<align>center</align>
+							<textcolor>FFFFFFFF</textcolor>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Author),[B],[/B]][CR]$INFO[ListItem.Property(Content)]</label>
+							<autoscroll delay="1000" time="2000" repeat="2000">true</autoscroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50121">
+				<visible>Integer.IsGreater(Container(1250).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Artwork$INFO[Container(1250).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="1250">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>1050</onup>
+					<ondown>1350</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>6</movement>
+					<itemlayout width="270">
+						<control type="image">
+							<top>10</top>
+							<width>230</width>
+							<height>350</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+					</itemlayout>
+					<focusedlayout width="284">
+						<control type="image">
+							<width>244</width>
+							<height>370</height>
+							<texture diffuse="diffuse/poster_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="50122">
+				<visible>Integer.IsGreater(Container(1350).NumItems,0)</visible>
+				<height>520</height>
+				<control type="label">
+					<width>500</width>
+					<height>25</height>
+					<textcolor>FFFFFFFF</textcolor>
+					<font>font10</font>
+					<label>Fanart$INFO[Container(1350).NumItems, (,)]</label>
+				</control>
+				<control type="fixedlist" id="1350">
+					<top>35</top>
+					<left>5</left>
+					<width>1900</width>
+					<height>440</height>
+					<onup>1250</onup>
+					<ondown>2000</ondown>
+					<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+					<scrolltime>250</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<movement>2</movement>
+					<itemlayout width="620">
+						<control type="image">
+							<top>10</top>
+							<width>580</width>
+							<height>355</height>
+							<texture diffuse="diffuse/fanart_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordertexture border="20">netflix/round_outline.png</bordertexture>
+							<bordersize>0</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
+						</control>
+					</itemlayout>
+					<focusedlayout width="660">
+						<control type="image">
+							<width>620</width>
+							<height>375</height>
+							<texture diffuse="diffuse/fanart_diffuse.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+							<bordersize>3</bordersize>
+							<bordertexture border="20">netflix/round_border.png</bordertexture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Player.HasVideo + Control.HasFocus(77)</visible>
+			<width>1920</width>
+			<height>1080</height>
+			<control type="button" id="77">
+				<onup>7</onup>
+				<ondown>7</ondown>
+				<onleft>7</onleft>
+				<onright>7</onright>
+				<onclick>SetFocus(7)</onclick>
+				<oninfo>SetFocus(7)</oninfo>
+				<onback condition="Player.HasVideo + !VideoPlayer.IsFullscreen + !Player.HasAudio">PlayerControl(Stop)</onback>
+				<texturefocus>common/black.png</texturefocus>
+			</control>
+			<control type="videowindow"/>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,15 @@
+item_info_name=title
+item_info_build=nohead
+
+item_info_name=url64
+item_info_from=@PARAM1@
+#item_info_convert=startLivestreamerProxy
+item_info_convert=onetv
+#item_info_convert=encodeBase64
+item_info_convert=quote(%s)
+item_info_build=hls://%s&q=best
+
+item_info_name=url
+item_info_from=url64
+item_info_build=%s
+

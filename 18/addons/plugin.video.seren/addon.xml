@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.seren" version="1.6.2" name="Seren" provider-name="Nixgates">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0" />
+		<import addon="script.module.requests" version="2.19.1" />
+		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+		<import addon="plugin.video.youtube" version="6.2.0"/>
+		<import addon="script.module.addon.signals" version="0.0.1"/>
+		<import addon="script.module.dateutil" version="2.7.3"/>
+        <import addon="context.seren" version="1.0.3"/>
+<!--		<import addon="script.module.inputstreamhelper" version="0.3.3"/> #### Not yet big boy ####-->
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="seren.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker> <!-- You can enable this if you want, expect some instability but much faster menu speeds -->
+		<summary lang="en">Seren - Modular Multi-source Addon</summary>
+		<description lang="en"> Seren is a modular provider based, cloud service streaming software that is tightly interwoven with Trakt. Seren provides the freedom to view media from a single menu system from service providers of the users choosing. Please Note: This addon requires the use of a compatible cloud service.
+		</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website>https://github.com/nixgates/plugin.video.seren</website>
+		<source>https://github.com/nixgates/plugin.video.seren</source>
+		<disclaimer lang="en">
+			Last updated: September 09, 2019.
+			The information contained within the Seren software (the "Service") is for general information purposes only.
+			The author assumes no responsibility for errors, omissions in the contents on the Service, nor does it assume responsibility for any material provided by any external services.
+			The use of the Service does not authorise the user to engage in any kind of illegal, criminal or tortious activity through the use of the software, including infringement of any third party intellectual property rights (including without limitation copyright, trade marks, patent, trade secrets and confidential information), fraud, child pornography, trafficking in obscene material, violation of applicable export restrictions, drug dealing, gambling, harassment, stalking, spamming, hacking, sending of viruses or other harmful files or illegal posting of computer passwords or computer code.
+			The user is responsible for all their activity in connection with the use of the Service and the author reserves the right to report any potentially criminal activity to appropriate law enforcement agencies.
+			The user must not transmit to or via the Service, any material that may infringe the intellectual property rights of any third party, or any defamatory, derogatory or offensive material or publication.
+			In no event shall the author of this software be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service.
+			The author reserves the right to make additions, deletions, or modification to the contents on the Service at any time without prior notice.
+			The author of this software does not warrant that the software is free of viruses or other harmful components.
+			Seren may contain links to external websites that are not provided or maintained by or in any way affiliated with the author.
+			Please note that the author does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.
+		</disclaimer>
+		<assets>
+			<icon>ico-fox-gold-final.png</icon>
+			<fanart>fanart-fox-gold-final.png</fanart>
+			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+		<news>
+Changelog 1.6.2:
+Fixed trakt database rebuild issues
+
+Changelog 1.6.1:
+Fix playback for RD items in My Files
+Fix Trakt Sync Databsae not upgrading correctly
+Fixed Trakt lists missing items
+Settings dialog now closes during PM auth
+Fixed double database rebuilding
+Fixed AllDebrid movie resolving
+Fix list comprehension error in check_for_updates method in skin_manager module
+
+Changelog 1.6.0:
+Some Greek translations added
+Some German translations added
+Next Up menu now generated completely locally using DB query
+Added All-Debrid Support
+Premiumize now uses O-Auth (re-auth is required)
+Complete re-work of the standard playlist building (removes building playlist window for standard playback)
+Re-work of My Files module to reduce spaghetti
+Re-work of resolver module to reduce spaghetti
+New Custom Windows Still Watching/Play Next
+Added update support for Seren Themes
+Removed support for UpNext addon
+Lists are now synced to the trakt database
+More work on player.py module, better bookmark identification and playback marking
+Re-work Trakt Manager to be more context sensitive
+Added ability to paginate Trakt lists
+Added some more shortcuts to the search menu
+Show information is confirmed with IMDB prior to scrape
+Date and time in custom windows now displays in regional format
+Added fallbacks for shows meta gathering in Trakt DB
+Source filtering improvements to reduce meta loss
+Set a timeout for Fanart.tv calls (reduces slow downs at cost of artwork)
+Re-worked intial trakt sync and removed dialog box
+Complete overhaul of the bookmark system
+Fixed torrent semaphore not being released
+Playback parameters are now applied to further episodes
+Implement new listall endpoint for Premiumize cloud scraping (decreased scrape times)
+More minor bugfixes (honestly could not list them all)
+		</news>
+	</extension>
+</addon>

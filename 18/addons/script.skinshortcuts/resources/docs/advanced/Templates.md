@@ -1,14 +1,14 @@
 # Templates
 
-Templates are an alternative way to integrate users custom menus into your skin. They allow you to provide a one or more templates containing any Kodi GUI controls you like, and insert information from the menu items into them.
+Templates are an alternative way to integrate user customizable menus into your skin. They allow you to provide one or more templates containing any Kodi GUI controls you like, and insert information from the menu items into them.
 
-They have a number of advantages over the traditional Skin Shortcuts implementation. For example, all sub menu's can be in their own lists and so can have visible/hidden animation. Similarly widgets can be bult individually, allowing them to be switched between without the contents having to be reloaded.
+They have a number of advantages over the traditional Skin Shortcuts implementation. For example, all submenu's can be in their own lists and so can have visible/hidden animation. Similarly widgets can be built individually, allowing them to be switched between without the contents having to be reloaded.
 
 ## templates.xml
 
-To use templates, you need to inlclude a template.xml file in your skins shortcuts directory, with all content within a `<template />` element.
+To use templates, you need to include a template.xml file in your Skins Shortcuts directory, with all content within a `<template />` element.
 
-If this file is present Skin Shortcuts will automatically build your templates alonside its traditional includes.
+If this file is present Skin Shortcuts will automatically build your templates alongside it's traditional includes.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -19,7 +19,7 @@ If this file is present Skin Shortcuts will automatically build your templates a
 
 ## Types of templates
 
-Skin Shortcuts supports three types of template - one for sub menu's; one for any other content based off the properties of the main menu items in the users custom menus; one for content based off the properties of a sub menu item in the users custom menus.
+Skin Shortcuts supports three types of templates - one for submenu's; one for any other content based off the properties of the main menu items in the users custom menus and one for content based off the properties of a sub menu item in the user's custom menus.
 
 #### Sub menu template
 
@@ -361,11 +361,11 @@ You can then use the properties moved to params inside an includes file (include
 
 ## A simple example
 
-This example builds the sub menu in a template, so the sub menu for each main menu item is in its own list with visible/hidden animation.
+This example builds the submenu in a template, so the submenu for each main menu item is in its own list with visible/hidden animation.
 
 It also builds a widget template in a separate include, with the content set via properties.
 
-As no include attribute is provided for the sub menu template, it is included in the skin with:-
+As no include attribute is provided for the submenu template, it is included in the skin with:-
 
 `<include>skinshortcuts-template</include>`
 
@@ -430,4 +430,4 @@ The Other template for the widgets specifies an include attribute of "widget", a
 </template>
 ```
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

@@ -1,0 +1,14 @@
+1.0.4
+- Remove md5 hash support (never used it)
+
+1.0.3
+- Add Krypton support
+
+1.0.2
+- Update icon (Thanks schimi2k)
+
+1.0.1
+- Add Jarvis skin version
+
+1.0.0
+- Initial Release

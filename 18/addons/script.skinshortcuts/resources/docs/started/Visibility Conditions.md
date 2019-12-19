@@ -50,4 +50,4 @@ Skin Shortcuts will automatically add visibility conditions to shortcuts in the 
 
 An exception is made for shortcuts to music addons (`ActivateWindow(MusicLibrary,addons*)`), and no visibility condition will be added to this shortcut.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](./Getting Started.md) - [Advanced Usage](../advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

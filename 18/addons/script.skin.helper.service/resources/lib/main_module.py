@@ -14,11 +14,11 @@ import xbmcgui
 import xbmcaddon
 from skinsettings import SkinSettings
 from simplecache import SimpleCache
-from utils import log_msg, KODI_VERSION
+from utils import log_msg, KODI_VERSION, kodi_json, clean_string, getCondVisibility
 from utils import log_exception, get_current_content_type, ADDON_ID, recursive_delete_dir
 from dialogselect import DialogSelect
 from xml.dom.minidom import parse
-from metadatautils import KodiDb, process_method_on_list
+from metadatautils import MetadataUtils
 import urlparse
 import sys
 
@@ -30,8 +30,8 @@ class MainModule:
         '''Initialization and main code run'''
         self.win = xbmcgui.Window(10000)
         self.addon = xbmcaddon.Addon(ADDON_ID)
-        self.kodidb = KodiDb()
-        self.cache = SimpleCache()
+        self.mutils = MetadataUtils()
+        self.cache = self.mutils.cache
 
         self.params = self.get_params()
         log_msg("MainModule called with parameters: %s" % self.params)
@@ -51,10 +51,9 @@ class MainModule:
 
     def close(self):
         '''Cleanup Kodi Cpython instances on exit'''
-        self.cache.close()
+        self.mutils.close()
         del self.win
         del self.addon
-        del self.kodidb
         log_msg("MainModule exited")
 
     @classmethod
@@ -80,7 +79,7 @@ class MainModule:
         paramstring = ""
         for key, value in self.params.iteritems():
             paramstring += ",%s=%s" % (key, value)
-        if xbmc.getCondVisibility("System.HasAddon(%s)" % newaddon):
+        if getCondVisibility("System.HasAddon(%s)" % newaddon):
             xbmc.executebuiltin("RunAddon(%s%s)" % (newaddon, paramstring))
         else:
             # trigger install of the addon
@@ -108,11 +107,11 @@ class MainModule:
         if view_id is not None:
             # also store forced view
             if (content_type and current_forced_view and current_forced_view != "None" and
-                    xbmc.getCondVisibility("Skin.HasSetting(SkinHelper.ForcedViews.Enabled)")):
+                    getCondVisibility("Skin.HasSetting(SkinHelper.ForcedViews.Enabled)")):
                 xbmc.executebuiltin("Skin.SetString(SkinHelper.ForcedViews.%s,%s)" % (content_type, view_id))
                 xbmc.executebuiltin("Skin.SetString(SkinHelper.ForcedViews.%s.label,%s)" % (content_type, view_label))
                 self.win.setProperty("SkinHelper.ForcedView", view_id)
-                if not xbmc.getCondVisibility("Control.HasFocus(%s)" % current_forced_view):
+                if not getCondVisibility("Control.HasFocus(%s)" % current_forced_view):
                     xbmc.sleep(100)
                     xbmc.executebuiltin("Container.SetViewMode(%s)" % view_id)
                     xbmc.executebuiltin("SetFocus(%s)" % view_id)
@@ -146,7 +145,7 @@ class MainModule:
                         cur_view_select_id += 1
                 if (("all" in mediatypes or content_type.lower() in mediatypes) and
                     (not "!" + content_type.lower() in mediatypes) and not
-                        xbmc.getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % viewid)):
+                        getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % viewid)):
                     image = "special://skin/extras/viewthumbs/%s.jpg" % viewid
                     listitem = xbmcgui.ListItem(label=label, iconImage=image)
                     listitem.setProperty("viewid", viewid)
@@ -182,7 +181,7 @@ class MainModule:
                 image = "special://skin/extras/viewthumbs/%s.jpg" % view_id
                 listitem = xbmcgui.ListItem(label=label, label2=desc, iconImage=image)
                 listitem.setProperty("viewid", view_id)
-                if not xbmc.getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % view_id):
+                if not getCondVisibility("Skin.HasSetting(SkinHelper.view.Disabled.%s)" % view_id):
                     listitem.select(selected=True)
                 excludefromdisable = False
                 try:
@@ -228,7 +227,10 @@ class MainModule:
     def get_youtube_listing(searchquery):
         '''get items from youtube plugin by query'''
         lib_path = u"plugin://plugin.video.youtube/kodion/search/query/?q=%s" % searchquery
-        return KodiDb().files(lib_path)
+        metadatautils = MetadataUtils()
+        files = metadatautils.kodidb.files(lib_path)
+        del metadatautils
+        return files
 
     def searchyoutube(self):
         '''helper to search youtube for the given title'''
@@ -256,7 +258,7 @@ class MainModule:
         result = dialog.result
         del dialog
         if result:
-            if xbmc.getCondVisibility(
+            if getCondVisibility(
                     "Window.IsActive(script-skin_helper_service-CustomInfo.xml) | "
                     "Window.IsActive(movieinformation)"):
                 xbmc.executebuiltin("Dialog.Close(movieinformation)")
@@ -271,14 +273,14 @@ class MainModule:
         name = self.params.get("name", "")
         window_header = self.params.get("name", "")
         results = []
-        items = self.kodidb.castmedia(name)
-        items = process_method_on_list(self.kodidb.prepare_listitem, items)
+        items = self.mutils.kodidb.castmedia(name)
+        items = self.mutils.process_method_on_list(self.mutils.kodidb.prepare_listitem, items)
         for item in items:
             if item["file"].startswith("videodb://"):
                 item["file"] = "ActivateWindow(Videos,%s,return)" % item["file"]
             else:
                 item["file"] = 'PlayMedia("%s")' % item["file"]
-            results.append(self.kodidb.create_listitem(item, False))
+            results.append(self.mutils.kodidb.create_listitem(item, False))
         # finished lookup - display listing with results
         xbmc.executebuiltin("dialog.Close(busydialog)")
         dialog = DialogSelect("DialogSelect.xml", "", listing=results, windowtitle=window_header, richlayout=True)
@@ -286,7 +288,7 @@ class MainModule:
         result = dialog.result
         del dialog
         if result:
-            while xbmc.getCondVisibility("System.HasModalDialog"):
+            while getCondVisibility("System.HasModalDialog | System.HasVisibleModalDialog"):
                 xbmc.executebuiltin("Action(Back)")
                 xbmc.sleep(300)
             xbmc.executebuiltin(result.getfilename())
@@ -302,13 +304,13 @@ class MainModule:
             position = int(relativeposition) - 1
         count = 0
         if control:
-            while not xbmc.getCondVisibility("Control.HasFocus(%s)" % control):
-                if xbmc.getCondVisibility("Window.IsActive(busydialog)"):
+            while not getCondVisibility("Control.HasFocus(%s)" % control):
+                if getCondVisibility("Window.IsActive(busydialog)"):
                     xbmc.sleep(150)
                     continue
-                elif count == 20 or (xbmc.getCondVisibility(
+                elif count == 20 or (getCondVisibility(
                         "!Control.IsVisible(%s) | "
-                        "!IntegerGreaterThan(Container(%s).NumItems,0)" % (control, control))):
+                        "!Integer.IsGreater(Container(%s).NumItems,0)" % (control, control))):
                     if fallback:
                         xbmc.executebuiltin("Control.SetFocus(%s)" % fallback)
                     break
@@ -324,12 +326,11 @@ class MainModule:
             xbmc.sleep(50)
             for i in range(10):
                 for control in controls:
-                    if xbmc.getCondVisibility("Control.IsVisible(%s) + IntegerGreaterThan(Container(%s).NumItems,0)"
+                    if getCondVisibility("Control.IsVisible(%s) + Integer.IsGreater(Container(%s).NumItems,0)"
                                               % (control, control)):
                         self.win.setProperty("SkinHelper.WidgetContainer", control)
                         return
                 xbmc.sleep(50)
-        self.win.clearProperty("SkinHelper.WidgetContainer")
 
     def saveskinimage(self):
         '''let the user select an image and save it to addon_data for easy backup'''
@@ -377,7 +378,7 @@ class MainModule:
     def togglekodisetting(self):
         '''toggle kodi setting'''
         settingname = self.params.get("setting", "")
-        cur_value = xbmc.getCondVisibility("system.getbool(%s)" % settingname)
+        cur_value = getCondVisibility("system.getbool(%s)" % settingname)
         if cur_value:
             new_value = "false"
         else:
@@ -397,18 +398,16 @@ class MainModule:
             del valueint
         except Exception:
             pass
-        if value.lower() == "true":
-            value = 'true'
-        elif value.lower() == "false":
-            value = 'false'
+        if value.lower() in ["true", "false"]:
+            value = value.lower()
         elif is_int:
             value = '"%s"' % value
-        xbmc.executeJSONRPC('{"jsonrpc":"2.0", "id":1, "method":"Settings.SetSettingValue",\
-            "params":{"setting":"%s","value":%s}}' % (settingname, value))
+        params = {"setting": settingname, "value": value}
+        kodi_json("Settings.SetSettingValue", params)
 
     def playtrailer(self):
         '''auto play windowed trailer inside video listing'''
-        if not xbmc.getCondVisibility("Player.HasMedia | Container.Scrolling | Container.OnNext | "
+        if not getCondVisibility("Container.Scrolling | Container.OnNext | "
                                       "Container.OnPrevious | !IsEmpty(Window(Home).Property(traileractionbusy))"):
             self.win.setProperty("traileractionbusy", "traileractionbusy")
             widget_container = self.params.get("widgetcontainer", "")
@@ -487,7 +486,7 @@ class MainModule:
             # for video or audio we have to wait for the player to finish...
             xbmc.Player().play(splashfile, windowed=True)
             xbmc.sleep(500)
-            while xbmc.getCondVisibility("Player.HasMedia"):
+            while getCondVisibility("Player.HasMedia"):
                 xbmc.sleep(150)
         # replace startup window with home
         startupwindow = xbmc.getInfoLabel("System.StartupWindow")
@@ -581,26 +580,18 @@ class MainModule:
 
     def dialogok(self):
         '''helper to show an OK dialog with a message'''
-        headertxt = self.params.get("header")
-        bodytxt = self.params.get("message")
-        if bodytxt.startswith(" "):
-            bodytxt = bodytxt[1:]
-        if headertxt.startswith(" "):
-            headertxt = headertxt[1:]
+        headertxt = clean_string(self.params.get("header", ""))
+        bodytxt = clean_string(self.params.get("message", ""))
         dialog = xbmcgui.Dialog()
         dialog.ok(heading=headertxt, line1=bodytxt)
         del dialog
 
     def dialogyesno(self):
         '''helper to show a YES/NO dialog with a message'''
-        headertxt = self.params.get("header")
-        bodytxt = self.params.get("message")
+        headertxt = clean_string(self.params.get("header", ""))
+        bodytxt = clean_string(self.params.get("message", ""))
         yesactions = self.params.get("yesaction", "").split("|")
         noactions = self.params.get("noaction", "").split("|")
-        if bodytxt.startswith(" "):
-            bodytxt = bodytxt[1:]
-        if headertxt.startswith(" "):
-            headertxt = headertxt[1:]
         if xbmcgui.Dialog().yesno(heading=headertxt, line1=bodytxt):
             for action in yesactions:
                 xbmc.executebuiltin(action.encode("utf-8"))
@@ -610,13 +601,10 @@ class MainModule:
 
     def textviewer(self):
         '''helper to show a textviewer dialog with a message'''
-        headertxt = self.params.get("header", "")
-        bodytxt = self.params.get("message", "")
-        if bodytxt.startswith(" "):
-            bodytxt = bodytxt[1:]
-        if headertxt.startswith(" "):
-            headertxt = headertxt[1:]
+        headertxt = clean_string(self.params.get("header", ""))
+        bodytxt = clean_string(self.params.get("message", ""))
         xbmcgui.Dialog().textviewer(headertxt, bodytxt)
+        
 
     def fileexists(self):
         '''helper to let the skinner check if a file exists

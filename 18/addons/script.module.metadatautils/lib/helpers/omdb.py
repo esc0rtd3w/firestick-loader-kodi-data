@@ -3,15 +3,16 @@
 
 '''get metadata from omdb'''
 
-from utils import get_json, formatted_number, int_with_commas, try_parse_int, KODI_LANGUAGE
+from utils import get_json, get_xml, formatted_number, int_with_commas, try_parse_int, KODI_LANGUAGE, ADDON_ID
 from simplecache import use_cache
 import arrow
-import xbmc
+import xbmc, time
+import xbmcaddon
 
 
 class Omdb(object):
     '''get metadata from omdb'''
-    base_url = 'http://www.omdbapi.com/'
+    api_key = None  # public var to be set by the calling addon
 
     def __init__(self, simplecache=None):
         '''Initialize - optionaly provide simplecache object'''
@@ -20,13 +21,20 @@ class Omdb(object):
             self.cache = SimpleCache()
         else:
             self.cache = simplecache
+        addon = xbmcaddon.Addon(id=ADDON_ID)
+        api_key = addon.getSetting("omdbapi_apikey")
+        if api_key:
+            self.api_key = api_key
+        del addon
 
+    @use_cache(14)
     def get_details_by_imdbid(self, imdb_id):
         '''get omdb details by providing an imdb id'''
         params = {"i": imdb_id}
         data = self.get_data(params)
-        return self.map_details(data) if data else {}
+        return self.map_details(data) if data else None
 
+    @use_cache(14)
     def get_details_by_title(self, title, year="", media_type=""):
         ''' get omdb details by title
             title --> The title of the media to look for (required)
@@ -39,19 +47,23 @@ class Omdb(object):
             media_type = "series"
         params = {"t": title, "y": year, "type": media_type}
         data = self.get_data(params)
-        return self.map_details(data) if data else {}
+        return self.map_details(data) if data else None
 
-    @use_cache(7)
+    @use_cache(14)
     def get_data(self, params):
         '''helper method to get data from omdb json API'''
-        params["plot"] = "short"
-        params["tomatoes"] = True
-        params["r"] = "json"
-        data = get_json(self.base_url, params)
-        if data is None:
-            self.base_url = 'http://svr2.omdbapi.com/'  # fallback to temporary omdb server
-            data = get_json(self.base_url, params)
-        return data
+        base_url = 'http://www.omdbapi.com/'
+        params["plot"] = "full"
+        params["tomatoes"] = "true"
+        if self.api_key:
+            params["apikey"] = self.api_key
+            rate_limit = None
+        else:
+            # rate limited api key !
+            params["apikey"] = "ea23cea2"
+            rate_limit = ("omdbapi.com", 2)
+        params["r"] = "xml"
+        return get_xml(base_url, params, ratelimit=rate_limit)
 
     @staticmethod
     def map_details(data):
@@ -59,7 +71,7 @@ class Omdb(object):
         result = {}
         for key, value in data.iteritems():
             # filter the N/A values
-            if value == "N/A" or not value:
+            if value in ["N/A", "NA"] or not value:
                 continue
             if key == "Title":
                 result["title"] = value
@@ -68,46 +80,61 @@ class Omdb(object):
                     result["year"] = try_parse_int(value.split("-")[0])
                 except Exception:
                     result["year"] = value
-            elif key == "Year":
-                result["year"] = value
-            if key == "Rated":
+            elif key == "rated":
                 result["mpaa"] = value.replace("Rated", "")
-            elif key == "Title":
+            elif key == "title":
                 result["title"] = value
-            elif key == "Released":
+            elif key == "released":
                 date_time = arrow.get(value, "DD MMM YYYY")
                 result["premiered"] = date_time.strftime(xbmc.getRegion("dateshort"))
                 try:
                     result["premiered.formatted"] = date_time.format('DD MMM YYYY', locale=KODI_LANGUAGE)
                 except Exception:
                     result["premiered.formatted"] = value
-            elif key == "Runtime":
+            elif key == "runtime":
                 result["runtime"] = try_parse_int(value.replace(" min", "")) * 60
-            elif key == "Genre":
+            elif key == "genre":
                 result["genre"] = value.split(", ")
-            elif key == "Director":
+            elif key == "director":
                 result["director"] = value.split(", ")
-            elif key == "Writer":
+            elif key == "writer":
                 result["writer"] = value.split(", ")
-            elif key == "Country":
+            elif key == "country":
                 result["country"] = value.split(", ")
-            elif key == "Awards":
+            elif key == "awards":
                 result["awards"] = value
-                result["RottenTomatoesAwards"] = value  # legacy
-            elif key == "Poster":
+            elif key == "poster":
                 result["thumbnail"] = value
                 result["art"] = {}
                 result["art"]["thumb"] = value
-            elif key == "Metascore":
-                result["metacritic.rating"] = value
-                result["rating.mc"] = value
-            elif key == "imdbRating":
-                result["rating.imdb"] = value
-                result["rating"] = float(value)
-                result["rating.percent.imdb"] = "%s" % (try_parse_int(float(value) * 10))
             elif key == "imdbVotes":
                 result["votes.imdb"] = value
                 result["votes"] = try_parse_int(value.replace(",", ""))
+            elif key == "tomatoUserMeter":
+                result["rottentomatoes.audience"] = value
+            elif key == "metascore":
+                rating = value
+                result["rating.mc.text"] = rating
+                rating = rating.split("/")[0]
+                result["metacritic.rating"] = rating
+                result["rating.mc"] = rating
+                result["metacritic.rating.percent"] = "%s" % rating
+            elif key == "tomatoMeter":
+                rating = value
+                result["rottentomatoes.rating.percent"] = rating
+                rating = rating.replace("%", "")
+                # this should be a dedicated rt rating instead of the meter
+                result["rottentomatoes.rating"] = rating
+                result["rating.rt"] = rating
+                result["rottentomatoes.meter"] = rating
+                result["rottentomatoesmeter"] = rating
+                rating = int(rating)
+                if rating < 60:
+                    result["rottentomatoes.rotten"] = rating
+                    result["rottentomatoes.image"] = "rotten"
+                else:
+                    result["rottentomatoes.fresh"] = rating
+                    result["rottentomatoes.image"] = "fresh"
             elif key == "imdbID":
                 result["imdbnumber"] = value
             elif key == "BoxOffice":
@@ -120,36 +147,13 @@ class Omdb(object):
                 result["studio"] = value.split(", ")
             elif key == "Website":
                 result["homepage"] = value
-            # rotten tomatoes
-            elif key == "tomatoMeter":
-                result["rottentomatoes.meter"] = value
-                result["rottentomatoesmeter"] = value
-            if key == "tomatoRating":
-                result["rottentomatoes.rating"] = value
-                result["rottentomatoes.rating.percent"] = "%s" % (try_parse_int(float(value) * 10))
-                result["rating.rt"] = value
-            elif key == "tomatoFresh":
-                result["rottentomatoes.fresh"] = value
-                result["rottentomatoesfresh"] = value  # legacy
-            elif key == "tomatoReviews":
-                result["rottentomatoes.reviews"] = formatted_number(value)
-                result["rottentomatoesreviews"] = formatted_number(value)  # legacy
-            elif key == "tomatoRotten":
-                result["rottentomatoes.rotten"] = value
-                result["rottentomatoesrotten"] = value  # legacy
-            elif key == "tomatoImage":
-                result["rottentomatoes.image"] = value
-                result["rottentomatoesimage"] = value  # legacy
-            elif key == "tomatoConsensus":
-                result["rottentomatoes.consensus"] = value
-                result["rottentomatoesconsensus"] = value  # legacy
-            elif key == "tomatoUserMeter":
-                result["rottentomatoes.usermeter"] = value
-            elif key == "tomatoUserRating":
-                result["rottentomatoes.userrating"] = value
-                result["rottentomatoes.userrating.percent"] = "%s" % (try_parse_int(float(value) * 10))
-            elif key == "tomatoUserReviews":
-                result["rottentomatoes.userreviews"] = int_with_commas(value)
-            elif key == "tomatoURL":
-                result["rottentomatoes.url"] = value
+            elif key == "plot":
+                result["plot"] = value
+                result["imdb.plot"] = value
+            elif key == "Type":
+                if value == "series":
+                    result["type"] = "tvshow"
+                else:
+                    result["type"] = value
+                result["media_type"] = result["type"]
         return result

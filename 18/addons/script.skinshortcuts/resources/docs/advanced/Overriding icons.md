@@ -14,7 +14,7 @@ To override all shortcuts with a particular labelID, use the following in your o
 | :------: | :------: | ----------- |
 | `[labelID]` |  | The labelID of the shortcut whose icon you wish to override |
 | `[GroupName]` | Yes | The group that must be being editing for the override to apply. If ommitted, will apply to groups |
-| `[Grouping]` | Yes | The `<content />` grouping that the icon must be in to be overrided. If ommitted, will be applied to all groupings. See [Custom groupings](./Custom groupings.md) for details |
+| `[Grouping]` | Yes | The `<content />` grouping that the icon must be in to be overrided. If ommitted, will be applied to all groupings. See [Custom groupings](./Custom%20groupings.md) for details |
 | `[New image]` | | The replacement image |
 
 For details of the labelID system that Skin Shortcut employs, and the likely values of this property, see here.
@@ -29,7 +29,7 @@ To override all instances of a particular image, use the following in your overr
 | :------: | :------: | ----------- |
 | `[Original image]` |  | The image you are overriding |
 | `[GroupName]` | Yes | The group that must be being editing for the override to apply. If ommitted, will apply to groups |
-| `[content]` | Yes | The `<content />` grouping that the icon must be in to be overrided. If ommitted, will be applied to all groupings. See [Custom groupings](./Custom groupings.md) for details. |
+| `[content]` | Yes | The `<content />` grouping that the icon must be in to be overrided. If ommitted, will be applied to all groupings. See [Custom groupings](./Custom%20groupings.md) for details. |
 | `[New image]` |  | The replacement image |
 
 ## Icons versus Thumbnails
@@ -50,4 +50,4 @@ Where possible, Skin Shortcuts sets the icon of available shortcuts to an approp
 
 Where there is no default icon, Skin Shortcuts sets it to a generic value so that the skinner can override the icon and provide a specific one for their skin. Please see the code for details - gui.py, the functions 'common', 'more' and 'settings'
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

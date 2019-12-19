@@ -124,4 +124,4 @@ As such, unless the context menu is customised by the skin, the script includes 
 
 The control can be accessed via a radiobutton control - you can check against the property 'skinshortcuts-disabled' of the selected shortcut. It's value will be 'True' if the shortcut is disabled, 'False' if it is enabled.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](./Getting Started.md) - [Advanced Usage](../advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

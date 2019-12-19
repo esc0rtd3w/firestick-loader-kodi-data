@@ -291,3 +291,31 @@ msgstr ""
 msgctxt "#32068"
 msgid "Episodes airing today"
 msgstr ""
+
+msgctxt "#32069"
+msgid "Recently played TV channels"
+msgstr ""
+
+msgctxt "#32070"
+msgid "In progress TV shows and movies"
+msgstr ""
+
+msgctxt "#32071"
+msgid "Enable aggressive refresh of widgets"
+msgstr ""
+
+msgctxt "#32072"
+msgid "Number of recently watched items for similar widgets"
+msgstr ""
+
+msgctxt "#32073"
+msgid "Hide watched items in similar widgets"
+msgstr ""
+
+msgctxt "#32074"
+msgid "Enable experimental recommended widgets"
+msgstr ""
+
+msgctxt "#32075"
+msgid "Playlists (Choose playlist for Movies then TV Shows)"
+msgstr ""

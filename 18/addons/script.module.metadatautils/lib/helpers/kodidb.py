@@ -59,7 +59,7 @@ class KodiDb(object):
         return tvshows
 
     def tvshow_by_imdbid(self, imdb_id):
-        '''gets a tvshow from kodidb by imdbid.'''
+        '''gets a tvshow from kodidb by imdbid (or tvdbid).'''
         # apparently you can't filter on imdb so we have to do this the complicated way
         if KODI_VERSION > 16:
             # from Kodi 17 we have a uniqueid field instead of imdbnumber
@@ -81,13 +81,13 @@ class KodiDb(object):
         return self.get_json("VideoLibrary.GetEpisodeDetails", returntype="episodedetails",
                              fields=FIELDS_EPISODES, optparam=("episodeid", try_parse_int(db_id)))
 
-    def episodes(self, sort=None, filters=None, limits=None, filtertype=None, tvshowid=None):
+    def episodes(self, sort=None, filters=None, limits=None, filtertype=None, tvshowid=None, fields=FIELDS_EPISODES):
         '''get episodes from kodi db'''
         if tvshowid:
             params = ("tvshowid", try_parse_int(tvshowid))
         else:
             params = None
-        return self.get_json("VideoLibrary.GetEpisodes", sort=sort, filters=filters, fields=FIELDS_EPISODES,
+        return self.get_json("VideoLibrary.GetEpisodes", sort=sort, filters=filters, fields=fields,
                              limits=limits, returntype="episodes", filtertype=filtertype, optparam=params)
 
     def musicvideo(self, db_id):
@@ -295,44 +295,56 @@ class KodiDb(object):
     @staticmethod
     def get_favourites_from_file():
         '''json method for favourites doesn't return all items (such as android apps) so retrieve them from file'''
-        from xml.dom.minidom import parse
         allfavourites = []
-        favourites_path = xbmc.translatePath('special://profile/favourites.xml').decode("utf-8")
-        if xbmcvfs.exists(favourites_path):
-            doc = parse(favourites_path)
-            result = doc.documentElement.getElementsByTagName('favourite')
-            for fav in result:
-                action = fav.childNodes[0].nodeValue
-                action = action.replace('"', '')
-                label = fav.attributes['name'].nodeValue
-                try:
-                    thumb = fav.attributes['thumb'].nodeValue
-                except Exception:
-                    thumb = ""
-                window = ""
-                windowparameter = ""
-                action_type = "unknown"
-                if action.startswith("StartAndroidActivity"):
-                    action_type = "androidapp"
-                elif action.startswith("ActivateWindow"):
-                    action_type = "window"
-                    actionparts = action.replace("ActivateWindow(", "").replace(",return)", "").split(",")
-                    window = actionparts[0]
-                    if len(actionparts) > 1:
-                        windowparameter = actionparts[1]
-                elif action.startswith("PlayMedia"):
-                    action_type = "media"
-                    action = action.replace("PlayMedia(", "")[:-1]
-                allfavourites.append({"label": label, "path": action, "thumbnail": thumb, "window": window,
-                                      "windowparameter": windowparameter, "type": action_type})
+        try:
+            from xml.dom.minidom import parse
+            favourites_path = xbmc.translatePath('special://profile/favourites.xml').decode("utf-8")
+            if xbmcvfs.exists(favourites_path):
+                doc = parse(favourites_path)
+                result = doc.documentElement.getElementsByTagName('favourite')
+                for fav in result:
+                    action = fav.childNodes[0].nodeValue
+                    action = action.replace('"', '')
+                    label = fav.attributes['name'].nodeValue
+                    try:
+                        thumb = fav.attributes['thumb'].nodeValue
+                    except Exception:
+                        thumb = ""
+                    window = ""
+                    windowparameter = ""
+                    action_type = "unknown"
+                    if action.startswith("StartAndroidActivity"):
+                        action_type = "androidapp"
+                    elif action.startswith("ActivateWindow"):
+                        action_type = "window"
+                        actionparts = action.replace("ActivateWindow(", "").replace(",return)", "").split(",")
+                        window = actionparts[0]
+                        if len(actionparts) > 1:
+                            windowparameter = actionparts[1]
+                    elif action.startswith("PlayMedia"):
+                        action_type = "media"
+                        action = action.replace("PlayMedia(", "")[:-1]
+                    allfavourites.append({"label": label, "path": action, "thumbnail": thumb, "window": window,
+                                          "windowparameter": windowparameter, "type": action_type})
+        except Exception as exc:
+            log_exception(__name__, exc)
         return allfavourites
 
     @staticmethod
-    def create_listitem(item, as_tuple=True):
+    def create_listitem(item, as_tuple=True, offscreen=True):
         '''helper to create a kodi listitem from kodi compatible dict with mediainfo'''
         try:
-            liz = xbmcgui.ListItem(label=item.get("label", ""), label2=item.get("label2", ""))
-            liz.setPath(item['file'])
+            if KODI_VERSION > 17:
+                liz = xbmcgui.ListItem(
+                    label=item.get("label", ""),
+                    label2=item.get("label2", ""),
+                    path=item['file'],
+                    offscreen=offscreen)
+            else:
+                liz = xbmcgui.ListItem(
+                    label=item.get("label", ""),
+                    label2=item.get("label2", ""),
+                    path=item['file'])
 
             # only set isPlayable prop if really needed
             if item.get("isFolder", False):
@@ -492,33 +504,35 @@ class KodiDb(object):
 
             # general properties
             if "genre" in item and isinstance(item['genre'], list):
-                item["genre"] = " / ".join(item.get('genre'))
+                item["genre"] = " / ".join(item['genre'])
             if "studio" in item and isinstance(item['studio'], list):
-                item["studio"] = " / ".join(item.get('studio'))
+                item["studio"] = " / ".join(item['studio'])
             if "writer" in item and isinstance(item['writer'], list):
-                item["writer"] = " / ".join(item.get('writer'))
+                item["writer"] = " / ".join(item['writer'])
             if 'director' in item and isinstance(item['director'], list):
-                item["director"] = " / ".join(item.get('director'))
+                item["director"] = " / ".join(item['director'])
             if 'artist' in item and not isinstance(item['artist'], list):
-                item["artist"] = [item.get('artist')]
-            if not 'artist' in item:
+                item["artist"] = [item['artist']]
+            if 'artist' not in item:
                 item["artist"] = []
-            if item['type'] == "album" and not item.get('album'):
-                item['album'] = item.get('label')
-            if not item.get("duration") and item.get("runtime"):
+            if item['type'] == "album" and 'album' not in item and 'label' in item:
+                item['album'] = item['label']
+            if "duration" not in item and "runtime" in item:
                 if (item["runtime"] / 60) > 300:
-                    item["duration"] = item.get("runtime") / 60
+                    item["duration"] = item["runtime"] / 60
                 else:
-                    item["duration"] = item.get("runtime")
-            if not item.get("plot") and item.get("comment"):
-                item["plot"] = item.get("comment")
-            if not item.get("tvshowtitle") and item.get("showtitle"):
-                item["tvshowtitle"] = item.get("showtitle")
-            if not item.get("premiered") and item.get("firstaired"):
-                item["premiered"] = item.get("firstaired")
-            if not properties.get("imdbnumber") and item.get("imdbnumber"):
-                properties["imdbnumber"] = item.get("imdbnumber")
-            if not properties.get("imdbnumber") and item.get("uniqueid"):
+                    item["duration"] = item["runtime"]
+            if "plot" not in item and "comment" in item:
+                item["plot"] = item["comment"]
+            if "tvshowtitle" not in item and "showtitle" in item:
+                item["tvshowtitle"] = item["showtitle"]
+            if "premiered" not in item and "firstaired" in item:
+                item["premiered"] = item["firstaired"]
+            if "firstaired" in item and "aired" not in item:
+                item["aired"] = item["firstaired"]
+            if "imdbnumber" not in properties and "imdbnumber" in item:
+                properties["imdbnumber"] = item["imdbnumber"]
+            if "imdbnumber" not in properties and "uniqueid" in item:
                 for value in item["uniqueid"].values():
                     if value.startswith("tt"):
                         properties["imdbnumber"] = value
@@ -532,7 +546,7 @@ class KodiDb(object):
             list_cast = []
             list_castandrole = []
             item["cast_org"] = item.get("cast", [])
-            if item.get("cast") and isinstance(item["cast"], list):
+            if "cast" in item and isinstance(item["cast"], list):
                 for castmember in item["cast"]:
                     if isinstance(castmember, dict):
                         list_cast.append(castmember.get("name", ""))
@@ -544,15 +558,15 @@ class KodiDb(object):
             item["cast"] = list_cast
             item["castandrole"] = list_castandrole
 
-            if item.get("season") and item.get("episode"):
+            if "season" in item and "episode" in item:
                 properties["episodeno"] = "s%se%s" % (item.get("season"), item.get("episode"))
-            if item.get("resume"):
+            if "resume" in item:
                 properties["resumetime"] = str(item['resume']['position'])
                 properties["totaltime"] = str(item['resume']['total'])
                 properties['StartOffset'] = str(item['resume']['position'])
 
             # streamdetails
-            if item.get("streamdetails"):
+            if "streamdetails" in item:
                 streamdetails = item["streamdetails"]
                 audiostreams = streamdetails.get('audio', [])
                 videostreams = streamdetails.get('video', [])
@@ -599,11 +613,11 @@ class KodiDb(object):
                 item["streamdetails"]["video"] = {'duration': item.get('duration', 0)}
 
             # additional music properties
-            if item.get('album_description'):
+            if 'album_description' in item:
                 properties["Album_Description"] = item.get('album_description')
 
             # pvr properties
-            if item.get("starttime"):
+            if "starttime" in item:
                 # convert utc time to local time
                 item["starttime"] = localdate_from_utc_string(item["starttime"])
                 item["endtime"] = localdate_from_utc_string(item["endtime"])
@@ -619,15 +633,15 @@ class KodiDb(object):
                 properties["EndDateTime"] = "%s %s" % (enddate, endtime)
                 # set date to startdate
                 item["date"] = arrow.get(item["starttime"]).format("DD.MM.YYYY")
-            if item.get("channellogo"):
+            if "channellogo" in item:
                 properties["channellogo"] = item["channellogo"]
                 properties["channelicon"] = item["channellogo"]
-            if item.get("episodename"):
+            if "episodename" in item:
                 properties["episodename"] = item["episodename"]
-            if item.get("channel"):
+            if "channel" in item:
                 properties["channel"] = item["channel"]
                 properties["channelname"] = item["channel"]
-                item["label2"] = item["channel"]
+                item["label2"] = item["title"]
 
             # artwork
             art = item.get("art", {})
@@ -658,9 +672,13 @@ class KodiDb(object):
                 art["thumb"] = get_clean_image(item.get('icon'))
             if not item.get("thumbnail") and art.get('thumb'):
                 item["thumbnail"] = art["thumb"]
+
+            # clean art
             for key, value in art.iteritems():
                 if not isinstance(value, (str, unicode)):
                     art[key] = ""
+                elif value:
+                    art[key] = get_clean_image(value)
             item["art"] = art
 
             item["extraproperties"] = properties

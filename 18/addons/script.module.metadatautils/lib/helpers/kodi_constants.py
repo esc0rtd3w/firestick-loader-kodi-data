@@ -25,7 +25,7 @@ FIELDS_FILES = FIELDS_FILE + ["plotoutline", "sorttitle", "cast", "votes", "trai
     "firstaired","watchedepisodes","duration", "season"]
 FIELDS_SONGS = ["artist","displayartist", "title", "rating", "fanart", "thumbnail", "duration", "disc",
     "playcount", "comment", "file", "album", "lastplayed", "genre", "musicbrainzartistid", "track","dateadded"]
-FIELDS_ALBUMS = ["title", "fanart", "thumbnail", "genre", "displayartist", "artist", "genreid",
+FIELDS_ALBUMS = ["title", "fanart", "thumbnail", "genre", "displayartist", "artist",
     "musicbrainzalbumartistid", "year", "rating", "artistid", "musicbrainzalbumid", "theme", "description",
     "type", "style", "playcount", "albumlabel", "mood", "dateadded"]
 FIELDS_ARTISTS = ["born", "formed", "died", "style", "yearsactive", "mood", "fanart", "thumbnail",

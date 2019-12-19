@@ -25,4 +25,4 @@ You will probably wish to skin the main menu and the submenu items differently f
 `<visible>IsEmpty(ListItem.Property(isSubmenu))</visible>` - a main menu item
 `<visible>!IsEmpty(ListItem.Property(isSubmenu))</visible>` - a submenu item
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

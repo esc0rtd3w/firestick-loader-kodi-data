@@ -9,7 +9,6 @@
 
 from utils import create_main_entry
 from operator import itemgetter
-from metadatautils import extend_dict, process_method_on_list, get_clean_image
 import xbmc
 from urllib import quote_plus
 
@@ -26,9 +25,11 @@ class Pvr(object):
 
     def listing(self):
         '''main listing with all our channel nodes'''
+
+        # add generic pvr entries
         all_items = [
-            (self.addon.getLocalizedString(32020),
-             "channels&mediatype=pvr&reload=$INFO[Window(Home).Property(widgetreload2)]",
+            (self.addon.getLocalizedString(32069),
+             "lastchannels&mediatype=pvr&reload=$INFO[Window(Home).Property(widgetreload2)]",
              "DefaultAddonPVRClient.png"),
             (self.addon.getLocalizedString(32018),
              "recordings&mediatype=pvr&reload=$INFO[Window(Home).Property(widgetreload2)]",
@@ -42,14 +43,41 @@ class Pvr(object):
             (self.addon.getLocalizedString(32021),
              "timers&mediatype=pvr&reload=$INFO[Window(Home).Property(widgetreload2)]",
              "DefaultAddonPVRClient.png")]
-        return process_method_on_list(create_main_entry, all_items)
+
+        # get all channel groups and create a tv channels entry for each groups
+        for item in self.metadatautils.kodidb.channelgroups():
+            label = "%s: %s" % (self.addon.getLocalizedString(32020), item["label"])
+            widgetpath = "channels&mediatype=pvr&reload=$INFO[Window(Home).Property(widgetreload2)]"
+            widgetpath += "&channelgroup=%s" % (item["channelgroupid"])
+            all_items.append((label, widgetpath, "DefaultAddonPVRClient.png"))
+
+        return self.metadatautils.process_method_on_list(create_main_entry, all_items)
 
     def channels(self):
         ''' get all channels '''
         all_items = []
+        channelgroupid = self.options.get("channelgroup")
+        if channelgroupid:
+            channelgroupid = int(channelgroupid)
         if xbmc.getCondVisibility("Pvr.HasTVChannels"):
-            all_items = self.metadatautils.kodidb.channels(limits=(0, self.options["limit"]))
-            all_items = process_method_on_list(self.process_channel, all_items)
+            all_items = self.metadatautils.kodidb.channels(
+                limits=(0, self.options["limit"]),
+                channelgroupid=channelgroupid)
+            all_items = self.metadatautils.process_method_on_list(self.process_channel, all_items)
+        return all_items
+
+    def lastchannels(self):
+        ''' get last played channels '''
+        all_items = []
+        if xbmc.getCondVisibility("Pvr.HasTVChannels"):
+            # get full channels listing (as there is no way to apply filtering)
+            for channel in self.metadatautils.kodidb.channels():
+                # only add channels to the final list that are actually played once
+                if not channel["lastplayed"].startswith("1970"):
+                    all_items.append(channel)
+            # sort by last played field and apply limit
+            all_items = sorted(all_items, key=itemgetter('lastplayed'), reverse=True)[:self.options["limit"]]
+            all_items = self.metadatautils.process_method_on_list(self.process_channel, all_items)
         return all_items
 
     def recordings(self, next_only=False):
@@ -59,7 +87,6 @@ class Pvr(object):
         if xbmc.getCondVisibility("Pvr.HasTVChannels"):
             # Get a list of all the unwatched tv recordings
             recordings = self.metadatautils.kodidb.recordings()
-            recordings = sorted(recordings, key=itemgetter('endtime'))[:self.options["limit"]]
             pvr_backend = xbmc.getInfoLabel("Pvr.BackendName").decode("utf-8")
             for item in recordings:
                 # exclude live tv items from recordings list (mythtv workaround)
@@ -79,8 +106,9 @@ class Pvr(object):
                 all_items = sorted(all_items, key=itemgetter('endtime'), reverse=False)
             else:
                 all_items = sorted(all_items, key=itemgetter('endtime'), reverse=True)
+
             # return result including artwork...
-            return process_method_on_list(self.process_recording, all_items)
+            return self.metadatautils.process_method_on_list(self.process_recording, all_items)
         return all_items
 
     def nextrecordings(self):
@@ -91,15 +119,20 @@ class Pvr(object):
         '''get pvr timers'''
         all_items = []
         if xbmc.getCondVisibility("Pvr.HasTVChannels"):
-            all_items = sorted(self.metadatautils.kodidb.timers(), key=itemgetter('starttime'))
-            all_items = process_method_on_list(self.process_timer, all_items)
+            # only add timers which have a broadcast date
+            for timer in self.metadatautils.kodidb.timers():
+                if timer["starttime"] and not timer["starttime"].startswith("1970"):
+                    # filter out recurring timer entries
+                    if timer["starttime"] != timer["endtime"]:
+                        all_items.append(timer)
+            all_items = self.metadatautils.process_method_on_list(self.process_timer, all_items)
         return all_items
 
     def process_channel(self, channeldata):
         '''transform the json received from kodi into something we can use'''
-        item = { }
+        item = {}
         channelname = channeldata["label"]
-        channellogo = get_clean_image(channeldata['thumbnail'])
+        channellogo = self.metadatautils.get_clean_image(channeldata['thumbnail'])
         if channeldata.get('broadcastnow'):
             # channel with epg data
             item = channeldata['broadcastnow']
@@ -109,7 +142,9 @@ class Pvr(object):
             del item["firstaired"]
             # append artwork
             if self.enable_artwork:
-                extend_dict(item, self.metadatautils.get_pvr_artwork(item["title"], channelname, item["genre"]))
+                self.metadatautils.extend_dict(
+                    item, self.metadatautils.get_pvr_artwork(
+                        item["title"], channelname, item["genre"]))
         else:
             # channel without epg
             item = channeldata
@@ -121,7 +156,7 @@ class Pvr(object):
         item["label"] = channelname
         item["channelid"] = channeldata["channelid"]
         if not channellogo:
-            channellogo = self.metadatautils.get_channellogo(channelname).get("ChannelLogo", "")
+            channellogo = self.metadatautils.get_channellogo(channelname)
         if channellogo:
             item["art"] = {"thumb": channellogo}
         item["channellogo"] = channellogo
@@ -131,7 +166,7 @@ class Pvr(object):
     def process_recording(self, item):
         '''transform the json received from kodi into something we can use'''
         if self.enable_artwork:
-            extend_dict(item, self.metadatautils.get_pvr_artwork(item["title"], item["channel"]))
+            self.metadatautils.extend_dict(item, self.metadatautils.get_pvr_artwork(item["title"], item["channel"]))
         item["type"] = "recording"
         item["channellogo"] = self.metadatautils.get_channellogo(item["channel"])
         item["file"] = u"plugin://script.skin.helper.service?action=playrecording&recordingid=%s"\
@@ -149,14 +184,17 @@ class Pvr(object):
         '''transform the json received from kodi into something we can use'''
         item["file"] = "plugin://script.skin.helper.service/?action=launch&path=" + \
             quote_plus("ReplaceWindow(tvtimers),return")
-        channel_details = self.metadatautils.kodidb.channel(item["channelid"])
-        channelname = channel_details["label"]
+        if not item["channelid"] == -1:
+            channel_details = self.metadatautils.kodidb.channel(item["channelid"])
+            channelname = channel_details["label"]
+        else:
+            channelname = ""
         item["channel"] = channelname
         item["plot"] = item.get("summary", "")
         item["type"] = "recording"
         item["isFolder"] = False
         if self.enable_artwork:
-            extend_dict(item, self.metadatautils.get_pvr_artwork(item["title"], item["channel"]))
+            self.metadatautils.extend_dict(item, self.metadatautils.get_pvr_artwork(item["title"], item["channel"]))
         item["type"] = "recording"
         item["channellogo"] = self.metadatautils.get_channellogo(item["channel"])
         return item

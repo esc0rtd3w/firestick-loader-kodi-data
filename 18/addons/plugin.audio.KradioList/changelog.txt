@@ -1,0 +1,4 @@
+[b]1.0.1[/b]
+fix some bugs,add new channels
+[b]1.0.0[/b]
+first release 

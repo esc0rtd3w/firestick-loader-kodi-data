@@ -89,8 +89,8 @@ msgid "Works with both library and online sources (radio)"
 msgstr "Fonctionne avec la bibliothèque et les sources en ligne (radio)"
 
 msgctxt "#32018"
-msgid "Enable online scraper (musicbrainz/audiodb/fanart/last.fm)"
-msgstr "Activer les fournisseurs d'informations en ligne (musicbrainz/audiodb/fanart/last.fm)"
+msgid "Enable online scraper"
+msgstr "Activer les fournisseurs d'informations en ligne"
 
 msgctxt "#32019"
 msgid "Lookup artwork in a custom folder"
@@ -175,3 +175,75 @@ msgstr "Terminé"
 msgctxt "#32040"
 msgid "Released"
 msgstr "Sortie"
+
+msgctxt "#32041"
+msgid "Is the selected PVR Title a movie or tvshow ?"
+msgstr "Est-ce que le titre PVR sélectionné est un film ou une série TV ?"
+
+msgctxt "#32042"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#32043"
+msgid "Tvshow"
+msgstr "Série TV"
+
+msgctxt "#32044"
+msgid "Other"
+msgstr "Autre"
+
+msgctxt "#32045"
+msgid "Personal API key for Fanart.TV"
+msgstr "Clé API personnelle pour Fanart.TV"
+
+msgctxt "#32046"
+msgid "see www.fanart.tv for more details about personal and VIP memberships"
+msgstr "Voir www.fanart.tv pour plus de détails sur les membres personnels et VIP"
+
+msgctxt "#32047"
+msgid "Scraper settings"
+msgstr "Paramètres du fournisseur d'informations"
+
+msgctxt "#32048"
+msgid "Enable theaudiodb for metadata/artwork"
+msgstr "Activer theaudiodb pour les métadonnées et artworks"
+
+msgctxt "#32049"
+msgid "Enable TheAudioDb for metadata/artwork"
+msgstr "Activer TheAudioDb pour les métadonnées et artworks"
+
+msgctxt "#32050"
+msgid "Enable last.fm for metadata"
+msgstr "Activer Last.fm pour les métadonnées"
+
+msgctxt "#32051"
+msgid "Enable fanart.tv for artwork"
+msgstr "Activer Fanart.TV pour les artworks"
+
+msgctxt "#32052"
+msgid "API keys"
+msgstr "Clés API"
+
+msgctxt "#32053"
+msgid "Unlock full features by providing custom API keys"
+msgstr "Débloquez les fonctionnalités complètes en fournissant des clés API personnelles"
+
+msgctxt "#32054"
+msgid "Patreon API-key for omdbapi.com"
+msgstr "Clé API Patreon pour omdbapi.com"
+
+msgctxt "#32055"
+msgid "Personal developer API-key for TMDB"
+msgstr "Clé API personnelle pour TheMovieDB"
+
+msgctxt "#32056"
+msgid "Consider donating to these great projects providing you with great metadata"
+msgstr "Envisagez de faire un don à ces grands projets qui vous fournissent d'excellentes métadonnées"
+
+msgctxt "#32057"
+msgid "Info"
+msgstr "Informations"
+
+msgctxt "#32058"
+msgid "This modules uses the following sites/services to grab metadata"
+msgstr "Ces modules utilisent les sites/services suivants pour récupérer les métadonnées"

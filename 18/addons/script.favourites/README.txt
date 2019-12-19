@@ -1,4 +1,4 @@
-INFO FOR SKINNERS - How to use this addon in your skin:
+How to use this addon in your skin:
 
 
 1) RunScript(script.favourites,property=CustomFavourite.1)
@@ -9,7 +9,6 @@ INFO FOR SKINNERS - How to use this addon in your skin:
    CustomFavourite.1.Label
    CustomFavourite.1.Icon
    CustomFavourite.1.Path
-   CustomFavourite.1.List (the absolute path without the 'Activate.Window()' part)
 
    Additionally you can pass 'changetitle=true' to the script, this will allow the user to change the name of the label.
 

@@ -1,0 +1,121 @@
+# Kodi language file
+# Addon Name: Squeezebox player for Kodi
+# Addon id: plugin.audio.squeezebox
+# Addon Provider: marcelveldt
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-10-26 17:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#32000"
+msgid "Squeezelite"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Do not auto start squeezelite"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Manual path to squeezelite executable"
+msgstr ""
+
+msgctxt "#32003"
+msgid "On Android en IOS, squeezelite is not supported"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Install a Squeezeplayer app from the appstore"
+msgstr ""
+
+msgctxt "#32005"
+msgid "For Android, a good choice is SB Player"
+msgstr ""
+
+msgctxt "#32006"
+msgid "On iOS, the iPeng app is a good choice"
+msgstr ""
+
+msgctxt "#32007"
+msgid "By default, this addon will try to start squeezelite in the background for you"
+msgstr ""
+
+msgctxt "#32008"
+msgid "You can override this behaviour if you already have squeezelite running in the background"
+msgstr ""
+
+msgctxt "#32009"
+msgid "It is also possible to provide your own path to the squeezelite binary"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Specify MAC-address of player manually"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Define MAC-address (lowercase only!)"
+msgstr ""
+
+msgctxt "#32100"
+msgid "LMS Server"
+msgstr ""
+
+msgctxt "#32101"
+msgid "Do not autodiscover LMS server"
+msgstr ""
+
+msgctxt "#32102"
+msgid "LMS server hostname"
+msgstr ""
+
+msgctxt "#32103"
+msgid "LMS server web port"
+msgstr ""
+
+
+
+msgctxt "#32201"
+msgid "Play album"
+msgstr ""
+
+msgctxt "#32202"
+msgid "Browse album"
+msgstr ""
+
+msgctxt "#32203"
+msgid "Play now"
+msgstr ""
+
+msgctxt "#32204"
+msgid "Play next"
+msgstr ""
+
+msgctxt "#32205"
+msgid "Add to current playlist"
+msgstr ""
+
+msgctxt "#32206"
+msgid "Synchronize"
+msgstr ""
+
+msgctxt "#32207"
+msgid "Synchronize all players to this player"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Un-sync all players"
+msgstr ""
+
+msgctxt "#32209"
+msgid "Select output audio device"
+msgstr ""
+
+

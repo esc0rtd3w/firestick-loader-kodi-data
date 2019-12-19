@@ -1,0 +1,28 @@
+Exodus Redux Module Changelog:
+2.0.4
+- Fix TVDB 
+2.0.3
+- Fix Trakt and IMDb lists
+2.0.2
+- Fix Debrid Only playback
+2.0.1
+- Replaced Lambdascraper with Openscrapers
+2.0.0
+- Rebased
+1.0.9
+- New Trakt.tv API key
+1.0.8
+- Resume fix for Kodi 18
+- Removed Channels 
+1.0.7
+- Fix "In Theaters"
+1.0.6 
+- Cleanup module selection
+- Fix "In Theaters"
+- Fix Extended Info on TV Shows
+1.0.5 - 
+1.0.4 - 
+1.0.3 - 
+1.0.2 - 
+1.0.1 
+- Initial commit

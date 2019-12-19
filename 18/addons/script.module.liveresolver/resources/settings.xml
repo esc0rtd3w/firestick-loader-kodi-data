@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<setting type="lsep" label="USTVnow.com" />
+	<setting id="ustvnow_email" type="text" visible="true" label="Email" default=""/>
+	<setting id="ustvnow_pass" type="text" visible="true" option="hidden" label="Password" default=""/>
+	<setting type="lsep" label="Streamlive.to" />
+	<setting id="streamlive_user" type="text" visible="true" label="Username" default=""/>
+	<setting id="streamlive_pass" type="text" visible="true" option="hidden" label="Password" default=""/>
+</settings>

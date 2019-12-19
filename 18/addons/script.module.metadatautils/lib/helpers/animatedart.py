@@ -34,14 +34,21 @@ class AnimatedArt(object):
     @use_cache(14)
     def get_animated_artwork(self, imdb_id, manual_select=False, ignore_cache=False):
         '''returns all available animated art for the given imdbid/tmdbid'''
-        # no cache so grab the results
-        result = {
-            "animatedposter": self.poster(imdb_id, manual_select),
-            "animatedfanart": self.fanart(imdb_id, manual_select),
-            "imdb_id": imdb_id
-        }
-        self.write_kodidb(result)
-        log_msg("get_animated_artwork for imdbid: %s - result: %s" % (imdb_id, result) )
+        # prefer local result
+        kodi_movie = self.kodidb.movie_by_imdbid(imdb_id)
+        if not manual_select and kodi_movie and kodi_movie["art"].get("animatedposter"):
+            result = {
+                "animatedposter": kodi_movie["art"].get("animatedposter"),
+                "animatedfanart": kodi_movie["art"].get("animatedfanart")
+            }
+        else:
+            result = {
+                "animatedposter": self.poster(imdb_id, manual_select),
+                "animatedfanart": self.fanart(imdb_id, manual_select),
+                "imdb_id": imdb_id
+            }
+            self.write_kodidb(result)
+        log_msg("get_animated_artwork for imdbid: %s - result: %s" % (imdb_id, result))
         return result
 
     def poster(self, imdb_id, manual_select=False):
@@ -121,6 +128,8 @@ class AnimatedArt(object):
                 dialog.doModal()
                 selected_item = dialog.result
                 del dialog
+                if selected_item == 0:
+                    image = ""
                 if selected_item == 1:
                     # browse for image
                     dialog = xbmcgui.Dialog()
@@ -139,7 +148,7 @@ class AnimatedArt(object):
         '''animated gifs need to be stored locally, otherwise they won't work'''
         # make sure that our local path for the gif images exists
         addon = xbmcaddon.Addon(ADDON_ID)
-        gifs_path = "%s/animatedgifs/" % addon.getAddonInfo('profile')
+        gifs_path = "%sanimatedgifs/" % addon.getAddonInfo('profile')
         del addon
         if not xbmcvfs.exists(gifs_path):
             xbmcvfs.mkdirs(gifs_path)

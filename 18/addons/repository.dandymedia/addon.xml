@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.dandymedia" name="Dandymedia Repository" version="1.0.0" provider-name="Dandymedia">
+    <extension point="xbmc.addon.repository" name="Dandymedia Repository">
+        <info compressed="true">https://github.com/dandy0850/dandymedia/raw/master/addons.xml</info>
+        <checksum>https://github.com/dandy0850/dandymedia/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/dandy0850/dandymedia/raw/master/repo</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Dandymedia Repository</summary>
+        <description>Dandymedia collection all addons</description>
+        <platform>all</platform>
+    </extension>
+</addon>

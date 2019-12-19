@@ -9,13 +9,12 @@
 
 import urlparse
 from utils import log_msg, log_exception, ADDON_ID, create_main_entry
-from simplecache import SimpleCache
 import xbmcplugin
 import xbmc
 import xbmcaddon
 import xbmcgui
 import sys
-from metadatautils import MetadataUtils, process_method_on_list
+from metadatautils import MetadataUtils
 
 ADDON_HANDLE = int(sys.argv[1])
 
@@ -27,7 +26,6 @@ class Main(object):
         ''' Initialization '''
 
         self.metadatautils = MetadataUtils()
-        self.cache = SimpleCache()
         self.addon = xbmcaddon.Addon(ADDON_ID)
         self.win = xbmcgui.Window(10000)
         self.options = self.get_options()
@@ -36,9 +34,8 @@ class Main(object):
         if self.win.getProperty("SkinHelperShutdownRequested"):
             log_msg("Not forfilling request: Kodi is exiting!", xbmc.LOGWARNING)
             xbmcplugin.endOfDirectory(handle=ADDON_HANDLE)
-            return
 
-        if not "mediatype" in self.options or not "action" in self.options:
+        elif not "mediatype" in self.options or not "action" in self.options:
             # we need both mediatype and action, so show the main listing
             self.mainlisting()
         else:
@@ -50,7 +47,6 @@ class Main(object):
     def close(self):
         '''Cleanup Kodi Cpython instances'''
         self.metadatautils.close()
-        self.cache.close()
         del self.addon
         del self.win
         log_msg("MainModule exited")
@@ -59,6 +55,21 @@ class Main(object):
         '''get the options provided to the plugin path'''
 
         options = dict(urlparse.parse_qsl(sys.argv[2].replace('?', '').lower().decode("utf-8")))
+
+        # set the widget settings as options
+        options["hide_watched"] = self.addon.getSetting("hide_watched") == "true"
+        if self.addon.getSetting("hide_watched_recent") == "true" and "recent" in options.get("action", ""):
+            options["hide_watched"] = True
+        options["num_recent_similar"] = int(self.addon.getSetting("num_recent_similar"))
+        options["exp_recommended"] = self.addon.getSetting("exp_recommended") == "true"
+        options["hide_watched_similar"] = self.addon.getSetting("hide_watched_similar") == "true"
+        options["next_inprogress_only"] = self.addon.getSetting("nextup_inprogressonly") == "true"
+        options["episodes_enable_specials"] = self.addon.getSetting("episodes_enable_specials") == "true"
+        options["group_episodes"] = self.addon.getSetting("episodes_grouping") == "true"
+        if "limit" in options:
+            options["limit"] = int(options["limit"])
+        else:
+            options["limit"] = int(self.addon.getSetting("default_limit"))
 
         if not "mediatype" in options and "action" in options:
             # get the mediatype and action from the path (for backwards compatability with old style paths)
@@ -72,7 +83,8 @@ class Main(object):
                 ("songs", "songs"),
                 ("artists", "artists"),
                 ("media", "media"),
-                    ("favourites", "favourites")]:
+                ("favourites", "favourites"),
+                    ("favorites", "favourites")]:
                 if item[0] in options["action"]:
                     options["mediatype"] = item[1]
                     options["action"] = options["action"].replace(item[1], "").replace(item[0], "")
@@ -91,18 +103,13 @@ class Main(object):
                 options["action"] = "listing"
             if "listing" in options["action"]:
                 options["skipcache"] = "true"
+            if options["action"] == "browsegenres" and options["mediatype"] == "randommovies":
+                options["mediatype"] = "movies"
+                options["random"] = True
+            elif options["action"] == "browsegenres" and options["mediatype"] == "randomtvshows":
+                options["mediatype"] = "tvshows"
+                options["random"] = True
 
-        # set the widget settings as options
-        options["hide_watched"] = self.addon.getSetting("hide_watched") == "true"
-        if self.addon.getSetting("hide_watched_recent") == "true" and "recent" in options.get("action", ""):
-            options["hide_watched"] = True
-        options["next_inprogress_only"] = self.addon.getSetting("nextup_inprogressonly") == "true"
-        options["episodes_enable_specials"] = self.addon.getSetting("episodes_enable_specials") == "true"
-        options["group_episodes"] = self.addon.getSetting("episodes_grouping") == "true"
-        if "limit" in options:
-            options["limit"] = int(options["limit"])
-        else:
-            options["limit"] = int(self.addon.getSetting("default_limit"))
         return options
 
     def show_widget_listing(self):
@@ -110,29 +117,46 @@ class Main(object):
         media_type = self.options["mediatype"]
         action = self.options["action"]
         # set widget content type
-        xbmcplugin.setContent(ADDON_HANDLE, media_type)
+        if media_type in ["favourites", "pvr", "media"]:
+            xbmcplugin.setContent(ADDON_HANDLE, "files")
+        else:
+            xbmcplugin.setContent(ADDON_HANDLE, media_type)
 
         # try to get from cache first...
-        # we use a checksum based on the options to make sure the cache is ignored when needed
         all_items = []
-        cache_str = "SkinHelper.Widgets.%s.%s" % (media_type, action)
+        # alter cache_str depending on whether "tag" is available
+        if self.options["action"] == "similar":
+            # if action is similar, use imdbid
+            cache_id = self.options.get("imdbid", "")
+            # if similar was called without imdbid, skip cache
+            if not self.options.get("imdbid", ""):
+                self.options["skipcache"] = "true"
+        elif self.options["action"] == "playlist" and self.options["mediatype"]=="media":
+            # if action is mixed playlist, use playlist labels
+            cache_id = self.options.get("movie_label")+self.options.get("tv_label")
+        else:
+            # use tag otherwise
+            cache_id = self.options.get("tag")
+        cache_str = "SkinHelper.Widgets.%s.%s.%s.%s.%s" % (media_type,
+                    action, self.options["limit"], self.options.get("path"), cache_id)
         if not self.win.getProperty("widgetreload2"):
             # at startup we simply accept whatever is in the cache
             cache_checksum = None
         else:
-            cache_checksum = ""
-            for key in sorted(self.options):
-                cache_checksum += "%s.%s" % (key, self.options[key])
-        cache = self.cache.get(cache_str, checksum=cache_checksum)
-        if cache and not self.options.get("skipcache") == "true":
-            log_msg("MEDIATYPE: %s - ACTION: %s -- got items from cache - CHECKSUM: %s"
-                    % (media_type, action, cache_checksum))
-            all_items = cache
+            # we use a checksum based on the reloadparam to make sure we have the most recent data
+            cache_checksum = self.options.get("reload","")
+        # only check cache if not "skipcache"
+        if not self.options.get("skipcache") == "true":
+            cache = self.metadatautils.cache.get(cache_str, checksum=cache_checksum)
+            if cache:
+                log_msg("MEDIATYPE: %s - ACTION: %s - PATH: %s - TAG: %s -- got items from cache - CHECKSUM: %s"
+                        % (media_type, action, self.options.get("path"), self.options.get("tag"), cache_checksum))
+                all_items = cache
 
         # Call the correct method to get the content from json when no cache
         if not all_items:
-            log_msg("MEDIATYPE: %s - ACTION: %s -- no cache, quering kodi api to get items - CHECKSUM: %s"
-                    % (media_type, action, cache_checksum))
+            log_msg("MEDIATYPE: %s - ACTION: %s - PATH: %s - TAG: %s -- no cache, quering kodi api to get items - CHECKSUM: %s"
+                    % (media_type, action, self.options.get("path"), self.options.get("tag"), cache_checksum))
 
             # dynamically import and load the correct module, class and function
             try:
@@ -152,12 +176,12 @@ class Main(object):
                 all_items = sorted(all_items, key=lambda k: random.random())
 
             # prepare listitems and store in cache
-            all_items = process_method_on_list(self.metadatautils.kodidb.prepare_listitem, all_items)
-            self.cache.set(cache_str, all_items, checksum=cache_checksum)
+            all_items = self.metadatautils.process_method_on_list(self.metadatautils.kodidb.prepare_listitem, all_items)
+            self.metadatautils.cache.set(cache_str, all_items, checksum=cache_checksum)
 
         # fill that listing...
         xbmcplugin.addSortMethod(int(sys.argv[1]), xbmcplugin.SORT_METHOD_UNSORTED)
-        all_items = process_method_on_list(self.metadatautils.kodidb.create_listitem, all_items)
+        all_items = self.metadatautils.process_method_on_list(self.metadatautils.kodidb.create_listitem, all_items)
         xbmcplugin.addDirectoryItems(ADDON_HANDLE, all_items, len(all_items))
 
         # end directory listing
@@ -166,6 +190,7 @@ class Main(object):
     def mainlisting(self):
         '''main listing'''
         all_items = []
+        xbmcplugin.setContent(ADDON_HANDLE, "files")
 
         # movie node
         if xbmc.getCondVisibility("Library.HasContent(movies)"):
@@ -199,8 +224,8 @@ class Main(object):
         all_items.append((xbmc.getLocalizedString(10134), "favouriteslisting", "DefaultAddonAlbumInfo.png"))
 
         # process the listitems and display listing
-        all_items = process_method_on_list(create_main_entry, all_items)
-        all_items = process_method_on_list(self.metadatautils.kodidb.prepare_listitem, all_items)
-        all_items = process_method_on_list(self.metadatautils.kodidb.create_listitem, all_items)
+        all_items = self.metadatautils.process_method_on_list(create_main_entry, all_items)
+        all_items = self.metadatautils.process_method_on_list(self.metadatautils.kodidb.prepare_listitem, all_items)
+        all_items = self.metadatautils.process_method_on_list(self.metadatautils.kodidb.create_listitem, all_items)
         xbmcplugin.addDirectoryItems(ADDON_HANDLE, all_items, len(all_items))
         xbmcplugin.endOfDirectory(handle=ADDON_HANDLE)

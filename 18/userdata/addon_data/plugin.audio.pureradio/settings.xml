@@ -1,0 +1,5 @@
+<settings version="2">
+    <setting id="PLAY" default="true">false</setting>
+    <setting id="STREAM" default="true"></setting>
+    <setting id="VERSION">1.0.0</setting>
+</settings>

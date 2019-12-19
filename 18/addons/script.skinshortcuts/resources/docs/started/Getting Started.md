@@ -8,25 +8,25 @@ Basic integration of Skin Shortcuts is designed to be relatively easy, though ho
 
 In this scenario, you are using Skin Shortcuts to manage the whole menu system.
 
-[Basic Integration](./Basic integration 1.md)
+[Basic Integration](./Basic%20integration%201.md)
 
 #### Submenu only
 
 In this scenario, you are still managing the main menu, but are using Skin Shortcuts to provide submenus to the main menus
 
-[Basic Integration](./Basic integration 2.md)
+[Basic Integration](./Basic%20integration%202.md)
 
 #### 'Just Select' method
 
 In this scenario, you are managing the whole menu, but are using Skin Shortcuts to allow the user to select which shortcuts they want.
 
-[Advanced Usage - 'Just Select' method](../advanced/Just Select.md)
+[Advanced Usage - 'Just Select' method](../advanced/Just%20Select.md)
 
 ## Management Dialog
 
 The Management Dialog is the name given to the window users use to choose what shortcuts they want in their menus. It's also where lots of additional functionality of the script is exposed to the user.
 
-[Read More](./Management Dialog.md)
+[Read More](./Management%20Dialog.md)
 
 ## What properties does Skin Shortcuts return
 
@@ -74,13 +74,13 @@ It's important to note that using Skin Shortcuts means the script will write an 
 
 #### Automatic visibility conditions
 
-Skin Shortcuts automatically adds visibility conditions to shortcuts when they are built. [Read here](./Visibility Conditions.md) for more details.
+Skin Shortcuts automatically adds visibility conditions to shortcuts when they are built. [Read here](./Visibility%20Conditions.md) for more details.
 
 #### Shortcut to Settings
 
 One side-effect of using Skin Shortcuts to manage the whole menu is that the user has the possibility to delete any shortcut, including those that they may later decide they do want. In general, this is no issue as they can also add any shortcut, but if they delete a shortcut to settings it can lead to them being unable to edit the menu to add it back.
 
-There are a few methods you can use to prevent (or at least warn) the user deleted settings (see [Advanced Usage](../advanced/Advanced Usage.md)) but it's also worth considering adding alternative access to settings - such as on the shutdown menu - and be prepared to offer support to users who have deleted the link.
+There are a few methods you can use to prevent (or at least warn) the user deleted settings (see [Advanced Usage](../advanced/Advanced%20Usage.md)) but it's also worth considering adding alternative access to settings - such as on the shutdown menu - and be prepared to offer support to users who have deleted the link.
 
 #### Don't build individual groups
 
@@ -90,4 +90,4 @@ If you don't want these groups, you can tell Skin Shortcuts not to build them by
 
 Multiple options can be separated with a pipe - | - symbol.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](./Getting Started.md) - [Advanced Usage](../advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

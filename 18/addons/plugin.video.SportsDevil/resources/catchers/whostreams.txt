@@ -1,0 +1,32 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Whostreams - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://whostreams.net/embed/%s
+
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?(?:source\s*:|src\s*:|file\s*:)\s*['"]([^'"]+).*','@REFERER@')
+item_info_build=%s
+
+
+item_info_name=encurl
+item_info_from=file+'|Referer='+pageUrl+'&User-Agent=Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1
+item_info_convert=quote(%s)
+item_info_build=%s
+
+#item_info_name=type
+#item_info_build=slproxy
+
+item_info_name=url
+#item_info_from=hls://'+encurl
+item_info_from=encurl
+item_info_build=%s
+
+
+
+
+

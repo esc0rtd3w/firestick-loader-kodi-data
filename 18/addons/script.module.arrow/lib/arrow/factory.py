@@ -8,29 +8,37 @@ construction scenarios.
 
 from __future__ import absolute_import
 
-from arrow.arrow import Arrow
-from arrow import parser
-from arrow.util import is_timestamp, isstr
-
-from datetime import datetime, tzinfo, date
-from dateutil import tz as dateutil_tz
-from time import struct_time
 import calendar
+from datetime import date, datetime
+from datetime import tzinfo as dt_tzinfo
+from time import struct_time
+
+from dateutil import tz as dateutil_tz
+
+from arrow import parser
+from arrow.arrow import Arrow
+from arrow.util import is_timestamp, iso_to_gregorian, isstr
 
 
 class ArrowFactory(object):
-    ''' A factory for generating :class:`Arrow <arrow.arrow.Arrow>` objects.
+    """ A factory for generating :class:`Arrow <arrow.arrow.Arrow>` objects.
 
     :param type: (optional) the :class:`Arrow <arrow.arrow.Arrow>`-based class to construct from.
         Defaults to :class:`Arrow <arrow.arrow.Arrow>`.
 
-    '''
+    """
 
     def __init__(self, type=Arrow):
         self.type = type
 
     def get(self, *args, **kwargs):
-        ''' Returns an :class:`Arrow <arrow.arrow.Arrow>` object based on flexible inputs.
+        """ Returns an :class:`Arrow <arrow.arrow.Arrow>` object based on flexible inputs.
+
+        :param locale: (optional) a ``str`` specifying a locale for the parser. Defaults to
+            'en_us'.
+        :param tzinfo: (optional) a :ref:`timezone expression <tz-expr>` or tzinfo object.
+            Replaces the timezone unless using an input form that is explicitly UTC or specifies
+            the timezone in a positional argument. Defaults to UTC.
 
         Usage::
 
@@ -44,7 +52,7 @@ class ArrowFactory(object):
         **None** to also get current UTC time::
 
             >>> arrow.get(None)
-            <Arrow [2013-05-08T05:51:43.316458+00:00]>
+            <Arrow [2013-05-08T05:51:49.016458+00:00]>
 
         **One** :class:`Arrow <arrow.arrow.Arrow>` object, to get a copy.
 
@@ -52,7 +60,8 @@ class ArrowFactory(object):
             >>> arrow.get(arw)
             <Arrow [2013-10-23T15:21:54.354846+00:00]>
 
-        **One** ``str``, ``float``, or ``int``, convertible to a floating-point timestamp, to get that timestamp in UTC::
+        **One** ``float`` or ``int``, convertible to a floating-point timestamp, to get
+        that timestamp in UTC::
 
             >>> arrow.get(1367992474.293378)
             <Arrow [2013-05-08T05:54:34.293378+00:00]>
@@ -60,18 +69,17 @@ class ArrowFactory(object):
             >>> arrow.get(1367992474)
             <Arrow [2013-05-08T05:54:34+00:00]>
 
-            >>> arrow.get('1367992474.293378')
-            <Arrow [2013-05-08T05:54:34.293378+00:00]>
-
-            >>> arrow.get('1367992474')
-            <Arrow [2013-05-08T05:54:34+0struct_time0:00]>
-
-        **One** ISO-8601-formatted ``str``, to parse it::
+        **One** ISO 8601-formatted ``str``, to parse it::
 
             >>> arrow.get('2013-09-29T01:26:43.830580')
             <Arrow [2013-09-29T01:26:43.830580+00:00]>
 
-        **One** ``tzinfo``, to get the current time in that timezone::
+        **One** ISO 8601-formatted ``str``, in basic format, to parse it::
+
+            >>> arrow.get('20160413T133656.456289')
+            <Arrow [2016-04-13T13:36:56.456289+00:00]>
+
+        **One** ``tzinfo``, to get the current time **converted** to that timezone::
 
             >>> arrow.get(tz.tzlocal())
             <Arrow [2013-05-07T22:57:28.484717-07:00]>
@@ -91,20 +99,32 @@ class ArrowFactory(object):
             >>> arrow.get(date(2013, 5, 5))
             <Arrow [2013-05-05T00:00:00+00:00]>
 
-        **Two** arguments, a naive or aware ``datetime``, and a timezone expression (as above)::
+        **One** time.struct time::
+
+            >>> arrow.get(gmtime(0))
+            <Arrow [1970-01-01T00:00:00+00:00]>
+
+        **One** iso calendar ``tuple``, to get that week date in UTC::
+
+            >>> arrow.get((2013, 18, 7))
+            <Arrow [2013-05-05T00:00:00+00:00]>
+
+        **Two** arguments, a naive or aware ``datetime``, and a replacement
+        :ref:`timezone expression <tz-expr>`::
 
             >>> arrow.get(datetime(2013, 5, 5), 'US/Pacific')
             <Arrow [2013-05-05T00:00:00-07:00]>
 
-        **Two** arguments, a naive ``date``, and a timezone expression (as above)::
+        **Two** arguments, a naive ``date``, and a replacement
+        :ref:`timezone expression <tz-expr>`::
 
             >>> arrow.get(date(2013, 5, 5), 'US/Pacific')
             <Arrow [2013-05-05T00:00:00-07:00]>
 
         **Two** arguments, both ``str``, to parse the first according to the format of the second::
 
-            >>> arrow.get('2013-05-05 12:30:45', 'YYYY-MM-DD HH:mm:ss')
-            <Arrow [2013-05-05T12:30:45+00:00]>
+            >>> arrow.get('2013-05-05 12:30:45 America/Chicago', 'YYYY-MM-DD HH:mm:ss ZZZ')
+            <Arrow [2013-05-05T12:30:45-05:00]>
 
         **Two** arguments, first a ``str`` to parse and second a ``list`` of formats to try::
 
@@ -116,20 +136,29 @@ class ArrowFactory(object):
             >>> arrow.get(2013, 5, 5, 12, 30, 45)
             <Arrow [2013-05-05T12:30:45+00:00]>
 
-        **One** time.struct time::
-            >>> arrow.get(gmtime(0))
-            <Arrow [1970-01-01T00:00:00+00:00]>
-
-        '''
+        """
 
         arg_count = len(args)
-        locale = kwargs.get('locale', 'en_us')
-        tz = kwargs.get('tzinfo', None)
+        locale = kwargs.pop("locale", "en_us")
+        tz = kwargs.get("tzinfo", None)
+
+        # if kwargs given, send to constructor unless only tzinfo provided
+        if len(kwargs) > 1:
+            arg_count = 3
+
+        # tzinfo kwarg is not provided
+        if len(kwargs) == 1 and tz is None:
+            arg_count = 3
 
         # () -> now, @ utc.
         if arg_count == 0:
-            if isinstance(tz, tzinfo):
+            if isstr(tz):
+                tz = parser.TzinfoParser.parse(tz)
                 return self.type.now(tz)
+
+            if isinstance(tz, dt_tzinfo):
+                return self.type.now(tz)
+
             return self.type.utcnow()
 
         if arg_count == 1:
@@ -139,37 +168,44 @@ class ArrowFactory(object):
             if arg is None:
                 return self.type.utcnow()
 
-            # try (int, float, str(int), str(float)) -> utc, from timestamp.
-            if is_timestamp(arg):
+            # try (int, float) -> utc, from timestamp.
+            elif not isstr(arg) and is_timestamp(arg):
                 return self.type.utcfromtimestamp(arg)
 
             # (Arrow) -> from the object's datetime.
-            if isinstance(arg, Arrow):
+            elif isinstance(arg, Arrow):
                 return self.type.fromdatetime(arg.datetime)
 
             # (datetime) -> from datetime.
-            if isinstance(arg, datetime):
+            elif isinstance(arg, datetime):
                 return self.type.fromdatetime(arg)
 
             # (date) -> from date.
-            if isinstance(arg, date):
+            elif isinstance(arg, date):
                 return self.type.fromdate(arg)
 
             # (tzinfo) -> now, @ tzinfo.
-            elif isinstance(arg, tzinfo):
+            elif isinstance(arg, dt_tzinfo):
                 return self.type.now(arg)
 
-            # (str) -> now, @ tzinfo.
+            # (str) -> parse.
             elif isstr(arg):
                 dt = parser.DateTimeParser(locale).parse_iso(arg)
-                return self.type.fromdatetime(dt)
+                return self.type.fromdatetime(dt, tz)
 
             # (struct_time) -> from struct_time
             elif isinstance(arg, struct_time):
                 return self.type.utcfromtimestamp(calendar.timegm(arg))
 
+            # (iso calendar) -> convert then from date
+            elif isinstance(arg, tuple) and len(arg) == 3:
+                dt = iso_to_gregorian(*arg)
+                return self.type.fromdate(dt)
+
             else:
-                raise TypeError('Can\'t parse single argument type of \'{0}\''.format(type(arg)))
+                raise TypeError(
+                    "Can't parse single argument of type '{}'".format(type(arg))
+                )
 
         elif arg_count == 2:
 
@@ -177,21 +213,27 @@ class ArrowFactory(object):
 
             if isinstance(arg_1, datetime):
 
-                # (datetime, tzinfo) -> fromdatetime @ tzinfo/string.
-                if isinstance(arg_2, tzinfo) or isstr(arg_2):
+                # (datetime, tzinfo/str) -> fromdatetime replace tzinfo.
+                if isinstance(arg_2, dt_tzinfo) or isstr(arg_2):
                     return self.type.fromdatetime(arg_1, arg_2)
                 else:
-                    raise TypeError('Can\'t parse two arguments of types \'datetime\', \'{0}\''.format(
-                        type(arg_2)))
+                    raise TypeError(
+                        "Can't parse two arguments of types 'datetime', '{}'".format(
+                            type(arg_2)
+                        )
+                    )
 
-            # (date, tzinfo/str) -> fromdate @ tzinfo/string.
             elif isinstance(arg_1, date):
 
-                if isinstance(arg_2, tzinfo) or isstr(arg_2):
+                # (date, tzinfo/str) -> fromdate replace tzinfo.
+                if isinstance(arg_2, dt_tzinfo) or isstr(arg_2):
                     return self.type.fromdate(arg_1, tzinfo=arg_2)
                 else:
-                    raise TypeError('Can\'t parse two arguments of types \'date\', \'{0}\''.format(
-                        type(arg_2)))
+                    raise TypeError(
+                        "Can't parse two arguments of types 'date', '{}'".format(
+                            type(arg_2)
+                        )
+                    )
 
             # (str, format) -> parse.
             elif isstr(arg_1) and (isstr(arg_2) or isinstance(arg_2, list)):
@@ -199,36 +241,33 @@ class ArrowFactory(object):
                 return self.type.fromdatetime(dt, tzinfo=tz)
 
             else:
-                raise TypeError('Can\'t parse two arguments of types \'{0}\', \'{1}\''.format(
-                    type(arg_1), type(arg_2)))
+                raise TypeError(
+                    "Can't parse two arguments of types '{}' and '{}'".format(
+                        type(arg_1), type(arg_2)
+                    )
+                )
 
         # 3+ args -> datetime-like via constructor.
         else:
             return self.type(*args, **kwargs)
 
     def utcnow(self):
-        '''Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in UTC time.
+        """Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in UTC time.
 
         Usage::
 
             >>> import arrow
             >>> arrow.utcnow()
             <Arrow [2013-05-08T05:19:07.018993+00:00]>
-        '''
+        """
 
         return self.type.utcnow()
 
     def now(self, tz=None):
-        '''Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now".
+        """Returns an :class:`Arrow <arrow.arrow.Arrow>` object, representing "now" in the given
+        timezone.
 
-        :param tz: (optional) An expression representing a timezone.  Defaults to local time.
-
-        Recognized timezone expressions:
-
-            - A ``tzinfo`` object.
-            - A ``str`` describing a timezone, similar to 'US/Pacific', or 'Europe/Berlin'.
-            - A ``str`` in ISO-8601 style, as in '+07:00'.
-            - A ``str``, one of the following:  'local', 'utc', 'UTC'.
+        :param tz: (optional) A :ref:`timezone expression <tz-expr>`.  Defaults to local time.
 
         Usage::
 
@@ -244,11 +283,11 @@ class ArrowFactory(object):
 
             >>> arrow.now('local')
             <Arrow [2013-05-07T22:19:39.130059-07:00]>
-        '''
+        """
 
         if tz is None:
             tz = dateutil_tz.tzlocal()
-        elif not isinstance(tz, tzinfo):
+        elif not isinstance(tz, dt_tzinfo):
             tz = parser.TzinfoParser.parse(tz)
 
         return self.type.now(tz)

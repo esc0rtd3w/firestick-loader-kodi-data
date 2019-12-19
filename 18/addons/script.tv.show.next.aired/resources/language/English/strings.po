@@ -199,3 +199,15 @@ msgstr ""
 msgctxt "#32212"
 msgid "Ended"
 msgstr ""
+
+msgctxt "#32213"
+msgid "Are you sure you want to continue ?\nThis should only be needed if you experience some issues."
+msgstr ""
+
+msgctxt "#32214"
+msgid "Please wait while we refresh all data in the cache,\nthis can take a while..."
+msgstr ""
+
+msgctxt "#32215"
+msgid "Please wait while we update all data in the cache"
+msgstr ""

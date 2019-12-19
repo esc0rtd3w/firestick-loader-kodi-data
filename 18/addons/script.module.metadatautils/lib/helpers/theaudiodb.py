@@ -79,6 +79,9 @@ class TheAudioDb(object):
             if adbdetails.get("strArtistLogo") and xbmcvfs.exists(adbdetails.get("strArtistLogo")):
                 details["art"]["clearlogo"] = adbdetails.get("strArtistLogo")
                 details["art"]["clearlogos"] = [adbdetails.get("strArtistLogo")]
+            if adbdetails.get("strArtistClearart") and xbmcvfs.exists(adbdetails.get("strArtistClearart")):
+                details["art"]["clearart"] = adbdetails.get("strArtistClearart")
+                details["art"]["cleararts"] = [adbdetails.get("strArtistClearart")]
             if adbdetails.get("strArtistThumb") and xbmcvfs.exists(adbdetails.get("strArtistThumb")):
                 details["art"]["thumb"] = adbdetails["strArtistThumb"]
                 details["art"]["thumbs"] = [adbdetails["strArtistThumb"]]
@@ -130,6 +133,10 @@ class TheAudioDb(object):
             if adbdetails.get("strAlbumCDart") and xbmcvfs.exists(adbdetails.get("strAlbumCDart")):
                 details["art"]["discart"] = adbdetails.get("strAlbumCDart")
                 details["art"]["discarts"] = [adbdetails.get("strAlbumCDart")]
+            if adbdetails.get("strAlbumSpine") and xbmcvfs.exists(adbdetails.get("strAlbumSpine")):
+                details["art"]["spine"] = adbdetails.get("strAlbumSpine")
+            if adbdetails.get("strAlbumThumbBack") and xbmcvfs.exists(adbdetails.get("strAlbumThumbBack")):
+                details["art"]["thumbback"] = adbdetails.get("strAlbumThumbBack")
             if adbdetails.get("strDescription%s" % KODI_LANGUAGE.upper()):
                 details["plot"] = adbdetails.get("strDescription%s" % KODI_LANGUAGE.upper())
             if not details.get("plot") and adbdetails.get("strDescriptionEN"):

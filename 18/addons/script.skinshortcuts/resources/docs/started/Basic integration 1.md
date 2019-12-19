@@ -1,6 +1,6 @@
 # Basic Integration - Main menu and submenu
 
-The most common method of integrating Skin Shortcuts is to use it to provide the whole menu. This method means that your users will have unlimited customisation of their menus, and allows for many of the [Advanced Usage](../advanced/Advanced Usage.md) scenarios.
+The most common method of integrating Skin Shortcuts is to use it to provide the whole menu. This method means that your users will have unlimited customisation of their menus, and allows for many of the [Advanced Usage](../advanced/Advanced%20Usage.md) scenarios.
 
 ## Overview
 
@@ -55,10 +55,10 @@ It's also generally a good idea to let the user reset all shortcuts to default w
 
 ## Customising the Management Dialog
 
-The management dialog included with Skin Shortcuts isn't particularly well designed or useful, so chances are you're going to want to include your own. See [Management Dialog](./Management Dialog.md) for details.
+The management dialog included with Skin Shortcuts isn't particularly well designed or useful, so chances are you're going to want to include your own. See [Management Dialog](./Management%20Dialog.md) for details.
 
 ## Where to go from here
 
-You now have a basic but functional Skin Shortcuts implementation. Make sure you're familiar with the rest of the [Getting Started](./Getting Started.md) documentation, before you begin to explore the rest of the [documentation](../../../README.md).
+You now have a basic but functional Skin Shortcuts implementation. Make sure you're familiar with the rest of the [Getting Started](./Getting%20Started.md) documentation, before you begin to explore the rest of the [documentation](../../../README.md).
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](./Getting Started.md) - [Advanced Usage](../advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

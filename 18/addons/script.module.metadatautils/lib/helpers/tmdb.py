@@ -7,27 +7,35 @@
     Get metadata from The Movie Database
 '''
 
-from utils import get_json, KODI_LANGUAGE, try_parse_int, DialogSelect, get_compare_string, int_with_commas
+from utils import get_json, KODI_LANGUAGE, try_parse_int, DialogSelect, get_compare_string, int_with_commas, ADDON_ID
 from difflib import SequenceMatcher as SM
 from simplecache import use_cache
 from operator import itemgetter
 import xbmc
 import xbmcgui
+import xbmcaddon
+import datetime
 
 
 class Tmdb(object):
     '''get metadata from tmdb'''
-    api_key = "ae06df54334aa653354e9a010f4b81cb"
+    api_key = None # public var to be set by the calling addon
 
-    def __init__(self, simplecache=None):
+    def __init__(self, simplecache=None, api_key=None):
         '''Initialize - optionaly provide simplecache object'''
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
         else:
             self.cache = simplecache
+        addon = xbmcaddon.Addon(id=ADDON_ID)
+        # personal api key (preferred over provided api key)
+        api_key = addon.getSetting("tmdb_apikey")
+        if api_key:
+            self.api_key = api_key
+        del addon
 
-    def search_movie(self, title, year="", manual_select=False):
+    def search_movie(self, title, year="", manual_select=False, ignore_cache=False):
         '''
             Search tmdb for a specific movie, returns full details of best match
             parameters:
@@ -51,7 +59,8 @@ class Tmdb(object):
             details = self.get_movieset_details(set_id)
         return details
 
-    def search_tvshow(self, title, year="", manual_select=False):
+    @use_cache(4)
+    def search_tvshow(self, title, year="", manual_select=False, ignore_cache=False):
         '''
             Search tmdb for a specific movie, returns full details of best match
             parameters:
@@ -64,7 +73,8 @@ class Tmdb(object):
             details = self.get_tvshow_details(details["id"])
         return details
 
-    def search_video(self, title, prefyear="", preftype="", manual_select=False):
+    @use_cache(4)
+    def search_video(self, title, prefyear="", preftype="", manual_select=False, ignore_cache=False):
         '''
             Search tmdb for a specific entry (can be movie or tvshow), returns full details of best match
             parameters:
@@ -82,6 +92,7 @@ class Tmdb(object):
             details = self.get_tvshow_details(details["id"])
         return details
 
+    @use_cache(4)
     def search_videos(self, title):
         '''
             Search tmdb for a specific entry (can be movie or tvshow), parameters:
@@ -102,6 +113,7 @@ class Tmdb(object):
                 break
         return results
 
+    @use_cache(4)
     def search_movies(self, title, year=""):
         '''
             Search tmdb for a specific movie, returns a list of all closest matches
@@ -114,6 +126,7 @@ class Tmdb(object):
             params["year"] = try_parse_int(year)
         return self.get_data("search/movie", params)
 
+    @use_cache(4)
     def search_tvshows(self, title, year=""):
         '''
             Search tmdb for a specific tvshow, returns a list of all closest matches
@@ -186,19 +199,36 @@ class Tmdb(object):
             return self.get_tvshow_details(results["tv_results"][0]["id"])
         return {}
 
-    @use_cache(7)
     def get_data(self, endpoint, params):
         '''helper method to get data from tmdb json API'''
-        params["api_key"] = self.api_key
-        url = u'http://api.themoviedb.org/3/%s' % endpoint
-        result = get_json(url, params)
-        # make sure that we have a plot value (if localized value fails, fallback to english)
-        if result and "language" in params and "overview" in result:
-            if not result["overview"] and params["language"] != "en":
-                params["language"] = "en"
-                result2 = get_json(url, params)
-                if result2 and result2.get("overview"):
-                    result = result2
+        if self.api_key:
+            # addon provided or personal api key
+            params["api_key"] = self.api_key
+            rate_limit = None
+            expiration = datetime.timedelta(days=7)
+        else:
+            # fallback api key (rate limited !)
+            params["api_key"] = "80246691939720672db3fc71c74e0ef2"
+            # without personal (or addon specific) api key = rate limiting and older info from cache
+            rate_limit = ("themoviedb.org", 5)
+            expiration = datetime.timedelta(days=60)
+        cachestr = "tmdb.%s" % params.itervalues()
+        cache = self.cache.get(cachestr)
+        if cache:
+            # data obtained from cache
+            result = cache
+        else:
+            # no cache, grab data from API
+            url = u'http://api.themoviedb.org/3/%s' % endpoint
+            result = get_json(url, params, ratelimit=rate_limit)
+            # make sure that we have a plot value (if localized value fails, fallback to english)
+            if result and "language" in params and "overview" in result:
+                if not result["overview"] and params["language"] != "en":
+                    params["language"] = "en"
+                    result2 = get_json(url, params)
+                    if result2 and result2.get("overview"):
+                        result = result2
+            self.cache.set(url, result, expiration=expiration)
         return result
 
     def map_details(self, data, media_type):

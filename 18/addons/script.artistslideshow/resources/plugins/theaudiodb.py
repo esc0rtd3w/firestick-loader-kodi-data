@@ -1,14 +1,13 @@
-#v.0.1.1
+#v.0.3.0
 
-import os, time, sys, random, xbmc, xbmcvfs
-from ..common.url import URL
-from ..common.fileops import readFile, writeFile, deleteFile, checkPath
-if sys.version_info >= (2, 7):
-    import json as _json
-else:
-    import simplejson as _json
+import base64, os, time, random
+from kodi_six import xbmcvfs
+from resources.common.url import URL
+from resources.common.fileops import readFile, writeFile, deleteFile, checkPath
+from kodi_six.utils import py2_encode
+import json as _json
 try:
-    import theaudiodb_info as settings
+    from . import theaudiodb_info as settings
 except ImportError:
     clowncar = ''
 try:
@@ -18,9 +17,9 @@ except AttributeError:
 
 
 
-class objectConfig():
+class objectConfig( object ):
     def __init__( self ):
-        url = 'http://www.theaudiodb.com/api/v1/json/%s/' % clowncar.decode( 'base64' )
+        url = 'http://www.theaudiodb.com/api/v1/json/%s/' % base64.b64decode(clowncar.encode('ascii')).decode('ascii')
         secsinweek = int( 7*24*60*60 )
         self.ARTISTMBIDURL = url + 'artist-mb.php'
         self.ARTISTSEARCHURL = url + 'search.php'
@@ -62,7 +61,7 @@ class objectConfig():
                     albums.append( ( album.get( 'strAlbum', '' ), album.get( 'strAlbumThumb', '' ) ) )
         return albums, self.loglines
 
-        
+
     def getBio( self, bio_params ):
         self.loglines = []
         self._set_filepaths( bio_params )
@@ -79,8 +78,8 @@ class objectConfig():
             if artist is not None:
                 bio = artist[0].get( 'strBiography' + bio_params.get( 'lang', '' ).upper(), '' )
         return bio, self.loglines
-        
-        
+
+
     def getImageList( self, img_params ):
         self.loglines = []
         self._set_filepaths( img_params )
@@ -130,7 +129,7 @@ class objectConfig():
                 return '', self.loglines
         else:
             return '', self.loglines
-        
+
 
     def _check_donation( self, donation ):
         if donation == 'true':
@@ -154,7 +153,7 @@ class objectConfig():
                 self.loglines.append( 'found tadbid, using tadbidurl to get information from theaudiodb' )
                 return tadbidurl, url_params
         if nameurl:
-            url_params['s'] = params.get( 'artist', '' ) 
+            url_params['s'] = params.get( 'artist', '' )
             self.loglines.append( 'no mbid or tadbid found, using artist name to get information from theaudiodb' )
             return nameurl, url_params
         return '', ''
@@ -187,7 +186,7 @@ class objectConfig():
                     self.loglines.extend( wloglines )
         rloglines, audiodbid = readFile( self.IDFILEPATH )
         self.loglines.extend( rloglines )
-        return audiodbid    
+        return audiodbid
 
 
     def _get_cache_time( self, cachefilepath ):
@@ -200,7 +199,7 @@ class objectConfig():
         else:
             success = self._put_cache_time( cachefilepath )
         if success:
-            rloglines, rawdata = readFile( cachefilepath ) 
+            rloglines, rawdata = readFile( cachefilepath )
             self.loglines.extend( rloglines )
         try:
             cachetime = int( rawdata )
@@ -215,7 +214,7 @@ class objectConfig():
             success, uloglines, json_data = self.JSONURL.Get( url, params=url_params )
             self.loglines.extend( uloglines )
             if success:
-                success, wloglines = writeFile( _json.dumps( json_data ).encode( 'utf-8' ), filepath )
+                success, wloglines = writeFile( py2_encode( _json.dumps( json_data ) ), filepath )
                 self.loglines.extend( wloglines )
         exists, cloglines = checkPath( filepath, False )
         self.loglines.extend( cloglines )

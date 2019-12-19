@@ -1,0 +1,164 @@
+<settings version="2">
+    <setting id="addon.updateCheckTimeStamp" default="true"></setting>
+    <setting id="addon.view" default="true">0</setting>
+    <setting id="addon.view.id" default="true">0</setting>
+    <setting id="advanced.apikeys" default="true">false</setting>
+    <setting id="alldebrid.auth_start" default="true"></setting>
+    <setting id="alldebrid.enabled" default="true">false</setting>
+    <setting id="alldebrid.hosters">true</setting>
+    <setting id="alldebrid.priority">10</setting>
+    <setting id="alldebrid.token" default="true"></setting>
+    <setting id="alldebrid.torrents">true</setting>
+    <setting id="alldebrid.username" default="true"></setting>
+    <setting id="cache.clear" default="true"></setting>
+    <setting id="cache.clearsearch" default="true"></setting>
+    <setting id="cache.cleartorrent" default="true"></setting>
+    <setting id="cache.wipeaddon" default="true"></setting>
+    <setting id="episode.fanart">true</setting>
+    <setting id="episode.view" default="true">0</setting>
+    <setting id="episode.view.id" default="true">0</setting>
+    <setting id="fanart.apikey" default="true"></setting>
+    <setting id="general.265sort" default="true">false</setting>
+    <setting id="general.accountNotifications">true</setting>
+    <setting id="general.appendtitles">true</setting>
+    <setting id="general.autocache">true</setting>
+    <setting id="general.autotrynext">true</setting>
+    <setting id="general.bookmarkstyle" default="true">0</setting>
+    <setting id="general.cacheAssistMode" default="true">0</setting>
+    <setting id="general.cachelocation" default="true">0</setting>
+    <setting id="general.checkAddonUpdates">true</setting>
+    <setting id="general.datedelay" default="true">false</setting>
+    <setting id="general.disable265" default="true">false</setting>
+    <setting id="general.disable3d">true</setting>
+    <setting id="general.disablelowQuality" default="true">false</setting>
+    <setting id="general.displayColor" default="true">None</setting>
+    <setting id="general.enablesizelimit" default="true">false</setting>
+    <setting id="general.fake" default="true"></setting>
+    <setting id="general.flatten.episodes" default="true">false</setting>
+    <setting id="general.hidesd" default="true">false</setting>
+    <setting id="general.hideSpecials" default="true">false</setting>
+    <setting id="general.hideUnAired">true</setting>
+    <setting id="general.lowQualitysort" default="true">false</setting>
+    <setting id="general.maxResolution" default="true">0</setting>
+    <setting id="general.menucaching">true</setting>
+    <setting id="general.metalocation">1</setting>
+    <setting id="general.paginatetraktlists" default="true">false</setting>
+    <setting id="general.playstyleEpisodes" default="true">0</setting>
+    <setting id="general.playstyleMovie" default="true">0</setting>
+    <setting id="general.pmexpirycheck" default="true"></setting>
+    <setting id="general.rdexpirycheck" default="true"></setting>
+    <setting id="general.scrapedisplay" default="true">0</setting>
+    <setting id="general.setViews" default="true">false</setting>
+    <setting id="general.sizelimit.episode">10</setting>
+    <setting id="general.sizelimit.movie">10</setting>
+    <setting id="general.sizesort">true</setting>
+    <setting id="general.sortsources" default="true">0</setting>
+    <setting id="general.sourceselectlines">true</setting>
+    <setting id="general.tempSilent" default="true">false</setting>
+    <setting id="general.textColor" default="true"></setting>
+    <setting id="general.textColorSelect" default="true"></setting>
+    <setting id="general.timeout">60</setting>
+    <setting id="general.torrentCache">true</setting>
+    <setting id="general.viewidswitch" default="true">false</setting>
+    <setting id="item.limit">20</setting>
+    <setting id="migration.attempted" default="true">false</setting>
+    <setting id="movie.artwork.advanced" default="true">false</setting>
+    <setting id="movie.view" default="true">0</setting>
+    <setting id="movie.view.id" default="true">0</setting>
+    <setting id="movies.banner">true</setting>
+    <setting id="movies.characterart_limit" default="true">0</setting>
+    <setting id="movies.clearart">true</setting>
+    <setting id="movies.clearlogo">true</setting>
+    <setting id="movies.discart">true</setting>
+    <setting id="movies.fanart_limit">1</setting>
+    <setting id="movies.keyart_limit" default="true">0</setting>
+    <setting id="movies.landscape">true</setting>
+    <setting id="movies.poster_limit">1</setting>
+    <setting id="movies.preferedsource">1</setting>
+    <setting id="nextup.sort" default="true">0</setting>
+    <setting id="playingnext.defaultaction" default="true">0</setting>
+    <setting id="playingnext.time">30</setting>
+    <setting id="preem.cloudfiles">true</setting>
+    <setting id="preem.enabled">true</setting>
+    <setting id="preem.limit">5</setting>
+    <setting id="preem.movieres" default="true">0</setting>
+    <setting id="preem.tvres">1</setting>
+    <setting id="preem.type" default="true">0</setting>
+    <setting id="premiumize.addToCloud" default="true">false</setting>
+    <setting id="premiumize.auth" default="true"></setting>
+    <setting id="premiumize.autodelete">true</setting>
+    <setting id="premiumize.cloudInspection">true</setting>
+    <setting id="premiumize.enabled" default="true">false</setting>
+    <setting id="premiumize.hosters">true</setting>
+    <setting id="premiumize.priority">10</setting>
+    <setting id="premiumize.threshold">750</setting>
+    <setting id="premiumize.token" default="true"></setting>
+    <setting id="premiumize.torrents">true</setting>
+    <setting id="premiumize.transcoded" default="true">false</setting>
+    <setting id="premiumize.username" default="true"></setting>
+    <setting id="provider.updateCheckTimeStamp">1576654857.69</setting>
+    <setting id="providers.autoupdates">true</setting>
+    <setting id="providers.checkupdates" default="true"></setting>
+    <setting id="providers.manage" default="true"></setting>
+    <setting id="rd.auth" default="true"></setting>
+    <setting id="rd.auth_start" default="true"></setting>
+    <setting id="rd.autodelete">true</setting>
+    <setting id="rd.client_id" default="true"></setting>
+    <setting id="rd.cloudInspection">true</setting>
+    <setting id="rd.expiry" default="true">0</setting>
+    <setting id="rd.hosters">true</setting>
+    <setting id="rd.priority">10</setting>
+    <setting id="rd.refresh" default="true"></setting>
+    <setting id="rd.secret" default="true"></setting>
+    <setting id="rd.torrents">true</setting>
+    <setting id="rd.username" default="true"></setting>
+    <setting id="realdebrid.enabled" default="true">false</setting>
+    <setting id="searchHistory" default="true">false</setting>
+    <setting id="season.banner">true</setting>
+    <setting id="season.fanart">true</setting>
+    <setting id="season.landscape">true</setting>
+    <setting id="season.poster">true</setting>
+    <setting id="season.view" default="true">0</setting>
+    <setting id="season.view.id" default="true">0</setting>
+    <setting id="show.view" default="true">0</setting>
+    <setting id="show.view.id" default="true">0</setting>
+    <setting id="skin.active" default="true">Seren Fox</setting>
+    <setting id="skin.install" default="true"></setting>
+    <setting id="skin.switch" default="true"></setting>
+    <setting id="skin.uninstall" default="true"></setting>
+    <setting id="skin.updateAutomatic">true</setting>
+    <setting id="skin.updates" default="true"></setting>
+    <setting id="smartplay.clickresume" default="true">false</setting>
+    <setting id="smartplay.displaystyle" default="true">0</setting>
+    <setting id="smartplay.playingnextdialog">true</setting>
+    <setting id="smartplay.playlistcreate">true</setting>
+    <setting id="smartPlay.preScrape">true</setting>
+    <setting id="smartplay.stillwatching" default="true">false</setting>
+    <setting id="stillwatching.numepisodes">3</setting>
+    <setting id="tmdb.apikey" default="true"></setting>
+    <setting id="trakt.auth" default="true"></setting>
+    <setting id="trakt.authtrakt" default="true"></setting>
+    <setting id="trakt.clientid" default="true"></setting>
+    <setting id="trakt.refresh" default="true"></setting>
+    <setting id="trakt.revoketrakt" default="true"></setting>
+    <setting id="trakt.scrobbling">true</setting>
+    <setting id="trakt.secret" default="true"></setting>
+    <setting id="trakt.username" default="true"></setting>
+    <setting id="traktdb.clearmeta" default="true"></setting>
+    <setting id="traktdb.flush" default="true"></setting>
+    <setting id="traktdb.force" default="true"></setting>
+    <setting id="traktdb.rebuild" default="true"></setting>
+    <setting id="tv.artwork.advanced" default="true">false</setting>
+    <setting id="tvdb.apikey" default="true"></setting>
+    <setting id="tvdb.expiry">1576741246.77</setting>
+    <setting id="tvdb.jw">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzcyNTk2NDUsImlkIjoiIiwib3JpZ19pYXQiOjE1NzY2NTQ4NDV9.BoUs5oFSs0MtOqlE2BkK4-uJPKu-bNcoR5wgCL_fZaEYz52E3L4U6slM2UP2L2QY68mVuvAD7dkM6FAOZZJtxdYGtKe7n5TvimL32ancdv9KFDSSCjh_ILyqyACBqJx1zmE_1U4ZpSgcR2MhjQZKeKfmOjxfToe_dsTck_lgEecy5BAEe6RKqcLUIpXd7ejaCLDVGoIi2vYfOXcnsCxUfvPZR3MWV35AroQ0NEjQkeeFOyRAjeCitRak59mfF3WuLQ0v5iShsUPgF-rZJStcgWUjN7bm3-UtZUHxF-1dge9UQnLm-xjitfrFbI8XsFaARAsLRB0LnoWVJeohGfYpyw</setting>
+    <setting id="tvshows.banner">true</setting>
+    <setting id="tvshows.characterart_limit" default="true">0</setting>
+    <setting id="tvshows.clearart">true</setting>
+    <setting id="tvshows.clearlogo">true</setting>
+    <setting id="tvshows.fanart_limit">1</setting>
+    <setting id="tvshows.keyart_limit" default="true">0</setting>
+    <setting id="tvshows.landscape">true</setting>
+    <setting id="tvshows.poster_limit">1</setting>
+    <setting id="tvshows.preferedsource">1</setting>
+</settings>

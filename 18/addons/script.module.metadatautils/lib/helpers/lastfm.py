@@ -81,7 +81,16 @@ class LastFM(object):
             if lfmdetails.get("tags") and lfmdetails["tags"].get("tag"):
                 details["lastfm.tags"] = [tag["name"] for tag in lfmdetails["tags"]["tag"]]
             if lfmdetails.get("similar") and lfmdetails["similar"].get("artist"):
-                details["lastfm.similarartists"] = [item["name"] for item in lfmdetails["similar"]["artist"]]
+                similar_artists = []
+                for count, item in enumerate(lfmdetails["similar"]["artist"]):
+                    similar_artists.append(item["name"])
+                    details["lastfm.similarartists.%s.name" % count] = item["name"]
+                    if item.get("image"):
+                        for image in item["image"]:
+                            if image["size"] in ["mega", "extralarge", "large"] and xbmcvfs.exists(image["#text"]):
+                                details["lastfm.similarartists.%s.thumb" % count] = image["#text"]
+                                break
+                details["lastfm.similarartists"] = similar_artists
 
         return details
 

@@ -1,0 +1,22 @@
+item_info_name=hlsurl_
+item_info_from=@PARAM1@
+item_info_convert=getInfo('%s','.*hlsUrl\s*=.*"(:[^"]+).*enableVideo\("([^"]+).*ajax\(\{url:\s*("[^,]+)','@REFERER@','u2_|t|a2')
+item_info_build=%s
+
+item_info_name=host
+item_info_from=a2
+item_info_convert=replace('%s','"','')
+item_info_convert=replace('%s',' ','')
+item_info_convert=replace('%s','+','')
+item_info_convert=getInfo('%s','redirect=(.*)','@PARAM1@')
+item_info_build=%s
+
+item_info_name=u2
+item_info_from=u2_+t
+item_info_build=%s
+
+item_info_name=url
+item_info_from=http://'+host+u2
+item_info_build=%s
+
+item_url_build=%s|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36

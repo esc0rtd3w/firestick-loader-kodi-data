@@ -2,7 +2,7 @@
     <setting id="accessibility.audiohearing" default="true">false</setting>
     <setting id="accessibility.audiovisual" default="true">false</setting>
     <setting id="accessibility.subhearing" default="true">false</setting>
-    <setting id="addons.unknownsources" default="true">false</setting>
+    <setting id="addons.unknownsources">true</setting>
     <setting id="audiocds.autoaction" default="true">0</setting>
     <setting id="audiocds.ejectonrip" default="true">true</setting>
     <setting id="audiocds.encoder" default="true">audioencoder.kodi.builtin.aac</setting>
@@ -12,7 +12,7 @@
     <setting id="audiooutput.ac3passthrough" default="true">true</setting>
     <setting id="audiooutput.ac3transcode" default="true">false</setting>
     <setting id="audiooutput.atempothreshold" default="true">2</setting>
-    <setting id="audiooutput.audiodevice" default="true">Default</setting>
+    <setting id="audiooutput.audiodevice">AUDIOTRACK:AudioTrack</setting>
     <setting id="audiooutput.channels" default="true">1</setting>
     <setting id="audiooutput.config" default="true">2</setting>
     <setting id="audiooutput.dtshdpassthrough" default="true">false</setting>
@@ -21,7 +21,7 @@
     <setting id="audiooutput.guisoundmode" default="true">1</setting>
     <setting id="audiooutput.maintainoriginalvolume" default="true">true</setting>
     <setting id="audiooutput.passthrough" default="true">false</setting>
-    <setting id="audiooutput.passthroughdevice" default="true">Default</setting>
+    <setting id="audiooutput.passthroughdevice">AUDIOTRACK:AudioTrack</setting>
     <setting id="audiooutput.processquality" default="true">30</setting>
     <setting id="audiooutput.samplerate" default="true">48000</setting>
     <setting id="audiooutput.stereoupmix" default="true">false</setting>
@@ -94,7 +94,7 @@
     <setting id="lookandfeel.enablerssfeeds" default="true">false</setting>
     <setting id="lookandfeel.font" default="true">Default</setting>
     <setting id="lookandfeel.rssedit" default="true"></setting>
-    <setting id="lookandfeel.skin">skin.confluence</setting>
+    <setting id="lookandfeel.skin">skin.aeon.nox.silvo</setting>
     <setting id="lookandfeel.skincolors" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.skintheme" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.skinzoom" default="true">0</setting>
@@ -310,7 +310,7 @@
     <setting id="videoscreen.monitor" default="true">Default</setting>
     <setting id="videoscreen.noofbuffers" default="true">3</setting>
     <setting id="videoscreen.preferedstereoscopicmode" default="true">100</setting>
-    <setting id="videoscreen.resolution" default="true">16</setting>
+    <setting id="videoscreen.resolution">23</setting>
     <setting id="videoscreen.screen" default="true">0</setting>
     <setting id="videoscreen.screenmode" default="true">DESKTOP</setting>
     <setting id="videoscreen.stereoscopicmode" default="true">0</setting>
@@ -429,7 +429,7 @@
             <level>0</level>
             <showhigherlevels>true</showhigherlevels>
         </eventlog>
-        <systemtotaluptime>11</systemtotaluptime>
+        <systemtotaluptime>232</systemtotaluptime>
     </general>
     <resolutions />
     <defaultvideosettings>

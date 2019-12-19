@@ -1,0 +1,121 @@
+<settings version="2">
+    <setting id="addon_debug" default="true">false</setting>
+    <setting id="api.language" default="true">English</setting>
+    <setting id="appearance.1" default="true">Exodus</setting>
+    <setting id="appearance.alt" default="true">-</setting>
+    <setting id="autoplay.sd" default="true">false</setting>
+    <setting id="autoTraktOnStart" default="true">false</setting>
+    <setting id="bookmarks">true</setting>
+    <setting id="chillax.password" default="true"></setting>
+    <setting id="chillax.username" default="true"></setting>
+    <setting id="crefresh" default="true">false</setting>
+    <setting id="debrid.only" default="true">false</setting>
+    <setting id="debug.location" default="true">0</setting>
+    <setting id="downloads" default="true">false</setting>
+    <setting id="fanart">true</setting>
+    <setting id="fanart.tv.user" default="true"></setting>
+    <setting id="first.info" default="true">false</setting>
+    <setting id="flatten.tvshows" default="true">false</setting>
+    <setting id="furk.api" default="true"></setting>
+    <setting id="furk.limit">25</setting>
+    <setting id="furk.user_name" default="true"></setting>
+    <setting id="furk.user_pass" default="true"></setting>
+    <setting id="gostream.pass" default="true"></setting>
+    <setting id="gostream.user" default="true"></setting>
+    <setting id="HEVC">true</setting>
+    <setting id="hosts.captcha">true</setting>
+    <setting id="hosts.mode">1</setting>
+    <setting id="hosts.quality" default="true">0</setting>
+    <setting id="hosts.sort.provider">true</setting>
+    <setting id="imdb.user" default="true"></setting>
+    <setting id="indicators" default="true">0</setting>
+    <setting id="indicators.alt">1</setting>
+    <setting id="library.check">true</setting>
+    <setting id="library.check_episode" default="true">false</setting>
+    <setting id="library.check_movie" default="true">false</setting>
+    <setting id="library.include_unknown">true</setting>
+    <setting id="library.movie" default="true">special://userdata/addon_data/plugin.video.exodusredux/Movies</setting>
+    <setting id="library.service.notification">true</setting>
+    <setting id="library.service.update">true</setting>
+    <setting id="library.tv" default="true">special://userdata/addon_data/plugin.video.exodusredux/TVShows</setting>
+    <setting id="library.update">true</setting>
+    <setting id="lists.widget">1</setting>
+    <setting id="module.provider" default="true">Openscrapers Scrapers</setting>
+    <setting id="movie.download.path" default="true"></setting>
+    <setting id="movie.widget">4</setting>
+    <setting id="moviesplanet.pass" default="true"></setting>
+    <setting id="moviesplanet.user" default="true"></setting>
+    <setting id="navi.channels" default="true">false</setting>
+    <setting id="navi.docu">true</setting>
+    <setting id="navi.movieboxoffice">true</setting>
+    <setting id="navi.moviecerts">true</setting>
+    <setting id="navi.moviefeat">true</setting>
+    <setting id="navi.moviegenre">true</setting>
+    <setting id="navi.movielanguages">true</setting>
+    <setting id="navi.movieoscars">true</setting>
+    <setting id="navi.moviepersons">true</setting>
+    <setting id="navi.moviepopular">true</setting>
+    <setting id="navi.movietheaters">true</setting>
+    <setting id="navi.movietrending">true</setting>
+    <setting id="navi.movieviews">true</setting>
+    <setting id="navi.moviewidget">true</setting>
+    <setting id="navi.movieyears">true</setting>
+    <setting id="navi.tvActive">true</setting>
+    <setting id="navi.tvAdded">true</setting>
+    <setting id="navi.tvAiring">true</setting>
+    <setting id="navi.tvCalendar">true</setting>
+    <setting id="navi.tvCertificates">true</setting>
+    <setting id="navi.tvfeat">true</setting>
+    <setting id="navi.tvGenres">true</setting>
+    <setting id="navi.tvLanguages">true</setting>
+    <setting id="navi.tvNetworks">true</setting>
+    <setting id="navi.tvPopular">true</setting>
+    <setting id="navi.tvPremier">true</setting>
+    <setting id="navi.tvRating">true</setting>
+    <setting id="navi.tvTrending">true</setting>
+    <setting id="navi.tvViews">true</setting>
+    <setting id="open.settings" default="true"></setting>
+    <setting id="open.Settings.CacheProviders" default="true"></setting>
+    <setting id="open_urlResolver_settings" default="true"></setting>
+    <setting id="ororo.pass" default="true"></setting>
+    <setting id="ororo.user" default="true"></setting>
+    <setting id="preemptive.limit">10</setting>
+    <setting id="preemptive.termination" default="true">false</setting>
+    <setting id="prem.identify" default="true">0</setting>
+    <setting id="prgr.sortorder">1</setting>
+    <setting id="progress.dialog" default="true">0</setting>
+    <setting id="pron.api" default="true"></setting>
+    <setting id="pron.download" default="true">false</setting>
+    <setting id="pron.limit" default="true">10</setting>
+    <setting id="providers.lang" default="true">English</setting>
+    <setting id="schedTraktTime" default="true">0</setting>
+    <setting id="scrapers.timeout.1">30</setting>
+    <setting id="serienstream.pass" default="true"></setting>
+    <setting id="serienstream.user" default="true"></setting>
+    <setting id="seriesever.pass" default="true"></setting>
+    <setting id="seriesever.user" default="true"></setting>
+    <setting id="showunaired">true</setting>
+    <setting id="sources.extrainfo">true</setting>
+    <setting id="streamlord.pass" default="true"></setting>
+    <setting id="streamlord.user" default="true"></setting>
+    <setting id="subtitles" default="true">false</setting>
+    <setting id="subtitles.lang.1" default="true">English</setting>
+    <setting id="subtitles.lang.2" default="true">English</setting>
+    <setting id="subtitles.utf" default="true">false</setting>
+    <setting id="tm.user" default="true">3b3eccd1c6bc0f679223fdbd7cf0d06d</setting>
+    <setting id="torrent.enabled">true</setting>
+    <setting id="torrent.identify">8</setting>
+    <setting id="torrent.min.seeders">10</setting>
+    <setting id="torrent.resolveurl" default="true"></setting>
+    <setting id="torrent.sort.them.up" default="true">false</setting>
+    <setting id="trakt.auth" default="true"></setting>
+    <setting id="trakt.refresh" default="true"></setting>
+    <setting id="trakt.token" default="true"></setting>
+    <setting id="trakt.user" default="true"></setting>
+    <setting id="tv.download.path" default="true"></setting>
+    <setting id="tv.specials">true</setting>
+    <setting id="tv.widget">1</setting>
+    <setting id="tv.widget.alt">3</setting>
+    <setting id="tvdb.user" default="true"></setting>
+    <setting id="unaired.identify">1</setting>
+</settings>

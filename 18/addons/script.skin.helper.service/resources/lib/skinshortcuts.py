@@ -8,8 +8,8 @@
     Methods to connect skinhelper to skinshortcuts for smartshortcuts, widgets and backgrounds
 '''
 
-from utils import kodi_json, log_msg, urlencode, ADDON_ID
-from metadatautils import detect_plugin_content
+from utils import kodi_json, log_msg, urlencode, ADDON_ID, getCondVisibility
+from metadatautils import MetadataUtils
 import xbmc
 import xbmcvfs
 import xbmcplugin
@@ -19,7 +19,7 @@ import sys
 
 # extendedinfo has some login-required widgets, these must not be probed without login details
 EXTINFO_CREDS = False
-if xbmc.getCondVisibility("System.Hasaddon(script.extendedinfo)"):
+if getCondVisibility("System.Hasaddon(script.extendedinfo)"):
     exinfoaddon = xbmcaddon.Addon(id="script.extendedinfo")
     if exinfoaddon.getSetting("tmdb_username") and exinfoaddon.getSetting("tmdb_password"):
         EXTINFO_CREDS = True
@@ -394,7 +394,9 @@ def playlists_widgets():
                     except Exception:
                         pass
                     if not media_type:
-                        media_type = detect_plugin_content(playlist)
+                        mutils = MetadataUtils()
+                        media_type = mutils.detect_plugin_content(playlist)
+                        del mutils
                     widgets.append([label, playlist, media_type])
     return widgets
 
@@ -405,7 +407,7 @@ def plugin_widgetlisting(pluginpath, sublevel=""):
     if sublevel:
         media_array = kodi_json('Files.GetDirectory', {"directory": pluginpath, "media": "files"})
     else:
-        if not xbmc.getCondVisibility("System.HasAddon(%s)" % pluginpath):
+        if not getCondVisibility("System.HasAddon(%s)" % pluginpath):
             return []
         media_array = kodi_json('Files.GetDirectory', {"directory": "plugin://%s" % pluginpath, "media": "files"})
     for item in media_array:
@@ -418,22 +420,29 @@ def plugin_widgetlisting(pluginpath, sublevel=""):
             continue
         if item.get("filetype", "") == "file":
             continue
-        media_type = detect_plugin_content(item["file"])
+        mutils = MetadataUtils()
+        media_type = mutils.detect_plugin_content(item["file"])
+        del mutils
         if media_type == "empty":
             continue
         if media_type == "folder":
             content = "plugin://script.skin.helper.service?action=widgets&path=%s&sublevel=%s" % (
                 urlencode(item["file"]), label)
-        # add reload param for skinhelper and libraryprovider widgets
-        if "reload=" not in content and (
-                "script.skin.helper" in pluginpath or pluginpath == "service.library.data.provider"):
-            if "albums" in content or "songs" in content or "artists" in content:
-                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreloadmusic)]"
-            elif ("pvr" in content or "media" in content or "favourite" in content) and "progress" not in content:
+        # add reload param for widgets
+        if "reload=" not in content:
+            if "movies" in content:
+                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload-movies)]"
+            elif "episodes" in content:
+                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload-episodes)]"
+            elif "tvshows" in content:
+                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload-tvshows)]"
+            elif "musicvideos" in content:
+                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload-musicvideos)]"
+            elif "albums" in content or "songs" in content or "artists" in content:
+                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload-music)]"
+            else:
                 reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload)]"\
                     "$INFO[Window(Home).Property(widgetreload2)]"
-            else:
-                reloadstr = "&reload=$INFO[Window(Home).Property(widgetreload)]"
             content = content + reloadstr
         content = content.replace("&limit=100", "&limit=25")
         widgets.append([label, content, media_type])
@@ -457,7 +466,9 @@ def favourites_widgets():
                         "search" not in content.lower() and "play" not in content.lower()):
                     label = fav["title"]
                     log_msg("skinshortcuts widgets processing favourite: %s" % label)
-                    mediatype = detect_plugin_content(content)
+                    mutils = MetadataUtils()
+                    mediatype = mutils.detect_plugin_content(content)
+                    del mutils
                     if mediatype and mediatype != "empty":
                         widgets.append([label, content, mediatype])
     return widgets
@@ -470,7 +481,7 @@ def static_widgets():
     widgets.append([xbmc.getLocalizedString(8), "$INCLUDE[WeatherWidget]", "static"])
     widgets.append([xbmc.getLocalizedString(130), "$INCLUDE[SystemInfoWidget]", "static"])
     widgets.append([addon.getLocalizedString(32025), "$INCLUDE[skinshortcuts-submenu]", "static"])
-    if xbmc.getCondVisibility("System.Hasaddon(script.games.rom.collection.browser)"):
+    if getCondVisibility("System.Hasaddon(script.games.rom.collection.browser)"):
         widgets.append([addon.getLocalizedString(32026), "$INCLUDE[RCBWidget]", "static"])
     del addon
     return widgets
@@ -512,7 +523,7 @@ def set_skinshortcuts_property(property_name="", value="", label=""):
 def wait_for_skinshortcuts_window():
     '''wait untill skinshortcuts is active window (because of any animations that may have been applied)'''
     for i in range(40):
-        if not (xbmc.getCondVisibility(
+        if not (getCondVisibility(
                 "Window.IsActive(DialogSelect.xml) | "
                 "Window.IsActive(script-skin_helper_service-ColorPicker.xml) | "
                 "Window.IsActive(DialogKeyboard.xml)")):

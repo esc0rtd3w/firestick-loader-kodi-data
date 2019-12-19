@@ -36,15 +36,14 @@ ACTION_RIGHT = 2
 ACTION_UP    = 3
 ACTION_DOWN  = 4
 
-USE_HELIX = (not utils.FRODO) and (not utils.GOTHAM)
+
+FILENAME = 'script-super-favourites-contextmenu-estuary.xml' if utils.ESTUARY_SKIN else 'script-super-favourites-contextmenu.xml'
+
 
 class ContextMenu(xbmcgui.WindowXMLDialog):
 
     def __new__(cls, addonID, menu):
-        if USE_HELIX:
-            return super(ContextMenu, cls).__new__(cls, 'contextmenu_helix.xml', xbmcaddon.Addon(addonID).getAddonInfo('path'))
-        else:
-            return super(ContextMenu, cls).__new__(cls, 'contextmenu.xml', xbmcaddon.Addon(addonID).getAddonInfo('path'))
+        return super(ContextMenu, cls).__new__(cls, FILENAME, xbmcaddon.Addon(addonID).getAddonInfo('path'))
         
 
     def __init__(self, addonID, menu):
@@ -110,12 +109,26 @@ class ContextMenu(xbmcgui.WindowXMLDialog):
         pass
 
 
-def showMenu(addonID, menu):
+def showMenu(addonID, menu, useBuiltin=True):
+    param = -1
+    if useBuiltin and hasattr(xbmcgui.Dialog(), 'contextmenu'):
+        list = []
+        for item in menu:
+            list.append(item[0])
+
+        param = xbmcgui.Dialog().contextmenu(list)
+
+        if param > -1:
+            param = menu[param][1]
+
+        return param
+
     menu = ContextMenu(addonID, menu)
     menu.doModal()
-    params = menu.params
+    param = menu.params
     del menu
-    return params
+
+    return param
 
 
 def selectMenu(title, menu):

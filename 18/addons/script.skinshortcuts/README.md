@@ -1,4 +1,4 @@
-#Skin Shortcuts - 1.0.13
+# Skin Shortcuts - 1.0.13
 
 script.skinshortcuts was written with the intention of making user customizable shortcuts on the home page easier for skinners.
 
@@ -8,12 +8,12 @@ script.skinshortcuts was written with the intention of making user customizable 
 #### Version 1.0.16 - git version
 
 - Basic Kodi v18 compatibility
-- Ability to specify action any control in management dialog from overrides - [Read More](./resources/docs/started/Management Dialog.md#custom-action-on-control)
+- Ability to specify action any control in management dialog from overrides - [Read More](./resources/docs/started/Management%20Dialog.md#custom-action-on-control)
 - Some improvements to the interactions with Skin Helper Service, including support for resource addons (see SH wiki)
 
 #### Version 1.0.13 - repo version
 
-- Skinners can now set that their skin should not use the users shared additional submenus - [Read More](./resources/docs/started/Getting Started.md#shared-additioanl-submenu)
+- Skinners can now set that their skin should not use the users shared additional submenus - [Read More](./resources/docs/started/Getting%20Started.md#shared-additioanl-submenu)
 - Submenu template improvements - [Read More](./resources/docs/advanced/Templates.md#sub-menu-template)
 - Please be aware that:-
   - Warnings on deleting a shortcut are now shown when disabling a shortcut
@@ -47,11 +47,11 @@ Though hopefully Skin Shortcuts will save you a lot of code in the long-run, it 
 
 To help, it includes a lot of documentation covering the various features of the script
 
-* [What is Skin Shortcuts](./resources/docs/What is Skin Shortcuts.md)
-* [Getting Started](./resources/docs/started/Getting Started.md)
-* [Providing default shortcuts](./resources/docs/Providing default shortcuts.md)
-* [Advanced usage topics](./resources/docs/advanced/Advanced Usage.md)
-* [labelID and localisation](./resources/docs/labelID and Localisation.md)
+* [What is Skin Shortcuts](./resources/docs/What%20is%20Skin%20Shortcuts.md)
+* [Getting Started](./resources/docs/started/Getting%20Started.md)
+* [Providing default shortcuts](./resources/docs/Providing%20default%20shortcuts.md)
+* [Advanced usage topics](./resources/docs/advanced/Advanced%20Usage.md)
+* [labelID and localisation](./resources/docs/labelID%20and%20Localisation.md)
 
 It's highly recommended to take time to read through these documents before you begin.
 

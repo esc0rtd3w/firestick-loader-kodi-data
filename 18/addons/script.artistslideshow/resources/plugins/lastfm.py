@@ -1,11 +1,12 @@
-#v.0.1.0
+#v.0.3.0
 
-import os, time, random
-import xml.etree.ElementTree as _xmltree
-from ..common.url import URL
-from ..common.fileops import readFile, writeFile, checkPath
+import base64, os, time, random
+import defusedxml.ElementTree as _xmltree
+from resources.common.url import URL
+from resources.common.fileops import readFile, writeFile, checkPath
+from kodi_six.utils import py2_encode
 try:
-    import lastfm_info as settings
+    from . import lastfm_info as settings
 except ImportError:
     clowncar = ''
 try:
@@ -14,12 +15,15 @@ except AttributeError:
     clowncar = ''
 
 
-class objectConfig():
+class objectConfig( object ):
     def __init__( self ):
         secsinweek = int( 7*24*60*60 )
-        self.ARTISTPARAMS = {'autocorrect':'1', 'api_key':clowncar.decode( 'base64' ), 'method':'artist.getInfo'}
-        self.ALBUMPARAMS = {'autocorrect':'1', 'api_key':clowncar.decode( 'base64' ), 'method':'artist.getTopAlbums'}
-        self.SIMILARPARAMS = {'autocorrect':'1', 'api_key':clowncar.decode( 'base64' ), 'limit':'50', 'method':'artist.getSimilar'}
+        self.ARTISTPARAMS = {'autocorrect':'1',
+                             'api_key':base64.b64decode(clowncar.encode('ascii')).decode('ascii'), 'method':'artist.getInfo'}
+        self.ALBUMPARAMS = {'autocorrect':'1',
+                            'api_key':base64.b64decode(clowncar.encode('ascii')).decode('ascii'), 'method':'artist.getTopAlbums'}
+        self.SIMILARPARAMS = {'autocorrect':'1',
+                              'api_key':base64.b64decode(clowncar.encode('ascii')).decode('ascii'), 'limit':'50', 'method':'artist.getSimilar'}
         self.URL = 'http://ws.audioscrobbler.com/2.0/'
         self.BIOFILENAME = 'lastfmartistbio.nfo'
         self.ALBUMFILENAME = 'lastfmartistalbums.nfo'
@@ -42,21 +46,21 @@ class objectConfig():
         albums = []
         filepath = os.path.join( album_params.get( 'infodir', '' ), self.ALBUMFILENAME )
         cachefilepath = os.path.join( album_params.get( 'infodir', '' ), self.CACHETIMEFILENAME )
-        additionalparams = {'artist': album_params.get( 'artist', '' )}  
-        url_params = dict( self.ALBUMPARAMS.items() + additionalparams.items() )
+        additionalparams = {'artist': album_params.get( 'artist', '' )}
+        url_params = dict( list(self.ALBUMPARAMS.items()) + list(additionalparams.items()) )
         self.loglines.append( 'trying to get artist albums from ' + self.URL )
         try:
-           xmldata = _xmltree.fromstring( self._get_data( filepath, cachefilepath, url_params ) )
-        except:
-          return [], self.loglines
+            xmldata = _xmltree.fromstring( py2_encode( self._get_data( filepath, cachefilepath, url_params ) ) )
+        except _xmltree.ParseError:
+            self.loglines.append( 'error reading XML file' )
+            return [], self.loglines
         match = False
         for element in xmldata.getiterator():
             if element.tag == "name":
                 if match:
                     match = False
                 else:
-                    name = element.text
-                    name.encode('ascii', 'ignore')
+                    name = py2_encode( element.text )
                     match = True
             elif element.tag == "image":
                 if element.attrib.get('size') == "extralarge":
@@ -71,20 +75,21 @@ class objectConfig():
         else:
             return albums, self.loglines
 
-        
+
     def getBio( self, bio_params ):
         self.loglines = []
         url_params = {}
         bio = ''
         filepath = os.path.join( bio_params.get( 'infodir', '' ), self.BIOFILENAME )
         cachefilepath = os.path.join( bio_params.get( 'infodir', '' ), self.CACHETIMEFILENAME )
-        additionalparams = {'artist': bio_params.get( 'artist', '' ), 'lang':bio_params.get( 'lang', '' )}  
-        url_params = dict( self.ARTISTPARAMS.items() + additionalparams.items() )
+        additionalparams = {'artist': bio_params.get( 'artist', '' ), 'lang':bio_params.get( 'lang', '' )}
+        url_params = dict( list(self.ARTISTPARAMS.items()) + list(additionalparams.items()) )
         self.loglines.append( 'trying to get artist bio from ' + self.URL )
         try:
-           xmldata = _xmltree.fromstring( self._get_data( filepath, cachefilepath, url_params ) )
-        except:
-          return '', self.loglines
+            xmldata = _xmltree.fromstring( py2_encode( self._get_data( filepath, cachefilepath, url_params ) ) )
+        except _xmltree.ParseError:
+            self.loglines.append( 'error reading XML file' )
+            return '', self.loglines
         for element in xmldata.getiterator():
             if element.tag == "content":
                 bio = element.text
@@ -93,7 +98,7 @@ class objectConfig():
             return '', self.loglines
         else:
             return bio, self.loglines
-        
+
 
     def getSimilarArtists( self, sim_params ):
         self.loglines = []
@@ -101,21 +106,21 @@ class objectConfig():
         similar_artists = []
         filepath = os.path.join( sim_params.get( 'infodir', '' ), self.SIMILARFILENAME )
         cachefilepath = os.path.join( sim_params.get( 'infodir', '' ), self.CACHETIMEFILENAME )
-        additionalparams = {'artist': sim_params.get( 'artist', '' )}  
-        url_params = dict( self.SIMILARPARAMS.items() + additionalparams.items() )
+        additionalparams = {'artist': sim_params.get( 'artist', '' )}
+        url_params = dict( list(self.SIMILARPARAMS.items()) + list(additionalparams.items()) )
         self.loglines.append( 'trying to get similar artists from ' + self.URL )
         try:
-           xmldata = _xmltree.fromstring( self._get_data( filepath, cachefilepath, url_params ) )
-        except:
-          return [], self.loglines
+            xmldata = _xmltree.fromstring( py2_encode( self._get_data( filepath, cachefilepath, url_params ) ) )
+        except _xmltree.ParseError:
+            self.loglines.append( 'error reading XML file' )
+            return [], self.loglines
         match = False
         for element in xmldata.getiterator():
             if element.tag == "name":
                 if match:
                     match = False
                 else:
-                    name = element.text
-                    name.encode('ascii', 'ignore')
+                    name = py2_encode( element.text )
                     match = True
             elif element.tag == "image":
                 if element.attrib.get('size') == "extralarge":
@@ -140,8 +145,8 @@ class objectConfig():
             rloglines, rawxml = readFile( filepath )
             self.loglines.extend( rloglines )
             try:
-                xmldata = _xmltree.fromstring( rawxml )
-            except:
+                xmldata = _xmltree.fromstring( py2_encode( rawxml ) )
+            except _xmltree.ParseError:
                 self.loglines.append( 'error reading musicbrainz ID from ' + filepath )
                 return '', self.loglines
             for element in xmldata.getiterator():
@@ -163,7 +168,7 @@ class objectConfig():
         else:
             success = self._put_cache_time( cachefilepath )
         if success:
-            rloglines, rawdata = readFile( cachefilepath ) 
+            rloglines, rawdata = readFile( cachefilepath )
             self.loglines.extend( rloglines )
         try:
             cachetime = int( rawdata )
@@ -178,7 +183,7 @@ class objectConfig():
             success, uloglines, data = self.TEXTURL.Get( self.URL, params=url_params )
             self.loglines.extend( uloglines )
             if success:
-                success, wloglines = writeFile( data.encode( 'utf-8' ), filepath )
+                success, wloglines = writeFile( py2_encode( data ), filepath )
                 self.loglines.extend( wloglines )
         exists, cloglines = checkPath( filepath, False )
         self.loglines.extend( cloglines )
@@ -192,7 +197,7 @@ class objectConfig():
         self.loglines.append( 'writing out the cache timeout information for last.fm' )
         cachetime = random.randint( self.CACHEEXPIRE['low'], self.CACHEEXPIRE['high'] )
         success, wloglines = writeFile( str( cachetime ), cachefilepath )
-        self.loglines.append( wloglines)
+        self.loglines.append( wloglines )
         return success
 
 

@@ -1,0 +1,17 @@
+Git Bash replace:
+
+find ./ -type f -exec sed -i -e 's/from resources.lib.externals.pytz/from resources.lib.externals.pytz/g' {} \;
+
+in tzinfo.py, replace
+
+pytz._p
+   with
+_p
+
+and replace the top import
+
+import pytz
+   with
+def _p(*args):
+    return unpickler(*args)
+_p.__safe_for_unpickling__ = True

@@ -1,0 +1,5 @@
+<settings version="2">
+    <setting id="auto_backups" default="true">false</setting>
+    <setting id="backup_path" default="true">special://profile/addon_data/script.skin.helper.skinbackup/</setting>
+    <setting id="max_old_backups">10</setting>
+</settings>

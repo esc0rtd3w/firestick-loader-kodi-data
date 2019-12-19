@@ -38,6 +38,9 @@ if __name__ == '__main__':
             update = 'Container.Update(%s,replace)' % update
             xbmc.executebuiltin(update)
 
+    if cmd.lower().startswith('executebuiltin'):
+        cmd = cmd[15:-1]
+    
     xbmc.executebuiltin('ActivateWindow(Home)')
     xbmc.executebuiltin(cmd)
    

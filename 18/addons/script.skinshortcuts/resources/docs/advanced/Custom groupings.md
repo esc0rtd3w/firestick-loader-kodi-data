@@ -10,7 +10,7 @@ Used to describe how shortcuts are arranged when using list 111 to display short
 
 #### `<groupings>`
 
-Used to describe how shortcuts are arranged to the user when using GUI buttons 401 and 307, and with the ['Just Select' method](./Just Select.md)
+Used to describe how shortcuts are arranged to the user when using GUI buttons 401 and 307, and with the ['Just Select' method](./Just%20Select.md)
 
 #### `<widget-groupings>`
 
@@ -52,7 +52,7 @@ You can also add individual shortcuts directly into the groupings with a `<short
 | `[widgetTarget]` | Yes | The value that will be set as the widgetTarget property |
 | `[widgetPath]` |  | The value that will be set as the widgetPath property |
 
-See [Managing widgets](./Managing widgets.md) for more details of the various widget properties.
+See [Managing widgets](./Managing%20widgets.md) for more details of the various widget properties.
 
 ## Custom Groupings
 
@@ -71,7 +71,7 @@ Set the window property `custom-grouping` to the `[groupname]` you wish to displ
 
 #### Displaying custom groupings - 'Just Select' method
 
-See ['Just Select' method](./Just Select.md)
+See ['Just Select' method](./Just%20Select.md)
 
 ## Notes
 
@@ -79,4 +79,4 @@ See ['Just Select' method](./Just Select.md)
 
 The widget groupings are handled differently from all other groupings, in that they will not display any prompt to the user about what they want the shortcut they have chosen to do - for example, no prompt if they want to play or display a playlist. Instead, it will always default to displaying the shortcut.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

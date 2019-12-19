@@ -14,7 +14,7 @@
         <setting id="pvr_art_ignore_titles" label="32011" type="text"/>
         <setting id="pvr_art_ignore_genres" label="32025" type="text" default="Sport|News"/>
         <setting id="pvr_art_ignore_commongenre" label="32026" type="bool" default="true"/>
-        <setting id="pvr_art_splittitlechar" label="32012" type="text" default=": | ( | ;"/>        
+        <setting id="pvr_art_splittitlechar" label="32012" type="text" default=" ( | ;"/>        
         <setting id="pvr_art_replace_by_space" label="32013" type="text" default="-|_"/>
         <setting id="pvr_art_stripchars" label="32014" type="text" default="\*|,|(|)|:|;|\&quot;|`|_new|new_|.|\&apos;"/>
     </category>
@@ -34,8 +34,33 @@
         <setting id="music_art_scraper_lfm" type="bool" label="32050" default="true" visible="eq(-10,true)"/>
         <setting id="music_art_scraper_fatv" type="bool" label="32051" default="true" visible="eq(-11,true)"/>
     </category>
-    <category label="32044">
+    <category label="32057">
+        <setting label="32058" type="lsep" />
+        <setting label="32056" type="lsep" />
+        <setting type="sep" />
+        <setting label="thelogosdb.com - Channel Logos" type="lsep" />
+        <setting label="www.consiliumb.com Animated Art database" type="lsep" />
+        <setting label="fanart.tv - Rich artwork for media" type="lsep" />
+        <setting label="google.com - Basic images" type="lsep" />
+        <setting label="imdb.com - Top 250 ranking" type="lsep" />
+        <setting label="last.fm - Music metadata and ratings" type="lsep" />
+        <setting label="Musicbrainz - Music metadata" type="lsep" />
+        <setting label="omdbapi.com - Movie and TV Series details and ratings" type="lsep" />
+        <setting label="theaudiodb.com - Music metadata and artwork" type="lsep" />
+        <setting label="themoviedb.org - Movie and Tv Series details" type="lsep" />
+        <setting label="thetvdb.com - TV Shows details" type="lsep" />
+    </category>
+    <category label="32052">
+        <setting label="32053" type="lsep" />
+        <setting type="sep" />
         <setting id="fanarttv_apikey" label="32045" type="text"/>
-        <setting label="32046" type="lsep" />
+        <setting id="omdbapi_apikey" label="32054" type="text"/>
+        <setting id="tmdb_apikey" label="32055" type="text"/>
+    </category>
+    <category label="32044">
+        <setting label="32034" type="lsep" />
+        <setting type="sep" />
+        <setting id="debug_log" type="bool" label="32059" default="false"/>
+        <setting id="max_extrafanarts" type="number" label="32060" default="25" visible="false"/>
     </category>
 </settings>

@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','.*?embed/(\d+)')
+item_info_build=iLive - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=%s
+
+item_info_name=tmp1
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*id=(\w+)>([^<]+).*?function\s+(\w+)\(\)\s*\{\s*return\(\[(.*?)\]\.join\(\"\"\)\s*\s\+\s*(\w+)\.join\(\"\"\).*?getElementById\(\"(\1)"\).*?var\s+\5\s*=\s*\[(.*?)\].*?file\"\s*:\s*\3','https://www.streamlive.to','junk1|u3|junk2|u1|junk3|junk4|u2')
+item_info_build=%s
+
+item_info_name=hls_url
+item_info_from=u1+u2+u3
+#item_info_convert=getInfo('%s','.*?jwplayer\(.*"file"\s*:\s*"([^"\s]+m3u8\?st=[^"]+)"','streamlive.to')
+item_info_convert=replaceRegex('%s','[",\\]','')
+item_info_convert=debug
+item_info_build=http:%s
+
+item_info_name=url
+item_info_from=hls_url+'|Referer='+pageUrl+'&User-Agent=Mozilla/5.0%20%28Windows%20NT%206.1%3B%20WOW64%29%20AppleWebKit/537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome/54.0.2840.100%20Safari/537.36
+item_info_convert=debug
+item_info_build=%s
+

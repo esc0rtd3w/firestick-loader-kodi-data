@@ -39,6 +39,6 @@ If you want to build a menu unlinked to the main menu, you need to adjust the bu
 
 Note, `mainmenu` must be the first item in the group property.
 
-The additional groups will be treated completely seperately from the main menu. See [integration details for Submenu Only](../started/Basic integration 2.md) for examples of how to use them.
+The additional groups will be treated completely seperately from the main menu. See [integration details for Submenu Only](../started/Basic%20integration%202.md) for examples of how to use them.
 
-***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting Started.md) - [Advanced Usage](./Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)

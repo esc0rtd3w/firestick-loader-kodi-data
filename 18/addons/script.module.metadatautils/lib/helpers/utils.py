@@ -6,6 +6,7 @@
 import xbmcgui
 import xbmc
 import xbmcvfs
+import xbmcaddon
 import sys
 from traceback import format_exc
 import requests
@@ -15,6 +16,9 @@ from requests.adapters import HTTPAdapter
 import urllib
 import unicodedata
 import os
+import datetime
+import time
+import xml.etree.ElementTree as ET
 
 try:
     import simplejson as json
@@ -37,16 +41,28 @@ KODI_VERSION = int(xbmc.getInfoLabel("System.BuildVersion").split(".")[0])
 # setup requests with some additional options
 requests.packages.urllib3.disable_warnings()
 SESSION = requests.Session()
-RETRIES = Retry(total=5, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
+RETRIES = Retry(total=5, backoff_factor=5, status_forcelist=[500, 502, 503, 504])
 SESSION.mount('http://', HTTPAdapter(max_retries=RETRIES))
 SESSION.mount('https://', HTTPAdapter(max_retries=RETRIES))
+
+FORCE_DEBUG_LOG = False
+LIMIT_EXTRAFANART = 0
+try:
+    ADDON = xbmcaddon.Addon(ADDON_ID)
+    FORCE_DEBUG_LOG = ADDON.getSetting('debug_log') == 'true'
+    LIMIT_EXTRAFANART = int(ADDON.getSetting('max_extrafanarts'))
+    del ADDON
+except Exception:
+    pass
 
 
 def log_msg(msg, loglevel=xbmc.LOGDEBUG):
     '''log message to kodi logfile'''
     if isinstance(msg, unicode):
         msg = msg.encode('utf-8')
-    xbmc.log("Metadata and Artwork module --> %s" % msg, level=loglevel)
+    if loglevel == xbmc.LOGDEBUG and FORCE_DEBUG_LOG:
+        loglevel = xbmc.LOGNOTICE
+    xbmc.log("%s --> %s" % (ADDON_ID, msg), level=loglevel)
 
 
 def log_exception(modulename, exceptiondetails):
@@ -55,11 +71,46 @@ def log_exception(modulename, exceptiondetails):
     log_msg("ERROR in %s ! --> %s" % (modulename, exceptiondetails), xbmc.LOGERROR)
 
 
-def get_json(url, params=None, retries=0):
+def rate_limiter(rl_params):
+    ''' A very basic rate limiter which limits to 1 request per X seconds to the api'''
+    # Please respect the parties providing these free api's to us and do not modify this code.
+    # If I suspect any abuse I will revoke all api keys and require all users
+    # to have a personal api key for all services.
+    # Thank you
+    if not rl_params:
+        return
+    monitor = xbmc.Monitor()
+    win = xbmcgui.Window(10000)
+    rl_name = rl_params[0]
+    rl_delay = rl_params[1]
+    cur_timestamp = int(time.mktime(datetime.datetime.now().timetuple()))
+    prev_timestamp = try_parse_int(win.getProperty("ratelimiter.%s" % rl_name))
+    if (prev_timestamp + rl_delay) > cur_timestamp:
+        sec_to_wait = (prev_timestamp + rl_delay) - cur_timestamp
+        log_msg(
+            "Rate limiter active for %s - delaying request with %s seconds - "
+            "Configure a personal API key in the settings to get rid of this message and the delay." %
+            (rl_name, sec_to_wait), xbmc.LOGNOTICE)
+        while sec_to_wait and not monitor.abortRequested():
+            monitor.waitForAbort(1)
+            # keep setting the timestamp to create some sort of queue
+            cur_timestamp = int(time.mktime(datetime.datetime.now().timetuple()))
+            win.setProperty("ratelimiter.%s" % rl_name, "%s" % cur_timestamp)
+            sec_to_wait -= 1
+    # always set the timestamp
+    cur_timestamp = int(time.mktime(datetime.datetime.now().timetuple()))
+    win.setProperty("ratelimiter.%s" % rl_name, "%s" % cur_timestamp)
+    del monitor
+    del win
+
+
+def get_json(url, params=None, retries=0, ratelimit=None):
     '''get info from a rest api'''
     result = {}
     if not params:
         params = {}
+    # apply rate limiting if needed
+    rate_limiter(ratelimit)
     try:
         response = requests.get(url, params=params, timeout=20)
         if response and response.content and response.status_code == 200:
@@ -68,21 +119,54 @@ def get_json(url, params=None, retries=0):
                 result = result["results"]
             elif "result" in result:
                 result = result["result"]
-        elif response.status_code == 503:
-            result = None
+        elif response.status_code in (429, 503, 504):
+            raise Exception('Read timed out')
     except Exception as exc:
-        if "Read timed out" in str(exc):
-            result = None
+        result = None
+        if "Read timed out" in str(exc) and retries < 5 and not ratelimit:
+            # retry on connection error or http server limiting
+            monitor = xbmc.Monitor()
+            if not monitor.waitForAbort(2):
+                result = get_json(url, params, retries + 1)
+            del monitor
         else:
             log_exception(__name__, exc)
-            return None
-    # auto retry connection errors
-    if result is None and retries < 5:
-        xbmc.sleep(500 * retries)
-        return get_json(url, params, retries + 1)
     # return result
     return result
 
+
+def get_xml(url, params=None, retries=0, ratelimit=None):
+    '''get info from a rest api'''
+    result = {}
+    if not params:
+        params = {}
+    # apply rate limiting if needed
+    rate_limiter(ratelimit)
+    try:
+        response = requests.get(url, params=params, timeout=20)
+        if response and response.content and response.status_code == 200:
+            tree = ET.fromstring(response.content)
+            #child = tree.find('movie')
+            if(len(tree)):
+                child = tree[0]
+            #log_exception(__name__, child)
+            for attrName, attrValue in child.items():
+                result.update({attrName : attrValue})
+        elif response.status_code in (429, 503, 504):
+            raise Exception('Read timed out')
+    except Exception as exc:
+        result = None
+        if "Read timed out" in str(exc) and retries < 5 and not ratelimit:
+            # retry on connection error or http server limiting
+            monitor = xbmc.Monitor()
+            if not monitor.waitForAbort(2):
+                result = get_xml(url, params, retries + 1)
+            del monitor
+        else:
+            log_exception(__name__, exc)
+    # return result
+    return result
+    
 
 def try_encode(text, encoding="utf-8"):
     '''helper to encode a string to utf-8'''
@@ -125,19 +209,24 @@ def formatted_number(number):
 def process_method_on_list(method_to_run, items):
     '''helper method that processes a method on each listitem with pooling if the system supports it'''
     all_items = []
-    if SUPPORTS_POOL:
-        pool = ThreadPool()
-        try:
-            all_items = pool.map(method_to_run, items)
-        except Exception:
-            # catch exception to prevent threadpool running forever
-            log_msg(format_exc(sys.exc_info()))
-            log_msg("Error in %s" % method_to_run)
-        pool.close()
-        pool.join()
-    else:
-        all_items = [method_to_run(item) for item in items]
-    all_items = filter(None, all_items)
+    if items is not None:
+        if SUPPORTS_POOL:
+            pool = ThreadPool()
+            try:
+                all_items = pool.map(method_to_run, items)
+            except Exception:
+                # catch exception to prevent threadpool running forever
+                log_msg(format_exc(sys.exc_info()))
+                log_msg("Error in %s" % method_to_run)
+            pool.close()
+            pool.join()
+        else:
+            try:
+                all_items = [method_to_run(item) for item in list(items)]
+            except Exception:
+                log_msg(format_exc(sys.exc_info()))
+                log_msg("Error in %s with %s" % method_to_run, items)
+        all_items = filter(None, all_items)
     return all_items
 
 
@@ -218,6 +307,8 @@ def extend_dict(org_dict, new_dict, allow_overwrite=None):
     without overwriting existing values.'''
     if not new_dict:
         return org_dict
+    if not org_dict:
+        return new_dict
     for key, value in new_dict.iteritems():
         if value:
             if not org_dict.get(key):
@@ -260,7 +351,7 @@ def localized_date_time(timestring):
     date_time = arrow.get(timestring)
     local_date = date_time.strftime(xbmc.getRegion("dateshort"))
     local_time = date_time.strftime(xbmc.getRegion("time").replace(":%S", ""))
-    return (local_date, local_time)
+    return local_date, local_time
 
 
 def normalize_string(text):
@@ -416,6 +507,10 @@ def download_artwork(folderpath, artwork):
             new_dict[key] = download_image(os.path.join(folderpath, "poster.jpg"), value)
         elif key == "landscape":
             new_dict[key] = download_image(os.path.join(folderpath, "landscape.jpg"), value)
+        elif key == "thumbback":
+            new_dict[key] = download_image(os.path.join(folderpath, "thumbback.jpg"), value)
+        elif key == "spine":
+            new_dict[key] = download_image(os.path.join(folderpath, "spine.jpg"), value)
         elif key == "fanarts" and value:
             # copy extrafanarts only if the directory doesn't exist at all
             delim = "\\" if "\\" in folderpath else "/"
@@ -426,6 +521,21 @@ def download_artwork(folderpath, artwork):
                 for count, image in enumerate(value):
                     image = download_image(os.path.join(efa_path, "fanart%s.jpg" % count), image)
                     images.append(image)
+                    if LIMIT_EXTRAFANART and count == LIMIT_EXTRAFANART:
+                        break
+                new_dict[key] = images
+        elif key == "posters" and value:
+            # copy extraposters only if the directory doesn't exist at all
+            delim = "\\" if "\\" in folderpath else "/"
+            efa_path = "%sextraposter" % folderpath + delim
+            if not xbmcvfs.exists(efa_path):
+                xbmcvfs.mkdir(efa_path)
+                images = []
+                for count, image in enumerate(value):
+                    image = download_image(os.path.join(efa_path, "poster%s.jpg" % count), image)
+                    images.append(image)
+                    if LIMIT_EXTRAFANART and count == LIMIT_EXTRAFANART:
+                        break
                 new_dict[key] = images
         else:
             new_dict[key] = value
@@ -480,7 +590,7 @@ def manual_set_artwork(artwork, mediatype, header=None):
     if mediatype == "artist":
         art_types = ["thumb", "poster", "fanart", "banner", "clearart", "clearlogo", "landscape"]
     elif mediatype == "album":
-        art_types = ["thumb", "discart"]
+        art_types = ["thumb", "discart", "thumbback", "spine"]
     else:
         art_types = ["thumb", "poster", "fanart", "banner", "clearart",
                      "clearlogo", "discart", "landscape", "characterart"]

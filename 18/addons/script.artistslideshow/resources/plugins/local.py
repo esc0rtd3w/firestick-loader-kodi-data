@@ -1,12 +1,12 @@
-#v.0.1.0
+#v.0.3.0
 
 import os
-import xml.etree.ElementTree as _xmltree
-from ..common.fileops import readFile, checkPath
-from ..common.fix_utf8 import smartUTF8
+import defusedxml.ElementTree as _xmltree
+from resources.common.fileops import readFile, checkPath
+from kodi_six.utils import py2_encode, py2_decode
 
 
-class objectConfig():
+class objectConfig( object ):
     def __init__( self ):
         self.loglines = []
         self.BIOFILEPATH = os.path.join( 'override', 'artistbio.nfo' )
@@ -16,24 +16,23 @@ class objectConfig():
 
     def provides( self ):
         return ['bio', 'albums', 'similar', 'mbid']
-        
+
 
     def getAlbumList( self, album_params ):
         self.loglines = []
         albums = []
         filepath = os.path.join( album_params.get( 'localartistdir', '' ), self.ALBUMFILEPATH )
-        local_path = os.path.join( album_params.get( 'localartistdir', ''), smartUTF8( album_params.get( 'artist', '' ) ).decode('utf-8'), 'override' )
+        local_path = os.path.join( album_params.get( 'localartistdir', ''), py2_decode( album_params.get( 'artist', '' ) ), 'override' )
         self.loglines.append( 'checking ' + filepath )
         rloglines, rawxml = readFile( filepath )
         self.loglines.extend( rloglines )
         if rawxml:
-            xmldata = _xmltree.fromstring( rawxml )
+            xmldata = _xmltree.fromstring( py2_encode( rawxml ) )
         else:
             return [], self.loglines
         for element in xmldata.getiterator():
             if element.tag == "name":
-                name = element.text
-                name.encode('ascii', 'ignore')
+                name = py2_encode( element.text )
             elif element.tag == "image":
                 image_text = element.text
                 if not image_text:
@@ -46,8 +45,8 @@ class objectConfig():
             return [], self.loglines
         else:
             return albums, self.loglines
-        
-        
+
+
     def getBio( self, bio_params ):
         self.loglines = []
         bio = ''
@@ -56,14 +55,14 @@ class objectConfig():
         loglines, rawxml = readFile( filepath )
         self.loglines.extend( loglines )
         if rawxml:
-            xmldata = _xmltree.fromstring( rawxml )
+            xmldata = _xmltree.fromstring( py2_encode( rawxml ) )
         else:
             return '', self.loglines
         for element in xmldata.getiterator():
             if element.tag == "content":
                 bio = element.text
         if not bio:
-            self.loglines.append( 'no %s found in local xml file' % item )
+            self.loglines.append( 'no bio found in local xml file' )
             return '', self.loglines
         else:
             return bio, self.loglines
@@ -86,18 +85,17 @@ class objectConfig():
         self.loglines = []
         similar_artists = []
         filepath = os.path.join( sim_params.get( 'localartistdir', '' ), self.SIMILARFILEPATH )
-        local_path = os.path.join( sim_params.get( 'localartistdir', '' ), smartUTF8( sim_params.get( 'artist', '' ) ).decode( 'utf-8' ), 'override' )
+        local_path = os.path.join( sim_params.get( 'localartistdir', '' ), py2_decode( sim_params.get( 'artist', '' ) ), 'override' )
         self.loglines.append( 'checking ' + filepath )
         rloglines, rawxml = readFile( filepath )
         self.loglines.extend( rloglines )
         if rawxml:
-            xmldata = _xmltree.fromstring( rawxml )
+            xmldata = _xmltree.fromstring( py2_encode( rawxml ) )
         else:
             return [], self.loglines
         for element in xmldata.getiterator():
             if element.tag == "name":
-                name = element.text
-                name.encode('ascii', 'ignore')
+                name = py2_encode( element.text )
             elif element.tag == "image":
                 image_text = element.text
                 if not image_text:

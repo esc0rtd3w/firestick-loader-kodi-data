@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.openmeta" name="OpenMeta" version="1.4.14" provider-name="A4K">
+	<requires>
+		<import addon="xbmc.python" version="2.25.0"/>
+		<import addon="metadata.tvdb.com" version="3.0.14"/>
+		<import addon="script.module.futures" version="2.2.0"/>
+		<import addon="script.module.requests" version="2.19.1"/>
+		<import addon="script.module.requests-cache" version="0.4.13"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py"/>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="context.py">
+				<label>OpenMeta - Default Player</label>
+				<visible>!String.StartsWith(ListItem.path,plugin://plugin.video.openmeta/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)]</visible>
+			</item>
+			<item library="context2.py">
+				<label>OpenMeta - Choose Player</label>
+				<visible>String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">TMDb, TVDb and Trakt browser</summary>
+		<description lang="en">Browse The MovieDb, The TVDb, Trakt and pass info along to library or an addon. Needs player-files and the appropriate addon to play the files.</description>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot000.jpg</screenshot>
+			<screenshot>resources/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshot002.jpg</screenshot>
+		</assets>
+		<license></license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<news>
+		1.4.14 - Fix bug with missing ID in TV menus
+		1.4.13 - Added realtitle (movies) and realname (tvshows) parameters for plexkodiconnect compatibility
+		1.4.12 - Handle non-existent 'filename' key in TVDB data.
+		1.4.11 - TVDB API fix, thanks to @ruinernin and @bg-22 (among others)!
+				 BUG: Some artwork may not load for certain items, due to ongoing API instability.
+		1.4.10 - Added language option for player-files (TV)
+		1.4.9  - Fix art in TV menus
+		1.4.8  - Fix crash from empty "first_aired" string"
+		1.4.7  - Fix crash when we can't contact TVDB
+		1.4.6  - Fix crashes from non-existent keys
+		1.4.5  - Added default play action, options for movies are; Play/OpenInfo and options for episodes are; Play/OpenInfo(TV Show info)/OpenInfo(Episode info).
+		1.4.4  - Fix clearlogo for movies
+		1.4.3  - Fix typo in season fanart request.
+		1.4.2  - Add fanart caching
+		1.4.1  - Fix season artwork
+		1.4.0  - Add unwatched counts for shows/seasons.
+		1.3.2  - Fix "Upcoming Episodes" and "Next Episodes".
+		1.3.1  - Fixed "Next Page" bug with widgets.</news>
+	</extension>
+</addon>

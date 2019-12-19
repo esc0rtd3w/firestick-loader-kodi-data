@@ -27,7 +27,7 @@ Defaults are stored in a `[menuidentifier].DATA.xml` file
 
 ## Naming of the files
 
-The file for the main menu defaults should be `mainmenu.DATA.xml`. For submenu's, it should be `[labelID].DATA.xml`. See [LabelID and localisation](./labelID and Localisation.md) for details of what the labelID will be set to.
+The file for the main menu defaults should be `mainmenu.DATA.xml`. For submenu's, it should be `[labelID].DATA.xml`. See [LabelID and localisation](./labelID%20and%20Localisation.md) for details of what the labelID will be set to.
 
 ## Notes
 
@@ -49,4 +49,4 @@ rather than
 
 `<action>ActivateWindow(10025,MovieTitles,return)</action>`
 
-***Quick links*** - [Readme](../../README.md) - [Getting Started](./started/Getting Started.md) - [Advanced Usage](./advanced/Advanced Usage.md)
+***Quick links*** - [Readme](../../../README.md) - [Getting Started](../started/Getting%20Started.md) - [Advanced Usage](./Advanced%20Usage.md)
