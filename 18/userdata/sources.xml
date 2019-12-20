@@ -16,6 +16,18 @@
 			<thumbnail pathversion="1">/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/addons/plugin.video.openmeta/resources/media/tv.png</thumbnail>
 			<allowsharing>true</allowsharing>
 		</source>
+		<source>
+			<name>Venom Movies</name>
+			<path pathversion="1">/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.venom/Movies/</path>
+			<thumbnail pathversion="1">DefaultMovies.png</thumbnail>
+			<allowsharing>true</allowsharing>
+		</source>
+		<source>
+			<name>Venom TV Shows</name>
+			<path pathversion="1">/storage/emulated/0/Android/data/org.xbmc.kodi/files/.kodi/userdata/addon_data/plugin.video.venom/TVShows/</path>
+			<thumbnail pathversion="1">DefaultTVShows.png</thumbnail>
+			<allowsharing>true</allowsharing>
+		</source>
 	</video>
 	<music>
 		<default pathversion="1" />

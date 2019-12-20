@@ -96,7 +96,7 @@
     <setting id="premiumize.torrents">true</setting>
     <setting id="premiumize.transcoded" default="true">false</setting>
     <setting id="premiumize.username" default="true"></setting>
-    <setting id="provider.updateCheckTimeStamp">1576654857.69</setting>
+    <setting id="provider.updateCheckTimeStamp">1576803989.61</setting>
     <setting id="providers.autoupdates">true</setting>
     <setting id="providers.checkupdates" default="true"></setting>
     <setting id="providers.manage" default="true"></setting>
@@ -150,8 +150,8 @@
     <setting id="traktdb.rebuild" default="true"></setting>
     <setting id="tv.artwork.advanced" default="true">false</setting>
     <setting id="tvdb.apikey" default="true"></setting>
-    <setting id="tvdb.expiry">1576741246.77</setting>
-    <setting id="tvdb.jw">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzcyNTk2NDUsImlkIjoiIiwib3JpZ19pYXQiOjE1NzY2NTQ4NDV9.BoUs5oFSs0MtOqlE2BkK4-uJPKu-bNcoR5wgCL_fZaEYz52E3L4U6slM2UP2L2QY68mVuvAD7dkM6FAOZZJtxdYGtKe7n5TvimL32ancdv9KFDSSCjh_ILyqyACBqJx1zmE_1U4ZpSgcR2MhjQZKeKfmOjxfToe_dsTck_lgEecy5BAEe6RKqcLUIpXd7ejaCLDVGoIi2vYfOXcnsCxUfvPZR3MWV35AroQ0NEjQkeeFOyRAjeCitRak59mfF3WuLQ0v5iShsUPgF-rZJStcgWUjN7bm3-UtZUHxF-1dge9UQnLm-xjitfrFbI8XsFaARAsLRB0LnoWVJeohGfYpyw</setting>
+    <setting id="tvdb.expiry">1576827061.0</setting>
+    <setting id="tvdb.jw">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzczNDU0NjAsImlkIjoiIiwib3JpZ19pYXQiOjE1NzY3NDA2NjB9.fQaM2HeLnD8XSVKuySeL1Oe_zFidfswO8esISSe5NZVgnMBDQzey20NSOMvj8DkANGBd7vrlR4zv8hcjwaL_lZcIZK1n6V9H8RpZVj_F2YtqCZj_OaXYBnSzb_uYUbt-boVSfPYPn8El7kXCPek9mOWIbqOVNg-CD9UUFtYoG8kUDpWNenGTlGYsKikiTikrBybNeubPfItFmNn2uqcLxBPFcGtH1f9kM0_8NTj2ETG8ew2pgFAwVWH-U75TfweUflGu9l_Ky9fOpu3Lz6tySL-7n5_RT5R6pNqN1PJRHIUnwZYqbE4XcAguZp0Zu1oAGqQm9h11zvmIaz4FE7_Aug</setting>
     <setting id="tvshows.banner">true</setting>
     <setting id="tvshows.characterart_limit" default="true">0</setting>
     <setting id="tvshows.clearart">true</setting>

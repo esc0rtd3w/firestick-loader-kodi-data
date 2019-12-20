@@ -7,9 +7,9 @@
 			<label2>Custom item</label2>
 			<icon>special://skin/extras/icons/DefaultAddonPVRClient.png</icon>
 			<thumb />
-			<property name="widgetName">cCloud TV - [COLOR white]24/7 Channels[/COLOR]</property>
-			<property name="widgetType">videos</property>
-			<property name="widgetStyle">Extended Panel</property>
+			<property name="widgetStyle.2">Extended Panel</property>
+			<property name="widgetName.2">cCloud TV - [COLOR white]24/7 Channels[/COLOR]</property>
+			<property name="widgetType.2">videos</property>
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelectSearch,True,Home)</onclick>
 			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 			<property name="path">ActivateWindow(Videos,Addons,return)</property>
@@ -392,8 +392,8 @@
 			<label2>Custom item</label2>
 			<icon>DefaultShortcut.png</icon>
 			<thumb />
-			<onclick>ActivateWindow(Programs,"plugin://resource.skidmaintenance/?url=maintenance&amp;mode=1&amp;name=Run+Maintenance+Now&amp;iconimage=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ficon.png&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ffanart.jpg&amp;description=",return)</onclick>
-			<property name="path">ActivateWindow(Programs,"plugin://resource.skidmaintenance/?url=maintenance&amp;mode=1&amp;name=Run+Maintenance+Now&amp;iconimage=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ficon.png&amp;fanart=%2Fstorage%2Femulated%2F0%2FAndroid%2Fdata%2Forg.xbmc.kodi%2Ffiles%2F.kodi%2Faddons%2Fresource.skidmaintenance%2Ffanart.jpg&amp;description=",return)</property>
+			<onclick>ActivateWindow(Programs,"plugin://resource.skidmaintenance",return)</onclick>
+			<property name="path">ActivateWindow(Programs,"plugin://resource.skidmaintenance",return)</property>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),home)</visible>
 			<property name="isSubmenu">True</property>
 		</item>
@@ -893,16 +893,16 @@
 	<include name="skinshortcuts-submenu-1" />
 	<include />
 	<include name="skinshortcuts-submenu-2" />
-	<include name="skinshortcuts-template-widget1">
-		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-widget1-Master user</include>
+	<include name="skinshortcuts-template-widget2">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-widget2-Master user</include>
 	</include>
-	<include name="skinshortcuts-template-widget1-Master user">
+	<include name="skinshortcuts-template-widget2-Master user">
 		<control type="group">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-31502)</visible>
 			<control type="group">
-				<visible>Integer.IsGreater(Container(80111).NumItems,0)</visible>
+				<visible>Integer.IsGreater(Container(80211).NumItems,0)</visible>
 				<control type="group">
-					<top>424</top>
+					<top>70</top>
 					<control type="group">
 						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
 						<centerleft>50%</centerleft>
@@ -923,7 +923,7 @@
 						</control>
 					</control>
 					<include content="PanelLabel">
-						<param name="id">80111</param>
+						<param name="id">80211</param>
 						<param name="Label">cCloud TV - [COLOR white]24/7 Channels[/COLOR]</param>
 						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
 						<param name="labelFont">font13_title</param>
@@ -936,15 +936,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<top>424</top>
-				<control id="80111" type="panel">
+				<top>70</top>
+				<control id="80211" type="panel">
 					<left>37.5</left>
 					<width>1845</width>
 					<height>300</height>
 					<orientation>horizontal</orientation>
 					<preloaditems>2</preloaditems>
 					<scrolltime easing="out" tween="quadratic">300</scrolltime>
-					<include>skinshortcuts-template-HorizontalNavigation1</include>
+					<include>skinshortcuts-template-HorizontalNavigation2</include>
 					<include content="PortraitArt">
 						<param name="containerWidth">205</param>
 						<param name="containerHeight">300</param>
@@ -980,275 +980,6 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
-			<control type="group">
-				<visible>Integer.IsGreater(Container(80112).NumItems,0)</visible>
-				<control type="group">
-					<top>424</top>
-					<control type="group">
-						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
-						<centerleft>50%</centerleft>
-						<top>-21</top>
-						<width>1882.5</width>
-						<height>342</height>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
-							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
-							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-					</control>
-					<include content="PanelLabel">
-						<param name="id">80112</param>
-						<param name="Label">Exodus Redux - New Episodes</param>
-						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
-						<param name="labelFont">font13_title</param>
-						<param name="labelBottom">318</param>
-						<param name="labelWidth">922</param>
-						<param name="labelLeft">38</param>
-						<param name="labelRight">959</param>
-						<param name="labelTitle">false</param>
-					</include>
-				</control>
-			</control>
-			<control type="group">
-				<top>424</top>
-				<control id="80112" type="panel">
-					<left>37.5</left>
-					<width>1845</width>
-					<height>300</height>
-					<orientation>horizontal</orientation>
-					<preloaditems>2</preloaditems>
-					<scrolltime easing="out" tween="quadratic">300</scrolltime>
-					<include>skinshortcuts-template-HorizontalNavigation1</include>
-					<include content="PortraitArt">
-						<param name="containerWidth">205</param>
-						<param name="containerHeight">300</param>
-						<param name="Texture">$VAR[PosterThumbVar]</param>
-						<param name="leftArt">2.5</param>
-						<param name="topArt">0</param>
-						<param name="widthArt">200</param>
-						<param name="heightArt">300</param>
-						<param name="topFakeDiscArt">0</param>
-						<param name="leftCase">2.5</param>
-						<param name="topCase">0</param>
-						<param name="widthCase">200</param>
-						<param name="heightCase">300</param>
-						<param name="labelHeight">-34</param>
-						<param name="labelFont">Font_12</param>
-						<param name="fallbackFont">fontCDalbum</param>
-						<param name="fallbackVisible">false</param>
-						<param name="Aspect">stretch</param>
-						<param name="Aligny">top</param>
-						<param name="Diffuse" />
-						<param name="Case" />
-						<param name="labelVisible">false</param>
-						<param name="labelFocusVisible">true</param>
-						<param name="isWeather">false</param>
-						<param name="weatherTop" />
-						<param name="weatherHeight" />
-						<param name="weatherTop1" />
-						<param name="weatherTop2" />
-						<param name="weatherTop3" />
-						<param name="weatherFont">font14</param>
-					</include>
-					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=tvWidget&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-20342)</visible>
-			<control type="group">
-				<visible>Integer.IsGreater(Container(80114).NumItems,0)</visible>
-				<control type="group">
-					<top>424</top>
-					<control type="group">
-						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
-						<centerleft>50%</centerleft>
-						<top>-21</top>
-						<width>1882.5</width>
-						<height>342</height>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
-							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
-							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-					</control>
-					<include content="PanelLabel">
-						<param name="id">80114</param>
-						<param name="Label">Exodus Redux - New Movies</param>
-						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
-						<param name="labelFont">font13_title</param>
-						<param name="labelBottom">318</param>
-						<param name="labelWidth">922</param>
-						<param name="labelLeft">38</param>
-						<param name="labelRight">959</param>
-						<param name="labelTitle">false</param>
-					</include>
-				</control>
-			</control>
-			<control type="group">
-				<top>424</top>
-				<control id="80114" type="panel">
-					<left>37.5</left>
-					<width>1845</width>
-					<height>300</height>
-					<orientation>horizontal</orientation>
-					<preloaditems>2</preloaditems>
-					<scrolltime easing="out" tween="quadratic">300</scrolltime>
-					<include>skinshortcuts-template-HorizontalNavigation1</include>
-					<include content="PortraitArt">
-						<param name="containerWidth">205</param>
-						<param name="containerHeight">300</param>
-						<param name="Texture">$VAR[PosterThumbVar]</param>
-						<param name="leftArt">2.5</param>
-						<param name="topArt">0</param>
-						<param name="widthArt">200</param>
-						<param name="heightArt">300</param>
-						<param name="topFakeDiscArt">0</param>
-						<param name="leftCase">2.5</param>
-						<param name="topCase">0</param>
-						<param name="widthCase">200</param>
-						<param name="heightCase">300</param>
-						<param name="labelHeight">-34</param>
-						<param name="labelFont">Font_12</param>
-						<param name="fallbackFont">fontCDalbum</param>
-						<param name="fallbackVisible">false</param>
-						<param name="Aspect">stretch</param>
-						<param name="Aligny">top</param>
-						<param name="Diffuse" />
-						<param name="Case" />
-						<param name="labelVisible">false</param>
-						<param name="labelFocusVisible">true</param>
-						<param name="isWeather">false</param>
-						<param name="weatherTop" />
-						<param name="weatherHeight" />
-						<param name="weatherTop1" />
-						<param name="weatherTop2" />
-						<param name="weatherTop3" />
-						<param name="weatherFont">font14</param>
-					</include>
-					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=movieWidget&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</content>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-3)</visible>
-			<control type="group">
-				<visible>Integer.IsGreater(Container(80115).NumItems,0)</visible>
-				<control type="group">
-					<top>424</top>
-					<control type="group">
-						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
-						<centerleft>50%</centerleft>
-						<top>-21</top>
-						<width>1882.5</width>
-						<height>342</height>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
-							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-						<control type="image">
-							<width>1882.5</width>
-							<height>342</height>
-							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
-							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
-						</control>
-					</control>
-					<include content="PanelLabel">
-						<param name="id">80115</param>
-						<param name="Label">Exodus Redux - Documentaries</param>
-						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
-						<param name="labelFont">font13_title</param>
-						<param name="labelBottom">318</param>
-						<param name="labelWidth">922</param>
-						<param name="labelLeft">38</param>
-						<param name="labelRight">959</param>
-						<param name="labelTitle">false</param>
-					</include>
-				</control>
-			</control>
-			<control type="group">
-				<top>424</top>
-				<control id="80115" type="panel">
-					<left>37.5</left>
-					<width>1845</width>
-					<height>300</height>
-					<orientation>horizontal</orientation>
-					<preloaditems>2</preloaditems>
-					<scrolltime easing="out" tween="quadratic">300</scrolltime>
-					<include>skinshortcuts-template-HorizontalNavigation1</include>
-					<include content="PortraitArt">
-						<param name="containerWidth">205</param>
-						<param name="containerHeight">300</param>
-						<param name="Texture">$VAR[PosterThumbVar]</param>
-						<param name="leftArt">2.5</param>
-						<param name="topArt">0</param>
-						<param name="widthArt">200</param>
-						<param name="heightArt">300</param>
-						<param name="topFakeDiscArt">0</param>
-						<param name="leftCase">2.5</param>
-						<param name="topCase">0</param>
-						<param name="widthCase">200</param>
-						<param name="heightCase">300</param>
-						<param name="labelHeight">-34</param>
-						<param name="labelFont">Font_12</param>
-						<param name="fallbackFont">fontCDalbum</param>
-						<param name="fallbackVisible">false</param>
-						<param name="Aspect">stretch</param>
-						<param name="Aligny">top</param>
-						<param name="Diffuse" />
-						<param name="Case" />
-						<param name="labelVisible">false</param>
-						<param name="labelFocusVisible">true</param>
-						<param name="isWeather">false</param>
-						<param name="weatherTop" />
-						<param name="weatherHeight" />
-						<param name="weatherTop1" />
-						<param name="weatherTop2" />
-						<param name="weatherTop3" />
-						<param name="weatherFont">font14</param>
-					</include>
-					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=docuHeaven&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content>
-				</control>
-			</control>
-		</control>
-	</include>
-	<include name="skinshortcuts-template-HorizontalNavigation1">
-		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-HorizontalNavigation1-Master user</include>
-	</include>
-	<include name="skinshortcuts-template-HorizontalNavigation1-Master user">
-		<onup condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Control.IsVisible(90020) + !Skin.HasSetting(centermainmenu)">90020</onup>
-		<onup condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
-		<onup condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</onup>
-		<ondown condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![System.HasMediaDVD | Control.IsVisible(9027)]">9000</ondown>
-		<ondown condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [System.HasMediaDVD | Control.IsVisible(9027)]">9020</ondown>
-		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Control.IsVisible(90020)">90020</ondown>
-		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !Control.IsVisible(90020) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
-		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !Control.IsVisible(90020) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
-		<onleft condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">9000</onleft>
-		<onback>9000</onback>
-	</include>
-	<include name="skinshortcuts-template-widget2">
-		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-widget2-Master user</include>
-	</include>
-	<include name="skinshortcuts-template-widget2-Master user">
 		<control type="group">
 			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
 			<control type="group">
@@ -1679,6 +1410,275 @@
 		<ondown condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !Control.IsVisible(90010) + ![System.HasMediaDVD | Control.IsVisible(9027)] + !Skin.HasSetting(centermainmenu)">9000</ondown>
 		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
 		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
+		<onleft condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">9000</onleft>
+		<onback>9000</onback>
+	</include>
+	<include name="skinshortcuts-template-widget1">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-widget1-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget1-Master user">
+		<control type="group">
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<control type="group">
+				<visible>Integer.IsGreater(Container(80112).NumItems,0)</visible>
+				<control type="group">
+					<top>424</top>
+					<control type="group">
+						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
+						<centerleft>50%</centerleft>
+						<top>-21</top>
+						<width>1882.5</width>
+						<height>342</height>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
+							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
+							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+					</control>
+					<include content="PanelLabel">
+						<param name="id">80112</param>
+						<param name="Label">Exodus Redux - New Episodes</param>
+						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
+						<param name="labelFont">font13_title</param>
+						<param name="labelBottom">318</param>
+						<param name="labelWidth">922</param>
+						<param name="labelLeft">38</param>
+						<param name="labelRight">959</param>
+						<param name="labelTitle">false</param>
+					</include>
+				</control>
+			</control>
+			<control type="group">
+				<top>424</top>
+				<control id="80112" type="panel">
+					<left>37.5</left>
+					<width>1845</width>
+					<height>300</height>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<scrolltime easing="out" tween="quadratic">300</scrolltime>
+					<include>skinshortcuts-template-HorizontalNavigation1</include>
+					<include content="PortraitArt">
+						<param name="containerWidth">205</param>
+						<param name="containerHeight">300</param>
+						<param name="Texture">$VAR[PosterThumbVar]</param>
+						<param name="leftArt">2.5</param>
+						<param name="topArt">0</param>
+						<param name="widthArt">200</param>
+						<param name="heightArt">300</param>
+						<param name="topFakeDiscArt">0</param>
+						<param name="leftCase">2.5</param>
+						<param name="topCase">0</param>
+						<param name="widthCase">200</param>
+						<param name="heightCase">300</param>
+						<param name="labelHeight">-34</param>
+						<param name="labelFont">Font_12</param>
+						<param name="fallbackFont">fontCDalbum</param>
+						<param name="fallbackVisible">false</param>
+						<param name="Aspect">stretch</param>
+						<param name="Aligny">top</param>
+						<param name="Diffuse" />
+						<param name="Case" />
+						<param name="labelVisible">false</param>
+						<param name="labelFocusVisible">true</param>
+						<param name="isWeather">false</param>
+						<param name="weatherTop" />
+						<param name="weatherHeight" />
+						<param name="weatherTop1" />
+						<param name="weatherTop2" />
+						<param name="weatherTop3" />
+						<param name="weatherFont">font14</param>
+					</include>
+					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=tvWidget&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-20342)</visible>
+			<control type="group">
+				<visible>Integer.IsGreater(Container(80114).NumItems,0)</visible>
+				<control type="group">
+					<top>424</top>
+					<control type="group">
+						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
+						<centerleft>50%</centerleft>
+						<top>-21</top>
+						<width>1882.5</width>
+						<height>342</height>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
+							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
+							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+					</control>
+					<include content="PanelLabel">
+						<param name="id">80114</param>
+						<param name="Label">Exodus Redux - New Movies</param>
+						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
+						<param name="labelFont">font13_title</param>
+						<param name="labelBottom">318</param>
+						<param name="labelWidth">922</param>
+						<param name="labelLeft">38</param>
+						<param name="labelRight">959</param>
+						<param name="labelTitle">false</param>
+					</include>
+				</control>
+			</control>
+			<control type="group">
+				<top>424</top>
+				<control id="80114" type="panel">
+					<left>37.5</left>
+					<width>1845</width>
+					<height>300</height>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<scrolltime easing="out" tween="quadratic">300</scrolltime>
+					<include>skinshortcuts-template-HorizontalNavigation1</include>
+					<include content="PortraitArt">
+						<param name="containerWidth">205</param>
+						<param name="containerHeight">300</param>
+						<param name="Texture">$VAR[PosterThumbVar]</param>
+						<param name="leftArt">2.5</param>
+						<param name="topArt">0</param>
+						<param name="widthArt">200</param>
+						<param name="heightArt">300</param>
+						<param name="topFakeDiscArt">0</param>
+						<param name="leftCase">2.5</param>
+						<param name="topCase">0</param>
+						<param name="widthCase">200</param>
+						<param name="heightCase">300</param>
+						<param name="labelHeight">-34</param>
+						<param name="labelFont">Font_12</param>
+						<param name="fallbackFont">fontCDalbum</param>
+						<param name="fallbackVisible">false</param>
+						<param name="Aspect">stretch</param>
+						<param name="Aligny">top</param>
+						<param name="Diffuse" />
+						<param name="Case" />
+						<param name="labelVisible">false</param>
+						<param name="labelFocusVisible">true</param>
+						<param name="isWeather">false</param>
+						<param name="weatherTop" />
+						<param name="weatherHeight" />
+						<param name="weatherTop1" />
+						<param name="weatherTop2" />
+						<param name="weatherTop3" />
+						<param name="weatherFont">font14</param>
+					</include>
+					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=movieWidget&amp;reload=$INFO[Window(Home).Property(widgetreload-movies)]</content>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-3)</visible>
+			<control type="group">
+				<visible>Integer.IsGreater(Container(80115).NumItems,0)</visible>
+				<control type="group">
+					<top>424</top>
+					<control type="group">
+						<include condition="!String.IsEmpty(Skin.String(Widget.Trans))">HomeWidgetFade</include>
+						<centerleft>50%</centerleft>
+						<top>-21</top>
+						<width>1882.5</width>
+						<height>342</height>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="$VAR[HomeWidgetBackColor]">$VAR[HomeWidgetBackgroundVar]</texture>
+							<visible>Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+						<control type="image">
+							<width>1882.5</width>
+							<height>342</height>
+							<texture border="40" colordiffuse="FF0B0B0B">homewidgets/bg_default.png</texture>
+							<visible>!Skin.HasSetting(Enable.GlobalWidgetBack)</visible>
+						</control>
+					</control>
+					<include content="PanelLabel">
+						<param name="id">80115</param>
+						<param name="Label">Exodus Redux - Documentaries</param>
+						<param name="Title">$VAR[HomeWidgetInfoTitleVar]</param>
+						<param name="labelFont">font13_title</param>
+						<param name="labelBottom">318</param>
+						<param name="labelWidth">922</param>
+						<param name="labelLeft">38</param>
+						<param name="labelRight">959</param>
+						<param name="labelTitle">false</param>
+					</include>
+				</control>
+			</control>
+			<control type="group">
+				<top>424</top>
+				<control id="80115" type="panel">
+					<left>37.5</left>
+					<width>1845</width>
+					<height>300</height>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<scrolltime easing="out" tween="quadratic">300</scrolltime>
+					<include>skinshortcuts-template-HorizontalNavigation1</include>
+					<include content="PortraitArt">
+						<param name="containerWidth">205</param>
+						<param name="containerHeight">300</param>
+						<param name="Texture">$VAR[PosterThumbVar]</param>
+						<param name="leftArt">2.5</param>
+						<param name="topArt">0</param>
+						<param name="widthArt">200</param>
+						<param name="heightArt">300</param>
+						<param name="topFakeDiscArt">0</param>
+						<param name="leftCase">2.5</param>
+						<param name="topCase">0</param>
+						<param name="widthCase">200</param>
+						<param name="heightCase">300</param>
+						<param name="labelHeight">-34</param>
+						<param name="labelFont">Font_12</param>
+						<param name="fallbackFont">fontCDalbum</param>
+						<param name="fallbackVisible">false</param>
+						<param name="Aspect">stretch</param>
+						<param name="Aligny">top</param>
+						<param name="Diffuse" />
+						<param name="Case" />
+						<param name="labelVisible">false</param>
+						<param name="labelFocusVisible">true</param>
+						<param name="isWeather">false</param>
+						<param name="weatherTop" />
+						<param name="weatherHeight" />
+						<param name="weatherTop1" />
+						<param name="weatherTop2" />
+						<param name="weatherTop3" />
+						<param name="weatherFont">font14</param>
+					</include>
+					<content limit="$NUMBER[30]" sortby="" sortorder="" target="videos">plugin://plugin.video.exodusredux/?action=docuHeaven&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="skinshortcuts-template-HorizontalNavigation1">
+		<include condition="String.IsEqual(System.ProfileName,Master user)">skinshortcuts-template-HorizontalNavigation1-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-HorizontalNavigation1-Master user">
+		<onup condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Control.IsVisible(90020) + !Skin.HasSetting(centermainmenu)">90020</onup>
+		<onup condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</onup>
+		<onup condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</onup>
+		<ondown condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + ![System.HasMediaDVD | Control.IsVisible(9027)]">9000</ondown>
+		<ondown condition="!String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [System.HasMediaDVD | Control.IsVisible(9027)]">9020</ondown>
+		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + Control.IsVisible(90020)">90020</ondown>
+		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !Control.IsVisible(90020) + [Control.IsVisible(9027) | System.HasMediaDVD]">9020</ondown>
+		<ondown condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical) + !Control.IsVisible(90020) + ![Control.IsVisible(9027) | System.HasMediaDVD]">9000</ondown>
 		<onleft condition="String.IsEqual(Skin.String(MainMenu.Layout),vertical)">9000</onleft>
 		<onback>9000</onback>
 	</include>
