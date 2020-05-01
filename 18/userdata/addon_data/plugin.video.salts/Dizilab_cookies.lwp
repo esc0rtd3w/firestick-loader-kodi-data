@@ -1,5 +1,0 @@
-#LWP-Cookies-2.0
-Set-Cookie3: __cfduid=dd26a0025f894a56e84b86b5b1de8cd2d1458944398; path="/"; domain=".dizilab.com"; path_spec; domain_dot; expires="2017-03-25 22:19:58Z"; HttpOnly=None; version=0
-Set-Cookie3: cf_clearance="f88fc7d907d58b31d4010069e99cbf3631bf7194-1458944398-86400"; path="/"; domain=".dizilab.com"; path_spec; domain_dot; expires="2016-03-26 23:19:58Z"; HttpOnly=None; version=0
-Set-Cookie3: PHPSESSID=57db568a9263c0dda0ed1fc942b527f9; path="/"; domain="dizilab.com"; path_spec; expires="2016-03-26 22:20:07Z"; version=0
-Set-Cookie3: random_ads=1; path="/"; domain="dizilab.com"; expires="2016-03-26 22:20:07Z"; version=0

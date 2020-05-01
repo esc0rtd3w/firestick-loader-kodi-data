@@ -19,7 +19,7 @@ class piratebay(Scraper):
 
 
     def __init__(self):
-        self.base_link = 'https://piratebays.win/'
+        self.base_link = 'https://tpb.agency'
         self.search_link = '/search/%s/0/99/0'
 
 

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-	<setting id="enable_meta" type="bool" label="Enable Metadata" default="True"/>
-	<setting label="Show Adult Section in list" type="bool" id="adult" default="false" />
-	<setting id="password" type="text"label="Adult Password" default="" visible="true" option="hidden" enable="!eq(-1,false)"/>
-	<setting id="count" type="text"label="count" default="0" visible="false" option="hidden" />	
-	<setting id="fav" type="text"label="fav" default="nofav" visible="false" option="hidden" />	
-</settings>

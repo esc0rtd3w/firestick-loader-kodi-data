@@ -20,16 +20,16 @@
 		<control type="group">
 			<include>WindowSettingsFadeAnimation</include>
 			<control type="label">
-				<top>80</top>
+				<top>84</top>
 				<width>400</width>
-				<height>48</height>
+				<height>52</height>
 				<textoffsetx>15</textoffsetx>
 				<font>font13_title</font>
 				<label>$INFO[Container.Viewmode] $LOCALIZE[5]</label>
 				<textcolor>$VAR[ThemeLabelColor]</textcolor>
 			</control>
 			<control type="grouplist" id="9011">
-				<top>128</top>
+				<top>140</top>
 				<width>400</width>
 				<height>915</height>
 				<onleft>Dialog.Close(1131)</onleft>

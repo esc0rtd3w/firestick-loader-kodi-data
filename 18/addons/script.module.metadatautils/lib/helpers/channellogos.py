@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     channellogos.py
     Get channellogos from kodidb or logosdb
-"""
+'''
 
 
 from utils import get_json, get_clean_image
@@ -14,10 +14,10 @@ import xbmcvfs
 
 
 class ChannelLogos(object):
-    """get channellogo"""
+    '''get channellogo'''
 
     def __init__(self, kodidb=None):
-        """Initialize - optionaly provide KodiDb object"""
+        '''Initialize - optionaly provide KodiDb object'''
         if not kodidb:
             from kodidb import KodiDb
             self.kodidb = KodiDb()
@@ -25,7 +25,7 @@ class ChannelLogos(object):
             self.kodidb = kodidb
 
     def get_channellogo(self, channelname):
-        """get channellogo for the supplied channelname"""
+        '''get channellogo for the supplied channelname'''
         result = {}
         for searchmethod in [self.search_kodi, self.search_logosdb]:
             if result:
@@ -34,7 +34,7 @@ class ChannelLogos(object):
         return result
 
     def search_logosdb(self, searchphrase):
-        """search logo on thelogosdb"""
+        '''search logo on thelogosdb'''
         result = ""
         for searchphrase in [searchphrase, searchphrase.lower().replace(" hd", "")]:
             if result:
@@ -48,7 +48,7 @@ class ChannelLogos(object):
         return result
 
     def search_kodi(self, searchphrase):
-        """search kodi json api for channel logo"""
+        '''search kodi json api for channel logo'''
         result = ""
         if xbmc.getCondVisibility("PVR.HasTVChannels"):
             results = self.kodidb.get_json(
@@ -68,7 +68,7 @@ class ChannelLogos(object):
 
     @staticmethod
     def get_data_from_logosdb(searchphrase):
-        """helper method to get data from thelogodb json API"""
+        '''helper method to get data from thelogodb json API'''
         params = {"s": searchphrase}
         data = get_json('http://www.thelogodb.com/api/json/v1/3241/tvchannel.php', params)
         if data and data.get('channels'):

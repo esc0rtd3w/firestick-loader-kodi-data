@@ -187,7 +187,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvThumbsByIdChain>
-	<ParseFanartTvMoviePoster dest="5" clearbuffers="no">
+	<ParseFanartTvMoviePoster dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -211,7 +211,7 @@
 		</RegExp>
 	</ParseFanartTvMoviePoster>
 
-	<GetFanartTvMovieClearlogoByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieClearlogoByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -222,7 +222,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieClearlogoByIdChain>
-	<ParseFanartTvMovieClearlogo dest="5" clearbuffers="no">
+	<ParseFanartTvMovieClearlogo dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -246,7 +246,7 @@
 		</RegExp>
 	</ParseFanartTvMovieClearlogo>
 
-	<GetFanartTvMovieClearartByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieClearartByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -257,7 +257,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieClearartByIdChain>
-	<ParseFanartTvMovieClearart dest="5" clearbuffers="no">
+	<ParseFanartTvMovieClearart dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -281,7 +281,7 @@
 		</RegExp>
 	</ParseFanartTvMovieClearart>
 
-	<GetFanartTvMoviebannerByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMoviebannerByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -292,7 +292,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMoviebannerByIdChain>
-	<ParseFanartTvMoviebanner dest="5" clearbuffers="no">
+	<ParseFanartTvMoviebanner dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -316,7 +316,7 @@
 		</RegExp>
 	</ParseFanartTvMoviebanner>
 
-	<GetFanartTvMovieLandscapeByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieLandscapeByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -327,7 +327,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieLandscapeByIdChain>
-	<ParseFanartTvMovieLandscape dest="5" clearbuffers="no">
+	<ParseFanartTvMovieLandscape dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -351,7 +351,7 @@
 		</RegExp>
 	</ParseFanartTvMovieLandscape>
 
-	<GetFanartTvMovieDiscartByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieDiscartByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -362,7 +362,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieDiscartByIdChain>
-	<ParseFanartTvMovieDiscart dest="5" clearbuffers="no">
+	<ParseFanartTvMovieDiscart dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -456,7 +456,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetFanart>
 
-	<GetFanartTvMovieSetClearlogoByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieSetClearlogoByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -467,7 +467,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieSetClearlogoByIdChain>
-	<ParseFanartTvMovieSetClearlogo dest="5" clearbuffers="no">
+	<ParseFanartTvMovieSetClearlogo dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -491,7 +491,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetClearlogo>
 
-	<GetFanartTvMovieSetClearartByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieSetClearartByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -502,7 +502,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieSetClearartByIdChain>
-	<ParseFanartTvMovieSetClearart dest="5" clearbuffers="no">
+	<ParseFanartTvMovieSetClearart dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -526,7 +526,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetClearart>
 
-	<GetFanartTvMovieSetBannerByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieSetBannerByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -537,7 +537,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieSetBannerByIdChain>
-	<ParseFanartTvMovieSetBanner dest="5" clearbuffers="no">
+	<ParseFanartTvMovieSetBanner dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -561,7 +561,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetBanner>
 
-	<GetFanartTvMovieSetLandscapeByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieSetLandscapeByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -572,7 +572,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieSetLandscapeByIdChain>
-	<ParseFanartTvMovieSetLandscape dest="5" clearbuffers="no">
+	<ParseFanartTvMovieSetLandscape dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -596,7 +596,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetLandscape>
 
-	<GetFanartTvMovieSetDiscartByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvMovieSetDiscartByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -607,7 +607,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvMovieSetDiscartByIdChain>
-	<ParseFanartTvMovieSetDiscart dest="5" clearbuffers="no">
+	<ParseFanartTvMovieSetDiscart dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -631,7 +631,7 @@
 		</RegExp>
 	</ParseFanartTvMovieSetDiscart>
 
-	<GetFanartTvTvShowPosterByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvTvShowPosterByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -642,7 +642,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowPosterByIdChain>
-	<ParseFanartTvTvShowPoster dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowPoster dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -666,7 +666,7 @@
 		</RegExp>
 	</ParseFanartTvTvShowPoster>
 
-	<GetFanartTvTvShowBannerByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvTvShowBannerByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -677,7 +677,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowBannerByIdChain>
-	<ParseFanartTvTvShowBanner dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowBanner dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -701,7 +701,7 @@
 		</RegExp>
 	</ParseFanartTvTvShowBanner>
 
-	<GetFanartTvTvShowLandscapeByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvTvShowLandscapeByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -712,7 +712,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowLandscapeByIdChain>
-	<ParseFanartTvTvShowLandscape dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowLandscape dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -736,7 +736,7 @@
 		</RegExp>
 	</ParseFanartTvTvShowLandscape>
 
-	<GetFanartTvTvShowClearlogoByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvTvShowClearlogoByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -747,7 +747,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowClearlogoByIdChain>
-	<ParseFanartTvTvShowClearlogo dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowClearlogo dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -771,7 +771,7 @@
 		</RegExp>
 	</ParseFanartTvTvShowClearlogo>
 
-	<GetFanartTvTvShowClearartByIdChain dest="4" clearbuffers="no">
+	<GetFanartTvTvShowClearartByIdChain dest="4">
 		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
 			<RegExp input="$$1" output="\1" dest="18">
 				<expression encode="1">.+::(.+)</expression>
@@ -782,7 +782,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowClearartByIdChain>
-	<ParseFanartTvTvShowClearart dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowClearart dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -869,7 +869,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowSeasonposterByIdChain>
-	<ParseFanartTvTvShowSeasonposter dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowSeasonposter dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -904,7 +904,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowSeasonbannerByIdChain>
-	<ParseFanartTvTvShowSeasonbanner dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowSeasonbanner dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />
@@ -939,7 +939,7 @@
 			<expression noclean="1" />
 		</RegExp>
 	</GetFanartTvTvShowSeasonLandscapeByIdChain>
-	<ParseFanartTvTvShowSeasonLandscape dest="5" clearbuffers="no">
+	<ParseFanartTvTvShowSeasonLandscape dest="5">
 		<RegExp input="$$13" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
 			<RegExp input="" output="" dest="13">
 				<expression />

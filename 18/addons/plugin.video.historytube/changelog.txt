@@ -1,5 +1,0 @@
-[B]Version 1.0.0[/B]
-January 2016 - This is the first versions of my HistoryTube addon
-[B]Version 1.1.0[/B]
-February 2016 - 'user' replaced with 'channel' due to changes by YouTube.
-

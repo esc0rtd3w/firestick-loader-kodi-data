@@ -836,7 +836,7 @@ msgstr "Τα προσωπικά κλειδιά API έχουν απενεργοπ
 
 msgctxt "#30638"
 msgid "Bookmark this page to quickly add your keys in the future."
-msgstr "Αποθηκεύστε αυτήν την σελίδα στους σελιδοδείκτες ώστε να μπορειτε να προσθέστε τα κλειδιά σας στο μέλλον"
+msgstr ""
 
 msgctxt "#30639"
 msgid "Found personal API keys in api_keys.json, would you like to restore them? Choosing no will overwrite them."
@@ -1192,36 +1192,8 @@ msgstr "Απεσταλμένα"
 
 msgctxt "#30727"
 msgid "Adaptive (MP4/H264)"
-msgstr "Προσαρμοζόμενη (MP4/H264)"
+msgstr ""
 
 msgctxt "#30728"
 msgid "Adaptive (WEBM/VP9)"
-msgstr "Προσαρμοζόμενη (WEBM/VP9)"
-
-msgctxt "#30729"
-msgid "Remote friendly search"
-msgstr "Αναζήτηση φιλική για χειριστήριο"
-
-msgctxt "#30730"
-msgid "Play (Ask for quality)"
-msgstr "Αναπαραγωγή (Ερώτηση για ποιότητα)"
-
-msgctxt "#30731"
-msgid "The YouTube add-on now requires that you use your own API keys.[CR]For more information see the wiki: [B]https://ytaddon.page.link/keys[/B][CR][CR]Sorry for the inconvenience."
-msgstr "Το πρόσθετο Youtube πλέον απαιτεί δικά σας κλειδιά API για την χρήση του.[CR]Για περισσότερες πληροφορίες δείτε εδώ στην wiki: [B]https://ytaddon.page.link/keys[/B][CR][CR]Συγγνώμη για την ταλαιπωρία."
-
-msgctxt "#30732"
-msgid "Comments"
-msgstr "Σχόλια"
-
-msgctxt "#30733"
-msgid "Likes"
-msgstr "Αρεσκείες"
-
-msgctxt "#30734"
-msgid "Replies"
-msgstr "Απαντήσεις"
-
-msgctxt "#30735"
-msgid "Edited"
-msgstr "Επεξεργασμένο"
+msgstr ""

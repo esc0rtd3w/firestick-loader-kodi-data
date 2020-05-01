@@ -1,9 +1,0 @@
-<settings>
-    <setting id="dmUser" value="" />
-    <setting id="downloadDir" value="" />
-    <setting id="forceViewModeNew" value="true" />
-    <setting id="itemsPerPage" value="1" />
-    <setting id="language" value="0" />
-    <setting id="maxVideoQuality" value="1" />
-    <setting id="viewModeNew" value="504" />
-</settings>

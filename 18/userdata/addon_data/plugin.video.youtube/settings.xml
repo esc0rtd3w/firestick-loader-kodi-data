@@ -50,10 +50,10 @@
     <setting id="simple.requests.ssl.verify">true</setting>
     <setting id="youtube.allow.dev.keys">true</setting>
     <setting id="youtube.api.config.page" default="true">false</setting>
-    <setting id="youtube.api.enable" default="true">true</setting>
+    <setting id="youtube.api.enable">true</setting>
     <setting id="youtube.api.id" default="true"></setting>
     <setting id="youtube.api.key" default="true"></setting>
-    <setting id="youtube.api.key.switch" default="true">1</setting>
+    <setting id="youtube.api.key.switch">1</setting>
     <setting id="youtube.api.secret" default="true"></setting>
     <setting id="youtube.channel.fanart.show">true</setting>
     <setting id="youtube.filter.my_subscriptions_filtered.blacklist" default="true">false</setting>
@@ -94,7 +94,6 @@
     <setting id="youtube.post.play.rate.playlists" default="true">false</setting>
     <setting id="youtube.post.play.refresh" default="true">false</setting>
     <setting id="youtube.region" default="true">US</setting>
-    <setting id="youtube.search.remote.friendly" default="true">false</setting>
     <setting id="youtube.suggested_videos" default="true">false</setting>
     <setting id="youtube.view.description.show_channel_name">true</setting>
 </settings>

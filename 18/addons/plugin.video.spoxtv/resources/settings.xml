@@ -1,5 +1,0 @@
-<settings>
-    <category label="Einstellungen">
-        <setting id="video_quality" type="enum" label="Video Qualität" values="Niedrig|Hoch" default="1"/>
-    </category>
-</settings>

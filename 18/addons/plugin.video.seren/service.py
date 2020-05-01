@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import xbmc
-from random import randint
 
 from resources.lib.common import maintenance
 from resources.lib.common import tools
@@ -27,7 +26,7 @@ tools.log('#############  SERVICE ENTERED KEEP ALIVE  #################')
 
 while not monitor.abortRequested():
     try:
-        if monitor.waitForAbort(60 * randint(13, 17)):
+        if monitor.waitForAbort(60 * 15):
             break
         tools.execute('RunPlugin("plugin://plugin.video.%s/?action=runMaintenance")' % tools.addonName.lower())
         TraktSyncDatabase().sync_activities()

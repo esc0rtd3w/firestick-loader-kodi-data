@@ -1,6 +1,0 @@
-<settings>
-<category label="Settings">
-	<setting id="enable_auto_view" type="bool" label="Enable Auto View" default="true"/>
-	<setting id="view_mode_id" type="number" label="Auto View Default" default="500" enable="!eq(-1,false)"/>
-</category>
-</settings>

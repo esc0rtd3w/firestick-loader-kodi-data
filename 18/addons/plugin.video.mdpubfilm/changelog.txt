@@ -1,7 +1,0 @@
-v2.0.0
-
--addon  completely recoded
-
-v1.0.0
-Initial Release
-

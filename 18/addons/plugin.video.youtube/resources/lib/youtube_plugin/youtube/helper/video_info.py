@@ -547,25 +547,18 @@ class VideoInfo(object):
         result = requests.get(url, params=params, headers=headers, verify=self._verify, allow_redirects=True)
         return {'html': result.text, 'cookies': result.cookies}
 
-    def get_player_config(self, html):
-        _player_config = {}
+    @staticmethod
+    def get_player_config(html):
+        _player_config = '{}'
+
         lead = 'ytplayer.config = '
-        tails = ['ytplayer.load', 'ytplayer.web_player_context_config']
-
-        for tail in tails:
-            pos = html.find(lead)
+        tail = ';ytplayer.load'
+        pos = html.find(lead)
+        if pos >= 0:
+            html2 = html[pos + len(lead):]
+            pos = html2.find(tail)
             if pos >= 0:
-                html2 = html[pos + len(lead):]
-                pos = html2.find(tail)
-                if pos >= 0:
-                    _player_config = html2[:pos].rstrip().rstrip(';').rstrip()
-                    try:
-                        _player_config = json.loads(_player_config)
-                        break
-                    except (TypeError, ValueError):
-                        _player_config = {}
-
-        self._context.log_debug('Found valid player config |%s|' % str(_player_config != {}))
+                _player_config = html2[:pos]
 
         blank_config = re.search(r'var blankSwfConfig\s*=\s*(?P<player_config>{.+?});\s*var fillerData', html)
         if not blank_config:
@@ -576,7 +569,10 @@ class VideoInfo(object):
             except TypeError:
                 player_config = dict()
 
-        player_config.update(_player_config)
+        try:
+            player_config.update(json.loads(_player_config))
+        except TypeError:
+            pass
 
         if 'args' not in player_config:
             player_config['args'] = dict()
@@ -810,15 +806,6 @@ class VideoInfo(object):
                     image_url = image_url.replace('.jpg', '_live.jpg')
                 meta_info['images'][image_data['to']] = image_url
 
-        microformat = player_response.get('microformat', {}).get('playerMicroformatRenderer', {})
-        meta_info['video']['status'] = {
-            'unlisted': microformat.get('isUnlisted', False),
-            'private': video_details.get('isPrivate', False),
-            'crawlable': video_details.get('isCrawlable', False),
-            'family_safe': microformat.get('isFamilySafe', False),
-            'live': is_live,
-        }
-
         if (params.get('status', '') == 'fail') or (playability_status.get('status', 'ok').lower() != 'ok'):
             if not ((playability_status.get('desktopLegacyAgeGateReason', 0) == 1) and not self._context.get_settings().age_gate()):
                 reason = None
@@ -849,7 +836,7 @@ class VideoInfo(object):
                             general_reason = status_renderer.get('reason', {}).get('simpleText')
                             if general_reason:
                                 reason = general_reason
-
+                            
                 if not reason:
                     reason = 'UNKNOWN'
 
@@ -880,7 +867,7 @@ class VideoInfo(object):
                 '&st={st}&et={et}&state={state}'
             ])
 
-        if live_url:
+        if is_live:
             stream_list = self._load_manifest(live_url, video_id,
                                               meta_info=meta_info,
                                               curl_headers=curl_headers,
@@ -1204,7 +1191,7 @@ class VideoInfo(object):
 
             data[mime][i]['quality_label'] = str(stream_map.get('qualityLabel'))
 
-            data[mime][i]['bandwidth'] = stream_map.get('bitrate', 0)
+            data[mime][i]['bandwidth'] = stream_map.get('bitrate')
 
             # map frame rates to a more common representation to lessen the chance of double refresh changes
             # sometimes 30 fps is 30 fps, more commonly it is 29.97 fps (same for all mapped frame rates)
@@ -1247,33 +1234,20 @@ class VideoInfo(object):
                 if mime.startswith('video'):
                     discarded_streams.append(get_discarded_video(mime, i, data[mime][i], 'no init or index'))
                 else:
-                    stream_format = self.FORMAT.get(i, {})
-                    discarded_streams.append(get_discarded_audio(stream_format, mime, i, data[mime][i], 'no init or index'))
+                    discarded_streams.append(get_discarded_audio(mime, i, data[mime][i], 'no init or index'))
                 del data[mime][i]
-
-        if not data.get('video/mp4') and not data.get('video/webm'):
-            self._context.log_debug('Generate MPD: No video mime-types found')
-            return None, None
 
         mpd_quality = self._context.get_settings().get_mpd_quality()
         hdr = self._context.get_settings().include_hdr() and 'vp9.2' in ia_capabilities
         limit_30fps = self._context.get_settings().mpd_30fps_limit()
 
-        supported_mime_types = []
         default_mime_type = 'mp4'
-        if data.get('video/mp4'):
-            supported_mime_types.append('video/mp4')
-        if data.get('audio/mp4'):
-            supported_mime_types.append('audio/mp4')
+        supported_mime_types = ['audio/mp4', 'video/mp4']
 
-        if (('vp9' in ia_capabilities or 'vp9.2' in ia_capabilities) and
-                any(m for m in data if m == 'video/webm') and
-                data.get('video/webm')):
+        if ('vp9' in ia_capabilities or 'vp9.2' in ia_capabilities) and any(m for m in data if m == 'video/webm'):
             supported_mime_types.append('video/webm')
 
-        if (('vorbis' in ia_capabilities or 'opus' in ia_capabilities) and
-                any(m for m in data if m == 'audio/webm') and
-                data.get('audio/webm')):
+        if ('vorbis' in ia_capabilities or 'opus' in ia_capabilities) and any(m for m in data if m == 'audio/webm'):
             supported_mime_types.append('audio/webm')
 
         if ('video/webm' in supported_mime_types and

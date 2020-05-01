@@ -736,8 +736,8 @@ msgid "TV"
 msgstr ""
 
 msgctxt "#32545"
-msgid "Auto Update Service"
-msgstr "Automatische updates"
+msgid "Auto update TV Shows"
+msgstr ""
 
 msgctxt "#32546"
 msgid "Show notifications during update"

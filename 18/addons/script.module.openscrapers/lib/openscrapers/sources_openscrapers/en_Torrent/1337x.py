@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,6 +28,7 @@ import re
 import urllib
 import urlparse
 
+from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -38,12 +38,11 @@ from openscrapers.modules import workers
 class source:
 	def __init__(self):
 		self.priority = 1
-		self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt', 'ru']
-		self.domains = ['1337x.to', '1337x.st', '1337x.is'] #.st and .is behind cloudflare while .to is not
+		self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt', 'ru']  # Old  1337x.se  1337x.eu  1337x.ws
+		self.domains = ['1337x.to', '1337x.st', '1337x.is']
 		self.base_link = 'https://1337x.to/'
-		self.tvsearch = 'https://1337x.to/sort-category-search/%s/TV/size/desc/1/'
-		self.moviesearch = 'https://1337x.to/sort-category-search/%s/Movies/size/desc/1/'
-		self.min_seeders = 1
+		self.tvsearch = 'https://1337x.to/sort-category-search/%s/TV/seeders/desc/1/'
+		self.moviesearch = 'https://1337x.to/sort-category-search/%s/Movies/seeders/desc/1/'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -122,6 +121,7 @@ class source:
 			[i.start() for i in threads2]
 			[i.join() for i in threads2]
 			return self._sources
+
 		except:
 			source_utils.scraper_error('1337X')
 			return self._sources
@@ -141,33 +141,25 @@ class source:
 				data = client.parseDOM(post, 'a', ret='href')[1]
 				link = urlparse.urljoin(self.base_link, data)
 
-				try:
-					seeders = int(client.parseDOM(post, 'td', attrs={'class': 'coll-2 seeds'})[0].replace(',', ''))
-					if self.min_seeders > seeders:
-						continue
-				except:
-					seeders = 0
-					pass
-
 				name = client.parseDOM(post, 'a')[1]
-				name = urllib.unquote_plus(name)
-				name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
-				if source_utils.remove_lang(name):
+
+				t = name.split(self.hdlr)[0].replace(self.year, '').replace('(', '').replace(')', '').replace('&', 'and')
+				if cleantitle.get(t) != cleantitle.get(self.title):
 					continue
 
-				match = source_utils.check_title(self.title, name, self.hdlr, self.year)
-				if not match:
-					continue
+				if self.hdlr not in name:
+					raise Exception()
 
 				try:
 					size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
-					dsize, isize = source_utils._size(size)
+					div = 1 if size.endswith('GB') else 1024
+					size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
+					size = '%.2f GB' % size
 				except:
-					isize = '0'
-					dsize = 0
+					size = '0'
 					pass
 
-				self.items.append((name, link, isize, dsize, seeders))
+				self.items.append((name, link, size))
 
 			return self.items
 
@@ -179,22 +171,24 @@ class source:
 	def _get_sources(self, item):
 		try:
 			name = item[0]
-			quality, info = source_utils.get_release_quality(name, item[1])
 
-			if item[2] != '0':
-				info.insert(0, item[2])
+			quality, info = source_utils.get_release_quality(item[1], name)
+
+			info.append(item[2]) # if item[2] != '0'
 			info = ' | '.join(info)
 
 			data = client.request(item[1])
 			data = client.parseDOM(data, 'a', ret='href')
 
 			url = [i for i in data if 'magnet:' in i][0]
-			url = urllib.unquote_plus(url).replace('&amp;', '&').replace(' ', '.')
 			url = url.split('&tr')[0]
-			hash = re.compile('btih:(.*?)&').findall(url)[0]
 
-			self._sources.append({'source': 'torrent', 'seeders': item[4], 'hash': hash, 'name': name, 'quality': quality,
-												'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': item[3]})
+			if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
+				return
+
+			self._sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
+												'info': info, 'direct': False, 'debridonly': True})
+
 		except:
 			source_utils.scraper_error('1337X')
 			pass

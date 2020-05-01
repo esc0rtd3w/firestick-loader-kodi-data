@@ -1,6 +1,0 @@
-﻿<settings>
-  <category label="General">
-    <setting id="Updatecommonresolvers" label="Update Resolver" type="bool" default="false"/>
-	<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
-  </category>
-</settings>

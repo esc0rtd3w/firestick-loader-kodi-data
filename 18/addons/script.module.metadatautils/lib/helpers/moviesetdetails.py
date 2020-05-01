@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     Returns complete (nicely formatted) information about the movieset and it's movies
-"""
+'''
 
 from kodi_constants import FIELDS_MOVIES
 from utils import get_duration, get_clean_image, extend_dict
@@ -13,12 +13,12 @@ import xbmc
 
 
 def get_moviesetdetails(metadatautils, title, set_id):
-    """Returns complete (nicely formatted) information about the movieset and it's movies"""
+    '''Returns complete (nicely formatted) information about the movieset and it's movies'''
     details = {}
     # try to get from cache first
     # use checksum compare based on playcounts because moviesets do not get refreshed automatically
     movieset = metadatautils.kodidb.movieset(set_id, ["playcount"])
-    cache_str = "MovieSetDetails.%s" % set_id
+    cache_str = "MovieSetDetails.%s" % (set_id)
     cache_checksum = "%s.%s" % (set_id, metadatautils.studiologos_path)
     if movieset and len(movieset["movies"]) < 50:
         for movie in movieset["movies"]:
@@ -42,7 +42,7 @@ def get_moviesetdetails(metadatautils, title, set_id):
 
 
 def get_online_setdata(metadatautils, title):
-    """get moviesetdetails from TMDB and fanart.tv"""
+    '''get moviesetdetails from TMDB and fanart.tv'''
     details = metadatautils.tmdb.search_movieset(title)
     if details:
         # append images from fanart.tv
@@ -56,7 +56,7 @@ def get_online_setdata(metadatautils, title):
 
 
 def get_kodidb_setdata(metadatautils, set_id):
-    """get moviesetdetails from Kodi DB"""
+    '''get moviesetdetails from Kodi DB'''
     details = {}
     movieset = metadatautils.kodidb.movieset(set_id, FIELDS_MOVIES)
     count = 0

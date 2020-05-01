@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -41,8 +40,7 @@ class source:
 		self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt', 'ru']
 		self.domains = ['torrentquest.com']
 		self.base_link = 'https://torrentquest.com'
-		self.search_link = '/{0}/{1}/size/desc/'
-		self.min_seeders = 1
+		self.search_link = '/{0}/{1}'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -111,45 +109,41 @@ class source:
 
 			for post in posts:
 				post = post.replace('&nbsp;', ' ')
+
 				links = client.parseDOM(post, 'a', ret='href')
 				magnet = [i.replace('&amp;', '&') for i in links if 'magnet:' in i][0]
-				url = urllib.unquote_plus(magnet).split('&tr')[0].replace(' ', '.')
+				url = magnet.split('&tr')[0]
+
 				if url in str(sources):
 					continue
-				hash = re.compile('btih:(.*?)&').findall(url)[0]
+
+				if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
+					continue
 
 				name = client.parseDOM(post, 'a', ret='title')[1]
-				name = urllib.unquote_plus(name)
-				name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
-				if source_utils.remove_lang(name):
+				t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+				if cleantitle.get(t) != cleantitle.get(title):
 					continue
 
-				match = source_utils.check_title(title, name, hdlr, data['year'])
-				if not match:
+				if hdlr not in name:
 					continue
-
-				try:
-					seeders = int(client.parseDOM(post, 'td', attrs={'class': 's'})[0].replace(',', ''))
-					if self.min_seeders > seeders:
-						continue
-				except:
-					seeders = 0
-					pass
 
 				quality, info = source_utils.get_release_quality(name, url)
 
 				try:
 					size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
-					dsize, isize = source_utils._size(size)
-					info.insert(0, isize)
+					div = 1 if size.endswith(('GB', 'GiB')) else 1024
+					size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
+					size = '%.2f GB' % size
+					info.append(size)
 				except:
-					dsize = 0
 					pass
 
 				info = ' | '.join(info)
 
-				sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
-											'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
+				sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
+											'info': info, 'direct': False, 'debridonly': True})
+
 			return sources
 		except:
 			source_utils.scraper_error('TORRENTQUEST')

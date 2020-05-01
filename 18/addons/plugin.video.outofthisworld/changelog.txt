@@ -1,6 +1,0 @@
-[B]Version 1.0.0[/B]
-Initialst Release - 25 channels.
-[B]Version 1.1.0[/B]
-10 December 2015 - Replaced channels that have been deleted by YouTube, replaced default icon with channel icons. Replaced fanart and optimized graphics. Added additional channels.
-[B]Version 1.2.0[/B]
-17 February 2016 - Replaced user channels with playlist or channel id. Replaced deleted Ancient Aliens episodes and moved all seasons to 1 channel. Added Corbett Report, Jesse Ventura and others.

@@ -128,7 +128,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
 
 					if flare and 'cloudflare' in str(response.info()).lower():
 						try:
-							from openscrapers.modules import cfscrape
+							from resources.lib.modules import cfscrape
 							if isinstance(post, dict):
 								data = post
 							else:
@@ -137,7 +137,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
 								except:
 									data = None
 
-							scraper = cfscrape.CloudScraper()
+							scraper = cfscrape.CloudflareScraper()
 							response = scraper.request(method = 'GET' if post is None else 'POST', url = url, headers = headers, data = data, timeout = int(timeout))
 							result = response.content
 							flare = 'cloudflare' # Used below
@@ -159,11 +159,11 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
 					else:
 						log_utils.log('Request-Error (%s): %s' % (str(response.code), url), log_utils.LOGDEBUG)
 						if error is False:
-							return None
+							return
 				else:
 					log_utils.log('Request-Error (%s): %s' % (str(response.code), url), log_utils.LOGDEBUG)
 					if error is False:
-						return None
+						return
 
 		if output == 'cookie':
 			try:
@@ -283,7 +283,7 @@ def request(url, close=True, redirect=True, error=False, proxy=None, post=None, 
 	except Exception as e:
 		log_utils.error()
 		log_utils.log('Request-Error: (%s) => %s' % (str(e), url), log_utils.LOGDEBUG)
-		return None
+		return
 
 
 def _basic_request(url, headers=None, post=None, timeout='30', limit=None):
@@ -384,6 +384,7 @@ def randomagent():
 
 
 def agent():
+	# return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'
 	# return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 	return 'Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko'
 
@@ -481,15 +482,19 @@ class bfcookie:
 		try:
 			headers = {'User-Agent': ua, 'Referer': netloc}
 			result = _basic_request(netloc, headers=headers, timeout=timeout)
+
 			match = re.findall('xhr\.open\("GET","([^,]+),', result)
 			if not match:
 				return False
+
 			url_Parts = match[0].split('"')
 			url_Parts[1] = '1680'
 			url = urlparse.urljoin(netloc, ''.join(url_Parts))
+
 			match = re.findall('rid=([0-9a-zA-Z]+)', url_Parts[0])
 			if not match:
 				return False
+
 			headers['Cookie'] = 'rcksid=%s' % match[0]
 			result = _basic_request(url, headers=headers, timeout=timeout)
 			return self.getCookieString(result, headers['Cookie'])
@@ -539,9 +544,11 @@ class sucuri:
 			s = re.sub(';location.reload\(\);', '', s)
 			s = re.sub(r'\n', '', s)
 			s = re.sub(r'document\.cookie', 'cookie', s)
+
 			cookie = '' ; exec(s)
 			self.cookie = re.compile('([^=]+)=(.*)').findall(cookie)[0]
 			self.cookie = '%s=%s' % (self.cookie[0], self.cookie[1])
+
 			return self.cookie
 		except:
 			pass

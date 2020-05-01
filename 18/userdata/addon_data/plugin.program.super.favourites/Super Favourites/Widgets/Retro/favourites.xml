@@ -1,3 +1,0 @@
-<favourites>
-	<favourite name="PopcornFlixAll" thumb="special://home/addons\plugin.video.popcornflix\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.popcornflix/?mode=GM&amp;url=%2fall-movies&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.popcornflix%5Cfanart.jpg%26meta%3Dcastandrole%253D%25255B%25255D%2526label%253D%25255BCOLOR%252Bblue%25255DAll%252Bmovies%25255B%25252FCOLOR%25255D%26_options_sf&quot;,return)</favourite>
-</favourites>

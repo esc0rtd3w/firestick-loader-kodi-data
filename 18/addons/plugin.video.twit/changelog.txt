@@ -1,15 +1,3 @@
-Version 2.1.8
-code cleanup and refactor for Python 2/3 compatibility
-
-Version 2.1.7
-Added Norwegian translation thanks to solbu
-Updated show listings
-Twit live
-	removed dead streams
-	added Mixer HLS stream
-	added play from Youtube add-on
-	*you may need to adjust your stream setting
-
 Version 2.1.6
 fix for format changes in RSS feed
 fix Ustream live feed

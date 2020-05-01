@@ -1,3 +1,0 @@
-<settings>
-    <setting id="videoDir" type="folder" label="30001"  default="" option="writeable" />
-</settings>

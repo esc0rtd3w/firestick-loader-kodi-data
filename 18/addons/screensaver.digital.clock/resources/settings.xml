@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-	<category label="30100">
-	<setting id="enable_seconds" type="bool" label="30101" default="true" />   
-	<setting id="military_time" type="bool" label="30102" default="false" />   	
-	<setting id="skin" type="labelenum" label="30103" values="TangoVictorAlpha|Simple Green|Simple Red|Simple Blue|Simple Yellow|Simple Magenta|24 Glow|Classic Red|Classic Green|Classic Blue" default="TangoVictorAlpha" />
-	<setting id="anti_burn_in" type="bool" label="30104" default="false" />
-	</category>
-</settings>

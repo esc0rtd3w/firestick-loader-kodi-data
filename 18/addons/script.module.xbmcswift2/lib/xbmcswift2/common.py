@@ -7,9 +7,16 @@
     :copyright: (c) 2012 by Jonathan Beluch
     :license: GPLv3, see LICENSE for more details.
 '''
+import sys
 
-from urllib import urlencode
-from urllib2 import urlopen
+PY3 = sys.version_info.major >= 3
+
+if PY3:
+    from urllib.parse import urlencode
+    from urllib.request import urlopen
+else:
+    from urllib import urlencode
+    from urllib2 import urlopen
 
 try:
     import cPickle as pickle

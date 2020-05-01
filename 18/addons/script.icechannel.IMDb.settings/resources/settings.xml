@@ -1,9 +1,0 @@
-<settings>
-<category label="IMDb SETTINGS">
-<setting id="en_us" type="bool" label="Show English Language Only" default="true" />
-<setting id="get_url()" label="Base Url" type="labelenum" default="http://www.imdb.com/" values="http://www.imdb.com/|http://akas.imdb.com/" />
-<setting id="imdb_user_number" label="User Number" type="text" default="" />
-<setting id="future" type="bool" label="Show Future Episodes" default="false" />
-<setting id="watch_list_main" type="bool" label="Show Main Watchlist" default="true" />
-</category>
-</settings>

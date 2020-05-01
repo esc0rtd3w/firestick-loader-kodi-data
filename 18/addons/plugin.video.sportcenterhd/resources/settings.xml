@@ -1,7 +1,0 @@
-﻿<settings>
-  <category label="General">
-    <setting id="Updatecommonresolvers" label="Update Resolver" type="bool" default="false"/>
-	<setting label="Enable Auto Play" default="false" type="bool" id="autoplay"/>
-	<setting id="default_player" type="labelenum" label="Default p2p-player" values="p2p-streams|Plexus" default="p2p-streams"  />
-  </category>
-</settings>

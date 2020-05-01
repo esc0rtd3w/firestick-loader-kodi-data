@@ -1,7 +1,0 @@
-<settings>
-<category label="General">
-<setting id="custom_url" type="labelenum" label="URL" default="http://www.primewire.org/" values="Custom|http://www.1channel.ch/|http://www.primewire.org/|http://www.letmewatchthis.ch/|http://www.primewire.ag/" />
-<setting id="custom_text_url" type="text" label="     Custom" default="" enable="eq(-1,0)" />
-<setting id="proxy" type="bool" label="Proxy for UK" default="false"/>
-</category>
-</settings>

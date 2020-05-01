@@ -87,3 +87,4 @@ class youtube_menu(object):
 		liz.setArt({'thumb': icon, 'banner': 'DefaultVideo.png', 'fanart': fanart})
 		liz.setProperty('IsPlayable', 'true')
 		control.addItem(handle=syshandle, url=work_url, listitem=liz, isFolder=False)
+

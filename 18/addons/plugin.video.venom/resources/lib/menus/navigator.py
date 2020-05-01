@@ -20,7 +20,6 @@ except:
 
 artPath = control.artPath()
 imdbCredentials = False if control.setting('imdb.user') == '' else True
-tmdbSessionID = False if control.setting('tmdb.session_id') == '' else True
 traktCredentials = trakt.getTraktCredentialsInfo()
 traktIndicators = trakt.getTraktIndicatorsInfo()
 indexLabels = False if control.setting('index.labels') == 'false' else True
@@ -100,10 +99,8 @@ class Navigator:
 			self.addDirectoryItem(32433 if indexLabels else 32432, 'movies&url=traktpopular', 'trakt.png' if iconLogos else 'most-popular.png', 'DefaultMovies.png')
 		if control.getMenuEnabled('navi.movie.imdb.boxoffice'):
 			self.addDirectoryItem(32435 if indexLabels else 32434, 'movies&url=imdbboxoffice', 'imdb.png' if iconLogos else 'box-office.png', 'DefaultMovies.png')
-		if control.getMenuEnabled('navi.movie.tmdb.boxoffice'):
-			self.addDirectoryItem(32436 if indexLabels else 32434, 'tmdbmovies&url=tmdb_boxoffice', 'tmdb.png' if iconLogos else 'box-office.png', 'DefaultMovies.png')
 		if control.getMenuEnabled('navi.movie.trakt.boxoffice'):
-			self.addDirectoryItem(32437 if indexLabels else 32434, 'movies&url=traktboxoffice', 'trakt.png' if iconLogos else 'box-office.png', 'DefaultMovies.png')
+			self.addDirectoryItem(32437 if indexLabels else 32436, 'movies&url=traktboxoffice', 'trakt.png' if iconLogos else 'box-office.png', 'DefaultMovies.png')
 		if control.getMenuEnabled('navi.movie.imdb.mostvoted'):
 			self.addDirectoryItem(32439 if indexLabels else 32438, 'movies&url=mostvoted', 'imdb.png' if iconLogos else 'most-voted.png', 'DefaultMovies.png')
 		if control.getMenuEnabled('navi.movie.tmdb.toprated'):
@@ -136,7 +133,7 @@ class Navigator:
 		if lite is False:
 			if control.getMenuEnabled('mylists.widget'):
 				self.addDirectoryItem(32003, 'mymovieliteNavigator', 'mymovies.png', 'DefaultMovies.png')
-			self.addDirectoryItem(32028, 'moviePerson', 'imdb.png' if iconLogos else 'people-search.png', 'DefaultAddonsSearch.png')
+			self.addDirectoryItem(32029, 'moviePerson', 'imdb.png' if iconLogos else 'people-search.png', 'DefaultAddonsSearch.png')
 			self.addDirectoryItem(32010, 'movieSearch', 'trakt.png' if iconLogos else 'search.png', 'DefaultAddonsSearch.png')
 		self.endDirectory()
 
@@ -146,8 +143,8 @@ class Navigator:
 		self.addDirectoryItem(32039, 'movieUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 
 		if traktCredentials is True and imdbCredentials is True:
-			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection&list_name=traktcollection'))
-			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
+			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection'))
+			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist'))
 
 			if traktIndicators is True:
 				self.addDirectoryItem(32468, 'moviesUnfinished&url=traktonDeck', 'trakt.png', 'DefaultYear.png')
@@ -157,8 +154,8 @@ class Navigator:
 				self.addDirectoryItem(32033, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultVideoPlaylists.png', queue=True)
 
 		elif traktCredentials is True:
-			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection&list_name=traktcollection'))
-			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
+			self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktcollection'))
+			self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', queue=True, context=(32551, 'moviesToLibrary&url=traktwatchlist'))
 
 			if traktIndicators is True:
 				self.addDirectoryItem(32468, 'moviesUnfinished&url=traktonDeck', 'trakt.png', 'DefaultYear.png')
@@ -226,7 +223,7 @@ class Navigator:
 			if control.getMenuEnabled('mylists.widget'):
 				self.addDirectoryItem(32004, 'mytvliteNavigator', 'mytvshows.png', 'DefaultTVShows.png')
 
-			self.addDirectoryItem(32028, 'tvPerson', 'imdb.png' if iconLogos else 'people-search.png', 'DefaultAddonsSearch.png')
+			self.addDirectoryItem(32030, 'tvPerson', 'imdb.png' if iconLogos else 'people-search.png', 'DefaultAddonsSearch.png')
 			self.addDirectoryItem(32010, 'tvSearch', 'trakt.png' if iconLogos else 'search.png', 'DefaultAddonsSearch.png')
 		self.endDirectory()
 
@@ -235,8 +232,8 @@ class Navigator:
 		self.accountCheck()
 		self.addDirectoryItem(32040, 'tvUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 		if traktCredentials is True and imdbCredentials is True:
-			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection'))
-			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
+			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection'))
+			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist'))
 			self.addDirectoryItem(32041, 'episodesUserlists', 'userlists.png', 'DefaultVideoPlaylists.png')
 
 			if traktIndicators is True:
@@ -248,8 +245,8 @@ class Navigator:
 				self.addDirectoryItem(32033, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultVideoPlaylists.png')
 
 		elif traktCredentials is True:
-			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection'))
-			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist'))
+			self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktcollection'))
+			self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultVideoPlaylists.png', context=(32551, 'tvshowsToLibrary&url=traktwatchlist'))
 			self.addDirectoryItem(32041, 'episodesUserlists', 'trakt.png', 'DefaultVideoPlaylists.png')
 
 			if traktIndicators is True:
@@ -281,10 +278,8 @@ class Navigator:
 		self.addDirectoryItem(32504, 'clearResolveURLcache', 'urlresolver.png', 'DefaultAddonProgram.png', isFolder=False)
 		if control.condVisibility('System.HasAddon(service.upnext)'):
 			self.addDirectoryItem(32505, 'UpNextSettings&query=0.0', 'UpNext.png', 'DefaultAddonProgram.png', isFolder=False)
-		self.addDirectoryItem(32506, 'contextVenomSettings&query=0.0', 'icon.png', 'DefaultAddonProgram.png', isFolder=False)
 		#-- Providers - 4
 		self.addDirectoryItem(32651, 'openscrapersSettings&query=0.0', 'OpenScrapers.png', 'DefaultAddonService.png', isFolder=False)
-		self.addDirectoryItem(32083, 'cleanSettings', 'tools.png', 'DefaultAddonProgram.png', isFolder=False)
 		#-- General - 0
 		self.addDirectoryItem(32043, 'openSettings&query=0.0', 'tools.png', 'DefaultAddonService.png', isFolder=False)
 		#-- Navigation - 1
@@ -319,32 +314,21 @@ class Navigator:
 		self.addDirectoryItem(32557, 'openSettings&query=9.0', 'tools.png', 'DefaultAddonProgram.png', isFolder=False)
 		self.addDirectoryItem(32558, 'updateLibrary', 'library_update.png', 'DefaultAddonLibrary.png', isFolder=False)
 		self.addDirectoryItem(32676, 'cleanLibrary', 'library_update.png', 'DefaultAddonLibrary.png', isFolder=False)
+
 		self.addDirectoryItem(32559, control.setting('library.movie'), 'movies.png', 'DefaultMovies.png', isAction=False)
 		self.addDirectoryItem(32560, control.setting('library.tv'), 'tvshows.png', 'DefaultTVShows.png', isAction=False)
 
 		if traktCredentials is True:
-			self.addDirectoryItem(32561, 'moviesToLibrary&url=traktcollection&list_name=traktcollection', 'trakt.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem(32562, 'moviesToLibrary&url=traktwatchlist&list_name=traktwatchlist', 'trakt.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem(32561, 'moviesToLibrary&url=traktcollection', 'trakt.png', 'DefaultMovies.png', isFolder=False)
+			self.addDirectoryItem(32562, 'moviesToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32672, 'moviesListToLibrary&url=traktlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32673, 'moviesListToLibrary&url=traktlikedlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 
-		if tmdbSessionID is True:
-			self.addDirectoryItem('TMDb: Import Movie Watchlist...', 'moviesToLibrary&url=tmdb_watchlist&list_name=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import Movie Favorites...', 'moviesToLibrary&url=tmdb_favorites&list_name=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import Movie User list...', 'moviesListToLibrary&url=tmdb_userlists', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-
-		if traktCredentials is True:
-			self.addDirectoryItem(32563, 'tvshowsToLibrary&url=traktcollection&list_name=traktcollection', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
-			self.addDirectoryItem(32564, 'tvshowsToLibrary&url=traktwatchlist&list_name=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
+			self.addDirectoryItem(32563, 'tvshowsToLibrary&url=traktcollection', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
+			self.addDirectoryItem(32564, 'tvshowsToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', isFolder=False)
 			self.addDirectoryItem(32674, 'tvshowsListToLibrary&url=traktlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
 			self.addDirectoryItem(32675, 'tvshowsListToLibrary&url=traktlikedlists', 'trakt.png', 'DefaultMovies.png', isFolder=False)
-
-		if tmdbSessionID is True:
-			self.addDirectoryItem('TMDb: Import TV Watchlist...', 'tvshowsToLibrary&url=tmdb_watchlist&list_name=tmdb_watchlist', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import TV Favorites...', 'tvshowsToLibrary&url=tmdb_favorites&list_name=tmdb_favorites', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
-			self.addDirectoryItem('TMDb: Import TV User list...', 'tvshowsListToLibrary&url=tmdb_userlists', 'tmdb.png', 'DefaultMovies.png', isFolder=False)
 		self.endDirectory()
-
 
 	def downloads(self):
 		movie_downloads = control.setting('movie.download.path')
@@ -366,23 +350,32 @@ class Navigator:
 
 	def views(self):
 		try:
-			control.hide()
+			control.idle()
 			items = [ (control.lang(32001).encode('utf-8'), 'movies'), (control.lang(32002).encode('utf-8'), 'tvshows'),
 							(control.lang(32054).encode('utf-8'), 'seasons'), (control.lang(32038).encode('utf-8'), 'episodes') ]
+
 			select = control.selectDialog([i[0] for i in items], control.lang(32049).encode('utf-8'))
+
 			if select == -1:
 				return
+
 			content = items[select][1]
+
 			title = control.lang(32059).encode('utf-8')
+
 			url = '%s?action=addView&content=%s' % (sys.argv[0], content)
+
 			poster, banner, fanart = control.addonPoster(), control.addonBanner(), control.addonFanart()
+
 			item = control.item(label=title)
 			item.setInfo(type='video', infoLabels = {'title': title})
 			item.setArt({'icon': poster, 'thumb': poster, 'poster': poster, 'fanart': fanart, 'banner': banner})
 			item.setProperty('IsPlayable', 'false')
+
 			control.addItem(handle = int(sys.argv[1]), url=url, listitem=item, isFolder=False)
 			control.content(int(sys.argv[1]), content)
 			control.directory(int(sys.argv[1]), cacheToDisc=True)
+
 			from resources.lib.modules import views
 			views.setView(content, {})
 		except:
@@ -392,7 +385,7 @@ class Navigator:
 
 	def accountCheck(self):
 		if traktCredentials is False and imdbCredentials is False:
-			control.hide()
+			control.idle()
 			control.notification(title='default', message=32042, icon='WARNING', sound=notificationSound)
 			sys.exit()
 
@@ -406,10 +399,12 @@ class Navigator:
 
 
 	def clearCacheAll(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_all()
@@ -420,10 +415,12 @@ class Navigator:
 
 
 	def clearCacheProviders(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_providers()
@@ -434,10 +431,12 @@ class Navigator:
 
 
 	def clearCacheMeta(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_meta()
@@ -448,10 +447,12 @@ class Navigator:
 
 
 	def clearCache(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear()
@@ -462,10 +463,12 @@ class Navigator:
 
 
 	def clearCacheSearch(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_search()
@@ -476,10 +479,12 @@ class Navigator:
 
 
 	def clearCacheSearchPhrase(self, table, name):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_SearchPhrase(table, name)
@@ -490,10 +495,12 @@ class Navigator:
 
 
 	def clearBookmarks(self):
-		control.hide()
+		control.idle()
 		yes = control.yesnoDialog(control.lang(32056).encode('utf-8'), '', '')
+
 		if not yes:
 			return
+
 		try:
 			from resources.lib.modules import cache
 			cache.cache_clear_bookmarks()
@@ -511,22 +518,32 @@ class Navigator:
 				name = control.lang(name).encode('utf-8')
 		except:
 			log_utils.error()
+
 		url = '%s?action=%s' % (sysaddon, query) if isAction else query
+
 		thumb = os.path.join(artPath, thumb) if artPath is not None else icon
+
 		if not icon.startswith('Default'):
 			icon = os.path.join(artPath, icon)
+
 		cm = []
 		queueMenu = control.lang(32065).encode('utf-8')
+
 		if queue is True:
 			cm.append((queueMenu, 'RunPlugin(%s?action=queueItem)' % sysaddon))
+
 		if context is not None:
 			cm.append((control.lang(context[0]).encode('utf-8'), 'RunPlugin(%s?action=%s)' % (sysaddon, context[1])))
+
 		if isSearch is True:
 			cm.append(('Clear Search Phrase', 'RunPlugin(%s?action=clearSearchPhrase&table=%s&name=%s)' % (sysaddon, table, name)))
+
 		cm.append((control.lang(32610).encode('utf-8'), 'RunPlugin(%s?action=clearAllCache&opensettings=false)' % sysaddon))
 		cm.append(('[COLOR red]Venom Settings[/COLOR]', 'RunPlugin(%s?action=openSettings)' % sysaddon))
+
 		item = control.item(label=name)
 		item.addContextMenuItems(cm)
+
 		if isPlayable:
 			item.setProperty('IsPlayable', 'true')
 		else:

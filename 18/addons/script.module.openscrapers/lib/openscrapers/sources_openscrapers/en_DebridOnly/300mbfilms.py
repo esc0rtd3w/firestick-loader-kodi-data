@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -113,25 +112,28 @@ class source:
 					continue
 
 				try:
-					name = client.parseDOM(item, "a")[0]
-					t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+					tit = client.parseDOM(item, "a")[0]
+					t = tit.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
 					if cleantitle.get(t) != cleantitle.get(title):
 						continue
 
-					if hdlr not in name:
+					if hdlr not in tit:
 						continue
 
-					quality, info = source_utils.get_release_quality(name, item[0])
+					quality, info = source_utils.get_release_quality(tit, item[0])
 
 					try:
 						size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|Gb|MB|MiB|Mb))', item)[0]
-						dsize, isize = source_utils._size(size)
-						info.insert(0, isize)
+						div = 1 if size.endswith(('GB', 'GiB', 'Gb')) else 1024
+						size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
+						size = '%.2f GB' % size
 					except:
-						dsize = 0
+						size = '0'
 						pass
 
-					fileType = source_utils.getFileType(name)
+					info.append(size)
+
+					fileType = source_utils.getFileType(tit)
 					info.append(fileType)
 					info = ' | '.join(info) if fileType else info[0]
 
@@ -167,7 +169,7 @@ class source:
 				host = client.replaceHTMLCodes(host)
 				host = host.encode('utf-8')
 
-				sources.append({'source': host, 'quality': item[1], 'language': 'en', 'url': url, 'info': item[2], 'direct': False, 'debridonly': True, 'size': dsize})
+				sources.append({'source': host, 'quality': item[1], 'language': 'en', 'url': url, 'info': item[2], 'direct': False, 'debridonly': True})
 			return sources
 
 		except:

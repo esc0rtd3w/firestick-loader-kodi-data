@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers (updated 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,6 +28,7 @@ import re
 import urllib
 import urlparse
 
+from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -41,6 +41,7 @@ class source:
 		self.domains = ['yts.ws']
 		self.base_link = 'https://yts.ws'
 		self.search_link = '/movie/%s'
+		# self.search_link = '/search?search=%s'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -80,6 +81,7 @@ class source:
 				return sources
 
 			quality_size = client.parseDOM(html, 'p', attrs={'class': 'quality-size'})
+
 			tit = client.parseDOM(html, 'title')[0]
 
 			try:
@@ -93,38 +95,39 @@ class source:
 
 				for url, ref in link:
 					url = str(client.replaceHTMLCodes(url).split('&tr')[0])
-					url = url.replace(' ', '')
-					hash = re.compile('btih:(.*?)&').findall(url)[0]
+
+					if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
+						continue
 
 					name = url.split('&dn=')[1]
-					name = urllib.unquote_plus(name)
-					name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
-					if source_utils.remove_lang(name):
+
+					t = name.split(hdlr)[0].replace('&', 'and')
+					if cleantitle.get(t) != cleantitle.get(title):
 						continue
 
-					match = source_utils.check_title(title, tit, hdlr, data['year'])
-					if not match:
+					if hdlr not in tit:
 						continue
 
-					seeders = 0 # not available on yts
 					quality, info = source_utils.get_release_quality(ref, url)
 
 					try:
 						size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', quality_size[p])[-1]
-						dsize, isize = source_utils._size(size)
-						info.insert(0, isize)
+						div = 1 if size.endswith(('GB', 'GiB')) else 1024
+						size = float(re.sub('[^0-9|/.|/,]', '', size)) / div
+						size = '%.2f GB' % size
+						info.append(size)
 					except:
-						dsize = 0
 						pass
 
 					p += 1
 					info = ' | '.join(info)
 
-					sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
-											'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
+					sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
+												'info': info, 'direct': False, 'debridonly': True})
 			return sources
+
 		except:
-			source_utils.scraper_error('YTSWS')
+			source_utils.scraper_error('YIFYDLL')
 			return sources
 
 

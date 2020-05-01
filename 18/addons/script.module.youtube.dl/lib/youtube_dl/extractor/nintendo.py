@@ -5,12 +5,13 @@ import re
 
 from .common import InfoExtractor
 from .ooyala import OoyalaIE
+from ..utils import unescapeHTML
 
 
 class NintendoIE(InfoExtractor):
-    _VALID_URL = r'https?://(?:www\.)?nintendo\.com/(?:games/detail|nintendo-direct)/(?P<id>[^/?#&]+)'
+    _VALID_URL = r'https?://(?:www\.)?nintendo\.com/games/detail/(?P<id>[^/?#&]+)'
     _TESTS = [{
-        'url': 'https://www.nintendo.com/games/detail/duck-hunt-wii-u/',
+        'url': 'http://www.nintendo.com/games/detail/yEiAzhU2eQI1KZ7wOHhngFoAHc1FpHwj',
         'info_dict': {
             'id': 'MzMmticjp0VPzO3CCj4rmFOuohEuEWoW',
             'ext': 'flv',
@@ -27,19 +28,7 @@ class NintendoIE(InfoExtractor):
             'id': 'tokyo-mirage-sessions-fe-wii-u',
             'title': 'Tokyo Mirage Sessions ♯FE',
         },
-        'playlist_count': 4,
-    }, {
-        'url': 'https://www.nintendo.com/nintendo-direct/09-04-2019/',
-        'info_dict': {
-            'id': 'J2bXdmaTE6fe3dWJTPcc7m23FNbc_A1V',
-            'ext': 'mp4',
-            'title': 'Switch_ROS_ND0904-H264.mov',
-            'duration': 2324.758,
-        },
-        'params': {
-            'skip_download': True,
-        },
-        'add_ie': ['Ooyala'],
+        'playlist_count': 3,
     }]
 
     def _real_extract(self, url):
@@ -50,11 +39,8 @@ class NintendoIE(InfoExtractor):
         entries = [
             OoyalaIE._build_url_result(m.group('code'))
             for m in re.finditer(
-                r'data-(?:video-id|directVideoId)=(["\'])(?P<code>(?:(?!\1).)+)\1', webpage)]
-
-        title = self._html_search_regex(
-            r'(?s)<(?:span|div)[^>]+class="(?:title|wrapper)"[^>]*>.*?<h1>(.+?)</h1>',
-            webpage, 'title', fatal=False)
+                r'class=(["\'])embed-video\1[^>]+data-video-code=(["\'])(?P<code>(?:(?!\2).)+)\2',
+                webpage)]
 
         return self.playlist_result(
-            entries, page_id, title)
+            entries, page_id, unescapeHTML(self._og_search_title(webpage, fatal=False)))

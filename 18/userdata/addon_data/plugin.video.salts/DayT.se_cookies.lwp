@@ -1,5 +1,0 @@
-#LWP-Cookies-2.0
-Set-Cookie3: __cfduid=d4b5256b6e5c39079c95673ed4f7cf78f1458944393; path="/"; domain=".dayt.se"; path_spec; domain_dot; expires="2017-03-25 22:19:53Z"; HttpOnly=None; version=0
-Set-Cookie3: bb_lastactivity=0; path="/"; domain="dayt.se"; path_spec; expires="2017-03-25 22:18:27Z"; version=0
-Set-Cookie3: bb_lastvisit=1458944307; path="/"; domain="dayt.se"; path_spec; expires="2017-03-25 22:18:27Z"; version=0
-Set-Cookie3: bb_sessionhash=2b1e796fe03d7bca77cec4f3ccb51dfa; path="/"; domain="dayt.se"; path_spec; discard; HttpOnly=None; version=0

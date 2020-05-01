@@ -1,8 +1,0 @@
-<settings>
-    <setting id="ASK_FILENAME" value="true" />
-    <setting id="ASK_FOLDER" value="false" />
-    <setting id="DOWNLOAD_FOLDER" value="special://userdata/addon_data/plugin.video.funniermoments/Downloads" />
-    <setting id="KIDSTIME" value="10" />
-    <setting id="LIBRARY" value="special://userdata/addon_data/plugin.video.funniermoments/Library" />
-    <setting id="VERSION" value="1.0.21" />
-</settings>

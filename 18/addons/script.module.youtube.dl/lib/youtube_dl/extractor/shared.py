@@ -1,18 +1,13 @@
 from __future__ import unicode_literals
 
 from .common import InfoExtractor
-from ..compat import (
-    compat_b64decode,
-    compat_urllib_parse_unquote_plus,
-)
+from ..compat import compat_b64decode
 from ..utils import (
     determine_ext,
     ExtractorError,
     int_or_none,
-    js_to_json,
     KNOWN_EXTENSIONS,
     parse_filesize,
-    rot47,
     url_or_none,
     urlencode_postdata,
 )
@@ -117,22 +112,16 @@ class VivoIE(SharedBaseIE):
             webpage, 'filesize', fatal=False))
 
     def _extract_video_url(self, webpage, video_id, url):
-        def decode_url_old(encoded_url):
+        def decode_url(encoded_url):
             return compat_b64decode(encoded_url).decode('utf-8')
 
-        stream_url = self._search_regex(
+        stream_url = url_or_none(decode_url(self._search_regex(
             r'data-stream\s*=\s*(["\'])(?P<url>(?:(?!\1).)+)\1', webpage,
-            'stream url', default=None, group='url')
-        if stream_url:
-            stream_url = url_or_none(decode_url_old(stream_url))
+            'stream url', default=None, group='url')))
         if stream_url:
             return stream_url
-
-        def decode_url(encoded_url):
-            return rot47(compat_urllib_parse_unquote_plus(encoded_url))
-
-        return decode_url(self._parse_json(
+        return self._parse_json(
             self._search_regex(
-                r'(?s)InitializeStream\s*\(\s*({.+?})\s*\)\s*;', webpage,
-                'stream'),
-            video_id, transform_source=js_to_json)['source'])
+                r'InitializeStream\s*\(\s*(["\'])(?P<url>(?:(?!\1).)+)\1',
+                webpage, 'stream', group='url'),
+            video_id, transform_source=decode_url)[0]

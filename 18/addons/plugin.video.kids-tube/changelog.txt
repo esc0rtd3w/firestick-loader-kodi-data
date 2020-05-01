@@ -1,6 +1,0 @@
-[B]Version 1.0.0[/B]
-9 December 2015 - This is the first release of my Kids Tube youtube playlists addon.
-[B]Version 1.0.1[/B]
-10 December 2015 - Renamed to plugin.video.kids-tube as a Dutch addon named kidstube already exists.
-[B]Version 2.0.0[/B]
-18 February 2016 - Updated due to YouTube changes. Increased from 11 to 15 channels.

@@ -1,3 +1,0 @@
-<favourites>
-	<favourite name="Screensavers" thumb="DefaultAddonScreensaver.png">ActivateWindow(10025,&quot;plugin://xbmc.ui.screensaver?sf_options=meta%3Dlabel%253DScreensaver%26_options_sf&quot;,return)</favourite>
-</favourites>

@@ -6,11 +6,7 @@ from ..utils import (
     clean_html,
     determine_ext,
     int_or_none,
-    KNOWN_EXTENSIONS,
-    mimetype2ext,
     parse_iso8601,
-    str_or_none,
-    try_get,
 )
 
 
@@ -28,7 +24,6 @@ class PatreonIE(InfoExtractor):
             'thumbnail': 're:^https?://.*$',
             'timestamp': 1406473987,
             'upload_date': '20140727',
-            'uploader_id': '87145',
         },
     }, {
         'url': 'http://www.patreon.com/creation?hid=754133',
@@ -95,13 +90,7 @@ class PatreonIE(InfoExtractor):
     def _real_extract(self, url):
         video_id = self._match_id(url)
         post = self._download_json(
-            'https://www.patreon.com/api/posts/' + video_id, video_id, query={
-                'fields[media]': 'download_url,mimetype,size_bytes',
-                'fields[post]': 'comment_count,content,embed,image,like_count,post_file,published_at,title',
-                'fields[user]': 'full_name,url',
-                'json-api-use-default-includes': 'false',
-                'include': 'media,user',
-            })
+            'https://www.patreon.com/api/posts/' + video_id, video_id)
         attributes = post['data']['attributes']
         title = attributes['title'].strip()
         image = attributes.get('image') or {}
@@ -115,42 +104,33 @@ class PatreonIE(InfoExtractor):
             'comment_count': int_or_none(attributes.get('comment_count')),
         }
 
+        def add_file(file_data):
+            file_url = file_data.get('url')
+            if file_url:
+                info.update({
+                    'url': file_url,
+                    'ext': determine_ext(file_data.get('name'), 'mp3'),
+                })
+
         for i in post.get('included', []):
             i_type = i.get('type')
-            if i_type == 'media':
-                media_attributes = i.get('attributes') or {}
-                download_url = media_attributes.get('download_url')
-                ext = mimetype2ext(media_attributes.get('mimetype'))
-                if download_url and ext in KNOWN_EXTENSIONS:
-                    info.update({
-                        'ext': ext,
-                        'filesize': int_or_none(media_attributes.get('size_bytes')),
-                        'url': download_url,
-                    })
+            if i_type == 'attachment':
+                add_file(i.get('attributes') or {})
             elif i_type == 'user':
                 user_attributes = i.get('attributes')
                 if user_attributes:
                     info.update({
                         'uploader': user_attributes.get('full_name'),
-                        'uploader_id': str_or_none(i.get('id')),
                         'uploader_url': user_attributes.get('url'),
                     })
 
         if not info.get('url'):
-            embed_url = try_get(attributes, lambda x: x['embed']['url'])
-            if embed_url:
-                info.update({
-                    '_type': 'url',
-                    'url': embed_url,
-                })
+            add_file(attributes.get('post_file') or {})
 
         if not info.get('url'):
-            post_file = attributes['post_file']
-            ext = determine_ext(post_file.get('name'))
-            if ext in KNOWN_EXTENSIONS:
-                info.update({
-                    'ext': ext,
-                    'url': post_file['url'],
-                })
+            info.update({
+                '_type': 'url',
+                'url': attributes['embed']['url'],
+            })
 
         return info

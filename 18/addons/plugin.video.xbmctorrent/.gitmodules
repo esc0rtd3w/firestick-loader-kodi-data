@@ -1,3 +1,0 @@
-[submodule "resources/bin"]
-	path = resources/bin
-	url = git://github.com/afedchin/t2h-binaries.git

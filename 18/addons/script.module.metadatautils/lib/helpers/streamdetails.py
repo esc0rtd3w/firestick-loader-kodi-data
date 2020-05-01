@@ -1,18 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     streamdetails.py
     Get all streamdetails for a kodi media item in database
-"""
-
+'''
 
 def get_streamdetails(kodidb, db_id, media_type):
-    """helper to get all streamdetails from a video item in kodi db"""
+    '''helper to get all streamdetails from a video item in kodi db'''
     streamdetails = {}
     # get data from json
-    if "movie" in media_type and "movieset" not in media_type:
+    if "movie" in media_type and not "movieset" in media_type:
         json_result = kodidb.movie(db_id)
     elif "episode" in media_type:
         json_result = kodidb.episode(db_id)

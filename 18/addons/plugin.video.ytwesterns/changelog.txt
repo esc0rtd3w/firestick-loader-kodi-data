@@ -1,5 +1,0 @@
-[B]Version 1.0.0[/B]
-September 2015 - This is the first versions of my Western Movies on YouTube addon
-[B]Version 2.0.0[/B]
-February 2016 - 'user' replaced with 'channel' due to changes by YouTube. Number of channels increased to 50. Renamed Westerns Tube.
-

@@ -20,10 +20,8 @@ class ApiV2(ApiInterface):
     """This class uses the unofficial API used by the SoundCloud website."""
 
     api_host = "https://api-v2.soundcloud.com"
-    api_client_id_cache_duration = 1440  # 24 hours
-    api_client_id_cache_key = "api-client-id"
+    api_client_id = "KT6UCHXC9iNnI8wn4UUfwMSlAPe4Z8zx"
     api_limit = 20
-    api_limit_tracks = 50
     api_lang = "en"
     api_cache = {
         "discover": 120  # 2 hours
@@ -35,32 +33,11 @@ class ApiV2(ApiInterface):
         self.settings = settings
         self.api_limit = int(self.settings.get("search.items.size"))
 
+        if self.settings.get("apiv2.clientid"):
+            self.api_client_id = self.settings.get("apiv2.clientid")
+
         if self.settings.get("apiv2.locale") == self.settings.APIV2_LOCALE["auto"]:
             self.api_lang = lang
-
-    @property
-    def api_client_id(self):
-        # It is possible to set a custom client ID in the settings
-        client_id_settings = self.settings.get("apiv2.client_id")
-        if client_id_settings:
-            xbmc.log("plugin.audio.soundcloud::ApiV2() Using custom client ID", xbmc.LOGDEBUG)
-            return client_id_settings
-
-        # Check if there is a cached client ID
-        client_id_cached = self.cache.get(
-            self.api_client_id_cache_key,
-            self.api_client_id_cache_duration
-        )
-        if client_id_cached:
-            xbmc.log("plugin.audio.soundcloud::ApiV2() Using cached client ID", xbmc.LOGDEBUG)
-            return client_id_cached
-
-        # Extract client ID from website and cache it
-        client_id = self.fetch_client_id()
-        self.cache.add(self.api_client_id_cache_key, str(client_id))
-        xbmc.log("plugin.audio.soundcloud::ApiV2() Using new client ID", xbmc.LOGDEBUG)
-
-        return client_id
 
     def search(self, query, kind="tracks"):
         res = self._do_request("/search/" + kind, {"q": query, "limit": self.api_limit})
@@ -223,16 +200,14 @@ class ApiV2(ApiInterface):
 
         # Load unresolved tracks
         if collection.load:
-            # The API only supports a max of 50 track IDs per request:
-            for chunk in self._chunks(collection.load, self.api_limit_tracks):
-                track_ids = ",".join(str(x) for x in chunk)
-                loaded_tracks = self._do_request("/tracks", {"ids": track_ids})
-                # Because returned tracks are not sorted, we have to manually match them
-                for track_id in chunk:
-                    loaded_track = [lt for lt in loaded_tracks if lt["id"] == track_id]
-                    if len(loaded_track):  # Sometimes a track cannot be resolved
-                        track = self._build_track(loaded_track[0])
-                        collection.items.append(track)
+            track_ids = ",".join(str(x) for x in collection.load)
+            loaded_tracks = self._do_request("/tracks", {"ids": track_ids})
+            # Because returned tracks are not sorted, we have to manually match them
+            for track_id in collection.load:
+                loaded_track = [lt for lt in loaded_tracks if lt["id"] == track_id]
+                if len(loaded_track):  # Sometimes a track cannot be resolved
+                    track = self._build_track(loaded_track[0])
+                    collection.items.append(track)
 
         return collection
 
@@ -312,8 +287,3 @@ class ApiV2(ApiInterface):
             r"\1\2-\3-t{x}x{y}.\5".format(x=size, y=size),
             url
         ) if url else None
-
-    @staticmethod
-    def _chunks(lst, size):
-        for i in range(0, len(lst), size):
-            yield lst[i:i + size]

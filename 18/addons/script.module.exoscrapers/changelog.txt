@@ -1,3 +1,0 @@
-ExoScrapers Module Changelog:
-1.0.0
-- Code rebase

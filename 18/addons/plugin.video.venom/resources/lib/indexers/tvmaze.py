@@ -4,14 +4,10 @@
 	Venom Add-on
 '''
 
-import re
-import urllib
-# import json
+import json, re, urllib
 import datetime
-import requests
 
 from resources.lib.modules import cache
-from resources.lib.modules import cleantitle
 from resources.lib.modules import client
 from resources.lib.modules import control
 from resources.lib.modules import log_utils
@@ -55,7 +51,6 @@ networks_this_season = [
 			('DC Universe', '/webchannels/187/dc-universe', 'https://i.imgur.com/bhWIubn.png'),
 			('Discovery Channel', '/networks/66/discovery-channel', 'https://i.imgur.com/8UrXnAB.png'),
 			('Discovery ID', '/networks/89/investigation-discovery', 'https://i.imgur.com/07w7BER.png'),
-			('Disney+', '/webchannels/287/disney', 'https://i.postimg.cc/SQ8fG2qF/435560.jpg'),
 			('Disney Channel', '/networks/78/disney-channel', 'https://i.imgur.com/ZCgEkp6.png'),
 			('Disney Junior', '/networks/1039/disney-junior', 'https://i.imgur.com/EqPPq5S.png'),
 			('Disney XD', '/networks/25/disney-xd', 'https://i.imgur.com/PAJJoqQ.png'),
@@ -84,7 +79,6 @@ networks_this_season = [
 			('Oxygen', '/networks/79/oxygen', 'https://i.imgur.com/uFCQvbR.png'),
 			('PBS', '/networks/85/pbs', 'https://i.imgur.com/r9qeDJY.png'),
 			# ('Playboy TV', '/networks/1035/playboy-tv', 'https://static.tvmaze.com/uploads/images/original_untouched/46/115366.jpg'),
-			('Showcase', '/networks/270/showcase', 'https://i.postimg.cc/CKN3Ph8S/66074.jpg'),
 			('Showtime', '/networks/9/showtime', 'https://i.imgur.com/SawAYkO.png'),
 			('Sky1', '/networks/63/sky-1', 'https://i.imgur.com/xbgzhPU.png'),
 			('Starz', '/networks/17/starz', 'https://i.imgur.com/Z0ep2Ru.png'),
@@ -142,7 +136,6 @@ networks_view_all = [
 			('DC Universe', '/shows?Show%5BwebChannel_id%5D=187&page=1', 'https://i.imgur.com/bhWIubn.png'),
 			('Discovery Channel', '/shows?Show[network_id]=66&page=1', 'https://i.imgur.com/8UrXnAB.png'),
 			('Discovery ID', '/shows?Show[network_id]=89&page=1', 'https://i.imgur.com/07w7BER.png'),
-			('Disney+', '/shows?Show[webChannel_id]=287&page=1', 'https://i.postimg.cc/SQ8fG2qF/435560.jpg'),
 			('Disney Channel', '/shows?Show[network_id]=78&page=1', 'https://i.imgur.com/ZCgEkp6.png'),
 			('Disney Junior', '/shows?Show[network_id]=1039&page=1', 'https://i.imgur.com/EqPPq5S.png'),
 			('Disney XD', '/shows?Show[network_id]=25&page=1', 'https://i.imgur.com/PAJJoqQ.png'),
@@ -171,7 +164,6 @@ networks_view_all = [
 			('Oxygen', '/shows?Show[network_id]=79&page=1', 'https://i.imgur.com/uFCQvbR.png'),
 			# ('Playboy TV', '/shows?Show[network_id]=1035&page=1', 'https://static.tvmaze.com/uploads/images/original_untouched/46/115366.jpg'),
 			('PBS', '/shows?Show[network_id]=85&page=1', 'https://i.imgur.com/r9qeDJY.png'),
-			('Showcase', '/shows?Show[network_id]=270&page=1', 'https://i.postimg.cc/CKN3Ph8S/66074.jpg'),
 			('Showtime', '/shows?Show[network_id]=9&page=1', 'https://i.imgur.com/SawAYkO.png'),
 			('Sky1', '/shows?Show[network_id]=63&page=1', 'https://i.imgur.com/xbgzhPU.png'),
 			('Starz', '/shows?Show[network_id]=17&page=1', 'https://i.imgur.com/Z0ep2Ru.png'),
@@ -216,20 +208,26 @@ class tvshows:
 		self.type = type
 		self.lang = control.apiLanguage()['tvdb']
 		self.notifications = notifications
+
 		self.datetime = (datetime.datetime.utcnow() - datetime.timedelta(hours = 5))
-		self.disable_fanarttv = control.setting('disable.fanarttv')
 
-		self.tvmaze_link = 'https://www.tvmaze.com'
-		self.tvmaze_info_link = 'https://api.tvmaze.com/shows/%s?embed=cast'
+		self.tvmaze_link = 'http://www.tvmaze.com'
+		self.tvmaze_info_link = 'http://api.tvmaze.com/shows/%s?embed=cast'
+		# self.tvdb_key = control.setting('tvdb.user')
+		# if self.tvdb_key == '' or self.tvdb_key is None:
+			# self.tvdb_key = '1D62F2F90030C444'
+		self.tvdb_key = 'MUQ2MkYyRjkwMDMwQzQ0NA=='
 
-		self.tvdb_key = 'N1I4U1paWDkwVUE5WU1CVQ=='
 		self.imdb_user = control.setting('imdb.user').replace('ur', '')
+
 		self.user = str(self.imdb_user) + str(self.tvdb_key)
 
-		self.tvdb_info_link = 'https://thetvdb.com/api/%s/series/%s/%s.xml' % (self.tvdb_key.decode('base64'), '%s', '%s')
-		self.tvdb_by_imdb = 'https://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
-		self.tvdb_by_query = 'https://thetvdb.com/api/GetSeries.php?seriesname=%s'
-		self.tvdb_image = 'https://thetvdb.com/banners/'
+		self.disable_fanarttv = control.setting('disable.fanarttv')
+
+		self.tvdb_info_link = 'http://thetvdb.com/api/%s/series/%s/%s.xml' % (self.tvdb_key.decode('base64'), '%s', '%s')
+		self.tvdb_by_imdb = 'http://thetvdb.com/api/GetSeriesByRemoteID.php?imdbid=%s'
+		self.tvdb_by_query = 'http://thetvdb.com/api/GetSeries.php?seriesname=%s'
+		self.tvdb_image = 'http://thetvdb.com/banners/'
 
 
 	def tvmaze_list(self, url):
@@ -243,9 +241,13 @@ class tvshows:
 
 			if control.setting('tvshows.networks.view') == '1':
 				result = client.parseDOM(result, 'div', attrs = {'id': 'w1'})
+				# result = client.parseDOM(result, 'div', attrs = {'class': 'content auto cell'})
 				items = client.parseDOM(result, 'span', attrs = {'class': 'title'})
 
 				list_count = 25
+				# from urlparse import parse_qsl
+				# url_params = dict(parse_qsl(url))
+				# page = url_params.get('page')
 				page = int(str(url.split('&page=', 1)[1]))
 				next = '%s&page=%s' % (url.split('&page=', 1)[0], page+1)
 
@@ -259,16 +261,15 @@ class tvshows:
 			items = [re.findall('/(\d+)/', i) for i in items]
 			items = [i[0] for i in items if len(i) > 0]
 			items = items[:list_count]
-			sortList = items
 		except:
 			log_utils.error()
 			return
 
 		def items_list(i):
 			try:
-				tvmaze = i
 				url = self.tvmaze_info_link % i
-				item = requests.get(url, timeout=10).json()
+				item = client.request(url, timeout='20', error=True)
+				item = json.loads(item)
 
 				content = item.get('type', '0').lower()
 
@@ -280,10 +281,7 @@ class tvshows:
 				premiered = item.get('premiered', '0')
 
 				year = str(item.get('premiered', '0'))
-				if year is not None and year != 'None' and year != '0':
-					year = re.search(r"(\d{4})", year).group(1)
-				else:
-					year = '0'
+				year = re.search(r"(\d{4})", year).group(1)
 
 				imdb = item.get('externals').get('imdb', '0')
 				if imdb == '' or imdb is None or imdb == 'None':
@@ -293,7 +291,7 @@ class tvshows:
 				if tvdb == '' or tvdb is None or tvdb == 'None':
 					tvdb = '0'
 
-				# TVMaze does not have tmdb_id in api
+				# TVMaze does not have tmdb in api
 				tmdb = '0'
 
 				studio = item.get('network', {}) or item.get('webChannel', {})
@@ -309,8 +307,7 @@ class tvshows:
 				rating = str(item.get('rating').get('average', '0'))
 
 				plot = item.get('summary', '0')
-				if plot:
-					plot = re.sub('<.+?>|</.+?>|\n', '', plot)
+				plot = re.sub('<.+?>|</.+?>|\n', '', plot)
 
 				status = item.get('status', '0')
 
@@ -324,100 +321,58 @@ class tvshows:
 					except:
 						castandart = []
 						pass
-					if len(castandart) == 150: break
+					if len(castandart) == 200: break
 
-				image = item.get('image')
-				poster = image.get('original', '0') if image is not None else '0'
+				poster = item.get('image').get('original')
 				fanart = '0' ; banner = '0'
 				mpaa = '0' ; votes = '0'
-				airday = '0' ; airtime = '0'
 
+###--Check TVDb for missing info
 				# self.list = metacache.fetch(self.list, self.lang, self.user)
 				# if self.list['metacache'] is True:
 					# raise Exception()
-
-				if (tvdb == '0' or tmdb == '0') and imdb != '0':
-					from resources.lib.modules import trakt
-					trakt_ids = trakt.IdLookup('show', 'imdb', imdb)
-					if tvdb == '0':
-						tvdb = str(trakt_ids.get('tvdb', '0'))
-						if tvdb == '' or tvdb is None or tvdb == 'None':
-							tvdb = '0'
-					if tmdb == '0':
-						tmdb = str(trakt_ids.get('tmdb', '0'))
-						if tvdb == '' or tvdb is None or tvdb == 'None':
-							tvdb = '0'
-
-###--Check TVDb by IMDB_ID for missing ID's
 				if tvdb == '0' and imdb != '0':
+					url = self.tvdb_by_imdb % imdb
+					result = client.request(url)
 					try:
-						url = self.tvdb_by_imdb % imdb
-						result = requests.get(url).content
-						result = re.sub(r'[^\x00-\x7F]+', '', result)
-						result = client.replaceHTMLCodes(result)
-						result = client.parseDOM(result, 'Series')
-						result = [(client.parseDOM(x, 'SeriesName'), client.parseDOM(x, 'FirstAired'), client.parseDOM(x, 'seriesid'), client.parseDOM(x, 'AliasNames')) for x in result]
-						years = [str(year), str(int(year)+1), str(int(year)-1)]
-						item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0])) and any(y in str(x[1][0]) for y in years)]
-						if item == []:
-							item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[3][0]))]
-						if item == []:
-							item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0]))]
-						if item == []:
-							raise Exception()
-						tvdb = item[0][2]
-						tvdb = tvdb[0] or '0'
+						tvdb = client.parseDOM(result, 'seriesid')[0]
 					except:
-						log_utils.error()
-						pass
+						tvdb = '0'
 
-###--Check TVDb by seriesname
 				if tvdb == '0' or imdb == '0':
-					try:
-						url = self.tvdb_by_query % (urllib.quote_plus(title))
-						result = requests.get(url).content
-						result = re.sub(r'[^\x00-\x7F]+', '', result)
-						result = client.replaceHTMLCodes(result)
-						result = client.parseDOM(result, 'Series')
-						result = [(client.parseDOM(x, 'SeriesName'), client.parseDOM(x, 'FirstAired'), client.parseDOM(x, 'seriesid'), client.parseDOM(x, 'IMDB_ID'), client.parseDOM(x, 'AliasNames')) for x in result]
-						years = [str(year), str(int(year)+1), str(int(year)-1)]
-						item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0])) and any(y in str(x[1][0]) for y in years)]
-						if item == []:
-							item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[4][0]))]
-						if item == []:
-							item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0]))]
-						if item == []:
-							raise Exception()
-						if tvdb == '0':
-							tvdb = item[0][2]
-							tvdb = tvdb[0] or '0'
-						if imdb == '0':
-							imdb = item[0][3]
-							imdb = imdb[0] or '0'
-					except:
-						log_utils.error()
-						pass
-#################################
+					url = self.tvdb_by_query % (urllib.quote_plus(title))
+					item2 = client.request(url, timeout='20', error=True)
+					item2 = re.sub(r'[^\x00-\x7F]+', '', item2)
+					item2 = client.replaceHTMLCodes(item2)
+					item2 = client.parseDOM(item2, 'Series')
 
-				if tvdb == '0':
-					raise Exception()
+					if tvdb == '0': 
+						tvdb = client.parseDOM(item2, 'seriesid')[0] or '0'
+
+					if imdb == '0':
+						imdb = client.parseDOM(item2, 'IMDB_ID')[0] or '0'
 
 				try:
+					if self.tvdb_key == '' or tvdb == '0':
+						raise Exception()
 					url = self.tvdb_info_link % (tvdb, self.lang)
-					item3 = requests.get(url).content
+					item3 = client.request(url, timeout='20', error=True)
 				except:
 					item3 = None
 
 				if item3 is not None:
 					if poster == '0':
 						poster = client.parseDOM(item3, 'poster')[0]
-						poster = '%s%s' % (self.tvdb_image, poster) if poster else '0'
+						if poster != '' or poster is not None:
+							poster = self.tvdb_image + poster
 
 					fanart = client.parseDOM(item3, 'fanart')[0]
-					fanart = '%s%s' % (self.tvdb_image, fanart) if fanart else '0'
+					if fanart != '' or fanart is not None:
+						fanart = self.tvdb_image + fanart
 
 					banner = client.parseDOM(item3, 'banner')[0]
-					banner = '%s%s' % (self.tvdb_image, banner) if banner else '0'
+					if banner != '' or banner is not None:
+						banner = self.tvdb_image + banner
 
 					mpaa = client.parseDOM(item3, 'ContentRating')[0] or '0'
 
@@ -433,32 +388,31 @@ class tvshows:
 						status = client.parseDOM(item3, 'Status')[0] or '0'
 
 					if year == '0':
-						year = client.parseDOM(item3, 'FirstAired')[0] or '0'
-						if year != '0':
-							year = re.compile('(\d{4})').findall(year)[0] or '0'
+						year = client.parseDOM(item3, 'FirstAired')[0]
+						year = re.compile('(\d{4})').findall(year)[0] or '0'
 
-					if not plot:
+					if plot == '0':
 						plot = client.parseDOM(item3, 'Overview')[0] or '0'
 						plot = client.replaceHTMLCodes(plot)
 						try: plot = plot.encode('utf-8')
 						except: pass
 
 					airday = client.parseDOM(item3, 'Airs_DayOfWeek')[0] or '0'
-					# log_utils.log('airday = %s' % str(airday), __name__, log_utils.LOGDEBUG)
 					airtime = client.parseDOM(item3, 'Airs_Time')[0] or '0'
+###-----
 
 				item = {}
 				item = {'content': content, 'title': title, 'originaltitle': title, 'year': year, 'premiered': premiered, 'studio': studio, 'genre': genre, 'duration': duration, 'rating': rating, 'votes': votes, 
-							'mpaa': mpaa, 'castandart': castandart, 'plot': plot, 'tagline': '0', 'status': status, 'imdb': imdb, 'tvdb': tvdb, 'tmdb': tmdb, 'tvmaze': tvmaze, 'airday': airday, 'airtime': airtime, 'poster': poster,
-							'poster2': '0', 'banner': banner, 'banner2': '0', 'fanart': fanart, 'fanart2': '0', 'clearlogo': '0', 'clearart': '0', 'landscape': fanart, 'metacache': False, 'next': next}
+							'mpaa': mpaa, 'castandart': castandart, 'plot': plot, 'tagline': '0', 'status': status, 'imdb': imdb, 'tvdb': tvdb, 'tmdb': tmdb, 'airday': airday, 'airtime': airtime, 'poster': poster,
+							'poster2': '0', 'banner': banner,
+							'banner2': '0', 'fanart': fanart, 'fanart2': '0', 'clearlogo': '0', 'clearart': '0', 'landscape': fanart, 'metacache': False, 'next': next}
 
 				meta = {}
 				meta = {'tmdb': tmdb, 'imdb': imdb, 'tvdb': tvdb, 'lang': self.lang, 'user': self.user, 'item': item}
 
 				if self.disable_fanarttv != 'true':
 					from resources.lib.indexers import fanarttv
-					# extended_art = cache.get(fanarttv.get_tvshow_art, 168, tvdb)
-					extended_art = fanarttv.get_tvshow_art(tvdb)
+					extended_art = cache.get(fanarttv.get_tvshow_art, 168, tvdb)
 					if extended_art is not None:
 						item.update(extended_art)
 						meta.update(item)
@@ -482,10 +436,11 @@ class tvshows:
 			[i.start() for i in threads]
 			[i.join() for i in threads]
 
-			sorted_list = []
-			for i in sortList:
-				sorted_list += [item for item in self.list if str(item['tvmaze']) == str(i)]
-			return sorted_list
+			filter = [i for i in self.list if i['content'] == 'scripted']
+			filter += [i for i in self.list if not i['content'] == 'scripted']
+			self.list = filter
+
+			return self.list
 		except:
 			log_utils.error()
 			return

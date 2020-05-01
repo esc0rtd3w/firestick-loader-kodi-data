@@ -29,8 +29,6 @@ class PlaybackMonitorThread(threading.Thread):
 
         self.playback_json = playback_json
         self.video_id = self.playback_json.get('video_id')
-        self.channel_id = self.playback_json.get('channel_id')
-        self.video_status = self.playback_json.get('video_status')
 
         self.total_time = 0.0
         self.current_time = 0.0
@@ -53,7 +51,6 @@ class PlaybackMonitorThread(threading.Thread):
         playing_file = self.playback_json.get('playing_file')
         play_count = self.playback_json.get('play_count', 0)
         use_history = self.playback_json.get('use_history', False)
-        playback_history = self.playback_json.get('playback_history', False)
         playback_stats = self.playback_json.get('playback_stats')
         refresh_only = self.playback_json.get('refresh_only', False)
         try:
@@ -101,7 +98,7 @@ class PlaybackMonitorThread(threading.Thread):
         client = self.provider.get_client(self.context)
         is_logged_in = self.provider.is_logged_in()
 
-        if is_logged_in and report_url and use_history:
+        if is_logged_in and report_url:
             client.update_watch_history(self.video_id, report_url)
             self.context.log_debug('Playback start reported: |%s|' % self.video_id)
 
@@ -110,17 +107,7 @@ class PlaybackMonitorThread(threading.Thread):
         plugin_play_path = 'plugin://plugin.video.youtube/play/'
         video_id_param = 'video_id=%s' % self.video_id
 
-        notification_sent = False
-
         while player.isPlaying() and not self.context.abort_requested() and not self.stopped():
-            if not notification_sent:
-                notification_sent = True
-                self.context.send_notification('PlaybackStarted', {
-                    'video_id': self.video_id,
-                    'channel_id': self.channel_id,
-                    'status': self.video_status,
-                })
-
             last_total_time = self.total_time
             last_current_time = self.current_time
             last_segment_start = self.segment_start
@@ -194,7 +181,7 @@ class PlaybackMonitorThread(threading.Thread):
                 self.update_times(last_total_time, last_current_time, last_segment_start, last_percent_complete)
                 break
 
-            if is_logged_in and report_url and use_history:
+            if is_logged_in and report_url:
                 if first_report or (p_waited >= report_interval):
                     if first_report:
                         first_report = False
@@ -239,7 +226,7 @@ class PlaybackMonitorThread(threading.Thread):
 
             p_waited += p_wait_time
 
-        if is_logged_in and report_url and use_history:
+        if is_logged_in and report_url:
             client.update_watch_history(self.video_id, report_url
                                         .format(st=format(self.segment_start, '.3f'),
                                                 et=format(self.current_time, '.3f'),
@@ -250,11 +237,6 @@ class PlaybackMonitorThread(threading.Thread):
                                     format(self.current_time, '.3f'),
                                     self.percent_complete, state))
 
-        self.context.send_notification('PlaybackStopped', {
-            'video_id': self.video_id,
-            'channel_id': self.channel_id,
-            'status': self.video_status,
-        })
         self.context.log_debug('Playback stopped [%s]: %s secs of %s @ %s%%' %
                                (self.video_id, format(self.current_time, '.3f'),
                                 format(self.total_time, '.3f'), self.percent_complete))
@@ -268,7 +250,7 @@ class PlaybackMonitorThread(threading.Thread):
         if self.percent_complete >= settings.get_play_count_min_percent():
             play_count = '1'
             self.current_time = 0.0
-            if is_logged_in and report_url and use_history:
+            if is_logged_in and report_url:
                 client.update_watch_history(self.video_id, report_url
                                             .format(st=format(self.total_time, '.3f'),
                                                     et=format(self.total_time, '.3f'),
@@ -276,7 +258,7 @@ class PlaybackMonitorThread(threading.Thread):
                 self.context.log_debug('Playback reported [%s] @ 100%% state=%s' % (self.video_id, state))
 
         else:
-            if is_logged_in and report_url and use_history:
+            if is_logged_in and report_url:
                 client.update_watch_history(self.video_id, report_url
                                             .format(st=format(self.current_time, '.3f'),
                                                     et=format(self.current_time, '.3f'),
@@ -288,7 +270,7 @@ class PlaybackMonitorThread(threading.Thread):
 
             refresh_only = True
 
-        if playback_history:
+        if use_history:
             self.context.get_playback_history().update(self.video_id, play_count, self.total_time,
                                                        self.current_time, self.percent_complete)
 

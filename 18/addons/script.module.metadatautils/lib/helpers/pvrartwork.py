@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     pvrartwork.py
     Get metadata for Kodi PVR programs
-"""
+'''
 
 from utils import get_clean_image, DialogSelect, log_msg, extend_dict, ADDON_ID, download_artwork, normalize_string
 import xbmc
@@ -20,22 +20,22 @@ from datetime import timedelta
 
 
 class PvrArtwork(object):
-    """get artwork for kodi pvr"""
+    '''get artwork for kodi pvr'''
 
     def __init__(self, metadatautils):
-        """Initialize - optionaly provide our base MetadataUtils class"""
+        '''Initialize - optionaly provide our base MetadataUtils class'''
         self._mutils = metadatautils
         self.cache = self._mutils.cache
 
     def get_pvr_artwork(self, title, channel, genre="", manual_select=False, ignore_cache=False):
-        """
+        '''
             collect full metadata and artwork for pvr entries
             parameters: title (required)
             channel: channel name (required)
             year: year or date (optional)
             genre: (optional)
             the more optional parameters are supplied, the better the search results
-        """
+        '''
         details = {"art": {}}
         # try cache first
         cache_str = "pvr_artwork.%s.%s" % (title.lower(), channel.lower())
@@ -197,7 +197,7 @@ class PvrArtwork(object):
         return details
 
     def manual_set_pvr_artwork(self, title, channel, genre):
-        """manual override artwork options"""
+        '''manual override artwork options'''
 
         details = self.get_pvr_artwork(title, channel, genre)
         cache_str = details["cachestr"]
@@ -211,7 +211,7 @@ class PvrArtwork(object):
             self._mutils.cache.set(cache_str, details, expiration=timedelta(days=365))
 
     def pvr_artwork_options(self, title, channel, genre):
-        """show options for pvr artwork"""
+        '''show options for pvr artwork'''
         if not channel and genre:
             channel, genre = self.get_pvr_channel_and_genre(title)
         ignorechannels = self._mutils.addon.getSetting("pvr_art_ignore_channels").split("|")
@@ -265,7 +265,7 @@ class PvrArtwork(object):
             xbmc.executebuiltin("Addon.OpenSettings(%s)" % ADDON_ID)
 
     def pvr_proceed_lookup(self, title, channel, genre, recordingdetails):
-        """perform some checks if we can proceed with the lookup"""
+        '''perform some checks if we can proceed with the lookup'''
         filters = []
         if not title:
             filters.append("Title is empty")
@@ -298,7 +298,7 @@ class PvrArtwork(object):
 
     @staticmethod
     def get_mediatype_from_genre(genre):
-        """guess media type from genre for better matching"""
+        '''guess media type from genre for better matching'''
         media_type = ""
         if "movie" in genre.lower() or "film" in genre.lower():
             media_type = "movie"
@@ -322,7 +322,7 @@ class PvrArtwork(object):
         return media_type
 
     def get_searchtitle(self, title, channel):
-        """common logic to get a proper searchtitle from crappy titles provided by pvr"""
+        '''common logic to get a proper searchtitle from crappy titles provided by pvr'''
         if not isinstance(title, unicode):
             title = title.decode("utf-8")
         title = title.lower()
@@ -339,9 +339,9 @@ class PvrArtwork(object):
         return title
 
     def lookup_local_recording(self, title, channel):
-        """lookup actual recordings to get details for grouped recordings
+        '''lookup actual recordings to get details for grouped recordings
            also grab a thumb provided by the pvr
-        """
+        '''
         cache = self._mutils.cache.get("recordingdetails.%s%s" % (title, channel))
         if cache:
             return cache
@@ -362,7 +362,7 @@ class PvrArtwork(object):
         return details
 
     def lookup_tvdb(self, searchtitle, channel, manual_select=False):
-        """helper to select a match on tvdb"""
+        '''helper to select a match on tvdb'''
         tvdb_match = None
         searchtitle = searchtitle.lower()
         tvdb_result = self._mutils.thetvdb.search_series(searchtitle, True)
@@ -424,7 +424,7 @@ class PvrArtwork(object):
         return tvdb_match
 
     def get_custom_path(self, searchtitle, title):
-        """locate custom folder on disk as pvrart location"""
+        '''locate custom folder on disk as pvrart location'''
         title_path = ""
         custom_path = self._mutils.addon.getSetting("pvr_art_custom_path")
         if custom_path and self._mutils.addon.getSetting("pvr_art_custom") == "true":
@@ -448,7 +448,7 @@ class PvrArtwork(object):
         return title_path
 
     def lookup_custom_path(self, searchtitle, title):
-        """looks up a custom directory if it contains a subdir for our title"""
+        '''looks up a custom directory if it contains a subdir for our title'''
         details = {}
         details["art"] = {}
         title_path = self.get_custom_path(searchtitle, title)
@@ -478,7 +478,7 @@ class PvrArtwork(object):
         return details
 
     def lookup_local_library(self, title, media_type):
-        """lookup the title in the local video db"""
+        '''lookup the title in the local video db'''
         details = {}
         filters = [{"operator": "is", "field": "title", "value": title}]
         if not media_type or media_type == "tvshow":

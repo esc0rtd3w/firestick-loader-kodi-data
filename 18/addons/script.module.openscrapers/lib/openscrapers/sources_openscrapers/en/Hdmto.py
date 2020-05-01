@@ -41,13 +41,13 @@ class source:
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			t = cleantitle.geturl(title).replace('-', '+').replace('++', '+')
-			url = self.base_link + self.search_link % (t, year)
+			title = cleantitle.geturl(title).replace('-', '+').replace('++', '+')
+			url = self.base_link + self.search_link % (title, year)
 			r = client.request(url)
 			u = client.parseDOM(r, "div", attrs={"class": "col-md-2 col-sm-2 mrgb"})
 			for i in u:
-				link = re.compile('<a href="(.+?)"').findall(i)
-				for url in link:
+				t = re.compile('<a href="(.+?)"').findall(i)
+				for url in t:
 					if not cleantitle.get(title) in cleantitle.get(url):
 						continue
 					return url
@@ -55,18 +55,18 @@ class source:
 			return
 
 	def sources(self, url, hostDict, hostprDict):
-		sources = []
 		try:
 			hostDict = hostDict + hostprDict
+			sources = []
 
 			if url is None:
 				return sources
 
 			t = client.request(url)
+
 			r = re.compile('<iframe.+?src="(.+?)"').findall(t)
 
 			for url in r:
-				url = url.replace(" ", "+")
 				valid, host = source_utils.is_host_valid(url, hostDict)
 				if valid:
 					sources.append({'source': host, 'quality': 'HD', 'language': 'en', 'url': url, 'direct': False,

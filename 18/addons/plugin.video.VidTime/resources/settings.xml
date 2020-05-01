@@ -1,8 +1,0 @@
-<settings>
-	<category label="SETTINGS">
-		<setting type="lsep" label="REGISTER AT WWW.USTVNOW.COM FOR FREE ACCOUNT" />
-		<setting type="lsep" label="[COLOR red]LOGIN CREDENTIALS[/COLOR][CR]" />
-		<setting id="USER" type="text" label="EMAIL" default="" />
-		<setting id="PASS" type="text" label="PASSWORD" option="hidden" default="" />
-	</category>
-</settings>

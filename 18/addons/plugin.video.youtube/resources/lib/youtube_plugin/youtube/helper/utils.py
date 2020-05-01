@@ -45,57 +45,6 @@ def get_thumb_timestamp(minutes=15):
     return str(time.mktime(time.gmtime(minutes * 60 * (round(time.time() / (minutes * 60))))))
 
 
-def make_comment_item(context, provider, snippet, uri, total_replies=0):
-    author = '[B]{}[/B]'.format(kodion.utils.to_utf8(snippet['authorDisplayName']))
-    body = kodion.utils.to_utf8(snippet['textOriginal'])
-
-    label_props = None
-    plot_props = None
-    is_edited = (snippet['publishedAt'] != snippet['updatedAt'])
-    
-    str_likes = ('%.1fK' % (snippet['likeCount'] / 1000.0)) if snippet['likeCount'] > 1000 else str(snippet['likeCount'])
-    str_replies = ('%.1fK' % (total_replies / 1000.0)) if total_replies > 1000 else str(total_replies)
-
-    if snippet['likeCount'] and total_replies:
-        label_props = '[COLOR lime][B]+%s[/B][/COLOR]|[COLOR cyan][B]%s[/B][/COLOR]' % (str_likes, str_replies)
-        plot_props = '[COLOR lime][B]%s %s[/B][/COLOR]|[COLOR cyan][B]%s %s[/B][/COLOR]' % (str_likes,
-                     context.localize(provider.LOCAL_MAP['youtube.video.comments.likes']), str_replies,
-                     context.localize(provider.LOCAL_MAP['youtube.video.comments.replies']))
-    elif snippet['likeCount']:
-        label_props = '[COLOR lime][B]+%s[/B][/COLOR]' % str_likes
-        plot_props = '[COLOR lime][B]%s %s[/B][/COLOR]' % (str_likes,
-                     context.localize(provider.LOCAL_MAP['youtube.video.comments.likes']))
-    elif total_replies:
-        label_props = '[COLOR cyan][B]%s[/B][/COLOR]' % str_replies
-        plot_props = '[COLOR cyan][B]%s %s[/B][/COLOR]' % (str_replies,
-                     context.localize(provider.LOCAL_MAP['youtube.video.comments.replies']))
-    else:
-        pass # The comment has no likes or replies.
-
-    # Format the label of the comment item.
-    edited = '[B]*[/B]' if is_edited else ''
-    if label_props:
-        label = '{author} ({props}){edited} {body}'.format(author=author, props=label_props, edited=edited,
-                                                             body=body.replace('\n', ' '))
-    else:
-        label = '{author}{edited} {body}'.format(author=author, edited=edited, body=body.replace('\n', ' '))
-
-    # Format the plot of the comment item.
-    edited = ' (%s)' % context.localize(provider.LOCAL_MAP['youtube.video.comments.edited']) if is_edited else ''
-    if plot_props:
-        plot = '{author} ({props}){edited}[CR][CR]{body}'.format(author=author, props=plot_props,
-                                                               edited=edited, body=body)
-    else:
-        plot = '{author}{edited}[CR][CR]{body}'.format(author=author, edited=edited, body=body)
-
-    comment_item = kodion.items.DirectoryItem(label, uri)
-    comment_item.set_plot(plot)
-    comment_item.set_date_from_datetime(utils.datetime_parser.parse(snippet['publishedAt']))
-    if not uri:
-        comment_item.set_action(True) # Cosmetic, makes the item not a folder.
-    return comment_item
-
-
 def update_channel_infos(provider, context, channel_id_dict, subscription_id_dict=None, channel_items_dict=None):
     if subscription_id_dict is None:
         subscription_id_dict = {}
@@ -248,24 +197,21 @@ def update_video_infos(provider, context, video_id_dict, playlist_item_id_dict=N
         playlist_item_id_dict = {}
 
     resource_manager = provider.get_resource_manager(context)
-    video_data = resource_manager.get_videos(video_ids, live_details=live_details,
-                                             suppress_errors=True)
+    video_data = resource_manager.get_videos(video_ids, live_details=live_details)
+
     thumb_size = settings.use_thumbnail_size()
     thumb_stamp = get_thumb_timestamp()
     for video_id in list(video_data.keys()):
         datetime = None
-        yt_item = video_data.get(video_id)
+        yt_item = video_data[video_id]
         video_item = video_id_dict[video_id]
-
-        # set mediatype
-        video_item.set_mediatype('video')  # using video
-
-        if not yt_item:
-            continue
 
         snippet = yt_item['snippet']  # crash if not conform
         play_data = yt_item['play_data']
         video_item.live = snippet.get('liveBroadcastContent') == 'live'
+
+        # set mediatype
+        video_item.set_mediatype('video')  # using video
 
         # duration
         if not video_item.live and use_play_data and play_data.get('total_time'):
@@ -452,8 +398,6 @@ def update_video_infos(provider, context, video_id_dict, playlist_item_id_dict=N
             yt_context_menu.append_play_with_subtitles(context_menu, provider, context, video_id)
             yt_context_menu.append_play_audio_only(context_menu, provider, context, video_id)
 
-        yt_context_menu.append_play_ask_for_quality(context_menu, provider, context, video_id)
-
         if len(context_menu) > 0:
             video_item.set_context_menu(context_menu, replace=replace_context_menu)
 
@@ -462,14 +406,11 @@ def update_play_info(provider, context, video_id, video_item, video_stream, use_
     settings = context.get_settings()
     ui = context.get_ui()
     resource_manager = provider.get_resource_manager(context)
-
-    video_data = resource_manager.get_videos([video_id], suppress_errors=True)
+    video_data = resource_manager.get_videos([video_id])
 
     meta_data = video_stream.get('meta', None)
     thumb_size = settings.use_thumbnail_size()
     image = None
-
-    video_item.video_id = video_id
 
     if meta_data:
         video_item.set_subtitles(meta_data.get('subtitles', None))
@@ -477,6 +418,18 @@ def update_play_info(provider, context, video_id, video_item, video_stream, use_
 
     if 'headers' in video_stream:
         video_item.set_headers(video_stream['headers'])
+
+    yt_item = video_data[video_id]
+
+    snippet = yt_item['snippet']  # crash if not conform
+    play_data = yt_item['play_data']
+    video_item.live = snippet.get('liveBroadcastContent') == 'live'
+
+    video_item.video_id = video_id
+
+    # set the title
+    if not video_item.get_title():
+        video_item.set_title(snippet['title'])
 
     # set uses_dash
     video_item.set_use_dash(settings.use_dash())
@@ -493,48 +446,6 @@ def update_play_info(provider, context, video_id, video_item, video_stream, use_
     video_item.set_license_key(license_info.get('proxy'))
     ui.set_home_window_property('license_url', license_info.get('url'))
     ui.set_home_window_property('license_token', license_info.get('token'))
-
-    """
-    This is experimental. We try to get the most information out of the title of a video.
-    This is not based on any language. In some cases this won't work at all.
-    TODO: via language and settings provide the regex for matching episode and season.
-    """
-
-    for regex in __RE_SEASON_EPISODE_MATCHES__:
-        re_match = regex.search(video_item.get_name())
-        if re_match:
-            if 'season' in re_match.groupdict():
-                video_item.set_season(int(re_match.group('season')))
-
-            if 'episode' in re_match.groupdict():
-                video_item.set_episode(int(re_match.group('episode')))
-            break
-
-    if video_item.live:
-        video_item.set_play_count(0)
-
-    if image:
-        if video_item.live:
-            image = ''.join([image, '?ct=', get_thumb_timestamp()])
-        video_item.set_image(image)
-
-    # set fanart
-    video_item.set_fanart(provider.get_fanart(context))
-
-    if not video_data:
-        return video_item
-
-    # requires API
-    # ===============
-    yt_item = video_data[video_id]
-
-    snippet = yt_item['snippet']  # crash if not conform
-    play_data = yt_item['play_data']
-    video_item.live = snippet.get('liveBroadcastContent') == 'live'
-
-    # set the title
-    if not video_item.get_title():
-        video_item.set_title(snippet['title'])
 
     # duration
     if not video_item.live and use_play_data and play_data.get('total_time'):
@@ -559,6 +470,25 @@ def update_play_info(provider, context, video_id, video_item, video_stream, use_
 
         if play_data.get('last_played'):
             video_item.set_last_played(play_data.get('last_played'))
+    elif video_item.live:
+        video_item.set_play_count(0)
+
+    """
+    This is experimental. We try to get the most information out of the title of a video.
+    This is not based on any language. In some cases this won't work at all.
+    TODO: via language and settings provide the regex for matching episode and season.
+    """
+    # video_item.set_season(1)
+    # video_item.set_episode(1)
+    for regex in __RE_SEASON_EPISODE_MATCHES__:
+        re_match = regex.search(video_item.get_name())
+        if re_match:
+            if 'season' in re_match.groupdict():
+                video_item.set_season(int(re_match.group('season')))
+
+            if 'episode' in re_match.groupdict():
+                video_item.set_episode(int(re_match.group('episode')))
+            break
 
     # plot
     channel_name = snippet.get('channelTitle', '')
@@ -581,9 +511,12 @@ def update_play_info(provider, context, video_id, video_item, video_stream, use_
     if not image:
         image = get_thumbnail(thumb_size, snippet.get('thumbnails', {}))
 
-        if video_item.live and image:
-            image = ''.join([image, '?ct=', get_thumb_timestamp()])
-        video_item.set_image(image)
+    if video_item.live and image:
+        image = ''.join([image, '?ct=', get_thumb_timestamp()])
+    video_item.set_image(image)
+
+    # set fanart
+    video_item.set_fanart(provider.get_fanart(context))
 
     return video_item
 

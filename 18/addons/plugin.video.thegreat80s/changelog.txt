@@ -1,9 +1,0 @@
-v1.0.3
-  - version bump for Python to 2.1.0
-
-v1.0.2
-  - changed Play mechanism to fix 'Add to Favourites'
-  - removed need for YouTube addon for playing YouTube hosted videos
-
-v1.0.0:
-  - initial release

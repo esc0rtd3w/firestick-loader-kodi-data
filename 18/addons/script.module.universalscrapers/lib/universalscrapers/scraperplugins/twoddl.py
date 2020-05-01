@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Universal Scrapers
-#checked 03/04/2020
+# Universal Scrapers Bug
+#checked 15/04/2019
 
 import re, time, xbmcaddon
 from universalscrapers.scraper import Scraper
@@ -17,7 +17,7 @@ class twoddl(Scraper):
     sources = []
 
     def __init__(self):
-        self.base_link = 'https://onceddl.com/'
+        self.base_link = 'https://2ddl.vg'
 
 
     def scrape_movie(self, title, year, imdb, debrid=False):
@@ -25,10 +25,10 @@ class twoddl(Scraper):
             start_time = time.time()
             if not debrid:
                 return []
-            start_url = "%s?s=%s" % (self.base_link, title.replace(' ', '+').lower())
+            start_url = "%s/?s=%s" % (self.base_link, title.replace(' ', '+').lower())
             search_id = clean_search(title.lower())
             OPEN = client.request(start_url)
-            content = re.compile('class="item-post".+?<h3><a href="(.+?)"', re.DOTALL).findall(OPEN)
+            content = re.compile('<h2><a href="(.+?)"', re.DOTALL).findall(OPEN)
             print content
             for url in content:
             	#print url+'<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
@@ -47,12 +47,12 @@ class twoddl(Scraper):
                 return []
             season_url = "0%s" % season if len(season) < 2 else season
             episode_url = "0%s" % episode if len(episode) < 2 else episode
-            sea_epi = 'S%sE%s' % (season_url, episode_url)
+            sea_epi = 's%se%s' % (season_url, episode_url)
 
-            start_url = "%s?s=%s+%s" % (self.base_link, title.replace(' ', '+').replace('++','n ').lower(), sea_epi)
-            #print start_url
+            start_url = "%s/?s=%s+%s" % (self.base_link, title.replace(' ', '+').lower(), sea_epi)
+
             OPEN = client.request(start_url)
-            content = re.compile('class="item-post".+?<h3><a href="(.+?)"', re.DOTALL).findall(OPEN)
+            content = re.compile('<h2><a href="([^"]+)"', re.DOTALL).findall(OPEN)
             for url in content:
                 if not clean_title(title).lower() in clean_title(url).lower():
                     continue
@@ -66,8 +66,8 @@ class twoddl(Scraper):
     def get_source(self, url, title, year, season, episode, start_time):
         try:
             links = client.request(url)
-            #print links
-            LINK = re.compile('class="single-link".+?a href="(.+?)"', re.DOTALL).findall(links)
+            print links
+            LINK = re.compile('class="anch_multilink".+?href="(.+?)">', re.DOTALL).findall(links)
             #print LINK
             count = 0
             for url in LINK:

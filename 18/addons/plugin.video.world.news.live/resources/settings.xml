@@ -1,8 +1,0 @@
-<settings>
-   <setting id="max_bitrate" type="number" label="30005" default="9999" />   
-   <setting id="make_playlists" type="bool" label="30004" default="false" />
-   <setting id="show_empty_cat" type="bool" label="30000" default="false"/>
-   <setting id="http_proxy" type="text" label="30001" default="" />
-   <setting id="http_proxy_port" type="text" label="30002" default="" />
-   <setting id="worst_channel_support" type="enum" label="30003" values="Bad|Ugly|Good" default="1" />
-</settings>

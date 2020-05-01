@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# created by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,6 +28,7 @@ import re
 import urllib
 import urlparse
 
+from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -36,14 +36,11 @@ from openscrapers.modules import source_utils
 
 class source:
 	def __init__(self):
-		self.priority = 1
+		self.priority = 0
 		self.language = ['en']
 		self.domain = ['bitlordsearch.com']
 		self.base_link = 'http://www.bitlordsearch.com'
 		self.search_link = '/search?q=%s'
-		# bitlords api-possible future switch
-		# self.search_link = '/get_list'
-		self.min_seeders = 1
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -101,66 +98,51 @@ class source:
 			url = urlparse.urljoin(self.base_link, url)
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
-			r = client.request(url)
-			if r is None:
-				return sources
-			links = zip(client.parseDOM(r, 'a', attrs={'class': 'btn btn-default magnet-button stats-action banner-button'}, ret='href'), client.parseDOM(r, 'td', attrs={'class': 'size'}), client.parseDOM(r, 'td', attrs={'class': 'seeds rescrap'}))
+			try:
+				r = client.request(url)
+				links = zip(client.parseDOM(r, 'a', attrs={'class': 'btn btn-default magnet-button stats-action banner-button'}, ret='href'), client.parseDOM(r, 'td', attrs={'class': 'size'}))
 
-			for link in links:
-				try:
-					url = urllib.unquote_plus(link[0]).replace('&amp;', '&').replace(' ', '.')
-					url = url.encode('ascii', errors='ignore').decode('ascii', errors='ignore')
+				for link in links:
+					url = link[0].replace('&amp;', '&')
 					url = re.sub(r'(&tr=.+)&dn=', '&dn=', url) # some links on bitlord &tr= before &dn=
 					url = url.split('&tr=')[0]
-					url = url.split('&xl=')[0]
 					if 'magnet' not in url:
 						continue
 
-					hash = re.compile('btih:(.*?)&').findall(url)[0]
+					size = int(link[1])
+
+					if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
+						continue
 
 					name = url.split('&dn=')[1]
-					name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
-					if name.startswith('www'):
-						try:
-							name = re.sub(r'www(.*?)\W{2,10}', '', name)
-						except:
-							name = name.split('-.', 1)[1].lstrip()
-
-					if source_utils.remove_lang(name):
+					t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+					if cleantitle.get(t) != cleantitle.get(title):
 						continue
 
-					match = source_utils.check_title(title, name, hdlr, data['year'])
-					if not match:
+					if hdlr not in name:
 						continue
-
-					try:
-						seeders = int(link[2].replace(',', ''))
-						if self.min_seeders > seeders:
-							continue
-					except:
-						seeders = 0
-						pass
 
 					quality, info = source_utils.get_release_quality(name, url)
 
 					try:
-						size = int(link[1])
-						size = str(size) + ' GB' if len(str(size)) == 1 else str(size) + ' MB'
-						dsize, isize = source_utils._size(size)
-						info.insert(0, isize)
+						if size < 5.12: raise Exception()
+						size = float(size) / 1024
+						size = '%.2f GB' % size
+						info.append(size)
 					except:
-						source_utils.scraper_error('BITLORD')
-						dsize = 0
 						pass
 
 					info = ' | '.join(info)
 
-					sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
-												'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
-				except:
-					source_utils.scraper_error('BITLORD')
-					return sources
-			return sources
+					sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
+												'info': info, 'direct': False, 'debridonly': True})
+
+				return sources
+
+			except:
+				source_utils.scraper_error('BITLORD')
+				return sources
+
 		except:
 			source_utils.scraper_error('BITLORD')
 			return sources

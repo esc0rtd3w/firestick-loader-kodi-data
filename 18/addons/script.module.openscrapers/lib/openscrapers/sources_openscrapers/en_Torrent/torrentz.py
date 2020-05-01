@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# created by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,7 +28,7 @@ import re
 import urllib
 import urlparse
 
-from openscrapers.modules import cfscrape
+from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -39,10 +38,9 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['torrentz2.eu', 'torrentz2.is']
+		self.domains = ['torrentz2.eu']
 		self.base_link = 'https://torrentz2.eu'
 		self.search_link = '/search?f=%s'
-		self.min_seeders = 1
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -77,7 +75,6 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
-		scraper = cfscrape.create_scraper()
 		sources = []
 		try:
 			if url is None:
@@ -102,56 +99,53 @@ class source:
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
 			try:
-				r = scraper.get(url).content
+				r = client.request(url)
+
 				posts = client.parseDOM(r, 'div', attrs={'class': 'results'})[0]
 				posts = client.parseDOM(posts, 'dl')
 
 				for post in posts:
 					links = re.findall('<dt><a href=/(.+)</a>', post, re.DOTALL)
-					try:
-						seeders = int(re.findall('<span>([0-9]+|[0-9]+,[0-9]+)</span>', post, re.DOTALL)[0].replace(',', ''))
-						if self.min_seeders > seeders:
-							continue
-					except:
-						seeders = 0
-						pass
 
 					for link in links:
-						hash = link.split('>')[0]
-						name = link.split('>')[1]
-						name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
-						if name.startswith('www'):
-							try:
-								name = re.sub(r'www(.*?)\W{2,10}', '', name)
-							except:
-								name = name.split('-.', 1)[1].lstrip()
-						if source_utils.remove_lang(name):
+						magnet = link.split('</a>')[0]
+						hash = 'magnet:?xt=urn:btih:' + magnet.split('>')[0]
+						dn = '&dn=' + magnet.split('>')[1]
+						url = hash + dn
+
+						if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
 							continue
 
-						match = source_utils.check_title(title, name, hdlr, data['year'])
-						if not match:
+						name = url.split('&dn=')[1]
+						t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+						if cleantitle.get(t) != cleantitle.get(title):
 							continue
 
-						url = 'magnet:?xt=urn:btih:%s&dn=%s' % (hash, name)
+						if hdlr not in name:
+							continue
 
 						quality, info = source_utils.get_release_quality(name, url)
 
 						try:
 							size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
-							dsize, isize = source_utils._size(size)
-							info.insert(0, isize)
+							div = 1 if size.endswith('GB') else 1024
+							size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
+							size = '%.2f GB' % size
+							info.append(size)
 						except:
-							dsize = 0
 							pass
 
 						info = ' | '.join(info)
 
-						sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
-													'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
+						sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
+												'info': info, 'direct': False, 'debridonly': True})
+
 				return sources
+
 			except:
 				source_utils.scraper_error('TORRENTZ')
 				return
+
 		except:
 			source_utils.scraper_error('TORRENTZ')
 			return sources

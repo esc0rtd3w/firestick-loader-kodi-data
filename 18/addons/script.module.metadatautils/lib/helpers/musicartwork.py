@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     musicartwork.py
     Get metadata for music
-"""
+'''
 
 from utils import log_msg, extend_dict, ADDON_ID, strip_newlines, download_artwork
 from mbrainz import MusicBrainz
@@ -19,10 +19,10 @@ from simplecache import use_cache
 
 
 class MusicArtwork(object):
-    """get metadata and artwork for music"""
+    '''get metadata and artwork for music'''
 
     def __init__(self, metadatautils):
-        """Initialize - optionaly provide our base MetadataUtils class"""
+        '''Initialize - optionaly provide our base MetadataUtils class'''
         self._mutils = metadatautils
         self.cache = self._mutils.cache
         self.lastfm = self._mutils.lastfm
@@ -30,10 +30,10 @@ class MusicArtwork(object):
         self.audiodb = self._mutils.audiodb
 
     def get_music_artwork(self, artist, album, track, disc, ignore_cache=False, flush_cache=False, manual=False):
-        """
+        '''
             get music metadata by providing artist and/or album/track
             returns combined result of artist and album metadata
-        """
+        '''
         if artist == track or album == track:
             track = ""
         artists = self.get_all_artists(artist, track)
@@ -67,7 +67,7 @@ class MusicArtwork(object):
         return details
 
     def music_artwork_options(self, artist, album, track, disc):
-        """show options for music artwork"""
+        '''show options for music artwork'''
         options = []
         options.append(self._mutils.addon.getLocalizedString(32028))  # Refresh item (auto lookup)
         options.append(self._mutils.addon.getLocalizedString(32036))  # Choose art
@@ -87,7 +87,7 @@ class MusicArtwork(object):
             xbmc.executebuiltin("Addon.OpenSettings(%s)" % ADDON_ID)
 
     def get_artists_metadata(self, artists, album, track, ignore_cache=False, flush_cache=False, manual=False):
-        """collect artist metadata for all artists"""
+        '''collect artist metadata for all artists'''
         artist_details = {"art": {}}
         # for multi artist songs/albums we grab details from all artists
         if len(artists) == 1:
@@ -99,6 +99,7 @@ class MusicArtwork(object):
             # multi-artist track
             # The first artist with details is considered the main artist
             # all others are assumed as featuring artists
+            artist_details = {"art": {}}
             feat_artist_details = []
             for artist in artists:
                 if not (artist_details.get("plot") or artist_details.get("art")):
@@ -137,7 +138,7 @@ class MusicArtwork(object):
 
     # pylint: disable-msg=too-many-local-variables
     def get_artist_metadata(self, artist, album, track, ignore_cache=False, flush_cache=False, manual=False):
-        """collect artist metadata for given artist"""
+        '''collect artist metadata for given artist'''
         details = {"art": {}}
         cache_str = "music_artwork.artist.%s" % artist.lower()
         # retrieve details from cache
@@ -222,11 +223,12 @@ class MusicArtwork(object):
         return details
 
     def get_album_metadata(self, artist, album, track, disc, ignore_cache=False, flush_cache=False, manual=False):
-        """collect all album metadata"""
+        '''collect all album metadata'''
         cache_str = "music_artwork.album.%s.%s.%s" % (artist.lower(), album.lower(), disc.lower())
         if not album:
             cache_str = "music_artwork.album.%s.%s" % (artist.lower(), track.lower())
-        details = {"art": {}, "cachestr": cache_str}
+        details = {"art": {}}
+        details["cachestr"] = cache_str
 
         # retrieve details from cache
         cache = self._mutils.cache.get(cache_str)
@@ -301,7 +303,7 @@ class MusicArtwork(object):
     # pylint: enable-msg=too-many-local-variables
 
     def get_artist_kodi_metadata(self, artist):
-        """get artist details from the kodi database"""
+        '''get artist details from the kodi database'''
         details = {}
         filters = [{"operator": "is", "field": "artist", "value": artist}]
         result = self._mutils.kodidb.artists(filters=filters, limits=(0, 1))
@@ -363,7 +365,7 @@ class MusicArtwork(object):
         return details
 
     def get_album_kodi_metadata(self, artist, album, track, disc):
-        """get album details from the kodi database"""
+        '''get album details from the kodi database'''
         details = {}
         filters = [{"operator": "contains", "field": "artist", "value": artist}]
         if artist and track and not album:
@@ -411,7 +413,7 @@ class MusicArtwork(object):
         return details
 
     def get_mb_artist_id(self, artist, album, track):
-        """lookup musicbrainz artist id with query of artist and album/track"""
+        '''lookup musicbrainz artist id with query of artist and album/track'''
         artistid = self.mbrainz.get_artist_id(artist, album, track)
         if not artistid and self._mutils.addon.getSetting("music_art_scraper_lfm") == "true":
             artistid = self.lastfm.get_artist_id(artist, album, track)
@@ -420,7 +422,7 @@ class MusicArtwork(object):
         return artistid
 
     def get_mb_album_id(self, artist, album, track):
-        """lookup musicbrainz album id with query of artist and album/track"""
+        '''lookup musicbrainz album id with query of artist and album/track'''
         albumid = self.mbrainz.get_album_id(artist, album, track)
         if not albumid and self._mutils.addon.getSetting("music_art_scraper_lfm") == "true":
             albumid = self.lastfm.get_album_id(artist, album, track)
@@ -429,7 +431,7 @@ class MusicArtwork(object):
         return albumid
 
     def manual_set_music_artwork(self, details, mediatype):
-        """manual override artwork options"""
+        '''manual override artwork options'''
         from utils import manual_set_artwork
         if mediatype == "artist" and "artist" in details:
             header = "%s: %s" % (xbmc.getLocalizedString(13511), details["artist"])
@@ -459,7 +461,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def get_artistpath_by_songpath(songpath, artist):
-        """get the artist path on disk by listing the song's path"""
+        '''get the artist path on disk by listing the song's path'''
         result = ""
         if "\\" in songpath:
             delim = "\\"
@@ -475,7 +477,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def get_albumpath_by_songpath(songpath):
-        """get the album path on disk by listing the song's path"""
+        '''get the album path on disk by listing the song's path'''
         if "\\" in songpath:
             delim = "\\"
         else:
@@ -484,7 +486,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def lookup_artistart_in_folder(folderpath):
-        """lookup artwork in given folder"""
+        '''lookup artwork in given folder'''
         artwork = {}
         if not folderpath or not xbmcvfs.exists(folderpath):
             return artwork
@@ -512,7 +514,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def lookup_albumart_in_folder(folderpath):
-        """lookup artwork in given folder"""
+        '''lookup artwork in given folder'''
         artwork = {}
         if not folderpath or not xbmcvfs.exists(folderpath):
             return artwork
@@ -530,7 +532,7 @@ class MusicArtwork(object):
         return artwork
 
     def get_custom_album_path(self, custom_path, artist, album, disc):
-        """try to locate the custom path for the album"""
+        '''try to locate the custom path for the album'''
         artist_path = self.get_customfolder_path(custom_path, artist)
         album_path = ""
         if artist_path:
@@ -548,7 +550,7 @@ class MusicArtwork(object):
         return album_path
 
     def get_customfolder_path(self, customfolder, foldername, sublevel=False):
-        """search recursively (max 2 levels) for a specific folder"""
+        '''search recursively (max 2 levels) for a specific folder'''
         cachestr = "customfolder_path.%s.%s" % (customfolder, foldername)
         folder_path = self.cache.get(cachestr)
         if not folder_path:
@@ -581,7 +583,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def get_clean_title(title):
-        """strip all unwanted characters from track name"""
+        '''strip all unwanted characters from track name'''
         title = title.split("(")[0]
         title = title.split("[")[0]
         title = title.split("ft.")[0]
@@ -597,7 +599,7 @@ class MusicArtwork(object):
 
     @staticmethod
     def get_all_artists(artist, track):
-        """extract multiple artists from both artist and track string"""
+        '''extract multiple artists from both artist and track string'''
         artists = []
         feat_artists = []
 

@@ -77,30 +77,21 @@ class Player(xbmc.Player):
 			item = control.item(path=url)
 
 			if self.media_type == 'episode':
-				self.episodeIDS = meta.get('episodeIDS', '0')
-				item.setUniqueIDs(self.episodeIDS)
 				if control.setting('disable.player.art') == 'true':
 					item.setArt({'thumb': thumb, 'tvshow.poster': season_poster, 'season.poster': season_poster, 'tvshow.fanart': fanart})
 				else:
 					item.setArt({'tvshow.clearart': clearart, 'tvshow.clearlogo': clearlogo, 'tvshow.discart': discart, 'thumb': thumb, 'tvshow.poster': season_poster, 'season.poster': season_poster, 'tvshow.fanart': fanart})
 			else:
-				item.setUniqueIDs(self.ids)
 				if control.setting('disable.player.art') == 'true':
 					item.setArt({'thumb': thumb, 'poster': poster, 'fanart': fanart})
 				else:
 					item.setArt({'clearart': clearart, 'clearlogo': clearlogo, 'discart': discart, 'thumb': thumb, 'poster': poster, 'fanart': fanart})
 
-			# self.tvdb_key = 'N1I4U1paWDkwVUE5WU1CVQ=='
-			# self.imdb_user = control.setting('imdb.user').replace('ur', '')
-			# self.user = str(self.imdb_user) + str(self.tvdb_key)
-			# self.lang = control.apiLanguage()['tvdb']
-			# items = [{'imdb': imdb, 'tvdb': tvdb}]
-			# list = metacache.fetch(items, self.lang, self.user)
-			# if 'castandart' in str(list):
-				# item.setCast(list[0].get('castandart', ''))
-
-			# test = control.infoLabel('ListItem.thumb')
-			# log_utils.log('thumb = %s' % test, __name__, log_utils.LOGDEBUG)
+			if self.media_type == 'episode':
+				self.episodeIDS = meta.get('episodeIDS', '0')
+				item.setUniqueIDs(self.episodeIDS)
+			else:
+				item.setUniqueIDs(self.ids)
 
 			if 'castandart' in meta:
 				item.setCast(meta.get('castandart', ''))
@@ -128,15 +119,27 @@ class Player(xbmc.Player):
 		try:
 			if meta is None:
 				raise Exception()
-			poster = meta.get('poster')
+
+			poster1 = meta.get('poster')
+			poster2 = meta.get('poster2')
+			poster3 = meta.get('poster3')
+			poster = poster3 or poster2 or poster1 or control.addonPoster()
+
 			thumb = meta.get('thumb')
 			thumb = thumb or poster or control.addonThumb()
+
 			season_poster = meta.get('season_poster') or poster
-			fanart = meta.get('fanart')
+
+			fanart1 = meta.get('fanart')
+			fanart2 = meta.get('fanart2')
+			fanart3 = meta.get('fanart3')
+			fanart = fanart3 or fanart2 or fanart1 or control.addonFanart()
+
 			banner = meta.get('banner')
 			clearart = meta.get('clearart')
 			clearlogo = meta.get('clearlogo')
 			discart = meta.get('discart')
+
 			if 'mediatype' not in meta:
 				meta.update({'mediatype': 'episode' if 'episode' in meta and meta['episode'] else 'movie'})
 
@@ -175,6 +178,8 @@ class Player(xbmc.Player):
 				self.DBID = meta.get('movieid')
 
 			poster = thumb = meta.get('thumbnail')
+
+			# return (poster, thumb, '', '', '', '', '', '', meta)
 			return (poster, '', '', '', '', '', '', '', meta)
 		except:
 			log_utils.error()
@@ -218,6 +223,7 @@ class Player(xbmc.Player):
 				self.DBID = meta.get('episodeid')
 
 			thumb = meta['thumbnail']
+			# return (poster, thumb, '', '', '', '', '', '', meta) # poster gets dropped if also passed thumb from episode
 			return (poster, '', '', '', '', '', '', '', meta)
 		except:
 			log_utils.error()
@@ -285,7 +291,7 @@ class Player(xbmc.Player):
 				except:
 					pass
 
-				watcher = (self.getWatchedPercent() >= 80)
+				watcher = (self.getWatchedPercent() >= 90)
 				property = control.window.getProperty(pname)
 
 				if self.media_type == 'movie':
@@ -293,9 +299,9 @@ class Player(xbmc.Player):
 						if watcher is True and property != '7':
 							control.window.setProperty(pname, '7')
 							playcount.markMovieDuringPlayback(self.imdb, '7')
-						# elif watcher is False and property != '6':
-							# control.window.setProperty(pname, '6')
-							# playcount.markMovieDuringPlayback(self.imdb, '6')
+						elif watcher is False and property != '6':
+							control.window.setProperty(pname, '6')
+							playcount.markMovieDuringPlayback(self.imdb, '6')
 					except:
 						continue
 					xbmc.sleep(2000)
@@ -305,9 +311,9 @@ class Player(xbmc.Player):
 						if watcher is True and property != '7':
 							control.window.setProperty(pname, '7')
 							playcount.markEpisodeDuringPlayback(self.imdb, self.tvdb, self.season, self.episode, '7')
-						# elif watcher is False and property != '6':
-							# control.window.setProperty(pname, '6')
-							# playcount.markEpisodeDuringPlayback(self.imdb, self.tvdb, self.season, self.episode, '6')
+						elif watcher is False and property != '6':
+							control.window.setProperty(pname, '6')
+							playcount.markEpisodeDuringPlayback(self.imdb, self.tvdb, self.season, self.episode, '6')
 					except:
 						continue
 					xbmc.sleep(2000)
@@ -317,6 +323,7 @@ class Player(xbmc.Player):
 				xbmc.sleep(1000)
 				continue
 
+		# xbmc.sleep(3000)
 		control.window.clearProperty(pname)
 		# self.onPlayBackEnded()
 
@@ -416,6 +423,7 @@ class Player(xbmc.Player):
 				xbmc.sleep(1000)
 
 		if self.offset != '0' and self.playback_resumed is False:
+			# log_utils.log('Seeking %.2f minutes' % (float(self.offset) / 60), __name__, log_utils.LOGDEBUG)
 			self.seekTime(float(self.offset))
 			self.playback_resumed = True
 
@@ -427,17 +435,17 @@ class Player(xbmc.Player):
 
 
 	def onPlayBackStopped(self):
+		# xbmc.sleep(3000)
 		Bookmarks().reset(self.current_time, self.media_length, self.name, self.year)
+		if control.setting('crefresh') == 'true':
+			xbmc.executebuiltin('Container.Refresh')
 		try:
-			if (self.current_time / self.media_length) >= .80:
-				self.libForPlayback()
+			if self.current_time != 0 and self.media_length == 0:
+				if (self.current_time / self.media_length) >= .90:
+					self.libForPlayback()
 		except:
 			pass
-		if control.setting('crefresh') == 'true':
-			xbmc.sleep(2000)
-			xbmc.executebuiltin('Container.Refresh')
 		# control.playlist.clear()
-		control.trigger_widget_refresh()
 		xbmc.log('onPlayBackStopped callback', 2)
 
 
@@ -445,9 +453,7 @@ class Player(xbmc.Player):
 		Bookmarks().reset(self.current_time, self.media_length, self.name, self.year)
 		self.libForPlayback()
 		if control.setting('crefresh') == 'true':
-			xbmc.sleep(2000)
 			xbmc.executebuiltin('Container.Refresh')
-		control.trigger_widget_refresh()
 		xbmc.log('onPlayBackEnded callback', 2)
 
 
@@ -572,7 +578,7 @@ class Subtitles:
 			if subLang == langs[0]:
 				raise Exception()
 
-			server = xmlrpclib.Server('https://api.opensubtitles.org/xml-rpc', verbose=0)
+			server = xmlrpclib.Server('http://api.opensubtitles.org/xml-rpc', verbose=0)
 			token = server.LogIn('', '', 'en', 'XBMC_Subtitles_v1')
 			token = token['token']
 			sublanguageid = ','.join(langs)
@@ -635,7 +641,7 @@ class Bookmarks:
 		self.offset = '0'
 
 
-	def get(self, name, year='0', ck=False):
+	def get(self, name, year='0'):
 		if control.setting('bookmarks') != 'true':
 			return self.offset
 
@@ -651,7 +657,7 @@ class Bookmarks:
 
 		dbcon = database.connect(control.bookmarksFile)
 		dbcur = dbcon.cursor()
-		dbcur.execute("CREATE TABLE IF NOT EXISTS bookmark (""idFile TEXT, ""timeInSeconds TEXT, ""Name TEXT, ""year TEXT, ""UNIQUE(idFile)"");")
+		dbcur.execute("CREATE TABLE IF NOT EXISTS bookmark (""idFile TEXT, ""timeInSeconds TEXT, ""UNIQUE(idFile)"");")
 		dbcur.execute("SELECT * FROM bookmark WHERE idFile = '%s'" % idFile)
 		match = dbcur.fetchone()
 		dbcon.close()
@@ -660,9 +666,7 @@ class Bookmarks:
 			return self.offset
 
 		self.offset = str(match[1])
-
-		if ck:
-			return self.offset
+		# dbcon.commit()
 
 		minutes, seconds = divmod(float(self.offset), 60)
 		hours, minutes = divmod(minutes, 60)
@@ -699,11 +703,12 @@ class Bookmarks:
 		control.makeFile(control.dataPath)
 		dbcon = database.connect(control.bookmarksFile)
 		dbcur = dbcon.cursor()
-		dbcur.execute("CREATE TABLE IF NOT EXISTS bookmark (""idFile TEXT, ""timeInSeconds TEXT, ""Name TEXT, ""year TEXT, ""UNIQUE(idFile)"");")
+
+		dbcur.execute("CREATE TABLE IF NOT EXISTS bookmark (""idFile TEXT, ""timeInSeconds TEXT, ""UNIQUE(idFile)"");")
 		dbcur.execute("DELETE FROM bookmark WHERE idFile = '%s'" % idFile)
 
 		if ok:
-			dbcur.execute("INSERT INTO bookmark Values (?, ?, ?, ?)", (idFile, timeInSeconds, name, year))
+			dbcur.execute("INSERT INTO bookmark Values (?, ?)", (idFile, timeInSeconds))
 
 			minutes, seconds = divmod(float(timeInSeconds), 60)
 			hours, minutes = divmod(minutes, 60)

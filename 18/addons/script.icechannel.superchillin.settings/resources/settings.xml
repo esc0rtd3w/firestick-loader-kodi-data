@@ -1,7 +1,0 @@
-<settings>
-<category label="Account">
-<setting id="tv_user" type="text" label="Email" default="Enter your Superchillin email" />
-<setting id="tv_pwd" type="text" option="hidden" label="Password" default="xunity" /><setting label="Premium account will allow for 1080 movies and the TV Shows section" type="lsep" />
-<setting id="premium" type="bool" label="Enable Premium account" default="false" />
-</category>
-</settings>

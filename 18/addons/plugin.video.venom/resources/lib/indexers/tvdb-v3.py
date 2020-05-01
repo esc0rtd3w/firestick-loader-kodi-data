@@ -25,8 +25,8 @@ class TVDBAPI:
 	def __init__(self):
 		self.apiKey = control.setting('tvdb.user')
 		if self.apiKey == '':
+			# self.apiKey = "43VPI0R8323FB7TI"
 			self.apiKey = "7R8SZZX90UA9YMBU"
-			# self.apiKey = 'N1I4U1paWDkwVUE5WU1CVQ=='
 
 		self.baseUrl = 'https://api.thetvdb.com/'
 		self.jwToken = control.setting('tvdb.jw')
@@ -46,9 +46,9 @@ class TVDBAPI:
 			self.headers['Authorization'] = 'Bearer %s' % self.jwToken
 
 
+
 	def post_request(self, url, postData):
 		return cache.get(self._post_request, 12, url, postData)
-
 
 	def _post_request(self, url, postData):
 		postData = json.dumps(postData)
@@ -59,7 +59,9 @@ class TVDBAPI:
 			self.headers['Authorization'] = 'Bearer %s' % self.jwToken
 			response = requests.post(url, data=postData, headers=self.headers).text
 		response = json.loads(response)
+
 		return response
+
 
 
 	def get_request(self, url):
@@ -70,6 +72,7 @@ class TVDBAPI:
 			self.headers['Authorization'] = 'Bearer %s' % self.jwToken
 			response = requests.get(url, headers=self.headers).text
 		response = json.loads(response)
+
 		return response
 
 
@@ -82,9 +85,9 @@ class TVDBAPI:
 			self.newToken(True)
 		else:
 			self.jwToken = response['token']
-			# tools.tvdb_refresh = self.jwToken
-			control.setSetting('tvdb.jw', self.jwToken)
-			control.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
+			tools.tvdb_refresh = self.jwToken
+			tools.setSetting('tvdb.jw', self.jwToken)
+			tools.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
 		return
 
 
@@ -97,11 +100,11 @@ class TVDBAPI:
 			headers.pop('Authorization')
 		response = json.loads(requests.post(url, data=postdata, headers=self.headers).text)
 		self.jwToken = response['token']
-		# tools.tvdb_refresh = self.jwToken
-		control.setSetting('tvdb.jw', self.jwToken)
+		tools.tvdb_refresh = self.jwToken
+		tools.setSetting('tvdb.jw', self.jwToken)
 		self.headers['Authorization'] = self.jwToken
-		log_utils.log('Refreshed TVDB Token')
-		control.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
+		tools.log('Refreshed TVDB Token')
+		tools.setSetting('tvdb.expiry', str(time.time() + (24 * (60 * 60))))
 		return response
 
 
@@ -112,7 +115,6 @@ class TVDBAPI:
 			return self._extract_art(response['data'], keyType, number)
 		except:
 			pass
-
 
 	def _extract_art(self, response, dict_name, number):
 		images = [(self.baseImageUrl + x['fileName'],

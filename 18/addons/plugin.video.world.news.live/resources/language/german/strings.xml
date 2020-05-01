@@ -1,9 +1,0 @@
-<strings>
-    <string id="30000">Leere Kategorien einblenden (Shows ohne Clips)</string>
-    <string id="30001">HTTP Proxy Server</string>
-    <string id="30002">HTTP Proxy Server port</string>
-    <string id="30003">Kanäle ausblenden Worse Than</string>
-    <string id="30004">Automatische Wiedergabe Alle Clips (SVN 32470 +)</string>
-    <string id="30005">Maximale Bitrate</string>
-
-</strings>

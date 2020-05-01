@@ -1,3 +1,0 @@
-<favourites>
-	<favourite name="Featured Streams" thumb="special://home/addons\plugin.video.twitch\icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.twitch/?mode=featured_streams&amp;sf_options=fanart%3Dspecial%3A%2F%2Fhome%2Faddons%5Cplugin.video.twitch%5Cfanart.png%26meta%3Dplot%253DFeatured%252BStreams%2526label%253DFeatured%252BStreams%26desc%3DFeatured+Streams%26_options_sf&quot;,return)</favourite>
-</favourites>

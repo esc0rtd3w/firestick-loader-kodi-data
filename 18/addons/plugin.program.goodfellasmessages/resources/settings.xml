@@ -1,5 +1,0 @@
-<settings>
-	<category label="General">
-		<setting type="bool" default="false" id="notifications-on-startup" label="Unsubscribe" />
-	</category>
-</settings>

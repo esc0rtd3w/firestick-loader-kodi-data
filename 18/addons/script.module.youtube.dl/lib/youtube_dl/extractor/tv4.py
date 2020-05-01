@@ -72,13 +72,8 @@ class TV4IE(InfoExtractor):
         video_id = self._match_id(url)
 
         info = self._download_json(
-            'https://playback-api.b17g.net/asset/%s' % video_id,
-            video_id, 'Downloading video info JSON', query={
-                'service': 'tv4',
-                'device': 'browser',
-                'protocol': 'hls,dash',
-                'drm': 'widevine',
-            })['metadata']
+            'http://www.tv4play.se/player/assets/%s.json' % video_id,
+            video_id, 'Downloading video info JSON')
 
         title = info['title']
 
@@ -116,9 +111,5 @@ class TV4IE(InfoExtractor):
             'timestamp': parse_iso8601(info.get('broadcast_date_time')),
             'duration': int_or_none(info.get('duration')),
             'thumbnail': info.get('image'),
-            'is_live': info.get('isLive') is True,
-            'series': info.get('seriesTitle'),
-            'season_number': int_or_none(info.get('seasonNumber')),
-            'episode': info.get('episodeTitle'),
-            'episode_number': int_or_none(info.get('episodeNumber')),
+            'is_live': info.get('is_live') is True,
         }

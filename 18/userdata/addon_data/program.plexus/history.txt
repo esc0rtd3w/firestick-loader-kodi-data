@@ -1,1 +1,0 @@
-VIDTIME|acestream://f03fe63db45a3f53e6fdf7f43d7194b3a5d9853c|1|C:\Users\hacker\AppData\Roaming\Kodi\addons\program.plexus\resources\art\acestream-menu-item.png

@@ -145,12 +145,15 @@ def googlepass(url):
 			headers = dict(urlparse.parse_qsl(url.rsplit('|', 1)[1]))
 		except:
 			headers = None
+
 		url = url.split('|')[0].replace('\\', '')
 		url = client.request(url, headers=headers, output='geturl')
+
 		if 'requiressl=yes' in url:
 			url = url.replace('http://', 'https://')
 		else:
 			url = url.replace('https://', 'http://')
+
 		if headers: url += '|%s' % urllib.urlencode(headers)
 		return url
 	except:
@@ -164,14 +167,19 @@ def vk(url):
 			oid, video_id = query['oid'][0], query['id'][0]
 		except:
 			oid, video_id = re.findall('\/video(.*)_(.*)', url)[0]
+
 		sources_url = 'http://vk.com/al_video.php?act=show_inline&al=1&video=%s_%s' % (oid, video_id)
+
 		html = client.request(sources_url)
 		html = re.sub(r'[^\x00-\x7F]+', ' ', html)
+
 		sources = re.findall('(\d+)x\d+.+?(http.+?\.m3u8.+?)n', html)
+
 		if not sources:
 			sources = re.findall('"url(\d+)"\s*:\s*"(.+?)"', html)
 		sources = [(i[0], i[1].replace('\\', '')) for i in sources]
 		sources = dict(sources)
+
 		url = []
 		try:
 			url += [{'quality': 'HD', 'url': sources['720']}]
@@ -185,14 +193,18 @@ def vk(url):
 			url += [{'quality': 'SD', 'url': sources['480']}]
 		except:
 			pass
+
 		if not url == []:
 			return url
+
 		try:
 			url += [{'quality': 'SD', 'url': sources['360']}]
 		except:
 			pass
+
 		if not url == []:
 			return url
+
 		try:
 			url += [{'quality': 'SD', 'url': sources['240']}]
 		except:
@@ -209,11 +221,14 @@ def odnoklassniki(url):
 		result = re.sub(r'[^\x00-\x7F]+', ' ', result)
 		result = json.loads(result).get('videos', [])
 		hd = []
+
 		for name, quali in {'ultra': '4K', 'quad': '1440p', 'full': '1080p', 'hd': 'HD'}.items():
 			hd += [{'quality': quali, 'url': i.get('url')} for i in result if i.get('name').lower() == name]
+
 		sd = []
 		for name, quali in {'sd': 'SD', 'low': 'SD', 'lowest': 'SD', 'mobile': 'SD'}.items():
 			sd += [{'quality': quali, 'url': i.get('url')} for i in result if i.get('name').lower() == name]
+
 		url = hd + sd[:1]
 		if not url == []:
 			return url

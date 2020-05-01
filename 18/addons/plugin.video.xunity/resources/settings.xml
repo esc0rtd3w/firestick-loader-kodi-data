@@ -1,6 +1,0 @@
-<settings>
-<category label="Auto-View">
-	<setting id="auto-view" type="bool" label="Enable Automatic View" default="true"/>
-	<setting id="everything" type="number" label="EVERYTHING" default="515" enable="!eq(-1,false)"/>
-</category>
-</settings>

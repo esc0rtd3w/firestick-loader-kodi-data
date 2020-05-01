@@ -1,6 +1,0 @@
-<settings>
-<category label="Account">
-<setting id="trakt_wl" type="bool" label="Enable Trakt.tv Watchlist:" default="false" />
-<setting id="username" type="text" label="Trakt Username:" default="Enter your trakt username" enable="eq(-1,true)" />
-</category>
-</settings>

@@ -33,8 +33,6 @@ XBFONT_CENTER_X = 0x00000002
 XBFONT_CENTER_Y = 0x00000004
 XBFONT_TRUNCATED = 0x00000008
 window = xbmcgui.Window(10000)
-homeWindow = xbmcgui.Window(10000)
-
 windowDialog = xbmcgui.WindowDialog()
 dialog = xbmcgui.Dialog()
 progressDialog = xbmcgui.DialogProgress()
@@ -62,12 +60,16 @@ playlist = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
 jsonrpc = xbmc.executeJSONRPC
 skinPath = xbmc.translatePath('special://skin/')
 
+# addonPath = xbmc.translatePath(addonInfo('path'))
+
 try:
 	addonPath = xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')
 except:
 	addonPath = xbmcaddon.Addon().getAddonInfo('path')
 
 menus_path = os.path.join(addonPath, 'resources', 'lib', 'menus')
+# images_path = os.path.join(menus_path, 'images')
+
 SETTINGS_PATH = xbmc.translatePath(os.path.join(addonInfo('path'), 'resources', 'settings.xml'))
 
 try:
@@ -95,13 +97,14 @@ existsPath =  xbmcvfs.exists
 
 key = "RgUkXp2s5v8x/A?D(G+KbPeShVmYq3t6"
 iv = "p2s5v8y/B?E(H+Mb"
-trailer = 'plugin://plugin.video.youtube/play/?video_id=%s'
+
 
 # def lang(language_id):
 	# text = getLangString(language_id)
 	# text = text.encode('utf-8', 'replace')
 	# text = display_string(text)
 	# return text
+
 
 # def display_string(object):
 	# if type(object) is str or type(object) is unicode:
@@ -111,6 +114,7 @@ trailer = 'plugin://plugin.video.youtube/play/?video_id=%s'
 	# if type(object) is bytes:
 		# object = ''.join(chr(x) for x in object)
 		# return object
+
 
 # def deaccentString(text):
 	# text = u'%s' % text
@@ -129,35 +133,13 @@ def sleep2(seconds):
 	time.sleep(seconds)
 
 
-def getCurrentViewId():
-	win = xbmcgui.Window(xbmcgui.getCurrentWindowId())
-	return str(win.getFocusId())
-
-
 def getKodiVersion():
 	return xbmc.getInfoLabel("System.BuildVersion").split(".")[0]
 
 
-def check_version_numbers(current, new):
-	# Compares version numbers and return True if new version is newer
-	current = current.split('.')
-	new = new.split('.')
-	step = 0
-	for i in current:
-		if int(new[step]) > int(i):
-			return True
-		if int(i) == int(new[step]):
-			step += 1
-			continue
-	return False
-
-
-def getVenomVersion():
-	return xbmcaddon.Addon('plugin.video.venom').getAddonInfo('version')
-
-
-def addonVersion(addon):
-	return xbmcaddon.Addon(addon).getAddonInfo('version')
+def getCurrentViewId():
+	win = xbmcgui.Window(xbmcgui.getCurrentWindowId())
+	return str(win.getFocusId())
 
 
 def get_plugin_url(queries):
@@ -172,6 +154,20 @@ def get_plugin_url(queries):
 	if not addon_id:
 		addon_id = addonId()
 	return addon_id + '?' + query
+
+
+def version():
+	num = ''
+	try:
+		version = addon('xbmc.addon').getAddonInfo('version')
+	except:
+		version = '999'
+	for i in version:
+		if i.isdigit():
+			num += i
+		else:
+			break
+	return int(num)
 
 
 def addonId():
@@ -194,9 +190,18 @@ def addonPath(addon):
 		return xbmc.translatePath(addonID.getAddonInfo('path').decode('utf-8'))
 
 
+def addonVersion(addon):
+	return xbmcaddon.Addon(addon).getAddonInfo('version')
+
+
 def artPath():
 	theme = appearance()
 	return os.path.join(xbmcaddon.Addon('plugin.video.venom').getAddonInfo('path'), 'resources', 'artwork', theme)
+
+	# if theme in ['-', '']:
+		# return
+	# elif condVisibility('System.HasAddon(script.venom.artwork)'):
+		# return os.path.join(xbmcaddon.Addon('script.venom.artwork').getAddonInfo('path'), 'resources', 'media', theme)
 
 
 def appearance():
@@ -260,12 +265,15 @@ def addonNext():
 
 
 def metaFile():
+	# rid this fucking thing already!!
 	# if condVisibility('System.HasAddon(script.venom.metadata)'):
 		# return os.path.join(xbmcaddon.Addon('script.venom.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
 	return os.path.join(dataPath, 'metadata.db')
 
 
 def metadataClean(metadata):
+	# Filter out non-existing/custom keys.
+	# Otherise there are tons of errors in Kodi 18 log.
 	if metadata is None:
 		return metadata
 	allowed = ['genre', 'country', 'year', 'episode', 'season', 'sortepisode', 'sortseason', 'episodeguide', 'showlink',
@@ -275,6 +283,7 @@ def metadataClean(metadata):
 					'tag', 'imdbnumber', 'code', 'aired', 'credits', 'lastplayed', 'album', 'artist', 'votes', 'path',
 					'trailer', 'dateadded', 'mediatype', 'dbid']
 	return {k: v for k, v in metadata.iteritems() if k in allowed}
+
 
 
 ####################################################
@@ -295,20 +304,26 @@ def infoDialog(message, heading=addonInfo('name'), icon='', time=3000, sound=Fal
 def notification(title=None, message=None, icon=None, time=3000, sound=False):
 	if title == 'default' or title is None:
 		title = addonName()
+
 	if isinstance(title, (int, long)):
 		heading = lang(title).encode('utf-8')
 	else:
 		heading = str(title)
+
 	if isinstance(message, (int, long)):
 		body = lang(message).encode('utf-8')
 	else:
 		body = str(message)
+
 	if icon is None or icon == '' or icon == 'default':
 		icon = addonIcon()
+
 	elif icon == 'INFO':
 		icon = xbmcgui.NOTIFICATION_INFO
+
 	elif icon == 'WARNING':
 		icon = xbmcgui.NOTIFICATION_WARNING
+
 	elif icon == 'ERROR':
 		icon = xbmcgui.NOTIFICATION_ERROR
 	dialog.notification(heading, body, icon, time, sound=sound)
@@ -325,14 +340,17 @@ def selectDialog(list, heading=addonInfo('name')):
 def okDialog(title=None, message=None):
 	if title == 'default' or title is None:
 		title = addonName()
+
 	if isinstance(title, (int, long)):
 		heading = lang(title).encode('utf-8')
 	else:
 		heading = str(title)
+
 	if isinstance(message, (int, long)):
 		body = lang(message).encode('utf-8')
 	else:
 		body = str(message)
+
 	return dialog.ok(heading, body)
 
 
@@ -340,10 +358,12 @@ def context(items = None, labels = None):
 	if items:
 		labels = [i[0] for i in items]
 		choice = xbmcgui.Dialog().contextmenu(labels)
+
 		if choice >= 0:
 			return items[choice][1]()
 		else:
 			return False
+
 	else:
 		return xbmcgui.Dialog().contextmenu(labels)
 
@@ -353,6 +373,13 @@ def busy():
 		return execute('ActivateWindow(busydialognocancel)')
 	else:
 		return execute('ActivateWindow(busydialog)')
+
+
+def idle():
+	if int(getKodiVersion()) >= 18 and condVisibility('Window.IsActive(busydialognocancel)'):
+		return execute('Dialog.Close(busydialognocancel)')
+	else:
+		return execute('Dialog.Close(busydialog)')
 
 
 def hide():
@@ -384,6 +411,7 @@ def visible():
 ########################
 
 
+
 def refresh():
 	return execute('Container.Refresh')
 
@@ -394,11 +422,14 @@ def queueItem():
 
 def openSettings(query=None, id=addonInfo('id')):
 	try:
-		hide()
+		idle()
 		execute('Addon.OpenSettings(%s)' % id)
+
 		if query is None:
 			return
+
 		c, f = query.split('.')
+
 		if int(getKodiVersion()) >= 18:
 			execute('SetFocus(%i)' % (int(c) - 100))
 			execute('SetFocus(%i)' % (int(f) - 80))
@@ -434,19 +465,24 @@ def apiLanguage(ret_name=None):
 						'kg', 'kk', 'kj', 'ki', 'ko', 'kn', 'km', 'kl', 'ks', 'kr', 'kw', 'kv', 'ku', 'ky']
 	name = None
 	name = setting('api.language')
+
 	if not name:
 		name = 'AUTO'
+
 	if name[-1].isupper():
 		try:
 			name = xbmc.getLanguage(xbmc.ENGLISH_NAME).split(' ')[0]
 		except: pass
+
 	try:
 		name = langDict[name]
 	except:
 		name = 'en'
+
 	lang = {'trakt': name} if name in trakt else {'trakt': 'en'}
 	lang['tvdb'] = name if name in tvdb else 'en'
 	lang['youtube'] = name if name in youtube else 'en'
+
 	if ret_name:
 		lang['trakt'] = [i[0] for i in langDict.iteritems() if i[1] == lang['trakt']][0]
 		lang['tvdb'] = [i[0] for i in langDict.iteritems() if i[1] == lang['tvdb']][0]
@@ -499,6 +535,8 @@ def getMenuEnabled(menu_title):
 
 def trigger_widget_refresh():
 	import time
+	# Force an update of widgets to occur
+	# log('FORCE REFRESHING WIDGETS')
 	timestr = time.strftime("%Y%m%d%H%M%S", time.gmtime())
 	homeWindow.setProperty("widgetreload", timestr)
 	homeWindow.setProperty('widgetreload-tvshows', timestr)
@@ -537,7 +575,6 @@ def add_source(source_name, source_path, source_content, source_thumbnail, type=
 	if existing_source and existing_source != source_path and source_content != '':
 		_remove_source_content(existing_source)
 	if _add_source_xml(xml_file, source_name, source_path, source_thumbnail, type=type) and source_content != '':
-		_remove_source_content(source_path) # Added to also rid any remains because manual delete sources and kodi leaves behind a record in MyVideos*.db
 		_set_source_content(source_content)
 
 
@@ -647,65 +684,3 @@ def _set_source_content(content):
 	q = 'INSERT OR REPLACE INTO path (strPath,strContent,strScraper,strHash,scanRecursive,useFolderNames,strSettings,noUpdate,exclude,dateAdded,idParentPath) VALUES '
 	q += content
 	return _db_execute('MyVideos*.db', q)
-
-
-def clean_settings():
-	import xml.etree.ElementTree as ET
-	def _make_content(dict_object):
-		if kodi_version >= 18:
-			content = '<settings version="2">'
-			for item in dict_object:
-				if item['id'] in active_settings:
-					if 'default' in item and 'value' in item: content += '\n    <setting id="%s" default="%s">%s</setting>' % (item['id'], item['default'], item['value'])
-					elif 'default' in item: content += '\n    <setting id="%s" default="%s"></setting>' % (item['id'], item['default'])
-					elif 'value' in item: content += '\n    <setting id="%s">%s</setting>' % (item['id'], item['value'])
-					else: content += '\n    <setting id="%s"></setting>'
-				else: removed_settings.append(item)
-		else:
-			content = '<settings>'
-			for item in dict_object:
-				if item['id'] in active_settings:
-					if 'value' in item: content += '\n    <setting id="%s" value="%s" />' % (item['id'], item['value'])
-					else: content += '\n    <setting id="%s" value="" />' % item['id']
-				else: removed_settings.append(item)
-		content += '\n</settings>'
-		return content
-
-	kodi_version = int(getKodiVersion()) 
-	for addon_id in ('plugin.video.venom', 'script.module.openscrapers'):
-		try:
-			removed_settings = []
-			active_settings = []
-			current_user_settings = []
-			addon = xbmcaddon.Addon(id=addon_id)
-			addon_name = addon.getAddonInfo('name')
-			addon_dir = xbmc.translatePath(addon.getAddonInfo('path'))
-			profile_dir = xbmc.translatePath(addon.getAddonInfo('profile'))
-			active_settings_xml = os.path.join(addon_dir, 'resources', 'settings.xml')
-			root = ET.parse(active_settings_xml).getroot()
-			for item in root.findall('./category/setting'):
-				setting_id = item.get('id')
-				if setting_id:
-					active_settings.append(setting_id)
-			settings_xml = os.path.join(profile_dir, 'settings.xml')
-			root = ET.parse(settings_xml).getroot()
-			for item in root:
-				dict_item = {}
-				setting_id = item.get('id')
-				setting_default = item.get('default')
-				if kodi_version >= 18: setting_value = item.text
-				else: setting_value = item.get('value')
-				dict_item['id'] = setting_id
-				if setting_value: dict_item['value'] = setting_value
-				if setting_default: dict_item['default'] = setting_default
-				current_user_settings.append(dict_item)
-			new_content = _make_content(current_user_settings)
-			nfo_file = xbmcvfs.File(settings_xml, 'w')
-			nfo_file.write(new_content)
-			nfo_file.close()
-			sleep(200)
-			notification(title = addon_name, message = lang(32084).encode('utf-8').format(str(len(removed_settings))), icon = 'INFO', sound=False)
-		except:
-			import traceback
-			traceback.print_exc()
-			notification(title = addon_name, message = 'Error Cleaning Settings.xml. Old settings.xml files Restored.', icon = 'INFO', sound=False)

@@ -1,7 +1,0 @@
-#LWP-Cookies-2.0
-Set-Cookie3: JSESSIONID="172167717410080~6493BA74E19FBFE0BEC336223052A3CB"; path="/"; domain="www.ufc.tv"; path_spec; secure; discard; HttpOnly=None; version=0
-Set-Cookie3: akavpau_allowedmain="1520134554~id=293f90cd5dd77475d6c68211d802de51"; path="/"; domain="www.ufc.tv"; path_spec; discard; version=0
-Set-Cookie3: akavpau_allowedsign="1520134554~id=293f90cd5dd77475d6c68211d802de51"; path="/"; domain="www.ufc.tv"; path_spec; discard; version=0
-Set-Cookie3: X-NL-DC=nyc; path="/page"; domain="www.ufc.tv"; discard; version=0
-Set-Cookie3: X-NL-DC=nyc; path="/secure"; domain="www.ufc.tv"; discard; version=0
-Set-Cookie3: X-NL-DC=nyc; path="/secure/signin?parent=https://www.ufc.tv/page"; domain="www.ufc.tv"; discard; version=0

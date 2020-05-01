@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import math
-from kodi_six import xbmc
+import xbmc
 from yd_private_libs import util
 
 IS_WEB = False
@@ -36,7 +36,6 @@ class xbmcDialogProgressBase:
         self.closed = False
         self.setRange()
         self.initDialog()
-
 
     def initDialog(self): assert False, 'Not Implemented'
 

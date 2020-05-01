@@ -7,6 +7,7 @@
 import os, urllib2
 import xbmc, xbmcaddon, xbmcgui
 
+
 ADDON_ID = xbmcaddon.Addon().getAddonInfo('id')
 HOMEPATH = xbmc.translatePath('special://home/')
 ADDONSPATH = os.path.join(HOMEPATH, 'addons')
@@ -19,6 +20,7 @@ def news():
 	message = open_news_url(NEWSFILE)
 	r = open(LOCALNEWS)
 	compfile = r.read()
+
 	if len(message) > 1:
 		if compfile == message: pass
 		else:
@@ -26,6 +28,7 @@ def news():
 			text_file.write(message)
 			text_file.close()
 			compfile = message
+
 	showText('[B][COLOR red]News and Info[/COLOR][/B]', compfile)
 
 

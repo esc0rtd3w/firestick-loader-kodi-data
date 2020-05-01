@@ -1,6 +1,0 @@
-v1.0.0
-Initial Release
-v1.1.2
-Changed content
-v1.1.3
-Changed code

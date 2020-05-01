@@ -1,5 +1,0 @@
-[B]Version 1.0.0[/B]
-September 2015 - This is the first versions of my Science Fiction Movies on YouTube addon
-[B]Version 1.0.0[/B]
-February 2016 - Renamed to SciFiTube. Updated due to YouTube changes. Increased from 10 to 50 channels.
-

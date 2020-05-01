@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers (updated 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -39,9 +38,12 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['kita.myvideolinks.net', 'myvideolinks.69.mu', 'nothingcan.undo.it']
-		self.base_link = 'http://kita.myvideolinks.net'
-		self.search_link = '/?s=%s'
+		self.domains = ['myvideolinks.net', 'new.myvideolinks.net']
+		# self.base_link = 'http://myvideolinks.net'
+		self.base_link = 'http://search.myvideolinks.net/'
+		# self.search_link = 'rls/?s=%s'
+		# self.search_link = '/ups/?s=%s'
+		self.search_link = '?s=%s'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -97,50 +99,46 @@ class source:
 			query = re.sub('(\\\|/| -|:|;|\*|\?|"|\'|<|>|\|)', '', query)
 
 			url = urlparse.urljoin(self.base_link, self.search_link)
-			url = url % urllib.quote_plus(query)
+			# url = url % urllib.quote_plus(query)
+			url = url % urllib.quote(query)
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
 			r = client.request(url)
-			if r is None:
-				return sources
-			if 'Nothing Found' in r:
-				return sources
+			r = client.parseDOM(r, 'h2')
 
-			r = client.parseDOM(r, 'article')
-			r1 = client.parseDOM(r, 'h2')
-			r2 = client.parseDOM(r, 'div', attrs={'class': 'entry-excerpt'})
+			# z = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a', ret='title'))
+			z = zip(client.parseDOM(r, 'a', ret='href'), client.parseDOM(r, 'a'))
 
-			if 'tvshowtitle' in data: # fuckers removed file size for episodes
-				posts = zip(client.parseDOM(r1, 'a', ret='href'), client.parseDOM(r1, 'a'))
+			if 'tvshowtitle' in data:
+				posts = [(i[1], i[0]) for i in z]
 			else:
-				posts = zip(client.parseDOM(r1, 'a', ret='href'), client.parseDOM(r1, 'a'), re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', r2[0]))
+				posts = [(i[1], i[0]) for i in z]
 
 			hostDict = hostprDict + hostDict
 
 			items = []
+
 			for post in posts:
 				try:
-					base_u = client.request(post[0])
+					try:
+						t = post[0].encode('utf-8')
+					except:
+						t = post[0]
 
-					if 'tvshowtitle' in data:
-						regex = '<b>(' + title + '.*)</b>'
-						lists = zip(re.findall(regex, base_u), re.findall('<ul>(.+?)</ul>', base_u, re.DOTALL))
-						for links in lists:
-							u = re.findall('\'(http.+?)\'', links[1]) + re.findall('\"(http.+?)\"', links[1])
-							t = links[0]
-							s = 0
-							items += [(t, i, s) for i in u]
-					else:
-						u = re.findall('\'(http.+?)\'', base_u) + re.findall('\"(http.+?)\"', base_u)
-						u = [i for i in u if '/embed/' not in i]
-						u = [i for i in u if 'youtube' not in i]
+					u = client.request(post[1])
 
-						try:
-							t = post[1].encode('utf-8')
-						except:
-							t = post[1]
-						s = post[2]
-						items += [(t, i, s) for i in u]
+					u = re.findall('\'(http.+?)\'', u) + re.findall('\"(http.+?)\"', u)
+					u = [i for i in u if '/embed/' not in i]
+					u = [i for i in u if 'youtube' not in i]
+
+					try:
+						s = re.search('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', post)
+						s = s.groups()[0] if s else '0'
+					except:
+						s = '0'
+						pass
+
+					items += [(t, i, s) for i in u]
 
 				except:
 					source_utils.scraper_error('MYVIDEOLINK')
@@ -149,10 +147,12 @@ class source:
 			for item in items:
 				try:
 					url = item[1]
+
 					url = client.replaceHTMLCodes(url)
 					url = url.encode('utf-8')
 
-					if url.endswith(('.rar', '.zip', '.iso', '.part', '.png', '.jpg', '.bmp', '.gif')):
+					void = ('.rar', '.zip', '.iso', '.part', '.png', '.jpg', '.bmp', '.gif')
+					if url.endswith(void):
 						continue
 
 					valid, host = source_utils.is_host_valid(url, hostDict)
@@ -163,28 +163,30 @@ class source:
 					host = host.encode('utf-8')
 
 					name = item[0]
+					name = client.replaceHTMLCodes(name)
 
-					name = client.replaceHTMLCodes(name).replace(' ', '.')
-					match = source_utils.check_title(title, name, hdlr, data['year'])
-					if not match:
+					t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
+					if cleantitle.get(t) != cleantitle.get(title):
+						continue
+
+					if hdlr not in name:
 						continue
 
 					quality, info = source_utils.get_release_quality(name, url)
 
 					try:
 						size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+) (?:GB|GiB|MB|MiB))', item[2])[-1]
-						dsize, isize = source_utils._size(size)
-						info.insert(0, isize)
+						div = 1 if size.endswith(('GB', 'GiB')) else 1024
+						size = float(re.sub('[^0-9|/.|/,]', '', size)) / div
+						size = '%.2f GB' % size
+						info.append(size)
 					except:
-						dsize = 0
 						pass
 
-					fileType = source_utils.getFileType(name)
-					info.append(fileType)
-					info = ' | '.join(info) if fileType else info[0]
+					info = ' | '.join(info)
 
 					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url,
-												'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
+												'info': info, 'direct': False, 'debridonly': True})
 				except:
 					source_utils.scraper_error('MYVIDEOLINK')
 					pass

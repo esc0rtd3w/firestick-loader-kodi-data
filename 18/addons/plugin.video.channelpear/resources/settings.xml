@@ -1,9 +1,0 @@
-﻿<settings>
-<category label="My Library">
-    <setting id="choose_source" type="enum" values="Enter URL" label="My Channels" default="Add URL" visible="eq(-1,0)"/>
-    <setting id="new_file_source" type="text" source="files" label="Enter Kodi Channel URL for Your Library" default="https://channelpear.com/assets/m3u/?userid=" visible="eq(-1,0)"/>
-    <setting type="sep" />
-    <setting type="action" label="After Entering URL, Click Here to Confirm" option="close" action="RunPlugin(plugin://plugin.video.channelpear/?mode=7)" />
-    <setting type="sep" />
-</category>
-</settings>

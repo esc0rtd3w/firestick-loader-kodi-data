@@ -1,6 +1,0 @@
-<settings>
-	<category label="Settings">
-        <setting id="download_directory" type="folder" label="10001" default="set"/>
-        <setting id="blind_me" type="bool" label="10002" default="true" />
-	</category>
-</settings>

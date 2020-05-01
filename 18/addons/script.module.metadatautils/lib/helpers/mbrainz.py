@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     mbrainz.py
     Get metadata from musicbrainz
-"""
+'''
 
 from utils import ADDON_ID, get_compare_string, log_msg
 from simplecache import use_cache
@@ -15,11 +15,11 @@ import xbmc
 
 
 class MusicBrainz(object):
-    """get metadata from musicbrainz"""
+    '''get metadata from musicbrainz'''
     ignore_cache = False
 
     def __init__(self, simplecache=None):
-        """Initialize - optionaly provide simplecache object"""
+        '''Initialize - optionaly provide simplecache object'''
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -39,7 +39,7 @@ class MusicBrainz(object):
 
     @use_cache(60)
     def search(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         albumid = ""
         artistid = ""
         try:
@@ -59,19 +59,19 @@ class MusicBrainz(object):
         except Exception as exc:
             log_msg("Error in musicbrainz.search: %s" % str(exc), xbmc.LOGWARNING)
 
-        return artistid, albumid
+        return (artistid, albumid)
 
     def get_artist_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[0]
 
     def get_album_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[1]
 
     @use_cache(60)
     def get_albuminfo(self, mbalbumid):
-        """get album info from musicbrainz"""
+        '''get album info from musicbrainz'''
         result = {}
         try:
             data = self.mbrainz.get_release_group_by_id(mbalbumid, includes=["tags", "ratings"])
@@ -87,6 +87,7 @@ class MusicBrainz(object):
                     result["genre"] = []
                     for tag in data["tag-list"]:
                         if tag["count"] and int(tag["count"]) > 1:
+                            taglst = []
                             if " / " in tag["name"]:
                                 taglst = tag["name"].split(" / ")
                             elif "/" in tag["name"]:
@@ -98,9 +99,9 @@ class MusicBrainz(object):
                             else:
                                 taglst = [tag["name"]]
                             for item in taglst:
-                                if item not in result["tags"]:
+                                if not item in result["tags"]:
                                     result["tags"].append(item)
-                                if item not in result["genre"] and int(tag["count"]) > 4:
+                                if not item in result["genre"] and int(tag["count"]) > 4:
                                     result["genre"].append(item)
         except Exception as exc:
             log_msg("Error in musicbrainz - get album details: %s" % str(exc), xbmc.LOGWARNING)
@@ -108,7 +109,7 @@ class MusicBrainz(object):
 
     @staticmethod
     def get_albumthumb(albumid):
-        """get album thumb"""
+        '''get album thumb'''
         thumb = ""
         url = "http://coverartarchive.org/release-group/%s/front" % albumid
         if xbmcvfs.exists(url):
@@ -117,7 +118,7 @@ class MusicBrainz(object):
 
     @use_cache(14)
     def search_release_group_match(self, artist, album):
-        """try to get a match on releasegroup for given artist/album combi"""
+        '''try to get a match on releasegroup for given artist/album combi'''
         artistid = ""
         albumid = ""
         mb_albums = self.mbrainz.search_release_groups(query=album,
@@ -131,18 +132,18 @@ class MusicBrainz(object):
                     if artistid and albumid:
                         break
                     if mb_album and isinstance(mb_album, dict):
-                        if albumtype and albumtype != mb_album.get("primary-type", ""):
+                        if albumtype and albumtype != mb_album.get("primary-type",""):
                             continue
                         if mb_album.get("artist-credit"):
                             artistid = self.match_artistcredit(mb_album["artist-credit"], artist)
                         if artistid:
                             albumid = mb_album.get("id", "")
                             break
-        return artistid, albumid
+        return (artistid, albumid)
 
     @staticmethod
     def match_artistcredit(artist_credit, artist):
-        """find match for artist in artist-credits"""
+        '''find match for artist in artist-credits'''
         artistid = ""
         for mb_artist in artist_credit:
             if artistid:
@@ -169,10 +170,10 @@ class MusicBrainz(object):
 
     @use_cache(14)
     def search_recording_match(self, artist, track):
-        """
+        '''
             try to get the releasegroup (album) for the given artist/track combi
             various-artists compilations are ignored
-        """
+        '''
         artistid = ""
         albumid = ""
         mb_albums = self.mbrainz.search_recordings(query=track,
@@ -207,4 +208,4 @@ class MusicBrainz(object):
                                     if artistid:
                                         albumid = mb_release["release-group"]["id"]
                                         break
-        return artistid, albumid
+        return (artistid, albumid)

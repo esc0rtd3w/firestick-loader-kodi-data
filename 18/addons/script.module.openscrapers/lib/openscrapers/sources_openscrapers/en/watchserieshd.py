@@ -38,11 +38,10 @@ from openscrapers.modules import source_utils
 class source:
 	def __init__(self):
 		self.priority = 1
-		self.language = ['en']
-		self.domains = ['watchserieshd.tv']
-		self.base_link = 'https://watchserieshd.tv'
+		self.language = ['en']  # watchserieshd.co got changed to a different source
+		self.domains = ['watchserieshd.cc']  # Old  watchserieshd.io
+		self.base_link = 'https://watchserieshd.cc'
 		self.search_link = '/series/%s-season-%s-episode-%s'
-
 
 	def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
 		try:

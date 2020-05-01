@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""get metadata from the lastfm"""
+'''get metadata from the lastfm'''
 
 from utils import get_json, strip_newlines, get_compare_string
 from simplecache import use_cache
@@ -9,12 +9,12 @@ import xbmcvfs
 
 
 class LastFM(object):
-    """get metadata from the lastfm"""
+    '''get metadata from the lastfm'''
     api_key = "1869cecbff11c2715934b45b721e6fb0"
     ignore_cache = False
 
     def __init__(self, simplecache=None):
-        """Initialize - optionaly provide simplecache object"""
+        '''Initialize - optionaly provide simplecache object'''
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -22,7 +22,7 @@ class LastFM(object):
             self.cache = simplecache
 
     def search(self, artist, album, track):
-        """get musicbrainz id's by query of artist, album and/or track"""
+        '''get musicbrainz id's by query of artist, album and/or track'''
         artistid = ""
         albumid = ""
         artist = artist.lower()
@@ -50,18 +50,18 @@ class LastFM(object):
                     found_artist = get_compare_string(lfmdetails["artist"]["name"])
                     if found_artist == get_compare_string(artist) and lfmdetails["artist"].get("mbid"):
                         artistid = lfmdetails["artist"]["mbid"]
-        return artistid, albumid
+        return (artistid, albumid)
 
     def get_artist_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[0]
 
     def get_album_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[1]
 
     def artist_info(self, artist_id):
-        """get artist metadata by musicbrainz id"""
+        '''get artist metadata by musicbrainz id'''
         details = {"art": {}}
         params = {'method': 'artist.getInfo', 'mbid': artist_id}
         data = self.get_data(params)
@@ -95,7 +95,7 @@ class LastFM(object):
         return details
 
     def album_info(self, album_id):
-        """get album metadata by musicbrainz id"""
+        '''get album metadata by musicbrainz id'''
         details = {"art": {}}
         params = {'method': 'album.getInfo', 'mbid': album_id}
         data = self.get_data(params)
@@ -120,7 +120,7 @@ class LastFM(object):
 
     @use_cache(30)
     def get_data(self, params):
-        """helper method to get data from lastfm json API"""
+        '''helper method to get data from lastfm json API'''
         params["format"] = "json"
         params["api_key"] = self.api_key
         data = get_json('http://ws.audioscrobbler.com/2.0/', params)

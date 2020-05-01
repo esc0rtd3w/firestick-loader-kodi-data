@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     extraposter.py
     Get extraposter location for kodi media
-"""
+'''
 
 import os
 import xbmcvfs
 
 
 def get_extraposter(file_path):
-    """get extraposter path on disk based on media path"""
+    '''get extraposter path on disk based on media path'''
     result = {}
     efa_path = ""
     if "plugin.video.emby" in file_path:

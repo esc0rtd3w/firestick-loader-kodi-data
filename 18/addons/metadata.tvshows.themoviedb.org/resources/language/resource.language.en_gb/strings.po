@@ -59,7 +59,3 @@ msgstr ""
 msgctxt "#30012"
 msgid "Certification Country"
 msgstr ""
-
-msgctxt "#30013"
-msgid "Get Wide Banners from thetvdb.com"
-msgstr ""

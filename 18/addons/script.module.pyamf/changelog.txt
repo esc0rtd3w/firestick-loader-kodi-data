@@ -1,3 +1,0 @@
-[B]0.6.1[/B]
-- initial Release for XBMC
-- Includes XML.py fix from http://forum.xbmc.org/showthread.php?tid=119551&page=5

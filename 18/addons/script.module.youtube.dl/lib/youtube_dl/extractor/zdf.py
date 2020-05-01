@@ -41,7 +41,6 @@ class ZDFBaseIE(InfoExtractor):
 class ZDFIE(ZDFBaseIE):
     _VALID_URL = r'https?://www\.zdf\.de/(?:[^/]+/)*(?P<id>[^/?]+)\.html'
     _QUALITIES = ('auto', 'low', 'med', 'high', 'veryhigh')
-    _GEO_COUNTRIES = ['DE']
 
     _TESTS = [{
         'url': 'https://www.zdf.de/dokumentation/terra-x/die-magie-der-farben-von-koenigspurpur-und-jeansblau-100.html',
@@ -244,14 +243,14 @@ class ZDFChannelIE(ZDFBaseIE):
             'id': 'das-aktuelle-sportstudio',
             'title': 'das aktuelle sportstudio | ZDF',
         },
-        'playlist_mincount': 23,
+        'playlist_count': 21,
     }, {
         'url': 'https://www.zdf.de/dokumentation/planet-e',
         'info_dict': {
             'id': 'planet-e',
             'title': 'planet e.',
         },
-        'playlist_mincount': 50,
+        'playlist_count': 4,
     }, {
         'url': 'https://www.zdf.de/filme/taunuskrimi/',
         'only_matching': True,

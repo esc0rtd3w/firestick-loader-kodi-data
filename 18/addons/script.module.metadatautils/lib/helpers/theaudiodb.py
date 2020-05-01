@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-"""
+'''
     script.module.metadatautils
     theaudiodb.py
     Get metadata from theaudiodb
-"""
+'''
 
 from utils import get_json, strip_newlines, KODI_LANGUAGE, get_compare_string
 from simplecache import use_cache
@@ -13,12 +13,12 @@ import xbmcvfs
 
 
 class TheAudioDb(object):
-    """get metadata from the audiodb"""
+    '''get metadata from the audiodb'''
     api_key = "12376f5352254d85853987"
     ignore_cache = False
 
     def __init__(self, simplecache=None):
-        """Initialize - optionaly provide simplecache object"""
+        '''Initialize - optionaly provide simplecache object'''
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -26,7 +26,7 @@ class TheAudioDb(object):
             self.cache = simplecache
 
     def search(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         artistid = ""
         albumid = ""
         artist = artist.lower()
@@ -49,18 +49,18 @@ class TheAudioDb(object):
                 if foundartist and get_compare_string(foundartist) == get_compare_string(artist):
                     albumid = adbdetails.get("strMusicBrainzID", "")
                     artistid = adbdetails.get("strMusicBrainzArtistID", "")
-        return artistid, albumid
+        return (artistid, albumid)
 
     def get_artist_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[0]
 
     def get_album_id(self, artist, album, track):
-        """get musicbrainz id by query of artist, album and/or track"""
+        '''get musicbrainz id by query of artist, album and/or track'''
         return self.search(artist, album, track)[1]
 
     def artist_info(self, artist_id):
-        """get artist metadata by musicbrainz id"""
+        '''get artist metadata by musicbrainz id'''
         details = {"art": {}}
         data = self.get_data("/artist-mb.php", {'i': artist_id})
         if data and data.get("artists"):
@@ -122,7 +122,7 @@ class TheAudioDb(object):
         return details
 
     def album_info(self, album_id):
-        """get album metadata by musicbrainz id"""
+        '''get album metadata by musicbrainz id'''
         details = {"art": {}}
         data = self.get_data("/album-mb.php", {'i': album_id})
         if data and data.get("album"):
@@ -159,7 +159,7 @@ class TheAudioDb(object):
 
     @use_cache(60)
     def get_data(self, endpoint, params):
-        """helper method to get data from theaudiodb json API"""
+        '''helper method to get data from theaudiodb json API'''
         endpoint = 'http://www.theaudiodb.com/api/v1/json/%s/%s' % (self.api_key, endpoint)
         data = get_json(endpoint, params)
         if data:

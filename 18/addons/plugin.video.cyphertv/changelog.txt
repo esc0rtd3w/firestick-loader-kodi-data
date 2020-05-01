@@ -1,5 +1,0 @@
-v1.4 Added extra server for sections
-
-v1.1 - 1.3 Server updates due to Blocks
-
-v1.0 Initial Release

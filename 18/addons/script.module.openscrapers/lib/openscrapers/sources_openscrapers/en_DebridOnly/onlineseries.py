@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# modified by Venom for Openscrapers
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -115,6 +114,8 @@ class source:
 			posts = [dom_parser.parse_dom(i.content, 'a', req='href') for i in posts if i]
 			posts = [(i[0].attrs['href'], re.sub('<.+?>', '', i[0].content)) for i in posts if i]
 			posts = [[i[0], i[1]] for i in posts]
+
+
 			threads = []
 			for i in posts:
 				threads.append(workers.Thread(self._get_sources, i))
@@ -138,7 +139,6 @@ class source:
 				return
 
 			name = url[1]
-			# log_utils.log('name = %s' % name, log_utils.LOGDEBUG)
 
 			self.title = self.title.replace('!', '')
 
@@ -159,6 +159,7 @@ class source:
 
 			links = dom_parser.parse_dom(item, 'a', req='href')
 			links = [i.attrs['href'] for i in links]
+
 
 			info = []
 			try:

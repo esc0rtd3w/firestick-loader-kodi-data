@@ -116,15 +116,15 @@ msgid "Box Office"
 msgstr ""
 
 msgctxt "#32021"
-msgid "Torrent/Hoster (group by Prem.)"
+msgid ""
 msgstr ""
 
 msgctxt "#32022"
-msgid "Torrent/Hoster (ignore Prem.)"
+msgid ""
 msgstr ""
 
 msgctxt "#32023"
-msgid "Enable Calendar (TVMaze) fetching extended meta"
+msgid ""
 msgstr ""
 
 msgctxt "#32024"
@@ -240,7 +240,7 @@ msgid "Remove 3D Sources"
 msgstr ""
 
 msgctxt "#32052"
-msgid "Enable Resolution Quality Icons"
+msgid ""
 msgstr ""
 
 msgctxt "#32053"
@@ -335,6 +335,10 @@ msgctxt "#32075"
 msgid "Auto update User Lists"
 msgstr ""
 
+msgctxt "#32075"
+msgid "Auto update User Lists"
+msgstr ""
+
 msgctxt "#32076"
 msgid ""
 msgstr ""
@@ -347,53 +351,6 @@ msgctxt "#32078"
 msgid "Show general notifications"
 msgstr ""
 
-msgctxt "#32079"
-msgid ""
-msgstr ""
-
-msgctxt "#32080"
-msgid ""
-msgstr ""
-
-msgctxt "#32081"
-msgid ""
-msgstr ""
-
-msgctxt "#32082"
-msgid ""
-msgstr ""
-
-msgctxt "#32083"
-msgid "Clean Settings file: [B]VENOM[/B] and [B]OpenScrapers[/B]"
-msgstr ""
-
-msgctxt "#32084"
-msgid "{} Obsolete Settings Entries Removed"
-msgstr ""
-
-msgctxt "#32085"
-msgid ""
-msgstr ""
-
-msgctxt "#32086"
-msgid ""
-msgstr ""
-
-msgctxt "#32087"
-msgid ""
-msgstr ""
-
-msgctxt "#32088"
-msgid ""
-msgstr ""
-
-msgctxt "#32089"
-msgid ""
-msgstr ""
-
-msgctxt "#32090"
-msgid ""
-msgstr ""
 
 
 
@@ -942,7 +899,7 @@ msgid "Box Office (IMDb)"
 msgstr ""
 
 msgctxt "#32436"
-msgid "Box Office (TMDb)"
+msgid "Box Office"
 msgstr ""
 
 msgctxt "#32437"
@@ -1222,7 +1179,7 @@ msgid "[B][COLOR red]UpNext[/COLOR][/B] Settings"
 msgstr ""
 
 msgctxt "#32506"
-msgid "[B][COLOR red]Venom Global Context[/COLOR][/B] Settings"
+msgid ""
 msgstr ""
 
 msgctxt "#32507"
@@ -1346,7 +1303,7 @@ msgid "TV"
 msgstr ""
 
 msgctxt "#32545"
-msgid "Auto Update Service"
+msgid "Auto update TV Shows"
 msgstr ""
 
 msgctxt "#32546"
@@ -1590,7 +1547,7 @@ msgid "Debugging"
 msgstr ""
 
 msgctxt "#32617"
-msgid "Logging Location"
+msgid "Debug Log"
 msgstr ""
 
 msgctxt "#32618"
@@ -1830,41 +1787,12 @@ msgid "Updated TV Show title"
 msgstr ""
 
 msgctxt "#32679"
-msgid "Importing TMDb Watchlist..."
+msgid ""
 msgstr ""
 
 msgctxt "#32680"
-msgid "Importing TMDb Favorites..."
-msgstr ""
-
-msgctxt "#32681"
-msgid "Importing TMDb Userlist..."
-msgstr ""
-
-msgctxt "#32682"
 msgid ""
 msgstr ""
-
-msgctxt "#32683"
-msgid ""
-msgstr ""
-
-msgctxt "#32684"
-msgid ""
-msgstr ""
-
-msgctxt "#32685"
-msgid ""
-msgstr ""
-
-msgctxt "#32686"
-msgid ""
-msgstr ""
-
-
-
-
-
 
 
 
@@ -2076,49 +2004,6 @@ msgctxt "#33050"
 msgid "Notifications"
 msgstr ""
 
-msgctxt "#33051"
-msgid "Server Notifications"
-msgstr ""
-
-msgctxt "#33052"
-msgid "General Notifications"
-msgstr ""
-
-msgctxt "#33053"
-msgid "%s has been hidden from your %s"
-msgstr ""
-
-msgctxt "#33054"
-msgid ""
-msgstr ""
-
-msgctxt "#33055"
-msgid ""
-msgstr ""
-
-msgctxt "#33055"
-msgid ""
-msgstr ""
-
-msgctxt "#33056"
-msgid ""
-msgstr ""
-
-msgctxt "#33057"
-msgid ""
-msgstr ""
-
-msgctxt "#33058"
-msgid ""
-msgstr ""
-
-msgctxt "#33059"
-msgid ""
-msgstr ""
-
-
-
-
 
 
 
@@ -2224,11 +2109,11 @@ msgid ""
 msgstr ""
 
 msgctxt "#33573"
-msgid "Add Show to your [COLOR red][B]Watchlist[/B][/COLOR]"
+msgid ""
 msgstr ""
 
 msgctxt "#33574"
-msgid "Remove Show from your [COLOR red][B]Watchlist[/B][/COLOR]"
+msgid ""
 msgstr ""
 
 msgctxt "#33575"
@@ -2280,23 +2165,8 @@ msgid "Error Connecting to TMDB"
 msgstr ""
 
 msgctxt "#33587"
-msgid "Install Venom Global Context menu Addon..."
-msgstr ""
-
-msgctxt "#33588"
-msgid "Enable Venom Global Context menu"
-msgstr ""
-
-msgctxt "#33589"
 msgid ""
 msgstr ""
-
-msgctxt "#33590"
-msgid ""
-msgstr ""
-
-
-
 
 
 
@@ -2429,19 +2299,6 @@ msgstr ""
 
 msgctxt "#33679"
 msgid "Sorting Order"
-msgstr ""
-
-
-
-
-
-
-msgctxt "#33786"
-msgid "No Trakt Result"
-msgstr ""
-
-msgctxt "#33787"
-msgid "Trakt Rate Limit Reached"
 msgstr ""
 
 
@@ -2708,17 +2565,8 @@ msgctxt "#35397"
 msgid ""
 msgstr ""
 
-msgctxt "#35398"
-msgid ""
-msgstr ""
 
-msgctxt "#35399"
-msgid ""
-msgstr ""
 
-msgctxt "#35400"
-msgid ""
-msgstr ""
 
 
 
@@ -2794,11 +2642,11 @@ msgid "Rate"
 msgstr ""
 
 msgctxt "#35502"
-msgid "%s Marked As Watched On Trakt"
+msgid "Marked As Watched On Trakt"
 msgstr ""
 
 msgctxt "#35503"
-msgid "%s Marked As Unwatched On Trakt"
+msgid "Marked As Unwatched On Trakt"
 msgstr ""
 
 msgctxt "#35504"
@@ -2878,11 +2726,11 @@ msgid "Playlist Manager"
 msgstr ""
 
 msgctxt "#35523"
-msgid "A new verison of Venom is available from the repository. Please consider updating to v%s"
+msgid ""
 msgstr ""
 
 msgctxt "#35524"
-msgid "Notify Me About Available Updates"
+msgid ""
 msgstr ""
 
 msgctxt "#35525"
@@ -2921,57 +2769,9 @@ msgctxt "#35533"
 msgid ""
 msgstr ""
 
-msgctxt "#35534"
-msgid ""
-msgstr ""
 
-msgctxt "#35535"
-msgid ""
-msgstr ""
 
-msgctxt "#35536"
-msgid ""
-msgstr ""
 
-msgctxt "#35537"
-msgid ""
-msgstr ""
-
-msgctxt "#35538"
-msgid ""
-msgstr ""
-
-msgctxt "#35539"
-msgid ""
-msgstr ""
-
-msgctxt "#35540"
-msgid ""
-msgstr ""
-
-msgctxt "#35541"
-msgid ""
-msgstr ""
-
-msgctxt "#35542"
-msgid ""
-msgstr ""
-
-msgctxt "#35543"
-msgid ""
-msgstr ""
-
-msgctxt "#35544"
-msgid ""
-msgstr ""
-
-msgctxt "#35545"
-msgid ""
-msgstr ""
-
-msgctxt "#35546"
-msgid ""
-msgstr ""
 
 msgctxt "#35547"
 msgid "Force"
@@ -3207,18 +3007,6 @@ msgid "Originals (TVMaze)"
 msgstr ""
 
 msgctxt "#40072"
-msgid "Watched Progress"
-msgstr ""
-
-msgctxt "#40073"
-msgid "Calendar"
-msgstr ""
-
-msgctxt "#40074"
-msgid "Select Menu type to hide from"
-msgstr ""
-
-msgctxt "#40075"
-msgid "Hide %s"
+msgid ""
 msgstr ""
 

@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# modified by Venom for Openscrapers (4-20-2020)
+# -Cleaned and Checked on 08-24-2019 by JewBMX in Scrubs.
 # Created by Tempest
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
@@ -38,9 +38,9 @@ class source:
 		self.language = ['en']
 		self.domains = ['streamdreams.org']
 		self.base_link = 'https://streamdreams.org'
-		self.search_movie = '/movies/nnn-%s/'
-		self.search_tv = '/shows/nnn-%s/'
-
+		self.search_movie = '/movies/bbb-%s/'
+		self.search_tv = '/shows/bbb-%s/'
+		self.scraper = cfscrape.create_scraper()
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
@@ -68,21 +68,13 @@ class source:
 			return
 
 	def sources(self, url, hostDict, hostprDict):
-		sources = []
 		try:
-			scraper = cfscrape.create_scraper()
-
 			if url is None:
 				return sources
-
+			sources = []
 			hostDict = hostprDict + hostDict
 			headers = {'Referer': url}
-
-			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
-			r = scraper.get(url).content
-			if r is None:
-				return sources
-
+			r = self.scraper.get(url, headers=headers).content
 			u = client.parseDOM(r, "span", attrs={"class": "movie_version_link"})
 			for t in u:
 				match = client.parseDOM(t, 'a', ret='data-href')
@@ -92,10 +84,12 @@ class source:
 					valid, host = source_utils.is_host_valid(url, hostDict)
 					if valid:
 						quality, info = source_utils.get_release_quality(url, url)
-						sources.append({'source': host, 'quality': quality, 'language': 'en', 'info': info, 'url': url, 'direct': False, 'debridonly': False})
+						if source_utils.limit_hosts() is True and host in str(sources):
+							continue
+						sources.append({'source': host, 'quality': quality, 'language': 'en', 'info': info, 'url': url,
+						                'direct': False, 'debridonly': False})
 			return sources
 		except:
-			source_utils.scraper_error('STREAMDREAMS')
 			return sources
 
 	def resolve(self, url):

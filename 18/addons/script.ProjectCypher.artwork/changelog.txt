@@ -1,5 +1,0 @@
--1.0.1
-  - Changed Cypher Logo
--1.0.0
-  - Initial version
-  - Added Cypher Theme
