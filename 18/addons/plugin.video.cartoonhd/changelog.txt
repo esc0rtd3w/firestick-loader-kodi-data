@@ -1,0 +1,15 @@
+v1.1.5
+Added Play All
+
+v1.1.4
+Added Parental Feature
+
+v1.0.5
+Added Resolvers
+
+
+v1.0.1
+Added Resolve
+
+v1.0.0
+Initial Release

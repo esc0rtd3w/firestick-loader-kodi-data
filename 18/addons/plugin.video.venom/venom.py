@@ -4,6 +4,8 @@
 	Venom Add-on
 '''
 
+import xbmcaddon, xbmcgui
+
 from urlparse import parse_qsl
 from urllib import quote_plus
 from sys import argv
@@ -18,12 +20,13 @@ name = params.get('name')
 title = params.get('title')
 year = params.get('year')
 imdb = params.get('imdb')
-tvdb = params.get('tvdb')
 tmdb = params.get('tmdb')
+tvdb = params.get('tvdb')
 season = params.get('season')
 episode = params.get('episode')
 tvshowtitle = params.get('tvshowtitle')
 premiered = params.get('premiered')
+type = params.get('type')
 url = params.get('url')
 image = params.get('image')
 meta = params.get('meta')
@@ -39,6 +42,34 @@ windowedtrailer = params.get('windowedtrailer')
 windowedtrailer = int(windowedtrailer) if windowedtrailer in ("0","1") else 0
 notificationSound = False if control.setting('notification.sound') == 'false' else True
 
+homeWindow = xbmcgui.Window(10000)
+
+contextSettings = xbmcaddon.Addon('context.venom').getSetting('context.venom.settings')
+traktManager = xbmcaddon.Addon('context.venom').getSetting('context.venom.traktManager')
+clearProviders = xbmcaddon.Addon('context.venom').getSetting('context.venom.clearProviders')
+rescrape = xbmcaddon.Addon('context.venom').getSetting('context.venom.rescrape')
+playFromHere = xbmcaddon.Addon('context.venom').getSetting('context.venom.playFromHere')
+playAction = xbmcaddon.Addon('plugin.video.venom').getSetting('hosts.mode')
+autoPlay = 'true' if playAction == '2' else ''
+cm_autoPlay = xbmcaddon.Addon('context.venom').getSetting('context.venom.autoPlay')
+sourceSelect = xbmcaddon.Addon('context.venom').getSetting('context.venom.sourceSelect')
+findSimilar = xbmcaddon.Addon('context.venom').getSetting('context.venom.findSimilar')
+browseSeries = xbmcaddon.Addon('context.venom').getSetting('context.venom.browseSeries')
+browseEpisodes = xbmcaddon.Addon('context.venom').getSetting('context.venom.browseEpisodes')
+
+homeWindow.setProperty('context.venom.settings', contextSettings)
+homeWindow.setProperty('context.venom.traktManager', traktManager)
+homeWindow.setProperty('context.venom.clearProviders', clearProviders)
+homeWindow.setProperty('context.venom.rescrape', rescrape)
+homeWindow.setProperty('context.venom.playFromHere', playFromHere)
+homeWindow.setProperty('plugin.video.venom.autoPlay', autoPlay)
+homeWindow.setProperty('context.venom.autoPlay', cm_autoPlay)
+homeWindow.setProperty('context.venom.sourceSelect', sourceSelect)
+homeWindow.setProperty('context.venom.findSimilar', findSimilar)
+homeWindow.setProperty('context.venom.browseSeries', browseSeries)
+homeWindow.setProperty('context.venom.browseEpisodes', browseEpisodes)
+
+
 if action is None:
 	from resources.lib.menus import navigator
 	from resources.lib.modules import cache
@@ -46,14 +77,14 @@ if action is None:
 	if run == '':
 		run = 'true' #clean install scenerio
 	if cache._find_cache_version():
-		run = 'true'  #check whether plugin.video.venom has been updated-use to be for script.module.venom
+		run = 'true'
 	if run == 'true':
+		control.execute('RunPlugin(plugin://plugin.video.venom/?action=cleanSettings)')
 		from resources.lib.modules import changelog
 		changelog.get()
 		control.setSetting(id='first.info', value='false')
 	cache.cache_version_check()
 	navigator.Navigator().root()
-
 
 
 ####################################################
@@ -70,7 +101,6 @@ elif action == 'ShowNews':
 elif action == 'ShowChangelog':
 	from resources.lib.modules import changelog
 	changelog.get()
-
 
 
 ####################################################
@@ -157,7 +187,6 @@ elif action == 'movieUserlists':
 	movies.Movies().userlists()
 
 
-
 ####################################################
 #---Collections
 ####################################################
@@ -202,7 +231,6 @@ elif action == 'collection_martial_arts_actors':
 	collections.Collections().collection_martial_arts_actors()
 
 
-
 ####################################################
 #---Furk
 ####################################################
@@ -225,7 +253,6 @@ elif action == "furkUserFiles":
 elif action == "furkSearchNew":
 	from resources.lib.menus import furk
 	furk.Furk().search_new()
-
 
 
 ####################################################
@@ -316,14 +343,12 @@ elif action == 'tvUserlists':
 	tvshows.TVshows().userlists()
 
 
-
 ####################################################
 #---SEASONS
 ####################################################
 elif action == 'seasons':
 	from resources.lib.menus import seasons
-	seasons.Seasons().get(tvshowtitle, year, imdb, tvdb)
-	# seasons.Seasons().get(tvshowtitle, year, imdb, tmdb, tvdb)
+	seasons.Seasons().get(tvshowtitle, year, imdb, tmdb, tvdb)
 
 elif action == 'seasonsUserlists':
 	from resources.lib.indexers import seasons
@@ -334,18 +359,16 @@ elif action == 'seasonsList':
 	seasons.Seasons().seasonList(url)
 
 
-
 ####################################################
 #---EPISODES
 ####################################################
 elif action == 'episodes':
 	from resources.lib.menus import episodes
-	episodes.Episodes().get(tvshowtitle, year, imdb, tvdb, season, episode)
-	# episodes.Episodes().get(tvshowtitle, year, imdb, tmdb, tvdb, season, episode)
+	episodes.Episodes().get(tvshowtitle, year, imdb, tmdb, tvdb, season, episode)
 
 elif action == 'episodesPage':
 	from resources.lib.menus import episodes
-	episodes.Episodes().get(tvshowtitle, year, imdb, tvdb, season, episode)
+	episodes.Episodes().get(tvshowtitle, year, imdb, tmdb, tvdb, season, episode)
 
 elif action == 'tvWidget':
 	from resources.lib.menus import episodes
@@ -366,7 +389,6 @@ elif action == 'episodesUnfinished':
 elif action == 'episodesUserlists':
 	from resources.lib.menus import episodes
 	episodes.Episodes().userlists()
-
 
 
 ####################################################
@@ -393,7 +415,6 @@ elif action == 'originals':
 	tvshows.TVshows().originals()
 
 
-
 ####################################################
 #---YouTube
 ####################################################
@@ -403,7 +424,6 @@ elif action == 'youtube':
 		youtube.yt_index().root(action)
 	else:
 		youtube.yt_index().get(action, subid)
-
 
 
 ####################################################
@@ -442,6 +462,9 @@ elif action == 'resetViewTypes':
 	from resources.lib.modules import views
 	views.clearViews()
 
+elif action == 'cleanSettings':
+	control.clean_settings()
+
 elif action == 'addView':
 	from resources.lib.modules import views
 	views.addView(content)
@@ -463,6 +486,12 @@ elif action == 'UpNextSettings':
 	if params.get('opensettings') == 'true':
 		control.openSettings('0.0', "plugin.video.venom")
 
+elif action == 'contextVenomSettings':
+	control.openSettings('0.0', 'context.venom')
+	if params.get('opensettings') == 'true':
+		control.openSettings('0.0', "plugin.video.venom")
+	control.trigger_widget_refresh()
+
 elif action == 'openscrapersSettings':
 	control.openSettings('0.0', 'script.module.openscrapers')
 	if params.get('opensettings') == 'true':
@@ -479,22 +508,20 @@ elif action == 'urlResolverRDTorrent':
 	control.openSettings(query, "script.module.resolveurl")
 
 
-
 ####################################################
 #---Playcount
 ####################################################
 elif action == 'moviePlaycount':
 	from resources.lib.modules import playcount
-	playcount.movies(imdb, query)
+	playcount.movies(name, imdb, query)
 
 elif action == 'episodePlaycount':
 	from resources.lib.modules import playcount
-	playcount.episodes(imdb, tvdb, season, episode, query)
+	playcount.episodes(name, imdb, tvdb, season, episode, query)
 
 elif action == 'tvPlaycount':
 	from resources.lib.modules import playcount
 	playcount.tvshows(name, imdb, tvdb, season, query)
-
 
 
 ####################################################
@@ -519,7 +546,6 @@ elif action == 'cachesyncTVShows':
 	trakt.cachesyncTVShows()
 
 
-
 ####################################################
 #---TMDb
 ####################################################
@@ -534,7 +560,6 @@ elif action == 'revokeTMDb':
 	tmdb.Auth().revoke_session_id()
 	if params.get('opensettings') == 'true':
 		control.openSettings(query, "plugin.video.venom")
-
 
 
 ####################################################
@@ -560,24 +585,14 @@ elif action == 'queueItem':
 		control.notification(title = name, message = 35519, icon = 'INFO', sound = notificationSound)
 
 
-
 ####################################################
 #---Player
 ####################################################
 elif action == 'play':
-	# playlistStarted = False
-	# try:
-		# import xbmc
-		# if not xbmc.Player().isPlayingVideo():
-			# r = argv[0]+"?action=playAll"
-			# control.execute('RunPlugin(%s)' % r)
-			# playlistStarted = True
-	# except:
-		# pass
-	# if playlistStarted == False:
-
+	# control.busy()
 	from resources.lib.modules import sources
 	sources.Sources().play(title, year, imdb, tvdb, season, episode, tvshowtitle, premiered, meta, select, rescrape=False)
+	# control.hide()
 
 elif action == 'playAll':
 	control.player2().play(control.playlist)
@@ -587,8 +602,10 @@ elif action == 'playItem':
 	sources.Sources().playItem(title, source)
 
 elif action == 'reScrape':
+	# control.busy()
 	from resources.lib.modules import sources
 	sources.Sources().play(title, year, imdb, tvdb, season, episode, tvshowtitle, premiered, meta, select, rescrape=True)
+	# control.hide()
 
 elif action == 'addItem':
 	from resources.lib.modules import sources
@@ -600,7 +617,7 @@ elif action == 'alterSources':
 
 elif action == 'trailer':
 	from resources.lib.modules import trailer
-	trailer.Trailer().play(name, url, windowedtrailer)
+	trailer.Trailer().play(type, name, year, url, imdb, windowedtrailer)
 
 elif action == 'random':
 	rtype = params.get('rtype')
@@ -612,12 +629,12 @@ elif action == 'random':
 
 	elif rtype == 'episode':
 		from resources.lib.menus import episodes
-		rlist = episodes.Episodes().get(tvshowtitle, year, imdb, tvdb, season, idx=False)
+		rlist = episodes.Episodes().get(tvshowtitle, year, imdb, tmdb, tvdb, season, idx=False)
 		r = argv[0]+"?action=play"
 
 	elif rtype == 'season':
 		from resources.lib.menus import seasons
-		rlist = seasons.Seasons().get(tvshowtitle, year, imdb, tvdb, idx=False)
+		rlist = seasons.Seasons().get(tvshowtitle, year, imdb, tmdb, tvdb, idx=False)
 		r = argv[0]+"?action=random&rtype=episode"
 
 	elif rtype == 'show':
@@ -630,9 +647,7 @@ elif action == 'random':
 
 	try:
 		rand = randint(1,len(rlist))-1
-
 		for p in ['title','year','imdb','tvdb','season','episode','tvshowtitle','premiered','select']:
-
 			if rtype == "show" and p == "tvshowtitle":
 				try:
 					r += '&'+p+'='+quote_plus(rlist[rand]['title'])
@@ -643,18 +658,15 @@ elif action == 'random':
 					r += '&'+p+'='+quote_plus(rlist[rand][p])
 				except:
 					pass
-
 		try:
 			r += '&meta='+quote_plus(json.dumps(rlist[rand]))
 		except:
 			r += '&meta='+quote_plus("{}")
-
 		if rtype == "movie":
 			try:
 				control.infoDialog(rlist[rand]['title'], control.lang(32536).encode('utf-8'), time=30000)
 			except:
 				pass
-
 		elif rtype == "episode":
 			try:
 				control.infoDialog(rlist[rand]['tvshowtitle']+" - Season "+rlist[rand]['season']+" - "+rlist[rand]['title'], control.lang(32536).encode('utf-8'), time=30000)
@@ -663,7 +675,6 @@ elif action == 'random':
 		control.execute('RunPlugin(%s)' % r)
 	except:
 		control.infoDialog(control.lang(32537).encode('utf-8'), time=8000)
-
 
 
 ####################################################
@@ -675,6 +686,8 @@ elif action == 'movieToLibrary':
 
 elif action == 'moviesToLibrary':
 	from resources.lib.modules import libtools
+	# xbmc.log('url=%s' % url, 2)
+	# xbmc.log('list_name=%s' % list_name, 2)
 	libtools.libmovies().range(url, list_name)
 
 elif action == 'moviesListToLibrary':
@@ -687,7 +700,7 @@ elif action == 'moviesToLibrarySilent':
 
 elif action == 'tvshowToLibrary':
 	from resources.lib.modules import libtools
-	libtools.libtvshows().add(tvshowtitle, year, imdb, tvdb)
+	libtools.libtvshows().add(tvshowtitle, year, imdb, tmdb, tvdb)
 
 elif action == 'tvshowsToLibrary':
 	from resources.lib.modules import libtools
@@ -704,6 +717,8 @@ elif action == 'tvshowsToLibrarySilent':
 elif action == 'updateLibrary':
 	from resources.lib.modules import libtools
 	libtools.libepisodes().update()
+	libtools.libmovies().list_update()
+	libtools.libtvshows().list_update()
 
 elif action == 'cleanLibrary':
 	from resources.lib.modules import libtools
@@ -715,7 +730,6 @@ elif action == 'librarySetup':
 
 elif action == 'service':
 	from resources.lib.modules import libtools
-	# libtools.libepisodes().service()
 	libtools.lib_tools().service()
 
 

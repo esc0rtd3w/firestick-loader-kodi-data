@@ -1,0 +1,18 @@
+<strings>
+	<!-- Settings -->
+    <string id="10001">FilmOn Account</string>
+    <string id="10002">FilmOn User Name</string>
+    <string id="10003">FilmOn Password</string>
+    <string id="10011">Stream Type</string>
+    <string id="10004">FilmOn Quality</string>
+    <string id="10010">Play SD stream if timeout value is too low</string>
+    <string id="10005">FilmOn Download Path</string>
+    <string id="10020">Movie Directory</string>
+    <string id="10025">Show Channel ID in listings</string>
+    <string id="10026">Root Channel ID (Playable channel for Non-Geo)</string>
+    <string id="10006">Menu Options</string>
+    <string id="10007">My Video Addons</string>
+    <string id="10008">My Audio Addons</string>
+    <string id="10009">Other Video Links</string>
+    <string id="10019">Sort channels alphabetically</string>
+</strings>

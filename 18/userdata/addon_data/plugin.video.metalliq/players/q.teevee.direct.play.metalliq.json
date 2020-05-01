@@ -1,0 +1,22 @@
+{
+ "name"         : "TeeVee [COLOR FF0084FF]-[/COLOR] Direct Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.natko1412",
+ "plugin"       : "plugin.video.teevee",
+ "priority"     : 500,
+ "id"           : "q.teevee.direct.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.teevee/?play=True&episode={episode}&title={clearname} {season:02d}x{episode:02d}&url=http://tvonline.tw/{clearname_-}-{year}/season-{season}-episode-{episode}/&season={season:02d}&iwatch=None&type=ep",
+    "steps"     : [],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

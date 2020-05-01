@@ -1,0 +1,17 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Airq - %s 
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://airq.tv/%s/
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file=([^"]+).*','@REFERER@')
+item_info_convert=decodeXppod
+item_info_build=%s
+
+item_info_name=url
+item_info_from=file
+item_info_build=%s

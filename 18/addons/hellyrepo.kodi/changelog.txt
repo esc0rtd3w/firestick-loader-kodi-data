@@ -1,0 +1,21 @@
+[B]Version 0.2.4[/B]
+- Changed krypton location to overcome upgrading issues under Jarvis or older versions
+
+[B]Version 0.2.3[/B]
+- Bugfix
+
+[B]Version 0.2.2[/B]
+- Update on versioning for Krypton
+
+[B]Version 0.2.1[/B]
+- Update on versioning
+
+[B]Version 0.2.0[/B]
+- Added version information to differentiate between isengard and master branch (to be compatible for jarvis)
+
+[B]Version 0.1.1[/B]
+- Test for adding repo to repository for auto updating in future
+- Removed addon version for compatibility issues (dependencies not matching error)
+
+[B]Version 0.1.0[/B]
+- Initial version

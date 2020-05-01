@@ -1,0 +1,7 @@
+<settings>
+<category label="Real-Debrid">
+<setting id="realdebrid-enable" type ="bool" label="Enabled" default="false"/>
+<setting id="realdebrid-username" type="text" label="Username" default="" enable="!eq(-1,false)"/>
+<setting id="realdebrid-password" type="text" label="Password" default="" option="hidden" enable="!eq(-2,false)"/>
+</category>
+</settings>

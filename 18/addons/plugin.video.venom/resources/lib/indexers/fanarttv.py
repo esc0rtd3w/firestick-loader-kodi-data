@@ -4,10 +4,12 @@
 	Venom Add-on
 '''
 
-import json
+import requests
 
 from resources.lib.modules import client
 from resources.lib.modules import control
+from resources.lib.modules import log_utils
+
 
 user = control.setting('fanart.tv.user')
 if user == '' or user is None:
@@ -19,22 +21,50 @@ if user != '':
 
 base_url = "http://webservice.fanart.tv/v3/%s/%s"
 lang = control.apiLanguage()['trakt']
+error_codes = ['500 Internal Server Error', '502 Bad Gateway', '504 Gateway Timeout']
+
+
+def get_request(url):
+	try:
+		try:
+			result = requests.get(url, headers=headers, timeout=5)
+		except requests.exceptions.SSLError:
+			result = requests.get(url, headers=headers, verify=False)
+	except requests.exceptions.ConnectionError:
+		control.notification(title='default', message='FANART.TV server Problems')
+		log_utils.error()
+		return None
+
+	if '200' in str(result):
+		if '/tt' in url:
+			log_utils.log('requests.get() found - FANART.TV URL: %s (FOUND in IMDB)' % url, log_utils.LOGDEBUG)
+		return result.json() 
+
+	elif 'Not found' in str(result.text):
+		log_utils.log('requests.get() failed - FANART.TV URL: %s (NOT FOUND)' % url, log_utils.LOGDEBUG)
+		return None
+
+	else:
+		title = client.parseDOM(result.text, 'title')[0]
+		log_utils.log('requests.get() failed - FANART.TV URL: %s (%s)' % (url, title), log_utils.LOGDEBUG)
+		return None
 
 
 def get_movie_art(imdb, tmdb):
-	url = base_url % ('movies', '%s')
-	art = client.request(url % tmdb, headers=headers, timeout='10', error=True)
-	art = json.loads(art)
+	url = base_url % ('movies', tmdb)
+	art = get_request(url)
 
-	# Check IMDb ID if TMDb ID not found.
-	if 'error message' in art and art['error message'].lower() == 'not found' and (imdb != '0' and imdb is not None):
-		art = client.request(url % imdb, headers=headers, timeout='10', error=True)
-		art = json.loads(art)
-		if 'error message' in art and art['error message'].lower() == 'not found':
-			return None
+	if art is None:
+		url = base_url % ('movies', imdb)
+		art = get_request(url)
+
+	if art is None:
+		return None
 
 	try:
+		if 'movieposter' not in art: raise Exception()
 		poster2 = art['movieposter']
+		# poster2 = [(x['url'], x['likes']) for x in poster2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == ''] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == '00']
 		poster2 = [(x['url'], x['likes']) for x in poster2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == '']
 		poster2 = [(x[0], x[1]) for x in poster2]
 		poster2 = sorted(poster2, key=lambda x: int(x[1]), reverse=True)
@@ -46,8 +76,8 @@ def get_movie_art(imdb, tmdb):
 		if 'moviebackground' in art:
 			fanart2 = art['moviebackground']
 		else:
+			if 'moviethumb' not in art: raise Exception()
 			fanart2 = art['moviethumb']
-
 		fanart2 = [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == '']
 		fanart2 = [(x[0], x[1]) for x in fanart2]
 		fanart2 = sorted(fanart2, key=lambda x: int(x[1]), reverse=True)
@@ -56,6 +86,7 @@ def get_movie_art(imdb, tmdb):
 		fanart2 = '0'
 
 	try:
+		if 'moviebanner' not in art: raise Exception()
 		banner2 = art['moviebanner']
 		banner2 = [(x['url'], x['likes']) for x in banner2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in banner2 if x.get('lang') == '']
 		banner2 = [(x[0], x[1]) for x in banner2]
@@ -68,8 +99,8 @@ def get_movie_art(imdb, tmdb):
 		if 'hdmovielogo' in art:
 			clearlogo = art['hdmovielogo']
 		else:
+			if 'movielogo' not in art: raise Exception()
 			clearlogo = art['movielogo']
-
 		clearlogo = [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == '']
 		clearlogo = [(x[0], x[1]) for x in clearlogo]
 		clearlogo = sorted(clearlogo, key=lambda x: int(x[1]), reverse=True)
@@ -81,8 +112,8 @@ def get_movie_art(imdb, tmdb):
 		if 'hdmovieclearart' in art:
 			clearart = art['hdmovieclearart']
 		else:
+			if 'movieart' not in art: raise Exception()
 			clearart = art['movieart']
-
 		clearart = [(x['url'], x['likes']) for x in clearart if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearart if x.get('lang') == '']
 		clearart = [(x[0], x[1]) for x in clearart]
 		clearart = sorted(clearart, key=lambda x: int(x[1]), reverse=True)
@@ -91,6 +122,7 @@ def get_movie_art(imdb, tmdb):
 		clearart = '0'
 
 	try:
+		if 'moviedisc' not in art: raise Exception()
 		discart = art['moviedisc']
 		discart = [(x['url'], x['likes']) for x in discart if x.get('lang') == lang] + [(x['url'], x['likes']) for x in discart if x.get('lang') == '']
 		discart = [(x[0], x[1]) for x in discart]
@@ -103,8 +135,8 @@ def get_movie_art(imdb, tmdb):
 		if 'moviethumb' in art:
 			landscape = art['moviethumb']
 		else:
+			if 'moviebackground' not in art: raise Exception()
 			landscape = art['moviebackground']
-
 		landscape = [(x['url'], x['likes']) for x in landscape if x.get('lang') == lang] + [(x['url'], x['likes']) for x in landscape if x.get('lang') == '']
 		landscape = [(x[0], x[1]) for x in landscape]
 		landscape = sorted(landscape, key=lambda x: int(x[1]), reverse=True)
@@ -127,16 +159,19 @@ def get_movie_art(imdb, tmdb):
 
 
 def get_tvshow_art(tvdb):
-	url = base_url % ('tv', '%s')
-	art = client.request(url % tvdb, headers=headers, timeout='10', error=True)
-	art = json.loads(art)
-	if 'error message' in art and art['error message'].lower() == 'not found':
+	if tvdb == '0':
+		return None
 
+	url = base_url % ('tv', tvdb)
+	art = get_request(url)
+
+	if art is None:
 		return None
 
 	try:
+		if 'tvposter' not in art: raise Exception()
 		poster2 = art['tvposter']
-		poster2 = [(x['url'], x['likes']) for x in poster2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == '']
+		poster2 = [(x['url'], x['likes']) for x in poster2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == ''] + [(x['url'], x['likes']) for x in poster2 if x.get('lang') == '00']
 		poster2 = [(x[0], x[1]) for x in poster2]
 		poster2 = sorted(poster2, key=lambda x: int(x[1]), reverse=True)
 		poster2 = [x[0] for x in poster2][0]
@@ -144,8 +179,9 @@ def get_tvshow_art(tvdb):
 		poster2 = '0'
 
 	try:
+		if 'showbackground' not in art: raise Exception()
 		fanart2 = art['showbackground']
-		fanart2 = [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == '']
+		fanart2 = [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == ''] + [(x['url'], x['likes']) for x in fanart2 if x.get('lang') == '00']
 		fanart2 = [(x[0], x[1]) for x in fanart2]
 		fanart2 = sorted(fanart2, key=lambda x: int(x[1]), reverse=True)
 		fanart2 = [x[0] for x in fanart2][0]
@@ -153,8 +189,9 @@ def get_tvshow_art(tvdb):
 		fanart2= '0'
 
 	try:
+		if 'tvbanner' not in art: raise Exception()
 		banner2 = art['tvbanner']
-		banner2 = [(x['url'], x['likes']) for x in banner2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in banner2 if x.get('lang') == '']
+		banner2 = [(x['url'], x['likes']) for x in banner2 if x.get('lang') == lang] + [(x['url'], x['likes']) for x in banner2 if x.get('lang') == ''] + [(x['url'], x['likes']) for x in banner2 if x.get('lang') == '00']
 		banner2 = [(x[0], x[1]) for x in banner2]
 		banner2 = sorted(banner2, key=lambda x: int(x[1]), reverse=True)
 		banner2 = [x[0] for x in banner2][0]
@@ -165,9 +202,9 @@ def get_tvshow_art(tvdb):
 		if 'hdtvlogo' in art:
 			clearlogo = art['hdtvlogo']
 		else:
+			if 'clearlogo' not in art: raise Exception()
 			clearlogo = art['clearlogo']
-
-		clearlogo = [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == '']
+		clearlogo = [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == ''] + [(x['url'], x['likes']) for x in clearlogo if x.get('lang') == '00']
 		clearlogo = [(x[0], x[1]) for x in clearlogo]
 		clearlogo = sorted(clearlogo, key=lambda x: int(x[1]), reverse=True)
 		clearlogo = [x[0] for x in clearlogo][0]
@@ -178,9 +215,9 @@ def get_tvshow_art(tvdb):
 		if 'hdclearart' in art:
 			clearart = art['hdclearart']
 		else:
+			if 'clearart' not in art: raise Exception()
 			clearart = art['clearart']
-
-		clearart = [(x['url'], x['likes']) for x in clearart if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearart if x.get('lang') == '']
+		clearart = [(x['url'], x['likes']) for x in clearart if x.get('lang') == lang] + [(x['url'], x['likes']) for x in clearart if x.get('lang') == ''] + [(x['url'], x['likes']) for x in clearart if x.get('lang') == '00']
 		clearart = [(x[0], x[1]) for x in clearart]
 		clearart = sorted(clearart, key=lambda x: int(x[1]), reverse=True)
 		clearart = [x[0] for x in clearart][0]
@@ -191,9 +228,9 @@ def get_tvshow_art(tvdb):
 		if 'tvthumb' in art:
 			landscape = art['tvthumb']
 		else:
+			if 'showbackground' not in art: raise Exception()
 			landscape = art['showbackground']
-
-		landscape = [(x['url'], x['likes']) for x in landscape if x.get('lang') == lang] + [(x['url'], x['likes']) for x in landscape if x.get('lang') == '']
+		landscape = [(x['url'], x['likes']) for x in landscape if x.get('lang') == lang] + [(x['url'], x['likes']) for x in landscape if x.get('lang') == ''] + [(x['url'], x['likes']) for x in landscape if x.get('lang') == '00']
 		landscape = [(x[0], x[1]) for x in landscape]
 		landscape = sorted(landscape, key=lambda x: int(x[1]), reverse=True)
 		landscape = [x[0] for x in landscape][0]
@@ -202,5 +239,3 @@ def get_tvshow_art(tvdb):
 
 	extended_art = {'extended': True, 'poster2': poster2, 'banner2': banner2, 'fanart2': fanart2, 'clearlogo': clearlogo, 'clearart': clearart, 'landscape': landscape}
 	return extended_art
-
-

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <string id="30001">Episodes</string>
+  <string id="30002">Browse Shows</string>
+  <string id="30003">Favorite Shows</string>
+  <string id="30004">Latest (Popular)</string>
+  <string id="30005">Trending Now</string>
+  <string id="30006">Editor's Picks</string>
+  <string id="30007">Featured</string>
+  <string id="30008">Search</string>
+  <string id="30009">Staff Picks</string>
+  <string id="30010">Audience Favorites</string>
+  <string id="30011">All Shows</string>
+  <string id="30012">Next Page</string>
+  <string id="30013">Add to queue</string>
+  <string id="30014">Add to Addon favorites</string>
+  <string id="30015">Remove from favorites</string>
+  <string id="30016">Blip Picks</string>
+  <string id="30017">Latest (All)</string>
+  <string id="30018">Video has not been converted yet. Playing source file...</string>
+  <string id="30101">Maximum Video Quality</string>
+  <string id="30102">Use thumb as fanart</string>
+  <string id="30103">Force View</string>
+  <string id="30104">ViewID (Shows)</string>
+  <string id="30105">ViewID (Episodes)</string>
+  <string id="30106">Show subtitles</string>
+  <string id="30107">Show "Not been converted" message</string>
+</strings>

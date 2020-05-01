@@ -1,0 +1,84 @@
+
+
+[COLOR chartreuse]1.0.22: 21st June 2016[/COLOR]
+  - fixed downloading functionality
+
+
+[COLOR chartreuse]1.0.21: 18th June 2016[/COLOR]
+  - fixed due to changes at website
+
+
+[COLOR chartreuse]1.0.20: 14th June 2016[/COLOR]
+  - fixed due to changes at website
+
+
+[COLOR chartreuse]1.0.19: 2nd June 2016[/COLOR]
+  - fixed due to changes at website
+  - removed Most Popular and Most  Recent sections (no longer available on website)
+
+
+[COLOR chartreuse]1.0.18: 4th May 2016[/COLOR]
+  - Star Wars release
+  - fixed due to changes at website
+
+
+[COLOR chartreuse]1.0.17: 16th April 2016[/COLOR]
+  - fixed due to changes at website
+  - added clear cache option via settings
+
+v1.0.16:
+  - fixed due to changes at website
+
+v1.0.15:
+  - fixed Studios menu item
+
+v1.0.14:
+  - fixed thumbnail images on "Random" items
+
+v1.0.12:
+  - fixed due to changes at website
+  - KNOWN ISSUE - Thumbnail images on "Random" items are currently incorrect
+
+v1.0.11:
+  - fixed due to changes at website
+  - added fanart image
+
+v1.0.10:
+  - added configurable number of cartoons to show during Kids Time feature
+  - fixed due to changes on the website
+
+v1.0.9:
+  - tidied up text returned from Search
+
+v1.0.8:
+  - fixed Search caused due to changes at website
+
+v1.0.7:
+  - fixed Search caused due to changes at website
+  - improved download reliability
+
+v1.0.6:
+  - fixed due to changes at website
+
+v1.0.5:
+  - fixed due to changes at website
+
+v1.0.4:
+  - added Download via Context menu
+
+v1.0.3:
+  - fixed due to changes at website
+
+v1.0.2:
+  - fixed playing from favourites menu
+
+v1.0.1:
+  - display characters in alphabetical order
+  - added plot descriptions, available in certain view types, eg Media Info
+  - added charatcer descriptions, available in certain view types, eg Media Info
+  - added "Kids Time" feature - plays 10 cartoons chosen at random
+  - added caching functionality to reduce strain on website
+  - fixed "More..." for character lists, caused by bug on website
+
+v1.0.0:
+  - initial release

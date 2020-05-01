@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Casti - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.casti.tv/embed.php?v=%s&vw=650&vh=500&video=0&domain=www.tugastream.com
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(['"]([^'"]+)['"].*?['"]config['"],\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@','swf|tmp2|rtmp)
+item_info_build=%s
+
+item_info_name=file
+item_info_from=tmp2
+item_info_convert=getInfo('%s','.*<file>([^<]+).flv)
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmpt
+item_info_convert=replace('%s','/lb',':1935/lb')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true timeout=15 swfVfy=1 swfUrl=http://www.casti.tv/' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,11 @@
+Official Velocity addon For Kodi
+
+V1.0.1
+Added New Providers
+Update for Resolver
+Small bug fixes
+This is a partial update only
+
+
+V 1.0.0
+Initial Release

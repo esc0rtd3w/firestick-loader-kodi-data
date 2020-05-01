@@ -1,0 +1,188 @@
+--------------------------
+FTV Guide - 2.0.25
+--------------------------
++ Added workaround for DST issue on Android... hopefully
+
+--------------------------
+FTV Guide - 2.0.24a
+--------------------------
++ Changes for the guide to return to correct channel and timeslot after streaming
+
+--------------------------
+FTV Guide - 2.0.23
+--------------------------
++ Merged Pull Request: Added option to allow background streaming (Thanks jakgibb)
+
+--------------------------
+FTV Guide - 2.0.22
+--------------------------
++ Merged Pull Request #5: further meta integration  (Thanks midraal)
+
+--------------------------
+FTV Guide - 2.0.21
+--------------------------
++ Merged Pull Request #4: add support for meta live players (Thanks midraal)
+
+--------------------------
+FTV Guide - 2.0.20
+--------------------------
++ Added Background Update Service
++ Improved file downloading again
+
+--------------------------
+FTV Guide - 2.0.19e
+--------------------------
++ Added "refresh on start" setting for custom guides
++ Improved Custom Guide fetching to work with remote files
++ Hardened the handling of channel IDs
+
+--------------------------
+FTV Guide - 2.0.18
+--------------------------
++ Added access to Kodi Video Library and Video Add-ons
++ Added 'On-Demand' features to skins (except Eminence)
+
+--------------------------
+FTV Guide - 2.0.17
+--------------------------
++ System time stamp added to all skins
+
+--------------------------
+FTV Guide - 2.0.16
+--------------------------
++ Android workaround no longer needed for Kodi 15
++ Restore logo if no programme image
++ Fixed ghosting with local XMLTV file
+
+--------------------------
+FTV Guide - 2.0.15
+--------------------------
++ Bugfix - Guide data not loading
+
+--------------------------
+FTV Guide - 2.0.14
+--------------------------
++ Workaround - Android setSettings() not working - see Kodi bug:
+ #13913 - [android/python] addons can not save settings  [http://trac.kodi.tv/ticket/13913]
+
+--------------------------
+FTV Guide - 2.0.13
+--------------------------
++ Bugfix - new type selection had an error
+
+--------------------------
+FTV Guide - 2.0.12
+--------------------------
++ Guide type selection through new ini-file
++ Bugfix - Mouse nav-bar disappearing
+
+--------------------------
+FTV Guide - 2.0.11
+--------------------------
++ Bugfix - Database lock causes Kodi to freeze on exit (Thanks "newguy"!)
+
+--------------------------
+FTV Guide - 2.0.10
+--------------------------
++ Catch connection issues to server
++ Add Autostart setting
+
+--------------------------
+FTV Guide - 2.0.9
+--------------------------
++ Updated Eminence Skin
+
+--------------------------
+FTV Guide - 2.0.8
+--------------------------
++ Bugfix - [ESC] key not working correctly
++ Enhancement - Improved timezones handling
+
+--------------------------
+FTV Guide - 2.0.7
+--------------------------
++ Bugfix - touch devices cannot open context menu
+
+--------------------------
+FTV Guide - 2.0.6
+--------------------------
++ Bugfix - folder in profile now created automatically
+
+--------------------------
+FTV Guide - 2.0.5
+--------------------------
++ Support for custom local addons.ini file
++ Favourites now get loaded from user profile, not always MASTER
+
+--------------------------
+FTV Guide - 2.0.4
+--------------------------
++ Fix for ghosting issue
+
+--------------------------
+FTV Guide - 2.0.3
+--------------------------
++ Even more skins
++ Support for local Channel logos folder (requires database reset!)
++ updated all headers to comply with the licence
+
+--------------------------
+FTV Guide - 2.0.2
+--------------------------
++ Support for custom local XMLTV files
++ More skins
++ Removed need to edit settings.xml when new skin is added
+
+--------------------------
+FTV Guide - 2.0.1
+--------------------------
++ Some bug fixes
+
+--------------------------
+FTV Guide - 2.0.0
+--------------------------
++ Re-branding and new skins
++ Support for changing skins in the settings
++ Setting to switch off channel logos
++ addons.ini now also gets downloaded using interval setting
++ Database-reset feature (Thanks to Podgod)
++ Removed buggalo dependency
+
+--------------------------
+FTV Guide - 1.0.6
+--------------------------
++ Added extra source options
++ Slight change to default skin
++ Removed 'total_seconds' command to avoid Android errors
+
+--------------------------
+FTV Guide - 1.0.5
+--------------------------
++ Added source selection
++ Added guide downloads
+
+--------------------------
+FTV Guide - 1.0.4
+--------------------------
++ New default skin
++ Expanded favourites to include non 'PlayMedia' items
+
+--------------------------
+FTV Guide - 1.0.3
+--------------------------
++ Change to source location (Thanks to Jonc)
+
+--------------------------
+FTV Guide - 1.0.2
+--------------------------
++ Minor changes
+
+--------------------------
+FTV Guide - 1.0.1
+--------------------------
++ Minor changes
+
+--------------------------
+FTV Guide - 1.0.0
+--------------------------
++ Initial Release

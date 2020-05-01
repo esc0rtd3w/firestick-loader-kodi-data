@@ -1,0 +1,8 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=StreamBig - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://80.82.70.140/live/stream/%s swfUrl=http://streambig.eu/player/player-licensed.swf pageUrl=http://streambig.eu/embed.php?v=mimmo9&vw=700&vh=480&domain=www3.livetv.ru
+#item_info_build=item_info_build=rtmp://80.82.70.140/live/stream/%s swfUrl=http://streambig.eu/player/player-licensed.swf pageUrl=http://streambig.eu/embed.php?v=mimmo9&vw=700&vh=480&domain=www3.livetv.ru

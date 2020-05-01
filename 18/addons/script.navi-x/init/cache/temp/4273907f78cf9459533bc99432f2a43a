@@ -1,0 +1,332 @@
+version=1
+background=http://media.navi-x.org/images/backgrounds/bkg_navix_bh_plain.jpg
+title=navi-xtreme [COLOR=FF888888]»[/COLOR] site scrapers
+logo=http://media.navi-x.org/images/logos/scrape.png
+
+type=playlist
+name=Sorted by user-assigned order
+icon=http://media.navi-x.org/images/icons/2downarrow.png
+URL=http://www.navixtreme.com/playlist/2229/realtime_scrapers.plx?action=sortsel&cur=ord
+
+# 591913
+type=playlist
+name=ABC
+thumb=http://media.navi-x.org/images/backgrounds/thumb_abc.png
+URL=http://www.navixtreme.com/scrape/abc/
+player=default
+rating=-1.00
+
+# 358174
+type=playlist
+name=Animefreak.tv
+thumb=http://media.navi-x.org/images/backgrounds/thumb_animefreak.jpg
+URL=http://www.navixtreme.com/scrape/animefreak/
+player=default
+rating=3.00
+
+# 708889
+type=playlist
+name=BBC Archive
+thumb=http://www.straumr.dk/host/BBC_Archive_inv.png
+URL=http://www.straumr.dk/host/BBC_Archive_scraper_plx.php
+player=default
+rating=-1.00
+
+# 402503
+type=playlist
+name=CBS Sports
+thumb=http://media.navi-x.org/images/backgrounds/thumb_cbssports.gif
+URL=http://www.navixtreme.com/scrape/cbs_sports/
+player=default
+rating=-1.00
+
+# 260181
+type=playlist
+name=CBS
+thumb=http://media.navi-x.org/images/backgrounds/thumb_cbs.png
+URL=http://www.navixtreme.com/scrape/cbs/
+player=default
+rating=-1.00
+
+# 278262
+type=playlist
+name=CNN
+thumb=http://media.navi-x.org/images/backgrounds/thumb_cnn.png
+URL=http://www.navixtreme.com/scrape/cnn/
+player=default
+rating=5.00
+
+# 260183
+type=playlist
+name=Crackle Movies
+thumb=http://media.navi-x.org/images/backgrounds/thumb_crackle.png
+URL=http://www.navixtreme.com/scrape/cracklemovies/
+player=default
+rating=-1.00
+
+# 260182
+type=playlist
+name=Crackle TV
+thumb=http://media.navi-x.org/images/backgrounds/thumb_crackle.png
+URL=http://www.navixtreme.com/scrape/crackletv/
+player=default
+rating=-1.00
+
+# 323568
+type=playlist
+name=Dailymotion user lists
+thumb=http://media.navi-x.org/images/backgrounds/thumb_dailymotion.jpg
+URL=http://www.navixtreme.com/playlist/15649/dailymotion_user_lists.plx
+player=default
+rating=-1.00
+
+# 411980
+type=playlist
+name=DivxStage
+thumb=http://media.navi-x.org/images/backgrounds/thumb_divxstage.png
+URL=http://www.navixtreme.com/scrape/divxstage/
+player=default
+rating=-1.00
+
+# 936273
+type=playlist
+name=DIY Network
+thumb=http://media.navi-x.org/images/backgrounds/thumb_diynetwork.png
+URL=http://www.navixtreme.com/scrape/diynetwork/
+player=default
+rating=0.00
+
+# 881598
+type=playlist
+name=eBaum's World
+thumb=http://media.ebaumsworld.com/img/headerlogo.png
+URL=http://www.navixtreme.com/scrape/ebaumsworld/
+player=default
+rating=-1.00
+
+# 397092
+type=playlist
+name=Filmtrailer.com
+thumb=http://media.navi-x.org/images/backgrounds/thumb_filmtrailer.gif
+URL=http://www.navixtreme.com/scrape/filmtrailer/
+player=default
+rating=-1.00
+
+# 331095
+type=playlist
+name=Fragg.me
+thumb=http://media.navi-x.org/images/backgrounds/thumb_fraggme.gif
+URL=http://www.navixtreme.com/scrape/fraggme/
+player=default
+rating=2.00
+
+# 503487
+type=playlist
+name=G4TV
+thumb=http://media.navi-x.org/images/backgrounds/thumb_g4tv.png
+URL=http://www.navixtreme.com/scrape/g4tv/
+player=default
+rating=3.00
+
+# 695657
+type=playlist
+name=GameFAQs
+thumb=http://media.navi-x.org/images/backgrounds/thumb_gamefaqs.png
+URL=http://www.navixtreme.com/scrape/gamefaqs/
+player=default
+rating=5.00
+
+# 379386
+type=playlist
+name=Gamekings
+thumb=http://media.navi-x.org/images/backgrounds/thumb_gamekings.png
+URL=http://www.navixtreme.com/scrape/gamekings/
+player=default
+rating=-1.00
+
+# 390679
+type=playlist
+name=GameTrailers.com
+thumb=http://media.navi-x.org/images/backgrounds/thumb_gametrailers.gif
+URL=http://www.navixtreme.com/scrape/gametrailers/
+player=default
+rating=5.00
+
+# 1067392
+type=playlist
+name=HTTPfilm.com
+thumb=http://media.navi-x.org/images/backgrounds/thumb_httpfilm.png
+URL=http://www.navixtreme.com/scrape/httpfilm/
+player=default
+rating=-1.00
+
+# 1047736
+type=playlist
+name=IceFilms.info
+thumb=http://media.navi-x.org/images/backgrounds/thumb_icefilms.png
+URL=http://www.navixtreme.com/scrape/icefilms/
+player=default
+rating=-1.00
+
+# 590416
+type=playlist
+name=Librivox Audio Books
+thumb=http://media.navi-x.org/images/backgrounds/thumb_librivox.png
+URL=http://www.navixtreme.com/scrape/librivox/
+player=default
+rating=-1.00
+
+# 591345
+type=playlist
+name=Live Well HD
+thumb=http://media.navi-x.org/images/backgrounds/thumb_livewellhd.gif
+URL=http://www.navixtreme.com/scrape/livewellhd/
+player=default
+rating=-1.00
+
+# 379226
+type=playlist
+name=Maxim
+thumb=http://media.navi-x.org/images/logo_maxim.jpg
+URL=http://www.navixtreme.com/scrape/maxim/
+player=default
+rating=-1.00
+
+# 935735
+type=playlist
+name=Mekong TV
+thumb=http://media.navi-x.org/images/backgrounds/thumb_mekongtv.png
+URL=http://www.navixtreme.com/scrape/mekongtv/
+player=default
+rating=-1.00
+
+# 384128
+type=playlist
+name=MTV Music Videos
+thumb=http://media.navi-x.org/images/backgrounds/thumb_mtv.jpg
+URL=http://www.navixtreme.com/scrape/mtv_music/
+player=default
+rating=-1.00
+
+# 330238
+type=playlist
+name=National Geographic
+thumb=http://media.navi-x.org/images/backgrounds/thumb_natgeo.jpg
+URL=http://www.navixtreme.com/scrape/natgeo/
+player=default
+rating=-1.00
+
+# 264529
+type=playlist
+name=NBC
+thumb=http://media.navi-x.org/images/backgrounds/thumb_nbc.jpg
+URL=http://www.navixtreme.com/scrape/nbc/
+player=default
+rating=-1.00
+
+# 384069
+type=playlist
+name=NFB
+thumb=http://media.navi-x.org/images/backgrounds/thumb_nfb_ca.jpg
+URL=http://www.navixtreme.com/scrape/nfb_ca/
+player=default
+rating=-1.00
+
+# 396609
+type=playlist
+name=NFL
+thumb=http://media.navi-x.org/images/backgrounds/thumb_nfl.jpg
+URL=http://www.navixtreme.com/scrape/nfl/
+player=default
+rating=-1.00
+
+# 402335
+type=playlist
+name=PBS Kids
+thumb=http://media.navi-x.org/images/backgrounds/thumb_pbskids.png
+URL=http://www.navixtreme.com/scrape/pbskids/
+player=default
+rating=-1.00
+
+# 358859
+type=playlist
+name=PBS
+thumb=http://media.navi-x.org/images/backgrounds/thumb_pbs.gif
+URL=http://www.navixtreme.com/scrape/pbs/
+player=default
+rating=-1.00
+
+# 329765
+type=playlist
+name=PokerTube
+thumb=http://media.navi-x.org/images/backgrounds/thumb_pokertube.gif
+URL=http://www.navixtreme.com/scrape/pokertube/
+player=default
+rating=-1.00
+
+# 552427
+type=playlist
+name=Radiolala
+thumb=http://media.navi-x.org/images/backgrounds/thumb_radiolala.png
+URL=http://www.navixtreme.com/scrape/radiolala/
+player=default
+rating=-1.00
+
+# 261788
+type=playlist
+name=SyFy
+thumb=http://media.navi-x.org/images/backgrounds/thumb_syfy.gif
+URL=http://www.navixtreme.com/scrape/scifi/
+player=default
+rating=-1.00
+
+# 384662
+type=playlist
+name=That Guy With The Glasses
+thumb=http://media.navi-x.org/images/backgrounds/thumb_tgwtg2.png
+URL=http://www.navixtreme.com/scrape/tgwtg/
+player=default
+rating=-1.00
+
+# 514445
+type=playlist
+name=Top 40 Charts
+thumb=http://media.navi-x.org/images/backgrounds/thumb_top40-charts.png
+URL=http://www.navixtreme.com/scrape/top40charts/
+player=default
+rating=5.00
+
+# 337187
+type=playlist
+name=TruTV
+thumb=http://media.navi-x.org/images/backgrounds/thumb_trutv.gif
+URL=http://www.navixtreme.com/scrape/trutv/
+player=default
+rating=3.00
+
+# 592136
+type=playlist
+name=VidIcs
+thumb=http://media.navi-x.org/images/backgrounds/thumb_vidics.png
+URL=http://www.navixtreme.com/scrape/vidics/
+player=default
+rating=3.00
+
+# 358374
+type=playlist
+name=Youtube Shows
+thumb=http://media.navi-x.org/images/backgrounds/thumb_youtube_shows.jpg
+URL=http://www.navixtreme.com/scrape/youtube_shows/
+player=default
+rating=-1.00
+
+# 648724
+type=playlist
+name=VeeHD
+thumb=http://static.veehd.com/logo.gif
+URL=http://scrape.navixtreme.com/cgi-bin/boseman/Scrapers/ct_veehd
+player=default
+rating=3.00
+
+
+# cached

@@ -1,0 +1,6 @@
+<settings>
+    <setting id="AUTOPLAY" value="true" />
+    <setting id="DOWNLOAD_AUTO" value="true" />
+    <setting id="DOWNLOAD_FOLDER" value="" />
+    <setting id="VERSION" value="1.0.22" />
+</settings>

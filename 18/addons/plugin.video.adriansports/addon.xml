@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<addon id="plugin.video.adriansports"
+       name=".ADRIAN SPORTS."
+       version="2.4.0"
+       provider-name="Project Adrian">
+
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+  	<summary lang="en">Project Adrian Sports</summary>
+  	<description lang="en">Project Adrian Sports</description>
+  	<disclaimer lang="en"></disclaimer>
+  	<platform>all</platform>
+  	<language>en</language>
+  	<license></license>
+  	<forum></forum>
+  	<website></website>
+  	<email></email>
+  	<source></source>
+  </extension>
+</addon>

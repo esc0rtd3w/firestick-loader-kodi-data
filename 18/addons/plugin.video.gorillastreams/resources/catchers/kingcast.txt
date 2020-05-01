@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=KingCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.kingcast.tv/embed2.php?a=%s&id=&width=640&height=460&autostart=true&strech=
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]?file['"]?[:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=http://www.kingcast.tv/jwplayer/jwplayer.flash.swf flashver=WIN\2018,0,0,209 swfVfy=1 timeout=10 live=true pageUrl=' + pageUrl
+item_info_build=%s

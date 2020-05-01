@@ -1,0 +1,8 @@
+<settings>
+    <category label="General">
+        <setting label="Use tsdownloader" type="bool" id="ts" default="false"/>
+        <setting label="Cache time (Hours)" type="slider" id="cache_time" default="8" range="0,80" option="int"/>
+    </category>
+    <setting id="auth_token" value="" />
+    <setting id="auth_token_time" value="0" />
+</settings>

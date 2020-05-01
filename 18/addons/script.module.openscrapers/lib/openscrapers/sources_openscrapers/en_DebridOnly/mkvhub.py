@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers  (added cfscrape 4-3-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -28,9 +29,10 @@ import re
 import urllib
 import urlparse
 
+from openscrapers.modules import cfscrape
 from openscrapers.modules import cleantitle
 from openscrapers.modules import client
-from openscrapers.modules import source_utils
+from openscrapers.modules import source_utils, log_utils
 from openscrapers.modules import workers
 
 
@@ -76,8 +78,9 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		self._sources = []
 		try:
-			self._sources = []
+			self.scraper = cfscrape.create_scraper()
 
 			if url is None:
 				return self._sources
@@ -97,26 +100,20 @@ class source:
 			url = urlparse.urljoin(self.base_link, url)
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
-			r = client.request(url)
-
+			r = self.scraper.get(url).content
 			posts = client.parseDOM(r, 'figure')
 
 			items = []
 			for post in posts:
 				try:
-					tit = client.parseDOM(post, 'img', ret='title')[0]
-					tit = client.replaceHTMLCodes(tit)
-					t = tit.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
-					if cleantitle.get(t) != cleantitle.get(title):
-						continue
-
-					if hdlr not in tit:
-						continue
-
 					url = client.parseDOM(post, 'a', ret='href')[0]
-
-					items.append((url, tit))
-
+					name = client.parseDOM(post, 'img', ret='title')[0].replace(' ', '.')
+					if source_utils.remove_lang(name):
+						continue
+					match = source_utils.check_title(title, name, hdlr, data['year'])
+					if not match:
+						continue
+					items.append((url, name))
 				except:
 					source_utils.scraper_error('MKVHUB')
 					pass
@@ -127,7 +124,6 @@ class source:
 			[i.start() for i in threads]
 			[i.join() for i in threads]
 			return self._sources
-
 		except:
 			source_utils.scraper_error('MKVHUB')
 			return self._sources
@@ -136,7 +132,7 @@ class source:
 	def _get_sources(self, url, name, hostDict, hostprDict):
 		try:
 			urls = []
-			result = client.request(url)
+			result = self.scraper.get(url).content
 
 			urls = [(client.parseDOM(result, 'a', ret='href', attrs={'class': 'dbuttn watch'})[0],
 						client.parseDOM(result, 'a', ret='href', attrs={'class': 'dbuttn blue'})[0],
@@ -150,21 +146,15 @@ class source:
 
 			try:
 				size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|Gb|MB|MiB|Mb))', result)[0]
-				div = 1 if size.endswith(('GB', 'GiB', 'Gb')) else 1024
-				size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
-				size = '%.2f GB' % size
-				info.append(size)
+				dsize, isize = source_utils._size(size)
+				info.insert(0, isize)
 			except:
+				dsize = 0
 				pass
 
 			fileType = source_utils.getFileType(name)
 			info.append(fileType)
 			info = ' | '.join(info) if fileType else info[0]
-
-			# Debrid_info = info.append(fileType)
-			# Debrid_info = ' | '.join(info) if fileType else info[0]
-			# Torrent_info = ' | '.join(info)
-
 		except:
 			source_utils.scraper_error('MKVHUB')
 			return
@@ -176,7 +166,6 @@ class source:
 					continue
 
 				if 'linkomark' in url:
-					# info = Debrid_info
 					p_link = client.parseDOM(r, 'link', attrs={'rel': 'canonical'}, ret='href')[0]
 
 					#<input type="hidden" name="_csrf_token_" value=""/>
@@ -205,21 +194,24 @@ class source:
 
 						if rd:
 							self._sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': i,
-																	'info': info, 'direct': False, 'debridonly': True})
+																	'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 						else:
 							self._sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': i,
-																	'info': info, 'direct': False, 'debridonly': False})
+																	'info': info, 'direct': False, 'debridonly': False, 'size': dsize})
 
 				elif 'torrent' in url:
-					# info = Torrent_info
 					data = client.parseDOM(r, 'a', ret='href')
-
 					url = [i for i in data if 'magnet:' in i][0]
+					url = urllib.unquote_plus(url).replace('&amp;', '&').replace(' ', '.')
 					url = url.split('&tr')[0]
+					hash = re.compile('btih:(.*?)&').findall(url)[0]
+					name = url.split('&dn=')[1]
+					if '.-.MkvHub' in name:
+						name = name.split('.-.')[0]
+					seeders = 0
 
-					self._sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-															'info': info, 'direct': False, 'debridonly': True})
-
+					self._sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+													'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 			except:
 				source_utils.scraper_error('MKVHUB')
 				pass

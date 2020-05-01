@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -28,7 +29,6 @@ import re
 import urllib
 import urlparse
 
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -39,9 +39,9 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['torrentdownloads.me', 'torrentsdl1.unblocked.lol']
-		self.base_link = 'https://torrentsdl1.unblocked.to/'
-		self.search = 'https://www.torrentdownloads.me/rss.xml?new=1&type=search&cid={0}&search={1}'
+		self.domains = ['torrentdownloads.info', 'torrentdownloads.me', 'torrentdownloads.d4.re']
+		self.base_link = 'https://torrentdownloads.info/' # not used anyways
+		self.search = 'https://www.torrentdownloads.info/rss.xml?new=1&type=search&cid={0}&search={1}'
 		self.min_seeders = 1
 
 
@@ -77,9 +77,8 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		self._sources = []
 		try:
-			self._sources = []
-
 			if url is None:
 				return self._sources
 
@@ -105,7 +104,6 @@ class source:
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
 			headers = {'User-Agent': client.agent()}
-
 			_html = client.request(url, headers=headers)
 
 			threads = []
@@ -114,7 +112,6 @@ class source:
 			[i.start() for i in threads]
 			[i.join() for i in threads]
 			return self._sources
-
 		except:
 			source_utils.scraper_error('TORRENTDOWNLOADS')
 			return self._sources
@@ -122,40 +119,41 @@ class source:
 
 	def _get_items(self, r):
 		try:
-			size = re.search(r'<size>([\d]+)</size>', r).groups()[0]
-			seeders = re.search(r'<seeders>([\d]+)</seeders>', r).groups()[0]
+			try:
+				seeders = int(re.search(r'<seeders>([\d]+)</seeders>', r).groups()[0].replace(',', ''))
+				if seeders < self.min_seeders:
+					return
+			except:
+				seeders = 0
+				pass
 
-			_hash = re.search(r'<info_hash>([a-zA-Z0-9]+)</info_hash>', r).groups()[0]
+			hash = re.search(r'<info_hash>([a-zA-Z0-9]+)</info_hash>', r).groups()[0]
 			name = re.search(r'<title>(.+?)</title>', r).groups()[0]
-
-			url = 'magnet:?xt=urn:btih:%s&dn=%s' % (_hash.upper(), urllib.quote_plus(name))
-
-			if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
-					continue
-
-			t = name.split(self.hdlr)[0].replace(self.year, '').replace('(', '').replace(')', '').replace('&', 'and')
-			t = name.split(self.hdlr)[0]
-			if cleantitle.get(t) != cleantitle.get(self.title):
+			name = urllib.unquote_plus(name)
+			name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+			if source_utils.remove_lang(name):
 				return
 
-			if self.hdlr not in name:
-				raise Exception()
+			match = source_utils.check_title(self.title, name, self.hdlr, self.year)
+			if not match:
+				return
 
-			quality, info = source_utils.get_release_quality(name, name)
+			url = 'magnet:?xt=urn:btih:%s&dn=%s' % (hash, name)
+
+			quality, info = source_utils.get_release_quality(name, url)
 
 			try:
-				div = 1000 ** 3
-				size = float(size) / div
-				size = '%.2f GB' % size
-				info.append(size)
+				size = re.search(r'<size>([\d]+)</size>', r).groups()[0]
+				dsize, isize = source_utils.convert_size(float(size), to='GB')
+				info.insert(0, isize)
 			except:
+				dsize = 0
 				pass
 
 			info = ' | '.join(info)
 
-			if seeders > self.min_seeders:
-				self._sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-													'info': info, 'direct': False, 'debridonly': True})
+			self._sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+												'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 		except:
 			source_utils.scraper_error('TORRENTDOWNLOADS')
 			pass

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.world.news.live" name="World News Live" version="1.5.1.2" provider-name="K3oni | moneymaker | andre_pl">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">World News Channels</summary>
+    <description lang="en">Al-Jazeera, BBC, CNN, C-SPAN, EuroNews, RT, SkyNews etc.</description>
+    <disclaimer lang="en">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+    <source>https://github.com/k3oni/plugin.video.world.news.live</source>
+    <forum>http://forum.xbmc.org/showthread.php?tid=97488</forum>
+  </extension>
+</addon>
+

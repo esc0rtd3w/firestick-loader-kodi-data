@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=StreamAll - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://streamall.eu/player.php?stream=%s&width=700&height=480
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'flashplayer':\s*"([^"]+)".*?'file':\s*'([^']+)'.*','@REFERER@','swf|tmp2')
+item_info_build=%s
+
+item_info_name=tmp3
+item_info_from=tmp2
+item_info_convert=getInfo('%s','.*<meta base="([^"]+)".*<video src="([^"]+)".*','','rtmp|file)
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playPath=' + file + ' swfUrl=' + swf + ' swfVfy=1 live=true pageUrl=' + pageUrl
+item_info_build=%s

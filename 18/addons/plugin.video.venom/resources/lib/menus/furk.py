@@ -94,7 +94,7 @@ class Furk:
 		navigator.Navigator().endDirectory()
 
 	def search_new(self):
-			control.idle()
+			control.hide()
 
 			t = control.lang(32010).encode('utf-8')
 			k = control.keyboard('', t) ; k.doModal()

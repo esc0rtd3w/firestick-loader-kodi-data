@@ -193,7 +193,7 @@ class documentary:
 
 	def addDirectory(self, items, queue=False, isFolder=True):
 		if items is None or len(items) == 0: 
-			control.idle()
+			control.hide()
 			control.notification(title = 32002, message = 33049, icon = 'INFO', sound = notificationSound)
 			sys.exit()
 

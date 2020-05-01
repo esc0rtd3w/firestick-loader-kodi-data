@@ -1,0 +1,47 @@
+{
+ "name"         : "FilmOn.TV [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.Kinkin",
+ "plugin"       : "plugin.video.F.T.V",
+ "priority"     : 800,
+ "id"           : "q.ftv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anycontaining:UK|CANADIAN|SPORTS|MOVIES|KIDS|MUSIC|NEWS|FilmOn",
+     "{name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anycontaining:UK|CANADIAN|SPORTS|MOVIES|KIDS|MUSIC|NEWS|FilmOn",
+     ".*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anycontaining:UK|CANADIAN|SPORTS|MOVIES|KIDS|MUSIC|NEWS|FilmOn",
+     "{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.F.T.V",
+    "steps": [
+     "@anycontaining:UK|CANADIAN|SPORTS|MOVIES|KIDS|MUSIC|NEWS|FilmOn",
+     ".*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

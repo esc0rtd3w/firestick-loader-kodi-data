@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- selectdialog -->
+	<defaultcontrol always="false">3</defaultcontrol>
+	<zorder>0</zorder>
+	<backgroundcolor>0xff00ff00</backgroundcolor>
+	<coordinates>
+		<posx>0</posx>
+	    <posy>0</posy>
+	</coordinates>
+	<controls>
+
+		<!-- Background -->
+		<control type="image" id="3">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture border="5">black.png</texture>
+		</control>
+
+		<!-- Heading -->
+		<control type="label" id="1">
+			<posx>20</posx>
+			<posy>40</posy>
+			<align>top</align>
+	        <aligny>left</aligny>
+			<aligny>bottom</aligny>
+			<label>Universal Media Provider: SELECT SOURCE </label>
+			<width>1200</width>
+			<height>10</height>
+		</control>
+
+		<control type="progress" id="2">
+			<posx>510</posx>
+			<posy>45</posy>
+			<width>740</width>
+			<height>20</height>
+			<texturebg border="2">progressback.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture border="2">progressbar.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+		</control>
+
+
+		<!-- Image -->
+		<control type="image">
+			<posx>50</posx>
+			<posy>50</posy>
+			<width>405</width>
+			<height>600</height>
+			<texture>$INFO[Container(6).ListItem.Icon]</texture>
+			<aspectratio aligny="center">keep</aspectratio>
+			<visible>Control.IsVisible(6) + !SubString(Container(6).ListItem.Icon,Default)</visible>
+		</control>
+		<control type="image">
+			<posx>50</posx>
+			<posy>50</posy>
+			<width>405</width>
+			<height>600</height>
+			<texture>$INFO[Container(6).ListItem.Icon]</texture>
+			<colordiffuse>OverlayColorFO</colordiffuse>
+			<aspectratio aligny="center">keep</aspectratio>
+			<visible>Control.IsVisible(6) + SubString(Container(6).ListItem.Icon,Default)</visible>
+		</control>
+		<!-- List -->
+		<control type="list" id="6">
+			<posx>510</posx>
+			<posy>75</posy>
+			<width>1230</width>
+			<height>460</height>
+			<onup>noop</onup>
+			<ondown>5</ondown>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1230" height="36">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>36</height>
+					<texture>$INFO[ListItem.Property(lpimg)]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>80</posx>
+					<posy>2</posy>
+					<width>1030</width>
+					<height>26</height>
+					<textcolor>0xFFFFFFFF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1230" height="36">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>36</height>
+					<texture>$INFO[ListItem.Property(lpimg)]</texture>
+					<aspectratio aligny="center">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>680</width>
+					<height>36</height>
+					<texture>progressbar.png</texture>
+				</control>
+				<control type="label">
+					<posx>80</posx>
+					<posy>2</posy>
+					<width>1030</width>
+					<height>26</height>
+					<textcolor>black</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+
+		</control>
+
+		<!-- Get more button -->
+		<control type="textbox" id="8">
+			<posx>50</posx>
+			<posy>600</posy>
+			<width>4200</width>
+			<height>100</height>
+			<font>font10</font>
+			<textcolor>0xCCCCCCCC</textcolor>
+		</control>
+		<control type="button" id="5">
+			<posx>150</posx>
+			<posy>912</posy>
+			<width>400</width>
+			<height>66</height>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
+			<onup>3</onup>
+			<ondown>noop</ondown>
+		</control>
+
+	</controls>
+
+</window>

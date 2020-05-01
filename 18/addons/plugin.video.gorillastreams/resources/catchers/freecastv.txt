@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=FreeCastv - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://freecastv.com/streamerf.php?id=%s&width=700&height=380
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?</script>[^<]+<script>[^']+var ido = '([^']+)';[^<]+</script>.*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?streamer:\s*'([^\s]+livelb).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?swfobject.embedSWF\(['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.udemy.com/static/flash/player5.9.swf live=1 timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

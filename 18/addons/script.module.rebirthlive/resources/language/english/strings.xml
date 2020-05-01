@@ -1,0 +1,41 @@
+<strings>
+  
+    <!-- Meta Data -->
+    <string id="32018">Default Video Type</string>
+	
+	<string id="32019">Default Video Stream</string>
+
+	<string id="32020">Willow User Name</string>
+
+	<string id="32021">Willow Password</string>
+
+    <string id="32022">Turn off Yellow Channels</string>
+    
+    <string id="32026">Turn off v3 Channels</string>
+    <string id="32027">Turn off v5 Channels</string>
+    <string id="32028">Turn off v6 Channels</string>
+    <string id="32029">Turn off v7 Channels</string>  
+    <string id="32030">Turn off v8 Channels</string>  
+    <string id="32045">Turn off v9 Channels</string>  
+    
+    
+    <string id="32032">Turn off Ditto Channels</string>  
+    <string id="32033">Turn off CF Channels</string>  
+    <string id="32034">Turn off Ipbox Channels</string>  
+    <string id="32035">Turn off YP Channels</string>  
+    <string id="32036">Turn off uktv Channels</string>  
+    <string id="32038">Turn off FastTV Channels</string>  
+    <string id="32040">Turn off NetTV Channels</string>  
+    <string id="32041">Turn off SlowTV Channels</string>  
+    <string id="32044">Turn off Zenga Channels</string>      
+    
+    <string id="32031">Do not cache</string>  
+    <string id="32037">Turn Off WTV Channels</string>  
+    <string id="32039">Thumbnail View Mode</string>  
+    <!--<string id="32023">SSS Maxbitrate</string>-->
+        <string id="32024">Willow US Proxy Address</string>
+            <string id="32025">Willow US Proxy Port</string>
+            <string id="32042">Enable colors in listing</string>
+            
+            
+</strings>

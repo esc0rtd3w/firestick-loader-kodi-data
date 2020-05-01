@@ -1,0 +1,527 @@
+------------------------
+GOtv v2.6.4 (28-Jun-14)
+------------------------
+
+- Fixed issues with subscriptions.
+- Fixed issues with watched status.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.6.3 (28-Jun-14)
+------------------------
+
+- Tweaked IMDb watchlist.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.6.2 (27-Jun-14)
+------------------------
+
+- Fixed issues with IMDb watchlist.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.6.1 (25-Jun-14)
+------------------------
+
+- PseudoTV Live: Fixed issues when autoplay is disabled.
+- Fixed issues with season listings.
+- Fixed issues with host listings.
+- Fixed issue with watched status.
+- Tweaked Shush source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.6.0 (24-Jun-14)
+------------------------
+
+- Added Flixanity source.
+- Added Shush source.
+- Removed TVonline source.
+- Tweaked Primewire source.
+- NOTE: Host priorities are reset because of new sources.
+- Added selector for host and subtitle settings.
+- Added more resolvers.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.5.2 (22-Jun-14)
+------------------------
+
+- Fixed issue with library update.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.5.1 (21-Jun-14)
+------------------------
+
+- Fixed issue with watched status.
+- Added option for automatic import of Trakt watchlist.
+- NOTE: If you have automatic import of Trakt collection ebabled, you will have to enable it again.
+- Updated all translations.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.5.0 (20-Jun-14)
+------------------------
+
+- Re-work of addon.
+- Replaced select dialog when possible.
+- Fixed issue with library update.
+- Updated Portuguese translation.
+- Tweaked TVonline source.
+- Tweaked resolvers.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.4.4 (12-Jun-14)
+------------------------
+
+- Tweaked Ororo TV source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.4.2 (8-Jun-14)
+------------------------
+
+- Fixed issue with library update.
+- Re-work of Primewire source.
+- Fixed various sources.
+- Fixed Hugefiles host.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.4.1 (5-Jun-14)
+------------------------
+
+- Fixed issues with episode listings.
+- Fixed Primewire source.
+- Tweaked Watchseries source.
+- Tweaked Moviestorm source.
+- Added Youtube host.
+- Updated all translations.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.4.0 (27-May-14)
+------------------------
+
+- Added Clickplay source.
+- Tweaked Putlocker TV source.
+- Tweaked VKBox source.
+- Tweaked iStreamHD source.
+- Tweaked Simplymovies source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.3.1 (26-May-14)
+------------------------
+
+- PseudoTV Live: Fixed issue with subtitles.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.3.0 (25-May-14)
+------------------------
+
+- Re-work of subscriptions.
+- Re-work of Primewire source.
+- Merged "Add to Library" and "Add subscription" options.
+- Added option for automatic import of Trakt collection.
+- NOTE: First time import will have to be made from subscriptions context menu (Update subscriptions option).
+- NOTE: New TV Shows from Trakt collection will be imported after x hours (based on Subscription update interval).
+- NOTE: Subscription import will skip TV Shows already in library.
+- Tweaked detection of non-working streams in autoplay.
+- PseudoTV Live: Autoplay is now always enabled.
+- PseudoTV Live: All dialogs are now disabled (Resume, Playback info etc).
+- PseudoTV Live: All streams won't be marked as watched.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.2.3 (18-May-14)
+------------------------
+
+- Fixed issues with IMDb lists.
+- NOTE: IMDb introduced captchas during login process.
+- NOTE: Insert your user ID in addon settings.
+- NOTE: Only public lists will be available.
+- NOTE: Prefer Trakt lists, they are faster.
+- Added option for importing trending shows to subscriptions.
+- Added option for importing trending shows to library.
+- Removed watched indicators in tv show listings.
+- Removed watched indicators in season listings.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.2.2 (14-May-14)
+------------------------
+
+- Fixed issues with listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.2.1 (14-May-14)
+------------------------
+
+- Fixed issues with listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.2.0 (13-May-14)
+------------------------
+
+- Added Calendar.
+- Re-work of season listings.
+- Re-work of episode listings.
+- Updated all translations.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.1.3 (11-May-14)
+------------------------
+
+- Added Primewire source.
+- Fixed Watchseries source.
+- Removed MerDB source.
+- Added Hebrew translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.1.0 (4-May-14)
+------------------------
+
+- Removed metadata in tv show search.
+- NOTE: TV show search will now be faster.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.0.4 (27-Apr-14)
+------------------------
+
+- Re-work of iStreamHD source.
+- NOTE: You will have to use your account, register at http://istreamhd.org.
+- Tweaked VKBox source.
+- Tweaked Putlocker TV source.
+- Tweaked Noobroom source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.0.3 (26-Apr-14)
+------------------------
+
+- Tweaked new episodes inclusion interval.
+- Tweaked tv show listings.
+- Fixed issues with Noobroom source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.0.2 (21-Apr-14)
+------------------------
+
+- Tweaked VKBox source.
+- Tweaked Putlocker TV source.
+- Tweaked Noobroom source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.0.1 (21-Apr-14)
+------------------------
+
+- Fixed issues with Icefilms source.
+- Fixed issues with Noobroom source.
+- Tweaked season and episode listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v2.0.0 (20-Apr-14)
+------------------------
+
+- Re-work of addon.
+- Added Icefilms source.
+- Added Ororo TV source.
+- Added Putlocker TV source.
+- Added Noobroom source (login required).
+- Removed Watchonline source.
+- Added full remote share support.
+- Added support for IMDb lists (login required).
+- Added support for Trakt lists (login required).
+- Added option for adding lists to subscriptions.
+- Added section for trending tv.
+- Added search by actor.
+- Fixed playback issues.
+- Fixed istreamHD source.
+- Fixed Moviestorm source.
+- Tweaked show, season and episode listings.
+- Tweaked filtering of hosts.
+- Tweaked available sources.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.7 (14-Apr-14)
+------------------------
+
+- Fixed Watchseries source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.6 (6-Apr-14)
+------------------------
+
+- Fixed TVonline source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.5 (5-Apr-14)
+------------------------
+
+- Fixed TVonline source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.4 (4-Apr-14)
+------------------------
+
+- Fixed VKBox source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.3 (6-Mar-14)
+------------------------
+
+- Added section for Trakt's trending shows.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.2 (5-Mar-14)
+------------------------
+
+- Tweaked season listings (TVDB/TVRAGE).
+- Tweaked internal subtitles.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.1 (3-Mar-14)
+------------------------
+
+- Reworked season listings (TVDB/TVRAGE combo).
+- Reworked episode listings (TVDB/TVRAGE combo).
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.3.0 (2-Mar-14)
+------------------------
+
+- Fixed various playback issues.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.9 (1-Mar-14)
+------------------------
+
+- Re-work of subtitles (66 languages are now available).
+- Fixed various playback issues.
+- Added priority options for HD hosts.
+- HD and SD hosts are now separated in options.
+- Tweaked tv show listings.
+- Added Portuguese translation.
+- Update all existing translations.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.6 (12-Feb-14)
+------------------------
+
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.5 (6-Feb-14)
+------------------------
+
+- Tweaked various sources.
+- Added Dutch translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.3 (2-Feb-14)
+------------------------
+
+- Reworked all sources.
+- Added MerDB source.
+- Tweaked subscriptions.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.2 (31-Jan-14)
+------------------------
+
+- Added VKBox source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.1 (30-Jan-14)
+------------------------
+
+- Tweaked tv show listings.
+- Tweaked season listings.
+- Fixed library integration.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.0 (29-Jan-14)
+------------------------
+
+- Reworked season listings (TVDB).
+- Reworked episode listings (TVDB).
+- Tweaked library integration.
+- NOTE: Delete TV folder, update subscriptions and clean library.
+- Added French, Polish and Romanian addon description.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.9 (27-Jan-14)
+------------------------
+
+- Tweaked playback from library.
+- Updated French translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.8 (26-Jan-14)
+------------------------
+
+- Tweaked tv show listings.
+- Reduced resolution of IMDb posters.
+- Added French translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.7 (24-Jan-14)
+------------------------
+
+- Added option for resuming playback.
+- Added Polish and Romanian translations.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.6 (19-Jan-14)
+------------------------
+
+- Tweaked watched status.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.5 (19-Jan-14)
+------------------------
+
+- Fixed issues with sources.
+- Tweaked genre listings.
+- Tweaked watched status.
+- Added option for showing playback info.
+- Autoplay is disabled by default.
+- Added new artwork.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.0 (10-Jan-14)
+------------------------
+
+- Fixed issues with simplymovies source.
+- Fixed issues with istreamhd source.
+- Fixed issues with tvonline source.
+- Tweaked watched status.
+- Tweaked season listings.
+- Tweaked detection of new episodes.
+- Removed automatic cleaning of Subscriptions.
+- Tweaked cleaning of Subscriptions.
+- Tweaked removal of Subscription.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.3 (8-Jan-14)
+------------------------
+
+- If autoplay is disabled, it can now be selected from context menu.
+- Refresh option is now available in all tv show folders.
+- Tweaked season listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.2 (6-Jan-14)
+------------------------
+
+- Fixed issues with watched status in library.
+- Fixed issues with latest episodes in Gotham.
+- Notifications are now silent in Gotham or later.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.1 (5-Jan-14)
+------------------------
+
+- Fixed issues with simplymovies source.
+- Fixed issues with tvonline source.
+- Added sorting methods for favourites (Title, Status, Added).
+- Tweaked detection of new episodes.
+- Tweaked episode listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.0 (1-Jan-14)
+------------------------
+
+- Initial version

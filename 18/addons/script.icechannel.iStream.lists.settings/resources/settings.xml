@@ -1,0 +1,7 @@
+<settings>
+<category label="Indexers">
+<setting type="sep"/>
+<setting id="lists_trakt_indexer_enabled" type="bool" label="Trakt" default="false"/>
+<setting id="lists_IMDb_indexer_enabled" type="bool" label="IMDb" default="true"/>
+</category>
+</settings>

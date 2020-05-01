@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.teammaniac" name="   [COLOR yellow][B]Team[/COLOR] [COLOR red]ManiaC[/B] Repository[/COLOR]" version="1.0.2" provider-name="[COLOR blue][B]AMO[/B][/COLOR][COLOR green]box[/COLOR]">
+	<extension point="xbmc.addon.repository" name="Demonstration Add-on Repository">
+		<info compressed="false">http://raw.github.com/AMObox/teammaniac/master/addons.xml</info>
+		<checksum>http://raw.github.com/AMObox/teammaniac/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/AMObox/teammaniac/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Team Maniac Addons</summary>
+		<description>Team Maniac Installer</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

@@ -1,0 +1,5 @@
+[B]Version 0.0.2[/B]
+- Fixed a typo mistake in configuration.
+
+[B]Version 0.0.1[/B]
+- PlayIt audio add-on for support.

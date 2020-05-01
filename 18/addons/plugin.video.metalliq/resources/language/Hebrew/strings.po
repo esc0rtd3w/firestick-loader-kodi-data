@@ -1,0 +1,298 @@
+# Addon Name: MetalliQ
+# Addon id: plugin.video.metalliq
+# Addon Provider: [COLOR ff0084ff]Q[/COLOR]
+msgid ""
+msgstr ""
+"Project-Id-Version: MetalliQ Addon for Kodi\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-02-21 19:17+0200\n"
+"Language-Team: Hebrew\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgctxt "#30000"
+msgid "General"
+msgstr "כללי"
+
+msgctxt "#30010"
+msgid "Players URL"
+msgstr "כתובת לעדכון נגנים"
+
+msgctxt "#30012"
+msgid "Install from URL"
+msgstr "התקן נגנים מכתובת"
+
+msgctxt "#30100"
+msgid "Movies"
+msgstr "סרטים"
+
+msgctxt "#30110"
+msgid "Enable movie players"
+msgstr "אפשר נגני סרטים"
+
+msgctxt "#30120"
+msgid "Preferred movie player"
+msgstr "נגן סרטים מועדף"
+
+msgctxt "#30121"
+msgid "Preferred movie player from library"
+msgstr "נגן סרטים מועדף בניגון מספריה"
+
+msgctxt "#30200"
+msgid "TV Shows"
+msgstr "סדרות"
+
+msgctxt "#30201"
+msgid "Enable TV players"
+msgstr "אפשר נגני סדרות"
+
+msgctxt "#30210"
+msgid "Preferred TV player"
+msgstr "נגן סדרות מועדף"
+
+msgctxt "#30211"
+msgid "Preferred TV player from library"
+msgstr "נגן סדרות מועדף בניגון מספריה"
+
+msgctxt "#30300"
+msgid "Library"
+msgstr "ספריה"
+
+msgctxt "#30301"
+msgid "Library folder"
+msgstr "תיקיית ספריה"
+
+msgctxt "#30302"
+msgid "Library folder"
+msgstr "תיקיית ספריה"
+
+msgctxt "#30303"
+msgid "Update library"
+msgstr "עדכן ספריה"
+
+msgctxt "#30400"
+msgid "Advanced"
+msgstr "מתקדם"
+
+msgctxt "#30401"
+msgid "Clear cache"
+msgstr "נקה זיכרון מטמון"
+
+msgctxt "#30304"
+msgid "Automatic movies library server"
+msgstr "שרת עבור קיר סרטים אוטומטי"
+
+msgctxt "#30305"
+msgid "Set added time to release date"
+msgstr "קבע זמן הוספה כזמן שחרור הסרט או פרק"
+
+msgctxt "#30402"
+msgid "Use simple selection dialog"
+msgstr "השתמש בדיאלוג בחירה פשוט"
+
+msgctxt "#30404"
+msgid "Number of simultaneous searches"
+msgstr "מספר חיפושים לבצע במקביל"
+
+msgctxt "#30410"
+msgid "Attempt to hide dialogs while MetalliQ is searching"
+msgstr "הסתר חלונות משנה בזמן שהתוסף מבצע חיפוש"
+
+msgctxt "#30411"
+msgid "Hide progress dialogs"
+msgstr "הסתר חלון התקדמות"
+
+msgctxt "#30412"
+msgid "Hide information dialogs"
+msgstr "הסתר התראות מידע"
+
+msgctxt "#30413"
+msgid "Hide keyboard dialog"
+msgstr "הסתר מקלדת"
+
+msgctxt "#30600"
+msgid "Would you like to automatically set MetalliQ as a movies video source?"
+msgstr "האם ברצונך שאגדיר באופן אוטומטי את ספריית התוסף כמקור סרטי וידאו?"
+
+msgctxt "#30601"
+msgid "Genres"
+msgstr "סגנונות"
+
+msgctxt "#30602"
+msgid "Select default player"
+msgstr "בחר נגן ברירת מחדל"
+
+msgctxt "#30603"
+msgid "Show info"
+msgstr "הצג מידע"
+
+msgctxt "#30604"
+msgid "Video not found :("
+msgstr "וידאו לא נמצא :("
+
+msgctxt "#30605"
+msgid "Add to library"
+msgstr "הוסף לספריה"
+
+msgctxt "#30606"
+msgid "Do you want to remove your existing players first?"
+msgstr "האם ברצונך להסיר נגנים ישנים תחילה?"
+
+msgctxt "#30607"
+msgid "Enter password"
+msgstr "הכנס סיסמא"
+
+msgctxt "#30608"
+msgid "Players updated"
+msgstr "נגנים עודכנו"
+
+msgctxt "#30609"
+msgid "Enable players"
+msgstr "אפשר נגנים"
+
+msgctxt "#30610"
+msgid "Season"
+msgstr "עונה"
+
+msgctxt "#30612"
+msgid "Top rated"
+msgstr "המדורגים ביותר"
+
+msgctxt "#30613"
+msgid "Blockbusters"
+msgstr "שוברי קופות"
+
+msgctxt "#30614"
+msgid "On the air"
+msgstr "משודר כעת"
+
+msgctxt "#30615"
+msgid "Update players"
+msgstr "עדכן נגנים"
+
+msgctxt "#30616"
+msgid "Would you like to automatically set MetalliQ as a tv shows source?"
+msgstr "האם ברצונך שאגדיר באופן אוטומטי את ספריית התוסף כמקור תוכניות טלוויזיה?"
+
+msgctxt "#30617"
+msgid "Search"
+msgstr "חיפוש"
+
+msgctxt "#30618"
+msgid "search for"
+msgstr "חפש את"
+
+msgctxt "#30619"
+msgid "Next >>"
+msgstr "הבא >>"
+
+msgctxt "#30620"
+msgid "Error"
+msgstr "שגיאה"
+
+msgctxt "#30621"
+msgid "Popular"
+msgstr "פופולרי"
+
+msgctxt "#30622"
+msgid "Context player"
+msgstr "בחר מקור הזרמה..."
+
+msgctxt "#30623"
+msgid "Failed to update players"
+msgstr "נכשל בעדכון נגנים"
+
+msgctxt "#30624"
+msgid "In theatres"
+msgstr "בקולנוע"
+
+msgctxt "#30625"
+msgid "Select player"
+msgstr "בחר נגן"
+
+msgctxt "#30626"
+msgid "Warning"
+msgstr "אזהרה"
+
+msgctxt "#30627"
+msgid "Library setup"
+msgstr "הגדרת ספריה"
+
+msgctxt "#30628"
+msgid "Play with..."
+msgstr "נגן באמצעות..."
+
+msgctxt "#30414"
+msgid "Trakt watchlist"
+msgstr "Trakt רשימת צפייה"
+
+msgctxt "#30415"
+msgid "Please go to https://trakt.tv/activate and enter the code"
+msgstr "גש לאתר הבא מכל מכשיר והכנס את הקוד המופיע מטה https://trakt.tv/activate"
+
+msgctxt "#30416"
+msgid "Next episodes"
+msgstr "פרקים הבאים"
+
+msgctxt "#30417"
+msgid "Authenticate Trakt"
+msgstr "היכנס לחשבון Trakt"
+
+msgctxt "#30418"
+msgid "Add all to library"
+msgstr "הוסף הכל לספריה"
+
+msgctxt "#30419"
+msgid ""
+"Are you sure you want to add your entire Trakt collection to Kodi library?"
+msgstr "האם אתה בטוח שברצונך להוסיף את כל האוסף לספרית קודי?"
+
+msgctxt "#30420"
+msgid "Trakt collection"
+msgstr "Trakt אוסף"
+
+msgctxt "#30421"
+msgid ""
+"Are you sure you want to add your entire Trakt watchlist to Kodi library?"
+msgstr "האם אתה בטוח שברצונך להוסיף את כל רשימת הצפייה לספרית קודי?"
+
+msgctxt "#30422"
+msgid "You must authenticate with Trakt. Do you want to authenticate now?"
+msgstr "עדיין לא נכנסת לחשבון Trakt. האם ברצונך לעשות זאת כעת?"
+
+msgctxt "#30423"
+msgid "My calendar"
+msgstr "לוח השנה שלי"
+
+msgctxt "#30500"
+msgid "Live"
+msgstr "לייב"
+
+msgctxt "#30501"
+msgid "Enable Live Players"
+msgstr "אפשר נגני לייב"
+
+msgctxt "#30510"
+msgid "Prefered Live Player"
+msgstr "נגן לייב מועדף"
+
+msgctxt "#30001"
+msgid "Move down"
+msgstr "הזז מטה"
+
+msgctxt "#30002"
+msgid "Move up"
+msgstr "הזז מעלה"
+
+msgctxt "#30003"
+msgid "Clear channels"
+msgstr "נקה כל הערוצים"
+
+msgctxt "#30004"
+msgid "Remove channel"
+msgstr "הסר ערוץ"

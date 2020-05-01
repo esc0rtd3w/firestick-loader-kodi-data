@@ -1,0 +1,12 @@
+Version 1.0.6 Adding Quasar support
+Version 1.0.5 refreshing view
+Version 1.0.4 fixing dialog error
+Version 1.0.3 Adding episode title
+Version 1.0.2 Extendedinfo script support
+Version 1.0.1 Safe Search
+Version 1.0.0 new coding
+Version 0.1.2 fix service
+VErsion 0.1.1 fix magnets
+Version 0.1.0 new Coding
+Version 0.0.2 fix magnets
+Version 0.0.1 First version

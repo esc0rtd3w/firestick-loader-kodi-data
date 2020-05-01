@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+    <!-- Plugin settings -->
+    <string id="30000">Cambiar XBMC a modo ventana antes de la ejecución</string>
+    <string id="30001">Deshabilitar la detección de inactividad de pantalla de XBMC</string>
+    <string id="30002">Deshabilitar LIRC antes de la ejecución</string>
+    <!-- Context menu -->
+    <string id="30100">Ajustes del Plugin</string>
+    <string id="30101">Añadir un programa nuevo</string>
+    <string id="30102">Borrar programa</string>
+    <string id="30103">Cambiar icono</string>
+    <!-- Dialogs -->
+    <string id="30200">Programa borrado con éxito</string>
+    <string id="30201">¿Estas seguro de que deseas borrar '%s'?</string>
+    <string id="30202">Selecciona el programa a ejecutar</string>
+    <string id="30203">Introduzca el titulo del programa</string>
+    <string id="30204">Introduzca los argumentos del programa</string>
+    <string id="30205">El programa ya existe</string>
+    <string id="30206">¿Estas seguro de que deseas reemplazar '%s'?</string>
+    <string id="30207">Selecciona el icono para '%s'</string>
+    <string id="30208">Borrar icono?</string>
+    <string id="30209">Quieres borrar el icono existente?</string>
+</strings>

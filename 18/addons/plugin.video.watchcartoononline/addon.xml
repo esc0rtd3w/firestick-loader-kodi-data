@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.watchcartoononline" name="Watch Cartoon Online" version="1.0.23" provider-name="spoyser">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Watch even more of your favourite cartoons from www.watchcartoononline.com</summary>
+    <description lang="en">Watch even more of your favourite cartoons from www.watchcartoononline.com</description>
+     <platform>all</platform>
+  </extension>
+</addon>

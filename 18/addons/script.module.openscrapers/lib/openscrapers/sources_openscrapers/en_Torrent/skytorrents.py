@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -28,7 +29,6 @@ import re
 import urllib
 import urlparse
 
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -41,6 +41,7 @@ class source:
 		self.domains = ['www.skytorrents.lol']
 		self.base_link = 'https://www.skytorrents.lol/'
 		self.search_link = '?query=%s'
+		self.min_seeders = 0
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -75,9 +76,8 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		sources = []
 		try:
-			sources = []
-
 			if url is None:
 				return sources
 
@@ -99,66 +99,69 @@ class source:
 			url = urlparse.urljoin(self.base_link, url)
 			# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
-			try:
-				r = client.request(url)
-				if '<tbody' not in r:
-					return sources
-
-				posts = client.parseDOM(r, 'tbody')[0]
-				posts = client.parseDOM(posts, 'tr')
-
-				for post in posts:
-					link = re.findall('a href="(magnet:.+?)" title="(.+?)"', post, re.DOTALL)
-
-					try:
-						size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
-						div = 1 if size.endswith('GB') else 1024
-						size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
-						size = '%.2f GB' % size
-					except:
-						size = '0'
-
-					for url, ref in link:
-						url = url.split('&tr')[0]
-
-						if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
-							continue
-
-						name = url.split('&dn=')[1]
-
-						if name.startswith('www.'):
-							try:
-								name = name.split(' - ')[1].lstrip()
-							except:
-								name = re.sub(r'\www..+? ', '', name)
-
-						if 'extramovies.wiki' in name.lower():
-							name = name.split(' - ')[1].lstrip()
-
-						t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
-						if cleantitle.get(t) != cleantitle.get(title):
-							continue
-
-						if hdlr not in name:
-							continue
-
-						quality, info = source_utils.get_release_quality(name, url)
-
-						info.append(size)
-						info = ' | '.join(info)
-
-						sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-													'info': info, 'direct': False, 'debridonly': True})
-
+			r = client.request(url)
+			if '<tbody' not in r:
 				return sources
 
-			except:
-				source_utils.scraper_error('SKYTORRENTS')
-				return sources
+			posts = client.parseDOM(r, 'tbody')[0]
+			posts = client.parseDOM(posts, 'tr')
 
 		except:
 			source_utils.scraper_error('SKYTORRENTS')
 			return sources
+
+		for post in posts:
+			try:
+				post = re.sub(r'\n', '', post)
+				post = re.sub(r'\t', '', post)
+				link = re.findall('href="(magnet:.+?)".+<td style="text-align: center;color:green;">([0-9]+|[0-9]+,[0-9]+)</td>', post, re.DOTALL)
+
+				for url, seeders, in link:
+					url = urllib.unquote_plus(url).replace('&amp;', '&').replace(' ', '.')
+					url = url.split('&tr')[0]
+					url = url.encode('ascii', errors='ignore').decode('ascii', errors='ignore')
+					hash = re.compile('btih:(.*?)&').findall(url)[0]
+
+					name = url.split('&dn=')[1]
+					name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+					if name.startswith('www'):
+						try:
+							name = re.sub(r'www(.*?)\W{2,10}', '', name)
+						except:
+							name = name.split('-.', 1)[1].lstrip()
+					if source_utils.remove_lang(name):
+						continue
+
+					match = source_utils.check_title(title, name, hdlr, data['year'])
+					if not match:
+						continue
+
+					try:
+						seeders = int(seeders)
+						if self.min_seeders > seeders:
+							continue
+					except:
+						seeders = 0
+						pass
+
+					quality, info = source_utils.get_release_quality(name, url)
+
+					try:
+						size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
+						dsize, isize = source_utils._size(size)
+						info.insert(0, isize)
+					except:
+						dsize = 0
+						pass
+
+					info = ' | '.join(info)
+
+					sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+												'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
+			except:
+				source_utils.scraper_error('SKYTORRENTS')
+				return sources
+		return sources
 
 
 	def resolve(self, url):

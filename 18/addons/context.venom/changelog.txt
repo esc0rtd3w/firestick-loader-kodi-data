@@ -1,0 +1,7 @@
+[B][COLOR red]Update - v1.0.2 - April 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Rescrape option showing on unplayable items.[/I]
+[COLOR yellow]--[/COLOR][I] Added settings options to turn on and off context menu items.[/I]
+[COLOR yellow]--[/COLOR][I] Added Auto Play and Source Select context menu options to
+    be inverse of addon play method chosen.[/I]
+[COLOR yellow]--[/COLOR][I] Some options did not return to homescreen on back, this is
+    now fixed.[/I]

@@ -1,0 +1,19 @@
+<settings>
+    <setting id="duplicated" value="false" />
+    <setting id="firstOpen" value="NO" />
+    <setting id="infoLabels" value="true" />
+    <setting id="overwrite" value="false" />
+    <setting id="persistent" value="false" />
+    <setting id="plugin" value="XBMCtorrent" />
+    <setting id="service" value="true" />
+    <setting id="showFolder" value="" />
+    <setting id="timeNotification" value="1.500000" />
+    <setting id="tvKeyAllowed" value="" />
+    <setting id="tvKeyDenied" value="" />
+    <setting id="tvQua1" value="Filter Off" />
+    <setting id="tvQua2" value="Filter Off" />
+    <setting id="tvQua3" value="Filter Off" />
+    <setting id="tvQua4" value="Filter Off" />
+    <setting id="urlAddress" value="https://eztv.ag" />
+    <setting id="viewMode" value="0" />
+</settings>

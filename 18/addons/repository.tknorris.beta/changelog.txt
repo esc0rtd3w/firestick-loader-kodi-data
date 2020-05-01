@@ -1,0 +1,15 @@
+[B]Version 1.0.6[/B]
+- Add github version of tva-common
+- Switch to https
+
+[B]Version 1.0.4[/B]
+- Switch https to http
+
+[B]Version 1.0.3[/B]
+- Added TVA Common Repo
+
+[B]Version 1.0.1[/B]
+- Added icon
+
+[B]Version 1.0.0[/B]
+- Initial version

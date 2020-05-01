@@ -1,0 +1,8 @@
+Enjoy The Royal We, revisited!
+
+The Royal We is getting better then ever. It's all about better sources. There are still some free streams, but the quality is much better with a premium.
+There is a common scraper routine that dynamically loads a list of site scrapers. These can be enabled or disabled through the context menu or the settings in the event one of them breaks or is running slowly.
+Some sites require a username and password. These are disabled by default. You can enter credentials through the settings and enable them if you want.
+
+Enjoy!
+Send feedback, seek support at http://tvaddons.ag

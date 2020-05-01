@@ -1,0 +1,17 @@
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('%s','.*?"title" content="Live by ([^'"&]+).*?"play_url":['"]([^'"]+)['"].*?rtsp_url":"rtsp://([^/]+).*','http://new.livestream.com','title.tmp|bitrate.tmp|url.tmp')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=title.tmp
+item_info_build=LiveStream - %s
+
+item_info_name=bitrate
+item_info_from=bitrate.tmp
+item_info_convert=getInfo('%s','.*?<video src="([^'"]+)" system-bitrate="[^'"]+"/>\s*</switch>.*','http://new.livestream.com')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=http://' + url.tmp + '/livestreamiphone/' + bitrate + '/master.m3u8
+item_info_build=%s

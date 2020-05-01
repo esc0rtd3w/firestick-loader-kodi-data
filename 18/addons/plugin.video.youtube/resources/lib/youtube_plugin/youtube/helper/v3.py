@@ -152,6 +152,7 @@ def _process_list_response(provider, context, json_data):
             video_item.set_track_number(snippet['position'] + 1)
             result.append(video_item)
             video_id_dict[video_id] = video_item
+            
         elif yt_kind == 'youtube#activity':
             snippet = yt_item['snippet']
             details = yt_item['contentDetails']
@@ -180,6 +181,21 @@ def _process_list_response(provider, context, json_data):
             video_item.set_fanart(provider.get_fanart(context))
             result.append(video_item)
             video_id_dict[video_id] = video_item
+            
+        elif yt_kind == 'youtube#commentThread':
+            thread_snippet = yt_item['snippet']
+            total_replies = thread_snippet['totalReplyCount']
+            snippet = thread_snippet['topLevelComment']['snippet']
+            item_params = {'parent_id': yt_item['id']}
+            if total_replies:
+                item_uri = context.create_uri(['special', 'child_comments'], item_params)
+            else:
+                item_uri = ''
+            result.append(utils.make_comment_item(context, provider, snippet, item_uri, total_replies))
+        
+        elif yt_kind == 'youtube#comment':
+            result.append(utils.make_comment_item(context, provider, yt_item['snippet'], uri=''))
+            
         elif yt_kind == 'youtube#searchResult':
             yt_kind = yt_item.get('id', {}).get('kind', '')
 
@@ -265,7 +281,8 @@ def response_to_items(provider, context, json_data, sort=None, reverse_sort=Fals
     if kind == u'youtube#searchListResponse' or kind == u'youtube#playlistItemListResponse' or \
             kind == u'youtube#playlistListResponse' or kind == u'youtube#subscriptionListResponse' or \
             kind == u'youtube#guideCategoryListResponse' or kind == u'youtube#channelListResponse' or \
-            kind == u'youtube#videoListResponse' or kind == u'youtube#activityListResponse':
+            kind == u'youtube#videoListResponse' or kind == u'youtube#activityListResponse' or \
+            kind == u'youtube#commentThreadListResponse' or kind == u'youtube#commentListResponse':
         result.extend(_process_list_response(provider, context, json_data))
     else:
         raise kodion.KodionException("Unknown kind '%s'" % kind)
@@ -307,22 +324,32 @@ def response_to_items(provider, context, json_data, sort=None, reverse_sort=Fals
 
 def handle_error(provider, context, json_data):
     if json_data and 'error' in json_data:
-        open_settings = False
+        ok_dialog = False
         message_timeout = 5000
+
         message = kodion.utils.strip_html_from_text(json_data['error'].get('message', ''))
         log_message = kodion.utils.strip_html_from_text(json_data['error'].get('message', ''))
         reason = json_data['error']['errors'][0].get('reason', '')
+        title = '%s: %s' % (context.get_name(), reason)
+
+        context.log_error('Error reason: |%s| with message: |%s|' % (reason, log_message))
+
+        if reason == 'accessNotConfigured':
+            message = context.localize(provider.LOCAL_MAP['youtube.key.requirement.notification'])
+            ok_dialog = True
+
         if reason == 'keyInvalid' and message == 'Bad Request':
             message = context.localize(provider.LOCAL_MAP['youtube.api.key.incorrect'])
             message_timeout = 7000
-            open_settings = True
-        title = '%s: %s' % (context.get_name(), reason)
+
         if reason == 'quotaExceeded' or reason == 'dailyLimitExceeded':
             message_timeout = 7000
-        context.get_ui().show_notification(message, title, time_milliseconds=message_timeout)
-        context.log_error('Error reason: |%s| with message: |%s|' % (reason, log_message))
-        if open_settings:
-            context.get_ui().open_settings()
+
+        if ok_dialog:
+            context.get_ui().on_ok(title, message)
+        else:
+            context.get_ui().show_notification(message, title, time_milliseconds=message_timeout)
+
         return False
 
     return True

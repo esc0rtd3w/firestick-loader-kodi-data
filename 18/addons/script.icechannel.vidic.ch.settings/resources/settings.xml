@@ -1,0 +1,6 @@
+<settings>
+<category label="General">
+<setting id="custom_urls" type="labelenum" label="Preferred Language Results" default="All" values="Custom|All|English|French|Spanish|Italian|German|Dutch|Swedish|Polish|Russian|Indian" />
+<setting id="custom_text_url" type="text" label="     Custom Language Results" default="English" enable="eq(-1,0)" />
+</category>
+</settings>

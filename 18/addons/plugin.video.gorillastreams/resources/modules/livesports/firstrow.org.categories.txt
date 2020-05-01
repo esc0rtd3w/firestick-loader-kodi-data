@@ -1,0 +1,46 @@
+########################################################
+title=sports.devil.locale|30351
+icon=sports.devil.image|sports/American Football.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/football
+########################################################
+title=Boxing / WWE / UFC
+icon=sports.devil.image|sports/Boxing.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/boxing
+########################################################
+title=sports.devil.locale|30352
+icon=sports.devil.image|sports/Football.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/soccer
+########################################################
+title=sports.devil.locale|30353
+icon=sports.devil.image|sports/Basketball.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/basketball
+########################################################
+title=sports.devil.locale|30354
+icon=sports.devil.image|sports/Ice Hockey.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/hockey
+########################################################
+title=sports.devil.locale|30356
+icon=sports.devil.image|sports/Tennis.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/tennis
+########################################################
+title=sports.devil.locale|30357
+icon=sports.devil.image|sports/Racing.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/moto_gp
+########################################################
+title=sports.devil.locale|30358
+icon=sports.devil.image|sports/Rugby.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/rugby
+########################################################
+title=sports.devil.locale|30363
+icon=sports.devil.image|sports/Other.png
+cfg=firstrow.org.links.cfg
+url=http://www.firstrow.org/volleyball
+########################################################

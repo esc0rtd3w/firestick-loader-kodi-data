@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=TVCastOn - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://199.189.106.28:1935/live/_definst_/ playpath=%s swfVfy=1 live=true swfurl=http://www.tvcaston.com/player/player.swf pageUrl=http://www.tvcaston.com

@@ -1,0 +1,19 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=CastVideo - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://aka.castvideo.info/%s.html
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*swfobject.embedSWF\(['"]([^'"]+)['"].*','@REFERER@','file|rtm|swf')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=random
+item_info_build=rtmp://80.255.7.90:443/liverepeater/
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true timeout=16 swfVfy=true pageUrl=' + pageUrl
+item_info_build=%s

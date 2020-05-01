@@ -1,0 +1,5 @@
+<settings>
+    <setting id="cacheInterval" value="60" />
+    <setting id="email" value="frsksetup@gmail.com" />
+    <setting id="password" value="fs123456" />
+</settings>

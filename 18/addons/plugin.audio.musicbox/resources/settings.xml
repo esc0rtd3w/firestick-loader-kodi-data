@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30000">
+		<setting label="30001" type="lsep"/>
+		<setting id="vk_email" type="text" label="30002" default=""/>
+		<setting id="vk_password" type="text" label="30003" option="hidden" default=""/>
+		<setting id="vk_auth_email" type="text" default="" visible="false"/>
+		<setting id="vk_auth_password" type="text" default="" visible="false"/>
+		<setting label="30006" type="lsep"/>
+		<setting id="lastfm_email" type="text" label="30007" default=""/>
+		<setting id="lastfm_password" type="text" label="30008" option="hidden" default=""/>
+		<setting id="lastfm_token" type="text" label="30009" default="" visible="false"/>
+		<setting label="30010" type="lsep"/>
+		<setting id="8tracks_email" type="text" label="30011" default=""/>
+		<setting id="8tracks_password" type="text" label="30012" option="hidden" default=""/>
+		<setting id="8tracks_token" type="text" label="30013" default="" visible="false"/>
+	</category>
+	<category label="30100">
+		<setting id="playing_type" type="enum" label="30101" values="Vk.com|Youtube" default="0"/>
+		<setting label="30102" type="lsep"/>
+   		<setting label="30103" type="lsep"/>
+		<setting label="30104" type="slider" id="items_per_page" default="20" range="10,50" option="int"/>
+		<setting label="30105" type="enum" id="track_resolver_method" lvalues="30106|30107" default="0"/>
+		<setting label="30112" type="enum" id="digster_country" values="Adria|Denmark|Estonia|Finland|Latvia|Lithuania|Mexico|Netherlands|New Zeland|Norway|Portugal|Romania|Spain" default="0"/>
+		<setting label="30113" type="bool" id="get_artist_fanart" default="false"/>
+		<setting label="30114" type="bool" id="hide_soundtrack" default="false"/>
+		<setting label="30117" type="bool" id="hide_8tracks" default="false"/>
+		<setting label="30115" type="bool" id="display_songinfo_cmenu" default="false"/>
+		<setting label="30116" type="bool" id="display_artistinfo_cmenu" default="true"/>
+	</category>
+	<category label="30200">
+		<setting label="30201" type="folder" id="downloads_folder" source="auto" option="writeable"/>
+	</category>
+	<category label="30300">
+		<setting label="30301" type="folder" id="library_folder" source="auto" option="writeable"/>
+		<setting label="30302" type="lsep"/>
+		<setting label="30303" type="lsep"/>
+		<setting label="30304" type="bool" id="save_library_tbn" default="true"/>
+	</category>
+</settings>

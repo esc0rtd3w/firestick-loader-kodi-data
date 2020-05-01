@@ -1,0 +1,503 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TV Addons Addons\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: English\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30100"
+msgid "Favourites"
+msgstr "Favourites"
+
+msgctxt "#30101"
+msgid "New Episodes"
+msgstr "New Episodes"
+
+msgctxt "#30102"
+msgid "TV Schedule"
+msgstr "TV Schedule"
+
+msgctxt "#30103"
+msgid "Latest Added"
+msgstr "Latest Added"
+
+msgctxt "#30104"
+msgid "Popular today"
+msgstr "Popular today"
+
+msgctxt "#30105"
+msgid "Most popular"
+msgstr "Most popular"
+
+msgctxt "#30106"
+msgid "A-Z"
+msgstr "A-Z"
+
+msgctxt "#30107"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#30108"
+msgid "Downloads"
+msgstr "Downloads"
+
+msgctxt "#30109"
+msgid "Search"
+msgstr "Search"
+
+msgctxt "#30110"
+msgid "Action"
+msgstr "Action"
+
+msgctxt "#30111"
+msgid "Adventure"
+msgstr "Adventure"
+
+msgctxt "#30112"
+msgid "Animation"
+msgstr "Animation"
+
+msgctxt "#30113"
+msgid "Biography"
+msgstr "Biography"
+
+msgctxt "#30114"
+msgid "Comedy"
+msgstr "Comedy"
+
+msgctxt "#30115"
+msgid "Crime"
+msgstr "Crime"
+
+msgctxt "#30116"
+msgid "Documentary"
+msgstr "Documentary"
+
+msgctxt "#30117"
+msgid "Drama"
+msgstr "Drama"
+
+msgctxt "#30118"
+msgid "Family"
+msgstr "Family"
+
+msgctxt "#30119"
+msgid "Fantasy"
+msgstr "Fantasy"
+
+msgctxt "#30120"
+msgid "Game-Show"
+msgstr "Game-Show"
+
+msgctxt "#30121"
+msgid "History"
+msgstr "History"
+
+msgctxt "#30122"
+msgid "Horror"
+msgstr "Horror"
+
+msgctxt "#30123"
+msgid "Japanese"
+msgstr "Japanese"
+
+msgctxt "#30124"
+msgid "Korean"
+msgstr "Korean"
+
+msgctxt "#30125"
+msgid "Music"
+msgstr "Music"
+
+msgctxt "#30126"
+msgid "Musical"
+msgstr "Musical"
+
+msgctxt "#30127"
+msgid "Mystery"
+msgstr "Mystery"
+
+msgctxt "#30128"
+msgid "Reality - TV"
+msgstr "Reality - TV"
+
+msgctxt "#30129"
+msgid "Romance"
+msgstr "Romance"
+
+msgctxt "#30130"
+msgid "Sci-Fi"
+msgstr "Sci-Fi"
+
+msgctxt "#30131"
+msgid "Short"
+msgstr "Short"
+
+msgctxt "#30132"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#30133"
+msgid "Talk - Show"
+msgstr "Talk - Show"
+
+msgctxt "#30134"
+msgid "Thriller"
+msgstr "Thriller"
+
+msgctxt "#30135"
+msgid "War"
+msgstr "War"
+
+msgctxt "#30136"
+msgid "Western"
+msgstr "Western"
+
+msgctxt "#30137"
+msgid "Start Downloads"
+msgstr "Start Downloads"
+
+msgctxt "#30138"
+msgid "Stop Downloads"
+msgstr "Stop Downloads"
+
+msgctxt "#30139"
+msgid "Download Status"
+msgstr "Download Status"
+
+msgctxt "#30140"
+msgid "General"
+msgstr "General"
+
+msgctxt "#30141"
+msgid "Enable TV Schedule"
+msgstr "Enable TV Schedule"
+
+msgctxt "#30142"
+msgid "Delete Favourites"
+msgstr "Delete Favourites"
+
+msgctxt "#30143"
+msgid "Delete Search History"
+msgstr "Delete Search History"
+
+msgctxt "#30144"
+msgid "Metadata"
+msgstr "Metadata"
+
+msgctxt "#30145"
+msgid "Paginate shows/episodes while metadata is ON"
+msgstr "Paginate shows/episodes while metadata is ON"
+
+msgctxt "#30146"
+msgid "Number of items per page"
+msgstr "Number of items per page"
+
+msgctxt "#30147"
+msgid "Show episode specials and other unindexed episodes"
+msgstr "Show episode specials and other unindexed episodes"
+
+msgctxt "#30148"
+msgid "Sources"
+msgstr "Sources"
+
+msgctxt "#30149"
+msgid "Enable autoplay"
+msgstr "Enable autoplay"
+
+msgctxt "#30150"
+msgid "Use Transmogrifier service ([COLOR red]experimental[/COLOR])"
+msgstr "Use Transmogrifier service ([COLOR red]experimental[/COLOR])"
+
+msgctxt "#30151"
+msgid "Source blacklist (comma separated e.g.:vidzi.tv,vodlocker.com)"
+msgstr "Source blacklist (comma separated e.g.:vidzi.tv,vodlocker.com)"
+
+msgctxt "#30152"
+msgid "Enable source sorting"
+msgstr "Enable source sorting"
+
+msgctxt "#30153"
+msgid "Source order (comma separated e.g.:vidzi.tv,vodlocker.com)"
+msgstr "Source order (comma separated e.g.:vidzi.tv,vodlocker.com)"
+
+
+msgctxt "#30154"
+msgid "Downloads folder"
+msgstr "Downloads folder"
+
+msgctxt "#30155"
+msgid "Auto select download source"
+msgstr "Auto select download source"
+
+msgctxt "#30156"
+msgid "Episode Information"
+msgstr "Episode Information"
+
+msgctxt "#30157"
+msgid "Download"
+msgstr "Download"
+
+msgctxt "#30158"
+msgid "Show Information"
+msgstr "Show Information"
+
+msgctxt "#30159"
+msgid "Add to TeeVee Favourites"
+msgstr "Add to TeeVee Favourites"
+
+msgctxt "#30160"
+msgid "Remove from TeeVee Favourites"
+msgstr "Remove from TeeVee Favourites"
+
+msgctxt "#30161"
+msgid "Remove All TeeVee Favourites"
+msgstr "Remove All TeeVee Favourites"
+
+msgctxt "#30162"
+msgid "New Search"
+msgstr "New Search"
+
+msgctxt "#30163"
+msgid "Favourite already exists"
+msgstr "Favourite already exists"
+
+msgctxt "#30164"
+msgid "already exists in your TeeVee favourites."
+msgstr "already exists in your TeeVee favourites."
+
+msgctxt "#30165"
+msgid "Added to Favourites"
+msgstr "Added to Favourites"
+
+msgctxt "#30166"
+msgid "added to your TeeVee favourites."
+msgstr "added to your TeeVee favourites."
+
+msgctxt "#30167"
+msgid "No stream available"
+msgstr "No stream available"
+
+
+msgctxt "#30168"
+msgid "Couldn't resolve item"
+msgstr "Couldn't resolve item"
+
+msgctxt "#30169"
+msgid "This will delete your favourites!"
+msgstr "This will delete your favourites!"
+
+msgctxt "#30170"
+msgid "Season"
+msgstr "Season"
+
+msgctxt "#30171"
+msgid "Next Page >>"
+msgstr "Next Page >>"
+
+msgctxt "#30172"
+msgid "Theme"
+msgstr "Theme"
+
+msgctxt "#30173"
+msgid "Clear cache"
+msgstr "Clear cache"
+
+msgctxt "#30174"
+msgid "Enable metadata"
+msgstr "Enable metadata"
+
+msgctxt "#30175"
+msgid "Downloads"
+msgstr "Downloads"
+
+msgctxt "#30176"
+msgid "Item already in your queue"
+msgstr "Item already in your queues"
+
+msgctxt "#30177"
+msgid "File size is "
+msgstr "File size is "
+
+msgctxt "#30178"
+msgid "Continue with download?"
+msgstr "Continue with download?"
+
+msgctxt "#30179"
+msgid "Confirm download?"
+msgstr "Confirm download?"
+
+msgctxt "#30180"
+msgid "Confirm"
+msgstr "Confirm"
+
+
+msgctxt "#30181"
+msgid "Cancel"
+msgstr "Cancel"
+
+msgctxt "#30182"
+msgid "Unable to download"
+msgstr "Unable to download"
+
+msgctxt "#30183"
+msgid "Item added to Queue"
+msgstr "Item added to Queue"
+
+
+msgctxt "#30184"
+msgid "You need to remove file manually"
+msgstr "You need to remove file manually"
+
+
+msgctxt "#30185"
+msgid "Can not remove from Queue"
+msgstr "Can not remove from Queue"
+
+msgctxt "#30186"
+msgid "You need to set your download folder in addon settings first"
+msgstr "You need to set your download folder in addon settings first"
+
+msgctxt "#30187"
+msgid "Download Status/Information"
+msgstr "Download Status/Information"
+
+msgctxt "#30188"
+msgid "Total File Size"
+msgstr "Total File Size"
+
+msgctxt "#30189"
+msgid "Downloaded"
+msgstr "Downloaded"
+
+msgctxt "#30190"
+msgid "Download Speed"
+msgstr "Download Speed"
+
+msgctxt "#30191"
+msgid "Close"
+msgstr "Close"
+
+msgctxt "#30192"
+msgid "Stop Download"
+msgstr "Stop Download"
+
+msgctxt "#30193"
+msgid " is Downloading"
+msgstr " is Downloading"
+
+msgctxt "#30194"
+msgid "Downloads started"
+msgstr "Downloads started"
+
+msgctxt "#30195"
+msgid " Completed"
+msgstr " Completed"
+
+msgctxt "#30196"
+msgid "Download Complete"
+msgstr "Download Completed"
+
+
+msgctxt "#30401"
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+msgctxt "#30402"
+msgid "Process Complete"
+msgstr "Process Complete"
+
+msgctxt "#30403"
+msgid "Enter search query:"
+msgstr "Enter search query:"
+
+msgctxt "#30404"
+msgid "New search"
+msgstr "New search"
+
+msgctxt "#30405"
+msgid "Download via Transmogrifier ([COLOR red]experimental[/COLOR])"
+msgstr "Download via Transmogrifier ([COLOR red]experimental[/COLOR])"
+
+
+
+msgctxt "#30521"
+msgid "Monday"
+msgstr "Monday"
+
+msgctxt "#30522"
+msgid "Tuesday"
+msgstr "Tuesday"
+
+msgctxt "#30523"
+msgid "Wednesday"
+msgstr "Wednesday"
+
+msgctxt "#30524"
+msgid "Thursday"
+msgstr "Thursday"
+
+msgctxt "#30525"
+msgid "Friday"
+msgstr "Friday"
+
+msgctxt "#30526"
+msgid "Saturday"
+msgstr "Saturday"
+
+msgctxt "#30527"
+msgid "Sunday"
+msgstr "Sunday"
+
+msgctxt "#30528"
+msgid "January"
+msgstr "January"
+
+msgctxt "#30529"
+msgid "February"
+msgstr "February"
+
+msgctxt "#30530"
+msgid "March"
+msgstr "March"
+
+msgctxt "#30531"
+msgid "April"
+msgstr "April"
+
+msgctxt "#30532"
+msgid "May"
+msgstr "May"
+
+msgctxt "#30533"
+msgid "June"
+msgstr "June"
+
+msgctxt "#30534"
+msgid "July"
+msgstr "July"
+
+msgctxt "#30535"
+msgid "August"
+msgstr "August"
+
+msgctxt "#30536"
+msgid "September"
+msgstr "September"
+
+msgctxt "#30537"
+msgid "October"
+msgstr "October"
+
+msgctxt "#30538"
+msgid "November"
+msgstr "November"
+
+msgctxt "#30539"
+msgid "December"
+msgstr "December"

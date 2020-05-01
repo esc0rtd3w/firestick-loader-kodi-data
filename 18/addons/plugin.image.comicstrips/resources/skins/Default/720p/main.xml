@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>    
+    <allowoverlay>no</allowoverlay>
+    <defaultcontrol1 always="false">5001</defaultcontrol1>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+
+    <controls>
+        <control type="image" id="5000">
+            <description>Background</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <fadetime>500</fadetime>
+            <texture>background.png</texture>
+        </control> 
+   
+        <control type="image" id="5001">
+            <description>Cartoon Holder</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>keep</aspectratio>
+            <fadetime>500</fadetime>
+        </control> 
+
+        <control type="image" id="5002">
+            <description>Cartoon Prefetch Holder</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>1</width>
+            <height>1</height>
+        </control> 
+		 
+		<control type="button" id="5004">
+			<description>Previous Button</description>
+			<posx>5</posx>
+			<posy>670</posy>
+			<width>45</width>
+			<height>45</height> 
+			<texturefocus border="5">floor_buttonFO.png</texturefocus>
+			<texturenofocus border="5">floor_button.png</texturenofocus>
+			<visible>system.getbool(input.enablemouse)</visible>			
+		</control>
+
+		<control type="image" id="5003">
+			<description>Previous Arrow</description>
+			<posx>10</posx>
+			<posy>675</posy>
+			<width>35</width>
+			<height>35</height> 
+			<texture>left.png</texture>
+			<visible>system.getbool(input.enablemouse)</visible>			
+		</control>
+		 
+		<control type="button" id="5006">
+			<description>Next Button</description>
+			<posx>1230</posx>
+			<posy>670</posy>
+			<width>45</width>
+			<height>45</height> 
+			<texturefocus border="5">floor_buttonFO.png</texturefocus>
+			<texturenofocus border="5">floor_button.png</texturenofocus>
+			<visible>system.getbool(input.enablemouse)</visible>			
+		</control>
+
+		<control type="image" id="5005">
+			<description>Next Arrow</description>
+			<posx>1235</posx>
+			<posy>675</posy>
+			<width>35</width>
+			<height>35</height> 
+			<texture>right.png</texture>
+			<visible>system.getbool(input.enablemouse)</visible>			
+		</control>
+	</controls>
+	
+</window>

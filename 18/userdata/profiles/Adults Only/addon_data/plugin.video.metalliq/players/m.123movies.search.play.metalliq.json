@@ -1,0 +1,33 @@
+{
+ "name"         : "123Movies [COLOR ff0084ff]-[/COLOR] Search Play ([COLOR FF0084FF]M[/COLOR])",
+ "repository"   : "repository.mdrepo",
+ "plugin"       : "plugin.video.md123movies",
+ "priority"     : 900,
+ "id"           : "m.123movies.search.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.md123movies/?mode=8&url=url&query={title_escaped}",
+    "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.md123movies/?mode=8&url=url&query={clearname_escaped}",
+    "steps"     : [
+     "($$.*$$)+{clearname} -.*Season {season}($$.*$$)+",
+     "($$.*$$)+Episode {episode}:($$.*$$)+"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

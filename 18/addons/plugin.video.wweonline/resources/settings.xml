@@ -1,0 +1,7 @@
+<settings>
+   <category label="30300">		
+		<setting id="ga_time" type="text" label="GA Called" default="2000-01-01 00:00:00" visible="false"/>
+    	<setting id="ga_visitor" type="text" label="GA visitor" default="" visible="false"/>
+		<setting id="universal_settings" type="action" label="30303" action="RunPlugin(plugin://plugin.video.wweonline/default.py?mode=universalsettings)" />
+    </category>	
+</settings>

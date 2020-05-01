@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+<setting id="hls" type="bool" label="Enable HLS instead of RTMP" default="true"/>
+<setting id="debug" type="bool" label="Enable debug mode" default="false"/>
+</settings>

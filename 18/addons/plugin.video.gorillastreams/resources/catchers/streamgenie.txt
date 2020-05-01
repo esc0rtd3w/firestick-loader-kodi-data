@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=StreamGenie - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.streamgenie.eu/player.php?chname=%s&width=720&height=405
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\("([^"]+.swf)".*','@CURRENT_URL@')
+item_info_build=http://www.streamgenie.eu/%s
+
+item_info_name=rtmpt
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?"streamer"\,"([^"]+)".*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmpt
+item_info_convert=replace('%s','/redirect',':1935/streamgenie')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + @PARAM1@ + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s

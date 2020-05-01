@@ -1,0 +1,649 @@
+# Kodi Media Center language file
+# Addon Name: RSS Torrents Integration, trakt
+# Addon id: plugin.video.rsstorrentintegration, trakt
+# Addon Provider: mancuniancol
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-05 05:53-0400\n"
+"PO-Revision-Date: 2015-09-14 08:22-0400\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: addon.py:21
+msgctxt "#32000"
+msgid "Warning!\nThis addon uses torrent addon player that it could be illegal in your country.\n\nBe sure to consult the local laws before use those torrent addon players.\n\nIt is highly recommended that you use a VPN provider,\n in order to avoid potential legal repercussions in the future\n\nFor any assistance, please, visit http://tutvguia.com/forums/"
+msgstr "Avertissement!\nCet addon utilise torrent addon player, ils peuvent être pas legal dans votre pays.\n\nSVP, il faut lire bien les lois locales avant de les utiliser.\n\nC'est très recommendable l'utilisation d'un fournisseur de VPN\npour empêcher aucun problème legal dans l'avenir\n\nPour assistance, SVP, visitez http://tutvguia.com/forums/"
+
+#: addon.py:21
+msgctxt "#32001"
+msgid "Disable Automatic Library Integration"
+msgstr "Desactiver l'integration Automatique"
+
+#: addon.py:24
+msgctxt "#32002"
+msgid "Enable Automatic Library Integration"
+msgstr "Activer l'integration Automatique"
+
+#: addon.py:29
+msgctxt "#32003"
+msgid "Remove RSS URL"
+msgstr "Enlever le lien RSS"
+
+#: addon.py:30
+msgctxt "#32004"
+msgid "Modify RSS URL"
+msgstr "Modifier le lien RSS"
+
+#: addon.py:75 script.py:15
+msgctxt "#32005"
+msgid "Add a New [COLOR ffff9900]RSS[/COLOR]"
+msgstr "Ajouter un nouveau lien [COLOR ffff9900]RSS[/COLOR]"
+
+#: addon.py:86 script.py:44
+msgctxt "#32006"
+msgid "Do you want Remove %s?"
+msgstr "Voulez-vous supprimer %s?"
+
+#: addon.py:93 addon.py:100 script.py:25 script.py:37
+msgctxt "#32007"
+msgid "URL RSS:"
+msgstr "Lien RSS:"
+
+#: addon.py:103 script.py:28
+msgctxt "#32008"
+msgid "Name to this RSS:"
+msgstr "Nom RSS:"
+
+#: addon.py:176
+msgctxt "#32009"
+msgid "Import to the local library"
+msgstr "Importer à la bibliothèque locale"
+
+#: script.py:15 script.py:99
+msgctxt "#32010"
+msgid "Choose an Option:"
+msgstr "Choisir un Option:"
+
+#: script.py:16
+msgctxt "#32011"
+msgid "Modify Saved [COLOR ffff9900]RSS[/COLOR]"
+msgstr "Modifier les  [COLOR ffff9900]RSS[/COLOR]"
+
+#: script.py:17
+msgctxt "#32012"
+msgid "Remove a [COLOR ffff9900]RSS[/COLOR]"
+msgstr "Suprimier un [COLOR ffff9900]RSS[/COLOR]"
+
+#: script.py:18
+msgctxt "#32013"
+msgid "View Saved [COLOR ffff9900]RSS[/COLOR] list"
+msgstr "Lister les  [COLOR ffff9900]RSS[/COLOR] "
+
+#: script.py:19
+msgctxt "#32014"
+msgid "Read [COLOR ffff9900]RSS[/COLOR] list and create .strm Files in"
+msgstr "lire les [COLOR ffff9900]RSS[/COLOR] et créer les fichier .strm Files en"
+
+# ################################################################
+#: script.py:20
+msgctxt "#32015"
+msgid "Erase Folders"
+msgstr "Effacer les dossiers"
+
+#: script.py:21
+msgctxt "#32016"
+msgid "[B]SETTINGS[/B]"
+msgstr "[B]PARAMÈTRES[/B]"
+
+#: script.py:22
+msgctxt "#32017"
+msgid "[B]HELP[/B]"
+msgstr "[B]AIDE[/B]"
+
+#: script.py:23
+msgctxt "#32018"
+msgid "Exit"
+msgstr "Sortie"
+
+#: script.py:34 script.py:42
+msgctxt "#32019"
+msgid "CANCEL"
+msgstr "ANNULER"
+
+#: script.py:42
+msgctxt "#32020"
+msgid "Choose RSS to Remove"
+msgstr "Choisir RSS à effacer"
+
+#: script.py:63 service.py:27
+msgctxt "#32021"
+msgid ""
+"Checking Online\n"
+"%s..."
+msgstr ""
+"Mise à jour en ligne\n"
+"%s..."
+
+#: addon.py:126 script.py:99
+msgctxt "#32022"
+msgid "Movies"
+msgstr "Films"
+
+#: script.py:99
+msgctxt "#32023"
+msgid "TV Shows"
+msgstr "Émissions de Télévision"
+
+#: script.py:113
+msgctxt "#32024"
+msgid "Animes"
+msgstr "Animes"
+
+#: script.py:114
+msgctxt "#32025"
+msgid ""
+"Please, check this address to find the user's operation:\n"
+"[B]http://goo.gl/8nYU6R[/B]"
+msgstr "SVP, consultez ce lien pour trouver le manual d'operation:"
+
+# ################################################################
+#: service.py:65
+msgctxt "#32026"
+msgid "Persistent Update Service starting..."
+msgstr "Depart du Service Automatique..."
+
+#: service.py:71
+msgctxt "#32027"
+msgid "Update List at %s"
+msgstr "Mise à jour at %s"
+
+#: service.py:72
+msgctxt "#32028"
+msgid "Next Update in %s"
+msgstr "Prochaine mise à jour %s"
+
+# ################################################################
+#: tools.py:140 tools.py:141
+msgctxt "#32029"
+msgid "All .strm files removed!"
+msgstr "Tous les fichiers .strm enlevés!"
+
+#: tools.py:145
+msgctxt "#32030"
+msgid "Erasing Database..."
+msgstr "La Base de donnée en cours d'être vidée"
+
+#: tools.py:732
+msgctxt "#32031"
+msgid "MOVIES"
+msgstr "FILMS"
+
+#: tools.py:732
+msgctxt "#32032"
+msgid "EPISODES"
+msgstr "ÉPISODES"
+
+#: tools.py:736
+msgctxt "#32033"
+msgid ""
+"%s: %s items\n"
+"Do you want to integrate this list?"
+msgstr ""
+"%s: %s éléments\n"
+"Voulez-vous intégrer cette liste?"
+
+#: tools.py:741
+msgctxt "#32034"
+msgid ""
+"Checking for %s\n"
+"%s"
+msgstr ""
+"Mise à jour de %s\n"
+"%s"
+
+#: tools.py:795
+msgctxt "#32035"
+msgid "Code %s=%s"
+msgstr ""
+
+#: tools.py:806
+msgctxt "#32036"
+msgid "Creating %s/%s.strm..."
+msgstr "Création de  %s/%s.strm..."
+
+#: tools.py:806
+msgctxt "#32037"
+msgid ""
+"%s %s found - Still working...\n"
+"%s"
+msgstr ""
+"%s %s trouvés - Encore occupé...\n"
+"%s"
+
+#: tools.py:809
+msgctxt "#32038"
+msgid "%s added"
+msgstr "%s ajoutés"
+
+#: tools.py:847
+msgctxt "#32039"
+msgid "%s/%s.strm added"
+msgstr "%s/%s.strm ajouté"
+
+#: tools.py:857
+msgctxt "#32040"
+msgid "%s %s added. %s"
+msgstr "%s %s ajouté. %s"
+
+#: tools.py:864
+msgctxt "#32041"
+msgid "No new %s. %s"
+msgstr "Pas nouveau %s. %s"
+
+#: tools.py:866
+msgctxt "#32042"
+msgid ""
+"No new %s\n"
+"%s"
+msgstr ""
+"Pas nouveau %s\n"
+"%s"
+
+#: tools.py:732
+msgctxt "#32043"
+msgid "EPISODES ANIMES"
+msgstr "ÉPISODES ANIMES"
+
+#: tools.py:741
+msgctxt "#32044"
+msgid "Checking Online"
+msgstr "Mise à jour en ligne"
+
+# ################################################################
+#: settings.xml:3
+msgctxt "#32050"
+msgid "General"
+msgstr "Général"
+
+#: settings.xml:4
+msgctxt "#32051"
+msgid "Movie Folder:"
+msgstr "Dossier de Films"
+
+#: settings.xml:5
+msgctxt "#32052"
+msgid "Show Folder:"
+msgstr "Dossier des Émissions:"
+
+#: settings.xml:6
+msgctxt "#32053"
+msgid "Anime Folder:"
+msgstr "Dossier d'Animes"
+
+#: settings.xml:7
+msgctxt "#32054"
+msgid "Add-on to use:"
+msgstr "Add-on à utiliser"
+
+#: settings.xml:9
+msgctxt "#32055"
+msgid "Overwrite Existent .strm Files:"
+msgstr "Ecraser Fichiers .strm Existants:"
+
+#: settings.xml:10
+msgctxt "#32056"
+msgid "Accept All Duplicated Files:"
+msgstr "Accepter tout les fichiers:"
+
+#: settings.xml:11
+msgctxt "#32057"
+msgid "Notification Message"
+msgstr "Message de Notification"
+
+#: settings.xml:12
+msgctxt "#32058"
+msgid "Time (seconds):"
+msgstr "Temps (secondes):"
+
+#: settings.xml:15
+msgctxt "#32059"
+msgid "Automatic Integration"
+msgstr "Integration Automatique"
+
+#: settings.xml:16
+msgctxt "#32060"
+msgid "Run the Automatic Integration Service (check in every login):"
+msgstr "Exécutez le service d'intégration automatique (en chaque démarrage):"
+
+#: settings.xml:18
+msgctxt "#32061"
+msgid "Persistent Update @ 8h:"
+msgstr "Mise à jour continue"
+
+#: settings.xml:20
+msgctxt "#32062"
+msgid "Movies Filters"
+msgstr "Filtrage Films"
+
+#: settings.xml:21 settings.xml:43
+msgctxt "#32063"
+msgid "Advance Setup (for 'AND' use space, for 'OR' use comma)"
+msgstr "Paramètres avancés (pour 'ET' utiliser espace, pour 'ou' utiliser la virgule)"
+
+#: settings.xml:22 settings.xml:44
+msgctxt "#32064"
+msgid "Accept File with:"
+msgstr "Accepter des Fichiers avec:"
+
+#: settings.xml:23 settings.xml:45
+msgctxt "#32065"
+msgid "Block File with:"
+msgstr "Bloquer les fichiers avec:"
+
+#: settings.xml:24 settings.xml:46
+msgctxt "#32066"
+msgid "Easy Setup Keywords after the query"
+msgstr "Facile de configuration avec Mots-clés après la requête"
+
+#: settings.xml:25 settings.xml:27 settings.xml:29 settings.xml:31
+#: settings.xml:33 settings.xml:35 settings.xml:37 settings.xml:39
+#: settings.xml:47 settings.xml:49 settings.xml:51 settings.xml:53
+msgctxt "#32067"
+msgid "Accept File|Block File|Filter Off"
+msgstr "Accepter Fichier|Bloquer Fichier|Non Filtrage"
+
+#: settings.xml:26 settings.xml:28 settings.xml:30 settings.xml:32
+#: settings.xml:48 settings.xml:50 settings.xml:52 settings.xml:54
+msgctxt "#32068"
+msgid "Filter Off"
+msgstr "Non Filtrage"
+
+#: settings.xml:34 settings.xml:36 settings.xml:38 settings.xml:40
+msgctxt "#32069"
+msgid "Block File"
+msgstr "Bloquer Fichier"
+
+#: settings.xml:42
+msgctxt "#32070"
+msgid "TV Filters"
+msgstr "Filtrage Émission Télévision"
+
+#: settings.xml:42
+msgctxt "#32071"
+msgid "Activer la MetaInformation (Poster, Fanart, Plot, ...)"
+msgstr ""
+
+#: settings.xml:42
+msgctxt "#32072"
+msgid "Default View Mode"
+msgstr "Mode de vue par defaut"
+
+#: settings.xml:4
+msgctxt "#32080"
+msgid "Action:"
+msgstr "Action:"
+
+#: settings.xml:4
+msgctxt "#32081"
+msgid "Clear Database:"
+msgstr "Vider la base de donnée:"
+
+#: settings.xml:4
+msgctxt "#32082"
+msgid "Remove All .strm Files:"
+msgstr "Effacer tous les Fichier .strm"
+
+#: settings.xml:4
+msgctxt "#32083"
+msgid "Type of Library:"
+msgstr "Type de bibliothèque:"
+
+#: settings.xml:4
+msgctxt "#32084"
+msgid "Include Specials Episodes (Season 0):"
+msgstr "Inclure Episodes Spécieux (Season 0):"
+
+#: settings.xml:4
+msgctxt "#32085"
+msgid "Detailed log"
+msgstr "Journal détaillé"
+
+#: setting.xml:21 settings.xml:4
+msgctxt "#32086"
+msgid "Start Delay (in seconds)"
+msgstr "Délais pour le démarrage (en secondes)"
+
+#: setting.xml
+msgctxt "#32090"
+msgid "Login"
+msgstr "S'identifier"
+
+#: setting.xml
+msgctxt "#32091"
+msgid "Username:"
+msgstr "Utilisateur:"
+
+#: setting.xml
+msgctxt "#32092"
+msgid "Password:"
+msgstr "mot de passe:"
+
+#: setting.xml
+msgctxt "#32093"
+msgid "URL address (ex:http://www.example.com):"
+msgstr "Lien URL (ex: http://www.example.com):"
+
+# ################################################################
+#: TRAKT main.py:6
+msgctxt "#32100"
+msgid "Choose a category"
+msgstr "Choisir une categorie"
+
+#: TRAKT
+msgctxt "#32101"
+msgid "List"
+msgstr "Liste"
+
+#: TRAKT
+msgctxt "#32105"
+msgid "Movies Popular"
+msgstr "Films Populaires"
+
+#: TRAKT
+msgctxt "#32106"
+msgid "Movies Trending"
+msgstr "Tendance en Films"
+
+#: TRAKT
+msgctxt "#32107"
+msgid "TV Popular"
+msgstr "Émissions Populaires"
+
+#: TRAKT
+msgctxt "#32108"
+msgid "TV Trending"
+msgstr "Tendance en Émissions"
+
+#: TRAKT
+msgctxt "#32110"
+msgid "Watchlist"
+msgstr "Liste de Surveillance"
+
+# ################################################################
+#: IMDB main.py:6
+msgctxt "#32150"
+msgid "Genre"
+msgstr "Genre"
+
+#: IMDB main.py:6
+msgctxt "#32151"
+msgid "Language"
+msgstr "Langage"
+
+#: IMDB main.py:6
+msgctxt "#32152"
+msgid "Popular and Oscar Winner"
+msgstr "Populaire et Gagnats de l'Oscar"
+
+#: IMDB main.py:6
+msgctxt "#32153"
+msgid "TOP 250"
+msgstr "TOP 250"
+
+#: IMDB main.py:6
+msgctxt "#32154"
+msgid "Keywords"
+msgstr "Mots-clés"
+
+# ################################################################
+#: FAVOURITES main.py:6
+msgctxt "#32158"
+msgid "'No Favourites Found"
+msgstr "Aucun Favourite trouvé"
+
+# ##########################
+#: YTS settings.xml
+msgctxt "#32160"
+msgid "Quality:"
+msgstr "Qualité"
+
+#: YTS settings.xml
+msgctxt "#32161"
+msgid "Minimum Rating 0:OFF"
+msgstr "Minimum de Rating"
+
+#: YTS settings.xml
+msgctxt "#32162"
+msgid "Sorting by:"
+msgstr "Tirage par:"
+
+#: YTS settings.xml
+msgctxt "#32163"
+msgid "Number Pages to download:"
+msgstr "Nombre de pages à télécharger"
+
+#: YTS settings.xml
+msgctxt "#32170"
+msgid "Manual Search"
+msgstr "Recherche manuelle"
+
+#: YTS settings.xml
+msgctxt "#32171"
+msgid "PreFixed List"
+msgstr "Liste prefixée"
+
+#: YTS settings.xml
+msgctxt "#32172"
+msgid "Name Movie:"
+msgstr "Nom du Film:"
+
+#: YTS settings.xml
+msgctxt "#32173"
+msgid "Which Movie:"
+msgstr "Quel Films:"
+
+
+#:HorribleSubs
+msgctxt "#32180"
+msgid "Add an new Anime..."
+msgstr "Ajouter un nouvel Anime..."
+
+#:HorribleSubs
+msgctxt "#32181"
+msgid "Remove this Anime"
+msgstr "Effacer cet Anime"
+
+#:EZTV
+msgctxt "#32182"
+msgid "Add an new TV Show..."
+msgstr "Ajouter un nouveau téléserie..."
+
+#:EZTV
+msgctxt "#32183"
+msgid "Remove this TV Show"
+msgstr "Effacer cette téléserie"
+
+#:
+msgctxt "#32184"
+msgid "Add an new Movie..."
+msgstr "Ajouter un nouveau film..."
+
+#:
+msgctxt "#32185"
+msgid "Remove this Movie"
+msgstr "Effacer ce film"
+
+#:
+msgctxt "#32186"
+msgid "Add an new item..."
+msgstr "Ajouter un nouveau élément..."
+
+#:
+msgctxt "#32187"
+msgid "Remove this item"
+msgstr "Effacer cet élément"
+
+#:
+msgctxt "#32188"
+msgid "Modify this item"
+msgstr "Modifier cet élément"
+
+#:Torrents
+msgctxt "#32190"
+msgid "Search for:"
+msgstr "Rechercher pour:"
+
+#:Torrents
+msgctxt "#32191"
+msgid "Next Page.."
+msgstr "Page Suivante.."
+
+#:Torrents
+msgctxt "#32192"
+msgid "Name of this search"
+msgstr "Nom de cette recherche"
+
+#:Torrents
+msgctxt "#32193"
+msgid "Do you want to keep this query?"
+msgstr "Voulez-vous saugarder cette recherche?"
+
+#:Torrents
+msgctxt "#32194"
+msgid "[B]Search...[/B]"
+msgstr "[B]Recherches...[/B]"
+
+#:Torrents
+msgctxt "#32195"
+msgid "New Search..."
+msgstr "Nouvelle recherche..."
+
+#:Torrents
+msgctxt "#32196"
+msgid "New List..."
+msgstr "Nouvelle Liste..."
+
+#:Torrents
+msgctxt "#32197"
+msgid "New Watchlist..."
+msgstr "Nouvelle Liste de Surveillance..."
+
+#:Torrents
+msgctxt "#32198"
+msgid "From Year:"
+msgstr "De l'année:"
+
+#:Torrents
+msgctxt "#32199"
+msgid "À l'année:"
+msgstr ""
+

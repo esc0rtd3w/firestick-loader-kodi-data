@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="32001">
+         <setting label="32018" type="enum" id="DefaultVideoType"  default="Show All Sources" values="Dailymotion Video|Tune.pk Video|PlayWire Video|EBound Video|Show All Sources|Vidrail Sources"/>
+  <setting type="sep"/>
+         <!-- <setting label="32019" type="enum" id="DefaultStreamType" values="RTMP(Flash)|Http Live(ios)"/>-->
+		 <setting label="32020" type="text" id="WillowUserName" values="" default=""/>
+		<setting label="32021" type="text" id="WillowPassword" values="" default=""/> 
+<setting label="32024" type="text" id="WillowProxy" values="" default="69.168.242.46"/>  
+<setting label="32025" type="text" id="WillowPort" values="" default="8080"/>          
+        
+
+          <setting type="sep"/>
+		<setting label="32022" type="bool"   id="isYellowOff" default="false"/>
+        <setting label="32026" type="bool"   id="isv3Off" default="false"/>
+        <setting label="32027" type="bool"   id="isv5Off" default="true" enable="false"/>
+        <setting label="32028" type="bool"   id="isv6Off" default="false"/>
+        <setting label="32029" type="bool"   id="isv7Off" default="true" enable="false"/>        
+        <setting label="32030" type="bool"   id="isv8Off" default="false"/>    
+        <setting label="32032" type="bool"   id="isdittoOff" default="false"/>    
+        <setting label="32033" type="bool"   id="isCFOff" default="false"/>    
+        <setting label="32034" type="bool"   id="isIpBoxff" default="false"/>   
+        <setting label="32035" type="bool"   id="isYPOff" default="false"/>    
+        <setting label="32036" type="bool"   id="isUKTVOff" default="false"/>    
+        <setting label="32045" type="bool"   id="isv9Off" default="True"/>    
+        <setting label="32038" type="bool"   id="isFastOff" default="false"/>   
+        <setting label="32040" type="bool"   id="isNetworkTVOff" default="false"/>   
+        <setting label="32041" type="bool"   id="isSlowTVOff" default="false"/>   
+        <setting label="32044" type="bool"   id="isZengaOff" default="false"/>   
+        
+        
+          <setting type="sep"/>
+                  <setting label="32031" type="bool"   id="donotcache" default="false"/>    
+          <setting type="sep"/>
+                    <setting type="sep"/>
+                  <setting label="32039" type="text"   id="usethisviewmode" default=""/>    
+          <setting type="sep"/>
+          
+         <setting type="sep"/>
+                  <setting label="32042" type="bool"   id="enablecolor" default="false"/>    
+
+
+
+        <!-- <setting label="32023" type="select" id="defualtSSSBitRate"  default="1300" values="Maximum (Highest Quality)|500|650|900|1300|1900|2700"/>-->
+                                              
+     </category>
+     	<category label="TVPlayer Login">
+		<setting id="tvpusername" type="text" label="Username" default=""/>
+ 		<setting id="tvppwd" type="text" label="Password" default=""/>
+
+	</category>
+</settings>

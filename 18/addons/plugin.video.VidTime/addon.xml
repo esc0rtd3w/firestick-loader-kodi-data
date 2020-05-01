@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.VidTime"
+       name="VidTime"
+       version="1.3.6"
+       provider-name="VinManJSV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" version="2.9.0"/>
+	<import addon="script.module.urlresolver" version="2.10.11"/>
+	<import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+			library="starter.py">
+			<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Play TV and Movies </summary>
+    <description lang="en">A simple TV and Movie addon that gives a great quality stream.</description>
+	<platform>all</platform>
+  </extension>
+</addon>

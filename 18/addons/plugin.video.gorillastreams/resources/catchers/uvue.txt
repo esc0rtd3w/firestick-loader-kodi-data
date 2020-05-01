@@ -1,0 +1,29 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Uvue - %s
+
+item_info_name=tmp
+item_info_from=http://uvue.de/' + @PARAM1@ + '.php
+item_info_convert=getInfo('http://uvue.de/frame.html','.*?window.location = "([^"]+)"\;\s*\}\s*else.*','%s')
+item_info_convert=getInfo('%s','.*?fid="([^"]+).*','http://uvue.de')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=tmp
+item_info_build=http://static.castto.me/embedplayer.php?channel=%s
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?file\',\s*\'([^\']+)\'.*?streamer\',\s*\'([^\']+)\'.*','http://uvue.de','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true timeout=15 token=#ed%h0#w@1 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s
+
+
+
+
+
+
+

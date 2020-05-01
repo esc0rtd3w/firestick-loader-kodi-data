@@ -1,0 +1,254 @@
+CURRENT STATUS: [COLOR springgreen]Good[/COLOR]
+
+[COLOR red]Placenta by Team Afterbirth Current Version 1.2.4[/COLOR]
+
+[COLOR red]------------------Rohas Approves------------------[/COLOR]
+[COLOR red]-------------------------------------------------------------------------------------------------------[/COLOR]
+
+[B][COLOR red]2018/05/16[/COLOR][/B]
+[COLOR lime]Placenta ver 1.2.4[/COLOR]
+    - Updated Settings
+    - Scraper updates
+
+[COLOR lime]Placenta Module ver 2.3.2[/COLOR]
+    - Fixed a few more scrapers
+    - Added 2 new scrapers (credit to Klepto for doing one)
+    - A small tweak
+
+[B][COLOR red]2018/05/11[/COLOR][/B]
+[COLOR lime]Placenta ver 1.2.3[/COLOR]
+    - Updated Settings, few tweaks
+    - Scraper updates
+
+[COLOR lime]Placenta Module ver 2.3.1[/COLOR]
+    - Fixed quite a few existing providers (Thanks to help from Apprentice and Supremacy)
+    - Few tweaks, and edits
+    - Removed few things causing issues
+
+[B][COLOR red]2018/04/17[/COLOR][/B]
+[COLOR lime]Placenta ver 1.2.2[/COLOR]
+    - Updated Settings
+    - Scraper updates
+
+[COLOR lime]Placenta Module ver 2.3.0[/COLOR]
+    - Fixed existing providers including 2DDL, Added new source
+    - Fixed minor bug
+    - Fixed a 4K scraping issue
+
+[B][COLOR red]2018/03/31[/COLOR][/B]
+[COLOR lime]Placenta ver 1.2.1[/COLOR]
+    - Updated Settings
+    - Replaced Allu with Pron TV
+
+[COLOR lime]Placenta Module ver 2.2.9[/COLOR]
+    - Moderator Update
+    - Super Favorites bug fix
+    - Pron.tv Scraper added to replace pron
+
+[B][COLOR red]2018/03/28[/COLOR][/B]
+[COLOR lime]Placenta Module ver 2.2.8[/COLOR]
+    - Moderator Update
+ 
+[B][COLOR red]2018/03/19[/COLOR][/B]
+[COLOR lime]Placenta Module ver 2.2.7[/COLOR]
+    - Default moderator added
+    - Notification window added to Moderator when unknown screen or plugin accessing Placenta
+    - Couple scraper updates
+ 
+[B][COLOR red]2018/03/16[/COLOR][/B]
+[COLOR lime]Placenta Module ver 2.2.6[/COLOR]
+    - Adeed Wraith as a moderator
+ 
+[B][COLOR red]2018/03/14[/COLOR][/B]
+[COLOR lime]Placenta Module ver 2.2.5[/COLOR]
+    - Fixed a typo
+ 
+[B][COLOR red]2018/03/10[/COLOR][/B]
+[COLOR lime]Placenta ver 1.2.0[/COLOR]
+    - New Themes/Appearances
+[COLOR lime]Placenta Module ver 2.2.4[/COLOR]
+    - Chappa'ai Support
+[COLOR lime]Placenta Artworkver 1.0.6[/COLOR]
+    - Several new Themes
+    - New Custom scripting options and video released for Builders
+ 
+[B][COLOR red]2018/03/05[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.9[/COLOR]
+    - Scraper Option Updates
+    - Language Files updates
+    - Twitter and Youtube info added at bottom of menu
+[COLOR lime]Placenta Module ver 2.2.3[/COLOR]
+    - Scraper Updates
+    - Updated CFScrape to latest from author
+    - Some "garbage" scrapers re-added, but disabled by default - Up to you if you want to use them
+ 
+[B][COLOR red]2018/02/22[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.8[/COLOR]
+    - Season 0 Settings
+    - Added Documentaries to Navigation Settings
+[COLOR lime]Placenta Module ver 1.2.2[/COLOR]
+    - Fixed some Cache init issues
+    - Added support for Season 0/Specials to Browse Series
+    - Added Documentary section, using TopDocumentaries website
+ 
+[B][COLOR red]2018/02/18[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.7[/COLOR]
+    - API Key Updates
+    - New Navigation Options
+[COLOR lime]Placenta Module ver 1.2.1[/COLOR]
+    - Replaced Fanart.TV Key
+    - Replaced TheMovieDB Key
+    - Added new Navigation Options
+    - Added Podcasts section with 2 site scrapers
+ 
+[B][COLOR red]2018/02/11[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.6[/COLOR]
+    - Scraper Updates
+[COLOR lime]Placenta Module ver 1.2.0[/COLOR]
+    - Fixed multiple scrapers
+    - Moved more non-working scrapers to to_be_fixed folder
+    - Created some new scrapers
+    - AFDAH removed, too many unreliable links
+    - FilmXY removed, site down too often and unreliable
+ 
+[B][COLOR red]2018/02/05[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.5[/COLOR]
+    - Scraper Updates
+    - Garbage Scrapers removed (Movie4kto, etc)
+[COLOR lime]Placenta Module ver 1.1.9[/COLOR]
+    - Log Utils changes
+    - Scraper Updates
+    - Garbage Scrapers removed (Movie4kto, etc)
+ 
+[B][COLOR red]2018/02/03[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.4[/COLOR]
+    - Changed all urlresolver dependency code to the new resolveurl
+[COLOR lime]Placenta Module ver 1.1.8[/COLOR]
+    - Changed all urlresolver dependency code to the new resolveurl
+ 
+[B][COLOR red]2018/01/29[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.3[/COLOR]
+    - Scraper Updates
+[COLOR lime]Placenta Module ver 1.1.7[/COLOR]
+    - Scraper updates
+    - Added missing scrapers to Placenta Settings
+ 
+[B][COLOR red]2018/01/22[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.2[/COLOR]
+    - Scraper Updates
+    - Bit of fancying up progress dialog on scraper (I got bored)
+[COLOR lime]Placenta Module ver 1.1.6[/COLOR]
+    - trakt updates
+    - jsonunpack updates
+    - Scraper work
+ 
+[B][COLOR red]2018/01/19[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.1[/COLOR]
+    - API Key Updates (May require reset of settings to default)
+    - New "Clear Meta Cache" option under Tools
+    - New "Clear All Cache" option under Tools
+[COLOR lime]Placenta Module ver 1.1.5[/COLOR]
+    - TheMovieDB API Updates
+    - Fanart.TV API Updates
+    - New "Clear Meta Cache" option under Tools
+    - New "Clear All Cache" option under Tools
+ 
+[B][COLOR red]2018/01/18[/COLOR][/B]
+[COLOR lime]Placenta ver 1.1.0[/COLOR]
+    - Scraper Updates
+[COLOR lime]Placenta Module ver 1.1.4[/COLOR]
+    - Scraper Updates
+ 
+[B][COLOR red]2018/01/17[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.9[/COLOR]
+    - Scraper Updates
+[COLOR lime]Placenta Module ver 1.1.3[/COLOR]
+    - Scraper Updates
+ 
+[B][COLOR red]2018/01/12[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.8[/COLOR]
+    - Reoptimized YT Indexer
+[COLOR lime]Placenta Module ver 1.1.2[/COLOR]
+    - Reoptimized YT Indexer
+    - Updated IMDB Pagination for multiple scenarios
+    - Recommend Clearing Cache under Tools -> Clear Cache
+ 
+[B][COLOR red]2018/01/11[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.7[/COLOR]
+    - Movie Reviews and Trailers section added
+[COLOR lime]Placenta Artwork ver 1.0.4[/COLOR]
+    - Movie Reviews and Trailers icons added
+[COLOR lime]Placenta Module ver 1.1.1[/COLOR]
+    - Movie Reviews and Trailers section added
+ 
+ 
+[B][COLOR red]2018/01/09[/COLOR][/B]
+[COLOR lime]Placenta Module ver 1.1.0[/COLOR]
+    - Next Page bug fixed with TV Show section
+    - Adjustment for new sections (Moved menu sources to GIT)
+ 
+[B][COLOR red]2018/01/07[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.6[/COLOR]
+    - Added 3 new main menu items
+    - Fitness Zone, Kids Corner, and Legends in Music
+[COLOR lime]Placenta Module ver 1.0.9[/COLOR]
+    - New system for the new menu items added
+[COLOR lime]Placenta Artwork ver 1.0.3[/COLOR]
+    - Icons for the new menu items added
+ 
+[B][COLOR red]2018/01/05[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.5[/COLOR]
+    - Updated Settings for changes to scrapers
+[COLOR lime]Placenta Module ver 1.0.8[/COLOR]
+    - Scraper updates - Fixed some, added brand new ones, removed some
+ 
+[B][COLOR red]2018/01/01[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.4[/COLOR]
+    - Updated Settings for changes to scrapers
+    - Added URL Resolver menu item in Tools
+[COLOR lime]Placenta Module ver 1.0.7[/COLOR]
+    - Scraper updates - Fixed some, added brand new ones, removed some
+    - URL Resolver menu item
+    - Updates to CF Scraper
+[COLOR lime]Placenta Artwork ver 1.0.1[/COLOR]
+    - URL Resolver Icon added to each skin
+ 
+[B][COLOR red]2017/12/30[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.3[/COLOR]
+    - Updated Settings for changes to scrapers
+    - Added setting to set custom color for Unaired Episodes/Seasons
+[COLOR lime]Placenta Module ver 1.0.6[/COLOR]
+    - Scraper updates - Huge thanks to the guys doing tests for us
+    - Added code for custom color for Unaired Episodes/Seasons
+ 
+[B][COLOR red]2017/12/29[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.2[/COLOR]
+    - Updated Settings for changes to scrapers
+[COLOR lime]Placenta Module ver 1.0.4[/COLOR]
+    - Moving scrapers around (some sites down, moved out so no longer scraping, etc)
+[COLOR lime]Placenta Module ver 1.0.5[/COLOR]
+    - Fixed IMDB Pagination issues plaguing all the other forks
+ 
+[B][COLOR red]2017/12/28[/COLOR][/B]
+[COLOR lime]Placenta Module ver 1.0.3[/COLOR]
+    - Fixed IMDB Actor Search
+ 
+[B][COLOR red]2017/12/26[/COLOR][/B]
+[COLOR lime]Placenta Module ver 1.0.2[/COLOR]
+    - Fixed 'TV Shows -> Networks' TV Show Listings
+ 
+[B][COLOR red]2017/12/26[/COLOR][/B]
+[COLOR lime]Placenta ver 1.0.1[/COLOR]
+    - Added News and Updates menu
+    - Updated Settings
+[COLOR lime]Placenta Module ver 1.0.1[/COLOR]
+    - Updated a couple Scrapers
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+=

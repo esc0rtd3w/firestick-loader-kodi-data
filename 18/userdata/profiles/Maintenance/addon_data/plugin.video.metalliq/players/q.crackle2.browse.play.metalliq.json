@@ -1,0 +1,35 @@
+{
+ "name"         : "Crackle2 [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.jsergio",
+ "plugin"       : "plugin.video.crackle2",
+ "priority"     : 800,
+ "id"           : "q.crackle2.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.crackle2/?mode=30&name=Browse&url",
+    "steps"     : [
+     ".*{shorttitle}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.crackle2/?mode=21&name=Popular&url",
+    "steps"     : [
+     ".*{shortname}.*",
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : []
+}

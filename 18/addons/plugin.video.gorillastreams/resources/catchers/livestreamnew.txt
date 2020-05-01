@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=%s
+
+item_info_name=progressive_url
+item_info_from=@PARAM1@
+item_info_convert=getInfo('%s','.*?_url["]?\s*:\s*["]?((?:[^"]+?m3u8\?dw=1)[^"]+).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=mac
+item_info_from=progressive_url
+item_info_convert=parseText('%s','.*\.m3u8\?(.*)')
+item_info_build=%s
+
+item_info_name=playPath
+item_info_from=progressive_url
+item_info_convert=parseText('%s','.*?acl=([^\*]+)')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=http://livestream-f.akamaihd.net' + playPath + 'master.m3u8?' + mac
+item_info_build=%s

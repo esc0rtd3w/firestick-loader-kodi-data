@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
     script.module.metadatautils
     tmdb.py
     Get metadata from The Movie Database
-'''
+"""
 
 from utils import get_json, KODI_LANGUAGE, try_parse_int, DialogSelect, get_compare_string, int_with_commas, ADDON_ID
 from difflib import SequenceMatcher as SM
@@ -18,11 +18,11 @@ import datetime
 
 
 class Tmdb(object):
-    '''get metadata from tmdb'''
-    api_key = None # public var to be set by the calling addon
+    """get metadata from tmdb"""
+    api_key = None  # public var to be set by the calling addon
 
     def __init__(self, simplecache=None, api_key=None):
-        '''Initialize - optionaly provide simplecache object'''
+        """Initialize - optionaly provide simplecache object"""
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -36,13 +36,13 @@ class Tmdb(object):
         del addon
 
     def search_movie(self, title, year="", manual_select=False, ignore_cache=False):
-        '''
+        """
             Search tmdb for a specific movie, returns full details of best match
             parameters:
             title: (required) the title of the movie to search for
             year: (optional) the year of the movie to search for (enhances search result if supplied)
             manual_select: (optional) if True will show select dialog with all results
-        '''
+        """
         details = self.select_best_match(self.search_movies(title, year), manual_select=manual_select)
         if details:
             details = self.get_movie_details(details["id"])
@@ -50,7 +50,7 @@ class Tmdb(object):
 
     @use_cache(30)
     def search_movieset(self, title):
-        '''search for movieset details providing the title of the set'''
+        """search for movieset details providing the title of the set"""
         details = {}
         params = {"query": title, "language": KODI_LANGUAGE}
         result = self.get_data("search/collection", params)
@@ -61,13 +61,13 @@ class Tmdb(object):
 
     @use_cache(4)
     def search_tvshow(self, title, year="", manual_select=False, ignore_cache=False):
-        '''
+        """
             Search tmdb for a specific movie, returns full details of best match
             parameters:
             title: (required) the title of the movie to search for
             year: (optional) the year of the movie to search for (enhances search result if supplied)
             manual_select: (optional) if True will show select dialog with all results
-        '''
+        """
         details = self.select_best_match(self.search_tvshows(title, year), manual_select=manual_select)
         if details:
             details = self.get_tvshow_details(details["id"])
@@ -75,14 +75,14 @@ class Tmdb(object):
 
     @use_cache(4)
     def search_video(self, title, prefyear="", preftype="", manual_select=False, ignore_cache=False):
-        '''
+        """
             Search tmdb for a specific entry (can be movie or tvshow), returns full details of best match
             parameters:
             title: (required) the title of the movie/tvshow to search for
             prefyear: (optional) prefer result if year matches
             preftype: (optional) prefer result if type matches
             manual_select: (optional) if True will show select dialog with all results
-        '''
+        """
         results = self.search_videos(title)
         details = self.select_best_match(results, prefyear=prefyear, preftype=preftype,
                                          preftitle=title, manual_select=manual_select)
@@ -94,10 +94,10 @@ class Tmdb(object):
 
     @use_cache(4)
     def search_videos(self, title):
-        '''
+        """
             Search tmdb for a specific entry (can be movie or tvshow), parameters:
             title: (required) the title of the movie/tvshow to search for
-        '''
+        """
         results = []
         page = 1
         maxpages = 5
@@ -115,12 +115,12 @@ class Tmdb(object):
 
     @use_cache(4)
     def search_movies(self, title, year=""):
-        '''
+        """
             Search tmdb for a specific movie, returns a list of all closest matches
             parameters:
             title: (required) the title of the movie to search for
             year: (optional) the year of the movie to search for (enhances search result if supplied)
-        '''
+        """
         params = {"query": title, "language": KODI_LANGUAGE}
         if year:
             params["year"] = try_parse_int(year)
@@ -128,22 +128,22 @@ class Tmdb(object):
 
     @use_cache(4)
     def search_tvshows(self, title, year=""):
-        '''
+        """
             Search tmdb for a specific tvshow, returns a list of all closest matches
             parameters:
             title: (required) the title of the tvshow to search for
             year: (optional) the first air date year of the tvshow to search for (enhances search result if supplied)
-        '''
+        """
         params = {"query": title, "language": KODI_LANGUAGE}
         if year:
             params["first_air_date_year"] = try_parse_int(year)
         return self.get_data("search/tv", params)
 
     def get_actor(self, name):
-        '''
+        """
             Search tmdb for a specific actor/person, returns the best match as kodi compatible dict
             required parameter: name --> the name of the person
-        '''
+        """
         params = {"query": name, "language": KODI_LANGUAGE}
         result = self.get_data("search/person", params)
         if result:
@@ -158,7 +158,7 @@ class Tmdb(object):
             return {}
 
     def get_movie_details(self, movie_id):
-        '''get all moviedetails'''
+        """get all moviedetails"""
         params = {
             "append_to_response": "keywords,videos,credits,images",
             "include_image_language": "%s,en" % KODI_LANGUAGE,
@@ -167,7 +167,7 @@ class Tmdb(object):
         return self.map_details(self.get_data("movie/%s" % movie_id, params), "movie")
 
     def get_movieset_details(self, movieset_id):
-        '''get all moviesetdetails'''
+        """get all moviesetdetails"""
         details = {"art": {}}
         params = {"language": KODI_LANGUAGE}
         result = self.get_data("collection/%s" % movieset_id, params)
@@ -181,7 +181,7 @@ class Tmdb(object):
         return details
 
     def get_tvshow_details(self, tvshow_id):
-        '''get all tvshowdetails'''
+        """get all tvshowdetails"""
         params = {
             "append_to_response": "keywords,videos,external_ids,credits,images",
             "include_image_language": "%s,en" % KODI_LANGUAGE,
@@ -190,7 +190,7 @@ class Tmdb(object):
         return self.map_details(self.get_data("tv/%s" % tvshow_id, params), "tvshow")
 
     def get_videodetails_by_externalid(self, extid, extid_type):
-        '''get metadata by external ID (like imdbid)'''
+        """get metadata by external ID (like imdbid)"""
         params = {"external_source": extid_type, "language": KODI_LANGUAGE}
         results = self.get_data("find/%s" % extid, params)
         if results and results["movie_results"]:
@@ -200,7 +200,7 @@ class Tmdb(object):
         return {}
 
     def get_data(self, endpoint, params):
-        '''helper method to get data from tmdb json API'''
+        """helper method to get data from tmdb json API"""
         if self.api_key:
             # addon provided or personal api key
             params["api_key"] = self.api_key
@@ -232,7 +232,7 @@ class Tmdb(object):
         return result
 
     def map_details(self, data, media_type):
-        '''helper method to map the details received from tmdb to kodi compatible formatting'''
+        """helper method to map the details received from tmdb to kodi compatible formatting"""
         if not data:
             return {}
         details = {}
@@ -344,7 +344,7 @@ class Tmdb(object):
 
     @staticmethod
     def get_best_images(images):
-        '''get the best 5 images based on number of likes and the language'''
+        """get the best 5 images based on number of likes and the language"""
         for image in images:
             score = 0
             score += image["vote_count"]
@@ -361,7 +361,7 @@ class Tmdb(object):
 
     @staticmethod
     def select_best_match(results, prefyear="", preftype="", preftitle="", manual_select=False):
-        '''helper to select best match or let the user manually select the best result from the search'''
+        """helper to select best match or let the user manually select the best result from the search"""
         details = {}
         # score results if one or more preferences are given
         if results and (prefyear or preftype or preftitle):

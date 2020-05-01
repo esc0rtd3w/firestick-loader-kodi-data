@@ -1,0 +1,52 @@
+plugin.video.democracynow:
+--------------------------
+v2.1.2 (13.05.2019)
+-Remove html tags and decode html entities for titles and summaries.
+
+v2.1.1 (06.06.2017)
+-fix some date issue.
+
+v2.1.0 (06.06.2017)
+-Rewritten with new api due to website change.
+
+v2.0.6 (13.05.2017)
+-fixed video duration
+
+v2.0.5 (15.06.2016)
+-fixed video url
+
+v2.0.4 (20.02.2015)
+-get rid of unplayable content.
+
+v2.0.3 (23.01.2014)
+-better video quality. thanks to @celadoor
+-added additional information in addon.xml
+
+v2.0.2 (09.01.2012)
+-frodo release
+-cosmetic
+
+v2.0.1 (03.01.2013)
+-fix content list
+
+v2.0.0 (30.04.2012)
+-code cleanup and reorder with pep8
+-fanart support for content list
+-use "startswith()" instead of "=="
+-revert audio support commit
+
+v1.0.5 (18.12.2011)
+-added audio support from Music add-on
+-fixed thumb issue
+
+v1.0.4 (17.12.2011)
+-prepare for Eden
+
+v1.0.3 (16.12.2011)
+-Now just todays news. Headlines, Features and Full Show.
+
+v1.0.2 (11.12.2010)
+-removed Settings
+
+v1.0.1 (12.11.2009)
+-removed debug option and codes.

@@ -1,0 +1,18 @@
+v1.1.7 (2016-03-06)
+- add: primera division live feed
+v1.1.6 (2016-02-13)
+- add: rugby six nations live feed
+v1.1.5 (2016-02-06)
+- add: temporary live feed
+v1.1.4 (2016-02-05)
+- add: jupiler pro league live feed
+v1.1.3 (2016-01-06)
+- add: copa del rey live feed
+v1.1.2 (2015-12-21)
+- add: football league championship live feed
+v1.1.1 (2015-11-11)
+- add: south american wcq live feed
+v1.1.0 (2015-10-27)
+- add: nba live feed
+v1.0.0 (2015-09-15)
+- initial release

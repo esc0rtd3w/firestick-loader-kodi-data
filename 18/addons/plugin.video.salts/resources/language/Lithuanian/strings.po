@@ -1,0 +1,2121 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Algimantas Margevičius, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-04-03 07:35+0000\n"
+"Last-Translator: Algimantas Margevičius\n"
+"Language-Team: Lithuanian (http://www.transifex.com/tv-addons/salts/language/lt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filmai"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV laidos"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Filmai"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV laida"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Nustatymai"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Apdoroklių rikiavimo tvarka"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "URL sprendėjo nustatymai"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Priedo nustatymai"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Automatiškai derinti SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Leisti SALTS pasiekti mano trakt.tv paskyrą"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Nustatyti numatytąsias peržiūras"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Pašalinti išsaugotus adresus"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "Madingi %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Populiarūs(-ios) %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Neseniai atnaujinti(-os) %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Rekomenduojama %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Mano %s kolekcija"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Mano mėgstamiausi"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Mano prenumeratos"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Mano žiūrimų sąrašas"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Mano sąrašai"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Kiti sąrašai"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Mano kiti epizodai"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Mano kalendorius"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Bendras kalendorius"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Premjerų kalendorius"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Paieška"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Paskiausios paieškos"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Išsaugotos paieškos"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Priverstinai atnaujinti"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Išvalyti viską %s"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Priverstinai atnaujinama"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Priverstinai atnaujinta"
+
+msgctxt "#30033"
+msgid "Enable All Scrapers"
+msgstr "Įgalinti visus apdoroklius"
+
+msgctxt "#30034"
+msgid "Disable All Scrapers"
+msgstr "Išjungti visus apdoroklius"
+
+msgctxt "#30035"
+msgid "Enable Scraper"
+msgstr "Įjungti apdoroklį"
+
+msgctxt "#30036"
+msgid "Disable Scraper"
+msgstr "Išjungti apdoroklį"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Perkelti aukštyn"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Perkelti žemyn"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Perkelti į..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Įveskite naująją vietą (1 - %s)"
+
+msgctxt "#30041"
+msgid "Set Default %s View"
+msgstr "Nustatyti numatytąsias %s peržiūras"
+
+msgctxt "#30042"
+msgid "Set a view then select this item to set the default %s view"
+msgstr "Nustatyti numatytąjį rodiny pasirinkus šį elementą"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Importuoti"
+
+msgctxt "#30044"
+msgid "%s View Set to: %s"
+msgstr "%s rodinys nustatytas kaip: %s"
+
+msgctxt "#30045"
+msgid "Delete [B][COLOR red]ENTIRE[/COLOR][/B] Url Cache"
+msgstr "Pašalinti  [B][COLOR red]VISĄ[/COLOR][/B] Url podėlį"
+
+msgctxt "#30046"
+msgid "This will set some settings to values that have been found to"
+msgstr "Bus pakeisti kai kurie nustatymai rasti"
+
+msgctxt "#30047"
+msgid "be effective. The following settings will be changed:"
+msgstr "būkite efektyvūs. Šie nustatymai bus pakeisti:"
+
+msgctxt "#30048"
+msgid ""
+"[COLOR red]Scraper Sort Order, Source Sorting, Calendar Start Day, Trakt "
+"Timeout, Scraper Timeout, Watchlist in MNE, Test Direct[/COLOR]"
+msgstr "[COLOR red]Apdoroklių rikiavimo tvarka, šaltinių rikiavimas, kalendoriaus pradžios data, trakt laukimo laikas, apdoroklio laukimo laikas, žiūrimų sąrašas MNE, testuoti tiesiogiai[/COLOR]"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Atgal"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Tęsti"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Automatinis nustatymas baigtas"
+
+msgctxt "#30052"
+msgid "Set as Favorites List"
+msgstr "Nustatyti kaip mėgstamiausių sąrašą"
+
+msgctxt "#30053"
+msgid "Set as Subscription List"
+msgstr "Nustatyti kaip prenumeratų sąrašą"
+
+msgctxt "#30054"
+msgid "Import from Collection"
+msgstr "Importuoti iš kolekcijos"
+
+msgctxt "#30055"
+msgid "Add another user's list"
+msgstr "Pridėti kito naudotojo sąrašą"
+
+msgctxt "#30056"
+msgid "Copy to My List"
+msgstr "Kopijuoti į mano sąrašą"
+
+msgctxt "#30057"
+msgid "Add more from %s"
+msgstr "Pridėti daugiau iš %s"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Pašalinti sąrašą"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Pervadinti sąrašą"
+
+msgctxt "#30060"
+msgid "Enter the new name (blank to reset)"
+msgstr "Įveskite naują pavadinimą (tuščias atstatyti)"
+
+msgctxt "#30061"
+msgid "Enter username of list owner"
+msgstr "Įveskite sąrašo savininko naudotojo vardą"
+
+msgctxt "#30062"
+msgid "List Does Not Exist: %s"
+msgstr "Sąrašo nėra: %s"
+
+msgctxt "#30063"
+msgid "Progress Timeouts: %s/%s"
+msgstr "Aodorojimo laukimo laikas: %s/%s"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Naršyti sezonus"
+
+msgctxt "#30065"
+msgid "Update Subscriptions: (Next Run: [COLOR %s]%s[/COLOR])"
+msgstr "Atnaujinti prenumeratas: (sekantis atnaujinimas: [COLOR %s]%s[/COLOR])"
+
+msgctxt "#30066"
+msgid "Clean-Up Subscriptions"
+msgstr "Išvalyti prenumeratas"
+
+msgctxt "#30067"
+msgid "Pick a list to use for Subscriptions"
+msgstr "Pasirinkti sąrašą prenumeratoms"
+
+msgctxt "#30068"
+msgid "Pick a list to use for Favorites"
+msgstr "Pasirinkite sąrašą mėtstamiausiems"
+
+msgctxt "#30069"
+msgid "Blank Searches are not allowed"
+msgstr "Tuščios paieškos neleidžiamos"
+
+msgctxt "#30070"
+msgid "Save Search"
+msgstr "Įrašyti paiešką"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Pašalinti iš vėliausių"
+
+msgctxt "#30072"
+msgid "Delete Search"
+msgstr "Pašalinti paiešką"
+
+msgctxt "#30073"
+msgid "Recent %s Searches Cleared"
+msgstr "%s Vėliausios paieškos išvalytos"
+
+msgctxt "#30074"
+msgid "Saved %s Searches Cleared"
+msgstr "% Išsaugotos paieškos išvalytos"
+
+msgctxt "#30075"
+msgid "Scraper Timeouts: %s/%s"
+msgstr "Apdoroklio laukimo laikas: %s/%s"
+
+msgctxt "#30076"
+msgid "No Useable Sources Found%s"
+msgstr "Nerasta tinkamų šaltinių %s"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Pasirinkite subtitrus"
+
+msgctxt "#30078"
+msgid "Link Resolve Failed: %s"
+msgstr "Nuorodos apdoroti nepavyko: %s"
+
+msgctxt "#30079"
+msgid "All sources failed to play"
+msgstr "Neįmanoma paleisti nei vieno šaltinio"
+
+msgctxt "#30080"
+msgid "Choose your stream"
+msgstr "Pasirinkite šaltinį"
+
+msgctxt "#30081"
+msgid "Set Related Url"
+msgstr "Nustatyti susijusį URL"
+
+msgctxt "#30082"
+msgid "Received result from: %s"
+msgstr "Gautas atsakymas iš: %s"
+
+msgctxt "#30083"
+msgid "Url To Change (%s)"
+msgstr "URL kurį keisti (%s)"
+
+msgctxt "#30084"
+msgid "Related %s url at %s"
+msgstr "Susijęs %s url %s"
+
+msgctxt "#30085"
+msgid "[COLOR blue]%s[/COLOR] Related Url Set"
+msgstr "[COLOR blue]%s[/COLOR] Susijęs adresas nustatytas"
+
+msgctxt "#30086"
+msgid "Manual Search"
+msgstr "Rankinė paieška"
+
+msgctxt "#30087"
+msgid "Select Related"
+msgstr "Pasirinkti susijusį"
+
+msgctxt "#30088"
+msgid "Enter Search"
+msgstr "Įveskite ko ieškoti"
+
+msgctxt "#30089"
+msgid "Scraper does not support searching"
+msgstr "Apdoroklis nepalaiko paieškos"
+
+msgctxt "#30090"
+msgid "Enter Rating (unrate, or 1-10)"
+msgstr "Įveskite vertinimą (unrate arba 1-10)"
+
+msgctxt "#30091"
+msgid "Input TVShow ID"
+msgstr "Įveskite TVShow ID"
+
+msgctxt "#30092"
+msgid "Item Added to Collection"
+msgstr "Pridėta į kolekciją"
+
+msgctxt "#30093"
+msgid "Item Removed from Collection"
+msgstr "Elementas pašalintas iš kolekcijos"
+
+msgctxt "#30094"
+msgid "Item Added to List"
+msgstr "Elementas pridėtas į sąrašą"
+
+msgctxt "#30095"
+msgid "List Copied: (A:%s/E:%s/S:%s)"
+msgstr "Sąrašas nukopijuotas: (A:%s/E:%s/S:%s)"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#30097"
+msgid "Marked as %s"
+msgstr "Pažymėta kaip %s"
+
+msgctxt "#30098"
+msgid "Updating Subscriptions..."
+msgstr "Atnaujinamo prenumeratos..."
+
+msgctxt "#30099"
+msgid "Next Update in %0.1f hours"
+msgstr "Sekantis atnaujinimas po %0.1f valandos"
+
+msgctxt "#30100"
+msgid "Are you sure you want to delete the url cache?"
+msgstr "Ar tikrai norite išvalyti url podėlį?"
+
+msgctxt "#30101"
+msgid "This will slow things down until all urls are re-cached"
+msgstr "Tai sulėtins veikseną kol url vėl bus įkeltos į podėlį"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Palikti"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Pašalinti"
+
+msgctxt "#30104"
+msgid "Flush web cache"
+msgstr "Išvalyti interneto podėlį"
+
+msgctxt "#30105"
+msgid "DB Reset Successful"
+msgstr "DB atstatyta sėkmingai"
+
+msgctxt "#30106"
+msgid "Reset only allowed on sqlite DBs"
+msgstr "Atstatyti tik leidžiamas sqlite duomenų bazėse"
+
+msgctxt "#30107"
+msgid "Select Export Directory"
+msgstr "Parinkite eksportavimo aplanką"
+
+msgctxt "#30108"
+msgid "Enter Export Filename"
+msgstr "Eksportuotino failo pavadinimas"
+
+msgctxt "#30109"
+msgid "Export Successful"
+msgstr "Sėkmingai eksportuota"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Eksportuota į %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Eksportuoti"
+
+msgctxt "#30112"
+msgid "Export Failed"
+msgstr "Eksportuoti nepavyko"
+
+msgctxt "#30113"
+msgid "Select Import File"
+msgstr "Pasirinkite failą importavimui"
+
+msgctxt "#30114"
+msgid "Import Success"
+msgstr "Sėkmingai importuota"
+
+msgctxt "#30115"
+msgid "Imported from %s"
+msgstr "Importuota iš %s"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "importuoti"
+
+msgctxt "#30117"
+msgid "Import Failed"
+msgstr "Importuoti nepavyko"
+
+msgctxt "#30118"
+msgid "Remove from List"
+msgstr "Pašalinti iš sąrašo"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Prenumeruoti"
+
+msgctxt "#30120"
+msgid "Require Aired Only?"
+msgstr "Reikalauti tik rodytų?"
+
+msgctxt "#30121"
+msgid "Require Page Only?"
+msgstr "Reikalauti tik puslapių?"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr "Kitas puslapis"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Ankstesnė savaitė"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Kita savaitė"
+
+msgctxt "#30125"
+msgid "Mark as Unwatched (SALTS)"
+msgstr "Pažymėti kaip nežiūrėtą (SALTS)"
+
+msgctxt "#30126"
+msgid "Mark as Watched (SALTS)"
+msgstr "Pažymėti kaip žiūrėtą (SALTS)"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Vertinti trakt.tv"
+
+msgctxt "#30128"
+msgid "Set as Season View"
+msgstr "Nustatyti kaip sezono rodiny"
+
+msgctxt "#30129"
+msgid "Unavailable"
+msgstr "Nepasiekiamas"
+
+msgctxt "#30130"
+msgid "Select Source"
+msgstr "Pasirinkite šaltinį"
+
+msgctxt "#30131"
+msgid "Download Source"
+msgstr "Parsiųsti šaltinį"
+
+msgctxt "#30132"
+msgid "Show Information"
+msgstr "Rodyti informaciją"
+
+msgctxt "#30133"
+msgid "Add Show to List"
+msgstr "Pridėti laidą į sąrašą"
+
+msgctxt "#30134"
+msgid "Set Related Show Url (Search)"
+msgstr "Nustatyti susijusį laidos URL (paieška)"
+
+msgctxt "#30135"
+msgid "Set Related Url (Manual)"
+msgstr "Nustatyti susijusį URL (rankinis)"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Pašalinti iš kolekcijos"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Pridėti į kolekciją"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Įtraukti į sąrašą"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Pridėti į biblioteką"
+
+msgctxt "#30140"
+msgid "Set Addic7ed TVShowID"
+msgstr "Nustatyti „Addic7ed TVShowID“"
+
+msgctxt "#30141"
+msgid "Use Default episode matching"
+msgstr "Naudoti numatytąjį serijų aptikimą"
+
+msgctxt "#30142"
+msgid "Use Episode Title matching"
+msgstr "Naudoti serijos pavadinimo atitikimą"
+
+msgctxt "#30143"
+msgid "Set Related Url (Search)"
+msgstr "Nustatyti susijusį URL (paieška)"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Atkurti anonsą"
+
+msgctxt "#30145"
+msgid "Pick a list"
+msgstr "Pasirinkite sąrašą"
+
+msgctxt "#30146"
+msgid "No Lists exist for user: %s"
+msgstr "Nėra sąrašo naudotojui: %s"
+
+msgctxt "#30147"
+msgid "Scraper Automatically Disabled"
+msgstr "Apdoroklis automatiškai išjungtas"
+
+msgctxt "#30148"
+msgid "[COLOR blue]%s[/COLOR]'s FL of %s is over your Failure Level threshold"
+msgstr "[COLOR blue]%s[/COLOR] FL iš %s yra virš jūsų klaidų slenksčio"
+
+msgctxt "#30149"
+msgid "Disabling it avoids wasting time and resources"
+msgstr "Išjungus nebus švaistomas laikas ir resursai"
+
+msgctxt "#30150"
+msgid "([I]If you Keep Enabled, consider increasing scraper timeout[/I])"
+msgstr "([I]Jei paliksite įjungtą, pailgės apdorojimo laukimo laikas[/I])"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Laikyti įjungtą"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Išjungti"
+
+msgctxt "#30153"
+msgid "Trakt Bookmark Exists"
+msgstr "Trakt žymelė jau yra"
+
+msgctxt "#30154"
+msgid "Local Bookmark Exists"
+msgstr "Vietinė žymelė jau yra"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Tęsti nuo %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Pradėti nuo pradžios"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Tęsti"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Parsiunčiama: %s..."
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Siuntimas baigtas: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "Klaida (%s) parsiunčiant: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Trakt paskyros autorizavimas"
+
+msgctxt "#30173"
+msgid "Trakt Authorization Complete"
+msgstr "Trakt autorizuota"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Įjungtas"
+
+msgctxt "#30175"
+msgid "Base Url"
+msgstr "Šakninis Url"
+
+msgctxt "#30176"
+msgid "Include in Page Existence checks?"
+msgstr "Tikrinti puslapio pasiekiamumą?"
+
+msgctxt "#30177"
+msgid "Username"
+msgstr "Naudotojas"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Slaptažodis"
+
+msgctxt "#30179"
+msgid "Filter results older than (0=No Filter) (days)"
+msgstr "Pašalinti rezultatus senesnius nei (0=nešalinti)(dienos)"
+
+msgctxt "#30180"
+msgid "Automatically Select"
+msgstr "Pasirinkti automatiškai"
+
+msgctxt "#30181"
+msgid "Include Premium"
+msgstr "Įtraukti premium"
+
+msgctxt "#30182"
+msgid "Maximum Pages"
+msgstr "Daugiausia puslapių"
+
+msgctxt "#30183"
+msgid "No Sources Found"
+msgstr "Šaltinių nerasta"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Sezonas"
+
+msgctxt "#30185"
+msgid "DISABLED"
+msgstr "IŠJUNGTA"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Paieška"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Žiūrėta"
+
+msgctxt "#30188"
+msgid "Unwatched"
+msgstr "Nežiūrėta"
+
+msgctxt "#30189"
+msgid "Updating"
+msgstr "Atnaujinama"
+
+msgctxt "#30190"
+msgid "Failed to create directory"
+msgstr "Aplanko sukurti nepavyko "
+
+msgctxt "#30191"
+msgid "Failed to write file"
+msgstr "Nepavyko įrašyti failo"
+
+msgctxt "#30192"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Atstatyti visų apdoroklių bazinius url"
+
+msgctxt "#30193"
+msgid "Base Url Reset Complete"
+msgstr "Bazinis url atstatyta"
+
+msgctxt "#30194"
+msgid "Requesting Url for: %s"
+msgstr "Prašoma url: %s"
+
+msgctxt "#30195"
+msgid "'%s' added to library"
+msgstr "„%s“ pridėta į biblioteką"
+
+msgctxt "#30196"
+msgid "Add to Section Menu"
+msgstr "Pridėti į pasirinkimo meniu"
+
+msgctxt "#30197"
+msgid "Remove from Section Menu"
+msgstr "Pašalinti iš pasirinkimo meniu"
+
+msgctxt "#30198"
+msgid "Liked Lists"
+msgstr "Patikę sąrašai"
+
+msgctxt "#30199"
+msgid "%s Mosts"
+msgstr "%s daugiausia"
+
+msgctxt "#30200"
+msgid "Most Played This Week"
+msgstr "Daugiausia atkurtas šia savaitę"
+
+msgctxt "#30201"
+msgid "Most Played This Month"
+msgstr "Daugiausia atkurtas šį mėnesį"
+
+msgctxt "#30202"
+msgid "Most Played All Time"
+msgstr "Daugiausia atkurtas per visą laiką"
+
+msgctxt "#30203"
+msgid "Most Watched This Week"
+msgstr "Daugiausiai žiūrėtas šią savaitę"
+
+msgctxt "#30204"
+msgid "Most Watched This Month"
+msgstr "Daugiausiai žiūrėtas šį mėnesį"
+
+msgctxt "#30205"
+msgid "Most Watched All Time"
+msgstr "Daugiausiai žiūrėtas"
+
+msgctxt "#30206"
+msgid "Most Collected This Week"
+msgstr "Daugiausiai surinko šią savaitę"
+
+msgctxt "#30207"
+msgid "Most Collected This Month"
+msgstr "Daugiausiai surinko šį mėnesį"
+
+msgctxt "#30208"
+msgid "Most Collected All Time"
+msgstr "Daugiausiai surinko"
+
+msgctxt "#30209"
+msgid "%s NOT added to library (%s)"
+msgstr "%s NEPRIDĖTAS į biblioteką (%s)"
+
+msgctxt "#30210"
+msgid "Local Exists"
+msgstr "Yra vietinis"
+
+msgctxt "#30211"
+msgid "Scraper Download Url"
+msgstr "Apdoroklio parsiuntimo url"
+
+msgctxt "#30212"
+msgid "Scraper Decryption Key"
+msgstr "Apdoroklio aprašymo raktas"
+
+msgctxt "#30213"
+msgid "Trakt On Deck"
+msgstr "Trakt dėkle"
+
+msgctxt "#30214"
+msgid "on"
+msgstr "įjungta"
+
+msgctxt "#30215"
+msgid "Delete Bookmark"
+msgstr "Trinti žymelę"
+
+msgctxt "#30216"
+msgid "Bookmark Deleted"
+msgstr "Žymelė panaikinta"
+
+msgctxt "#30217"
+msgid "Force No Match"
+msgstr "Priverstinai neatitiko"
+
+msgctxt "#30218"
+msgid "Getting Sources"
+msgstr "Gaunamas šaltiniai"
+
+msgctxt "#30219"
+msgid "Requested Sources from: %s"
+msgstr "Prašomi šaltiniai iš: %s"
+
+msgctxt "#30220"
+msgid "Received Sources: (%s / %s) from %s"
+msgstr "Gauti šaltiniai:  (%s / %s) iš %s"
+
+msgctxt "#30221"
+msgid "Applying Source Filters"
+msgstr "Pritaikomi šaltinio filtrai"
+
+msgctxt "#30222"
+msgid "Include Links from Comments"
+msgstr "Įtraukti nuorodas iš komentarų"
+
+msgctxt "#30223"
+msgid "My Watched History"
+msgstr "Mano žiūrėtų istorija"
+
+msgctxt "#30224"
+msgid "Trying Sources for Auto-Play"
+msgstr "Bandomi šaltiniai automatiniam atkūrimui"
+
+msgctxt "#30225"
+msgid "Trying: [%s] %s from %s"
+msgstr "Bandoma: [%s] %s iš %s"
+
+msgctxt "#30226"
+msgid "Failed: [%s] %s from %s"
+msgstr "Nepavyko: [%s] %s iš %s"
+
+msgctxt "#30227"
+msgid "Scraper Timeouts: [COLOR blue]%s[/COLOR]"
+msgstr "Apdoroklių laukimo laikai: [COLOR blue]%s[/COLOR]"
+
+msgctxt "#30228"
+msgid "Reset Failures"
+msgstr "Atstatyti nepavykimus"
+
+msgctxt "#30229"
+msgid "Maximum Source Results"
+msgstr "Daugiausia šaltinių"
+
+msgctxt "#30230"
+msgid "Include in My Next Episodes"
+msgstr "Įtraukti į mano sekančių sąrašą"
+
+msgctxt "#30231"
+msgid "Auto-Play"
+msgstr "Automatinis paleidimas"
+
+msgctxt "#30232"
+msgid "Set Trakt.tv API timeout to 60 seconds"
+msgstr "Nustatyti Trakt.tv API laukimo laiką 60s"
+
+msgctxt "#30233"
+msgid "Set Calendar start day to Yesterday"
+msgstr "Nustatyti kalendoriaus pradžios dieną į vakar"
+
+msgctxt "#30234"
+msgid "Show Episode Airtime on Calendar"
+msgstr "Kalendoriuje rodyti serijos pasirodymo datą"
+
+msgctxt "#30235"
+msgid "Set Scraper timeout to 20 seconds"
+msgstr "Nustatyti apdoroklio laukimo laiką 20s"
+
+msgctxt "#30236"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Į sekančią seriją įtraukti mano žiūrimų sąrašą"
+
+msgctxt "#30237"
+msgid "Remove Deleted Direct sources from results"
+msgstr "Iš rezultatų pašalinti ištrintus tiesioginius šaltinius"
+
+msgctxt "#30238"
+msgid "Remove Unusable Indirect sources from results"
+msgstr "Iš rezultatų pašalinti netiesioginius šaltinius"
+
+msgctxt "#30239"
+msgid "Highlight Debrid Sources in results"
+msgstr "Rezultatuose „debrid“ šaltinius paryškinti"
+
+msgctxt "#30240"
+msgid "No Limit on Maximum Source Results"
+msgstr "Neriboti šaltinių skaičiaus"
+
+msgctxt "#30241"
+msgid "Set Source Sort Keys to default"
+msgstr "Nustatyti šaltinių rikiavimo raktus į numatytuosius"
+
+msgctxt "#30242"
+msgid "Set Scraper Sort Order to default"
+msgstr "Nustatyti apdoroklių rikiavimo raktus į numatytuosius"
+
+msgctxt "#30243"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Atstatyti visų apdoroklių bazinius url į numatytuosius"
+
+msgctxt "#30244"
+msgid "Select All/None"
+msgstr "Pasirinkti viską/nieko"
+
+msgctxt "#30245"
+msgid "Automatically Select Best Source"
+msgstr "Automatiškai pasirinkti geriausią šaltinį"
+
+msgctxt "#30246"
+msgid "SALTS Database Issue Recovery"
+msgstr "SALTS duomenų bazės problemų atstatymas"
+
+msgctxt "#30247"
+msgid ""
+"The SALTS DB has an issue that may be correctable by a forced DB migration."
+msgstr "SALTS DB susidūrė su problema kurią galima pataisyti priverstinai migruojant DB."
+
+msgctxt "#30248"
+msgid "Should SALTS attempt a DB migration?"
+msgstr "Ar SALTS turėtų pabandyti migruoti DB?"
+
+msgctxt "#30249"
+msgid "DB Migration Failed but a DB reset may succeed."
+msgstr "DB migracija nepavyko, bet DB atstatymas gali pavykti."
+
+msgctxt "#30250"
+msgid "Should SALTS attempt a DB reset?"
+msgstr "Ar SALTS turėtų bandyti atstatyti DB?"
+
+msgctxt "#30251"
+msgid "([COLOR red]***All DB data will be lost.***[/COLOR])"
+msgstr "([COLOR red]***Visi DB duomenys bus prarasti.***[/COLOR])"
+
+msgctxt "#30252"
+msgid "DB Reset Failed: %s"
+msgstr "DB atstatyti nepavyko: %s"
+
+msgctxt "#30253"
+msgid "No Streamable Url Found"
+msgstr "Tinkamo url nerasta"
+
+msgctxt "#30254"
+msgid "Discovering Next Episodes"
+msgstr "Ieškomos sekančios serijos"
+
+msgctxt "#30255"
+msgid "Retrieving Watched History"
+msgstr "Gaunama žiūrėtų istorija"
+
+msgctxt "#30256"
+msgid "Retrieving Watchlist"
+msgstr "Gaunamas žiūrimų sąrašas"
+
+msgctxt "#30257"
+msgid "Retrieving Hidden Progress List"
+msgstr "Gaunamas paslėptas eigos sąrašas"
+
+msgctxt "#30258"
+msgid "Requesting Progress for: %s"
+msgstr "Prašoma eiga iš: %s"
+
+msgctxt "#30259"
+msgid "Received Progress for: %s"
+msgstr "Gauta eiga iš: %s"
+
+msgctxt "#30260"
+msgid "Reset Related Urls"
+msgstr "Atstatyti susijusius url"
+
+msgctxt "#30261"
+msgid "Related Urls Cleared: %s"
+msgstr "Susiję url išvalyti: %s"
+
+msgctxt "#30262"
+msgid "Anticipated %s"
+msgstr "Laukiama(-i) %s"
+
+msgctxt "#30263"
+msgid "Set as Sources View"
+msgstr "Nustatyti kaip šaltinių rodinį"
+
+msgctxt "#30264"
+msgid "Set Related Season Url (Search)"
+msgstr "Nustatyti susijusio sezono URL (paieška)"
+
+msgctxt "#30265"
+msgid "Trakt API Offline Mode Enabled"
+msgstr "Trakt API neprisijungus veiksena įjungta"
+
+msgctxt "#30266"
+msgid "On ANY device, visit: %s"
+msgstr "Bet kuriame įrenginyje aplankykite: %s"
+
+msgctxt "#30267"
+msgid "When prompted, enter code: %s"
+msgstr "Paprašius įveskite kodą: %s"
+
+msgctxt "#30268"
+msgid "Code expires in: %s seconds"
+msgstr "Kodo galiojimas baigsis po: %s s"
+
+msgctxt "#30269"
+msgid "Authorization was Rejected"
+msgstr "Autorizacija atmesta"
+
+msgctxt "#30270"
+msgid "To watch this video scan the QR Code below or visit [COLOR blue]"
+msgstr "Norėdami peržiūrėti šį video nuskenuokite QR kodą arba aplankykite [COLOR blue]"
+
+msgctxt "#30271"
+msgid "[/COLOR] from any device on the same network as this device."
+msgstr "[/COLOR] su bet kuriuo įrenginiu tame pačiam tinkle."
+
+msgctxt "#30272"
+msgid "Watch It Again"
+msgstr "Žiūrėti dar kartą"
+
+msgctxt "#30273"
+msgid "Pick a list to use for Watch It Again"
+msgstr "Pasirinkti sąrašą kuris bus naudojamas „žiūrėti dar kartą“"
+
+msgctxt "#30274"
+msgid "Use Least Watched Method"
+msgstr "Naudoti mažiausiai žiūrėta metodu"
+
+msgctxt "#30275"
+msgid "Use Most Watched Method"
+msgstr "Naudoti daugiausia žiūrėta metodu"
+
+msgctxt "#30276"
+msgid "Use Last Watched Method"
+msgstr "Naudoti paskiausiai žiūrėta metodu"
+
+msgctxt "#30277"
+msgid "Set as Watch It Again List"
+msgstr "Nustatyti kaip „Žiūrėti dar kartą“ sąrašą"
+
+msgctxt "#30278"
+msgid "Playback only allowed from Library & SALTS"
+msgstr "Atkūrimas galimas tik iš bibliotekos ir SALTS"
+
+msgctxt "#30279"
+msgid "Maximum Allowed Size (GB) (0 = No Limit)"
+msgstr "Didžiausias leidžiamas dydis (GB) (0=neriboti)"
+
+msgctxt "#30280"
+msgid "Show Episode Airtime in My Next Episodes"
+msgstr "Mano kitose serijose rodyti premjeros datą"
+
+msgctxt "#30281"
+msgid "Include Transodes"
+msgstr "Įtraukti perkodavimą"
+
+msgctxt "#30282"
+msgid "Next Episode"
+msgstr "Kita serija"
+
+msgctxt "#30283"
+msgid "Remaining: %s of %s"
+msgstr "Liko: %s iš %s"
+
+msgctxt "#30284"
+msgid "Remaining: %s"
+msgstr "Liko: %s"
+
+msgctxt "#30285"
+msgid "Genres"
+msgstr "Žanrai"
+
+msgctxt "#30286"
+msgid "Retrieving Collection"
+msgstr "Gaunama kolekcija"
+
+msgctxt "#30287"
+msgid "Adding Items to Directory"
+msgstr "Elementai pridedami į aplanką"
+
+msgctxt "#30288"
+msgid "Working..."
+msgstr "Vykdoma..."
+
+msgctxt "#30289"
+msgid "Re-Scrape All"
+msgstr "Perskanuoti visus"
+
+msgctxt "#30290"
+msgid "Manual Search (All Unmatched Only)"
+msgstr "Rankinė paieška (tik neatitikę)"
+
+msgctxt "#30291"
+msgid "Torba Account Authorization"
+msgstr "Torba paskyros autorizacija"
+
+msgctxt "#30292"
+msgid "Torba Authorization Complete"
+msgstr "Torba autorizacija baigta"
+
+msgctxt "#30293"
+msgid "Torba Authorization Failed"
+msgstr "Torba autorizacija nepavyko"
+
+msgctxt "#30294"
+msgid "Authorize SALTS to access my torba account"
+msgstr "Leisti SALTS pasiekti mano torba paskyrą"
+
+msgctxt "#30295"
+msgid "and login when prompted"
+msgstr "ir paprašius prisijungti"
+
+msgctxt "#30296"
+msgid "Flush Image Cache"
+msgstr "Išvalyti paveikslėlių podėlį"
+
+msgctxt "#30297"
+msgid "Are you sure you want to clear the image metadata cache?"
+msgstr "Ar tikrai norite išvalyti paveikslėlių metaduomenų podėlį?"
+
+msgctxt "#30298"
+msgid "The addon will be significantly slower until is is re-cached."
+msgstr "Papildinys žymiai sulėtės kol bus perkurtas podėlis."
+
+msgctxt "#30299"
+msgid "Flush Complete"
+msgstr "Išvalyta"
+
+msgctxt "#30300"
+msgid "Refresh Images"
+msgstr "Atnaujinti paveikslėlius"
+
+msgctxt "#30301"
+msgid "Private Scraper Updated: "
+msgstr "Asmeninis apdoroklis atnaujintas:"
+
+msgctxt "#30302"
+msgid "Reset Torba Authorization"
+msgstr "Atstatyti Torba autorizaciją"
+
+msgctxt "#30303"
+msgid "Torba Authorization Reset"
+msgstr "Torba autorizacija atstatyta"
+
+msgctxt "#30304"
+msgid "Repair URLResolver"
+msgstr "Taisyti URLResolver"
+
+msgctxt "#30305"
+msgid "Restart Kodi and then Run Repair URLResolver again"
+msgstr "Paleisti Kodi iš naujo, tada bandyti taisyti URLResolver dar kartą"
+
+msgctxt "#30306"
+msgid "URLResolver failed to load. Try Settings->Repair URLResolver"
+msgstr "Įkelti URLResolver nepavyko. Pabandykite Nustatymai->Taisyti URLResolver"
+
+msgctxt "#30500"
+msgid "Addon Theme"
+msgstr "Papildinio tema"
+
+msgctxt "#30501"
+msgid "Authorized Trakt User"
+msgstr "Prijungtas Trakt naudotojas"
+
+msgctxt "#30502"
+msgid "Calendar Start Day (0=Today)"
+msgstr "Kalendoriaus pradžios data (0=šiandien)"
+
+msgctxt "#30503"
+msgid "Show air time on calendars"
+msgstr "Kalendoriuje rodyti premjeros laiką"
+
+msgctxt "#30504"
+msgid "My Collection Sort Order"
+msgstr "Mano kolekcijos rikiavimo tvarka"
+
+msgctxt "#30505"
+msgid "My Next Episodes Sort Order"
+msgstr "Mano sekančių rikiavimo tvarka"
+
+msgctxt "#30506"
+msgid "Show unaired episodes in My Next Episodes"
+msgstr "Mano sekančių sąraše rodyti dar nerodytas serijas"
+
+msgctxt "#30507"
+msgid "Show Season 0 in Seasons View"
+msgstr "Sezonų peržiūroje rodyti „sezoną 0“"
+
+msgctxt "#30508"
+msgid "Show unaired episodes in Seasons"
+msgstr "Sezonuose rodyti dar nerodytas serijas"
+
+msgctxt "#30509"
+msgid "    Show an Indicator on Unaired Episodes"
+msgstr "  Nerodytose serijose rodyti indikatorių"
+
+msgctxt "#30510"
+msgid "    Show episodes with unknown air date"
+msgstr "    Rodyti serijas su nežinoma premjeros data"
+
+msgctxt "#30511"
+msgid "Off"
+msgstr "Išjungta"
+
+msgctxt "#30512"
+msgid "24 Hour"
+msgstr "24 valandos"
+
+msgctxt "#30513"
+msgid "12 Hour"
+msgstr "12 valandų"
+
+msgctxt "#30514"
+msgid "Previously Collected"
+msgstr "Anksčiau įtraukta"
+
+msgctxt "#30515"
+msgid "Recently Collected"
+msgstr "Neseniai pridėta"
+
+msgctxt "#30516"
+msgid "Title"
+msgstr "Pavadinimas"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "Metai"
+
+msgctxt "#30518"
+msgid "Recent Activity"
+msgstr "Naujausia veikla"
+
+msgctxt "#30519"
+msgid "Title"
+msgstr "Pavadinimas"
+
+msgctxt "#30520"
+msgid "Most Completed"
+msgstr "Labiausiai užbaigta "
+
+msgctxt "#30521"
+msgid "Least Completed"
+msgstr "Mažiausiai užbaigta "
+
+msgctxt "#30522"
+msgid "Recently Aired"
+msgstr "Neseniai rodyta"
+
+msgctxt "#30523"
+msgid "Previously Aired"
+msgstr "Anksčiau rodyta"
+
+msgctxt "#30524"
+msgid "Show Trending"
+msgstr "Rodyti tendencijas"
+
+msgctxt "#30525"
+msgid "Show Popular"
+msgstr "Rodyti populiarius"
+
+msgctxt "#30526"
+msgid "Show Recently Updated"
+msgstr "Rodyti nesenai atnaujintus"
+
+msgctxt "#30527"
+msgid "Show Recommended"
+msgstr "Rodyti rekomenduojamas"
+
+msgctxt "#30528"
+msgid "Show My Collection"
+msgstr "Rodyti mano kolekciją"
+
+msgctxt "#30529"
+msgid "Show My Favorites"
+msgstr "Rodyti mano mėgstamiausius"
+
+msgctxt "#30530"
+msgid "Show My Subscriptions"
+msgstr "Rodyti mano prenumeratas"
+
+msgctxt "#30531"
+msgid "Show My Watchlist"
+msgstr "Rodyti mano žiūrimų sąrašą"
+
+msgctxt "#30532"
+msgid "Show My Lists"
+msgstr "Rodyti mano sąrašus"
+
+msgctxt "#30533"
+msgid "Show Other Lists"
+msgstr "Rodyti kitus sąrašus"
+
+msgctxt "#30534"
+msgid "Show My Next Episodes"
+msgstr "Rodyti mano kitas serijas"
+
+msgctxt "#30535"
+msgid "Show My Calendar"
+msgstr "Rodyti mano kalendorių"
+
+msgctxt "#30536"
+msgid "Show General Calendar"
+msgstr "Rodyti bendrą kalendorių"
+
+msgctxt "#30537"
+msgid "Show Premiere Calendar"
+msgstr "Rodyti premjerų kalendorių"
+
+msgctxt "#30538"
+msgid "Show Friends"
+msgstr "Rodyti draugus"
+
+msgctxt "#30539"
+msgid "Show Search"
+msgstr "Rodyti paiešką"
+
+msgctxt "#30540"
+msgid "Default Views"
+msgstr "Numatytosios peržiūros"
+
+msgctxt "#30541"
+msgid "Default Movies View (0 = None)"
+msgstr "Numatytas filmų rodinys (0=joks)"
+
+msgctxt "#30542"
+msgid "Default TV Shows View (0 = None)"
+msgstr "Numatytas tv laidų rodinys (0=joks)"
+
+msgctxt "#30543"
+msgid "Default Seasons View (0 = None)"
+msgstr "Numatytas sezonų rodinys (0=joks)"
+
+msgctxt "#30544"
+msgid "Default Episodes View (0 = None)"
+msgstr "Numatytas serijų rodinys (0=joks)"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Bendrieji"
+
+msgctxt "#30546"
+msgid "User Interface"
+msgstr "Naudotojo sąsaja"
+
+msgctxt "#30547"
+msgid "How do I authorize SALTS to access my trakt.tv account?"
+msgstr "Kaip leisti SALTS pasiekti mano trakt.tv paskyrą?"
+
+msgctxt "#30548"
+msgid "Use HTTPS"
+msgstr "Naudoti HTTPS"
+
+msgctxt "#30549"
+msgid "Trakt Timeout (seconds) (0=No Limit)"
+msgstr "Trakt laukimo trukmė (sekundėmis) (0=nėra limito)"
+
+msgctxt "#30550"
+msgid "Trakt Page Size"
+msgstr "Trakt puslapio dydis"
+
+msgctxt "#30551"
+msgid "Pre-Test All Direct Sources"
+msgstr "Išanksto patikrinti visus tiesioginius šaltinius"
+
+msgctxt "#30552"
+msgid "Use Trakt Bookmarks"
+msgstr "Naudoti Trakt žymeles"
+
+msgctxt "#30555"
+msgid "Include People"
+msgstr "Įtraukti žmones"
+
+msgctxt "#30556"
+msgid "Minimum Image Size"
+msgstr "Minimalus paveikslėlio dydis"
+
+msgctxt "#30557"
+msgid "Library Integration"
+msgstr "Bibliotekos integravimas"
+
+msgctxt "#30558"
+msgid "TV Show Folder"
+msgstr "TV laidų aplankas"
+
+msgctxt "#30559"
+msgid "Movie Folder"
+msgstr "Filmų aplankas"
+
+msgctxt "#30560"
+msgid "Automatically Update Subscriptions"
+msgstr "Automatiškai atnaujinti prenumeratas"
+
+msgctxt "#30561"
+msgid "     Update Interval (hours)"
+msgstr "     Atnaujinimo intervalas(valandomis)"
+
+msgctxt "#30562"
+msgid "     During StartUp?"
+msgstr "     Paleidžiant?"
+
+msgctxt "#30563"
+msgid "     During Playback?"
+msgstr "     Atkuriant?"
+
+msgctxt "#30564"
+msgid "Require Site Page for Movies?"
+msgstr "Filmams reikalauti puslapio?"
+
+msgctxt "#30565"
+msgid "Include specials in library?"
+msgstr "Bibliotekoje įtraukti specialias laidas?"
+
+msgctxt "#30566"
+msgid "Include episodes with unknown air dates"
+msgstr "Įtraukti serijas su nežinoma premjeros data"
+
+msgctxt "#30567"
+msgid "Update Library Afterward?"
+msgstr "Paskui atnaujinti biblioteką?"
+
+msgctxt "#30568"
+msgid "Show Notifications?"
+msgstr "Rodyti pranešimus?"
+
+msgctxt "#30569"
+msgid "Include Movies?"
+msgstr "Įtraukti filmus?"
+
+msgctxt "#30570"
+msgid "Prune Ended Shows?"
+msgstr "Slėpti peržiūrėtus?"
+
+msgctxt "#30571"
+msgid "Source Management"
+msgstr "Šaltinių tvarkymas"
+
+msgctxt "#30572"
+msgid "Auto-Play Sources"
+msgstr "Automatiškai atkurti šaltinius"
+
+msgctxt "#30573"
+msgid "    Source Selection Method"
+msgstr "    Šaltinio pasirinkimo būdas"
+
+msgctxt "#30574"
+msgid "Show Download Option"
+msgstr "Rodyti parsiuntimo parinktį"
+
+msgctxt "#30575"
+msgid "    Show Download Progress"
+msgstr "    Rodyti parsiuntimo eigą"
+
+msgctxt "#30576"
+msgid "    TV Show Download Folder"
+msgstr "    TV laidų parsiuntimo aplankas"
+
+msgctxt "#30577"
+msgid "    Movie Download Folder"
+msgstr "    Filmų parsiuntimo aplankas"
+
+msgctxt "#30578"
+msgid "Scraper Timeout (seconds) (0=No Limit)"
+msgstr "Apdoroklio laukimo laikas (sekundėmis) (0=nėra limito)"
+
+msgctxt "#30579"
+msgid "Maximum Source Results (0=No Limit)"
+msgstr "Daugiausia šaltinių (0=nėra limito)"
+
+msgctxt "#30580"
+msgid "Filter Out Unusable Sources"
+msgstr "Pašalinti netinkamus šaltinius"
+
+msgctxt "#30581"
+msgid "Source Exclusion List"
+msgstr "Šaltinio išskyrimo sąrašas"
+
+msgctxt "#30582"
+msgid "Maximum Allowed TV Show Quality"
+msgstr "Didžiausia leidžiama tv laidos kokybė"
+
+msgctxt "#30583"
+msgid "Maximum Allowed Movie Quality"
+msgstr "Maksimali leidžiama filmo kokybė"
+
+msgctxt "#30584"
+msgid "Match episode air date when season & episode fails"
+msgstr "Ieškoti pagal serijos premjeros datą kai sezonas ir serija neatitinka"
+
+msgctxt "#30585"
+msgid "Match episode title when season & episode fails"
+msgstr "Ieškoti pagal serijos pavadinimą kai sezonas ir serija neatitinka"
+
+msgctxt "#30586"
+msgid "Automatically disable ineffective scrapers"
+msgstr "Automatiškai išjungti neefektyvius apdoroklius"
+
+msgctxt "#30587"
+msgid "    Check Frequency (requests)"
+msgstr "     Tikrinti dažnumą (užklausų)"
+
+msgctxt "#30588"
+msgid "    Minimum Allowed Success Percentage"
+msgstr "    Minimalus leidžiamas sėkmingų procentas"
+
+msgctxt "#30589"
+msgid "Window"
+msgstr "Langas"
+
+msgctxt "#30590"
+msgid "Background"
+msgstr "Fonas"
+
+msgctxt "#30591"
+msgid "Source Sorting"
+msgstr "Šaltinių rikiavimas"
+
+msgctxt "#30592"
+msgid "Sort Sources"
+msgstr "Rikiuoti šaltinius"
+
+msgctxt "#30594"
+msgid "1st Sort Key"
+msgstr "    1-as rikiavimo raktas"
+
+msgctxt "#30595"
+msgid "1st Sort Key Order"
+msgstr "1-o rikiavimo rakto tvarka"
+
+msgctxt "#30596"
+msgid "2nd Sort Key"
+msgstr "2-asis rikiavimo raktas"
+
+msgctxt "#30597"
+msgid "2nd Sort Key Order"
+msgstr "2-o rikiavimo rakto tvarka"
+
+msgctxt "#30598"
+msgid "3rd Sort Key"
+msgstr "3-čias rikiavimo raktas"
+
+msgctxt "#30599"
+msgid "3rd Sort Key Order"
+msgstr "3-o rikiavimo rakto tvarka"
+
+msgctxt "#30600"
+msgid "4th Sort Key"
+msgstr "4-tas rikiavimo raktas"
+
+msgctxt "#30601"
+msgid "4th Sort Key Order"
+msgstr "4-o rikiavimo rakto tvarka"
+
+msgctxt "#30602"
+msgid "5th Sort Key"
+msgstr "5-tas rikiavimo raktas"
+
+msgctxt "#30603"
+msgid "5th Sort Key Order"
+msgstr "5-o rikiavimo rakto tvarka"
+
+msgctxt "#30604"
+msgid "None"
+msgstr "Jokių"
+
+msgctxt "#30605"
+msgid "Source"
+msgstr "Šaltinis"
+
+msgctxt "#30606"
+msgid "Quality"
+msgstr "Kokybė"
+
+msgctxt "#30607"
+msgid "Views"
+msgstr "Peržiūros"
+
+msgctxt "#30608"
+msgid "Rating"
+msgstr "Įvertinimas"
+
+msgctxt "#30609"
+msgid "Direct"
+msgstr "Tiesiogiai"
+
+msgctxt "#30610"
+msgid "Best to Worst"
+msgstr "Nuo geriausio iki blogiausio"
+
+msgctxt "#30611"
+msgid "Worst to Best"
+msgstr "Nuo blogiausio iki geriausio"
+
+msgctxt "#30612"
+msgid "Base Url"
+msgstr "Šakninis Url"
+
+msgctxt "#30613"
+msgid "Include in Page Existence checks?"
+msgstr "Įterpti puslapio tinkamumo patikras?"
+
+msgctxt "#30614"
+msgid "Subtitles work only for TV Shows currently"
+msgstr "Šiuo metu subtitrai veikia tik TV laidoms"
+
+msgctxt "#30615"
+msgid "Enable Subtitles"
+msgstr "Įjungti subtitrus"
+
+msgctxt "#30616"
+msgid "Show subtitle indicators"
+msgstr "Rodyti subtitrų indikatorius"
+
+msgctxt "#30617"
+msgid "Subtitle Language"
+msgstr "Subtitrų kalba"
+
+msgctxt "#30618"
+msgid "Require Hearing Impaired"
+msgstr "Reikalauti neprigirdintiesiems"
+
+msgctxt "#30619"
+msgid "Require HD"
+msgstr "Reikalauti HD"
+
+msgctxt "#30620"
+msgid "Download Subtitles on playback"
+msgstr "Atkuriant atsisiųsti subtitrus"
+
+msgctxt "#30621"
+msgid "Subtitle Download Folder"
+msgstr "Subtitrų atsisiuntimo aplankas"
+
+msgctxt "#30622"
+msgid "Show Subtitles on Playback"
+msgstr "Atkuriant rodyti subtitrus"
+
+msgctxt "#30623"
+msgid "Use a MySQL DB"
+msgstr "Naudoti MySQL DB"
+
+msgctxt "#30624"
+msgid "    Address"
+msgstr "    Adresas"
+
+msgctxt "#30625"
+msgid "    Port"
+msgstr "    Prievadas"
+
+msgctxt "#30626"
+msgid "    Username"
+msgstr "    Naudotojo vardas"
+
+msgctxt "#30627"
+msgid "    Password"
+msgstr "    Slaptažodis"
+
+msgctxt "#30628"
+msgid "    Database"
+msgstr "    Duombazė"
+
+msgctxt "#30629"
+msgid "    Upgrade DB during XBMC startup"
+msgstr "    Atnaujinti DB paleidžiant XBMC"
+
+msgctxt "#30630"
+msgid "Flush webpage cache..."
+msgstr "Išvalyti tinklapio podėlį..."
+
+msgctxt "#30631"
+msgid "Reset SALTS DB ([COLOR red]SQLITE Only[/COLOR])"
+msgstr "Atstatyti SALTS DB ([COLOR red]Tik SQLITE[/COLOR])"
+
+msgctxt "#30632"
+msgid "Export data from SALTS DB"
+msgstr "Eksportuoti duomenis iš SALTS DB"
+
+msgctxt "#30633"
+msgid "Import data into SALTS DB"
+msgstr "Importuoti duomenis į SALTS DB"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Subtitrai"
+
+msgctxt "#30635"
+msgid "Database"
+msgstr "Duomenų bazė"
+
+msgctxt "#30636"
+msgid "Most Recent"
+msgstr "Vėliausias"
+
+msgctxt "#30637"
+msgid "Highest Quality"
+msgstr "Geriausia kokybė"
+
+msgctxt "#30638"
+msgid "Prompt"
+msgstr "Paklausti"
+
+msgctxt "#30639"
+msgid "On"
+msgstr "Įjungta"
+
+msgctxt "#30640"
+msgid "Show Liked Lists"
+msgstr "Rodyti patikusius sąrašus"
+
+msgctxt "#30641"
+msgid "Show Mosts"
+msgstr "Rodyti daugiausia"
+
+msgctxt "#30642"
+msgid "Watchlist Sort Order"
+msgstr "Žiūrimų sąrašo rikiavimo tvarka"
+
+msgctxt "#30643"
+msgid "Recently Added"
+msgstr "Neseniai pridėta"
+
+msgctxt "#30644"
+msgid "Previously Added"
+msgstr "Anksčiau pridėta"
+
+msgctxt "#30645"
+msgid "Skip movies/episodes that exist locally"
+msgstr "Praleisti filmus/serijas kurios yra vietinės"
+
+msgctxt "#30646"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Į sekančią seriją įtraukti mano žiūrimų sąrašą"
+
+msgctxt "#30647"
+msgid "Show Trakt On Deck"
+msgstr "Rodyti „Trakt“ dėkle"
+
+msgctxt "#30648"
+msgid "Show Custom Progress Dialog from Library"
+msgstr "Rodyti pasirinktinį eigos dialogą iš bibliotekos"
+
+msgctxt "#30649"
+msgid "Create tvshow/movie nfo file for?"
+msgstr "Sukurti tvlaidos/filmo nfo failą?"
+
+msgctxt "#30650"
+msgid "Won't scrape"
+msgstr "Neįmanoma apdoroti"
+
+msgctxt "#30651"
+msgid "All"
+msgstr "Visi"
+
+msgctxt "#30652"
+msgid "Show Debrid Supported Sources in ..."
+msgstr "Debrid palaikančius šaltinius rodyti..."
+
+msgctxt "#30653"
+msgid "6th Sort Key"
+msgstr "6-tas rikiavimo raktas"
+
+msgctxt "#30654"
+msgid "6th Sort Key Order"
+msgstr "6-o rikiavimo rakto tvarka"
+
+msgctxt "#30655"
+msgid "Debrid"
+msgstr "Debrid"
+
+msgctxt "#30656"
+msgid "Show My Watched History"
+msgstr "Rodyti mano žiūrėtų istoriją"
+
+msgctxt "#30657"
+msgid "    Consecutive Failure Level Limit"
+msgstr "    Iš eilės įvykusių klaidų limitas"
+
+msgctxt "#30658"
+msgid "Mute Notifications"
+msgstr "Nerodyti pranešimų"
+
+msgctxt "#30659"
+msgid "Exclude Completed, Ended Shows from My Next Episodes"
+msgstr "„Baigtos laidos“ neberodomos „mano kitose serijose“"
+
+msgctxt "#30660"
+msgid "HD1080"
+msgstr "HD1080"
+
+msgctxt "#30661"
+msgid "HD720"
+msgstr "HD720"
+
+msgctxt "#30662"
+msgid "High"
+msgstr "Aukštas"
+
+msgctxt "#30663"
+msgid "Medium"
+msgstr "Vidutinė"
+
+msgctxt "#30664"
+msgid "Low"
+msgstr "Žema"
+
+msgctxt "#30665"
+msgid "Automatically pick first matching subtitle"
+msgstr "Automatiškai pasirinkti pirmus atitinkančius subtitrus"
+
+msgctxt "#30666"
+msgid "SALTS Auto Configuration"
+msgstr "SALTS automatinis nustatymas"
+
+msgctxt "#30667"
+msgid "Continue"
+msgstr "Tęsti"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+msgctxt "#30669"
+msgid "Select this item to Install the SALTS Themepak"
+msgstr "Pasirinkite šį elementą norėdami įdiegti SALTS temą"
+
+msgctxt "#30670"
+msgid "Show Settings"
+msgstr "Rodyti nustatymus"
+
+msgctxt "#30671"
+msgid "Show Anticipated"
+msgstr "Rodyti laukiamus"
+
+msgctxt "#30672"
+msgid "Default Sources View (0 = None)"
+msgstr "Numatytasis šaltinių rodinys (0=joks)"
+
+msgctxt "#30673"
+msgid "Scraper Last Update"
+msgstr "Paskutinis apdoroklio atnaujinimo laikas"
+
+msgctxt "#30674"
+msgid "Trakt API Offline Mode"
+msgstr "Trakt API neprisijungus veiksena"
+
+msgctxt "#30675"
+msgid "Torba IP Authorization"
+msgstr "Torba IP autorizacija"
+
+msgctxt "#30676"
+msgid "Machine Speed"
+msgstr "Mašinos greitis"
+
+msgctxt "#30677"
+msgid "Automatic"
+msgstr "Automatinis"
+
+msgctxt "#30678"
+msgid "Very Slow"
+msgstr "Labai lėtas"
+
+msgctxt "#30679"
+msgid "Slow"
+msgstr "Lėtas"
+
+msgctxt "#30680"
+msgid "Medium"
+msgstr "Vidutinis"
+
+msgctxt "#30681"
+msgid "Fast"
+msgstr "Greitas"
+
+msgctxt "#30682"
+msgid "Very Fast"
+msgstr "Labai greitai"
+
+msgctxt "#30683"
+msgid "Show Watch It Again"
+msgstr "Rodyti „Žiūrėti dar kartą“"
+
+msgctxt "#30684"
+msgid "Show air time in MNE"
+msgstr "Rodyti rodymo laiką MNE"
+
+msgctxt "#30686"
+msgid "Show Next Episode Notification"
+msgstr "Sekančios serijos rodymo pranešimas"
+
+msgctxt "#30687"
+msgid "    Next Episode Delay (secs)"
+msgstr "Sekančios serijos delsa (sekundėmis)"
+
+msgctxt "#30688"
+msgid "    Show Next Episode on Unwatched"
+msgstr "Rodyti kitą seriją „nematytuose“"
+
+msgctxt "#30689"
+msgid "    Show air time in Next Episode"
+msgstr "Rodyti premjeros laiką kitoje serijoje"
+
+msgctxt "#30690"
+msgid "Show CF Site Protection Captchas"
+msgstr "Rodyti CF puslapio apsaugos ženklų atpažinimą"
+
+msgctxt "#30691"
+msgid "    Next Episode Duration (secs)"
+msgstr "Sekančios serijos trukmė (sekundėmis)"
+
+msgctxt "#30692"
+msgid "Show Genres"
+msgstr "Rodyti žanrus"
+
+msgctxt "#30693"
+msgid "Movie Genre List"
+msgstr "Filmų žanrų sąrašas"
+
+msgctxt "#30694"
+msgid "TV Genre List"
+msgstr "TV žanrų sąrašas"
+
+msgctxt "#30695"
+msgid "Trending"
+msgstr "Tendencija"
+
+msgctxt "#30696"
+msgid "Popular"
+msgstr "Populiarūs"
+
+msgctxt "#30697"
+msgid "Anticipated"
+msgstr "Laukiama"
+
+msgctxt "#30698"
+msgid "Most Watched (Week)"
+msgstr "Daugiausiai žiūrėtas (savaitė)"
+
+msgctxt "#30699"
+msgid "Most Watched (Month)"
+msgstr "Daugiausiai žiūrėtas (mėnuo)"
+
+msgctxt "#30700"
+msgid "Most Watched (All)"
+msgstr "Daugiausiai žiūrėtas (viso)"
+
+msgctxt "#30701"
+msgid "Most Played (Week)"
+msgstr "Daugiausia atkurtas (savaitė)"
+
+msgctxt "#30702"
+msgid "Most Played (Month)"
+msgstr "Daugiausia atkurtas (mėnuo)"
+
+msgctxt "#30703"
+msgid "Most Played (All)"
+msgstr "Daugiausia atkurtas (bendrai)"
+
+msgctxt "#30704"
+msgid "Most Collected (Week)"
+msgstr "Daugiausiai surinko (savaitė)"
+
+msgctxt "#30705"
+msgid "Most Collected (Month)"
+msgstr "Daugiausiai surinko (mėnuo)"
+
+msgctxt "#30706"
+msgid "Most Collected (All)"
+msgstr "Daugiausiai surinko (viso)"
+
+msgctxt "#30707"
+msgid "Date Format"
+msgstr "Datos formatas"
+
+msgctxt "#30708"
+msgid "Past Activity"
+msgstr "Praeities aktyvumas"
+
+msgctxt "#30709"
+msgid "Always Show Custom Progress Dialogs"
+msgstr "Visada rodyti pasirinktinius eigos dialogus"
+
+msgctxt "#30710"
+msgid "Image Metadata API Keys"
+msgstr "Paveikslėlio metaduomenų API raktas"
+
+msgctxt "#30711"
+msgid "Fanart.tv API Key (Blank = Disable)"
+msgstr "Fanart.tv API raktas (tuščia = išjungti)"
+
+msgctxt "#30712"
+msgid "TMDB API Key (Blank = Disable)"
+msgstr "TVDB API raktas (tuščia = išjungti)"
+
+msgctxt "#30713"
+msgid "TVDB API Key (Blank = Disable)"
+msgstr "TVDB API raktas (tuščia = išjungti)"
+
+msgctxt "#30714"
+msgid "Enable OMDB Images"
+msgstr "Įjungti OMDB paveikslėlius"
+
+msgctxt "#30715"
+msgid "Enable TVMaze Images"
+msgstr "Įjungti TVmaze paveikslėlius"
+
+msgctxt "#30716"
+msgid "Flush Image Cache..."
+msgstr "Išvalyti paveikslėlių podėlį..."
+
+msgctxt "#30717"
+msgid "Enable Fanart.tv Images"
+msgstr "Įjungti fanart.tv paveikslėlius"
+
+msgctxt "#30718"
+msgid "Fanart.tv Personal API Key"
+msgstr "Fanart.tv asmeninis API raktas"
+
+msgctxt "#30719"
+msgid "Enable Backgrounds/Fanart"
+msgstr "Įjungti fonus/fanart"
+
+msgctxt "#30720"
+msgid "Enable Posters"
+msgstr "Įjungti plakatus"
+
+msgctxt "#30721"
+msgid "Enable Banners"
+msgstr "Įjungti banerius"
+
+msgctxt "#30722"
+msgid "Enable Clearart"
+msgstr "Įjungti „clearart“"
+
+msgctxt "#30723"
+msgid "Artwork Scraping"
+msgstr "Apipavidalinimo apdorojimas"
+
+msgctxt "#30724"
+msgid "Enable Thumbnails"
+msgstr "Įjungti miniatiūras"
+
+msgctxt "#30725"
+msgid "Artwork Types"
+msgstr "Apipavidalinimo tipai"
+
+msgctxt "#30726"
+msgid "    Use animated posters when available"
+msgstr "Kai įmanoma naudoti animuotus plakatus"
+
+msgctxt "#30727"
+msgid "Enable Cast Thumbnails"
+msgstr "Įjungti miniatiūrų perdavimą"
+
+msgctxt "#30728"
+msgid "    *** Install TMDB API Cache ***"
+msgstr "    *** Įdiegti TMBD API podėlį ***"
+
+msgctxt "#30729"
+msgid "    Debrid Highlight Color"
+msgstr "Debrid paryškinimo spalva"
+
+msgctxt "#30730"
+msgid "Image Proxy [COLOR red][B](Experimental)[/B][/COLOR]"
+msgstr "Paveikslėlio tarpinis serveris [COLOR red][B](Eksperimentinis)[/B][/COLOR]"
+
+msgctxt "#30731"
+msgid "Enable Image Proxy"
+msgstr "Įjungti paveikslėlių tarpinį serverį"
+
+msgctxt "#30732"
+msgid "Image Proxy Port"
+msgstr "Paveikslėlių tarpinio serverio prievadas"
+

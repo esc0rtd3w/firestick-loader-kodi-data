@@ -1,0 +1,24 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=LiveVDO - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://livevdo.tv/embed_loader.php?token=%s
+
+item_info_name=file
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://livevdo.tv/feedXML.php?token=%s','.*<file>([^<]+)</file>.*')
+item_info_build=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*embedPlayer\('.+?',\s*'.+?',\s*'(.+?)',\s*'(.+?)',\s*'(.+?)'.*','','tok|xml|swf')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_build=rtmp://vsharelivefs.fplive.net:1935/vsharelive-live/
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfVfy=1 buffer=20 live=true swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s

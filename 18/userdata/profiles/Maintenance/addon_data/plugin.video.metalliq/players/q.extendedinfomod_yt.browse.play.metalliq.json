@@ -1,0 +1,53 @@
+{
+ "name"         : "[COLOR FF0084FF]EIM[/COLOR] YouTube [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "plugin"       : "script.extendedinfo",
+ "priority"     : 500,
+ "id"           : "q.extendedinfomod_yt.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={title}+{year}",
+    "steps"     : [
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={clearname}+{season}x{episode}",
+    "steps"     : [
+     ".*{clearname}.*{season}x{episode}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "music"        : [
+  [
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [
+  [
+   {
+    "link"      : "plugin://script.extendedinfo/?info=youtubesearch&id={artist}+{track}",
+    "steps"     : [
+     ".*{artist}.*{track}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "live"         : []
+}

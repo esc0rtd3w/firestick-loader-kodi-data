@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.navi-x"
+       name="Navi-X"
+       version="4.0.1"
+       provider-name="tvaddons, crzen, Blazetamer">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.urlresolver"/>
+        <import addon="script.module.t0mm0.common"/>
+        <import addon="script.module.addon.common" optional="false"/>
+        <import addon="repository.xbmchub" optional="true"/>
+        <import addon="plugin.program.indigo" optional="true"/>
+        <import addon="plugin.video.youtube" optional="false"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language></language>
+        <minversion>28764</minversion>
+        <summary lang="en">Media Browser Addon for Kodi</summary>
+        <description lang="en">Please visit www.tvaddons.ag for addon support and information! [CR][CR]Navi-X is the oldest and most trusted add-on for Kodi, used by millions of people worldwide. [CR]You'll find everything from live television to your favourite movies and television shows, easily accessible.</description>
+        <disclaimer>http://www.navixtreme.com/terms/</disclaimer>
+        <forum>http://forums.tvaddons.ag/forums/38-NAVI-X-MEDIA-BROWSER-FOR-KODI</forum>
+        <website>http://www.navixtreme.com/</website>
+        <source>https://dev.tvaddons.ag/tvaddons/script.navi-x</source>
+        <news>v4.0.1  (3-10-2017)
+- updated code to work with Kodi 17
+- updated resolutions to work with Kodi 17 default skin
+- changed to only have Navi-X availible from programs menu because of restrictions of the new Kodi 17 default skin
+- fixed list view and menu alignments for 1080i
+- brought back updated status in list views for all lists and resolutions
+- more work on thumbnail view to get it to operate correctly
+- made view changes save in settings now that thumbnailview seems operational
+- added show and list description to context menu so they are available in all views
+        </news>
+    </extension>
+</addon>

@@ -1,0 +1,8 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Freedocast - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+@IF(@PLATFORM@!=xbox)@item_info_build=plugin://plugin.video.freedocast/?play=%s@ENDIF@
+@IF(@PLATFORM@==xbox)@item_info_build=plugin://video/freedocast/?play=%s@ENDIF@

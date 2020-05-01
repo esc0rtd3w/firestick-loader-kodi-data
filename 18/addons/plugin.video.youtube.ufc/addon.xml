@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.youtube.ufc" name="UFC Youtube" version="1.0.1" provider-name="DOKI">
+	<requires>
+		<import addon="plugin.video.youtube" version="4.0" optional="false"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension  point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="nl">Bekijk UFC Channel op uw XBMC / Kodi.</summary>
+		<description lang="nl">Met deze plugin is het mogelijk om UFC Channel te bekijken.</description>
+		<disclaimer>Video's zijn intellectueel eigendom van de kanaaleigenaar. Tenzij YouTube anders is overeen gekomen. ;-)</disclaimer>
+		<language>nl</language>
+	</extension>
+</addon>

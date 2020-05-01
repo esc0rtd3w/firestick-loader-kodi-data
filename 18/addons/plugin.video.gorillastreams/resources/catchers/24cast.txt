@@ -1,0 +1,24 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=24cast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://24cast.eu/embed.php?v=%s&vw=600&vh=400&domain=www.footballplanet.eu
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*\'flashplayer\':\s*\'([^\']+)\'.*?\'streamer\':\s*destreamer\(\"([^\']+)\"\),.*?\'file\':\s*\'([^\']+)\'.*','%s','swf|rtmpEnc|file')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmpEnc
+item_info_convert=destreamer(%s)
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+
+

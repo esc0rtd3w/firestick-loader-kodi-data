@@ -1,0 +1,32 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Fasts - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.fasts.tv/embedplayer.php?width=600&height=360&id=%s&autoplay=true
+
+item_info_name=token
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*getJSON\("([^'"]+)".*','%s')
+item_info_convert=getInfo('%s','.*?token":"([^'"]+).*','http://www.fasts.tv')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'([^']+\.swf).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file['"][:,]\s*['"]([^'"]+).flv['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.fasts.tv/player/player_embed_fasts.swf live=1 token=#ed%h0#w18723jdsahjkDHF timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

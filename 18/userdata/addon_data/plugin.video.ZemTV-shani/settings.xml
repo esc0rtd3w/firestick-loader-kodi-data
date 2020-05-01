@@ -1,0 +1,22 @@
+<settings>
+    <setting id="DefaultVideoType" value="Show All Sources" />
+    <setting id="WillowPassword" value="" />
+    <setting id="WillowPort" value="8080" />
+    <setting id="WillowProxy" value="69.168.242.46" />
+    <setting id="WillowUserName" value="" />
+    <setting id="defualtSSSBitRate" value="1300" />
+    <setting id="donotcache" value="false" />
+    <setting id="dummy" value="true" />
+    <setting id="isCFOff" value="false" />
+    <setting id="isIpBoxff" value="false" />
+    <setting id="isUKTVOff" value="false" />
+    <setting id="isYPOff" value="false" />
+    <setting id="isYellowOff" value="false" />
+    <setting id="isdittoOff" value="false" />
+    <setting id="isv3Off" value="false" />
+    <setting id="isv5Off" value="false" />
+    <setting id="isv6Off" value="false" />
+    <setting id="isv7Off" value="false" />
+    <setting id="isv8Off" value="false" />
+    <setting id="isv9Off" value="True" />
+</settings>

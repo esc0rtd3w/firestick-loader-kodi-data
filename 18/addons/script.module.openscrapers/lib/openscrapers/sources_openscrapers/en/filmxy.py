@@ -36,7 +36,7 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['filmxy.nl', 'filmxy.me', 'filmxy.one', 'filmxy.ws']
+		self.domains = ['filmxy.nl', 'filmxy.me', 'filmxy.one', 'filmxy.ws', 'filmxy.live']
 		self.base_link = 'https://www.filmxy.nl'
 		self.search_link = '/%s-%s'
 		self.scraper = cfscrape.create_scraper()
@@ -61,7 +61,7 @@ class source:
 				result)
 
 			for link in streams:
-				quality = source_utils.check_sd_url(link)
+				quality = source_utils.check_url(link)
 				host = link.split('//')[1].replace('www.', '')
 				host = host.split('/')[0].lower()
 

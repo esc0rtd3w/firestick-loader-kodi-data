@@ -1,0 +1,8 @@
+[B]Version 1.0.2[/B]
+- Decrypt signature using YouTube algorithm
+
+[B]Version 1.0.1[/B]
+- Added Clean up of title returned from YouTube
+
+[B]Version 1.0.0[/B]
+- Initial Release.

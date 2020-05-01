@@ -1,0 +1,20 @@
+[B]Version 0.0.8[/B]
+- Switch to image resource
+
+[B]Version 0.0.7[/B]
+- Make module for Krypton
+
+[B]Version 0.0.6[/B]
+- Add new primewire icons
+
+[B]Version 0.0.5[/B]
+Added TV Schedule icon to Firestorm theme
+
+[B]Version 0.0.4[/B]
+Added Firestorm theme
+
+[B]Version 0.0.2[/B]
+Added icons for all the new directories (Thanks to Azad and Marquerite!)
+
+[B]Version 0.0.1[/B]
+Initial Version

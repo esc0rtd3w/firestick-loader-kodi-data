@@ -1,0 +1,16 @@
+Worls News Live Addon for XBMC - Live streams for lots of news
+
+This script is released freely without restrictions, but also without
+warrenty as described in the file "COPYING.txt"
+
+Usage:
+
+    Place in xbmc addons directory
+    Select the live station you want to watch
+    Add your own streams if you want
+
+Credits:
+
+ - andrepl
+	Initial addon development.
+

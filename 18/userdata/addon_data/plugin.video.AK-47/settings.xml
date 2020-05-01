@@ -1,0 +1,15 @@
+<settings>
+    <setting id="1080pquality" value="" />
+    <setting id="add_playlist" value="false" />
+    <setting id="ask_playlist_items" value="false" />
+    <setting id="debug" value="false" />
+    <setting id="donotshowbychannels" value="false" />
+    <setting id="genesisorpulsar" value="Genesis" />
+    <setting id="logo-folderPath" value="" />
+    <setting id="new_url_source" value="http://j.mp/ak-b48$$LSProEncKey=fuckoff$$" />
+    <setting id="parentalblocked" value="false" />
+    <setting id="parentalblockedpin" value="" />
+    <setting id="save_location" value="" />
+    <setting id="searchotherplugins" value="false" />
+    <setting id="use_thumb" value="false" />
+</settings>

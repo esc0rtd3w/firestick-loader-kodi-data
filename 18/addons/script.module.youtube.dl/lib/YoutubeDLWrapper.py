@@ -2,7 +2,7 @@
 import sys
 import time
 import datetime
-import xbmc
+from kodi_six import xbmc
 from yd_private_libs import util, updater
 import YDStreamUtils as StreamUtils
 
@@ -39,7 +39,7 @@ except ImportError:
 
 try:
     import youtube_dl
-except:
+except Exception:
     util.ERROR('Failed to import youtube-dl')
     youtube_dl = None
 
@@ -55,12 +55,18 @@ try:
     datetime.datetime.strptime('0', '%H')
 except TypeError:
     # Fix for datetime issues with XBMC/Kodi
-    class new_datetime(datetime.datetime):
-        @classmethod
-        def strptime(cls, dstring, dformat):
-            return datetime.datetime(*(time.strptime(dstring, dformat)[0:6]))
+    def redefine_datetime(orig):
+        class datetime(orig):
+            @classmethod
+            def strptime(cls, dstring, dformat):
+                return datetime.datetime(*(time.strptime(dstring, dformat)[0:6]))
 
-    datetime.datetime = new_datetime
+            def __repr__(self):
+                return 'datetime.' + orig.__repr__(self)
+
+        return datetime
+
+    datetime.datetime = redefine_datetime(datetime.datetime)
 
 # _utils_unified_strdate = youtube_dl.utils.unified_strdate
 # _utils_date_from_str = youtube_dl.utils.date_from_str
@@ -203,7 +209,7 @@ class YoutubeDLWrapper(youtube_dl.YoutubeDL):
         if _CALLBACK:
             try:
                 return _CALLBACK(msg)
-            except:
+            except Exception:
                 util.ERROR('Error in callback. Removing.')
                 _CALLBACK = None
         else:

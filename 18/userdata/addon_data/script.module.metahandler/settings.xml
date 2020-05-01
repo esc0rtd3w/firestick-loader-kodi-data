@@ -1,0 +1,19 @@
+<settings>
+    <setting id="db_address" value="" />
+    <setting id="db_name" value="video_cache" />
+    <setting id="db_pass" value="" />
+    <setting id="db_port" value="" />
+    <setting id="db_user" value="" />
+    <setting id="meta_folder_location" value="special://profile/addon_data/script.module.metahandler/" />
+    <setting id="omdb_api_key" value="f4adba76" />
+    <setting id="omdbapi_fallback" value="true" />
+    <setting id="override_keys" value="False" />
+    <setting id="tmdb_api_key" value="f090bb54758cabf231fb605d3e3e0468" />
+    <setting id="tmdb_api_key_ver" value="3.1.10" />
+    <setting id="tmdb_backdrop_size" value="original" />
+    <setting id="tmdb_language" value="English (en)" />
+    <setting id="tmdb_poster_size" value="w342" />
+    <setting id="tvdb_api_key" value="2B8557E0CBF7D720" />
+    <setting id="tvdb_language" value="English (en)" />
+    <setting id="use_remote_db" value="False" />
+</settings>

@@ -1,0 +1,30 @@
+Wersja 1.4.1 - zmiana  urlresolver na urlresolver9
+
+Wersja 1.3.1
+    Integracja z zewnętrznym resolverem script.mrknow.urlresolver
+
+Wersja 2.1.1
+    Naprawa openload -  działa z limitami
+    Naprawa cda.pl
+    Instalacja URLresolvera - działa większość hostingów
+
+
+Wersja 1.1.10
+    Naprawa openload -  decodeOpenLoad made by mortael
+
+Wersja 0.6.1
+Pozwala na dodanie napisów do filmu
+
+Wersja 0.1.2
+Supported sites 
+Youtube.com
+video.anyfiles.pl, odsiebie.pl, www.wgrane.pl, www.cda.pl ebd.cda.pl m.cda.pl cda.pl, maxvideo.pl, nextvideo.pl, video.anyfiles.pl, www.videoweed.es www.videoweed.com videoweed.es videoweed.com, www.novamov.com, embed.novamov.com, www.nowvideo.eu, www.rapidvideo.com, www.videoslasher.com, www.youtube.com, stream.streamo.tv, www.liveleak.com, vimeo.com, yukons.net, www.reyhq.com, www.sawlive.tv, www.topupload.tv, www.putlive.in, emb.aliez.tv, jjcast.com, "wrzuta.pl", hqstream.tv, maxupload.tv, www.fupptv.pl, 7cast.net, abcast.biz, flexstream.net, file1.npage.de, www.freelivestream.tv, www.firedrive.com
+Wersja 0.1.1
+Initial rele:ase
+.....
+
+
+
+
+
+

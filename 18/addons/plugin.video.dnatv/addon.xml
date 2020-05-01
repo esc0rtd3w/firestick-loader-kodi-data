@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.dnatv" name="[B][I][COLOR red]DNA TV[/COLOR] [COLOR lime]PRO Beta[/COLOR][/I][/B]" version="3.5.7" provider-name="Team DNA">
+    <requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.addon.common" version="2.0.0" />
+		<import addon="script.module.t0mm0.common" version="2.0.0"/>    
+		<import addon="script.module.urlresolver"  version="2.1.2"/>    
+		<import addon="script.module.metahandler" version="2.5.1"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="init.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">DNA TV - IPTV Addon</summary>
+		<description lang="en">DNA TV brings you unlimited Entertainment. Live TV / PPV / Sports / Kids / Movies / Entertainment all available just one click away.&#xA;&#xA;If you enjoy DNA TV, please support us with your donations at http://dnahost.xyz/donation/</description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+	</extension>
+</addon>

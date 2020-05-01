@@ -1,0 +1,6 @@
+<settings>
+    <setting id="noteImage" value="49" />
+    <setting id="noteMessage" value="Today marks the [B][COLOR white]fifth anniversary[/COLOR][/B] of the launch of the&#x0A;launch of the [B][COLOR white]TV ADDONS[/COLOR][/B] (formerly XBMC HUB) community, home&#x0A;of the best unofficial addons for Kodi!&#x0A;&#x0A;This also seems like an appropriate time to mention that we&#x0A;really need to upgrade our servers, so [B][COLOR white]please make a donation[/COLOR][/B]&#x0A;if you can afford it: [B][COLOR white]https://www.tvaddons.ag/donate/[/COLOR][/B]&#x0A;&#x0A;We have a lot of exciting things planned for the coming weeks,&#x0A;including a fresh new design for our web site, and our new&#x0A;all-in-one Kodi tool. Stay tuned and check our site for updates!" />
+    <setting id="noteType" value="t" />
+    <setting id="notifications-on-startup" value="false" />
+</settings>

@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=99Cast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.99cast.com/embed.php?v=%s&vw=600&vh=450&domain=pogotv.eu
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://99cast.com/player_config.php?video=%s','.*?<streamer>([^<]+).*','http://99cast.com')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?swf\s*[:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + @PARAM1@ + ' swfUrl=' + swf + ' live=1 token=%Xr8e(nKa@#. timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

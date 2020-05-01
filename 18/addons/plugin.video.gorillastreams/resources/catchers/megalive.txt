@@ -1,0 +1,20 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Megalive - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.megalive.com/xml/stream.php?v=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*rtmp="([^"]+)".*?id="([^"]+)".*','%s','rtmp|file')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=@PARAM1@
+item_info_build=http://www.megalive.com/ml_eplayer.swf?v=%s
+
+item_info_name=url
+item_info_from=rtmp + '/videochat playpath=stream_' + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s

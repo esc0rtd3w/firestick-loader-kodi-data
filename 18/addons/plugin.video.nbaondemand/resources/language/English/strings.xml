@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">General</string>
+	<string id="30001">HD Quality when Available</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302"> is on by default</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">No stream available</string>
+	<!-- Misc -->
+	<string id="30361">Next Page</string>
+	<string id="30362">Search</string>
+	<!-- ContextMenu -->
+	<string id="30401">Play</string>
+	<string id="30402">Random Play</string>
+	<string id="30403">Queue item</string>
+	<string id="30404">Now playing...</string>
+	<string id="30405">Add-on settings</string>
+	<string id="30406">Set Videos view</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Latest</string>
+	<string id="30502">Games</string>
+	<string id="30503">Highlights</string>
+	<string id="30504">Teams</string>
+</strings>

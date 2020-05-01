@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+    <string id="30000">Erro de Veetle</string>
+    <string id="30001">Stream não disponível ou offline.</string>
+    <string id="30100">Apanhar Horário</string>
+	<string id="30101">Usar listagem de canais oficial</string>
+	<string id="40001">Categorias</string>
+	<string id="40002">Horários</string>
+	<string id="40003">Todos</string>
+	<string id="40004">Entretinimento</string>
+	<string id="40005">Séries</string>
+	<string id="40006">Animação</string>
+	<string id="40007">Desporto</string>
+	<string id="40008">Comédia</string>
+	<string id="40009">Música</string>
+	<string id="40010">Educação</string>
+	<string id="40011">Jogos</string>
+	<string id="40012">Notícias</string>
+	<string id="40013">Religião</string>
+	<string id="40014">Mobile</string>
+	<string id="40015">Não disponível</string>
+	<string id="40016">a ver</string>
+</strings>

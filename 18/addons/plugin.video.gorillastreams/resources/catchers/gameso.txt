@@ -1,0 +1,32 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=iGuide - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.gameso.tv/embedplayer.php?width=650&height=400&id=%s&autoplay=true
+
+item_info_name=token
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*getJSON\("([^'"]+)".*','@REFERER@')
+item_info_convert=getInfo('%s','.*?token":"([^'"]+).*','http://www.gameso.tv')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'([^']+\.swf).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?file['"][:,]\s*['"]([^.'"]+)','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.gameso.tv/player/player_embed.swf live=1 token=' + token + ' timeout=15 swfVfy=1 pageUrl=' + pageUrl 
+item_info_build=%s

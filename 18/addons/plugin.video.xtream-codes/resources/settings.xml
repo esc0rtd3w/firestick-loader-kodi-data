@@ -1,0 +1,14 @@
+<settings>
+<category label="Connection Settings">
+     <setting id="lehekylg" type="text" label="Website" default="http://go.teamexpat.ninja"/>
+     <setting id="kasutajanimi" type="text" label="Username" default=""/>
+     <setting id="salasona" type="text" option="writeable,hidden" label="Password" default=""/>
+     <setting id="pordinumber" type="text" label="Port" default="80"/>
+</category>
+<category label="Other Settings">
+	 <setting id="uuendused" type="bool" label="Check updates at startup?"value="true"/>
+	 <setting id="improve" type="bool" label="Use Advanced Settings?"value="false"/>
+	 <setting id="vanemalukk" type="bool" label="Parental lock?"value="true"/>
+	 <setting id="vanemakood" type="text" option="writeable,hidden" label="Parental code" default="1234"/>
+</category>
+</settings>

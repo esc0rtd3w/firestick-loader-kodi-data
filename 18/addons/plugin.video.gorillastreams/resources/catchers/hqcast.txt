@@ -1,0 +1,27 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=HQCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.hqcast.tv/embed.php?live=%s&vw=500&vh=380
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\('([^']+.swf)'.+?'file',\s*'([^']+)'.+?'streamer',\s*'([^']+)'.*','@REFERER@','swf|file.tmp|rtmp.tmp')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_convert=replace('%s','hqcast.tv','hqcast.tv:1935')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=file.tmp
+item_info_convert=replace('%s','.flv','')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' live=true timeout=15 swfVfy=1 swfUrl=' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s
+

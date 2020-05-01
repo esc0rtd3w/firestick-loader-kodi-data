@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=launchlive - %s
+
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.launchlive.tv/embed.php?v=%s','.*SWFObject\s*\(\s*\'([^\']+)\'.*?'streamer'\s*,\s*\'([^\']+)\'\s*\).*','@REFERER@','swf.tmp|rtmp')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=swf.tmp
+item_info_build=http://www.launchlive.tv/%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + @PARAM1@ + ' swfUrl=' + swf + ' swfVfy=true live=true pageUrl=http://www.launchlive.tv'
+item_info_build=%s

@@ -1,0 +1,2433 @@
+########################################################
+# EXTERNAL PLAYERS
+########################################################
+
+
+########################################################
+# SopCast - Videos
+########################################################
+item_infos=sop://[^:]+:3912/(\d+)
+item_order=video
+@CATCH(sopcast,video)@
+
+
+########################################################
+# AceStream - Videos
+########################################################
+item_infos=(acestream://[^"']+)
+item_order=video
+@CATCH(acestream,video)@
+
+
+########################################################
+# StreamTorrent - Videos
+########################################################
+item_infos=["'](st://[^"']+)["']
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=StreamTorrent - %s
+
+item_info_name=url
+item_info_from=video
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+
+
+########################################################
+# EXTERNAL ADDONS
+########################################################
+#  Veetle - Videos
+########################################################
+item_infos=https://s.veetle.com/swf/([^&'"/]+)
+item_order=video
+@CATCH(veetle,video)@
+########################################################
+item_infos=http://(?:www\.)?veetle.com/index.php/channel/view#([0-9a-z]+)[^"]*
+item_order=video
+@CATCH(veetle,video)@
+########################################################
+item_infos=src="http://(?:www\.)?veetle.com/v/([^"]+)"
+item_order=video
+@CATCH(veetle,video)@
+########################################################
+item_infos=src=http://(?:www\.)?veetle.com/index.php/widget/index/([^/]+)/[^"]*
+item_order=video
+@CATCH(veetle,video)@
+########################################################
+item_infos=veetleChannelId="([^"]+)"
+item_order=video
+@CATCH(veetle,video)@
+
+
+########################################################
+# Freedocast - Videos
+########################################################
+item_infos=addParam\('flashvars','copylink=http://www.freedocast.com/([^&]+)&
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=FreedoCast - %s
+item_info_name=type
+item_info_build=video
+item_url_build=plugin://plugin.video.freedocast/?play=%s
+########################################################
+item_infos=id='popoutplayer' src='(embedplayercustom[^']+)'
+item_order=url
+item_skill=rss
+item_info_name=title
+item_info_from=url
+item_info_build=FreedoCast - %s
+item_url_build=http://www.freedocast.com/forms/%s
+########################################################
+item_infos=<script type='text/javascript'>[\s]*fid='([^']+)';[^<]*</script>[^<]*<script type='text/javascript' src='http://www.freedocast.com/player/freedocast_Customembed.js'></script>
+item_order=url
+#item_skill=rss
+item_info_name=title
+item_info_from=url
+item_info_build=FreedoCast - %s 
+item_info_name=type
+item_info_build=video
+item_url_build=plugin://plugin.video.freedocast/?play=%s
+#item_url_build=http://www.freedocast.com/forms/embedplayercustom.aspx?fid=%s&ftype=stream&domain=&width=&height=
+
+########################################################
+# BLive - Videos
+########################################################
+@FIND('JS1','[^\"\']*blive.me/player/embedPlayer.js','fid','video')@
+@CATCH(blive,video)@
+
+
+########################################################
+# Vcaster - Videos
+########################################################
+#@FIND('JS1','[^\"\']*vcaster.tv/player.js','fid','video')@
+#@CATCH(vcaster,video)@
+
+########################################################
+# Stream4u - Videos
+########################################################
+@FIND('JS1','http://stream4u.eu/player/embedPlayer.js','fid','video')@
+item_order=video
+@CATCH(stream4u,video)@
+########################################################
+item_infos=http://www.stream4u.eu/embed.php?v=([^ &'"]+)
+item_order=video
+@CATCH(stream4u,video)@
+
+
+########################################################
+# Fcast - Videos
+########################################################
+#@FIND('JS1','http://www.fcast.tv/embed.js','fid','video')@
+#@CATCH(fcast,video)@
+########################################################
+item_infos=www.fcast.tv/embed.php?live=([^&"]+)
+item_order=video
+@CATCH(fcast,video)@
+
+
+########################################################
+# ZoneIn - Videos
+########################################################
+@FIND('JS1','http://embed.zonein.tv/player.js','id','video')@
+@CATCH(zonein,video)@
+########################################################
+item_infos=["']http://embed.zonein.tv/[^\?]+\?id=([^&'"]+)
+item_order=video
+@CATCH(zonein,video)@
+########################################################    
+item_infos=src='http://embed.zonein.tv/pl-([^\.]+)\.js'
+item_order=video
+@CATCH(zonein,video)@
+
+
+########################################################
+# Unknown JS Player- Redirect
+########################################################
+item_infos=src="(http://\d+[^/]*\d+/player.js\?id=\d+&width=\d+&height=\d+[^"]*)"
+item_order=url
+item_skill=rss
+item_info_name=title
+item_info_build=Redirect - Unknown JS Player
+item_url_build=%s
+########################################################
+item_infos=src="(http://\d+[^/]*\d+/player.js\?id=\d+&height=\d+&width=\d+[^"]*)"
+item_order=url
+item_skill=rss
+item_info_name=title
+item_info_build=Redirect - Unknown JS Player
+item_url_build=%s
+
+
+########################################################
+# Guarapa - Videos
+########################################################
+item_infos=(http://tvguarapa.net/canais/([^/]+)/[^\.]+\.html)
+item_order=pageUrl|video
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*value="file=([^&]+).*?streamer=([^&]+).*?name="flashvars".*?value="([^"]+)" name="src".*','%s','fileTmp|rtmp|swf')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=fileTmp
+item_info_convert=replace('%s','.flv','')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+item_info_name=title
+item_info_from=video
+item_info_build=Guarapa - %s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################
+item_infos=(http://www.brasileirao\d+.org/canais/([^\.]+)\.html)
+item_order=pageUrl|video
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*value=\'file=([^&]+).*?streamer=([^&]+).*?src=\'([^\']+.swf)\'.*','%s','fileTmp|rtmp|swf')
+item_info_build=%s
+
+item_info_name=file
+item_info_from=fileTmp
+item_info_convert=replace('%s','.flv','')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+item_info_name=title
+item_info_from=video
+item_info_build=Brasileirao - %s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+#  Veemi - Videos
+########################################################
+@FIND('JS1','http://(?:www.)?veemi.com/javascript/embedPlayer.js','fid','video')@
+@CATCH(veemi,video)@
+########################################################
+item_infos=http://(?:www.)?veemi.com/(?:embed\.php|watch)\?v=([^ &'"]+)
+item_order=video
+@CATCH(veemi,video)@
+
+
+########################################################
+# Tvbay - Videos
+########################################################
+@FIND('JS1','http://tvbay.org/player.js','id','video')@
+@CATCH(tvbay,video)@
+
+
+########################################################
+# StreamGenie - Videos
+########################################################
+@FIND('JS1','http://www.streamgenie.eu/js/embed.js','chname','video')@
+@CATCH(streamgenie,video)@
+
+
+########################################################
+#  launchlive - Videos
+########################################################
+@FIND('JS1','http://www.launchlive.tv/Player.js','fid','video')@
+@CATCH(launchlive,video)@
+########################################################
+item_infos=http://(?:www.)?launchlive.tv/(?:embed\.php|channel)\?v=([^ &'"]+)
+item_order=video
+@CATCH(launchlive,video)@
+
+
+########################################################
+# yocast - Videos
+########################################################
+@FIND('JS1','http://www.yocast.tv/PlayerEmbed.js','fid','video')@
+@CATCH(yocast,video)@
+
+
+########################################################
+# Casti - Videos
+########################################################
+@FIND('JS1','http://www.casti.tv/embed.js','fid','video')@
+@CATCH(casti,video)@
+
+
+########################################################
+# flashi - Videos
+########################################################
+#@FIND('JS1','http://www.flashi.tv/player.js','fid','video')@
+#@CATCH(flashi,video)@
+
+
+########################################################
+#  YYCast - Videos
+########################################################
+item_infos="http://(?:www\.)?yycast.com/embed.php\?fileid=([^&]+)&[^"]*"
+item_order=video
+@CATCH(yycast,video)@
+########################################################
+item_infos=sharing.link'\s*,\s*'http://(?:www\.)?yycast.com/([^']+)'
+item_order=video
+@CATCH(yycast,video)@
+########################################################
+item_infos=fid="((?!%VAR_PLACE%)[^"]*)".*?src="http://www.yycast.com/javascript/embedPlayer.js"
+item_order=video
+@CATCH(yycast,video)@
+########################################################
+item_infos=flashvars=".*?file=([^\.&]+(?!\.flv)).*?streamer=rtmp://live.yycast[^&]+.*?"[^"]+.swf"
+item_order=video
+@CATCH(yycast,video)@
+########################################################
+
+@FIND('JS1','[^\'\"]+yycast.com[^\'\"]+','channel','video')@
+@CATCH(yycast,video)@
+########################################################
+
+
+########################################################
+# SeeOn - Videos
+########################################################
+item_infos=[^']<script type="text/javascript" src="http://www.seeon.tv/embed/([^&]+)[^"]*"
+item_order=video
+@CATCH(seeon,video)@
+########################################################
+item_infos=["']http://(?:www.)?seeon.tv/embed(?:player)?(?:\.php)?\?[^"']*channel=([^&]+)[^"']*["']
+item_order=video
+@CATCH(seeon,video)@
+########################################################  
+item_infos=<script src="http://www.directembed.com/embed.php\?channel=([^&]+)&amp;[^"]*" type="text/javascript"></script>
+item_order=video
+@CATCH(seeon,video)@
+
+
+########################################################
+# Meevos - Videos
+########################################################
+@FIND('JS1','http://embed.meevos.tv/js/embed.js','chid','video')@
+@CATCH(meevos,video)@
+########################################################
+item_infos=src="http://embed.meevos.tv/embed.php\?id=([^&]+)[^"]*"
+item_order=video
+@CATCH(meevos,video)@
+
+
+########################################################
+# CastAMP - Videos
+########################################################
+@FIND('JS1','http://(?:www.)?castamp.com/embed.js','channel','video')@
+@CATCH(castamp,video)@
+########################################################
+item_infos="http://(?:www.)?castamp.com/embed.php\?c=([^"&]+)
+item_order=video
+@CATCH(castamp,video)@
+
+
+########################################################
+# RaySon - Videos
+########################################################
+item_infos=src="http://www.rayson.tv/player/index.php\?ch=([^"]+)"
+item_order=video
+@CATCH(rayson,video)@
+
+
+########################################################
+# TVOpe - Videos
+########################################################
+@FIND('JS1','http://i\.tvope\.com/js/emb[^\.]*\.js','c','video')@
+@CATCH(tvope,video)@
+########################################################  
+item_infos=src="[^"]*tvope.com/[^\?]+\?c=([^&]+)&[^"]*"
+item_order=video
+@CATCH(tvope,video)@
+
+
+########################################################
+# WebCastOn - Videos
+########################################################
+@FIND('JS1','http://(?:www.)?webcaston.com/javascript/embedPlayer.js','fid','video')@
+@CATCH(webcaston,video)@
+########################################################
+item_infos=<a href="http://www.webcaston.com/embed.php\?fileid=([^&]+)&vw=640&vh=360&domain=mypremium.tv" target="_BLANK">Play</a>
+item_order=video
+@CATCH(webcaston,video)@
+########################################################
+item_infos=src="http://www.webcaston.com/embed.php\?fileid=([^&]+)&[^"]*"
+item_order=video
+@CATCH(webcaston,video)@
+
+
+########################################################
+# LimeV - Videos
+########################################################
+@FIND('JS1','http://www.limev.com[^\"\']+','fid','video')@
+@CATCH(limev,video)@
+########################################################
+item_infos=http://(?:www.)?limev.com/embed.php\?fileId=([^&"' ]+)
+item_order=video
+@CATCH(limev,video)@
+
+
+########################################################
+# vStream - Videos
+########################################################
+@FIND('JS1','http://vstream.eu/player/embedPlayer.js','fid','video')@
+@CATCH(vstream,video)@
+
+
+########################################################
+# Globo - Videos
+########################################################
+item_infos=src="http://video.globo.com/Portal/videos/cda/player/player.swf\?midiaId=([^&"]+)
+item_order=video
+@CATCH(globo,video)@
+
+
+########################################################
+# StreamBig.eu Videos
+########################################################
+@FIND('JS1','http://streambig.eu[^\'\"]+','f*id','video')@
+@CATCH(streambig,video)@
+
+
+########################################################
+# LiveView365 Videos
+########################################################
+@FIND('JS1','http://liveview365.(?:com|tv)[^\'\"]+','f*id','video')@
+@CATCH(liveview365,video)@
+########################################################
+item_infos=http://liveview365.(?:tv|com)/embedded\?id=([^&"]+)
+item_order=video
+@CATCH(liveview365,video)@
+
+
+########################################################
+# Strmr Videos
+########################################################
+@FIND('JS1','http://www.strmr.tv[^\'\"]+','chname','video')@
+@CATCH(strmr,video)@
+
+
+########################################################
+# YaTV - Videos
+########################################################
+item_infos=\w{4}="http://yatv.ru/files/swf/container.swf\?cid=[^&]+.*&id=(\d+)"
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=YaTV - %s
+
+item_info_name=url
+item_info_from=video
+item_info_convert=getInfo('http://yatv.ru/ru//tv,dyn,channelRecords?record_id=%s','.*(http://s[0-9]\.d[0-9]\.yatv\.ru/[^"]*)\.[0-9]+\.jpg')
+item_info_build=%s.mp4
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+item_infos=src="http://yatv.ru/files/swf/container.swf\?.*?cid=([^&"]+).*?"
+item_order=video
+
+item_info_name=url
+item_info_from=video
+item_info_convert=getInfo('http://yatv.ru/api/multi?objects={"servicelist":{"cid":"%s"},"me":{"cid":"%s"},"recordlist":{"cid":"%s"},"container":{"cid":"%s"},"player_template":{"rid":null,"tid":null,"cid":"%s"},"channel":{"cid":"%s"}}','.*"streamserver"\:"([^"]+)"')
+item_info_convert=replace('%s','\','')
+item_info_convert=replace('%s','ru/live','ru:1935/live')
+item_info_build=%s/record_246943_28 swfUrl=http://yatv.ru/files/swf/player.swf
+
+item_info_name=title
+item_info_from=url
+item_info_build=YaTV - %s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+item_infos=<a target="_blank" href="(http://s\d*.d\d*.yatv.ru/[^\.]+\.mp4)">
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=YaTV - %s
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# Livestream.com
+########################################################
+item_infos=document\.write\(unescape\('([^']*http://static.livestream.com[^']*)'\)\);
+item_order=url
+
+item_info_name=title
+item_info_from=url
+item_info_convert=parseText('%s','.*;channel=([^&]+)&.*')
+item_info_build=Livestream - %s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+item_infos=http://.*?livestream.com/embed/([^\?"]+)
+item_order=channel
+
+item_info_name=title
+item_info_from=channel
+item_info_build=Livestream - %s
+
+item_info_name=pageUrl
+item_info_from=channel
+item_info_convert=replace('%s','_','-')
+item_info_build=http://x%sx.api.channel.livestream.com/3.0/getstream.json
+
+item_info_name=url
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*"(rtsp://[^"]+)".*')
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# LiveVDO - Videos
+########################################################
+item_infos=http://(?:www.)?livevdo.tv/js/eloader.js\?token=([^&'"]+)
+item_order=video
+@CATCH(livevdo,video)@
+
+
+########################################################
+# Ustream.tv - Videos
+########################################################
+item_infos="(http://www.ustream.tv/channel-popup/[^"]*[^\"]+[^"]*)"
+item_order=video
+@CATCH(ustream,video)@
+
+item_infos=(http://www.ustream.tv/[^"]*[^\"]+[^"]*)
+#item_infos=(http://(?:www.ustream.tv|static-cdn1.ustream.tv)/[^"]*[^\"]+[^"]*)
+item_order=video
+@CATCH(ustream,video)@
+
+item_infos=(http://static-cdn1.ustream.tv/[^"]*[^\"]+[^"]*)
+item_order=video
+@CATCH(ustream2,video)@
+
+
+
+########################################################
+# 786cast - Videos
+########################################################
+@FIND('JS1','http://www.786cast.(?:com|tv)/embed.js','fid','video')@
+@CATCH(786cast,video)@
+########################################################
+item_infos="http://www.786cast.(?:com|tv)?/embed\d*.php\?u=([^&"]+)
+item_order=video
+@CATCH(786cast,video)@
+
+
+########################################################
+# iCastOn - Videos
+########################################################
+item_infos="http://www.icaston.tv/(?:embed|channel).php\?u=([^&"]+)
+item_order=video
+@CATCH(icaston,video)@
+
+
+########################################################
+# Xuuby.com - Videos
+########################################################
+item_infos="http://www.xuuby.com/(?:playerp|show).php\?chname=([^&"]+)
+item_order=video
+@CATCH(xuuby,video)@
+########################################################
+@FIND('JS1','.*?xuuby.com/js/embed\d*.js','chname','video')@
+@CATCH(xuuby,video)@
+
+
+########################################################
+# HDCaster.net - Videos
+########################################################
+item_infos=['"]http://hdcaster.net/.*?channel_id=(\d+)
+item_order=video
+@CATCH(hdcaster,video)@
+########################################################
+@FIND('JS1','http://hdcaster.net/player.js','id','video')@
+@CATCH(hdcaster,video)@
+
+
+########################################################
+# StreamHQ.tv - Videos
+########################################################
+@FIND('JS1','[^\"\']*streamhq.tv/player.js','id','video')@
+item_order=video
+@CATCH(streamhq,video)@
+########################################################
+item_infos="http://streamhq.tv/channel.php\?channel_id=(\d+)"
+item_order=video
+@CATCH(streamhq,video)@
+
+
+########################################################
+# VShare.tv - Videos
+########################################################
+item_infos="http://www.vshare.tv/js/eloader.js\?token=([^&"]+)
+item_order=video
+@CATCH(vshare,video)@
+
+
+########################################################
+# wiicast - Videos
+########################################################
+item_infos=src="http://(?:www.)?wii-cast.tv/embed[^\.]*\.php\?channel=([^&]+)[^"]*"
+item_order=video
+@CATCH(wiicast,video)@
+########################################################
+@FIND('JS1','http://www.wii-cast.(?:tv|eu)/js/embed(?:player)?.js','fid','video')@
+@CATCH(wiicast,video)@
+
+
+########################################################
+# vip-live.tv - Videos
+########################################################
+@FIND('JS1','http://embed.vip-live.tv/(?:jw|fl)?player.js','channel','video')@
+@CATCH(viplive,video)@
+
+
+########################################################
+# Justin.tv - Videos
+########################################################
+#http://www.justin.tv/widgets/live_embed_player.swf?channel=cholillo_830
+#data="http://www-cdn.justin.tv/widgets/live_embed_player.rc9251ecd4e4e2b08e8931777d11f2f9c69ed7db2.swf?channel=ritmoysabor4"
+item_infos="http://(?:www(?:-cdn)?.)?justin.tv/widgets/live_embed_player.*?.swf\?channel=((?!about_us|forums|hdstreamseuaccount)[^"]+)"
+item_order=video
+@CATCH(justintv,video)@
+########################################################
+item_infos=justin.tv/((?!about_us|forums|hdstreamseuaccount)[a-z_0-9]*)['"]
+item_order=video
+@CATCH(justintv,video)@
+########################################################
+item_infos=justin.tv/([^\#]+)\#standard_holder
+item_order=video
+@CATCH(justintv,video)@
+########################################################
+item_infos=justin.tv/([^/]+)/popout
+item_order=video
+@CATCH(justintv,video)@
+########################################################
+item_infos=justin.tv/widgets/jtv_player.swf\?channel=([^'"& ]+)
+item_order=video
+@CATCH(justintv,video)@
+########################################################
+
+
+########################################################
+# LiveFootballstream.net - Videos
+########################################################
+item_infos=src="(http://www.livefootballstream.net/zeze3.swf).*?"
+item_order=swf
+
+item_info_name=title
+item_info_from=swf
+item_info_build=LiveFootballstream - %s
+
+item_info_name=url
+item_info_from='rtmp://tonos.livefootballstream.net/streamilive-live/streamzezela-sntg swfUrl=' + swf + ' live=true'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+
+item_url_build=%s
+
+
+########################################################
+# Jimey - Videos
+########################################################
+item_infos="(http://jimey.tv/player/embedplayer.php\?[^"]*)"
+item_order=video
+@CATCH(jimey,video)@
+########################################################
+item_infos=(channel='[^']+'.+?)src='http://jimey.tv/player/(?:jimeytv_embed|jimeytv_embedss).js'
+item_order=video
+@CATCH(jimey,video)@
+
+
+########################################################
+# ZeCast - Videos
+########################################################
+@FIND('JS1','http://zecast.tv/embedPlayer.js','file','video')@
+@CATCH(zecast,video)@
+########################################################
+item_infos=http://(?:www.)?zecast.tv/embed.php\?file=([^"'& ]+)
+item_order=video
+@CATCH(zecast,video)@
+############################################################
+@FIND('JS1','http://zecast.tv/embedPlayerVIP.js','file','video')@
+@CATCH(zecast,video)@
+
+
+########################################################
+# StreamAll - Videos
+########################################################
+item_infos=streamall.eu/player.php\?stream=([^&"]+)
+item_order=video
+@CATCH(streamall,video)@
+########################################################
+item_infos=streamall.eu/embed.php\?stream=([^&"]+)
+item_order=video
+@CATCH(streamall,video)@
+
+
+########################################################
+# Sike - Videos
+########################################################
+item_infos=sike.tv/channel.php\?file=([^&"]+)
+item_order=video
+@CATCH(sike,video)@
+########################################################
+item_infos=sike.tv/embed.php\?c=([^&"]+)
+item_order=video
+@CATCH(sike,video)@
+
+
+########################################################
+# TuTele - Videos
+########################################################
+item_infos=http://tuteletv.net/([^.]+).html
+item_order=video
+@CATCH(tutele,video)@
+########################################################
+item_infos=tuteletv.(?:me|tv|in|net)/embed.php\?(?:channel|c)=([^&"]+)
+item_order=video
+@CATCH(tutele1,video)@
+
+
+########################################################
+# OwnCast - Videos
+########################################################
+item_infos="http://www.owncast.tv/embed.php\?u=([^&"]+)
+item_order=video
+@CATCH(owncast,video)@
+########################################################
+@FIND('JS1','[^\"\']*owncast.[^\"\']*','fid','video')@
+@CATCH(owncast,video)@
+
+
+########################################################
+# Sportozona.lt - Videos
+########################################################
+item_infos=(http://sportozona.lt/admin/jscripts/player/FlowPlayer.swf).*?streamingServerURL:%20%27(.*?)%27.*?url:%20%27(.*?)%27
+item_order=swf|rtmp|file
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file+ ' swfUrl=' + swf
+
+item_info_name=type
+item_info_build=video
+
+item_url_build=%s
+
+
+########################################################
+# 24in.tv - Videos
+########################################################
+@FIND('JS1','http://24in.tv/player/embedPlayer.js','fid','video')@
+@CATCH(24in,video)@
+
+
+########################################################
+# 24cast.eu - Videos
+########################################################
+@FIND('JS1','http://24cast.(?:info|eu)?/player/embedPlayer.js','fid','video')@
+@CATCH(24cast,video)@
+
+
+########################################################
+# Livebox.cz - Videos
+########################################################
+item_infos="http://player.livebox.cz/S-GambrinusLiga.*?token=([^,]+),videoId=([^,]+),
+item_order=token|id
+
+item_info_name=video
+item_info_from=token + '@@@' + id
+item_info_build=%s
+
+@CATCH(livebox,video)@
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# ReyHD.com - Videos
+########################################################
+@FIND('JS1','[^\"\']*www.reyhq.com[^\"\']*','fid','video')@
+@CATCH(rey,video)@
+########################################################
+item_infos=http://(?:www.)?reyhq.(?:com|tv)/(?:embed|video|channel).php\?(?:c|n|live)=([^ &"']+)
+item_order=video
+@CATCH(rey,video)@
+
+
+########################################################
+# Megalive - Videos
+########################################################
+item_infos="movie" value="http://www.megalive.com/\w+/([^"]+)"
+item_order=video
+@CATCH(megalive,video)@
+
+
+########################################################
+# MMS
+########################################################
+item_infos=['" ](mms://[^'" ]+)['" ]
+item_order=url.tmp
+
+item_info_name=url1
+item_info_from=url.tmp
+item_info_convert=replace('%s','MMS:','http:')
+item_info_convert=ifExists('%s','%s','')
+item_info_build=%s
+
+item_info_name=url2
+item_info_from=url.tmp
+item_info_convert=replace('%s','MMS:','rtsp:')
+item_info_convert=ifExists('%s','%s','')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=url1 || url2 || url.tmp
+item_info_build=%s
+
+item_info_name=type
+item_info_from=url
+item_info_convert=parseText('%s','(\w{4}).*')
+item_info_convert=isEqual('%s','http','rss','video')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=url
+item_info_build=MMS - %s
+
+item_url_build=%s
+
+
+
+########################################################
+# VeohCast - Videos
+########################################################
+item_infos=SWFObject\('(http://www.veohcast.tv/veohcast.tv.swf)'.*?'file',\s*'([^']+)'.*?'streamer',\s*'(rtmp://[^']+)'
+item_order=swf|stream|rtmp
+item_info_name=title
+item_info_from=stream
+item_info_build=VeohCast - %s
+
+item_info_name=url
+item_info_from=rtmp + '/' + stream + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@' 
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# ASX
+########################################################
+item_infos="(HTTP://[^"]+.asx)"
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=ASX - %s
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# RTSP
+########################################################
+item_infos="(rtsp://[^"]+)"
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=RTSP - %s
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# RTMP
+########################################################
+item_infos=src="([^"]+.swf)" .*?file=(rtmp://[^&]+nacevi[^&]+)
+item_order=swf|rtmp
+
+item_info_name=title
+item_info_from=rtmp
+item_info_build=Nacevi - %s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@' 
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+#item_infos=flashvars=".*?file=([^\.&]+(?!\.flv)).*?streamer=((?!rtmp://live.yycast|rtmp://live.myp2p.in|rtmp:)[^&]+).*?"([^"]+.swf)"
+item_infos=flashvars=".*?file=([^\.&]+(?!\.flv)).*?streamer=((?!rtmp://live.yycast|rtmp://live.myp2p.in)[^&]+).*?"([^"]+.swf)"
+item_order=file|rtmp|swf
+
+item_info_name=title
+item_info_from=file
+item_info_build=RTMP - %s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+item_infos=.*?data="([^"']+.swf).*?streamer=((?!rtmp://live.yycast|rtmp://live.myp2p.in)[^&]+).*?file=([^&]+(?!\.flv))
+item_order=swf|rtmp|file
+
+item_info_name=title
+item_info_from=file
+item_info_build=RTMP - %s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################
+item_infos="movie" value="([^"]+.swf)".*?"flashvars" value="src=(rtmp://[^&]+)&
+item_order=swf|rtmp
+
+item_info_name=title
+item_info_from=rtmp
+item_info_build=RTMP - %s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+# this is what CooJah shows:     rtmp://95.100.249.196:1935/live?_fcs_vhost=cp67698.live.edgefcs.net&akmfv=1.8/SkyPoker_500k@9124
+# this is used:                 rtmp://cp67698.live.edgefcs.net/live/SkyPoker_500k@9124
+
+########################################################
+item_infos="(http://[^"]+.swf\?.*?streamName=([^&]+).*?(rtmp://[^&"]+)[^"]*)"
+item_order=swf|file|rtmp
+
+item_info_name=title
+item_info_from=file
+item_info_build=RTMP - %s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true swfVfy=1 swfUrl=' + swf
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################
+item_infos=src="([^"]+.swf)".*?flashvars="streamUrl=([^"]+)"
+item_order=swf|rtmp.tmp
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_convert=replace('%s','rtmpt:','rtmp:')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=rtmp
+item_info_build=RTMP - %s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################
+
+
+########################################################
+# M3U8
+########################################################
+item_infos=(http://(?!IPhone)[^"']+\.m3u8[^"']*)
+#item_infos=(http://(?!IPhone)[^"']+\.m3u8)
+item_order=url
+
+item_info_name=title
+item_info_from=url
+item_info_build=M3U8 - %s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# Manifest
+########################################################
+item_infos=(http://[^ "']+\.f4m[^"'&]*)
+item_order=url.tmp
+
+item_info_name=url
+item_info_from=url.tmp
+item_info_convert=replace('%s','.f4m','.m3u8')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=url.tmp
+item_info_build=Manifest - %s
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+########################################################  
+# ASF - Videos
+########################################################  
+item_infos=["']*(http://[^"'\s]+\.asf)["'\s]
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=WMP - %s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################  
+item_infos=src="([^"]+)"[^<]+type="[^"]*asf[^"]*"
+item_order=url.tmp
+item_skill=rss
+item_info_name=url
+item_info_from=url.tmp
+item_info_convert=urlMerge('@CURRENT_URL@','%s')
+item_info_build=%s
+item_info_name=title
+item_info_from=url
+item_info_build=WMP - %s
+item_url_build=%s
+
+
+########################################################  
+# VLC - Videos
+########################################################  
+item_infos=vlc_controls.play\(["']([^"']+)['"]\)
+item_order=url
+item_info_name=title
+item_info_from=url
+item_info_build=VLC - %s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################  
+# Aliez - Videos
+########################################################  
+item_infos=emb.aliez.tv/player/live.php\?id=([^&"]+)
+item_order=video
+@CATCH(aliez,video)@
+########################################################  
+item_infos=aliez.com/player/embed.php\?id=(\d+)
+item_order=video
+@CATCH(aliez,video)@
+
+
+########################################################  
+# ProTV - Videos
+########################################################  
+item_infos=(http://web\d+.protv.ro/[^\.]+\.swf)\?&streamer=(rtmp://[^&"' ]+)&file=([^\.]+)\.([^&"' ]+)
+item_order=swf|rtmp|file|ext
+
+item_info_name=title
+item_info_from=file
+item_info_build=ProTV - %s
+
+item_info_name=url
+item_info_from=rtmp + '/' + ext + ':' + file + '.' + ext + ' live=true swfUrl=' + swf + ' pageUrl=' + swf
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################  
+item_infos=http://www.sport.ro/live/show-player/id_stream/([^"'& ]+)';\s*var current_div = 'live_player';
+item_order=id
+
+item_info_name=file
+item_info_from=id
+item_info_convert=getInfo('http://www.sport.ro/live/get-video/video_url_identifier/%s','.*"playlist":\[.*?"url":"([^"]+)".*')
+item_info_build=%s
+
+item_info_name=url
+item_info_from='rtmp://live.protv.ro/live1/' + file + ' live=true swfUrl=http://d1.a4w.ro/player/flowplayer.cluster-3.2.1.swf pageUrl=http://d1.a4w.ro/player/flowplayer.cluster-3.2.1.swf'
+item_info_build=%s
+
+item_info_name=title
+item_info_from=file
+item_info_build=ProTV - %s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################  
+# Streami - Videos
+########################################################  
+item_infos=["'](http://streami.tv/embed[^"']+)["']
+item_order=tmpUrl
+@CATCH(streami,tmpUrl)@
+
+
+########################################################  
+# Laola1 - Videos
+########################################################  
+item_infos=http://(?:www.)?laola1.tv/[^"]+/video/[^"]+\D+(\d{5,}).html
+item_order=video
+@CATCH(laola1,video)@
+
+
+item_infos=(streamid=.*?src="http://www.laola1.tv)
+item_order=video
+@CATCH(laola1,video)@
+
+########################################################
+# Hogy.tv - Videos
+########################################################
+item_infos=src="http://www.hogy.tv/channel.php\?file=([^&"]+)&[^"]+"
+item_order=video
+@CATCH(hogy,video)@
+########################################################
+item_infos=http://www.hogy.tv/live-channels/channel/([^']+)'
+item_order=video
+@CATCH(hogy,video)@
+
+
+########################################################
+# Rede.tv - Videos
+########################################################
+item_infos=(http://www.redetv.com[^\?]+.swf\?file=([^&]+.smil)[^"]*)
+item_order=swf|tmpUrl
+
+item_info_name=tmp
+item_info_from=tmpUrl
+item_info_convert=getInfo('%s','.*"(rtmp://[^"]+)".*?<video src="([^"]+)".*','','rtmp|file')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=file
+item_info_build=Rede.tv - %s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' swfVfy=1 swfUrl=' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Myp2p.In - Videos
+########################################################
+@FIND('JS1','http://www.myp2p.in/js/embed.js','chname','video')@
+item_info_name=title
+item_info_from=video
+item_info_build=Myp2p.In - %s
+
+item_info_name=pageUrl
+item_info_from=video
+item_info_build=http://www.myp2p.in/player.php?chname=%s&width=640&height=490&a=1
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*flashvars="file=stream.php\?stream=([^&]+).*?src="([^"]+.swf)".*','','channel|swf')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=channel
+item_info_convert=getInfo('http://www.myp2p.in/stream.php?stream=%s','.*streamer">(rtmp://[^<]+)<.*')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/stream' + video + ' swfUrl=http://www.myp2p.in/' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################
+item_infos="file=([^&"]+)&streamer=(rtmp://live.myp2p.in[^&]+).*?src="([^"]+)"
+item_order=video|rtmp|swf
+
+item_info_name=swf
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + video + ' swfUrl=http://www.myp2p.in/' + swf + ' live=true pageUrl=@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=title
+item_info_from=url
+item_info_build=Myp2p.In - %s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# AlJazeera - Videos
+########################################################
+item_infos=aljazeera.*?eventId:(\d+),partnerId:"(\d+)".*?"([^"]+.swf)"
+item_order=event|partner|swfTmp
+
+item_info_name=title
+item_info_from=event
+item_info_build=AlJazeera - %s
+
+item_info_name=pageUrl
+item_info_from='http://www.ajsglobal.aljazeerasport.tv/streaming/multiformat/streaminfo/index.html?partnerId=' + partner + '&eventId=' + event + '&presentation=/InformAdaptiveXML.jsp&timestamp=318'
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=swfTmp
+item_info_build=http://www.ajsglobal.aljazeerasport.tv%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*"(rtmp://[^"]+)".*?video src="([^"]+)".*','','rtmp|file')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + '?reportingKey=eventId-' + event + '_partnerId-' + partner + ' swfVfy=1 swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Popler - Videos
+########################################################
+item_infos=src="http://www.popler.tv/(\w+)/([^"]+)"
+item_order=php|channel
+
+item_info_name=title
+item_info_from=channel
+item_info_build=Popler - %s
+
+item_info_name=pageUrl
+item_info_from='http://www.popler.tv/' + php +'.php,v' + channel + ',@CURRENT_URL@'
+item_info_build=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*\'([^\']+.swf)\'.*?\'host\':\'(rtmp://[^\']+)\'.*','','swf|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath='+ channel + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl 
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Wii-Stream - Videos
+########################################################
+@FIND('JS1','http://(?:www.)?wii-stream.com/player/embedPlayer.js','f*id','video')@
+@CATCH(wiistream,video)@
+########################################################
+item_infos=http://(?:www.)?wii-stream.(?:com|tv)/embed.php\?v=([^&]+)
+item_order=video
+@CATCH(wiistream,video)@
+
+
+########################################################
+# SportItalia24 - Videos
+########################################################
+item_infos="http://sportitalia24.twww.tv/\?v=([^"]+)"
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=SportItalia24 - %s
+
+item_info_name=pageUrl
+item_info_from=video
+item_info_build=http://sportitalia24.twww.tv/api_new/index.php?controller=videos&action=showdirect&md5=%s&api=json
+
+item_info_name=smil
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*"wsr%3A%2F([^"]+)".*')
+item_info_convert=unquote('%s')
+item_info_build=http://%s
+
+item_info_name=tmp
+item_info_from=smil
+item_info_convert=getInfo('%s','.*"(rtmp[^"]+)".*?<video src="([^"]+)".*','','rtmp|file')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true'
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Dinozap - Videos
+########################################################
+item_infos=http://dinozap.tv/embed.php\?c=(\d+)
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=Dinozap - %s
+
+item_info_name=pageUrl
+item_info_from=video
+item_info_build=http://dinozap.tv/embed.php?c=%s&width=580&height=400
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'([^']*.swf)'.*?'file',\s*'([^']+)'.*?'streamer',\s*'(rtmp://[^']+).*','','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath='+ file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl 
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+########################################################
+item_infos=http://(?:www.)?dinozap.tv/ch.php\?file=([^"'& ]+)
+
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=Dinozap - %s
+
+item_info_name=tmpPageUrl
+item_info_from=video
+item_info_build=http://www.dinozap.tv/ch.php?file=%s&width=580&height=400&autostart=true
+
+item_info_name=pageUrl
+item_info_from=tmpPageUrl
+item_info_convert=getInfo('%s','.*iframe src=\"([^\"]+)\".*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=block
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*function getURL03\(\)\{\s*var sUrl.*?'([^']+)'.*?cod1.*?'([^']+)'.*?cod2.*?'([^']+)'.*','@CURRENT_URL@','sUrl|cod1|cod2')
+item_info_build=%s
+
+item_info_name=unixTS
+item_info_from=video
+item_info_convert=unixTimestamp
+item_info_build=%s
+
+item_info_name=query
+item_info_from=sUrl + '?callback=jQuery17039323633074989195_1330025601577&v_cod1=' + cod1 + '&v_cod2=' + cod2 + '&_=' + unixTS
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=test
+item_info_from=query
+item_info_convert=getInfo('%s','.*(rtmp).*','@CURRENT_URL@')
+item_info_build=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*'([^']*.swf)'.*?'file',\s*'([^']+)'.*?'streamer',\s*'(rtmp://[^']+).*','','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from='rtmp://dinozap.tv:1935/vod/ playpath='+ file + ' swfUrl=' + swf + ' live=true pageUrl=http://www.dinozap.tv 
+item_info_build=%s
+
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# NachoLive - Videos
+########################################################
+#item_infos="http://www.nacholive.tv/embed/([^"]+)"
+#item_order=video
+
+#item_info_name=title
+#item_info_from=video
+#item_info_build=NachoLive - %s
+
+#item_info_name=tmp
+#item_info_from=video
+#item_info_convert=getInfo('http://www.nacholive.tv/embed/%s','.*<embed src="([^"]+.swf)".*?xmlPath=(http://www.nacholive.tv/xml_for_embed/[^"]+)".*','','swf|xml')
+#item_info_build=%s
+
+
+#item_info_name=file
+#item_info_from=xml
+#item_info_convert=getInfo('%s','.*<fms>([^<]+)</fms>.*')
+#item_info_convert=decodeBase64('%s')
+#item_info_build=%s
+
+#item_info_name=url
+#item_info_from='/' + video + ' swfUrl=http://www.myp2p.in/' + swf + ' live=true pageUrl=' + pageUrl
+#item_info_build=%s
+
+#item_info_name=type
+#item_info_build=video 
+#item_url_build=%s
+########################################################
+item_infos=embedChannelId\s*=\s*(\d+);.*?src="http://www.nacholive.tv/[^"]+.js"
+item_order=video
+
+item_info_name=title
+item_info_from=video
+item_info_build=NachoLive - %s
+
+item_info_name=url
+item_info_from=video
+item_info_build=rtmp://www.nacholive.tv:1935/fenixcast_video/%s app=fenixcast_video/1062 playpath=stream live=true swfVfy=1 swfUrl=http://www.nacholive.tv/embed.swf pageUrl=http://www.nacholive.tv/embed/1062/480/350
+
+item_info_name=type
+item_info_build=video
+item_url_build=%s
+
+
+########################################################
+# 110cast.com - Videos
+########################################################
+@FIND('JS1','http://(?:www.)?110cast.com/embed.js','fid','video')@
+@CATCH(110cast,video)@
+########################################################
+item_infos=http://www.110cast.com/embed.php\?u=([^&]+)
+item_order=video
+@CATCH(110cast,video)@
+
+
+########################################################
+# Cast365.tv - Videos
+########################################################
+item_infos=http://www.cast365.tv/channel.php\?u=([^"'& ]+)
+item_order=video
+@CATCH(cast365,video)@
+
+
+########################################################
+# MexCast - Videos
+########################################################
+item_infos=(http://(?:www.)?mexcast.tv/mexcast.tv.swf\?.*?file=([^&"]+).*?streamer=([^&"]+)[^"]*)"
+item_order=swf|file|rtmp
+item_info_name=title
+item_info_from=file
+item_info_build=MexCast - %s
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' live=true swfVfy=1 swfUrl=' + swf
+item_info_build=%s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Tytele - Videos
+########################################################
+item_infos=displayFlash\("([^"]+)","lecteurSTRM",".*?video=([^&"]+)
+item_order=swf|file
+item_info_name=title
+item_info_from=file
+item_info_build=Tytele - %s
+item_info_name=url
+item_info_from='rtmp://streaming1.extrazimut.net/azimutlive/' + file + ' live=true swfVfy=1 swfUrl=' + swf
+item_info_build=%s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# Tebeo - Videos
+########################################################
+item_infos=key:\s*'([^']+)',.*?url:\s*'([^']+)'.*?url:\s*'([^']+swf)',\s*netConnectionUrl:\s*'(rtmp://tebeo[^']+)'
+item_order=token|file|swf|rtmp
+item_info_name=title
+item_info_from=rtmp
+item_info_build=Tebeo - %s
+item_info_name=url
+item_info_from=rtmp + '/' + file + ' token=' + token + ' live=true swfVfy=1 swfUrl=http://www.tebeotv.fr/' + swf
+item_info_build=%s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# TVRennes35 - Videos
+########################################################
+#item_infos=embedSWF\("([^"]+)"
+item_order=swf
+item_info_name=title
+item_info_build=TVRennes35
+item_info_name=url
+item_info_from=swf
+item_info_build=rtmpt://tvrennes35livefs.fplive.net:80/tvrennes35live-live/streamlive swfVfy=1 live=true swfUrl=http://www.tvrennes35bretagne.fr%s
+item_info_name=type
+item_info_build=video 
+item_url_build=%s
+
+
+########################################################
+# 04stream - Videos
+########################################################
+item_infos=04stream.com/embed.js\?stream=([^ "'&]+)
+item_order=video
+@CATCH(04stream,video)@
+
+
+########################################################
+# tvcaston - Videos
+########################################################
+@FIND('JS1','[^\"\']*tvcaston.com/javascript/embedPlayer.js','fid','video')@
+@CATCH(tvcaston,video)@
+
+
+########################################################
+# LiveFlash - Videos
+########################################################
+item_infos=channel=['" ]*([^'" ]+)['" ]*.*?liveflash.tv/resources/scripts/liveFlashEmbed.js
+item_order=video
+@CATCH(liveflash,video)@
+########################################################
+item_infos="http://(?:www|cdn).liveflash.tv/(?:player/)?embedplayer.php\?id=([^&]+)&(?:amp;)?e=[0-9]&[^"]*"
+item_order=video
+@CATCH(liveflash,video)@
+
+
+########################################################
+# Mips.tv - Videos
+########################################################
+#item_infos=[^\"\']*mips.tv/([^"'/]+)/
+#item_order=video
+#@CATCH(mips,video)@
+########################################################
+@FIND('JS1','http://www.mips.tv/content/scripts/mipsEmbed.js','channel','video')@
+@CATCH(mips,video)@
+########################################################
+item_infos="http://(?:www|cdn).mips.tv/(?:player/)?embedplayer.php\?id=([^&]+)&(?:amp;)?e=[0-9]&[^"]*"
+item_order=video
+@CATCH(mips,video)@
+
+@FIND('JS1','http://www.mipslive.com/content/scripts/mipsEmbed.js','channel','video')@
+@CATCH(mipslive,video)@
+
+########################################################
+# UCaster - Videos
+########################################################
+#item_infos=channel=['" ]*([^'" ]+)['" ]*.*?ucaster.eu/static/scripts/ucaster.js
+#item_order=video
+#@CATCH(ucaster,video)@
+########################################################
+##item_infos=ucaster.eu/(?:embedded/|)([^'/" ]+)
+##item_order=video
+##@CATCH(ucaster,video)@
+########################################################
+@FIND('JS1','http://www.ucaster.eu/static/scripts/ucaster.js','channel','video')@
+@CATCH(ucaster,video)@
+
+
+########################################################
+# SCity - Videos
+########################################################
+@FIND('JS1','[^\"\']*live.scity.tv/js/embedplayer.js','fid','video')@
+@CATCH(scity,video)@
+
+
+########################################################
+# MyBcast - Videos
+########################################################
+@FIND('JS1','[^\"\']*mybcast.com/embed.js','id','video')@
+@CATCH(mybcast,video)@
+
+
+########################################################
+# iLive - Videos
+########################################################
+item_infos=ilive.to/embed(?!player).php.*?channel=(\d+)
+item_order=video
+@CATCH(ilive,video)@
+########################################################
+item_infos=ilive.to/embed/\s*(\d+)
+item_order=video
+@CATCH(ilive,video)@
+
+
+########################################################
+# CastAlba - Videos
+########################################################
+#item_infos=castalba.tv/embed(?!player).php.*?cid=(\d+)
+#item_order=video
+#@CATCH(castalba,video)@
+########################################################
+#item_infos=castalba.tv/channel/(\d+)
+#item_order=video
+#@CATCH(castalba,video)@
+########################################################
+#@FIND('JS1','[^\"\']*castalba.tv[^\"\']*','id','video')@
+#@CATCH(castalba,video)@
+
+
+########################################################
+item_infos=src="(http[^'"]+)" id="innerIframe" frameborder="
+item_order=video
+@CATCH(atdee,video)@
+
+########################################################
+# Xstit - Videos
+########################################################
+item_infos=xstit.me/channel.php\?file=([^&]+)
+item_order=video
+@CATCH(xstit,video)@
+
+
+########################################################
+# LetOnTV - Videos
+########################################################
+item_infos=leton.tv/player.php\?streampage=([^&]+)&
+item_order=video
+@CATCH(letontv,video)@
+
+
+########################################################
+# LiveAll - Videos
+########################################################
+item_infos=liveall.tv/player.php\?streampage=([^&]+)&
+item_order=video
+@CATCH(liveall,video)@
+
+
+########################################################
+# YourLiveTV - Videos
+########################################################
+@FIND('JS1','[^\"\']*yourlive.tv/player.js','id','video')@
+@CATCH(yourlivetv,video)@
+
+
+########################################################
+# FlashWiz - Videos
+########################################################
+#@FIND('JS1','[^\"\']*flashwiz.tv/player.js','fid','video')@
+#@CATCH(flashwiz,video)@
+
+
+########################################################
+# Cast3D - Videos
+########################################################
+@FIND('JS1','[^\"\']*cast3d.tv/js/embed.js','fid','video')@
+@CATCH(cast3d,video)@
+########################################################
+item_infos=cast3d.tv/embed.php\?u=([^&]+)&
+item_order=video
+@CATCH(cast3d,video)@
+
+
+########################################################
+# SawLive - Videos
+########################################################
+item_infos=sawlive.tv/embed/([^"' /]+)
+item_order=video
+@CATCH(sawlive,video)@
+
+
+########################################################
+# MeGom - Videos
+########################################################
+item_infos=megom.tv/player-inside.php\?id=([^&]+)
+item_order=video
+@CATCH(megom,video)@
+
+
+########################################################
+# CastUp - Videos
+########################################################
+item_infos=fid="([^"]+)".*?castup.(?:tv|me)/
+item_order=video
+@CATCH(castup,video)@
+########################################################
+item_infos=castup.me/embed.php\?channel=([^&]+)
+item_order=video
+@CATCH(castup,video)@
+
+
+########################################################
+# SurkTV - Videos
+########################################################
+@FIND('JS1','[^\"\']*surk.tv/player.js','id','video')@
+@CATCH(surktv,video)@
+
+
+########################################################
+# HQCast - Videos
+########################################################
+#@FIND('JS1','[^\"\']*hqcast.tv/PlayerEmbed.js','fid','video')@
+@FIND('JS1','http://www.hqcast.tv/live.js','fid','video')@
+@CATCH(hqcast,video)@
+
+
+########################################################
+# RedCast - Videos
+########################################################
+item_infos=redcast.org/iframe.html\?[^'"]+&c=([^&]+)&
+item_order=video
+@CATCH(redcast,video)@
+
+########################################################
+# Buzzin - Videos
+########################################################
+@FIND('JS1','[^\"\']*buzzin.tv/player/embedPlayer.js','fid','video')@
+@CATCH(buzzin,video)@
+
+
+########################################################
+# NorwskTV - Videos
+########################################################
+item_infos=http://www.norwsktv.com/channel.php\?file=(\d+)
+item_order=video
+@CATCH(norwsktv,video)@
+
+########################################################
+# DinoZap - Videos
+########################################################
+item_infos=http://www.dinozap.tv/redirect/channel.php\?id=(\d+)
+item_order=video
+@CATCH(dinozap,video)@
+
+########################################################
+# BoxLiveTV - Videos
+########################################################
+@FIND('JS1','http://www.cdn.boxlivetv.us/embed.js','u','video')@
+@CATCH(boxlivetv,video)@
+########################################################
+item_infos=http://www.boxlivetv.eu/channel.php\?\s*file=(\d+)
+item_order=video
+@CATCH(boxlivetv,video)@
+
+########################################################
+# livecaster - Videos
+########################################################
+@FIND('JS1','[^\"\']*livecaster.tv/embed.js','fid','video')@
+@CATCH(livecaster,video)@
+########################################################
+
+
+########################################################
+# HDmyTV - Videos
+########################################################
+item_infos=http://www.hdmytv.com/channel.php\?file=(\d+)
+item_order=video
+@CATCH(hdmytv,video)@
+
+
+########################################################
+# viovu - Videos
+########################################################
+@FIND('JS1','[^\"\']*viovu.com/javascript/embedPlayer.js','fid','video')@
+@CATCH(viovu,video)@
+########################################################
+
+
+########################################################
+# Vipi - Videos
+########################################################
+item_infos=http://watch.vipi.tv/\?id=([^&"']+)
+item_order=video
+@CATCH(vipi,video)@
+
+
+########################################################
+# Zstream - Videos
+########################################################
+@FIND('JS1','http://www.zstream.eu/embed.js','fid','video')@
+@CATCH(zstream,video)@
+
+
+########################################################
+# ZZcast- Videos
+########################################################
+item_infos=fid="([^"]+).*?zzcast.com
+item_order=video
+@CATCH(zzcast,video)@
+
+item_infos=zzcast.com/embed.php\?u=([^&"']+)
+item_order=video
+@CATCH(zzcast,video)@
+
+
+item_infos=(fid=.*?jagobd.com.*?.js)"
+item_order=video
+@CATCH(jagobd,video)@
+
+
+########################################################
+# zonytvcom - Videos
+########################################################
+item_infos=(fid=.*?src='[^\"\']*zonytvcom.info[^\"\']*)
+item_order=video
+@CATCH(cricfree,video)@
+#########################################################
+
+########################################################
+
+
+########################################################
+# Wcast - Videos
+########################################################
+@FIND('JS1','[^\"\']*wcast.tv/embed.js','fid','video')@
+@CATCH(wcast,video)@
+
+
+########################################################
+# ZengaTv - Videos
+########################################################
+#item_infos=flowlive.jsp\?episode=([^']+)
+#item_order=video
+#@CATCH(zengatv,video)@
+
+
+########################################################
+# hamariweb- Videos
+########################################################
+item_infos=http://www.eboundservices.com:8888/users/hamariweb/([^/']+)_iframe.html
+item_order=video
+@CATCH(hamariweb,video)@
+
+
+########################################################
+# Flatam - Videos
+########################################################
+@FIND('JS1','http://foxsportslatam.com/player.js','id','video')@
+@CATCH(flatam,video)@
+
+
+########################################################
+# Livego - Videos
+########################################################
+#@FIND('JS1','http://www.livego.tv/embed.js','fid','video')@
+#@CATCH(livego,video)@
+
+
+########################################################
+# ESPNwatch - Videos
+########################################################
+@FIND('JS1','[^\"\']*espnwatch.net/player.js','id','video')@
+@CATCH(espnwatch,video)@
+
+
+########################################################
+# AljazeeraSport - Videos
+########################################################
+@FIND('JS1','http://cdna.aljazeerasport.asia/player.js','id','video')@
+@CATCH(aljazeerasport,video)@
+
+
+########################################################
+# CastASAP - Videos
+########################################################
+@FIND('JS1','[^\"\']*castasap.com[^\"\']*','chname','video')@
+@CATCH(castasap,video)@
+#########################################
+@FIND('JS1','[^\"\']*castasap.com[^\"\']*','var channel','video')@
+@CATCH(castasap,video)@
+#########################################
+item_infos=http://[^/]*castasap[^/]*/[^\.]*embed[^\.]*\.php\?chname=([^&/ ]+)
+item_order=video
+@CATCH(castasap,video)@
+
+
+########################################################
+# IdoVid - Videos
+########################################################
+item_infos=http://idovid.com/channel.php\?file=(\d+)
+item_order=video
+@CATCH(idovid,video)@
+
+
+########################################################
+# HdCast - Videos
+########################################################
+item_infos=fid=[^"]([^"]+).*hdcast.tv
+item_order=video
+@CATCH(hdcast,video)@
+
+#############################################
+#item_infos=[^\"\']*hdcast.tv/embed_.php\?fid=([^"]+)
+#item_order=video
+#@CATCH(hdcast,video)@
+
+
+########################################################
+# ABClive - Videos
+########################################################
+item_infos=[^\"\']*abclive.tv/embed-.php\?fid=([^"']+)
+item_order=video
+@CATCH(abclive,video)@
+
+########################################################
+item_infos=fid=([^"']+).*?[^\"\']*abclive.tv/
+item_order=video
+@CATCH(abclive,video)@
+
+
+########################################################
+# CastVideo - Videos
+########################################################
+@FIND('JS1','[^\"\']*aka.castvideo.info/player.js','id','video')@
+@CATCH(castvideo,video)@
+
+
+########################################################
+# LiveStreamBox - Videos
+########################################################
+item_infos=livestreambox.net/embed.php\?id=([^'"&]+)
+item_order=video
+@CATCH(livestreambox,video)@
+
+
+########################################################
+# Yukons - Videos
+########################################################
+@FIND('JS1','[^\"\']*yukons.net/share.js','channel','video')@
+@CATCH(yukons,video)@
+
+
+########################################################
+# PutLive - Videos
+########################################################
+item_infos=http://putlive.in/e/([^"]+)
+item_order=video
+@CATCH(putlive,video)@
+
+
+########################################################
+# MiCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*micast.tv/embed.js','ca','video')@
+@CATCH(micast,video)@
+########################################################
+item_infos=micast.tv/gen.*?\.php\?ch=([^"]+)
+item_order=video
+@CATCH(micast,video)@
+
+########################################################
+# Be4d - Videos
+########################################################
+@FIND('JS1','[^\"\']*be4d.tv/js/embed.js','fid','video')@
+@CATCH(be4d,video)@
+
+
+########################################################
+# Kulu - Videos
+########################################################
+item_infos=kulu.tv/e/e.php\?vid=([^"&]+)
+item_order=video
+@CATCH(kulu,video)@
+
+########################################################
+# Peesle - Videos
+########################################################
+@FIND('JS1','[^\"\']*peesle.com/extern/js/embed.js','var channel','video')@
+@CATCH(peesle,video)@
+
+
+########################################################
+# HDStream - Videos
+########################################################
+@FIND('JS1','[^\"\']*hdstream.info/embed.js','fid','video')@
+@CATCH(hdstream,video)@
+
+
+########################################################
+# SocSports - Videos
+########################################################
+item_infos=socsportslive.com/\?([^'"]+)
+item_order=video
+@CATCH(socsports,video)@
+
+
+########################################################
+# OvCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*ovcast.com[^\"\']*','ca','video')@
+@CATCH(ovcast,video)@
+
+
+########################################################
+# CoolSports - Videos
+########################################################
+@FIND('JS1','[^\"\']*embeds.coolsport.tv/livegame.*?.js','id','video')@
+@CATCH(coolsport,video)@
+
+@FIND('JS1','[^\"\']*cdn.orbitztv.co.uk/stream.*?.js','id','video')@
+@CATCH(coolsport,video)@
+
+
+########################################################
+# ZCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*zcast.us/embed.js','sid','video')@
+@CATCH(zcast,video)@
+
+item_infos=http://zcast.us/gen.php\?ch=([^&]+)&
+item_order=video
+@CATCH(zcast,video)@
+
+
+########################################################
+# Zuuk - Videos
+########################################################
+#item_infos=zuuk.net/el.php\?ch=([^"&/]+)
+#item_order=video
+#@CATCH(zuuk,video)@
+
+#item_infos=zuuk.net/([^"&/]+)
+#item_order=video
+#@CATCH(zuuk,video)@
+
+
+########################################################
+# Castto - Videos
+########################################################
+#@FIND('JS1','[^\"\']*castto.me[^\"\']*','fid','video')@
+#@CATCH(castto,video)@
+
+################################################
+
+item_infos=(fid=.*?src="[^\"\']*castto.me[^\"\']*)
+item_order=video
+@CATCH(castto,video)@
+
+############################################
+item_infos=src="(http://streamson.me[^"]*)
+item_order=video
+@CATCH(streamson,video)@
+
+
+########################################################
+# LiveVShare - Videos
+########################################################
+@FIND('JS1','[^\"\']*livevshare.com/js/embed.js','chname','video')@
+@CATCH(livevshare,video)@
+
+
+########################################################
+# ShidurLive - Videos
+########################################################
+item_infos=shidurlive.com/embed/([^"' /]+)
+item_order=video
+@CATCH(shidurlive,video)@
+
+
+########################################################
+# iCastHD - Videos
+########################################################
+@FIND('JS1','http://www.icasthd.tv/player/embedPlayer.js','fid','video')@
+@CATCH(icasthd,video)@
+
+
+
+########################################################
+# CastNowHD - Videos
+########################################################
+@FIND('JS1','[^\"\']*castnowhd.com/js/embed.js','chname','video')@
+@CATCH(castnowhd,video)@
+
+
+########################################################
+# CoolHD - Videos
+########################################################
+@FIND('JS1','[^\"\']*cool-hd.info/embed.js','fid','video')@
+@CATCH(coolhd,video)@
+
+
+########################################################
+# HQStream - Videos
+########################################################
+item_infos=http://hqstream.tv/pl\?streampage=([^&/ ]+)
+item_order=video
+@CATCH(hqstream,video)@
+######################################################
+item_infos=http://hqstream.tv/player_pop.php\?streampage=([^&/ ]+)
+item_order=video
+@CATCH(hqstream,video)@
+
+######################################################
+item_infos=http://hqstream.tv/player.php\?streampage=([^&/ ]+)
+item_order=video
+@CATCH(hqstream,video)@
+
+
+########################################################
+# 99Cast - Videos
+########################################################
+item_infos=99cast.com/embed.php\?v=([^&]+)
+item_order=video
+@CATCH(99cast,video)@
+
+########################################################
+@FIND('JS1','http://www.99cast.com/embed.js','fid','video')@
+@CATCH(99cast,video)@
+
+
+########################################################
+# Up4Free - Videos
+########################################################
+@FIND('JS1','[^\"\']*up4free.com/[^\"\']*','id','video')@
+@CATCH(up4free,video)@
+
+
+########################################################
+# GoodCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*goodcast.org/[^\"\']*','id','video')@
+@CATCH(goodcast,video)@
+
+
+########################################################
+# JJCast - Videos
+########################################################
+item_infos=jjcast.com/embed.php\?stream=([^&]+)
+item_order=video
+@CATCH(jjcast,video)@
+
+
+########################################################
+# FreeCast - Videos
+########################################################
+item_infos=file='([^"']+)'.*?[^\"\']*freecast.in/embedPlayer.js
+item_order=video
+@CATCH(freecast,video)@
+
+
+
+########################################################
+# EzCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*ezcast.tv/static/scripts/ezcast.js','channel','video')@
+@CATCH(ezcast,video)@
+
+item_infos=[^\"\']*ezcast.tv/embedded/([^/]+)
+item_order=video
+@CATCH(ezcast,video)@
+
+
+########################################################
+# Stream4 - Videos
+########################################################
+@FIND('JS1','[^\"\']*stream4.tv/player4.js','id','video')@
+@CATCH(stream4,video)@
+
+
+########################################################
+# SportTv - Videos
+########################################################
+@FIND('JS1','[^\"\']*cdn.thesporttv.eu[^\"\']*','id','video')@
+@CATCH(thesporttv,video)@
+
+
+########################################################
+# FlashCast - Videos
+########################################################
+item_infos=www.flashcast.tv/embed.php\?live=([^&"]+)
+item_order=video
+@CATCH(flashcast,video)@
+
+@FIND('JS1','[^\"\']*flashcast.tv[^\"\']*','fid','video')@
+@CATCH(flashcast,video)@
+
+
+########################################################
+# LiveStreamCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*livestreamcast.org[^\"\']*','fid','video')@
+@CATCH(livestreamcast,video)@
+
+
+########################################################
+# EmbedTv - Videos
+########################################################
+#item_infos=([^\"\']*embed-tv.eu[^\"\']*)
+#item_order=video
+#@CATCH(embedtv,video)@
+
+
+########################################################
+# Bublu - Videos
+########################################################
+@FIND('JS1','[^\"\']*bublu.eu/[^\"\']*','fid','video')@
+@CATCH(bublu,video)@
+
+
+
+########################################################
+# ZoomTV - Videos
+########################################################
+#@FIND('JS1','[^\"\']*zoomtv.me/[^\"\']*','fid','video')@
+#@CATCH(zoomtv,video)@
+
+
+item_infos=(fid=.*?zoomtv.me.*?.js)"
+item_order=video
+@CATCH(zoomtv,video)@
+########################################################
+# AccessLive - Videos
+########################################################
+@FIND('JS1','[^\"\']*accesslive.me/[^\"\']*','fid','video')@
+@CATCH(accesslive,video)@
+
+
+########################################################
+# Acaster - Videos
+########################################################
+@FIND('JS1','[^\"\']*acaster.tv/[^\"\']*','fid','video')@
+@CATCH(acaster,video)@
+
+
+########################################################
+# Cast4You - Videos
+########################################################
+@FIND('JS1','[^\"\']*cast4you.tv[^\"\']*','id','video')@
+@CATCH(cast4you,video)@
+
+
+########################################################
+# HideCast - Videos
+########################################################
+item_infos=hidecast.com/gen.php\?ch=([^&"]+)
+item_order=video
+@CATCH(hidecast,video)@
+
+@FIND('JS1','[^\"\']*googlecode.com/svn/[^\"\']*','ca','video')@
+@CATCH(hidecast,video)@
+
+@FIND('JS1','[^\"\']*googlecode.com/svn[^\"\']*','id','video')@
+@CATCH(hidecast,video)@
+
+
+########################################################
+# MovieTrailers - Videos
+########################################################
+@FIND('JS1','[^\"\']*movietrailers.yt[^\"\']*','id','video')@
+@CATCH(movietrailers,video)@
+
+
+########################################################
+# StreamCastTV - Videos
+########################################################
+@FIND('JS1','[^\"\']*streamcasttv.org[^\"\']*','file','video')@
+@CATCH(streamcasttv,video)@
+
+
+########################################################
+# LiveDesi - Videos
+########################################################
+item_infos=SRC="/player.php\?id=([^&"]+)
+item_order=video
+@CATCH(livedesi,video)@
+
+
+########################################################
+# SportsEmbed - Videos
+########################################################
+@FIND('JS1','[^\"\']*sportsembed.com[^\"\']*','fid','video')@
+@CATCH(sportsembed,video)@
+
+
+########################################################
+# iGuide - Videos
+########################################################
+item_infos=[^\"\']*iguide.to/embed/([^&"]+)
+item_order=video
+@CATCH(iguide,video)@
+
+
+########################################################
+# FreeCastv - Videos
+########################################################
+@FIND('JS1','[^\"\']*freecastv.com[^\"\']*','id','video')@
+@CATCH(freecastv,video)@
+
+
+########################################################
+# HdCastream - Videos
+########################################################
+item_infos=http://www.hdcastream.com/channel.php\?file=(\d+)
+#item_infos=src="(http://www.hdcastream.com[^"]+)
+item_order=video
+@CATCH(hdcastream,video)@
+
+
+########################################################
+# UKCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*ukcast.tv[^\"\']*','id','video')@
+@CATCH(ukcast,video)@
+
+
+########################################################
+# PrivateCDN - Videos
+########################################################
+@FIND('JS1','[^\"\']*privatecdn.tv[^\"\']*','id','video')@
+@CATCH(privatecdn,video)@
+
+
+########################################################
+# Valeucara - Videos
+########################################################
+@FIND('JS1','[^\"\']*valeucara.com[^\"\']*','id','video')@
+@CATCH(valeucara,video)@
+
+########################################################
+# OnStream - Videos
+########################################################
+@FIND('JS1','[^\"\']*onstream.in[^\"\']*','id','video')@
+@CATCH(onstream,video)@
+
+
+########################################################
+# Janjua - Videos
+########################################################
+@FIND('JS1','[^\"\']*janjua.tv[^\"\']*','channel','video')@
+@CATCH(janjua,video)@
+
+
+########################################################
+# MaxStream - Videos
+########################################################
+item_infos=maxstream.in/channel.php\?a=([^&"]+)
+item_order=video
+@CATCH(maxstream,video)@
+
+
+########################################################
+# NewsKO - Videos
+########################################################
+@FIND('JS1','[^\"\']*newsko.co.uk[^\"\']*','fid','video')@
+@CATCH(newsko,video)@
+
+
+########################################################
+# KBPs - Videos
+########################################################
+@FIND('JS1','[^\"\']*kbps.tv[^\"\']*','fid','video')@
+@CATCH(kbps,video)@
+
+
+########################################################
+# ABCast - Videos
+########################################################
+@FIND('JS1','[^\"\']*abcast.biz[^\"\']*','file','video')@
+@CATCH(abcast,video)@
+
+
+########################################################
+# Prpeero - Videos
+########################################################
+@FIND('JS1','[^\"\']*prpeero.com[^\"\']*','fid','video')@
+@CATCH(prpeero,video)@
+
+########################################################
+item_infos=[^\"\']*prpeero.com/embed.php\?channel=([^&"]+)
+item_order=video
+@CATCH(prpeero,video)@
+
+
+########################################################
+# WatchYouTube - Videos
+########################################################
+@FIND('JS1','[^\"\']*watchyoutube.us[^\"\']*','fid','video')@
+@CATCH(watchyoutube,video)@
+
+
+########################################################
+# TIV - Videos
+########################################################
+item_infos=cdn.tiv.pw/([^.]+)
+item_order=video
+@CATCH(tiv,video)@
+
+
+########################################################
+# Featve - Videos
+########################################################
+item_infos=.*?src=['"](http://cdn.featve.com[^*]+\.js)'>
+item_order=video
+@CATCH(featve,video)@
+
+@FIND('JS1','[^\"\']*featve.com[^\"\']*','f*id','video')@
+@CATCH(featve,video)@
+
+
+########################################################
+# CastOk - Videos
+########################################################
+item_infos=[^\"\']*castok.com/channel.php\?live=([^&"]+)
+item_order=video
+@CATCH(castok,video)@
+
+########################################################
+# Zenex - Videos
+########################################################
+@FIND('JS1','[^\"\']*zenex.tv[^\"\']*','channel','video')@
+@CATCH(zenex,video)@
+
+
+########################################################
+# Poong - Videos
+########################################################
+@FIND('JS1','[^\"\']*poong.tv[^\"\']*','fid','video')@
+@CATCH(poong,video)@

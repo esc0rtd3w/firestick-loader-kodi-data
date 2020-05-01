@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<strings>
+	<string id="30000">Σφάλμα του Veetle</string>
+	<string id="30001">Η ροή δεν είναι διαθέσιμη.</string>
+	<string id="30100">Λήψη προγραμμάτων</string>
+	<string id="30101">Χρήση επίσημης λίστας καναλιών</string>
+	<string id="40001">Κατηγορίες</string>
+	<string id="40002">Πρόγραμμα</string>
+	<string id="40003">Όλα</string>
+	<string id="40004">Ψυχαγωγία</string>
+	<string id="40005">Σειρές</string>
+	<string id="40006">Κινουμένα σχέδια</string>
+	<string id="40007">Αθλητικά</string>
+	<string id="40008">Κωμωδίες</string>
+	<string id="40009">Μουσική</string>
+	<string id="40010">Εκπαίδευση</string>
+	<string id="40011">Παιχνίδια</string>
+	<string id="40012">Ειδήσεις</string>
+	<string id="40013">Θρησκεία</string>
+	<string id="40014">Κινητά</string>
+	<string id="40015">Μη διαθέσιμο</string>
+	<string id="40016">βλέποντας</string>
+</strings>

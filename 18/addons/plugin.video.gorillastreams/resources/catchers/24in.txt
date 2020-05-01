@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=24in - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://24in.tv/embed.php?v=%s&vw=600&vh=400&domain=www.footballplanet.eu
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*\'flashplayer\':\s*\'([^\']+)\'.*?\'id\':\s*\'([^\']+)\'.*?\'streamer\':\s*\'([^\']+)\',.*','','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true pageUrl=' + pageUrl
+item_info_build=%s

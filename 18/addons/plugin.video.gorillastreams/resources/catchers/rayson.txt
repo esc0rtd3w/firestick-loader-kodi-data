@@ -1,0 +1,17 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Rayson - %s
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.rayson.tv/player/index.php?ch=%s','.*addVariable\(\'server\',\'([^\']+)\'.*')
+item_info_build=%s
+
+item_info_name=stream
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.rayson.tv/player/index.php?ch=%s','.*addVariable\(\'sName\',\'([^\']+)\'.*')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + stream
+item_info_build=%s swfurl=http://www.rayson.tv/swf/[RTV]player.swf

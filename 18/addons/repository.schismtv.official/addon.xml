@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.schismtv.official" name="[COLOR orange][B]SchisM TV[/B][/COLOR] Builds Repository" version="1.0" provider-name="SchisM">
+    <extension point="xbmc.addon.repository" name="schism tv repository">
+        <info compressed="false">http://github.com/schismtv/officialrepo/raw/master/addons.xml</info>
+        <checksum>http://github.com/schismtv/officialrepo/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">http://github.com/schismtv/officialrepo/raw/master/zips/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>This is used FOR BUILDS ONLY</summary>
+        <description>BUILDS ONLY FROM SCHISM TV - THIS REPO CONTAINS UPDATES FOR THE SCHISM TV BUILDS
+        </description>
+        <platform>all</platform>
+    </extension>
+</addon>

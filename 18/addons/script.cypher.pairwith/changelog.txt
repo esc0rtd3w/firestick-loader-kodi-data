@@ -1,0 +1,16 @@
+-Version 1.6
+added streamango
+-Version 1.5
+added Site to QR code for mobile devices
+-Version 1.3
+added Alluc
+-Version 1.2
+update
+-Version 1.1
+Removed Adverts
+
+
+-Version 1.0
+
+Initial release
+

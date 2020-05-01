@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ChampionsUefa - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://championsuefa.tv/live.php?id=%s
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file=\s*([^&]+)&\s*streamer=\s*([^&]+).*?([^"]+.swf).*','@REFERER@','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://championsuefa.tv' + swf + ' live=true swfVfy=true timeout=15 pageUrl=' + pageUrl
+item_info_build=%s

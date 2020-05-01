@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.zt" name="[COLORred]Z[/COLOR]ero [COLORwhite]T[/COLOR]olerance Repository" version="4.0" provider-name="Team ZT">
+		<extension point="xbmc.addon.repository" name="Bla Bla Repository">
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+	</dir>
+	<dir>
+	<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+    </dir>
+    <dir>
+      <info compressed="false">https://gitlab.com/TeamUniversal/modules4all/raw/master/addons.xml</info>
+      <checksum>https://gitlab.com/TeamUniversal/modules4all/raw/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://gitlab.com/TeamUniversal/modules4all/raw/master/</datadir>
+    </dir>
+			<info compressed="false">http://repo.zerotolerance.gq/addons.xml</info>
+			<checksum>http://repo.zerotolerance.gq/addonsmd5.txt</checksum>
+			<datadir zip="true">http://repo.zerotolerance.gq/addons/</datadir>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<summary></summary>
+			<description></description>
+			<platform>all</platform>
+		</extension>
+</addon>

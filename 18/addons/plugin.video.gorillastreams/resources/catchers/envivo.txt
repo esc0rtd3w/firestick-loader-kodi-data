@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Envivo - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.envivo.pw/embed.php?a=%s&id=&width=579&height=400&autostart=true&strech=
+
+item_info_name=file
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?stream[=:,]\s*['"]([^'"]+)['"].*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmpe://live.envivo.pw:1935/redirect playpath=' + file + ' swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf live=1 timeout=15 token=OOG17t.x#K9Vh#| swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

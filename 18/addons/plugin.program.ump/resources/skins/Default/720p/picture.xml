@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="false">2</defaultcontrol>
+  <backgroundcolor>fx00000000</backgroundcolor>
+  <allowoverlay>yes</allowoverlay>
+  <animation effect="fade" time="100">WindowOpen</animation>
+  <animation effect="slide" end="0,576" time="100">WindowClose</animation>
+  <zorder>1</zorder>
+  <coordinates>
+    <posx>0</posx>
+    <posy>0</posy>
+  </coordinates>
+  <controls>
+  	<control type="image" id="665">
+		  <description>bg shit</description>
+		  <posx>0</posx>
+		  <posy>0</posy>
+		  <width>1280</width>
+		  <height>720</height>
+		  <visible>true</visible>
+		  <texture border="5" flipy="true" flipx="false" >black.png</texture>
+		  <aspectratio>stretch</aspectratio>
+	</control>
+	<control type="image" id="666">
+		  <description>Imager</description>
+		  <posx>0</posx>
+		  <posy>0</posy>
+		  <width>1280</width>
+		  <height>720</height>
+		  <visible>true</visible>
+		  <aspectratio>scale</aspectratio>
+	</control>
+  </controls>
+</window>

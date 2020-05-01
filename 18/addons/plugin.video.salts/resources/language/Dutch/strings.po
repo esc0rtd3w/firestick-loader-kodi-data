@@ -1,0 +1,2101 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Jan Schouten, 2016
+# Mike Bike, 2015-2017
+# Rodrigo, 2015
+# tknorris, 2015
+# Youko van der Blom, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: Dutch (http://www.transifex.com/tv-addons/salts/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Films"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV Shows"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV Serie"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Instellingen"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Scraper Sorteer Volgorde"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "URL Resolver Instellingen"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Add-on Instellingen"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Configureer Automatisch SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Authoriseer SALTS om mijn trakt.tv account te gebruiken"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Standaard Weergave Instellen"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Verwijder gecachete URL(s)"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "Uitgelichte %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Populaire %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Recent Geüpdate %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Aanbevolen %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Mijn %s Collectie"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Mijn Favorieten"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Mijn Abonnementen"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Mijn Volglijst"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Mijn Lijsten"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Andere Lijsten"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Mijn Volgende Afleveringen"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Mijn Kalender"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Algemene Kalender"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Première Kalender"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Zoeken"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Recente gezocht"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Bewaarde zoektermen"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Forceer Verversen"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Alle %s Opschonen"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Ververs Forceren"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Complete Ververs Forceren"
+
+msgctxt "#30033"
+msgid "Enable All Scrapers"
+msgstr "Alle Scrapers Aanzetten"
+
+msgctxt "#30034"
+msgid "Disable All Scrapers"
+msgstr "Alle Scrapers Uitzetten"
+
+msgctxt "#30035"
+msgid "Enable Scraper"
+msgstr "Scraper Aanzetten"
+
+msgctxt "#30036"
+msgid "Disable Scraper"
+msgstr "Scraper Uitzetten"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Omhoog verplaatsen"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Omlaag verplaatsen"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Verplaatsen Naar..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Geef Nieuwe Positie op (1 - %s)"
+
+msgctxt "#30041"
+msgid "Set Default %s View"
+msgstr "%s Weergave Instellen"
+
+msgctxt "#30042"
+msgid "Set a view then select this item to set the default %s view"
+msgstr "Kies een weergave en selecteer dit item om deze %s weergave te gebruiken"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Importeer"
+
+msgctxt "#30044"
+msgid "%s View Set to: %s"
+msgstr "%s Weergave Ingesteld naar: %s"
+
+msgctxt "#30045"
+msgid "Delete [B][COLOR red]ENTIRE[/COLOR][/B] Url Cache"
+msgstr "Verwijder [B][COLOR red]VOLLEDIGE[/COLOR][/B] URL Cache"
+
+msgctxt "#30046"
+msgid "This will set some settings to values that have been found to"
+msgstr "Dit zet een aantal instellingen naar waardes welke optimaal zijn"
+
+msgctxt "#30047"
+msgid "be effective. The following settings will be changed:"
+msgstr "bevonden. De volgende instellingen zullen veranderd worden:"
+
+msgctxt "#30048"
+msgid ""
+"[COLOR red]Scraper Sort Order, Source Sorting, Calendar Start Day, Trakt "
+"Timeout, Scraper Timeout, Watchlist in MNE, Test Direct[/COLOR]"
+msgstr "[COLOR red]Scraper Volgorder, Bron Volgorder, Kalender start dag, Trakt Tijdslimiet, Scraper Tijdslimiet, Volglijst in MNE, Test Direct[/COLOR]"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Ga Terug"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Ga Verder"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Auto Configureren is Beëindigd"
+
+msgctxt "#30052"
+msgid "Set as Favorites List"
+msgstr "Stel in als Favorieten Lijst"
+
+msgctxt "#30053"
+msgid "Set as Subscription List"
+msgstr "Stel in als Abonnementen Lijst"
+
+msgctxt "#30054"
+msgid "Import from Collection"
+msgstr "Importeer van Collectie"
+
+msgctxt "#30055"
+msgid "Add another user's list"
+msgstr "Voeg een lijst van een andere gebruiker toe"
+
+msgctxt "#30056"
+msgid "Copy to My List"
+msgstr "Kopieer naar Mijn Lijst"
+
+msgctxt "#30057"
+msgid "Add more from %s"
+msgstr "Voeg meer toe van %s"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Verwijder Lijst"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Hernoem Lijst"
+
+msgctxt "#30060"
+msgid "Enter the new name (blank to reset)"
+msgstr "Geef de Nieuwe Naam in (Laat leeg om te resetten)"
+
+msgctxt "#30061"
+msgid "Enter username of list owner"
+msgstr "Geef de gebruikersnaam van de eigenaar van de lijst in"
+
+msgctxt "#30062"
+msgid "List Does Not Exist: %s"
+msgstr "De Lijst Bestaat Niet: %s"
+
+msgctxt "#30063"
+msgid "Progress Timeouts: %s/%s"
+msgstr "Voortgang Tijdslimiet: %s/%s"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Verken Seizoenen"
+
+msgctxt "#30065"
+msgid "Update Subscriptions: (Next Run: [COLOR %s]%s[/COLOR])"
+msgstr "Update Abonnementen: (Volgende Uitvoering: [COLOR %s]%s[/COLOR])"
+
+msgctxt "#30066"
+msgid "Clean-Up Subscriptions"
+msgstr "Abonnementen Opschonen"
+
+msgctxt "#30067"
+msgid "Pick a list to use for Subscriptions"
+msgstr "Kies een lijst om te gebruiken als Abonnementen"
+
+msgctxt "#30068"
+msgid "Pick a list to use for Favorites"
+msgstr "Kies een lijst om te gebruiken als Favorieten"
+
+msgctxt "#30069"
+msgid "Blank Searches are not allowed"
+msgstr "Lege Opzoekingen zijn niet toegestaan"
+
+msgctxt "#30070"
+msgid "Save Search"
+msgstr "Bewaar Opzoeking"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Verwijder uit Recenten"
+
+msgctxt "#30072"
+msgid "Delete Search"
+msgstr "Verwijder Opzoeking"
+
+msgctxt "#30073"
+msgid "Recent %s Searches Cleared"
+msgstr "Recente %s Opzoekingen Opgeschoond"
+
+msgctxt "#30074"
+msgid "Saved %s Searches Cleared"
+msgstr "Bewaarde %s Opzoekingen Opgeschoond"
+
+msgctxt "#30075"
+msgid "Scraper Timeouts: %s/%s"
+msgstr "Scraper Tijdslimiet: %s/%s"
+
+msgctxt "#30076"
+msgid "No Useable Sources Found%s"
+msgstr "Geen Bruikbare Bronnen gevonden %s"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Kies een ondertiteling om te downloaden"
+
+msgctxt "#30078"
+msgid "Link Resolve Failed: %s"
+msgstr "Opzoeken van Link Mislukt: %s"
+
+msgctxt "#30079"
+msgid "All sources failed to play"
+msgstr "Geen enkele bron is afspeelbaar"
+
+msgctxt "#30080"
+msgid "Choose your stream"
+msgstr "Kies uw stream"
+
+msgctxt "#30081"
+msgid "Set Related Url"
+msgstr "Gerelateerde URL instellen"
+
+msgctxt "#30082"
+msgid "Received result from: %s"
+msgstr "Resultaat ontvangen van: %s"
+
+msgctxt "#30083"
+msgid "Url To Change (%s)"
+msgstr "Te Wijzigen URL (%s)"
+
+msgctxt "#30084"
+msgid "Related %s url at %s"
+msgstr "Gerelateerde %s URL op %s"
+
+msgctxt "#30085"
+msgid "[COLOR blue]%s[/COLOR] Related Url Set"
+msgstr "[COLOR blue]%s[/COLOR] Verwante URL Reeks"
+
+msgctxt "#30086"
+msgid "Manual Search"
+msgstr "Handmatig zoeken"
+
+msgctxt "#30087"
+msgid "Select Related"
+msgstr "Kies gerelateerde"
+
+msgctxt "#30088"
+msgid "Enter Search"
+msgstr "Geef zoekterm op"
+
+msgctxt "#30089"
+msgid "Scraper does not support searching"
+msgstr "Zoeken wordt niet ondersteund door Scraper"
+
+msgctxt "#30090"
+msgid "Enter Rating (unrate, or 1-10)"
+msgstr "Vul beoordeling in: (verwijder, of 1-10)"
+
+msgctxt "#30091"
+msgid "Input TVShow ID"
+msgstr "Vul Serie ID in"
+
+msgctxt "#30092"
+msgid "Item Added to Collection"
+msgstr "Item Toegevoegd aan Collectie"
+
+msgctxt "#30093"
+msgid "Item Removed from Collection"
+msgstr "Item Verwijderd uit Collectie"
+
+msgctxt "#30094"
+msgid "Item Added to List"
+msgstr "Item Toegevoegd aan Lijst"
+
+msgctxt "#30095"
+msgid "List Copied: (A:%s/E:%s/S:%s)"
+msgstr "Lijst gecopieerd: (A:%s/E:%s/S:%s)"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#30097"
+msgid "Marked as %s"
+msgstr "Gemarkeerd als %s"
+
+msgctxt "#30098"
+msgid "Updating Subscriptions..."
+msgstr "Abonnementen bijwerken..."
+
+msgctxt "#30099"
+msgid "Next Update in %0.1f hours"
+msgstr "Volgende Update in %0.1f uren"
+
+msgctxt "#30100"
+msgid "Are you sure you want to delete the url cache?"
+msgstr "Weet u zeker dat u de URL cache wilt verwijderen?"
+
+msgctxt "#30101"
+msgid "This will slow things down until all urls are re-cached"
+msgstr "Dit zal alles vertragen tot alle URL's terug in de cache zitten"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Behouden"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgctxt "#30104"
+msgid "Flush web cache"
+msgstr "Web cache opschonen"
+
+msgctxt "#30105"
+msgid "DB Reset Successful"
+msgstr "DataBase reset succesvol"
+
+msgctxt "#30106"
+msgid "Reset only allowed on sqlite DBs"
+msgstr "Reset enkel toegestaan op sqlite DB's"
+
+msgctxt "#30107"
+msgid "Select Export Directory"
+msgstr "Selecteer Exporteer map"
+
+msgctxt "#30108"
+msgid "Enter Export Filename"
+msgstr "Vul Bestandsnaam voor Exporteren in"
+
+msgctxt "#30109"
+msgid "Export Successful"
+msgstr "Export Succesvol"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Geëxporteerd naar %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Exporteer"
+
+msgctxt "#30112"
+msgid "Export Failed"
+msgstr "Export Mislukt"
+
+msgctxt "#30113"
+msgid "Select Import File"
+msgstr "Selecteer Import Bestand"
+
+msgctxt "#30114"
+msgid "Import Success"
+msgstr "Import Success"
+
+msgctxt "#30115"
+msgid "Imported from %s"
+msgstr "Geïmporteerd van %s"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "Importeer"
+
+msgctxt "#30117"
+msgid "Import Failed"
+msgstr "Import Mislukt"
+
+msgctxt "#30118"
+msgid "Remove from List"
+msgstr "Verwijder van Lijst"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Abonneren"
+
+msgctxt "#30120"
+msgid "Require Aired Only?"
+msgstr "Enkel Uitgezonden Vereist?"
+
+msgctxt "#30121"
+msgid "Require Page Only?"
+msgstr "Enkel Pagina Vereist?"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr " Volgend Pagina"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Vorige Week"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Volgende Week"
+
+msgctxt "#30125"
+msgid "Mark as Unwatched (SALTS)"
+msgstr "Markeer als niet bekeken (SALTS)"
+
+msgctxt "#30126"
+msgid "Mark as Watched (SALTS)"
+msgstr "Markeer als Bekeken (SALTS)"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Beoordeel op trakt.tv"
+
+msgctxt "#30128"
+msgid "Set as Season View"
+msgstr "Zet als Seizoens Weergave"
+
+msgctxt "#30129"
+msgid "Unavailable"
+msgstr "Niet Beschikbaar"
+
+msgctxt "#30130"
+msgid "Select Source"
+msgstr "Selecteer Bron"
+
+msgctxt "#30131"
+msgid "Download Source"
+msgstr "Download Bron"
+
+msgctxt "#30132"
+msgid "Show Information"
+msgstr "Toon Informatie"
+
+msgctxt "#30133"
+msgid "Add Show to List"
+msgstr "Voeg Show toe aan Lijst"
+
+msgctxt "#30134"
+msgid "Set Related Show Url (Search)"
+msgstr "Zet Verwante Show URL (Opzoeken)"
+
+msgctxt "#30135"
+msgid "Set Related Url (Manual)"
+msgstr "Zet Verwante URL (Manueel)"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Verwijder uit Collectie"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Toevoegen aan Collectie"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Toevoegen aan Lijst"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Toevoegen aan Bibliotheek"
+
+msgctxt "#30140"
+msgid "Set Addic7ed TVShowID"
+msgstr "Zet Addic7ed SerieID"
+
+msgctxt "#30141"
+msgid "Use Default episode matching"
+msgstr "Gebruik Standaard Vergelijking voor Afleveringen"
+
+msgctxt "#30142"
+msgid "Use Episode Title matching"
+msgstr " Gebruik Titel Vergelijking voor Afleveringen"
+
+msgctxt "#30143"
+msgid "Set Related Url (Search)"
+msgstr "Zet Verwante URL (Opzoeken)"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Trailer Afspelen"
+
+msgctxt "#30145"
+msgid "Pick a list"
+msgstr "Kies een Lijst"
+
+msgctxt "#30146"
+msgid "No Lists exist for user: %s"
+msgstr "Er bestaat geen Lijst voor gebruiker: %s"
+
+msgctxt "#30147"
+msgid "Scraper Automatically Disabled"
+msgstr "Scraper Automatisch Gedesactiveerd"
+
+msgctxt "#30148"
+msgid "[COLOR blue]%s[/COLOR]'s FL of %s is over your Failure Level threshold"
+msgstr "[COLOR blue]%s[/COLOR]'s MP van de %s is meer dan jouw Mislukte Pogingen drempel"
+
+msgctxt "#30149"
+msgid "Disabling it avoids wasting time and resources"
+msgstr "Uitschakelen voorkomt onodige tijd en middelen"
+
+msgctxt "#30150"
+msgid "([I]If you Keep Enabled, consider increasing scraper timeout[/I])"
+msgstr "([I]Als u dit Actief laat, houd er rekening mee dat scrapers een hogere tijdslimiet hebben  [/I])"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Behoud als actief"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Deactiveren"
+
+msgctxt "#30153"
+msgid "Trakt Bookmark Exists"
+msgstr "Trakt Bestand Bestaat al"
+
+msgctxt "#30154"
+msgid "Local Bookmark Exists"
+msgstr "Lokaal Bestand Bestaat al"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Doorgaan vanaf %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Start vanaf begin"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Doorgaan"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Downloaden: %s..."
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Download Compleet: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "Fout (%s) tijdens downloaden: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Trakt Account Machtiging"
+
+msgctxt "#30173"
+msgid "Trakt Authorization Complete"
+msgstr "Trakt Machtiging Voldaan"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Geactiveerd"
+
+msgctxt "#30175"
+msgid "Base Url"
+msgstr "Basis Url"
+
+msgctxt "#30176"
+msgid "Include in Page Existence checks?"
+msgstr "Invoegen in Bestaande Pagina controlles?"
+
+msgctxt "#30177"
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Paswoord"
+
+msgctxt "#30179"
+msgid "Filter results older than (0=No Filter) (days)"
+msgstr "Filter resultaten ouder dan (0=Geen Filter) (Dagen)"
+
+msgctxt "#30180"
+msgid "Automatically Select"
+msgstr "Automatisch Selecteren"
+
+msgctxt "#30181"
+msgid "Include Premium"
+msgstr "Inclusief Premium"
+
+msgctxt "#30182"
+msgid "Maximum Pages"
+msgstr "Maximaal Pagina's"
+
+msgctxt "#30183"
+msgid "No Sources Found"
+msgstr "Geen Bronnen Gevonden"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Seizoen"
+
+msgctxt "#30185"
+msgid "DISABLED"
+msgstr "Uitgeschakeld"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Zoeken"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Bekeken"
+
+msgctxt "#30188"
+msgid "Unwatched"
+msgstr "Niet Bekeken"
+
+msgctxt "#30189"
+msgid "Updating"
+msgstr "Updaten"
+
+msgctxt "#30190"
+msgid "Failed to create directory"
+msgstr "Kan geen map aanmaken"
+
+msgctxt "#30191"
+msgid "Failed to write file"
+msgstr "Kan geen bestand schrijven"
+
+msgctxt "#30192"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Reset Alle Scraper Urls naar Standaard Waarden"
+
+msgctxt "#30193"
+msgid "Base Url Reset Complete"
+msgstr "Basis Url Reset Compleet"
+
+msgctxt "#30194"
+msgid "Requesting Url for: %s"
+msgstr "Ophalen Url voor: %s"
+
+msgctxt "#30195"
+msgid "'%s' added to library"
+msgstr "'%s' toegevoegd aan bibliotheek"
+
+msgctxt "#30196"
+msgid "Add to Section Menu"
+msgstr "Toevoegen aan Menu Selectie"
+
+msgctxt "#30197"
+msgid "Remove from Section Menu"
+msgstr "Verwijderen van Menu Selectie"
+
+msgctxt "#30198"
+msgid "Liked Lists"
+msgstr "Link Lijst"
+
+msgctxt "#30199"
+msgid "%s Mosts"
+msgstr "%s Meest"
+
+msgctxt "#30200"
+msgid "Most Played This Week"
+msgstr "Meest Afgespeeld Deze Week"
+
+msgctxt "#30201"
+msgid "Most Played This Month"
+msgstr "Meest Afgespeeld Deze Maand"
+
+msgctxt "#30202"
+msgid "Most Played All Time"
+msgstr "Meest Afgespeeld Totaal"
+
+msgctxt "#30203"
+msgid "Most Watched This Week"
+msgstr "Meest Bekeken Deze Week"
+
+msgctxt "#30204"
+msgid "Most Watched This Month"
+msgstr "Meest Bekeken Deze Maand"
+
+msgctxt "#30205"
+msgid "Most Watched All Time"
+msgstr "Meest Bekeken Totaal"
+
+msgctxt "#30206"
+msgid "Most Collected This Week"
+msgstr "Meest Toegevoegd Deze Week"
+
+msgctxt "#30207"
+msgid "Most Collected This Month"
+msgstr "Meest Toegevoegd Deze Maand"
+
+msgctxt "#30208"
+msgid "Most Collected All Time"
+msgstr "Meest Toegevoegd Totaal"
+
+msgctxt "#30209"
+msgid "%s NOT added to library (%s)"
+msgstr "%s NIET toegevoegd aan bibliotheek (%s)"
+
+msgctxt "#30210"
+msgid "Local Exists"
+msgstr "Lokaal Bestaat"
+
+msgctxt "#30211"
+msgid "Scraper Download Url"
+msgstr "Scraper Download Url"
+
+msgctxt "#30212"
+msgid "Scraper Decryption Key"
+msgstr "Scraper Decryptie Sleutel"
+
+msgctxt "#30213"
+msgid "Trakt On Deck"
+msgstr "Trakt Aan Dek"
+
+msgctxt "#30214"
+msgid "on"
+msgstr "Aan"
+
+msgctxt "#30215"
+msgid "Delete Bookmark"
+msgstr "Verwijder Bladwijzer"
+
+msgctxt "#30216"
+msgid "Bookmark Deleted"
+msgstr "Bladwijzer Verwijderd"
+
+msgctxt "#30217"
+msgid "Force No Match"
+msgstr "Geen Overeenkomst Forceren"
+
+msgctxt "#30218"
+msgid "Getting Sources"
+msgstr "Bronnen Ophalen"
+
+msgctxt "#30219"
+msgid "Requested Sources from: %s"
+msgstr "Ophalen Bronnen van: %s"
+
+msgctxt "#30220"
+msgid "Received Sources: (%s / %s) from %s"
+msgstr "Bronnen Ontvangen: (%s / %s) van %s"
+
+msgctxt "#30221"
+msgid "Applying Source Filters"
+msgstr "Bron Filters Toevoegen"
+
+msgctxt "#30222"
+msgid "Include Links from Comments"
+msgstr "Voeg Links toe van Reacties"
+
+msgctxt "#30223"
+msgid "My Watched History"
+msgstr "Mijn Bekeken Geschiedenis"
+
+msgctxt "#30224"
+msgid "Trying Sources for Auto-Play"
+msgstr "Bronen proberen voor Auto-Play"
+
+msgctxt "#30225"
+msgid "Trying: [%s] %s from %s"
+msgstr "Probeer: [%s] %s van de %s"
+
+msgctxt "#30226"
+msgid "Failed: [%s] %s from %s"
+msgstr "Gefaald: [%s] %s van de %s"
+
+msgctxt "#30227"
+msgid "Scraper Timeouts: [COLOR blue]%s[/COLOR]"
+msgstr "Bronnen buiten Tijdslimiet: [COLOR blue]%s[/COLOR]"
+
+msgctxt "#30228"
+msgid "Reset Failures"
+msgstr "Herstel Gefaalde"
+
+msgctxt "#30229"
+msgid "Maximum Source Results"
+msgstr "Maximaal Bron Resultaten"
+
+msgctxt "#30230"
+msgid "Include in My Next Episodes"
+msgstr "Invoegen in Mijn Volgende Afleveringen"
+
+msgctxt "#30231"
+msgid "Auto-Play"
+msgstr "Automatisch-Afspelen"
+
+msgctxt "#30232"
+msgid "Set Trakt.tv API timeout to 60 seconds"
+msgstr "Zet Trakt.tv API tijdslimiet naar 60 seconden"
+
+msgctxt "#30233"
+msgid "Set Calendar start day to Yesterday"
+msgstr "Zet Kalender start dag naar Gisteren"
+
+msgctxt "#30234"
+msgid "Show Episode Airtime on Calendar"
+msgstr "Toon Afleverings Zendtijd op Kalender"
+
+msgctxt "#30235"
+msgid "Set Scraper timeout to 20 seconds"
+msgstr "Set Scraper tijdslimiet naar 20 seconden"
+
+msgctxt "#30236"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Volglijst invoegen in Mijn Volgende Afleveringen"
+
+msgctxt "#30237"
+msgid "Remove Deleted Direct sources from results"
+msgstr "Verwijder Verwijderde Directe bronnen van restultaat"
+
+msgctxt "#30238"
+msgid "Remove Unusable Indirect sources from results"
+msgstr "Verwijder Onbruikbare Indirecte bronnen van resultaat "
+
+msgctxt "#30239"
+msgid "Highlight Debrid Sources in results"
+msgstr "Highlight Debrid Bronnen in resultaten"
+
+msgctxt "#30240"
+msgid "No Limit on Maximum Source Results"
+msgstr "Geen Limiet voor Maximaal Bron Resultaat"
+
+msgctxt "#30241"
+msgid "Set Source Sort Keys to default"
+msgstr "Zet Bron sorteer Keys naar standaard"
+
+msgctxt "#30242"
+msgid "Set Scraper Sort Order to default"
+msgstr "Zer Scraper volgorde naar standaard"
+
+msgctxt "#30243"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Reset Alle Scraper Basis Urls naar standaard"
+
+msgctxt "#30244"
+msgid "Select All/None"
+msgstr "Slecteer Alles/Geen"
+
+msgctxt "#30245"
+msgid "Automatically Select Best Source"
+msgstr "Automatisch slecteren van Beste Bron"
+
+msgctxt "#30246"
+msgid "SALTS Database Issue Recovery"
+msgstr "SALTS Database Fout Herstellen"
+
+msgctxt "#30247"
+msgid ""
+"The SALTS DB has an issue that may be correctable by a forced DB migration."
+msgstr "De SALTS DB heeft een Fout die hersteld kan worden door een DB migratie"
+
+msgctxt "#30248"
+msgid "Should SALTS attempt a DB migration?"
+msgstr "Moet SALTS een DB migratie uitvoeren?"
+
+msgctxt "#30249"
+msgid "DB Migration Failed but a DB reset may succeed."
+msgstr "DB Migratie Mislukt maar DB is succesvol reset."
+
+msgctxt "#30250"
+msgid "Should SALTS attempt a DB reset?"
+msgstr "Moet SALTS een DB reset uitvoeren?"
+
+msgctxt "#30251"
+msgid "([COLOR red]***All DB data will be lost.***[/COLOR])"
+msgstr "([COLOR red]***Alle DB data zal verdwijnen.***[/COLOR])"
+
+msgctxt "#30252"
+msgid "DB Reset Failed: %s"
+msgstr "DB Reset Mislukt: %s"
+
+msgctxt "#30253"
+msgid "No Streamable Url Found"
+msgstr "Geen Url voor Sreamen Gevonden"
+
+msgctxt "#30254"
+msgid "Discovering Next Episodes"
+msgstr "Ontdek Volgende Afleveringen"
+
+msgctxt "#30255"
+msgid "Retrieving Watched History"
+msgstr "Ontvangen van Bekeken Geschiedenis"
+
+msgctxt "#30256"
+msgid "Retrieving Watchlist"
+msgstr "Ontvangen Watchlist"
+
+msgctxt "#30257"
+msgid "Retrieving Hidden Progress List"
+msgstr "Ontvangen Verborgen Voortgangs-lijst"
+
+msgctxt "#30258"
+msgid "Requesting Progress for: %s"
+msgstr "Opvragen Voortgang voor: %s"
+
+msgctxt "#30259"
+msgid "Received Progress for: %s"
+msgstr "Ontvangen Voortgang voor: %s"
+
+msgctxt "#30260"
+msgid "Reset Related Urls"
+msgstr "Reset Verwante Urls"
+
+msgctxt "#30261"
+msgid "Related Urls Cleared: %s"
+msgstr "Verwante Urls schoongemaakt: %s"
+
+msgctxt "#30262"
+msgid "Anticipated %s"
+msgstr "Verwacht %s"
+
+msgctxt "#30263"
+msgid "Set as Sources View"
+msgstr "Zet als Bron Weergave "
+
+msgctxt "#30264"
+msgid "Set Related Season Url (Search)"
+msgstr "Zet Verwante Seizoens-Url (Opzoeken)"
+
+msgctxt "#30265"
+msgid "Trakt API Offline Mode Enabled"
+msgstr "Trakt API Offline Modus Geactiveerd"
+
+msgctxt "#30266"
+msgid "On ANY device, visit: %s"
+msgstr "Op ieder Apparaat, bezoek: %s"
+
+msgctxt "#30267"
+msgid "When prompted, enter code: %s"
+msgstr "Wanneer gevraagd, vul code in: %s"
+
+msgctxt "#30268"
+msgid "Code expires in: %s seconds"
+msgstr "Code verloopt over: %s seconden"
+
+msgctxt "#30269"
+msgid "Authorization was Rejected"
+msgstr "Machtigen is Niet Geslaagd"
+
+msgctxt "#30270"
+msgid "To watch this video scan the QR Code below or visit [COLOR blue]"
+msgstr "Om deze video te bekijken scan de onderstaande QR code of ga naar [COLOR blue]"
+
+msgctxt "#30271"
+msgid "[/COLOR] from any device on the same network as this device."
+msgstr "[/COLOR] op een apparaat dat verbonden is in het zelfde netwerk als dit apparaat."
+
+msgctxt "#30272"
+msgid "Watch It Again"
+msgstr "Nogmaals Bekijken"
+
+msgctxt "#30273"
+msgid "Pick a list to use for Watch It Again"
+msgstr "Kies een lijst om tegbruiken voor Nogmaals Bekijken"
+
+msgctxt "#30274"
+msgid "Use Least Watched Method"
+msgstr "Gebruik Minst Bekeken Methode"
+
+msgctxt "#30275"
+msgid "Use Most Watched Method"
+msgstr "Gebruik Meest Bekeken Methode"
+
+msgctxt "#30276"
+msgid "Use Last Watched Method"
+msgstr "Gebruik Laatst Bekeken Methode"
+
+msgctxt "#30277"
+msgid "Set as Watch It Again List"
+msgstr "Instellen als Nogmaals Bekijken Lijst"
+
+msgctxt "#30278"
+msgid "Playback only allowed from Library & SALTS"
+msgstr "Afspelen alleen geldig van Bibliotheek & SALTS"
+
+msgctxt "#30279"
+msgid "Maximum Allowed Size (GB) (0 = No Limit)"
+msgstr "Maximaal toegestaande formaat (GB) (0 = Geen limiet)"
+
+msgctxt "#30280"
+msgid "Show Episode Airtime in My Next Episodes"
+msgstr "Toon Aflevering zendtijd in Mijn Volgende Afleveringen"
+
+msgctxt "#30281"
+msgid "Include Transodes"
+msgstr "Transodes Invoegen"
+
+msgctxt "#30282"
+msgid "Next Episode"
+msgstr "Volgende Afleveringen"
+
+msgctxt "#30283"
+msgid "Remaining: %s of %s"
+msgstr "Resterend: %s van %s"
+
+msgctxt "#30284"
+msgid "Remaining: %s"
+msgstr "Resterend: %s"
+
+msgctxt "#30285"
+msgid "Genres"
+msgstr "Genres"
+
+msgctxt "#30286"
+msgid "Retrieving Collection"
+msgstr "Ontvang Collectie"
+
+msgctxt "#30287"
+msgid "Adding Items to Directory"
+msgstr "Items Toevoegen aan Map"
+
+msgctxt "#30288"
+msgid "Working..."
+msgstr "Bezig..."
+
+msgctxt "#30289"
+msgid "Re-Scrape All"
+msgstr "Alles Opnieuw Ophalen"
+
+msgctxt "#30290"
+msgid "Manual Search (All Unmatched Only)"
+msgstr "Handmatig Zoeken (Alle Niet Gematchte Resultaten)"
+
+msgctxt "#30291"
+msgid "Torba Account Authorization"
+msgstr "Torba Account Authorisatie"
+
+msgctxt "#30292"
+msgid "Torba Authorization Complete"
+msgstr "Torba Authorisatie Gereed"
+
+msgctxt "#30293"
+msgid "Torba Authorization Failed"
+msgstr "Torba Authorisatie Mislukt"
+
+msgctxt "#30294"
+msgid "Authorize SALTS to access my torba account"
+msgstr "Authoriseer SALTS om mijn torba account te benaderen"
+
+msgctxt "#30295"
+msgid "and login when prompted"
+msgstr "En login wanneer gevraagd wordt"
+
+msgctxt "#30296"
+msgid "Flush Image Cache"
+msgstr "Afbeeldings Cache Legen"
+
+msgctxt "#30297"
+msgid "Are you sure you want to clear the image metadata cache?"
+msgstr "Weet u zeker dat je de Afbeeldings cache wilt legen?"
+
+msgctxt "#30298"
+msgid "The addon will be significantly slower until is is re-cached."
+msgstr "De addon zal iets langzamer werken tot alles weer is re-cached."
+
+msgctxt "#30299"
+msgid "Flush Complete"
+msgstr "Legen Voltooid"
+
+msgctxt "#30300"
+msgid "Refresh Images"
+msgstr "Afbeeldingen verversen"
+
+msgctxt "#30301"
+msgid "Private Scraper Updated: "
+msgstr "Prive Scraper Geupdate:"
+
+msgctxt "#30302"
+msgid "Reset Torba Authorization"
+msgstr "Reset Torba Authorisatie"
+
+msgctxt "#30303"
+msgid "Torba Authorization Reset"
+msgstr "Torba Authorisatie Reset"
+
+msgctxt "#30500"
+msgid "Addon Theme"
+msgstr "Addon Thema"
+
+msgctxt "#30501"
+msgid "Authorized Trakt User"
+msgstr "Authoriseer Trakt Gebruiker"
+
+msgctxt "#30502"
+msgid "Calendar Start Day (0=Today)"
+msgstr "Kalender Start Dag (0=Vandaag)"
+
+msgctxt "#30503"
+msgid "Show air time on calendars"
+msgstr "Toon zendtijd op calenders"
+
+msgctxt "#30504"
+msgid "My Collection Sort Order"
+msgstr "Mijn Collectie Sorteervolgorde"
+
+msgctxt "#30505"
+msgid "My Next Episodes Sort Order"
+msgstr "Mijn Volgende Afleveringen Sorteervolgorde"
+
+msgctxt "#30506"
+msgid "Show unaired episodes in My Next Episodes"
+msgstr "Toon niet uitgezonde afleveringen in Mijn Volgende Afleveringen "
+
+msgctxt "#30507"
+msgid "Show Season 0 in Seasons View"
+msgstr "Toon Seizoen 0 in Seizoens weergave"
+
+msgctxt "#30508"
+msgid "Show unaired episodes in Seasons"
+msgstr "Toon niet uitgezonde afleveringen in Seizoenen"
+
+msgctxt "#30509"
+msgid "    Show an Indicator on Unaired Episodes"
+msgstr "Toon indicator bij Niet Uitgezonde Afleveringen"
+
+msgctxt "#30510"
+msgid "    Show episodes with unknown air date"
+msgstr "Toon afleveringen met onbekende Uitzend datum"
+
+msgctxt "#30511"
+msgid "Off"
+msgstr "Uit"
+
+msgctxt "#30512"
+msgid "24 Hour"
+msgstr "24 Uur"
+
+msgctxt "#30513"
+msgid "12 Hour"
+msgstr "12 Uur"
+
+msgctxt "#30514"
+msgid "Previously Collected"
+msgstr "Laatst Verzameld"
+
+msgctxt "#30515"
+msgid "Recently Collected"
+msgstr "Pas Verzameld"
+
+msgctxt "#30516"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "Jaren"
+
+msgctxt "#30518"
+msgid "Recent Activity"
+msgstr "Recente Activiteit"
+
+msgctxt "#30519"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30520"
+msgid "Most Completed"
+msgstr "Meest Voltooit"
+
+msgctxt "#30521"
+msgid "Least Completed"
+msgstr "Minst Voltooit"
+
+msgctxt "#30522"
+msgid "Recently Aired"
+msgstr "Recent Uitgezonden"
+
+msgctxt "#30523"
+msgid "Previously Aired"
+msgstr "Hiervoor Uitgezonden"
+
+msgctxt "#30524"
+msgid "Show Trending"
+msgstr "Toon Uitgelicht"
+
+msgctxt "#30525"
+msgid "Show Popular"
+msgstr "Toon Populair"
+
+msgctxt "#30526"
+msgid "Show Recently Updated"
+msgstr "Toon Recent Geupdate"
+
+msgctxt "#30527"
+msgid "Show Recommended"
+msgstr "Toon Aanbevolen"
+
+msgctxt "#30528"
+msgid "Show My Collection"
+msgstr "Toon Mijn Verzameling"
+
+msgctxt "#30529"
+msgid "Show My Favorites"
+msgstr "Toon Mijn Favorieten"
+
+msgctxt "#30530"
+msgid "Show My Subscriptions"
+msgstr "Toon Mijn Abonementen"
+
+msgctxt "#30531"
+msgid "Show My Watchlist"
+msgstr "Toon Mijn Volglijst"
+
+msgctxt "#30532"
+msgid "Show My Lists"
+msgstr "Toon Mijn Lijst"
+
+msgctxt "#30533"
+msgid "Show Other Lists"
+msgstr "Toon Andere Lijst"
+
+msgctxt "#30534"
+msgid "Show My Next Episodes"
+msgstr "Toon Mijn Volgende Afleveringen"
+
+msgctxt "#30535"
+msgid "Show My Calendar"
+msgstr "Toon Mijn Kalender"
+
+msgctxt "#30536"
+msgid "Show General Calendar"
+msgstr "Toon Standaard Kalender"
+
+msgctxt "#30537"
+msgid "Show Premiere Calendar"
+msgstr "Toon Premiere Calender"
+
+msgctxt "#30538"
+msgid "Show Friends"
+msgstr "Toon Vrienden"
+
+msgctxt "#30539"
+msgid "Show Search"
+msgstr "Toon Zoeken"
+
+msgctxt "#30540"
+msgid "Default Views"
+msgstr "Standaard Weergave"
+
+msgctxt "#30541"
+msgid "Default Movies View (0 = None)"
+msgstr "Standaard Film Weergave (0 = Geen)"
+
+msgctxt "#30542"
+msgid "Default TV Shows View (0 = None)"
+msgstr "Standaard Serie Weergave (0 = Geen)"
+
+msgctxt "#30543"
+msgid "Default Seasons View (0 = None)"
+msgstr "Standaard Seizoens weergaven (0 = Geen)"
+
+msgctxt "#30544"
+msgid "Default Episodes View (0 = None)"
+msgstr "Standaard Afleverings Weergave (0 = Geen)"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Algemeen"
+
+msgctxt "#30546"
+msgid "User Interface"
+msgstr "Gebruikers interface"
+
+msgctxt "#30547"
+msgid "How do I authorize SALTS to access my trakt.tv account?"
+msgstr "Hoe Authoriseer ik SALTS om mijn trakt.tv account te gebruiken?"
+
+msgctxt "#30548"
+msgid "Use HTTPS"
+msgstr "Gebruik HTTPS"
+
+msgctxt "#30549"
+msgid "Trakt Timeout (seconds) (0=No Limit)"
+msgstr "Trakt Tijdslimiet (seconden) (0=Geen Limiet)"
+
+msgctxt "#30550"
+msgid "Trakt Page Size"
+msgstr "Trakt Pagina Grote"
+
+msgctxt "#30551"
+msgid "Pre-Test All Direct Sources"
+msgstr "Pre-Test Alle Directe Bronnen"
+
+msgctxt "#30552"
+msgid "Use Trakt Bookmarks"
+msgstr "Gebruik Trakt Bladwijzers"
+
+msgctxt "#30555"
+msgid "Include People"
+msgstr "Voeg Acteurs toe"
+
+msgctxt "#30556"
+msgid "Minimum Image Size"
+msgstr "Minimaal Afbeelding Formaat"
+
+msgctxt "#30557"
+msgid "Library Integration"
+msgstr "Bibliotheek Intergratie"
+
+msgctxt "#30558"
+msgid "TV Show Folder"
+msgstr "Serie Map"
+
+msgctxt "#30559"
+msgid "Movie Folder"
+msgstr "Film Map"
+
+msgctxt "#30560"
+msgid "Automatically Update Subscriptions"
+msgstr "Automatisch Abonnementen Updaten"
+
+msgctxt "#30561"
+msgid "     Update Interval (hours)"
+msgstr "Update Interval (Uren)"
+
+msgctxt "#30562"
+msgid "     During StartUp?"
+msgstr "Tijdens Opstarten?"
+
+msgctxt "#30563"
+msgid "     During Playback?"
+msgstr "Tijdens Afspelen?"
+
+msgctxt "#30564"
+msgid "Require Site Page for Movies?"
+msgstr "Webpagina Nodig voor Films?"
+
+msgctxt "#30565"
+msgid "Include specials in library?"
+msgstr "Specials invoegen in bibliotheek? "
+
+msgctxt "#30566"
+msgid "Include episodes with unknown air dates"
+msgstr "Afleveringen met onbekende uitzend datum invoegen?"
+
+msgctxt "#30567"
+msgid "Update Library Afterward?"
+msgstr "Biliotheek Updaten Achteraf?"
+
+msgctxt "#30568"
+msgid "Show Notifications?"
+msgstr "Toon Meldingen?"
+
+msgctxt "#30569"
+msgid "Include Movies?"
+msgstr "Films Invoegen?"
+
+msgctxt "#30570"
+msgid "Prune Ended Shows?"
+msgstr "Verwijder Beëindigde Series?"
+
+msgctxt "#30571"
+msgid "Source Management"
+msgstr "Bron Beheer"
+
+msgctxt "#30572"
+msgid "Auto-Play Sources"
+msgstr "Bronnen Automatisch Afspelen"
+
+msgctxt "#30573"
+msgid "    Source Selection Method"
+msgstr "Bron Selectie Methode"
+
+msgctxt "#30574"
+msgid "Show Download Option"
+msgstr "Toon Download Optie"
+
+msgctxt "#30575"
+msgid "    Show Download Progress"
+msgstr "Toon Download Voortgang"
+
+msgctxt "#30576"
+msgid "    TV Show Download Folder"
+msgstr "Series Download Locatie"
+
+msgctxt "#30577"
+msgid "    Movie Download Folder"
+msgstr "Films Download Locatie"
+
+msgctxt "#30578"
+msgid "Scraper Timeout (seconds) (0=No Limit)"
+msgstr "Scraper Tijdslimiet (seconden) (0=Geen Limiet)"
+
+msgctxt "#30579"
+msgid "Maximum Source Results (0=No Limit)"
+msgstr "Maximaal Bronnen (0=Geen Limiet)"
+
+msgctxt "#30580"
+msgid "Filter Out Unusable Sources"
+msgstr "Filteren van Onbruikbare Bronnen"
+
+msgctxt "#30581"
+msgid "Source Exclusion List"
+msgstr "Uitgesloten Bron lijst"
+
+msgctxt "#30582"
+msgid "Maximum Allowed TV Show Quality"
+msgstr "Maximaal Toegestaande Serie Kwaliteit"
+
+msgctxt "#30583"
+msgid "Maximum Allowed Movie Quality"
+msgstr "Maximaal Toegestaande Film Kwaliteit"
+
+msgctxt "#30584"
+msgid "Match episode air date when season & episode fails"
+msgstr "Gebruik afleverings uitzenddatum als seizoen & aflevering niet werkt "
+
+msgctxt "#30585"
+msgid "Match episode title when season & episode fails"
+msgstr "Gebruik aflevrings titel als seizoen & aflevering niet werkt"
+
+msgctxt "#30586"
+msgid "Automatically disable ineffective scrapers"
+msgstr "Automatisch annuleer slechte scrapers"
+
+msgctxt "#30587"
+msgid "    Check Frequency (requests)"
+msgstr "Controleer Frequentie (verzoeken)"
+
+msgctxt "#30588"
+msgid "    Minimum Allowed Success Percentage"
+msgstr "Minimaal Toegestaan Succes Percentage"
+
+msgctxt "#30589"
+msgid "Window"
+msgstr "Scherm"
+
+msgctxt "#30590"
+msgid "Background"
+msgstr "Achtergrond"
+
+msgctxt "#30591"
+msgid "Source Sorting"
+msgstr "Bron Volgorde"
+
+msgctxt "#30592"
+msgid "Sort Sources"
+msgstr "Bronnen Sorteren"
+
+msgctxt "#30594"
+msgid "1st Sort Key"
+msgstr "1e Sorteer Key"
+
+msgctxt "#30595"
+msgid "1st Sort Key Order"
+msgstr "1e Sorteer key volgorde"
+
+msgctxt "#30596"
+msgid "2nd Sort Key"
+msgstr "2e Sorteer Key"
+
+msgctxt "#30597"
+msgid "2nd Sort Key Order"
+msgstr "2e Sorteer key volgorde"
+
+msgctxt "#30598"
+msgid "3rd Sort Key"
+msgstr "3e Sorteer Key"
+
+msgctxt "#30599"
+msgid "3rd Sort Key Order"
+msgstr "3e Sorteer key volgorde"
+
+msgctxt "#30600"
+msgid "4th Sort Key"
+msgstr "4e Sorteer Key"
+
+msgctxt "#30601"
+msgid "4th Sort Key Order"
+msgstr "4e Sorteer key volgorde"
+
+msgctxt "#30602"
+msgid "5th Sort Key"
+msgstr "5e Sorteer Key"
+
+msgctxt "#30603"
+msgid "5th Sort Key Order"
+msgstr "5e Sorteer key volgorde"
+
+msgctxt "#30604"
+msgid "None"
+msgstr "Geen"
+
+msgctxt "#30605"
+msgid "Source"
+msgstr "Bron"
+
+msgctxt "#30606"
+msgid "Quality"
+msgstr "Kwaliteit"
+
+msgctxt "#30607"
+msgid "Views"
+msgstr "Bekeken"
+
+msgctxt "#30608"
+msgid "Rating"
+msgstr "Resultaat"
+
+msgctxt "#30609"
+msgid "Direct"
+msgstr "Direct"
+
+msgctxt "#30610"
+msgid "Best to Worst"
+msgstr "Best naar slechtst"
+
+msgctxt "#30611"
+msgid "Worst to Best"
+msgstr "Slechtst naar Best"
+
+msgctxt "#30612"
+msgid "Base Url"
+msgstr "Basis Url"
+
+msgctxt "#30613"
+msgid "Include in Page Existence checks?"
+msgstr "Invoegen in bestaande pagina controlles?"
+
+msgctxt "#30614"
+msgid "Subtitles work only for TV Shows currently"
+msgstr "Ondertiteling werkt aleen tijdelijk voor Series"
+
+msgctxt "#30615"
+msgid "Enable Subtitles"
+msgstr "Activeer Ondertiteling"
+
+msgctxt "#30616"
+msgid "Show subtitle indicators"
+msgstr "Toon Ondertiteling indicators"
+
+msgctxt "#30617"
+msgid "Subtitle Language"
+msgstr "Ondertitelings Taal"
+
+msgctxt "#30618"
+msgid "Require Hearing Impaired"
+msgstr "Vereisen voor Slechthorende "
+
+msgctxt "#30619"
+msgid "Require HD"
+msgstr "Vereis HD"
+
+msgctxt "#30620"
+msgid "Download Subtitles on playback"
+msgstr "Download Ondertiteling bij afspelen"
+
+msgctxt "#30621"
+msgid "Subtitle Download Folder"
+msgstr "Ondertiteling Donwload lokatie"
+
+msgctxt "#30622"
+msgid "Show Subtitles on Playback"
+msgstr "Toon Ondertiteling bij Afspelen"
+
+msgctxt "#30623"
+msgid "Use a MySQL DB"
+msgstr "Gebruik een MySQL DataBase"
+
+msgctxt "#30624"
+msgid "    Address"
+msgstr "Adres"
+
+msgctxt "#30625"
+msgid "    Port"
+msgstr "Poort"
+
+msgctxt "#30626"
+msgid "    Username"
+msgstr "Gebruikersnaam"
+
+msgctxt "#30627"
+msgid "    Password"
+msgstr "Paswoord"
+
+msgctxt "#30628"
+msgid "    Database"
+msgstr "DataBase"
+
+msgctxt "#30629"
+msgid "    Upgrade DB during XBMC startup"
+msgstr "Upgrade DataBase tijdens opstarten KODI"
+
+msgctxt "#30630"
+msgid "Flush webpage cache..."
+msgstr "Opschonen webpagina cache..."
+
+msgctxt "#30631"
+msgid "Reset SALTS DB ([COLOR red]SQLITE Only[/COLOR])"
+msgstr "Reset SALTS DataBase ([COLOR red]Alleen SQLITE[/COLOR])"
+
+msgctxt "#30632"
+msgid "Export data from SALTS DB"
+msgstr "Exporteer data van SALTS DataBase"
+
+msgctxt "#30633"
+msgid "Import data into SALTS DB"
+msgstr "Importeer data naar SALTS DataBase"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Ondertiteling"
+
+msgctxt "#30635"
+msgid "Database"
+msgstr "DataBase"
+
+msgctxt "#30636"
+msgid "Most Recent"
+msgstr "Meest Recent"
+
+msgctxt "#30637"
+msgid "Highest Quality"
+msgstr "Hoogste Kwaliteit"
+
+msgctxt "#30638"
+msgid "Prompt"
+msgstr "Uitvoeren"
+
+msgctxt "#30639"
+msgid "On"
+msgstr "Aan"
+
+msgctxt "#30640"
+msgid "Show Liked Lists"
+msgstr "Toon Like Lijst"
+
+msgctxt "#30641"
+msgid "Show Mosts"
+msgstr "Toon Meeste"
+
+msgctxt "#30642"
+msgid "Watchlist Sort Order"
+msgstr "Volglijst Sorteer Orde"
+
+msgctxt "#30643"
+msgid "Recently Added"
+msgstr "Recent Toegevoegd"
+
+msgctxt "#30644"
+msgid "Previously Added"
+msgstr "Hiervoor Toegevoegd"
+
+msgctxt "#30645"
+msgid "Skip movies/episodes that exist locally"
+msgstr "Films/series overslaan die locaal bestaan"
+
+msgctxt "#30646"
+msgid "Include Watchlist in My Next Episodes"
+msgstr "Volglijst Gebruiken in Mijn Volgende Afleveringen"
+
+msgctxt "#30647"
+msgid "Show Trakt On Deck"
+msgstr "Toon Track Aan Dek"
+
+msgctxt "#30648"
+msgid "Show Custom Progress Dialog from Library"
+msgstr "Toon Custom Process Dialoog van Bibliotheek"
+
+msgctxt "#30649"
+msgid "Create tvshow/movie nfo file for?"
+msgstr "Maak serie/film nfo bestand voor?"
+
+msgctxt "#30650"
+msgid "Won't scrape"
+msgstr "scraped niet"
+
+msgctxt "#30651"
+msgid "All"
+msgstr "Alles"
+
+msgctxt "#30652"
+msgid "Show Debrid Supported Sources in ..."
+msgstr "Toon Debrid Ondersteunde Bronnen in ..."
+
+msgctxt "#30653"
+msgid "6th Sort Key"
+msgstr "6e Sorteer Key"
+
+msgctxt "#30654"
+msgid "6th Sort Key Order"
+msgstr "6e Sorteer key volgorde"
+
+msgctxt "#30655"
+msgid "Debrid"
+msgstr "Debrid"
+
+msgctxt "#30656"
+msgid "Show My Watched History"
+msgstr "Toon Mijn Bekeken Geschiedenis"
+
+msgctxt "#30657"
+msgid "    Consecutive Failure Level Limit"
+msgstr "Opeenvolgende Faal Level Limit"
+
+msgctxt "#30658"
+msgid "Mute Notifications"
+msgstr "Meldingen Uitschakelen"
+
+msgctxt "#30659"
+msgid "Exclude Completed, Ended Shows from My Next Episodes"
+msgstr "Seizoenen Uitsluiten, die Beëindigd zijn van Mijn Volgende Afleveringen "
+
+msgctxt "#30660"
+msgid "HD1080"
+msgstr "HD1080"
+
+msgctxt "#30661"
+msgid "HD720"
+msgstr "HD720"
+
+msgctxt "#30662"
+msgid "High"
+msgstr "SD Hoog"
+
+msgctxt "#30663"
+msgid "Medium"
+msgstr "SD Gemiddeld"
+
+msgctxt "#30664"
+msgid "Low"
+msgstr "SD Laag"
+
+msgctxt "#30665"
+msgid "Automatically pick first matching subtitle"
+msgstr "Automatisch eerste Ondertiteling Selecteren"
+
+msgctxt "#30666"
+msgid "SALTS Auto Configuration"
+msgstr "SALTS Automatisch Configureren"
+
+msgctxt "#30667"
+msgid "Continue"
+msgstr "Volgende"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgctxt "#30669"
+msgid "Select this item to Install the SALTS Themepak"
+msgstr "Selecteer deze om SALTS Themepak te installeren"
+
+msgctxt "#30670"
+msgid "Show Settings"
+msgstr "Toon Instellingen"
+
+msgctxt "#30671"
+msgid "Show Anticipated"
+msgstr "Toon Verwacht"
+
+msgctxt "#30672"
+msgid "Default Sources View (0 = None)"
+msgstr "Standaard Bron Weergave (0 = Geen)"
+
+msgctxt "#30673"
+msgid "Scraper Last Update"
+msgstr "Scraper Laatst Geüpdatet "
+
+msgctxt "#30674"
+msgid "Trakt API Offline Mode"
+msgstr "Trakt API Offline modus"
+
+msgctxt "#30675"
+msgid "Torba IP Authorization"
+msgstr "Torba IP Autorisatie"
+
+msgctxt "#30676"
+msgid "Machine Speed"
+msgstr "CPU Snelheid"
+
+msgctxt "#30677"
+msgid "Automatic"
+msgstr "Automatisch"
+
+msgctxt "#30678"
+msgid "Very Slow"
+msgstr "Erg Langzaam"
+
+msgctxt "#30679"
+msgid "Slow"
+msgstr "Langzaam"
+
+msgctxt "#30680"
+msgid "Medium"
+msgstr "Gemiddeld"
+
+msgctxt "#30681"
+msgid "Fast"
+msgstr "Snel"
+
+msgctxt "#30682"
+msgid "Very Fast"
+msgstr "Erg Snel"
+
+msgctxt "#30683"
+msgid "Show Watch It Again"
+msgstr "Toon Nogmaals Bekijken"
+
+msgctxt "#30684"
+msgid "Show air time in MNE"
+msgstr "Toon uitzendtijd in MVA"
+
+msgctxt "#30686"
+msgid "Show Next Episode Notification"
+msgstr "Toon Volgende Aflevering Melding"
+
+msgctxt "#30687"
+msgid "    Next Episode Delay (secs)"
+msgstr "Volgende Aflevering Vertraging (sec)"
+
+msgctxt "#30688"
+msgid "    Show Next Episode on Unwatched"
+msgstr "Toon Volgende Aflevering bij Onbekeken"
+
+msgctxt "#30689"
+msgid "    Show air time in Next Episode"
+msgstr "Toon uitzendtijd in Volgende Aflevering"
+
+msgctxt "#30690"
+msgid "Show CF Site Protection Captchas"
+msgstr "Toon CF Site Beveiligde Captchas"
+
+msgctxt "#30691"
+msgid "    Next Episode Duration (secs)"
+msgstr "Volgende Afleveringen tijdsduur (sec)"
+
+msgctxt "#30692"
+msgid "Show Genres"
+msgstr "Toon Genres"
+
+msgctxt "#30693"
+msgid "Movie Genre List"
+msgstr "Film Genre Lijst"
+
+msgctxt "#30694"
+msgid "TV Genre List"
+msgstr "Serie Genre Lijst"
+
+msgctxt "#30695"
+msgid "Trending"
+msgstr "Uitgelicht"
+
+msgctxt "#30696"
+msgid "Popular"
+msgstr "Populair"
+
+msgctxt "#30697"
+msgid "Anticipated"
+msgstr "Verwacht"
+
+msgctxt "#30698"
+msgid "Most Watched (Week)"
+msgstr "Meest Bekeken (Week)"
+
+msgctxt "#30699"
+msgid "Most Watched (Month)"
+msgstr "Meest Bekeken (Maand)"
+
+msgctxt "#30700"
+msgid "Most Watched (All)"
+msgstr "Meest Bekeken (Totaal)"
+
+msgctxt "#30701"
+msgid "Most Played (Week)"
+msgstr "Meest Afgespeeld (Week)"
+
+msgctxt "#30702"
+msgid "Most Played (Month)"
+msgstr "Meest Afgespeeld (Maand)"
+
+msgctxt "#30703"
+msgid "Most Played (All)"
+msgstr "Meest Afgespeeld (Totaal)"
+
+msgctxt "#30704"
+msgid "Most Collected (Week)"
+msgstr "Meest Toegevoegd (Week)"
+
+msgctxt "#30705"
+msgid "Most Collected (Month)"
+msgstr "Meest Toegevoegd (Maand)"
+
+msgctxt "#30706"
+msgid "Most Collected (All)"
+msgstr "Meest Toegevoegd (Totaal)"
+
+msgctxt "#30707"
+msgid "Date Format"
+msgstr "Datum Formaat"
+
+msgctxt "#30708"
+msgid "Past Activity"
+msgstr "Laatste Activiteit"
+
+msgctxt "#30709"
+msgid "Always Show Custom Progress Dialogs"
+msgstr "Toon Altijd Custom Voortgang Dialogen"
+
+msgctxt "#30710"
+msgid "Image Metadata API Keys"
+msgstr "Afbeelding Metadata API Sleutel"
+
+msgctxt "#30711"
+msgid "Fanart.tv API Key (Blank = Disable)"
+msgstr "Fanart.tv API Sleutel (Leeg = Uitgeschakeld)"
+
+msgctxt "#30712"
+msgid "TMDB API Key (Blank = Disable)"
+msgstr "TMDB API Sleutel (Leeg = Uitgeschakeld)"
+
+msgctxt "#30713"
+msgid "TVDB API Key (Blank = Disable)"
+msgstr "TVDB API Sleutel (Leeg = Uitgeschakeld)"
+
+msgctxt "#30714"
+msgid "Enable OMDB Images"
+msgstr "Inschakelen OMDB Afbeeldingen"
+
+msgctxt "#30715"
+msgid "Enable TVMaze Images"
+msgstr "Inschakelen TVMaze Afbeeldingen"
+
+msgctxt "#30716"
+msgid "Flush Image Cache..."
+msgstr "Afbeeldingen Cache Legen..."
+
+msgctxt "#30717"
+msgid "Enable Fanart.tv Images"
+msgstr "Inschakelen Fanart.tv Afbeeldingen"
+
+msgctxt "#30718"
+msgid "Fanart.tv Personal API Key"
+msgstr "Fanart.tv Persoonlijke API Sleutel"
+
+msgctxt "#30719"
+msgid "Enable Backgrounds/Fanart"
+msgstr "Inschakelen Achtergronden/Fanart"
+
+msgctxt "#30720"
+msgid "Enable Posters"
+msgstr "Inschakelen Posters"
+
+msgctxt "#30721"
+msgid "Enable Banners"
+msgstr "Inschakelen Banners"
+
+msgctxt "#30722"
+msgid "Enable Clearart"
+msgstr "Inschakelen Clearart"
+
+msgctxt "#30723"
+msgid "Artwork Scraping"
+msgstr "Artwork Scraping"
+
+msgctxt "#30724"
+msgid "Enable Thumbnails"
+msgstr "Inschakelen Thumbnails"
+
+msgctxt "#30725"
+msgid "Artwork Types"
+msgstr "Artwork Types"
+
+msgctxt "#30726"
+msgid "    Use animated posters when available"
+msgstr "Gebruik geanimateerde posters als deze beschikbaar zijn"
+
+msgctxt "#30727"
+msgid "Enable Cast Thumbnails"
+msgstr "Inschakelen Cast Thumbnails"
+
+msgctxt "#30728"
+msgid "    *** Install TMDB API Cache ***"
+msgstr "    *** Installeer TMDB API Cache ***"
+
+msgctxt "#30729"
+msgid "    Debrid Highlight Color"
+msgstr "Debrid Highlight Kleur"
+

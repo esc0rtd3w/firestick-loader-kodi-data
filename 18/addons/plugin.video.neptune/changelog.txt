@@ -1,0 +1,77 @@
+[B]1.4.7[/B]
+- Added resolve url settings to neptune tools (Thanks for contributing help)
+[B]1.4.3[/B]
+- Down loader Fixed Should pop up successful window 
+[B]1.4.2[/B]
+- Fixed down loader thanks Pal appreciate re looking
+[B]1.4.1[/B]
+- Fixed Download from multiple links (thanks to a contributer)
+- Few Tweaks Improvements
+[B]1.4.0[/B]
+- Fixed Library Playback
+- Few Tweaks Improvements
+[B]1.3.7[/B]
+- Changed Disclaimer
+- Changed License
+[B]1.3.6[/B]
+- Changed all urlresolver imports to resolveurl
+- Changed everything todo with urlresolver to resolveurl
+[B]1.3.5[/B]
+- Fixed Mel Gibson Section 
+- Fixed Disney and pixar grabbing Marvel list
+[B]1.3.4[/B]
+- Updated sources to include DVD  quality
+[B]1.3.3[/B]
+- Fixed the next Page button on Genres etc in movies and tv shows.. (Thanks for Helping Muad'dib)
+- Redid a few imports (smoother response) and loads much better
+[B]1.3.2[/B]
+- Fixed imdb lists for tv shows (only showing to s)
+- Fixed the next page tab for user lists
+[B]1.3.1[/B]
+- Fixed next page function in the imdb userlist catagories
+[B]1.3.0[/B]
+- Removed an un needed Import (should load a little quicker)
+- Fixed and redid Horror of skull posters list
+- Added Puff Puff Pass category to User lists Section
+[B]1.2.9[/B]
+- Bug fixes
+- Fixed Bmostly all of the IMDB user lists section
+[B]1.2.8[/B]
+- Quick Network fix my bad
+[B]1.2.7[/B]
+- Updated the navigator to accept the new icons
+[B]1.2.6[/B]
+- IMDB person list fixed
+- Lots work done to IMDB user lists 
+- Fixed tvmaze
+- Fixed code in the indexers
+- Few other repairs and tweaks done 
+- Thank you Muaddib for helping with this stuff
+- Critter corner fixed
+- Working on fixing IMDB user list section now
+[B]1.2.5[/B]
+- Network section fixed
+- IMDB watch list fixed
+- Some section Fixes
+[B]1.2.4[/B]
+- Refined searches in the Top Movies Section
+- Fixed almost all scections within Top Movies
+- Repaired a few sections in Playlist
+- Startded changing to allow new icons
+[B]1.2.3[/B]
+- Fixed most of Top Movies
+- Added Holiday sections to Playlists
+- Added DC, Marvel, Disney
+[B]1.2.2[/B]
+- Fixed Download option
+- Added Hevc and info to Settings
+- Shows file Sizes on some debrid sources now
+- Update/Change of icon
+- Updated a few modules
+[B]1.2.1[/B]
+- Initial version
+- Fixed Debrid Scraping
+- Fixed Trakt Authetication
+- Fixed Clear Providers
+- Few Other Bits and Pieces Fixed
+- Bug Fixes and Error Fixes Done

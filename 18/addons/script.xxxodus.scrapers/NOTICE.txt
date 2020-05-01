@@ -1,0 +1,3 @@
+This module is a fork of TK Norris Shared Module.
+
+All credit goes to TK for this module that has given me the grounds to improve and tweak to my needs.

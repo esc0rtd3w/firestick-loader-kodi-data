@@ -1,0 +1,6 @@
+[B]Version 0.1.0[/B]
+- Initial Release.
+[B]Version 0.1.1[/B]
+- fixed for xbmc 13
+[B]Version 0.1.2[/B]
+- fixed for xbmc 13

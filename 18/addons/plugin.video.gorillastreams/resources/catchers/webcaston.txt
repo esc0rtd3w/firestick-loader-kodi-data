@@ -1,0 +1,28 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=WebCastOn - %s
+
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.webcaston.com/embed.php?fileid=%s&vw=640&vh=360&domain=mypremium.tv
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(['"]([^'"]+)['"].*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@','swf|file|rtmp.tmp')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=rtmp.tmp
+item_info_convert=replace('%s','.com/','.com:1935/')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s
+
+
+
+#item_info_name=url
+#item_info_from=@PARAM1@
+#item_info_build=rtmp://c81.webcaston.com/live/channel/%s swfurl=http://www.webcaston.com/player/player-licensed.swf #pageurl=http://www.webcaston.com/embed.php?fileid=dsffsdfdds

@@ -155,7 +155,14 @@ class AbstractSettings(object):
         return self.get_int(constants.setting.HTTPD_PORT, 50152)
 
     def httpd_listen(self):
-        return self.get_string(constants.setting.HTTPD_LISTEN, '0.0.0.0')
+        ip_address = self.get_string(constants.setting.HTTPD_LISTEN, '0.0.0.0')
+        try:
+            ip_address = ip_address.strip()
+        except AttributeError:
+            pass
+        if not ip_address:
+            ip_address = '0.0.0.0'
+        return ip_address
 
     def set_httpd_listen(self, value):
         return self.set_string(constants.setting.HTTPD_LISTEN, value)
@@ -236,3 +243,6 @@ class AbstractSettings(object):
         if self.include_hdr() or isinstance(self.get_mpd_quality(), str):
             return False
         return self.get_bool(constants.setting.MPD_30FPS_LIMIT, False)
+
+    def remote_friendly_search(self):
+        return self.get_bool(constants.setting.REMOTE_FRIENDLY_SEARCH, False)

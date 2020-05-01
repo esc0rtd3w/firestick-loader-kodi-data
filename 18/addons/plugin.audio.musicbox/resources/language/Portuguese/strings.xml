@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+	<!-- Settings - Account -->
+	<string id="30000">Contas</string>
+	<string id="30001">Vk.com</string>
+	<string id="30002">Email/telefone</string>
+	<string id="30003">Password</string>
+	<string id="30005">Token</string>
+	<string id="30006">Last.fm</string>
+	<string id="30007">Email/username</string>
+	<string id="30008">Password</string>
+	<string id="30009">Token</string>
+	<string id="30010">8tracks</string>
+	<string id="30011">Email</string>
+	<string id="30012">Password</string>
+	<string id="30013">Token</string>
+	
+	<!-- Settings - General Settings -->
+	<string id="30100">Geral</string>
+	<string id="30101">Fonte de Média</string>
+	<string id="30102">[B]Info:[/B] Utilizando o VK.com como fonte de musica o addon será semelhante à</string>
+	<string id="30103">app Liquidbear. Utilizando o youtube, o addon será semelhante ao Atraci.</string>
+	<string id="30104">Items por página</string>
+	<string id="30105">Resolver músicas</string>
+	<string id="30106">Auto-resolver ao reproduzir track</string>
+	<string id="30107">Resolver manualmente</string>
+	<string id="30112">Digster País</string>
+	<string id="30113">Transferir fanart do artista</string>
+	<string id="30114">Ocultar Whatsong soundtrack</string>
+	<string id="30115">Mostrar opção 'Info da música' no Context Menu</string>
+	<string id="30116">Mostrar opção 'Info do artista' no Context Menu</string>
+	<string id="30117">Ocultar 8tracks</string>
+
+	<!-- Settings - Download -->
+	<string id="30200">Downloads</string>
+	<string id="30201">Pasta de downloads</string>
+	
+	<!-- Settings - Library -->
+	<string id="30300">Biblioteca</string>
+	<string id="30301">Pasta da biblioteca</string>
+	<string id="30302">[B]Info:[/B] Aqui serão salvos os items exportados como m3u.</string>
+	<string id="30303">[B]Nota:[/B] eles não serão integrados na biblioteca, mas estarão nos ficheiros.</string>
+	<string id="30304">Salvar a thumbnail dos items exportados</string>
+
+	<!-- Main Menu & Recomendations -->
+	<string id="30400">Music Box</string>
+	<string id="30401">Recomendações</string>
+	<string id="30402">Digster</string>
+	<string id="30403">Whatsong Soundtrack</string>
+	<string id="30404">8Tracks Playlists</string>
+	<string id="30405">Charts</string>
+	<string id="30406">Procurar...</string>
+	<string id="30407">Minhas músicas</string>
+	<string id="30408">Favoritos</string>
+	<string id="30409">Espaço do utilizador</string>
+	<string id="30410">Audio fingerprint</string>
+	<string id="30411">Definições</string>
+	<string id="30412">[B]Próxima página >>[/B]</string>
+	
+	<!-- Digster -->
+	<string id="30425">Secções</string>
+	<string id="30426">Género</string>
+	<string id="30427">Mood</string>
+	<string id="30428">Ideal para</string>
+	
+	<!-- 8tracks playlists -->
+	<string id="30475">Popular</string>
+	<string id="30476">Escolhas da Staff</string>
+	<string id="30477">Destaques</string>
+	<string id="30478">Tendência</string>
+	<string id="30479">Mais recente</string>
+	
+	<!-- Charts -->
+	<string id="30500">[B]Itunes[/B] - Top músicas por país</string>
+	<string id="30501">[B]Itunes[/B] - Top albums por país</string>
+	<string id="30502">[B]Deezer[/B] - Top Tracks</string>
+	<string id="30503">[B]Beatport[/B] - Top 100</string>
+	<string id="30504">[B]Official Charts UK[/B] - Vários charts</string>
+	<string id="30505">[B]Billboard[/B] - The Hot 100</string>
+	<string id="30506">[B]Billboard[/B] - 200</string>
+	<string id="30507">[B]Billboard[/B] - Heatseekers Songs</string>
+	<string id="30508">[B]Billboard[/B] - Heatseekers Albums</string>
+	<string id="30509">[B]Billboard[/B] - Hot Pop Songs</string>
+	<string id="30510">[B]Billboard[/B] - Hot Country Songs</string>
+	<string id="30511">[B]Billboard[/B] - Top Country Albums</string>
+	<string id="30512">[B]Billboard[/B] - Hot Rock Songs</string>
+	<string id="30513">[B]Billboard[/B] - Top Rock Albums</string>
+	<string id="30514">[B]Billboard[/B] - Hot R&amp;B/Hip-Hop Songs</string>
+	<string id="30515">[B]Billboard[/B] - Top R&amp;B/Hip-Hop Albums</string>
+	<string id="30516">[B]Billboard[/B] - Hot Dance/Electronic Songs</string>
+	<string id="30517">[B]Billboard[/B] - Dance/Electronic Albums</string>
+	<string id="30518">[B]Billboard[/B] - Hot Latin Songs</string>
+	<string id="30519">[B]Billboard[/B] - Top Latin Albums</string>
+	<string id="30520">Official Charts UK - escolha:</string>
+	<string id="30521">Trocar chart...</string>
+	<string id="30523">[B]Traxsource[/B] - Top 100 Tracks</string>
+	<string id="30524">[B]Traxsource[/B] - Top 100 Singles</string>
+
+	<!-- Search and list content -->
+	<string id="30600">Pesquisar por artista, nome de música, playlist...</string>
+	<string id="30601">Ver [B]</string>
+	<string id="30602">[/B] tracks encontrados</string>
+	<string id="30603">Ver [B]</string>
+	<string id="30604">[/B] albums encontrados</string>
+	<string id="30605">Lista dos [B]</string>
+	<string id="30606">[/B] tracks mais populares</string>
+	<string id="30607">Ver [B]</string>
+	<string id="30608">[/B] setlists encontradas</string>
+	<string id="30609">Ver [B]</string>
+	<string id="30610">[/B] playlists encontradas</string>
+	<string id="30611">Ver [B]</string>
+	<string id="30612">[/B] soundtracks encontrados</string>
+	<string id="30613">Pesquisar por...</string>
+	<string id="30614">Aguarde enquanto carregamos a playlist...</string>
+	<string id="30615">Carregando track </string>
+	<string id="30616"> de </string>
+	<string id="30617">Aguarde </string>
+	<string id="30618"> segundos...</string>
+	<string id="30619">Ocorreu um erro...</string>
+	<string id="30620">Aguarde enquanto carregamos e cacheamos a playlist...</string>
+	<string id="30621">A playlist foi modificada, isto foi tudo o que encontramos.</string>
+	<string id="30622">Videoclip não encontrado</string>
+	
+	<!-- Favorites -->
+	<string id="30700">Adicionado aos favoritos</string>
+	<string id="30701">Músicas</string>
+	<string id="30702">Albums</string>
+	<string id="30703">Setlists</string>
+	<string id="30704">Playlists</string>
+	<string id="30705">Soundtracks</string>
+
+	<!-- Downloads, resolvers, player and ContextMenuItems -->
+	<string id="30800">Para usar a função de downloads, você deverá primeiro definir a pasta para o efeito nas definições do addon...</string>
+	<string id="30801">Resolvendo...</string>
+	<string id="30802">Track não encontrado...</string>
+	<string id="30803">Pesquisa manual...</string>
+	<string id="30804">Tracks similares...</string>
+	<string id="30805">Download</string>
+	<string id="30806">Procurar Videoclip</string>
+	<string id="30807">Adicionar aos favoritos</string>
+	<string id="30808">Mover para cima</string>
+	<string id="30809">Mover para baixo</string>
+	<string id="30810">Remover favorito</string>
+	<string id="30812">Info da música</string>
+	<string id="30813">Info não disponível para esta música</string>
+	<string id="30814">Duração: </string>
+	<string id="30815">Tamanho: </string>
+	<string id="30816">Bitrate estimado: </string>
+	<string id="30817">Download album</string>
+	<string id="30818">Fazendo download do album ...</string>
+	<string id="30819">Descarregando track </string>
+	<string id="30820"> de </string>
+	<string id="30821">Album não encontrado...</string>
+	<string id="30822">Para exportar items, você deverá primeiro definir a pasta para o efeito nas definições do addon...</string>
+	<string id="30823">Exportar como .m3u</string>
+	<string id="30824">Exportado com sucesso</string>
+	<string id="30825">Fingerprint...</string>
+	<string id="30826">Info do artista</string>
+	<string id="30827">[COLOR green][B]Nome:[/B][/COLOR] </string>
+	<string id="30828">[COLOR green][B]Anos em atividade:[/B][/COLOR] </string>
+	<string id="30829">[COLOR green][B]Nascimento:[/B][/COLOR] </string>
+	<string id="30830">[COLOR green][B]Falecimento:[/B][/COLOR] </string>
+	<string id="30831">[COLOR green][B]Formado:[/B][/COLOR] </string>
+	<string id="30832">[COLOR green][B]Desagrupado:[/B][/COLOR] </string>
+	<string id="30833">[COLOR green][B]Género:[/B][/COLOR] </string>
+	<string id="30834">[COLOR green][B]Estilo:[/B][/COLOR] </string>
+	<string id="30835">[COLOR green][B]Membros do grupo:[/B][/COLOR] </string>
+	<string id="30836">[COLOR green][B]Também conhecido como:[/B][/COLOR] </string>
+	<string id="30837">[COLOR green][B]Membro de:[/B][/COLOR] </string>
+	<string id="30838">[COLOR green][B]Biografia:[/B][/COLOR] </string>
+	<string id="30839">[COLOR red][B]Nenhuma informação encontrada para este artista.[/B][/COLOR]</string>
+	<string id="30840"> em </string>
+	
+	<!-- User space & accounts -->
+	<string id="30852">[B]Meu last.fm[/B] - músicas preferidas</string>
+	<string id="30853">[B]Meu last.fm[/B] - músicas ouvidas recentemente</string>
+	<string id="30854">[B]Meu last.fm[/B] - músicas mais ouvidas</string>
+	<string id="30855">[B]Meu last.fm[/B] - albums mais ouvidos</string>
+	<string id="30856">[B]Meu last.fm[/B] - minhas playlists</string>
+	<string id="30857">[B]Meu 8tracks[/B] - playlists favoritas</string>
+	<string id="30858">[B]Meu 8tracks[/B] - histórico</string>
+	<string id="30859">[B]Meu 8tracks[/B] - minhas playlists</string>
+	<string id="30860">[B]Meu 8tracks[/B] - recomendado para mim</string>
+	<string id="30861">Vk.com</string>
+	<string id="30862">Last.fm</string>
+	<string id="30863">8tracks</string>
+	<string id="30864">[COLOR red]Credênciais erradas![/COLOR]</string>
+	<string id="30865">Sessão iniciada com sucesso.</string>
+	<string id="30866">Erro: Vk.com email/telefone ou password está vazio</string>
+	<string id="30867">Erro: Falhou a autenticação no vk.com</string>
+	<string id="30868">Erro: Vk.com retornou o seguinte erro: </string>
+	<string id="30869">[B][COLOR red]Em reprodução:[/COLOR][/B] </string>
+	<string id="30870">Escolha um período de tempo:</string>
+	<string id="30871">[COLOR blue][B]Período de tempo:[/B][/COLOR] </string>
+	<string id="30872">Global</string>
+	<string id="30873">7 dias</string>
+	<string id="30874">1 mês</string>
+	<string id="30875">3 meses</string>
+	<string id="30876">6 meses</string>
+	<string id="30877">12 meses</string>
+	<string id="30878">Info: Para utilizar o addon você necessita de uma conta no vk.com (ou mudar a "Fonte de Média" para Youtube).</string>
+	
+	<!-- Audio fingerprint -->
+	<string id="30900">Escolha o ficheiro de audio:</string>
+	<string id="30901">Fornecido ficheiro de audio inválido.</string>
+	<string id="30902">Insira o resultado:</string>
+</strings>

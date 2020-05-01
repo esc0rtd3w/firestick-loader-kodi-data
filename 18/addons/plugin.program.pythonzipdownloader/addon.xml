@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.pythonzipdownloader" name="PYTHON ZIP DOWNLOADER" version="1.0.0" 
+provider-name="VinMan JSV">
+    <requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Python Zip Downloader</summary>
+		<description lang="en">Download zip files from serveral sources. Use the URL you would type into a browser to download zip file automatically (?raw=true). </description>
+		<license>GNU General Public License, v2</license>
+		<language></language>
+		
+		<source></source>
+		<email>vinman_sv@hotmail.com</email>
+	</extension>
+</addon>

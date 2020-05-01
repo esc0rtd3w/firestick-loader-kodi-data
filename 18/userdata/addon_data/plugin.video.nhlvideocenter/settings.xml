@@ -1,0 +1,6 @@
+<settings>
+    <setting id="debug" value="false" />
+    <setting id="description" value="true" />
+    <setting id="firstrun" value="false" />
+    <setting id="show_score" value="true" />
+</settings>

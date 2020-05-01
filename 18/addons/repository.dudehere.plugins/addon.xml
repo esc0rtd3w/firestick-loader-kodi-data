@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.dudehere.plugins" name="DudeHere Addons" provider-name="DudeHere" version="1.0.6">
+    <extension name="DudeHere Add-On Repository" point="xbmc.addon.repository">
+        <info compressed="false">https://offshoregit.com/dudehere-repository/addons/addons.xml</info>
+        <checksum>https://offshoregit.com/dudehere-repository/addons/addons.xml.md5</checksum>
+        <datadir zip="true">https://offshoregit.com/dudehere-repository/addons/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>DudeHere repository</summary>
+        <description>Download and install addons from DudeHere. Seek support at tvaddons.ag.</description>
+        <platform>all</platform>
+    </extension>
+</addon>

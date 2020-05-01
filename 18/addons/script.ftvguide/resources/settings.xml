@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category label="30101">
+		<setting id="xmltv.type_select" label="30123" type="action" action="RunScript($CWD/guideTypes.py)" />
+        <setting id="xmltv.type" type="number" enable="false" visible="false"/>
+        <setting id="xmltv.interval" label="30128" type="enum" default="2" lvalues="30129|30130|30131|30132" />
+        <setting id="xmltv.file" label="30103" type="file" visible="eq(-2,6)" />
+        <setting id="xmltv.refresh" label="30149" type="bool" default="false" visible="eq(-3,6)" />
+
+        <setting id="addons.ini.type" label="30144" type="enum" default="0" lvalues="30143|30142"/>
+        <setting id="addons.ini.file" label="30145" type="file" visible="eq(-1,1)" />
+	</category>
+	
+	<category label="30148">
+		<setting id="skin" label="30141" type="fileenum" values="resources/skins" mask="/" default="Default" />
+		
+		<setting id="logos.enabled" label="30117" type="bool" default="true" />
+        <setting id="logos.source" label="30146" type="enum" default="0" lvalues="30143|30147" visible="eq(-1,true)" />
+        <setting id="logos.folder" label="30116" type="folder" visible="eq(-2,true) + eq(-1,1)" />
+	</category>
+	
+	<category label="30114">
+        <setting id="autostart" label="30900" type="bool" default="false" />
+		<setting id="enable.osd" label="30118" type="bool" default="true" enable="eq(3,false)" />
+		<setting id="background.stream" label="30450" type="bool" default="false" />
+		<setting label="30119" type="lsep" />
+		<setting id="alternative.playback" label="30120" type="bool" default="false" />
+		<setting label="30121" type="lsep" />
+		<setting id="background.service" label="30400" type="bool" default="false" />
+        <setting id="service.interval" label="30401" type="enum" default="1" lvalues="30402|30403|30404|30405" visible="eq(-1,true)" />
+	</category>
+
+	<category label="30112">
+		<setting id="notifications.enabled" label="30106" type="bool" default="true" />
+		<setting label="30108" type="action" action="RunScript($CWD/notification.py)" />
+	</category>
+	
+	<category label="30140">
+		<setting type="lsep" label="30137"/>
+		<setting type="lsep" label="30138"/>
+        <setting label="30139" type="action" action="RunScript($CWD/ResetDatabase.py)" />
+    </category>
+</settings>

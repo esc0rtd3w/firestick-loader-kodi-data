@@ -1,0 +1,46 @@
+{
+ "name"         : "Icefilms [COLOR FF0084FF]-[/COLOR] Browse Activate ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.eldorado",
+ "plugin"       : "plugin.video.icefilms",
+ "priority"     : 800,
+ "id"           : "q.icefilms.browse.activate",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=1&name=A-Z%20Directories&url=http://www.icefilms.info/movies/a-z/1",
+    "steps"     : [
+     "{sorttitle[0]}",
+     ".*{title}.*{year}.*"
+     ],
+    "action"    : "ACTIVATE"
+   },
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=2&name=A-Z%20List&url=http://www.icefilms.info/standup/a-z/1",
+    "steps"     : [
+     "{sorttitle[0]}",
+     ".*{title}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.icefilms/?mode=10&name=A-Z%20Directories&url=http://www.icefilms.info/tv/a-z/1",
+    "steps"     : [
+     "{sortname[0]}.*",
+     ".*{clearname}.*{year}.*",
+     ".* {season} .*",
+     "{season}x{episode:02d}.*"
+     ],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : []
+}

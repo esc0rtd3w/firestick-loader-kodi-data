@@ -1,0 +1,57 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=YYCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://yycast.com/embedded/%s/1/600/400
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\("([^"]+\.swf)".*?["']id=(\d+)&s=([^&'"]+).*','@REFERER@','swf|id|channel')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://yycast.com:1935/loadbalancer','.*redirect=([\.\d]+).*','')
+item_info_build=rtmp://%s:1935/live
+
+item_info_name=url
+item_info_from=rtmp + ' playPath=' + channel + '?id=' + id + ' swfVfy=1 timeout=15 conn=S:OK live=true swfUrl=http://yycast.com' + swf + ' pageUrl=' + pageUrl
+item_info_build=%s
+
+
+
+
+
+#item_info_name=redirect.tmp
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*domain protected by the streamer<br>You can only watch it at .*?<a target="_blank" #href="(http://www.(?!yycast)[^"]+)".*')
+#item_info_build=%s
+
+#item_info_name=redirect
+#item_info_from=redirect.tmp || '@CURRENT_URL@'
+#item_info_build=%s
+
+#item_info_name=infos.tmp
+#item_info_from=pageUrl
+#item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?\'file\',\s*\'([^\']+)\'.*?\'streamer\',\s*\'([^\']+)\'.*','@redirect@','swf.tmp|file.t#mp|rtmp.tmp')
+#item_info_build=%s
+
+#item_info_name=file
+#item_info_from=file.tmp || @PARAM1@
+#item_info_build=%s
+
+#item_info_name=swf
+#item_info_from=swf.tmp || 'http://cdn.yycast.com/player/player.swf'
+#item_info_build=%s
+
+#item_info_name=rtmp
+#item_info_from=rtmp.tmp
+#item_info_convert=replace('%s','live.','')
+#item_info_convert=replace('%s','/lb','/live/_definst_')
+#item_info_build=%s
+
+#item_info_name=url
+#item_info_from='rtmp://live.yycast.com/lb playpath=' + file + ' live=true timeout=15 swfUrl=' + swf + ' pageUrl=http://www.yycast.com/' + @PARAM1@
+#item_info_build=%s

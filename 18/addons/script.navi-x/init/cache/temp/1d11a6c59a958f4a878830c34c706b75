@@ -1,0 +1,39 @@
+version=1
+title=Navi-X Home
+view=thumbnails
+expires=72
+
+#
+type=playlist
+name=Navi-X Start Here
+thumb=http://havana.navixtreme.com/Playlists/images/start_button.png
+view=thumbnails
+URL=http://havana.navixtreme.com/Playlists/50242/navi-xtreme_nxportal_home.plx
+#
+type=playlist
+name=Browse History
+thumb=http://havana.navixtreme.com/Playlists/images/history.png
+URL=history.plx
+#
+type=playlist
+name=My Favorites
+thumb=http://havana.navixtreme.com/Playlists/favorites.png
+URL=favorites.plx
+#
+type=playlist
+name=My Kodi
+thumb=http://havana.navixtreme.com/Playlists/images/kodi.png
+URL=myxbmc.plx
+#
+
+#
+type=playlist
+name=Addon Updates
+thumb=http://havana.navixtreme.com/Playlists/navixlogo.png
+URL=http://havana.navixtreme.com/Playlists/scripts.plx
+#
+
+type=text
+name=News & Support
+thumb=http://havana.navixtreme.com/Playlists/images/npaper.png
+URL=http://havana.navixtreme.com/Playlists/special_info.txt

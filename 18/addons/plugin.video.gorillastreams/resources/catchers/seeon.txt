@@ -1,0 +1,12 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=SeeOn - %s
+
+item_info_name=file
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.seeon.tv/view/%s','.*value="&streamer=rtmp%3A%2F%2F.+?%2Fredirect&file=([^\.]+).flv&autostart=true[^"]*"')
+item_info_build=%s
+
+item_info_name=url
+item_info_from='rtmp://live0.seeon.tv:1935/edge/' + file + ' swfurl=http://www.seeon.tv/jwplayer/player.swf pageurl=http://www.seeon.tv/view/10850/'
+item_info_build=%s

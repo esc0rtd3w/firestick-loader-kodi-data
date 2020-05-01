@@ -1,0 +1,6 @@
+<settings>
+<category label="General">
+<setting id="custom_urls" type="labelenum" label="URL" default="http://ipv6.icefilms.info/" values="Custom|http://ipv6.icefilms.info/|http://www.icefilms.info/|http://80.82.65.150/" />
+<setting id="custom_text_url" type="text" label="     Custom" default="http://ipv6.icefilms.info/" enable="eq(-1,0)" />
+</category>
+</settings>

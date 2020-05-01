@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=KBPs - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.kbps.tv/embed.php?s=%s&width=474&height=350&domain=www.hdstreams.tv
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?flashplayer:\s*["']([^'"]+).*?file:\s*["']([^'"]+).*?streamer[:,]\s*['"]([^'"]+)['"].*','@REFERER@','swf|file|rtmp)
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://www.kbps.tv/' + swf + ' live=1 timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

@@ -1,0 +1,8 @@
+Version 1.2.6 Adding Quasar support
+Version 1.2.5 refreshing view
+Version 1.2.4 fixing dialog error
+Version 1.2.3 Extended info support
+Version 1.2.2 Fix library integration
+Version 1.2.1 Search Block
+Version 1.0.1 Some traductions
+Version 1.0.0 First version

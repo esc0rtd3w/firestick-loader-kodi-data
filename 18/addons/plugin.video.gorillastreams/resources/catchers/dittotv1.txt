@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=DittoTV (M3U8) - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://dittotv.com/rtmp_adaptive/channels/%s.smil
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?(http(?!IPhone)[^"']+\.m3u8[^"']*).*','http://dittotv.com')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=tmp2
+item_info_build=%s

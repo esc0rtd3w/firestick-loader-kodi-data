@@ -1,0 +1,51 @@
+Version 4.0.9
+Removed nettv added swift
+Version 4.0.8
+Server Update
+Version 4.0.7
+Added Jen Modules for VOD Section
+Updated USA 2 With new local channels
+Fixed 24/7 tv and movies
+Added new VOD section
+Added tvtap app for iptv
+Version 4.0.6
+Added Module for Now Music
+removed f4m modules
+Version 4.0.5
+    Added module for Mobdro
+    Fixed Scrapers (Thanks Kal-el)
+    addon speed increase
+Version 4.0.4
+    Added modules for Net.tv
+Version 4.0.3
+    Added modules for Sports OD
+Version 4.0.2
+    Added modules for IPTV
+Version 4.0.1
+    Updated Scrapers for New 24/7 section to work better
+Version 4.0.0
+    Re-Release as server was deleted so i started again
+Version 3.0.9
+    Added host pairing in movies and tv section
+Version 3.0.8
+    Fixed Error in code
+Version 3.0.7
+    Fixed streaming and updates streaming module
+Version 3.0.6
+    Updated scrapers for movies and tv shows and fixed connection issue Some cosmetic changes
+Version 3.0.5
+    Updated scrapers for movies and tv shows and fixed connection issue
+Version 3.0.4
+    Updated scrapers for movies and tv shows
+Version 3.03
+   Updated code to make streaming and live scrapers work
+Version 3.0.0
+    Changed code and added movie and tv shows
+Version 2.0.2
+    server changed, bug fixes
+Version 2.0.1
+    some bug fixes
+Version 2.0.0
+    new resolvers
+Version 1.0.0
+    first relase

@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=SocSports - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://streampoint.leton.tv:1935/pull?testkey=d944a49d10e5ebd1acea02a0dc7ed5cd playpath=elive swfUrl=http://members.home.nl/down-en-up/player.swf pageUrl=http://members.home.nl/ swfVfy=1 timeout=15 live=true 

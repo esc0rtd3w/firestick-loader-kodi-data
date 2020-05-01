@@ -1,14 +1,14 @@
 # -*- coding: UTF-8 -*-
 
+
+import StringIO
 import cProfile
 import inspect
 import json
 import os
 import pstats
-import StringIO
 import time
 import xbmc
-
 from datetime import datetime
 from xbmc import LOGDEBUG, LOGERROR, LOGFATAL, LOGINFO, LOGNONE, LOGNOTICE, LOGSEVERE, LOGWARNING  # @UnusedImport
 
@@ -17,7 +17,6 @@ from resources.lib.modules import control
 name = control.addonInfo('name')
 DEBUGPREFIX = '[COLOR red][ Venom DEBUG ][/COLOR]'
 LOGPATH = xbmc.translatePath('special://logpath/')
-
 addonName = "Venom"
 
 
@@ -81,19 +80,13 @@ def error(message=None, exception=True):
 		import sys
 		if exception:
 			type, value, traceback = sys.exc_info()
-
 			sysaddon = sys.argv[0].split('//')[1].replace('/', '.')
-
 			filename = (traceback.tb_frame.f_code.co_filename).replace('\\', '.').replace('.py', '')
 			filename = filename.split(sysaddon)[1].replace('\\', '.')
-
 			name = traceback.tb_frame.f_code.co_name
-
 			linenumber = traceback.tb_lineno
-
 			errortype = type.__name__
 			errormessage = value.message
-
 			if errormessage == '':
 				raise Exception()
 			if message:
@@ -102,11 +95,9 @@ def error(message=None, exception=True):
 				message = ''
 			message += str(errortype) + ' -> ' + str(errormessage)
 			caller = [filename, name, linenumber]
-
 		else:
 			caller = None
 		log(msg=message, caller=caller, level = LOGERROR)
-
 	except:
 		pass
 

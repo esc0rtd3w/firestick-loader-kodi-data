@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=CoolSportUSTREAM - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://109.201.134.44:1935/redirect/%s swfUrl=http://streams.coolsport.tv/player.swf live=true timeout=15 swfVfy=1 pageUrl=http://cdn-ustream.com

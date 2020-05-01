@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Xusca_gen2 - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://mybeststream.xyz/gen_s.php?id=%s&width=650&height=450
+
+item_info_name=flashvars
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*flashplayer:\s*["']([^'"]+)["'],streamer:\s*["']([^'"]+)["'],file:\s*["']([^'"]+)["'].*','@REFERER@','swf|rtmp|file')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp+' playpath='+file+' swfUrl=http://mybeststream.xyz/'+swf+' swfsize=224436 swfhash=2f17c059e0fb060411ac97d1da663ce996b5538b85a55affb7e42a3062abfba7 flashver=WIN\2018,0,0,209 live=1 timeout=15 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

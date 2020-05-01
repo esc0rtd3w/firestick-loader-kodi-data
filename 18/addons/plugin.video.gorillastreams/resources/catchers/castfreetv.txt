@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=CastFree - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.castfree.tv/embed.php?a=%s&id=&width=640&height=460&autostart=true&strech=
+
+item_info_name=tmp3
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*','@REFERER@','file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=http://static.surk.tv/player.swf live=1 token=#atd%#$ZH timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

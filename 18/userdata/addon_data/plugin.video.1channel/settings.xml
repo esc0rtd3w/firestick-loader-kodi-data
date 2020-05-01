@@ -1,0 +1,94 @@
+<settings>
+    <setting id="actors-view" value="500" />
+    <setting id="auto-backup_db" value="false" />
+    <setting id="auto-movie_update" value="false" />
+    <setting id="auto-play" value="false" />
+    <setting id="auto-update-movies-cat" value="0" />
+    <setting id="auto-update_subscriptions" value="false" />
+    <setting id="auto-update_towatch" value="true" />
+    <setting id="auto-view" value="false" />
+    <setting id="auto-watch" value="true" />
+    <setting id="backup_db-during-playback" value="true" />
+    <setting id="backup_db-during-startup" value="false" />
+    <setting id="backup_db-folder" value="special://database" />
+    <setting id="backup_db-interval" value="3" />
+    <setting id="backup_db-last_run" value="1970-01-01 23:59:00.000000" />
+    <setting id="cleanup-subscriptions" value="true" />
+    <setting id="current_ua" value="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36" />
+    <setting id="customDomain" value="" />
+    <setting id="db_address" value="" />
+    <setting id="db_name" value="1channel" />
+    <setting id="db_pass" value="" />
+    <setting id="db_port" value="" />
+    <setting id="db_user" value="" />
+    <setting id="default-view" value="50" />
+    <setting id="dir-cache" value="false" />
+    <setting id="domain" value="http://www.primewire.ag/" />
+    <setting id="enable-axel" value="false" />
+    <setting id="enable-fanart" value="true" />
+    <setting id="enableDomain" value="false" />
+    <setting id="episodes-view" value="504" />
+    <setting id="fifth-sort" value="0" />
+    <setting id="fifth-sort-reversed" value="true" />
+    <setting id="filter-source" value="true" />
+    <setting id="first-dow" value="0" />
+    <setting id="first-sort" value="0" />
+    <setting id="first-sort-reversed" value="false" />
+    <setting id="format-movie" value="{ft} {fy}" />
+    <setting id="format-movie-title" value="[B]{t}[/B]" />
+    <setting id="format-movie-year" value="({y})" />
+    <setting id="format-source" value="[{q}] {h} {p} ({v} views)" />
+    <setting id="format-source-debrid" value="[COLOR green]{L}[/COLOR]" />
+    <setting id="format-source-parts" value="     {h} {p}" />
+    <setting id="format-source-verified" value="[COLOR gold]{L}[/COLOR]" />
+    <setting id="format-sub-days" value="[COLOR deeppink]%s[/COLOR]" />
+    <setting id="format-tvshow" value="{ft} {fy}" />
+    <setting id="format-tvshow-episode" value="{s}x{e} {t}" />
+    <setting id="format-tvshow-sub" value="[COLOR green]{L}[/COLOR]" />
+    <setting id="format-tvshow-title" value="[B]{t}[/B]" />
+    <setting id="format-tvshow-year" value="({y})" />
+    <setting id="fourth-sort" value="0" />
+    <setting id="fourth-sort-reversed" value="true" />
+    <setting id="h99_hidden" value="false" />
+    <setting id="last_ua_create" value="1520882315" />
+    <setting id="library-update" value="true" />
+    <setting id="movie-folder" value="special://userdata/addon_data/plugin.video.1channel/Movies" />
+    <setting id="movie_update-during-startup" value="false" />
+    <setting id="movie_update-interval" value="3" />
+    <setting id="movie_update-last_run" value="1970-01-01 23:59:00.000000" />
+    <setting id="movies-view" value="503" />
+    <setting id="old_version" value="4.0.02" />
+    <setting id="paginate" value="true" />
+    <setting id="paginate-favs" value="false" />
+    <setting id="paginate-lists" value="true" />
+    <setting id="paginate-search" value="false" />
+    <setting id="paginate-towatch" value="false" />
+    <setting id="paginate-watched" value="false" />
+    <setting id="passwd" value="" />
+    <setting id="playlist-sort" value="0" />
+    <setting id="playlist-sub" value="" />
+    <setting id="posters-fallback" value="false" />
+    <setting id="seasons-view" value="504" />
+    <setting id="second-sort" value="0" />
+    <setting id="second-sort-reversed" value="true" />
+    <setting id="show_splash" value="true" />
+    <setting id="site_enabled" value="False" />
+    <setting id="sorting-enabled" value="false" />
+    <setting id="source-win" value="Dialog" />
+    <setting id="sub-days" value="0" />
+    <setting id="theme" value="0" />
+    <setting id="third-sort" value="0" />
+    <setting id="third-sort-reversed" value="true" />
+    <setting id="tvshow-folder" value="special://userdata/addon_data/plugin.video.1channel/TVShows" />
+    <setting id="tvshows-view" value="503" />
+    <setting id="update_subscriptions-during-playback" value="true" />
+    <setting id="update_subscriptions-during-startup" value="false" />
+    <setting id="update_subscriptions-interval" value="12" />
+    <setting id="update_subscriptions-last_run" value="1970-01-01 23:59:00.000000" />
+    <setting id="update_subscriptions-notify" value="true" />
+    <setting id="use-meta" value="true" />
+    <setting id="use_https" value="false" />
+    <setting id="use_remote_db" value="False" />
+    <setting id="username" value="" />
+    <setting id="watched-percent" value="85" />
+</settings>

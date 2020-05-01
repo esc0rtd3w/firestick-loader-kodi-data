@@ -1,0 +1,15 @@
+<settings>
+    <setting id="addons.ini.type" value="0" />
+    <setting id="alternative.playback" value="false" />
+    <setting id="autostart" value="false" />
+    <setting id="background.service" value="false" />
+    <setting id="enable.osd" value="true" />
+    <setting id="logos.enabled" value="true" />
+    <setting id="logos.source" value="0" />
+    <setting id="notifications.enabled" value="true" />
+    <setting id="service.interval" value="1" />
+    <setting id="skin" value="Default" />
+    <setting id="xmltv.interval" value="2" />
+    <setting id="xmltv.refresh" value="false" />
+    <setting id="xmltv.type" value="0" />
+</settings>

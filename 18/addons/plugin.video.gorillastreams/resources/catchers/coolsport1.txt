@@ -1,0 +1,23 @@
+item_info_name=tmp
+item_info_from=@PARAM1@
+item_info_convert=parseText('%s','.*id=['"]([^"']+).*src=['"]([^"']+).*','id|js')
+item_info_build=%s
+
+item_info_name=title
+item_info_from=id
+item_info_build=CoolSport - %s
+
+item_info_name=pageUrl
+item_info_from=js
+item_info_convert=getInfo('%s','.*?src=['"]([^"']+).*','http://coolsport.tv')
+item_info_build=%s
+
+
+item_info_name=tmp2
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*?['"]file['"][:,]\s*['"]([^'"]+)['"].*?['"]streamer['"][:,]\s*['"]([^'"]+)['"].*swfobject.embedSWF\(['"]([^'"]+)['"].*','http://embeds.coolsport.tv','file|rtmp|swf')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=1 token=#atd%#$ZH timeout=14 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

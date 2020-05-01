@@ -17,9 +17,9 @@ class one337x(Scraper):
     sources = []
 
     def __init__(self):
-        self.base_link = 'http://the1337x.org/'
-        self.tvsearch = 'http://the1337x.org/sort-category-search/{0}/TV/seeders/desc/{1}/'
-        self.moviesearch = 'http://the1337x.org/sort-category-search/{0}/Movies/size/desc/{1}/'
+        self.base_link = 'https://1337x.wtf/home/'
+        self.tvsearch = 'https://1337x.wtf/sort-category-search/{0}/TV/seeders/desc/{1}/'
+        self.moviesearch = 'https://1337x.wtf/sort-category-search/{0}/Movies/seeders/desc/{1}/'
 
 
     def scrape_movie(self, title, year, imdb, debrid=False):

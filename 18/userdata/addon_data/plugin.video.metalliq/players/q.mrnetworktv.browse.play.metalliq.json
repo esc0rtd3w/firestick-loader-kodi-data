@@ -1,0 +1,85 @@
+{
+ "name"         : "MR Network TV [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.projectmrnetwork",
+ "plugin"       : "plugin.video.mrnetworktv",
+ "priority"     : 800,
+ "id"           : "q.mrnetworktv.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "music"        : [],
+ "musicvideos"  : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.mrnetworktv",
+    "steps": [
+     "@anyexcept:SELECTED CHANNELS",
+     "($$.*$$Online$$.*$$){name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv",
+    "steps": [
+     "@anyexcept:SELECTED CHANNELS",
+     "($$.*$$Online$$.*$$).*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv",
+    "steps": [
+     "@anyexcept:SELECTED CHANNELS",
+     "($$.*$$Online$$.*$$){basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv",
+    "steps": [
+     "@anyexcept:SELECTED CHANNELS",
+     "($$.*$$Online$$.*$$).*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv/",
+    "steps": [
+     ".*selected.*",
+     "@any",
+     "($$.*$$Online$$.*$$){name}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv/",
+    "steps": [
+     ".*selected.*",
+     "@any",
+     "($$.*$$Online$$.*$$).*{name}.*"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv/",
+    "steps": [
+     ".*selected.*",
+     "@any",
+     "($$.*$$Online$$.*$$){basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()})"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link": "plugin://plugin.video.mrnetworktv/",
+    "steps": [
+     ".*selected.*",
+     "@any",
+     "($$.*$$Online$$.*$$).*{basename}.({extension}|{extension|number_to_text()}|{extension|text_to_number()}).*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,7 +30,6 @@ import urllib
 import urlparse
 
 from openscrapers.modules import cache
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -39,12 +39,10 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['pirateproxy.live', 'thepiratebay.org', 'thepiratebay.fun', 'thepiratebay.asia', 'tpb.party',
-								'thehiddenbay.com', 'piratebay.live', 'thepiratebay.zone'] #-- 'thepiratebayz.org' and 'thepiratebay3.org' seem dead
-
+		self.domains = ['pirateproxy.live', 'thepiratebay.zone', 'piratebay1.live', 'thepiratebay10.org',
+								'piratebay1.xyz', 'thepiratebay1.top', 'piratebay1.info', 'tpb.party']
 		self._base_link = None
-		# self.search_link = '/s/?q=%s&page=1&&video=on&orderby=99' #-page flip does not work
-		self.search_link = '/search/%s/1/99/200' #-direct link can flip pages
+		self.search_link = '/search/%s/0/5/200'
 		self.min_seeders = 1
 
 
@@ -87,9 +85,8 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		sources = []
 		try:
-			sources = []
-
 			if url is None:
 				return sources
 
@@ -119,8 +116,7 @@ class source:
 			except:
 				return sources
 
-			url2 = url.replace('/1/', '/2/')
-
+			url2 = url.replace('/0/', '/1/')
 			html2 = client.request(url2)
 			html2 = html2.replace('&nbsp;', ' ')
 
@@ -136,58 +132,50 @@ class source:
 				return sources
 
 			for entry in rows:
+				if 'magnet' not in entry:
+					continue
 				try:
-					try:
-						url = 'magnet:%s' % (re.findall('a href="magnet:(.+?)"', entry, re.DOTALL)[0])
-						url = str(client.replaceHTMLCodes(url).split('&tr')[0])
-					except:
+					url = 'magnet:%s' % (re.findall('a href="magnet:(.+?)"', entry, re.DOTALL)[0])
+					url = urllib.unquote_plus(url).replace('&amp;', '&').replace(' ', '.')
+					url = url.split('&tr')[0]
+					hash = re.compile('btih:(.*?)&').findall(url)[0]
+
+					name = re.findall('class="detLink" title=".+?">(.+?)</a>', entry, re.DOTALL)[0]
+					name = urllib.unquote_plus(name)
+					name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+					if source_utils.remove_lang(name):
 						continue
 
-					if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
+					match = source_utils.check_title(title, name, hdlr, data['year'])
+					if not match:
 						continue
 
 					try:
-						name = re.findall('class="detLink" title=".+?">(.+?)</a>', entry, re.DOTALL)[0]
-						name = client.replaceHTMLCodes(name)
-
-						t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
-						if cleantitle.get(t) != cleantitle.get(title):
+						seeders = int(re.findall('<td align="right">([0-9]+|[0-9]+,[0-9]+)</td>', entry, re.DOTALL)[0].replace(',', ''))
+						if self.min_seeders > seeders:
 							continue
 					except:
-						continue
-
-					if hdlr not in name:
-						continue
-
-					try:
-						seeders = int(re.findall('<td align="right">(.+?)</td>', entry, re.DOTALL)[0])
-					except:
-						continue
-
-					if self.min_seeders > seeders:
-						continue
+						seeders = 0
+						pass
 
 					quality, info = source_utils.get_release_quality(name, url)
 
 					try:
 						size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', entry)[-1]
-						div = 1 if size.endswith(('GB', 'GiB')) else 1024
-						size = float(re.sub('[^0-9|/.|/,]', '', size)) / div
-						size = '%.2f GB' % size
-						info.append(size)
+						dsize, isize = source_utils._size(size)
+						info.insert(0, isize)
 					except:
+						dsize = 0
 						pass
 
 					info = ' | '.join(info)
 
-					sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-												'info': info, 'direct': False, 'debridonly': True})
+					sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+												'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 				except:
 					source_utils.scraper_error('PIRATEBAY')
 					continue
-
 			return sources
-
 		except:
 			source_utils.scraper_error('PIRATEBAY')
 			return sources

@@ -1,0 +1,145 @@
+[B]v1.4.1 (Wednesday, 13 May 2015):[/B]
+ - Fix for VaughnLive streams stopping after 7 secs
+
+[B]v1.4.0 (Monday, 02 March 2015):[/B]
+ - Re-added Live TV Channels for now - not all will work
+ - Fixed zerocast resolving
+ - Added livego.me resolver
+ 
+[B]v1.3.0 (Friday, 20 February 2015):[/B]
+ - More fixes to TGUN owned streams
+ - Added URL caching
+ 
+[B]v1.2.2 (Thursday, 19 February 2015):[/B]
+ - Fixed addon.common import error
+
+[B]v1.2.1 (Wednesday, 18 February 2015):[/B]
+ - Fixed TGUN stream regex
+
+[B]v1.2.0 (Thursday, 12 February 2015):[/B]
+  - Updated to work with all current streams
+
+[B]v0.0.94 (Tuesday, 03 December 2013):[/B]
+  - Updated swf url for tgun based streams - AGAIN
+  
+[B]v0.0.93 (Thursday, 07 November 2013):[/B]
+  - Updated swf url for tgun based streams
+  
+[B]v0.0.92 (Monday, 04 November 2013):[/B]
+  - Just for fun
+
+[B]v0.0.91 (Monday, 04 November 2013):[/B]
+  - Updated regex for Live TV Shows & Movies section
+
+[B]v0.0.90 (Tuesday, 16 July 2013):[/B]
+  - Added back Classic TV channels
+  - Added early support for Live TV channels
+  - Updated for new site layout
+  - Added shidurlive resolver
+  - Added support for skyaccess streams
+  
+[B]v0.0.34 (Saturday, 01 June 2013):[/B]
+  - Quick patch to fix html pages
+  
+[B]v0.0.33 (Saturday, 11 May 2013):[/B]
+  - Added pageUrl to TGUN owned streams to get working again
+  
+[B]v0.0.32 (Wednesday, 01 May 2013):[/B]
+  - Small fix to get some additional streams working
+  
+[B]v0.0.31 (Monday, 29 April 2013):[/B]
+  - Updated TGUN hosted streams - asterisk next to titles
+  
+[B]v0.0.30 (Friday, 26 April 2013):[/B]
+  - Updated for new site layout
+  - Temporary fixes until the new tgun site is finalized
+  
+[B]v0.0.29 (Monday, 18 March 2013):[/B]
+  - Removed Classic TV Shows as they are no longer available, no more main menu
+  
+[B]v0.0.28 (Thursday, 24 January 2013):[/B]
+  - Added new check on internal streams
+  - Updated owncast resolver
+
+[B]v0.0.27 (Friday, 18 January 2013):[/B]
+  - Updated tgun player streams again, check for new and old format
+  
+[B]v0.0.26 (Tuesday, 15 January 2013):[/B]
+  - Updated for new html layout of tgun player streams
+  
+[B]v0.0.25 (Tuesday, 08 January 2013):[/B]
+  - Added check for internal linked streams
+
+[B]v0.0.24 (Sunday, 30 December 2012):[/B]
+  - Fixed more regex variations to get more channels working
+  - Fixed owncast.me resolver - updated playpath value
+  
+[B]v0.0.23 (Friday, 28 December 2012):[/B]
+  - Fixed small regex on finding player embed code
+  
+[B]v0.0.22 (Wednesdaty, 26 December 2012):[/B]
+  - Added check for TGUN hiding links
+  - Added JTV offline channel check
+
+[B]v0.0.21 (Wednesdaty, 12 December 2012):[/B]
+  - Fix for slight variations in html embed code
+
+[B]v0.0.20 (Wednesdaty, 06 December 2012):[/B]
+  - Added check for links that are hidden with escaped html
+
+[B]v0.0.19 (Wednesdaty, 31 October 2012):[/B]
+  - Fixed owncast.me resolver
+
+[B]v0.0.18 (Tuesday, 30 October 2012):[/B]
+  - Updated iLive.to resolver to use dynamic rtmp address instead of static ip
+  - Disabled Live TV channels
+  - Removing Veetle channels from listings until solution is found
+
+[B]v0.0.17 (Thursday, 25 October 2012):[/B]
+  - Added OwnCast.me resolver
+ 
+[B]v0.0.16 (Wednesday, 24 October 2012):[/B]
+  - Updated iLive resolver slightly for site variations
+  
+[B]v0.0.15 (Thursday, 18 October 2012):[/B]
+  - SawLive sucks
+
+[B]v0.0.14 (Wednesday, 10 October 2012):[/B]
+  - Update iLive.to rtmp address
+
+[B]v0.0.13 (Friday, 04 October 2012):[/B]
+  - More updates to SawLive
+  - Removed html code that is commented out from checking for video links
+  
+[B]v0.0.12 (Thursday, 04 October 2012):[/B]
+  - Fixed SawLive
+  
+[B]v0.0.11 (Thursday, 04 October 2012):[/B]
+  - Fixed Castto parser
+  
+[B]v0.0.10 (Thursday, 04 October 2012):[/B]
+  - Added Castto parser
+
+[B]v0.0.9 (Thursday, 20 September 2012):[/B]
+  - More Sawlive fun
+
+[B]v0.0.8 (Monday, 17 September 2012):[/B]
+  - FU SAWLIVE TV!
+  - Started adding LiveTV channels section - vew few currently work
+
+[B]v0.0.7 (Sunday, 09 September 2012):[/B]
+  - Fixed SawTV resolver
+  
+[B]v0.0.6 (Friday, 07 September 2012):[/B]
+  - Fixed SawTV resolver
+  
+[B]v0.0.5 (Thursday, 06 September 2012):[/B]
+  - Added Classic channels
+
+[B]v0.0.4 (Monday, 02 September 2012):[/B]
+  - Updated SawTV resolver
+
+[B]v0.0.3 (Friday, 31 August 2012):[/B]
+  - Updated SawTV resolver
+  - Added 2nd page of shows
+ 

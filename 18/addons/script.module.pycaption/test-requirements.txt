@@ -1,0 +1,8 @@
+mock;python_version < '3.0'
+beautifulsoup4
+lxml
+cssutils
+future
+six
+testtools
+pytest

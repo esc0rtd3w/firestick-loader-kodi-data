@@ -1,0 +1,17 @@
+v1.0.4:
+  - Clear cache on initial run
+
+v1.0.3:
+  - Fixed navigation issues caused by changes to website
+  - Up/Down/Left/Right can also be used to navigate when viewing strips
+  - Changed navigation icons
+
+v1.0.2:
+  - Added Comic Strip slideshow, available from the context menu
+
+v1.0.1:
+  - Added controls for mouse users and touch screens
+  - Added setting to start with random strip rather than the current strip
+
+v1.0.0:
+  - Initial release

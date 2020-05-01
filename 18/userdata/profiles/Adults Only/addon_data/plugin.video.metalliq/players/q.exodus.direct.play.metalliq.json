@@ -1,0 +1,22 @@
+{
+ "name"         : "Exodus [COLOR FF0084FF]-[/COLOR] Direct Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.exodus",
+ "plugin"       : "plugin.video.exodus",
+ "priority"     : 500,
+ "id"           : "q.exodus.direct.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.exodus/?action=episodes&imdb={imdb}&season={season}&tvdb={id}&tvshowtitle={clearname}&year={year}",
+    "steps"     : [],
+    "action"    : "ACTIVATE"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+<!-- Options -->
+	<string id="30001">1080p</string>
+	<string id="30002">720p</string>
+	<string id="30003">Standard</string>
+	
+	
+	<string id="30011">Stop existing and play new</string>
+	<string id="30012">Add new to playlist</string>
+	<string id="30013">Ignore new request</string>
+</strings>

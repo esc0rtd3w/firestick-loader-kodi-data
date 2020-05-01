@@ -1,0 +1,43 @@
+Version 0.1.3
+- torrents search fix;
+
+Version 0.1.2
+- android fix;
+Version 0.1.1
+- minor fixes;
+- cleanup settings for older versions.
+Version 0.1.0
+- Changed from module addon to program addon;
+- code redone.
+Version 0.0.11
+- added muchmovies.HD and yifymovies.HD
+Version 0.0.10A
+- Abelhas no previous search
+Version 0.0.10
+- Abelhas added
+Version 0.0.8
+- SALTS added
+Version 0.0.8
+- Icefilms added
+Version 0.0.7A
+- fix list if not source
+Version 0.0.7
+- sites_dos_portugas only shows when there are movies in the sources
+Version 0.0.6A
+- wt search fix
+Version 0.0.6
+- Improvements with Sites_dos_Portugas
+Version 0.0.5
+- Language pt and enu;
+- Treatment of some errors;
+- Some code improvement.
+Version 0.0.4A
+- Fix on prefered addon if not in source (Ratotv/Wareztuga/Torrents) will open list with possible sources.
+Version 0.0.4
+- Fix on prefered addon
+- Get Ready for library integration
+Version 0.0.3
+- Fix loading torrents
+Version 0.0.1
+* First addon release
+- RatoTV,Genesis and Sites_dos_Tugas

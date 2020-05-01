@@ -185,7 +185,7 @@ class Main:
                         xbmc.executebuiltin( "Skin.Reset(%s)" %( self.WIDGETTARGET ) )
                 if self.WIDGETPATH:
                     if selectedShortcut.getProperty( "widgetPath" ):
-                        xbmc.executebuiltin( "Skin.SetString(%s,%s)" %( self.WIDGETPATH, urllib.unquote( selectedShortcut.getProperty( "widgetPath" ) ) ) )
+                        xbmc.executebuiltin( "Skin.SetString(%s,%s)" %( self.WIDGETPATH, selectedShortcut.getProperty( "widgetPath" ) ) )
                     else:
                         xbmc.executebuiltin( "Skin.Reset(%s)" %( self.WIDGETPATH ) )
 

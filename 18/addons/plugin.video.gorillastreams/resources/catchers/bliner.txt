@@ -1,0 +1,16 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Bliner - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://bliner.tv/jwstream/%s.html
+
+item_info_name=tmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*file:\s*"([^"]+)",\s*w.*','@REFERER@')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=tmp + ' swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf live=true swfVfy=1 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

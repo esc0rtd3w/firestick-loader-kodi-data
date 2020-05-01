@@ -1,0 +1,24 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Stream4u - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.stream4u.eu/embed.php?v=%s&vw=650&vh=450&domain=osiht0tv.blogspot.co.uk
+
+item_info_name=swf
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*flashplayer\': '([^\']+).*','%s')
+item_info_build=%s
+
+item_info_name=rtmp
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*streamer\': '([^\']+).*','%s')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playPath=' + @PARAM1@ + ' swfUrl=' + swf + ' swfVfy=1 live=true pageUrl=' + pageUrl
+item_info_build=%s
+
+
+#item_info_from=item_info_build=rtmp://31.204.154.37/live/?u= playPath=%s swfUrl=http://stream4u.eu/player/player.swf swfVfy=1 live=true #pageUrl=http://www.stream4u.eu

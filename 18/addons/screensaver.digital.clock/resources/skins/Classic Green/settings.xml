@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<setting id="enable_seconds" value="true"/>
+	<setting id="military_only" value="false"/>
+	<setting id="military_offset_x" value="150"/>
+	<setting id="military_offset_y" value="0"/>
+	<setting id="enable_burn_in" value="true"/>	
+	<setting id="burn_in_offset" value=""/>
+</settings>

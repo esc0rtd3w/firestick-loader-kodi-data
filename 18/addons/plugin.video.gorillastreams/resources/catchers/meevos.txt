@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Meevos - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://68.68.28.187/live/%s swfurl=http://player.meevos.tv/player.swf pageurl=http://embed.meevos.tv

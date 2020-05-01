@@ -1,3 +1,287 @@
+[B][COLOR red]Update - v3.6.2 - April 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Code changes for new integration with Venom global
+    context menu changes.[/I]
+[COLOR yellow]--[/COLOR][I] Changed trakt history to now follow "Progress sorting"
+    method from settings.[/I]
+
+[B][COLOR red]Update - v3.6.1 - April 14, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Calendar show titles.[/I]
+[COLOR yellow]--[/COLOR][I] fixed typo with RD uncached torrent removal
+    using PM setting.[/I]
+[COLOR yellow]--[/COLOR][I] fixed issue with RD uncached torrent check
+    failing due to RD response converting hashes to
+    lower case.[/I]
+[COLOR yellow]--[/COLOR][I] fixed Trakt Progress episode sort issue from
+    Trakt response.[/I]
+
+[B][COLOR red]Update - v3.6.0 - April 2, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Compressed artwork to lessen footprint.[/I]
+[COLOR yellow]--[/COLOR][I] Added new setting to enable or disable Calendar
+    (TVMaze) extended meta.  When disabled(default)
+    the Calendar list items will now load faster without
+    the extra meta and artwork.[/I]
+[COLOR yellow]--[/COLOR][I] resolveURL is now maintained by gural so
+    repo has been updated.[/I]
+
+[B][COLOR red]Update - v3.5.9 - March 30, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Removed resolveURL notification from previous
+    update.[/I]
+[COLOR yellow]--[/COLOR][I] Updated bookmarks caching method to now also
+    record show name and year for better tracking of
+    progress indicators.  This requires you to clear old
+    bookmarks for the new update to be in use.[/I]
+
+[B][COLOR red]Update - v3.5.8 - March 29, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed issue with random innacurate seasoncount.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed issue with random innacurate resume point
+    saved. Issue would lose progress indicators for some shows.[/I]
+[COLOR yellow]--[/COLOR][I] added notification when resolveURL fails for
+    cached torrents.[/I]
+
+[B][COLOR red]Update - v3.5.7 - March 24, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed issue with random duplicate list items
+    after playback ends when Autoplay is enabled.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed trakt api issue randomly placing
+    Season0 at end of users watch list. This would
+    alter the Next Up-Progress item.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed trakt api episode count not including
+    Season0 when enabled. This would cause shows
+    to vanish from Trakt Progress when the count was
+    exceeded.[/I]
+[COLOR yellow]--[/COLOR][I] Added color setting for Movies who's theatrical
+    release date is greater than current date.[/I]
+
+[B][COLOR red]Update - v3.5.6 - March 20, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed torrent cache check for when debrid service
+    is anything other than PM or RD it would drop other service.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed Movies-In Theaters. Some group advanced
+    filtering is currently no longer working on IMDB.[/I]
+
+[B][COLOR red]Update - v3.5.5 - March 19, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Dialog source select now respects setting for
+    "Multiline Source list" like Directory source list.[/I]
+[COLOR yellow]--[/COLOR][I] Added setting to "Sort torrents by size".  The new
+    setting is enabled by default and found under
+    "Torrent Settings".[/I]
+
+[B][COLOR red]Update - v3.5.4 - March 18, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added setting option for torrent secondary line to
+    display as std info or magnet title.  Note this is skin
+    dependent so secondary info line lengthens and
+    should be tested with your skin of choice.  The
+    new setting is under Source Options-Secondary
+    Line Torrent content.[/I]
+
+[B][COLOR red]Update - v3.5.3 - March 16, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Google api for trailer search now checks if user entered
+    own key in youtube addon.  That key will now take
+    priority.[/I]
+[COLOR yellow]--[/COLOR][I] Added torrent cache checking, and removal settings,
+    for RD and PM. The new settings are found under
+    "Torrent Settings" and are enabled by default to
+    cache check and remove uncached torrents.[/I]
+[COLOR yellow]--[/COLOR][I] Added setting to not log removed duplicate sources.
+    Logging the removed duplicates was causing
+    excessive log spamming.[/I]
+
+[B][COLOR red]Update - v3.5.2 - Feb. 22, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Trailer module updated with new api keys to fix google
+    search of youtube for trailers[/I]
+[COLOR yellow]--[/COLOR][I] Changed how restarting a previousely watched movie
+    or episode is handled. Previousely the title would be
+    marked unwatched upon replaying a previousely
+    watched item. Now the watched indicator is not
+    changed.[/I]
+[COLOR yellow]--[/COLOR][I] Added ability to pass to skin resume points.  This now
+    allows for skin to use a watched progress indicator.[/I]
+[COLOR yellow]--[/COLOR][I] Added TMDB Box Office to Movie Menu and
+    setting page option to remove item from navigation.[/I]
+
+[B][COLOR red]Update - v3.5.1 - Feb. 8, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Scraper function cache now written to the providers.db
+    instead of cache.db.  Now using "Clear Providers" will
+    wipe both links and function cache with no need to use
+    "Clear cache". This will help preserve meta data.[/I]
+[COLOR yellow]--[/COLOR][I] Updated "context.venom" addon to now include the
+    following new global context options as follows.
+    "Clear Providers"
+    "Find Similar"
+    "Browse Series"
+    "Browse Episodes"[/I]
+
+[B][COLOR red]Update - v3.5.0 - Feb. 6, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Updated userdata settings.xml cleaner tool to be
+    backward compatible with older than Kodi 18 versions.
+    Thank you TikiPete![/I]
+[COLOR yellow]--[/COLOR][I] Added Venom global context menu as dependency.
+    Trakt Manager and Rescrape Item available for home
+    screen widgets.[/I]
+[COLOR yellow]--[/COLOR][I] Added option to sort source list based on Torrent/Hoster
+    and to group by Premium or ignore Premium provider.
+    Ex...Group by Premium(priority) as follows.
+    4k - PM - Torrents
+    4k - PM - Prem. Hosters
+    4k - PM - Free Hosters
+    4k - RD - Torrents
+    4k - RD - Prem. Hosters
+    4k - RD - Free Hosters
+
+    Ex...Ignore Premium(source priority) as follows.
+    4k - PM - Torrents
+    4k - RD - Torrents
+    4k - PM - Prem. Hosters
+    4k - RD - Prem. Hosters
+    4k - PM - Free Hosters
+    4k - RD - Free Hosters[/I]
+
+[B][COLOR red]Update - v3.4.9 - Feb. 3, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Trakt Progress fix to resolve random incorrect NextUp
+    items to watch due to TVDB v1 api season/episodes out
+    of order in xml.  The xml sort order was changed to be
+    based on ID's and no longer sorted by season/episode.[/I]
+[COLOR yellow]--[/COLOR][I] Added translation lookup for title and plot when language
+ changed from English.[/I]
+
+[B][COLOR red]Update - v3.4.8 - Jan. 27, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Changed query check for TVDB SeriesName and IMDB_ID
+    for a more accurate title match for missing ID's .[/I]
+[COLOR yellow]--[/COLOR][I] Revert solely to using requests.get() for 1-23 changes
+    to TVDB legacy SSL support.[/I]
+[COLOR yellow]--[/COLOR][I] fanart.tv module changed to using requests.get() with
+    added response checks[/I]
+[COLOR yellow]--[/COLOR][I] Added notification for fanart.tv requests when server
+    errors occur.  I suggest upon seeing this notification to
+    disable extended artwork to combat the server
+    errors until normal operation resumes.[/I]
+
+[B][COLOR red]Update - v3.4.7 - Jan. 21, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added setting to check for Venom updates at
+    startup. Useful for those that turn off Auto Updates.[/I]
+[COLOR yellow]--[/COLOR][I] Added setting to enable-disable resolution icons
+    in source select dialog.[/I]
+[COLOR yellow]--[/COLOR][I] Added sort() method to TV Shows-Network
+    (TVMaze) to maintain consistency with TVMaze api
+    response.[/I]
+[COLOR yellow]--[/COLOR][I] Changed Library import method from reading
+    selected item to now fetch new meta.  This now better
+    respects on the fly changes made to "Enable Special
+    Season(0) and "Show unaired season/episodes".[/I]
+[COLOR yellow]--[/COLOR][I] New TVDB api key in use.[/I]
+
+[B][COLOR red]Update - v3.4.6 - Jan. 16, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Another fix for this weeks TVDB change to SSL.
+    Seems this week some shows are back to working with
+    legacy SSL support while others do not.  What this now
+    means is urllib2.urlopen() request works for some shows
+    while requests.get() works for others.  When the request
+    does not satisfy the SSL requirement the response xml's
+    are empty yet server still responds with <Response 200>
+    I've now coded a check for the first request and if the xml's
+    are empty then we'll use requests.get().  This appears to now
+    get all shows back to laoding season/episode lists.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed settings.xml typo from last update.[/I]
+
+[B][COLOR red]Update - v3.4.5 - Jan. 11, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fix for TVDB latest change to SSL requirement.
+    Thank you ruiner!![/I]
+[COLOR yellow]--[/COLOR][I] Few settings tweaks for non Trakt users to hide
+    options not pertaining to them.[/I]
+[COLOR yellow]--[/COLOR][I] Added new Tools option to clean, remove old deprecated
+    settings from userdata settings.xml.  New option will clean
+    both Venom and OpenScrapers.  Please note that until
+    OpenScrapers pushes the PR request this only works
+    for Venom at this time.  Openscrapers update is coming
+    for this to also work there.  This tool will also auto run
+    upon new Venom update. Courtesy of FEN!![/I]
+[COLOR yellow]--[/COLOR][I] Few tweaks to TV Shows - Networks to fix random
+    dropped titles due to None types in api response.[/I]
+
+[B][COLOR red]Update - v3.4.4 - Jan. 03, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt watch/unwatched context menu options.[/I]
+
+[B][COLOR red]Update - v3.4.3 - Jan. 02, 2020[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed loop issue with re-occurring library yes/no dialog.[/I]
+
+[B][COLOR red]Update - v3.4.2 - Dec. 31, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added "Add Show to Watchlist" and "Remove Show
+    from Watchlist" options to Trakt Manager when
+    viewing seasons or episodes.[/I]
+[COLOR yellow]--[/COLOR][I] Added "Hide Movie" or "Hide Show" options to Trakt
+    Manager to hide from Progress and Calendar.  Use
+    to cleanup within the addon folks!  Load time can be
+    sped up cleaning out old itmes you may never finish
+    a series of.[/I]
+[COLOR yellow]--[/COLOR][I] Made separate notifications settings for Trakt Server
+    Notifications and General Notifications.  General Notifications
+    covers Trakt Manager functions only and can now be turned
+    off independently of Trakt Server/Timeout issues.[/I]
+[COLOR yellow]--[/COLOR][I] Added widget refresh function for Trakt changes done
+    within the addon.[/I]
+[COLOR yellow]--[/COLOR][I] Removed caching of Trakt Progress list so item changes
+    are shown immediately.  This does cause reloading of Progress
+    list to load no faster on subsequent loading of the list.[/I]
+
+[B][COLOR red]Update - v3.4.1 - Dec. 29, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed Trakt/TMDb list imports not adding "list_name"
+    to database when imported from My Movies or My TVShows.
+    This caused service update failures.[/I]
+
+[B][COLOR red]Update - v3.4.0 - Dec. 26, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added 2nd notification to library folder check notification
+    for auto folder setup.  Now if you answer "no" to the auto
+    folder setup you will be presented with a 2nd yes-no dialog
+    asking if you'd also like to disable the "Auto Update Service".[/I]
+[COLOR yellow]--[/COLOR][I] Fixed Update Service failure if no user lists were
+    previously imported under the new system. The failure
+    occurred because the db table was only written during
+    the import process so service update checks did not
+    find this table and halted the entire update process.
+    This has been fixed.[/I]
+[COLOR yellow]--[/COLOR][I] Fixed occasional duplicate folder entries in the Kodi
+    "MyVideos*.db" file.  This occurs because Kodi does
+    not fully remove path table entries when manually
+    deleted but instead Kodi zeroes out the values so it's
+    not seen.  This has been fixed to remove those old
+    entries when using the auto folder setup process.[/I]
+[COLOR yellow]--[/COLOR][I] Removed link caching process outside of Venom due
+    to no global context menu to "Rescrape".  Global
+    context menu options are in the works so this is a
+    temp solution.[/I]
+
+[B][COLOR red]Update - v3.3.9 - Dec. 23, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Fixed broken for loop from previous update preventing
+    Library Updates from completing.[/I]
+[COLOR yellow]--[/COLOR][I] Added Disney+ and Showcase to TVShows Networks.[/I]
+
+[B][COLOR red]Update - v3.3.8 - Dec. 23, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Switched from Trakt slug check for ID's to Trakt IDLookup
+    method. Slug checks seems to report same IMDB_ID
+    but different TVDB_ID for some shows. IDLookup method
+    is less prone to errors.[/I]
+[COLOR yellow]--[/COLOR][I] Added TMDb Watchlist, Favorites, and Userlist to library
+    import options for both Movies and TV Shows.[/I]
+[COLOR yellow]--[/COLOR][I] Happy Holidays to Everyone![/I
+
+[B][COLOR red]Update - v3.3.7 - Dec. 19, 2019[/COLOR][/B]
+[COLOR yellow]--[/COLOR][I] Added extra folder path check when comparing Venom
+    library folders to Kodi's MyVideos*.db file.  Now 
+    "special://userdata" and translated paths are both
+    checked.  This solves issues with moved or manually
+    added folders.[/I]
+[COLOR yellow]--[/COLOR][I] Added new sort function as a temporary workaround to
+    solve the out of order Season Specials and Episode
+    index problems from TVDb v1 api.  TVDb is aware
+    of the condition.  Sadly this still does not fix the issues
+    with Trakt-Progress being incorrect at times for next
+    episode to watch, that problem occurs because the
+    index is very often out of order so the wrong NextUp
+    episode is grabbed.fried.[/I]
+[COLOR yellow]--[/COLOR][I] If you do not use Venom's Library integration please
+    disable the "Auto Update Service" under Settings-Library.
+    The new library folder check and auto setup prompt now
+    runs inside the existing service so it will cause the pop
+    up notification for setup.[/I]
+
 [B][COLOR red]Update - v3.3.6 - Dec. 18, 2019[/COLOR][/B]
 [COLOR yellow]--[/COLOR][I] Added new function to move traceback error logging to
     addon log vs. kodi log.[/I]

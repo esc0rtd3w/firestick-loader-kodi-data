@@ -1,0 +1,18 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ZCast - %s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://zcast.us/gen.php?ch=%s&width=700&height=480
+
+
+item_info_name=rtmp
+item_info_build=rtmp://gabon.zcast.us/liveedge
+
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + @PARAM1@ + ' live=true timeout=15 swfVfy=1 swfUrl=http://player.zcast.us/player58.swf pageUrl=' + pageUrl
+item_info_build=%s
+
+

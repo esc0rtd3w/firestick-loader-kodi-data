@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window id="84000">
+	<defaultcontrol>84005</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="100">WindowClose</animation>
+	<coordinates>
+		<posX>200</posX>
+		<posY>100</posY>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Black Background</description>
+			<posx>435</posx>
+			<posy>200</posy>
+			<width>400</width>
+			<height>200</height>
+			<texture>dialog.png</texture>
+		</control>
+		<control type="image">
+			<description>Black Background</description>
+			<posx>435</posx>
+			<posy>200</posy>
+			<width>400</width>
+			<height>200</height>
+			<texture>dialog.png</texture>
+		</control>
+	
+		<control type="image">
+			<description>Title Bar</description>
+			<posx>435</posx>
+			<posy>205</posy>
+			<width>400</width>
+			<height>35</height>
+			<texture>dialogheader.png</texture>
+		</control>
+		<control type="label">
+			<posx>435</posx>
+			<posy>205</posy>
+			<width>400</width>
+			<height>35</height>
+			<font>font13_title</font>
+			<align>center</align>
+			<textcolor>cyan</textcolor>
+			<shadowcolor>dimgrey</shadowcolor>
+			<label>Testing Stream</label>
+		</control>
+		
+		<control type="label" id="84001">
+			<posx>435</posx>
+			<posy>300</posy>
+			<width>400</width>
+			<height>35</height>
+			<font>font16</font>
+			<align>center</align>
+			<textcolor>white</textcolor>
+			<label>Please Wait!</label>
+		</control>
+		
+		<control type="button" id="84005">
+			<posx>740</posx>
+			<posy>206</posy>
+			<width>60</width>
+			<height>32</height>
+			<label></label>
+			<focusedcolor>FFFFFFFF</focusedcolor>
+			<colordiffuse>FFFFFFFF</colordiffuse>
+			<texturefocus>window/close_focus.png</texturefocus>
+			<texturenofocus>window/close.png</texturenofocus>
+			<pulseonselect>true</pulseonselect>
+		</control>
+	
+	</controls>
+</window>

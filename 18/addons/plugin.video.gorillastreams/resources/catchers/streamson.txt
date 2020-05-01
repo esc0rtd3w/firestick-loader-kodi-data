@@ -1,0 +1,39 @@
+item_info_name=tmpp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('%s','.*?frameborder="0" src="([^'"]+).*','http://streamson.me')
+item_info_convert=getInfo('%s','.*?window.location = "([^'"]+).*','http://streamson.me')
+item_info_build=%s
+
+item_info_name=fid
+item_info_from=tmpp
+item_info_convert=getInfo('%s','.*fid="([^"']+).*','http://streamson.me')
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=js
+item_info_from=tmpp
+item_info_convert=getInfo('%s','.*?src="(http://www.castto.me[^"']+).*','http://streamson.me')
+item_info_convert=debug
+item_info_build=%s
+
+item_info_name=title
+item_info_from=fid
+item_info_build=StreamsOn - %s
+
+item_info_name=tmp2
+item_info_from=js
+item_info_convert=getInfo('%s','.*?src=([^"' ]+).*','@REFERER@')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=tmp2 + fid + '&vw=640&vh=420
+item_info_build=%s
+
+item_info_name=tmp3
+item_info_from=pageUrl
+item_info_convert=getInfo('%s','.*SWFObject\(\'([^\']+)\'.*?file\',\s*\'([^\']+)\'.*?streamer\',\s*\'([^\']+)\'.*','http://streamson.me','swf|file|rtmp')
+item_info_build=%s
+
+item_info_name=url
+item_info_from=rtmp + ' playpath=' + file + ' swfUrl=' + swf + ' live=true timeout=15 token=#ed%h0#w@1 swfVfy=1 pageUrl=' + pageUrl
+item_info_build=%s

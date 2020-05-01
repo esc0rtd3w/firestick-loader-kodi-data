@@ -1,0 +1,21 @@
+<addon id="repository.xunitytalk" name="[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk Repository" version="2.0.1" provider-name="[COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk">
+	<extension point="xbmc.addon.repository" name="XunityTalk Repository">
+	<dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	</dir>
+
+    <dir>
+		<info compressed="false">https://github.com/xtyrepo/xty-addons/raw/master/addons.xml</info>
+		<checksum>https://github.com/xtyrepo/xty-addons/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/xtyrepo/xty-addons/raw/master/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">The Best Third Party Addons for Kodi from [COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</summary>
+		<description lang="en">The Best Third Party Addons for Kodi from [COLOR blue]X[/COLOR]unity[COLOR blue]T[/COLOR]alk</description>
+		<website>https://www.xunitytalk.me</website>
+		<platform>all</platform>
+	</extension>
+</addon>

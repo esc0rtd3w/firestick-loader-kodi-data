@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+        <setting type="lsep" label="30010"/>
+        <setting id="sabnzbd_ip" type="ipaddress" label="30021" default="127.0.0.1"/>
+        <setting id="sabnzbd_port" type="number" label="30022" default="8080"/>
+        <setting id="sabnzbd_key" type="text" label="30023" default=""/>
+        <setting id="sabnzbd_user" type="text" label="30024" default=""/>
+        <setting id="sabnzbd_pass" type="text" label="30025" default=""/>
+        <setting id="sabnzbd_https" type="bool" label="30026" default="false"/>
+    </category>
+    <category label="30001">
+        <setting type="lsep" label="30012"/>
+        <setting id="debug_log" type="bool" label="30041" default="false"/>
+    </category>
+</settings>

@@ -1,0 +1,134 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Slavisa Milojkovic, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-03-28 19:56+0000\n"
+"Last-Translator: tknorris\n"
+"Language-Team: Serbian (http://www.transifex.com/tv-addons/salts/language/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filmovi"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV Serije"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV Serija"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Podešavanja"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Podešavanja Dodatka"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Auto-Konfiguriši SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Autorizuj SALTS da pristupi mom trakt.tv nalogu"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Podesi Podrazumevane Preglede"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Ukloni Keširane Url(e)"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "U Trendu %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Popularno %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Skoro Izmenjeno %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Preporučeno %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Moja %s Kolekcija"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Moje Omiljeno"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Moje Pretplate"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Moja Lista za Gledanje"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Moja Lista"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Druge Liste"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Moje Sledeće Epizode"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Moj Kalendar"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Opšti Kalendar"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Kalendar Premijera"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Pretraga"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Skorašnje Pretrage"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Sačuvane Pretrage"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Nasilno Osveži"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Očisti Sve %s"
+

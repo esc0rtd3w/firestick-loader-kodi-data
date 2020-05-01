@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30000">
+        <setting id="auto_play" type="bool" label="30003" default="true"/>
+        <setting id="debug_log" type="bool" label="30050" default="false"/>
+        <setting type="lsep" label="30004"/>
+        <setting id="sabnzbd_incomplete" type="folder" label="30007" default=""/>
+        <setting type="lsep" label="30005"/>
+        <setting id="sabnzbd_cat" type="text" label="30016" default=""/>
+        <setting id="sabnzbd_cat_ask" type="bool" label="30017" default="false"/>
+    </category>
+    <category label="30020">
+        <setting type="lsep" label="30004"/>
+        <setting id="post_process" type="labelenum" label="30027" values="Disabled|Delete|Repair|Ask" default="Disabled"/>
+        <setting type="lsep" label="30025"/>
+        <setting id="save_nfo_type_movie" type="labelenum" label="30021" values="Full|Minimal|Disabled" default="Full"/>
+        <setting id="save_nfo_type_tvshow" type="labelenum" label="30022" values="Full|Minimal|Disabled" default="Full"/>
+        <setting id="save_nfo_poster" type="bool" label="30023" default="true"/>
+        <setting id="save_nfo_fanart" type="bool" label="30024" default="true"/>
+    </category>
+    <category label="30030">
+        <setting type="lsep" label="30033"/>
+        <setting id="strm_path_movie" type="folder" label="30031" default=""/>
+        <setting id="strm_path_tvshow" type="folder" label="30032" default=""/>
+        <setting type="lsep" label="30041"/>
+        <setting id="save_nzb" type="bool" label="30028" default="false"/>
+        <setting id="nzb_cache" type="folder" label="30042" default=""/>
+        <setting type="lsep" label="30026"/>
+        <setting id="lib_save_nfo_type_movie" type="labelenum" label="30021" values="Full|Minimal|Disabled" default="Full"/>
+        <setting id="lib_save_nfo_type_tvshow" type="labelenum" label="30022" values="Full|Minimal|Disabled" default="Full"/>
+        <setting id="lib_save_nfo_poster" type="bool" label="30023" default="true"/>
+        <setting id="lib_save_nfo_fanart" type="bool" label="30024" default="true"/>
+    </category>
+    <category label="30040">
+        <setting type="lsep" label="30041"/>
+        <setting id="nzb_cache" type="folder" label="30042" default=""/>
+    </category>
+</settings>

@@ -1,0 +1,45 @@
+{
+ "name"         : "Ororo TV [COLOR FF0084FF]-[/COLOR] Search Play (K)",
+ "repository"   : "repository.jsergio",
+ "plugin"       : "plugin.video.ororotv",
+ "priority"     : 900,
+ "id"           : "kaosbox.ororotv.search.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ororotv/?action=movies_search&query={title}",
+     "steps"     : [
+     ".*{title}.*"
+     ],
+    "action"    : "PLAY"
+   } 
+  ]
+ ],
+ "tvshows"      : [
+  [
+   {
+    "link"      : "plugin://plugin.video.ororotv/?action=shows_search&query={clearname}",
+    "steps"     : [
+     "{clearname}",
+     "Season {season}",
+     ".*{season}x{episode:02d}. {title}"
+     ],
+    "action"    : "PLAY"
+   },
+   {
+    "link"      : "plugin://plugin.video.ororotv/?action=shows_search&query={clearname}",
+    "steps"     : [
+     ".*{clearname}.*",
+     ".* {season}.*",
+     ".*{season}x{episode:2d}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ],
+ "musicvideos"  : [],
+ "music"        : [],
+ "live"         : []
+}

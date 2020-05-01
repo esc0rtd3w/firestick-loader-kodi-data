@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<!-- Settings -->
+	<string id="30000">Ogólne</string>
+	<string id="30001">Jakość HD jeśli dostępna</string>
+	<string id="30002">Cache</string>
+	<string id="30003">Clear cache</string>
+	<!-- Info -->
+	<string id="30301"></string>
+	<string id="30302"> ustawione jako domyślne</string>
+	<string id="30303">Cache cleared</string>
+	<string id="30304">Brak dostępnego strumienia</string>
+	<!-- Misc -->
+	<string id="30361">Następna Strona</string>
+	<string id="30362">Szukaj</string>
+	<!-- ContextMenu -->
+	<string id="30401">Odtwarzaj</string>
+	<string id="30402">Odtwarzaj losowo</string>
+	<string id="30403">Dodaj do kolejki</string>
+	<string id="30404">Teraz odtwarzane...</string>
+	<string id="30405">Ustawienia wtyczki</string>
+	<string id="30406">Ustaw ten widok</string>
+	<!-- Description -->
+	<string id="30450">NBA on demand</string>
+	<!-- Labels -->
+	<string id="30501">Najnowsze</string>
+	<string id="30502">Mecze</string>
+	<string id="30503">Najciekawsze</string>
+	<string id="30504">Drużyny</string>
+</strings>

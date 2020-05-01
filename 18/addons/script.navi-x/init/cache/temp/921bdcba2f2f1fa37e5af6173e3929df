@@ -1,0 +1,30 @@
+version=8
+title=Help and Support
+background=http://i1061.photobucket.com/albums/t461/billdaly111/bg.jpg
+description=Please visit www.Navixtreme.com/forums or www.XBMCHub.com/forums for Navi-X support!  Team Navi-X/description
+#
+#type=rss
+#name=Navi-X on GoogleCode - View Reported Issues
+#URL=http://pipes.yahoo.com/pipes/pipe.run?_id=681d39a9c9ba58457db3ac8ef03a7391&_render=rss
+#thumb=http://i1061.photobucket.com/albums/t461/billdaly111/nxlogo.png
+
+type=rss:atom
+name=Navi-Xtreme - Latest Posts
+URL=http://www.navixtreme.com/feeds/newtopics.xml
+thumb=http://i1061.photobucket.com/albums/t461/billdaly111/nxlogo.png
+
+type=rss:atom
+name=Navi-Xtreme - New Topics
+URL=http://www.navixtreme.com/feeds/newtopics.xml
+thumb=http://i1061.photobucket.com/albums/t461/billdaly111/nxlogo.png
+
+#type=playlist
+#name=UPDATE NAVI-X
+#URL=http://navi-x.googlecode.com/svn/trunk/scripts.plx
+#thumb=http://i1061.photobucket.com/albums/t461/billdaly111/nxlogo.png
+
+#type=atom
+#name=What Are People Saying About Navi-X on Twitter?
+#URL=http://search.twitter.com/search.atom?q=navi-x
+#thumb=http://i1061.photobucket.com/albums/t461/billdaly111/nxlogo.png
+

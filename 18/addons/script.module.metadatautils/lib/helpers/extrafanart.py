@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
     script.module.metadatautils
     extrafanart.py
     Get extrafanart location for kodi media
-'''
+"""
 
 import os
 import xbmcvfs
 
 
 def get_extrafanart(file_path):
-    '''get extrafanart path on disk based on media path'''
+    """get extrafanart path on disk based on media path"""
     result = {}
     efa_path = ""
     if "plugin.video.emby" in file_path:

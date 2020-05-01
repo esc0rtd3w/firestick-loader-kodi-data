@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="screensaver.digital.clock" name="Digital Clock Screensaver" provider-name="DudeHere" version="0.1.7">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="xbmc.addon" version="12.0.0" />
+    </requires>
+    <extension library="default.py" point="xbmc.ui.screensaver" />
+    <extension point="xbmc.addon.metadata">
+        <provides>executable</provides>
+        <summary lang="en">Screensaver digital clock</summary>
+        <description lang="en">A screensaver which displays a digital clock</description>
+        <platform>all</platform>
+        <language />
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum />
+        <website />
+    </extension>
+</addon>

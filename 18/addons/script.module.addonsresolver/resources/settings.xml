@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting id="pref_addon" type="select" label="30000" values="-|Genesis|RatoTV|Sites_Dos_Portugas|WarezTuga|KMediaTorrent|Stream|IceFilms|SALTS|Abelhas|yifymovies.HD|muchmovies.HD" default="-" />
+		<setting type="sep"/>
+		<setting type="lsep" label="30001"/>
+		<setting id="genesis_enabled" type="bool" label="Genesis" default="true"/>
+		<setting id="genesis_pos" type="number" label="30008" default="1" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="rato_enabled" type="bool" label="RatoTV" default="true"/>
+		<setting id="rato_pos" type="number" label="30008" default="2" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="wt_enabled" type="bool" label="WarezTuga" default="true"/>
+		<setting id="wt_pos" type="number" label="30008" default="3" visible="eq(-1,true)"/>
+		<setting type="sep"/>		
+		<setting id="sdp_enabled" type="bool" label="Sites_dos_Portugas" default="true"/>
+		<setting id="sdp_pos" type="number" label="30008" default="4" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="abelhas_enabled" type="bool" label="Abelhas" default="true"/>
+		<setting id="abelhas_pos" type="number" label="30008" default="5" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="kmediatorrent_enabled" type="bool" label="KMediaTorrent" default="true"/>
+		<setting id="kmediatorrent_pos" type="number" label="30008" default="6" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="stream_enabled" type="bool" label="Stream" default="true"/>
+		<setting id="stream_pos" type="number" label="30008" default="7" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="ice_enabled" type="bool" label="IceFilms" default="true"/>
+		<setting id="ice_pos" type="number" label="30008" default="8" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="salts_enabled" type="bool" label="SALTS" default="true"/>
+		<setting id="salts_pos" type="number" label="30008" default="9" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="yify_enabled" type="bool" label="yifymovies.HD" default="true"/>
+		<setting id="yify_pos" type="number" label="30008" default="10" visible="eq(-1,true)"/>
+		<setting type="sep"/>
+		<setting id="muchm_enabled" type="bool" label="muchmovies.HD" default="true"/>
+		<setting id="muchm_pos" type="number" label="30008" default="11" visible="eq(-1,true)"/>
+	</category>
+	<category label="Sites_dos_Portugas">
+		<setting id="pref_sdp_source" type="select" label="30007" values="All|Any|videomega|dropvideo|thevideo.me|vidto.me|vidzi.TV|cloudzilla|played.to|nowvideo|movshare|putlocker|firedrive" default="All" />
+	</category>
+	<category label="30100">
+		<setting id="movie_library" type="folder" label="30102" default="special://userdata/addon_data/script.module.addonsresolver/Movies"/>
+		<setting id="update_library" type="bool" label="30107" default="true"/>
+		<setting id="check_library" type="bool" label="30108" default="true"/>
+	</category>	
+</settings>

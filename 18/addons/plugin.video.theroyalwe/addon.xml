@@ -1,0 +1,19 @@
+<?xml version="1.0" ?><addon id="plugin.video.theroyalwe" name="The Royal We" provider-name="DudeHere" version="1.3.8">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.dudehere.routines"/>
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language/>
+        <summary>The Royal We is about simplicity and sources.</summary>
+        <description>The Royal We is getting better then ever. It's all about simplicity and lots of sources. No settings. No configuration (except for a Trakt.tv account if you have one).</description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum>http://forums.tvaddons.ag/dudehere-addons/</forum>
+        <website>http://www.tvaddons.ag/</website>
+		<news>[B]1.3.8 Update fix I Fixed Trakt.api some users got failed should be fixed [/B] [CR] This is The Last Version Dudehere Made - no one knows if he is coming back</news>
+    </extension>
+</addon>

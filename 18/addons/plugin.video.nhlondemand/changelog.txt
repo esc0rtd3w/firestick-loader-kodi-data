@@ -1,0 +1,20 @@
+------------------------
+NHL On-demand v2.0.7 (01-Apr-17)
+------------------------
+
+- Fix Teams list
+
+------------------------
+NHL On-demand v1.0.1 (29-Mar-14)
+------------------------
+
+- Tweaked video listings.
+- Fixed "play from here".
+- Tweaked cache.
+- Code cosmetics.
+
+------------------------
+NHL On-demand v1.0.0 (2-Mar-14)
+------------------------
+
+- Initial version

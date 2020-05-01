@@ -1,0 +1,1432 @@
+# Addon Name: SALTS
+# Addon id: plugin.video.salts
+# Addon Provider: TV Addons
+# Translators:
+# Jonatan Nyberg, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: SALTS\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-04-10 13:44+0000\n"
+"Last-Translator: Jonatan Nyberg\n"
+"Language-Team: Swedish (http://www.transifex.com/tv-addons/salts/language/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30000"
+msgid "Movies"
+msgstr "Filmer"
+
+msgctxt "#30001"
+msgid "TV Shows"
+msgstr "TV Serier"
+
+msgctxt "#30002"
+msgid "Movie"
+msgstr "Film"
+
+msgctxt "#30003"
+msgid "TV Show"
+msgstr "TV Serie"
+
+msgctxt "#30004"
+msgid "Settings"
+msgstr "Inställningar"
+
+msgctxt "#30005"
+msgid "Scraper Sort Order"
+msgstr "Scraper Sorteringsordning"
+
+msgctxt "#30006"
+msgid "Url Resolver Settings"
+msgstr "URL Resolver Inställningar"
+
+msgctxt "#30007"
+msgid "Add-on Settings"
+msgstr "Tillägg Inställningar"
+
+msgctxt "#30008"
+msgid "Auto-Configure SALTS"
+msgstr "Auto-konfigurera SALTS"
+
+msgctxt "#30009"
+msgid "Authorize SALTS to access my trakt.tv account"
+msgstr "Auktorisera SALTS att få tillgång till mitt trakt.tv konto"
+
+msgctxt "#30010"
+msgid "Set Default Views"
+msgstr "Använd Standard Visningar"
+
+msgctxt "#30011"
+msgid "Remove Cached Url(s)"
+msgstr "Ta bort Cachade Url(ar)"
+
+msgctxt "#30012"
+msgid "Trending %s"
+msgstr "Trend %s"
+
+msgctxt "#30013"
+msgid "Popular %s"
+msgstr "Populärt %s"
+
+msgctxt "#30014"
+msgid "Recently Updated %s"
+msgstr "Nyligen Uppdaterade %s"
+
+msgctxt "#30015"
+msgid "Recommended %s"
+msgstr "Rekommenderade %s"
+
+msgctxt "#30016"
+msgid "My %s Collection"
+msgstr "Min %s Samling"
+
+msgctxt "#30017"
+msgid "My Favorites"
+msgstr "Mina Favoriter"
+
+msgctxt "#30018"
+msgid "My Subscriptions"
+msgstr "Mina Prenumerationer"
+
+msgctxt "#30019"
+msgid "My Watchlist"
+msgstr "Min Titta senare-lista"
+
+msgctxt "#30020"
+msgid "My Lists"
+msgstr "Mina Listor"
+
+msgctxt "#30021"
+msgid "Other Lists"
+msgstr "Andra Listor"
+
+msgctxt "#30022"
+msgid "My Next Episodes"
+msgstr "Mina Nya Avsnitt"
+
+msgctxt "#30023"
+msgid "My Calendar"
+msgstr "Min Tablå"
+
+msgctxt "#30024"
+msgid "General Calendar"
+msgstr "Allmän Tablå"
+
+msgctxt "#30025"
+msgid "Premiere Calendar"
+msgstr "Premiär Tablå"
+
+msgctxt "#30026"
+msgid "Search"
+msgstr "Sök"
+
+msgctxt "#30027"
+msgid "Recent Searches"
+msgstr "Senaste Sökningar"
+
+msgctxt "#30028"
+msgid "Saved Searches"
+msgstr "Sparade Sökningar"
+
+msgctxt "#30029"
+msgid "Force Refresh"
+msgstr "Tvinga Hämta igen"
+
+msgctxt "#30030"
+msgid "Clear All %s"
+msgstr "Rensa Alla %s"
+
+msgctxt "#30031"
+msgid "Forcing Refresh"
+msgstr "Tvingar Hämta igen"
+
+msgctxt "#30032"
+msgid "Force Refresh Complete"
+msgstr "Tvinga Hämta igen Färdig"
+
+msgctxt "#30033"
+msgid "Enable All Scrapers"
+msgstr "Aktivera Alla Scrapers"
+
+msgctxt "#30034"
+msgid "Disable All Scrapers"
+msgstr "Avaktivera Alla Scrapers"
+
+msgctxt "#30035"
+msgid "Enable Scraper"
+msgstr "Aktivera Scraper"
+
+msgctxt "#30036"
+msgid "Disable Scraper"
+msgstr "Avaktivera Scraper"
+
+msgctxt "#30037"
+msgid "Move Up"
+msgstr "Flytta Upp"
+
+msgctxt "#30038"
+msgid "Move Down"
+msgstr "Flytta Ner"
+
+msgctxt "#30039"
+msgid "Move To..."
+msgstr "Flytta Till..."
+
+msgctxt "#30040"
+msgid "Enter New Position (1 - %s)"
+msgstr "Ange Ny Plats (1 - %s)"
+
+msgctxt "#30041"
+msgid "Set Default %s View"
+msgstr "Ange Standard &s Vy"
+
+msgctxt "#30042"
+msgid "Set a view then select this item to set the default %s view"
+msgstr "Ställ in en vy och välj sedan detta alternativ för att ställa in standard %s vyn"
+
+msgctxt "#30043"
+msgid "Import"
+msgstr "Importera"
+
+msgctxt "#30044"
+msgid "%s View Set to: %s"
+msgstr "%s Vy inställd till: %s"
+
+msgctxt "#30045"
+msgid "Delete [B][COLOR red]ENTIRE[/COLOR][/B] Url Cache"
+msgstr "Ta obrt [B][COLOR red]Hela[/COLOR][/B] Url Cache"
+
+msgctxt "#30046"
+msgid "This will set some settings to values that have been found to"
+msgstr "Detta kommer att ställa in några inställningar till värden som har befunnits"
+
+msgctxt "#30047"
+msgid "be effective. The following settings will be changed:"
+msgstr "var effektiv. Följande inställningar kommer att ändras:"
+
+msgctxt "#30048"
+msgid ""
+"[COLOR red]Scraper Sort Order, Source Sorting, Calendar Start Day, Trakt "
+"Timeout, Scraper Timeout, Watchlist in MNE, Test Direct[/COLOR]"
+msgstr "[COLOR red]Scraper sorteringsordning, Käll Sortering, Tablå Start Dag, Trakt Tidsgräns, Scraper Tidsgräns, Titta Lista i MNE, Testa Direct[/COLOR]"
+
+msgctxt "#30049"
+msgid "Go Back"
+msgstr "Gå Tillbaka"
+
+msgctxt "#30050"
+msgid "Continue"
+msgstr "Fortsätt"
+
+msgctxt "#30051"
+msgid "Auto-configure Complete"
+msgstr "Auto-konfigurera Färdig"
+
+msgctxt "#30052"
+msgid "Set as Favorites List"
+msgstr "Ange som Favorit Lista"
+
+msgctxt "#30053"
+msgid "Set as Subscription List"
+msgstr "Ange som Prenumeration Lista"
+
+msgctxt "#30054"
+msgid "Import from Collection"
+msgstr "Importera från Samling"
+
+msgctxt "#30055"
+msgid "Add another user's list"
+msgstr "Lägg till en annan användares lista"
+
+msgctxt "#30056"
+msgid "Copy to My List"
+msgstr "Kopiera till Min Lista"
+
+msgctxt "#30057"
+msgid "Add more from %s"
+msgstr "Lägg till fler från %s"
+
+msgctxt "#30058"
+msgid "Remove List"
+msgstr "Ta bort Lista"
+
+msgctxt "#30059"
+msgid "Rename List"
+msgstr "Byt Namn på Lista"
+
+msgctxt "#30060"
+msgid "Enter the new name (blank to reset)"
+msgstr "Ange namnet (tomt för att återställa)"
+
+msgctxt "#30061"
+msgid "Enter username of list owner"
+msgstr "Ange användarnamn av listägare"
+
+msgctxt "#30062"
+msgid "List Does Not Exist: %s"
+msgstr "Lista Finns Inte: %s"
+
+msgctxt "#30063"
+msgid "Progress Timeouts: %s/%s"
+msgstr "Framsteg Tidsgränser: %s/%s"
+
+msgctxt "#30064"
+msgid "Browse Seasons"
+msgstr "Bläddra i Serier"
+
+msgctxt "#30065"
+msgid "Update Subscriptions: (Next Run: [COLOR %s]%s[/COLOR])"
+msgstr "Uppdatera Prenumerationer (Nästa Körning: [COLOR %s]%s[/COLOR])"
+
+msgctxt "#30066"
+msgid "Clean-Up Subscriptions"
+msgstr "Rensa Upp Prenumerationer"
+
+msgctxt "#30067"
+msgid "Pick a list to use for Subscriptions"
+msgstr "Välj en lista att använda för Prenumerationer"
+
+msgctxt "#30068"
+msgid "Pick a list to use for Favorites"
+msgstr "Välj en lista att använda för Favoriter"
+
+msgctxt "#30069"
+msgid "Blank Searches are not allowed"
+msgstr "Tomma Sökningar är inte tillåtna"
+
+msgctxt "#30070"
+msgid "Save Search"
+msgstr "Spara Sökning"
+
+msgctxt "#30071"
+msgid "Remove from Recent"
+msgstr "Ta bort från Senaste"
+
+msgctxt "#30072"
+msgid "Delete Search"
+msgstr "Ta bort Sökning"
+
+msgctxt "#30073"
+msgid "Recent %s Searches Cleared"
+msgstr "Senaste %s Sökningar Renade"
+
+msgctxt "#30074"
+msgid "Saved %s Searches Cleared"
+msgstr "Sparade %s Sökningar Rensade"
+
+msgctxt "#30075"
+msgid "Scraper Timeouts: %s/%s"
+msgstr "Scraper Tidsgränser: %s/%s"
+
+msgctxt "#30076"
+msgid "No Useable Sources Found%s"
+msgstr "Inga Användbara Källor Funna%s"
+
+msgctxt "#30077"
+msgid "Choose a subtitle to download"
+msgstr "Välj en undertext att hämta"
+
+msgctxt "#30078"
+msgid "Link Resolve Failed: %s"
+msgstr "Länk Lösning Misslyckades: %s"
+
+msgctxt "#30079"
+msgid "All sources failed to play"
+msgstr "Alla källor misslyckas med att spela"
+
+msgctxt "#30080"
+msgid "Choose your stream"
+msgstr "Välj din ström"
+
+msgctxt "#30081"
+msgid "Set Related Url"
+msgstr "Ange Relaterad Url"
+
+msgctxt "#30082"
+msgid "Received result from: %s"
+msgstr "Mottagna resultat från:  %s"
+
+msgctxt "#30083"
+msgid "Url To Change (%s)"
+msgstr "Url Att Ändra (%s)"
+
+msgctxt "#30084"
+msgid "Related %s url at %s"
+msgstr "Relaterad %s url på %s"
+
+msgctxt "#30085"
+msgid "[COLOR blue]%s[/COLOR] Related Url Set"
+msgstr "[COLOR blue]%s[/COLOR] Relaterad Url Inställd"
+
+msgctxt "#30086"
+msgid "Manual Search"
+msgstr "Manuell Sökning"
+
+msgctxt "#30087"
+msgid "Select Related"
+msgstr "Markera Relaterad"
+
+msgctxt "#30088"
+msgid "Enter Search"
+msgstr "Ange Sökning"
+
+msgctxt "#30089"
+msgid "Scraper does not support searching"
+msgstr "Scraper stöder inte sökning"
+
+msgctxt "#30090"
+msgid "Enter Rating (unrate, or 1-10)"
+msgstr "Ange Betyg (ta bort betyg, eller 1-10)"
+
+msgctxt "#30091"
+msgid "Input TVShow ID"
+msgstr "Ingång TV Show ID"
+
+msgctxt "#30092"
+msgid "Item Added to Collection"
+msgstr "Objekt Tillagt till Samling"
+
+msgctxt "#30093"
+msgid "Item Removed from Collection"
+msgstr "Objekt Borttaget från Samling"
+
+msgctxt "#30094"
+msgid "Item Added to List"
+msgstr "Objekt Tillagd till Lista."
+
+msgctxt "#30095"
+msgid "List Copied: (A:%s/E:%s/S:%s)"
+msgstr "Lista Kopierad: (A:%s/E:%s/S:%s)"
+
+msgctxt "#30096"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#30097"
+msgid "Marked as %s"
+msgstr "Märkt som %s"
+
+msgctxt "#30098"
+msgid "Updating Subscriptions..."
+msgstr "Uppdaterar Prenumerationer..."
+
+msgctxt "#30099"
+msgid "Next Update in %0.1f hours"
+msgstr "Nästa Uppdatering om %0.1f timmar"
+
+msgctxt "#30100"
+msgid "Are you sure you want to delete the url cache?"
+msgstr "Är du säker på att du vill radera url cache?"
+
+msgctxt "#30101"
+msgid "This will slow things down until all urls are re-cached"
+msgstr "Detta kommer att sakta ner saker tills alla webbadresser är åter-cachade"
+
+msgctxt "#30102"
+msgid "Keep"
+msgstr "Behåll"
+
+msgctxt "#30103"
+msgid "Delete"
+msgstr "Ta bort"
+
+msgctxt "#30104"
+msgid "Flush web cache"
+msgstr "Rensa webbcache"
+
+msgctxt "#30105"
+msgid "DB Reset Successful"
+msgstr "DB Återställning Lyckad"
+
+msgctxt "#30106"
+msgid "Reset only allowed on sqlite DBs"
+msgstr "Återställ endast tillåten på SQLite DB:er"
+
+msgctxt "#30107"
+msgid "Select Export Directory"
+msgstr "Välj Katalog att Exportera"
+
+msgctxt "#30108"
+msgid "Enter Export Filename"
+msgstr "Ange Exportera Filnamn"
+
+msgctxt "#30109"
+msgid "Export Successful"
+msgstr "Exportering Lyckad"
+
+msgctxt "#30110"
+msgid "Exported to %s"
+msgstr "Exportera till %s"
+
+msgctxt "#30111"
+msgid "Export"
+msgstr "Exportera"
+
+msgctxt "#30112"
+msgid "Export Failed"
+msgstr "Exportering Misslyckad"
+
+msgctxt "#30113"
+msgid "Select Import File"
+msgstr "Välj Fil att Importera"
+
+msgctxt "#30114"
+msgid "Import Success"
+msgstr "Importering Lyckades"
+
+msgctxt "#30115"
+msgid "Imported from %s"
+msgstr "Importera från %s"
+
+msgctxt "#30116"
+msgid "Import"
+msgstr "Importera"
+
+msgctxt "#30117"
+msgid "Import Failed"
+msgstr "Importering misslyckades"
+
+msgctxt "#30118"
+msgid "Remove from List"
+msgstr "Ta bort från Lista"
+
+msgctxt "#30119"
+msgid "Subscribe"
+msgstr "Prenumerera"
+
+msgctxt "#30120"
+msgid "Require Aired Only?"
+msgstr "Efterfråga endast sända?"
+
+msgctxt "#30122"
+msgid "Next Page"
+msgstr "Nästa Sida"
+
+msgctxt "#30123"
+msgid "Previous Week"
+msgstr "Föregående Vecka"
+
+msgctxt "#30124"
+msgid "Next Week"
+msgstr "Nästa Vecka"
+
+msgctxt "#30125"
+msgid "Mark as Unwatched (SALTS)"
+msgstr "Märk som Osedd (SALTS)"
+
+msgctxt "#30126"
+msgid "Mark as Watched (SALTS)"
+msgstr "Märk som Sedd (SALTS)"
+
+msgctxt "#30127"
+msgid "Rate on trakt.tv"
+msgstr "Betygsätt på trakt.tv"
+
+msgctxt "#30128"
+msgid "Set as Season View"
+msgstr "Ange som Säsong Vy"
+
+msgctxt "#30129"
+msgid "Unavailable"
+msgstr "Otillgänglig"
+
+msgctxt "#30130"
+msgid "Select Source"
+msgstr "Välj Källa"
+
+msgctxt "#30131"
+msgid "Download Source"
+msgstr "Hämta Källa"
+
+msgctxt "#30132"
+msgid "Show Information"
+msgstr "Visa Information"
+
+msgctxt "#30133"
+msgid "Add Show to List"
+msgstr "Lätt till Serie till Lista"
+
+msgctxt "#30134"
+msgid "Set Related Show Url (Search)"
+msgstr "Ange Relaterad Visa Url (Sök)"
+
+msgctxt "#30135"
+msgid "Set Related Url (Manual)"
+msgstr "Ange Relaterad Url (Manuellt)"
+
+msgctxt "#30136"
+msgid "Remove from Collection"
+msgstr "Ta bort från Samling"
+
+msgctxt "#30137"
+msgid "Add to Collection"
+msgstr "Lägg till Samling"
+
+msgctxt "#30138"
+msgid "Add to List"
+msgstr "Lägg till Lista"
+
+msgctxt "#30139"
+msgid "Add to Library"
+msgstr "Lägg till Bibliotek"
+
+msgctxt "#30140"
+msgid "Set Addic7ed TVShowID"
+msgstr "Ange Addic7ed TVShowID"
+
+msgctxt "#30141"
+msgid "Use Default episode matching"
+msgstr "Använd Standard avsnitt matchning"
+
+msgctxt "#30142"
+msgid "Use Episode Title matching"
+msgstr "Använd titelmatching av avsnitt"
+
+msgctxt "#30143"
+msgid "Set Related Url (Search)"
+msgstr "Ange Relaterad Url (Sök)"
+
+msgctxt "#30144"
+msgid "Play Trailer"
+msgstr "Spela Trailer"
+
+msgctxt "#30145"
+msgid "Pick a list"
+msgstr "Välj en Lista"
+
+msgctxt "#30146"
+msgid "No Lists exist for user: %s"
+msgstr "Inga Listor finns för användare: %s"
+
+msgctxt "#30147"
+msgid "Scraper Automatically Disabled"
+msgstr "Scraper Automatiskt Avaktiverad"
+
+msgctxt "#30149"
+msgid "Disabling it avoids wasting time and resources"
+msgstr "Avaktivera det undviker slöseri med tid och resurser"
+
+msgctxt "#30150"
+msgid "([I]If you Keep Enabled, consider increasing scraper timeout[/I])"
+msgstr "([I]Om du håller Aktiverad överväg att öka scraper tidsgräns[/I])"
+
+msgctxt "#30151"
+msgid "Keep Enabled"
+msgstr "Behåll Aktiverad"
+
+msgctxt "#30152"
+msgid "Disable It"
+msgstr "Avaktivera det"
+
+msgctxt "#30153"
+msgid "Trakt Bookmark Exists"
+msgstr "Trakt Bokmärken Finns"
+
+msgctxt "#30154"
+msgid "Local Bookmark Exists"
+msgstr "Lokala Bokmärken Finns"
+
+msgctxt "#30155"
+msgid "Resume from %s"
+msgstr "Återuppta från %s"
+
+msgctxt "#30156"
+msgid "Start from beginning"
+msgstr "Börja från början"
+
+msgctxt "#30157"
+msgid "Resume"
+msgstr "Återuppta"
+
+msgctxt "#30158"
+msgid "Downloading: %s..."
+msgstr "Hämtar: %s..."
+
+msgctxt "#30159"
+msgid "Download Complete: %s"
+msgstr "Hämtning färdig: %s"
+
+msgctxt "#30160"
+msgid "Error (%s) during download: %s"
+msgstr "Fel (%s) under hämtning: %s"
+
+msgctxt "#30161"
+msgid "Trakt Account Authorization"
+msgstr "Trakt Konto Berättigande"
+
+msgctxt "#30173"
+msgid "Trakt Authorization Complete"
+msgstr "Trakt Berättigande Färdig"
+
+msgctxt "#30174"
+msgid "Enabled"
+msgstr "Aktiverad"
+
+msgctxt "#30175"
+msgid "Base Url"
+msgstr "Bas Url"
+
+msgctxt "#30177"
+msgid "Username"
+msgstr "Användarnamn"
+
+msgctxt "#30178"
+msgid "Password"
+msgstr "Lösenord"
+
+msgctxt "#30179"
+msgid "Filter results older than (0=No Filter) (days)"
+msgstr "Filtrera resultat äldre än (0=Inget filter) (dagar)"
+
+msgctxt "#30180"
+msgid "Automatically Select"
+msgstr "Välj Automatiskt"
+
+msgctxt "#30182"
+msgid "Maximum Pages"
+msgstr "Maximalt Sidor"
+
+msgctxt "#30183"
+msgid "No Sources Found"
+msgstr "Inga Källor Funna"
+
+msgctxt "#30184"
+msgid "Season"
+msgstr "Säsong"
+
+msgctxt "#30185"
+msgid "DISABLED"
+msgstr "AVAKTIVERAD"
+
+msgctxt "#30186"
+msgid "Search"
+msgstr "Sök"
+
+msgctxt "#30187"
+msgid "Watched"
+msgstr "Sedda"
+
+msgctxt "#30188"
+msgid "Unwatched"
+msgstr "Osedda"
+
+msgctxt "#30189"
+msgid "Updating"
+msgstr "Uppdaterar"
+
+msgctxt "#30190"
+msgid "Failed to create directory"
+msgstr "Misslyckades med att skapa katalog"
+
+msgctxt "#30191"
+msgid "Failed to write file"
+msgstr "Misslyckades med att skriva fil"
+
+msgctxt "#30192"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Återställ Alla Scraper Bas URL:er till Standard"
+
+msgctxt "#30193"
+msgid "Base Url Reset Complete"
+msgstr "Bas Url Återsällning Färdig"
+
+msgctxt "#30194"
+msgid "Requesting Url for: %s"
+msgstr "Begär URL för: %s"
+
+msgctxt "#30195"
+msgid "'%s' added to library"
+msgstr "'%s' lades till bibliotek"
+
+msgctxt "#30196"
+msgid "Add to Section Menu"
+msgstr "Lägg till Avsnitt Meny"
+
+msgctxt "#30197"
+msgid "Remove from Section Menu"
+msgstr "Ta bort från Avsnitt Meny"
+
+msgctxt "#30198"
+msgid "Liked Lists"
+msgstr "Gillade Lista"
+
+msgctxt "#30199"
+msgid "%s Mosts"
+msgstr "%s Flesta"
+
+msgctxt "#30200"
+msgid "Most Played This Week"
+msgstr "Mest Spelade Denna Vecka"
+
+msgctxt "#30201"
+msgid "Most Played This Month"
+msgstr "Mest Spelade Denna Månad"
+
+msgctxt "#30202"
+msgid "Most Played All Time"
+msgstr "Mest Spelade Genom Tiderna"
+
+msgctxt "#30203"
+msgid "Most Watched This Week"
+msgstr "Mest Sedda Denna Vecka"
+
+msgctxt "#30204"
+msgid "Most Watched This Month"
+msgstr "Mest Sedda Denna Månad"
+
+msgctxt "#30205"
+msgid "Most Watched All Time"
+msgstr "Mest Sedda Genom Tiderna"
+
+msgctxt "#30206"
+msgid "Most Collected This Week"
+msgstr "Mest Samlade Denna Vecka"
+
+msgctxt "#30207"
+msgid "Most Collected This Month"
+msgstr "Mest Samlade Denna Månad"
+
+msgctxt "#30208"
+msgid "Most Collected All Time"
+msgstr "Mest Samlade Genom Tiderna"
+
+msgctxt "#30209"
+msgid "%s NOT added to library (%s)"
+msgstr "%s lades INTE till bibliotek (%s)"
+
+msgctxt "#30210"
+msgid "Local Exists"
+msgstr "Finns Lokalt"
+
+msgctxt "#30211"
+msgid "Scraper Download Url"
+msgstr "Scraper Hämta Url"
+
+msgctxt "#30214"
+msgid "on"
+msgstr "på"
+
+msgctxt "#30215"
+msgid "Delete Bookmark"
+msgstr "Ta bort Bokmärke"
+
+msgctxt "#30216"
+msgid "Bookmark Deleted"
+msgstr "Bokmärde borttaget"
+
+msgctxt "#30217"
+msgid "Force No Match"
+msgstr "Tvinga Ingen Matchning"
+
+msgctxt "#30218"
+msgid "Getting Sources"
+msgstr "Får Källor"
+
+msgctxt "#30219"
+msgid "Requested Sources from: %s"
+msgstr "Begärde Källor från: %s"
+
+msgctxt "#30221"
+msgid "Applying Source Filters"
+msgstr "Tillämpar Källfilter"
+
+msgctxt "#30223"
+msgid "My Watched History"
+msgstr "Min Sedda HIstorik"
+
+msgctxt "#30225"
+msgid "Trying: [%s] %s from %s"
+msgstr "Försöker: [%s] %s från %s"
+
+msgctxt "#30226"
+msgid "Failed: [%s] %s from %s"
+msgstr "Misslyckades: [%s] %s från %s"
+
+msgctxt "#30227"
+msgid "Scraper Timeouts: [COLOR blue]%s[/COLOR]"
+msgstr "Scraper Tidsgränser: [COLOR blue]%s[/COLOR]"
+
+msgctxt "#30228"
+msgid "Reset Failures"
+msgstr "Återställ Misslyckanden"
+
+msgctxt "#30231"
+msgid "Auto-Play"
+msgstr "Automatisk Uppspelning"
+
+msgctxt "#30243"
+msgid "Reset All Scraper Base Urls to Default"
+msgstr "Nollställ Alla Scraper Bas Url(as) till Standard"
+
+msgctxt "#30244"
+msgid "Select All/None"
+msgstr "Markera Alla/Inga"
+
+msgctxt "#30253"
+msgid "No Streamable Url Found"
+msgstr "Ingen Strömningsbar Url Hittad"
+
+msgctxt "#30260"
+msgid "Reset Related Urls"
+msgstr "Nollställ Relaterade Url(ar)"
+
+msgctxt "#30261"
+msgid "Related Urls Cleared: %s"
+msgstr "Relaterade Url(ar) Rensade: %s"
+
+msgctxt "#30264"
+msgid "Set Related Season Url (Search)"
+msgstr "Ange Relaterad Säsong Url (Sök)"
+
+msgctxt "#30266"
+msgid "On ANY device, visit: %s"
+msgstr "På ALLA enheter, besök: %s"
+
+msgctxt "#30268"
+msgid "Code expires in: %s seconds"
+msgstr "Kod förfaller om: %s sekunder"
+
+msgctxt "#30272"
+msgid "Watch It Again"
+msgstr "Se Den Igen"
+
+msgctxt "#30277"
+msgid "Set as Watch It Again List"
+msgstr "Ange som Se Den Pånytt Lista"
+
+msgctxt "#30282"
+msgid "Next Episode"
+msgstr "Nästa Avsnitt"
+
+msgctxt "#30283"
+msgid "Remaining: %s of %s"
+msgstr "Återstår: %s av %s"
+
+msgctxt "#30284"
+msgid "Remaining: %s"
+msgstr "Återstår: %s"
+
+msgctxt "#30285"
+msgid "Genres"
+msgstr "Genrer"
+
+msgctxt "#30288"
+msgid "Working..."
+msgstr "Arbetar..."
+
+msgctxt "#30289"
+msgid "Re-Scrape All"
+msgstr "Åter-Scrape Alla"
+
+msgctxt "#30297"
+msgid "Are you sure you want to clear the image metadata cache?"
+msgstr "Är du säker på att du vill rensa bildmetadatacache?"
+
+msgctxt "#30299"
+msgid "Flush Complete"
+msgstr "Rensning Färdig"
+
+msgctxt "#30300"
+msgid "Refresh Images"
+msgstr "Hämta Bilder Igen"
+
+msgctxt "#30500"
+msgid "Addon Theme"
+msgstr "Tillägg Tema"
+
+msgctxt "#30511"
+msgid "Off"
+msgstr "Av"
+
+msgctxt "#30512"
+msgid "24 Hour"
+msgstr "24 Timmar"
+
+msgctxt "#30513"
+msgid "12 Hour"
+msgstr "12 Timmar"
+
+msgctxt "#30514"
+msgid "Previously Collected"
+msgstr "Tidigare Samlade"
+
+msgctxt "#30515"
+msgid "Recently Collected"
+msgstr "Senaste Samlade"
+
+msgctxt "#30516"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30517"
+msgid "Year"
+msgstr "År"
+
+msgctxt "#30518"
+msgid "Recent Activity"
+msgstr "Senaste Aktivitet"
+
+msgctxt "#30519"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#30524"
+msgid "Show Trending"
+msgstr "Visa Trend"
+
+msgctxt "#30525"
+msgid "Show Popular"
+msgstr "Visa Populärt"
+
+msgctxt "#30526"
+msgid "Show Recently Updated"
+msgstr "Visa Nyligen Uppdaterade"
+
+msgctxt "#30527"
+msgid "Show Recommended"
+msgstr "Visa Rekommendationer"
+
+msgctxt "#30528"
+msgid "Show My Collection"
+msgstr "Visa Min Samling"
+
+msgctxt "#30529"
+msgid "Show My Favorites"
+msgstr "Visa MIna Favoriter"
+
+msgctxt "#30530"
+msgid "Show My Subscriptions"
+msgstr "Visa Mina Prenumerationer"
+
+msgctxt "#30531"
+msgid "Show My Watchlist"
+msgstr "Visa Min Titta senare Lista"
+
+msgctxt "#30532"
+msgid "Show My Lists"
+msgstr "Visa Mina Listor"
+
+msgctxt "#30533"
+msgid "Show Other Lists"
+msgstr "Visa Andra Listor"
+
+msgctxt "#30534"
+msgid "Show My Next Episodes"
+msgstr "Visa Mina Nästa Avsnitt"
+
+msgctxt "#30535"
+msgid "Show My Calendar"
+msgstr "Visa Min Tablå"
+
+msgctxt "#30536"
+msgid "Show General Calendar"
+msgstr "Visa Allmän Tablå"
+
+msgctxt "#30537"
+msgid "Show Premiere Calendar"
+msgstr "Visa Premiär Tablå"
+
+msgctxt "#30538"
+msgid "Show Friends"
+msgstr "Visa Vänner"
+
+msgctxt "#30539"
+msgid "Show Search"
+msgstr "Visa Sök"
+
+msgctxt "#30540"
+msgid "Default Views"
+msgstr "Standard Visningar"
+
+msgctxt "#30541"
+msgid "Default Movies View (0 = None)"
+msgstr "Standard Filmer Vy (0 = Inga)"
+
+msgctxt "#30542"
+msgid "Default TV Shows View (0 = None)"
+msgstr "Standard TV Serier Vy (0 = Inga)"
+
+msgctxt "#30543"
+msgid "Default Seasons View (0 = None)"
+msgstr "Standard Säsong Vy (0 = Inga)"
+
+msgctxt "#30544"
+msgid "Default Episodes View (0 = None)"
+msgstr "Standard Avsnitt Vy (0 = Inga)"
+
+msgctxt "#30545"
+msgid "General"
+msgstr "Allmänt"
+
+msgctxt "#30546"
+msgid "User Interface"
+msgstr "Användargränssnitt"
+
+msgctxt "#30547"
+msgid "How do I authorize SALTS to access my trakt.tv account?"
+msgstr "Hur auktorisera SALTS att få tillgång till mitt trakt.tv konto?"
+
+msgctxt "#30548"
+msgid "Use HTTPS"
+msgstr "Använd HTTPS"
+
+msgctxt "#30549"
+msgid "Trakt Timeout (seconds) (0=No Limit)"
+msgstr "Trakt Tidgräns (sekunder) (0 = Ingen Gräns)"
+
+msgctxt "#30552"
+msgid "Use Trakt Bookmarks"
+msgstr "Använd Trakt Bokmärken"
+
+msgctxt "#30558"
+msgid "TV Show Folder"
+msgstr "TV Serie Mapp"
+
+msgctxt "#30559"
+msgid "Movie Folder"
+msgstr "Filmer Katalog"
+
+msgctxt "#30562"
+msgid "     During StartUp?"
+msgstr "Under Uppstart?"
+
+msgctxt "#30563"
+msgid "     During Playback?"
+msgstr "Under Uppspelning?"
+
+msgctxt "#30567"
+msgid "Update Library Afterward?"
+msgstr "Uppdatera Bibliotek Efteråt?"
+
+msgctxt "#30568"
+msgid "Show Notifications?"
+msgstr "Visa Aviseringar?"
+
+msgctxt "#30569"
+msgid "Include Movies?"
+msgstr "Inkludera Filmer?"
+
+msgctxt "#30575"
+msgid "    Show Download Progress"
+msgstr "Visa Hämtningsframsteg"
+
+msgctxt "#30576"
+msgid "    TV Show Download Folder"
+msgstr "TV Serie Hämtningsmapp"
+
+msgctxt "#30577"
+msgid "    Movie Download Folder"
+msgstr "Film Hämtningsmapp"
+
+msgctxt "#30589"
+msgid "Window"
+msgstr "Fönster"
+
+msgctxt "#30590"
+msgid "Background"
+msgstr "Bakgrund"
+
+msgctxt "#30591"
+msgid "Source Sorting"
+msgstr "Källsortering"
+
+msgctxt "#30592"
+msgid "Sort Sources"
+msgstr "Sortera Källor"
+
+msgctxt "#30604"
+msgid "None"
+msgstr "Inga"
+
+msgctxt "#30605"
+msgid "Source"
+msgstr "Källa"
+
+msgctxt "#30606"
+msgid "Quality"
+msgstr "Kvalitet"
+
+msgctxt "#30607"
+msgid "Views"
+msgstr "Visningar"
+
+msgctxt "#30608"
+msgid "Rating"
+msgstr "Betyg"
+
+msgctxt "#30612"
+msgid "Base Url"
+msgstr "Bas Url"
+
+msgctxt "#30615"
+msgid "Enable Subtitles"
+msgstr "Aktivera Undertexter"
+
+msgctxt "#30617"
+msgid "Subtitle Language"
+msgstr "Undertext Språk"
+
+msgctxt "#30623"
+msgid "Use a MySQL DB"
+msgstr "Använd en MySQL DB"
+
+msgctxt "#30624"
+msgid "    Address"
+msgstr "    Adress"
+
+msgctxt "#30625"
+msgid "    Port"
+msgstr "    Port"
+
+msgctxt "#30626"
+msgid "    Username"
+msgstr "Användarnamn"
+
+msgctxt "#30627"
+msgid "    Password"
+msgstr "Lösenord"
+
+msgctxt "#30628"
+msgid "    Database"
+msgstr "Databas"
+
+msgctxt "#30630"
+msgid "Flush webpage cache..."
+msgstr "Rensa webbcache..."
+
+msgctxt "#30632"
+msgid "Export data from SALTS DB"
+msgstr "Exportera data från SALTS DB"
+
+msgctxt "#30633"
+msgid "Import data into SALTS DB"
+msgstr "Importera data från SALTS DB"
+
+msgctxt "#30634"
+msgid "Subtitles"
+msgstr "Undertexter"
+
+msgctxt "#30635"
+msgid "Database"
+msgstr "Databas"
+
+msgctxt "#30637"
+msgid "Highest Quality"
+msgstr "Högsta Kvalitet"
+
+msgctxt "#30639"
+msgid "On"
+msgstr "På"
+
+msgctxt "#30640"
+msgid "Show Liked Lists"
+msgstr "Visa Omtyckta Listor"
+
+msgctxt "#30643"
+msgid "Recently Added"
+msgstr "Nyligen Tillagda"
+
+msgctxt "#30644"
+msgid "Previously Added"
+msgstr "Tidigare Tillagda"
+
+msgctxt "#30645"
+msgid "Skip movies/episodes that exist locally"
+msgstr "Hoppa över filmer/avsnitt som finns lokalt"
+
+msgctxt "#30651"
+msgid "All"
+msgstr "Alla"
+
+msgctxt "#30655"
+msgid "Debrid"
+msgstr "Debrid"
+
+msgctxt "#30658"
+msgid "Mute Notifications"
+msgstr "Tysta Aviseringar"
+
+msgctxt "#30660"
+msgid "HD1080"
+msgstr "HD1080"
+
+msgctxt "#30661"
+msgid "HD720"
+msgstr "HD720"
+
+msgctxt "#30662"
+msgid "High"
+msgstr "Hög"
+
+msgctxt "#30663"
+msgid "Medium"
+msgstr "Mellan"
+
+msgctxt "#30664"
+msgid "Low"
+msgstr "Låg"
+
+msgctxt "#30665"
+msgid "Automatically pick first matching subtitle"
+msgstr "Automatiskt välj första matchade undertext"
+
+msgctxt "#30666"
+msgid "SALTS Auto Configuration"
+msgstr "SALTS Auto-Konfiguration"
+
+msgctxt "#30667"
+msgid "Continue"
+msgstr "Fortsätt"
+
+msgctxt "#30668"
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgctxt "#30670"
+msgid "Show Settings"
+msgstr "Visa Inställningar"
+
+msgctxt "#30677"
+msgid "Automatic"
+msgstr "Automatisk"
+
+msgctxt "#30678"
+msgid "Very Slow"
+msgstr "Mycket Långsam"
+
+msgctxt "#30679"
+msgid "Slow"
+msgstr "Långsam"
+
+msgctxt "#30680"
+msgid "Medium"
+msgstr "Mellan"
+
+msgctxt "#30681"
+msgid "Fast"
+msgstr "Snabb"
+
+msgctxt "#30682"
+msgid "Very Fast"
+msgstr "Mycket Snabb"
+
+msgctxt "#30691"
+msgid "    Next Episode Duration (secs)"
+msgstr "Nästa Avsnitt Varaktighet (sek)"
+
+msgctxt "#30692"
+msgid "Show Genres"
+msgstr "Visa Genrer"
+
+msgctxt "#30693"
+msgid "Movie Genre List"
+msgstr "Film Genre Lista"
+
+msgctxt "#30694"
+msgid "TV Genre List"
+msgstr "TV Genre Lista"
+
+msgctxt "#30695"
+msgid "Trending"
+msgstr "Trend"
+
+msgctxt "#30696"
+msgid "Popular"
+msgstr "Populärt"
+
+msgctxt "#30698"
+msgid "Most Watched (Week)"
+msgstr "Mest Sedda (Vecka)"
+
+msgctxt "#30699"
+msgid "Most Watched (Month)"
+msgstr "Mest Sedda (Månad)"
+
+msgctxt "#30700"
+msgid "Most Watched (All)"
+msgstr "Mest Sedda (Alla)"
+
+msgctxt "#30701"
+msgid "Most Played (Week)"
+msgstr "Mest Spelade (Vecka)"
+
+msgctxt "#30702"
+msgid "Most Played (Month)"
+msgstr "Mest Spelade (Månad)"
+
+msgctxt "#30703"
+msgid "Most Played (All)"
+msgstr "Mest Spelade (Alla)"
+
+msgctxt "#30704"
+msgid "Most Collected (Week)"
+msgstr "Mest Samlade (Vecka)"
+
+msgctxt "#30705"
+msgid "Most Collected (Month)"
+msgstr "Mest Samlade (Månad)"
+
+msgctxt "#30706"
+msgid "Most Collected (All)"
+msgstr "Mest Samlade (Alla)"
+
+msgctxt "#30707"
+msgid "Date Format"
+msgstr "Datum Format"
+
+msgctxt "#30710"
+msgid "Image Metadata API Keys"
+msgstr "Bildmetadata API Nycklar"
+
+msgctxt "#30711"
+msgid "Fanart.tv API Key (Blank = Disable)"
+msgstr "Fanart.tv API Nyckel (Tom = Avaktivera)"
+
+msgctxt "#30712"
+msgid "TMDB API Key (Blank = Disable)"
+msgstr "TMDB API Nyckel (Tom = Avaktivera)"
+
+msgctxt "#30713"
+msgid "TVDB API Key (Blank = Disable)"
+msgstr "TVDB API Nyckel (Tom = Avaktivera)"
+
+msgctxt "#30714"
+msgid "Enable OMDB Images"
+msgstr "Aktivera OMDB Bilder"
+
+msgctxt "#30715"
+msgid "Enable TVMaze Images"
+msgstr "Aktivera TVMaze Bilder"
+
+msgctxt "#30716"
+msgid "Flush Image Cache..."
+msgstr "Rensa Bildcache..."
+
+msgctxt "#30717"
+msgid "Enable Fanart.tv Images"
+msgstr "Aktivera Fanart.tv Bilder"
+
+msgctxt "#30719"
+msgid "Enable Backgrounds/Fanart"
+msgstr "Aktivera Bakgrunder/Fanart"
+
+msgctxt "#30720"
+msgid "Enable Posters"
+msgstr "Aktivera Affischer "
+
+msgctxt "#30724"
+msgid "Enable Thumbnails"
+msgstr "Aktivera Miniatyrbilder"
+
+msgctxt "#30725"
+msgid "Artwork Types"
+msgstr "Konstverkstyper"
+
+msgctxt "#30728"
+msgid "    *** Install TMDB API Cache ***"
+msgstr "*** Installera TMDB API Cache ***"
+

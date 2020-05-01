@@ -1,0 +1,14 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=HDCaster - %s
+
+item_info_name=token
+item_info_build=%Xr8e(nKa@#.
+
+item_info_name=urlTmp
+item_info_from=@PARAM1@
+item_info_build=rtmp://188.138.121.99/hdcaster playpath=%s swfUrl=http://hdcaster.net/player.swf pageUrl=http://hdcaster.net/player.php?channel_id=101634&width=600&height=430
+
+item_info_name=url
+item_info_from=urlTmp + ' token=' + token
+item_info_build=%s

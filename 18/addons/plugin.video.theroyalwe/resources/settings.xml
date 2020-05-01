@@ -1,0 +1,113 @@
+<settings>
+	<category label="The Royal We">
+		<setting label="The Royal We" type="text" enable="false"/>
+		<setting label="Stream tv shows and movies from multiple sites" type="text" enable="false"/>
+		<setting label="Integrates with Trakt and Transmogrifier" type="text" enable="false"/>
+		<setting type="sep"/>
+		<setting label="Go to http://www.tvaddons.ag for support." type="lsep" />
+	</category>
+	<category label="Account Settings">
+		<setting label="Trakt Account" type="lsep" />
+		<setting action="RunPlugin(plugin://plugin.video.theroyalwe/?mode=authorize_trakt)" default="" id="trakt_account" label="Authorize Trakt" type="action" />
+		<setting id="trakt_offline_mode" type="bool" label="Enable Offline Mode" default="false" />
+		<setting default="false" id="trakt_authorized" type="bool" visible="false" />
+		<setting default="a118da287d5ddcacbbcc5136395cf7f70ff065c863e25b4ff48aaec04a8653f3" id="trakt_client_id" label="Trakt Client ID" type="text" visible="false" />
+		<setting default="b24680afa269dc67d36776e0cd8f058bbcd21deb0a1bff63b9453694c90dd31e" id="trakt_secret" label="Trakt Secret" type="text" visible="false" />
+		<setting default="" id="trakt_oauth_token" type="text" visible="false" />
+		<setting default="" id="trakt_refresh_token" type="text" visible="false" />
+		<setting label="Enter account information here." type="lsep" />
+		<setting label="These are optional, These accounts will be disabled without credientials" type="lsep" />
+		<setting label="Alluc" type="lsep" />
+		<setting default="" id="alluc_api_username" label="Alluc Username" option="hidden" type="text" />
+		<setting default="" id="alluc_api_password" label="Alluc Password" option="hidden" type="text" />
+		<setting label="Furk.net" type="lsep" />
+		<setting default="" id="furk_username" label="Furk.net Username" option="hidden" type="text" />
+		<setting default="" id="furk_password" label="Furk.net Password" option="hidden" type="text" />
+	</category>
+	<category label="Source Settings">
+		<setting label="Nothing to see here! Enable advanced settings for more." type="lsep" visible="eq(1,false)" />
+		<setting default="false" id="advanced_mode" type="bool" visible="false" />
+		<setting label="Advanced Settings" type="lsep" visible="eq(-1,true)" />
+		<setting default="false" id="enable_result_caching" label="Enable Result Caching" type="bool" visible="eq(-2,true)" />
+		<setting default="false" id="enable_result_filters" label="Enable Result Filters" type="bool" visible="eq(-3,true)" />
+		<setting default="false" enable="eq(-4,true)" id="enable_result_sorting" label="Enable Result Sorting" type="bool" visible="eq(-4,true)" />
+		<setting default="0" enable="eq(-1,true)" id="custom_result_sorting" label="Sort Order" subsetting="true" type="enum" values="Quality,Rank,Service,Host|Quality,Rank,Debrid,Host|Debrid,Rank,Quality,Host" visible="eq(-1,true)" />
+		<setting default="15" enable="" id="threadpool_size" label="ThreadPool Size (Set 0 for infinate)" option="int" range="0,30" type="slider" visible="eq(-6,true)" />
+		<setting default="false" enable="!eq(-7,false)" id="hide_watched_episodes" label="Hide Watched Episodes" type="bool" visible="!eq(-7,false)" />
+	</category>
+	<category label="Playback">
+		<setting default="false" id="advanced_mode" type="text" visible="false" />
+		<setting default="false" id="enable_scraper_progress" label="Show Scraper Progress" type="bool" />
+		<setting default="false" id="enable_autoplay" label="Enable AutoPlay" type="bool" visible="!eq(-2,false)" />
+		<setting default="3" enable="eq(-1,true)" id="autoplay_attempts" label="Number of sources for AutoPlay" option="int" range="1,10" subsetting="true" type="slider" visible="eq(-1,true)" />
+		<setting default="Directory" enable="!eq(-4,false)" id="source_selection_mode" label="Source Selection Mode" type="labelenum" values="Dialog|Directory|Custom Dialog|Custom Dialog 2" visible="!eq(-4,false)" />
+		<setting default="false" id="test_streams" label="Check Streams on Selection" type="bool" visible="gt(-1,1)" />
+		<setting default="5" id="test_stream_timeout" label="Timeout (seconds)" option="int" range="1,10" subsetting="true" type="slider" visible="eq(-1,true)+gt(-2,1)" />
+		<setting default="false" id="enable_resume" label="Enable Playback Resume" type="bool" visible="!eq(-6,false)" />
+		
+	</category>
+	<category label="Display (Advanced Mode)">
+		<setting label="Nothing to see here! Enable advanced settings for more." type="lsep" visible="eq(1,false)" />
+		<setting default="false" id="advanced_mode" type="text" visible="false" />
+		<setting default="false" id="enable_default_views" label="Enable Default Views" type="bool" visible="!eq(-1,false)" />
+		<setting default="500" enable="!eq(-1,false)" id="default_folder_view" label="Default Folder View" subsetting="true" type="number" visible="!eq(-1,false) + !eq(-2,false)" />
+		<setting default="50" enable="!eq(-2,false)" id="default_list_view" label="Default List View" subsetting="true" type="number" visible="!eq(-2,false) + !eq(-3,false)" />
+		<setting default="50" enable="!eq(-3,false)" id="default_tvshow_view" label="Default TV Show View" subsetting="true" type="number" visible="!eq(-3,false) + !eq(-4,false)" />
+		<setting default="50" enable="!eq(-4,false)" id="default_season_view" label="Default Season View" subsetting="true" type="number" visible="!eq(-4,false) + !eq(-5,false)" />
+		<setting default="50" enable="!eq(-5,false)" id="default_episode_view" label="Default Episode View" subsetting="true" type="number" visible="!eq(-5,false) + !eq(-6,false)" />
+		<setting default="50" enable="!eq(-6,false)" id="default_movie_view" label="Default Movie View" subsetting="true" type="number" visible="!eq(-6,false) + !eq(-7,false)" />
+		<setting default="false" id="enable_full_context" label="Show Full Context Menus" type="bool" visible="!eq(-8,false)" />
+		<setting id="use_custom_colors" type="bool" label="Enable Custom Colors" default="false" />
+		<setting id="custom_color_enabled" type="action" label="Enabled" default="yellow" visible="!eq(-1,false)" enable="!eq(-1,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=enabled)"/>
+		<setting id="custom_color_disabled" type="action" label="Disabled" default="blue" visible="!eq(-2,false)" enable="!eq(-2,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=disabled)"/>
+		<setting id="custom_color_watchlist" type="action" label="Watchlist" default="yellow" visible="!eq(-3,false)" enable="!eq(-3,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=watchlist)"/>
+		<setting id="custom_color_sync" type="action" label="Sync" default="green" visible="!eq(-4,false)" enable="!eq(-4,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=sync)"/>
+		<setting id="custom_color_bitrate" type="action" label="Bitrate" default="purple" visible="!eq(-5,false)" enable="!eq(-5,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=bitrate)"/>
+		<setting id="custom_color_hostname" type="action" label="Hostname" default="red" visible="!eq(-6,false)" enable="!eq(-6,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=hostname)"/>
+		<setting id="custom_color_filesize" type="action" label="Filesize" default="blue" visible="!eq(-7,false)" enable="!eq(-7,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=filesize)"/>
+		<setting id="custom_color_extension" type="action" label="Extension" default="green" visible="!eq(-8,false)" enable="!eq(-8,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=extension)"/>
+		<setting id="custom_color_quality" type="action" label="Quality" default="yellow" visible="!eq(-9,false)" enable="!eq(-9,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=quality)"/>
+		<setting id="custom_color_service" type="action" label="Service" default="white" visible="!eq(-10,false)" enable="!eq(-10,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.alluc.api/?mode=color_picker&type=service)"/>
+		<setting id="custom_color_resume" type="action" label="Resume" default="green" visible="!eq(-11,false)" enable="!eq(-11,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.redbeard/?mode=color_picker&type=resume)"/>
+		<setting id="custom_color_unaired" type="action" label="Unaired Episodes" default="darkred" visible="!eq(-12,false)" enable="!eq(-12,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.redbeard/?mode=color_picker&type=unaired)"/>
+		<setting id="custom_color_nextpage" type="action" label="Next Page" default="green" visible="!eq(-13,false)" enable="!eq(-13,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.redbeard/?mode=color_picker&type=nextpage)"/>
+		<setting id="custom_color_previouspage" type="action" label="Previous Page" default="orange" visible="!eq(-14,false)" enable="!eq(-14,false)" subsetting="true" action="RunPlugin(plugin://plugin.video.redbeard/?mode=color_picker&type=previouspage)"/>
+		<setting id="show_unaired_episodes" type="bool" label="Show Unaired Episodes" default="false" />
+	</category>
+	<category label="Database (Advanced Mode)">
+		<setting default="false" id="advanced_mode" type="text" visible="false" />
+		<setting default="0" enabled="!eq(-1,false)" id="database_type" label="Database Type" type="enum" values="SQLite|MySQL" />
+		<setting label="SQLite" type="lsep" />
+		<setting default="special://userdata/addon_data/plugin.video.theroyalwe/theroyalwe.db" enable="eq(-2,0)" id="database_sqlite_file" label="Database File" subsetting="true" type="file" />
+		<setting label="MySQL" type="lsep" />
+		<setting default="" enable="eq(-4,1)" id="database_mysql_host" label="Host" subsetting="true" type="text" />
+		<setting default="theroyalwe" enable="eq(-5,1)" id="database_mysql_name" label="Schema" subsetting="true" type="text" />
+		<setting default="" enable="eq(-6,1)" id="database_mysql_user" label="Username" subsetting="true" type="text" />
+		<setting default="" enable="eq(-7,1)" id="database_mysql_pass" label="Password" option="hidden" subsetting="true" type="text" />
+		<setting default="3306" enable="eq(-8,1)" id="database_mysql_port" label="Port" subsetting="true" type="number" />
+		<setting default="false" id="database_sqlite_init" type="text" visible="false" />
+		<setting default="false" id="database_sqlite_init.cache" type="text" visible="false" />
+		<setting default="false" id="database_mysql_init" type="text" visible="false" />
+		<setting default="false" id="database_mysql_init.cache" type="text" visible="false" />
+		<setting default="1" id="database_sqlite_version" type="number" visible="false" />
+		<setting default="1" id="database_mysql_version" type="number" visible="false" />
+		<setting default="1" id="database_sqlite_version.cache" type="number" visible="false" />
+		<setting default="1" id="database_mysql_version.cache" type="number" visible="false" />
+	</category>
+	<category label="Misc">
+		<setting default="false" id="advanced_mode" type="text" visible="false" />
+		<setting default="false" enable="!eq(-1,false)" id="enable_calendar_browser" label="Enable Calendar Browser" type="bool" visible="!eq(-1,false)" />
+		<setting default="false" enable="!eq(-2,false)" id="enable_episodes_ondeck" label="Enable Ondeck Episodes" type="bool" visible="!eq(-2,false)" />
+		<setting default="false" enable="!eq(-8,false)" id="enable_transmogrifier" label="Enable Transmogrifier (Expirimental)" type="bool" visible="System.HasAddon(service.transmogrifier)" enabled="System.HasAddon(service.transmogrifier)" />
+		<setting default="false" enable="eq(-1,true)" id="enable_transmogrifier_streaming" label="Enable Transmogrifer Streaming (Expirimental)" type="bool" enabled="eq(-1,true)" visible="System.HasAddon(service.transmogrifier)"/>
+		<setting default="" id="download_transmogrifier" label="Install Transmogrifier" type="action" visible="!System.HasAddon(service.transmogrifier)" action="RunPlugin(plugin://service.transmogrifier)"/>
+		<setting default="1" id="log_level" label="Log Level" type="enum" values="Standard|Verbose" />
+		<setting type="action" label="Toggle Advanced Mode"  action="RunPlugin(plugin://plugin.video.theroyalwe/?mode=advanced_mode)"/>
+		<setting type="action" label="Reset The Royal We"  action="RunPlugin(plugin://plugin.video.theroyalwe/?mode=reset_trw)"/>
+		<setting default="watchlist" id="ondeck_list" type="text" visible="false" />
+		<setting default="" id="user_agent" type="text" visible="false" />
+		<setting default="false" id="setup_run" type="bool" visible="false" />
+		<setting default="" id="version" type="string" visible="false" />
+		<setting default="" id="agent_refresh_time" type="text" visible="false" />
+	</category>
+</settings>

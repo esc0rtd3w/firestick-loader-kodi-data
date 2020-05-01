@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=flatam - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://213.163.67.57:80/liverepeater/_definst_/ playpath=%s swfUrl=http://554590055.r.worldcdn.net/player.swf pageUrl=http://foxsportslatam.com/ live=true swfVfy=1

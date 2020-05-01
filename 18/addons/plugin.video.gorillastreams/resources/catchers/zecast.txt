@@ -1,0 +1,8 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=ZeCast - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://94.102.56.186/zecastEd/%s swfUrl=http://zecast.tv/player-licensed.swf swfVfy=1 live=true pageUrl=http://zecast.tv
+

@@ -1,0 +1,4 @@
+#LWP-Cookies-2.0
+Set-Cookie3: iptvpcplatform=nhlteam; path="/"; domain="video.nhl.com"; path_spec; discard; version=0
+Set-Cookie3: locale=en_US; path="/"; domain="video.nhl.com"; path_spec; expires="2016-08-24 19:18:56Z"; version=0
+Set-Cookie3: JSESSIONID=56069664AB3A3E1F2CC4B75C3E89C3C3; path="/videocenter"; domain="video.nhl.com"; path_spec; discard; version=0

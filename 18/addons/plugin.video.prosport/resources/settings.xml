@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+		<category label="Settings">
+		<setting id="start_time" type="bool" label="Display game's start time?" default="true" />
+		<setting id="status" type="bool" label="Display game's statuses?" default="true" />
+		<setting id="score" type="bool" label="Display game's scores?" default="true" />
+		<setting id="show_tor" type="bool" label="Show ace/sopcast streams?" default="true" />
+		<setting id="pattern" type="bool" label="Display pattern for subreddits?" default="true" />
+		</category>
+		<category label="Reddit Login">
+		<setting id="username" type="text" label="Username" default="" />
+		<setting id="password" type="text" label="Password" option="hidden" default="" />
+		</category>
+</settings>

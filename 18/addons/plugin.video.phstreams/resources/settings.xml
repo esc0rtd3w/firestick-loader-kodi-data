@@ -1,0 +1,13 @@
+<settings>
+	<category label="30715">
+		<setting type="lsep" label="30716" />
+		<setting id="metadata" type="bool" label="30717" default="true" />
+		<setting type="lsep" label="32504" />
+		<setting label="32505" type="action" option="close" action="RunPlugin(plugin://plugin.video.phstreams/?action=urlresolverSettings)" />
+		<setting type="lsep" label="30718" />
+		<setting label="30719" type="action" action="RunPlugin(plugin://plugin.video.phstreams/?action=clearCache)" />
+		<setting type="lsep" label="30721" />
+		<setting id="downloadPath" type="folder" label="30720" default="" />
+	</category>
+</settings>
+

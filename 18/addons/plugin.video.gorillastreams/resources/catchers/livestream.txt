@@ -1,0 +1,7 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=Livestream - %s
+
+item_info_name=url
+item_info_from=@PARAM1@
+item_info_build=rtmp://cp86438.live.edgefcs.net/live playpath=livestream3_17@56626 live=true swfVfy=1 swfUrl=http://cdn.livestream.com/chromelessPlayer/v21/playerapi.swf?jsEnabled=false&time=&autoplay=true pageUrl=http://cdn.livestream.com/embed/%s?layout=4&amp;autoplay=true

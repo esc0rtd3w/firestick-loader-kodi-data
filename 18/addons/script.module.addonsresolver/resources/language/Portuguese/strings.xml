@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="30000">Addon Preferencial</string>
+	<string id="30001">Activar</string>
+	<string id="30002">Ver no %s</string>
+	<string id="30003">Sem addons compatíveis instalados ou activados.</string>
+	<string id="30004">Seleccione o addon</string>
+	<string id="30005">Seleccione a qualidade</string>
+	<string id="30006">%s (Seeds: %s Peers: %s Tamanho: %s)</string>
+	<string id="30007">Fonte Preferencial</string>
+	<string id="30008">Ordenação</string>
+	<string id="30100">Biblioteca</string>
+	<string id="30102">Filmes</string>
+	<string id="30107">Actualizar biblioteca Kodi depois de adicionar conteúdo</string>
+	<string id="30108">Evitar criar conteúdo duplicado</string>
+	<string id="30309">Adicionado à pasta de Filmes de Addons Resolver</string>	
+</strings>

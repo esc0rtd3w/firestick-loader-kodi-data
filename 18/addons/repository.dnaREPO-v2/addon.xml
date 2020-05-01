@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.dnaREPO-v2" name="[COLOR lightblue]dna[/COLOR][COLOR lightwhite]REPO-v2[/COLOR]" version="2.0.0" provider-name="Team DNA">
+	<extension point="xbmc.addon.repository" name="dnaREPO-v2">
+		<info compressed="false">https://raw.githubusercontent.com/macblizzard/dnaREPO-v2/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/macblizzard/dnaREPO-v2/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/macblizzard/dnaREPO-v2/master</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>dnaREPO-v2</summary>
+		<description>Download and install add-ons from dna repository.</description>
+		<disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+

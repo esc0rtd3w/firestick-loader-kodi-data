@@ -1,0 +1,21 @@
+[B]Version 3.0.0[/B]
+
+- project picked up by esc0rtd3w
+- fixed "xbmcaddon" import issue
+- fixed all video links
+- rewrote all xml with working info
+- added all available categories to xml
+
+[B]Version 2.0.2[/B]
+
+- marked as broken since the video feed has disappeared
+- use an older, local feed file instead
+- most videos are unplayable as they have been taken offline or moved
+
+[B]Version 2.0.1[/B]
+
+- new youtube video ID regex
+
+[B]Version 2.0.0[/B]
+
+- complete rewrite by cdwertmann

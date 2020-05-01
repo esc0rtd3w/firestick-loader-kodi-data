@@ -1,0 +1,26 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=iCastOn - %s
+
+item_info_name=fileId
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.icaston.tv/embed.php?u=%s','.*\'file\',\s*\'([^\']+)\'.*','http://www.icaston.tv/embed.php?u=%s')
+item_info_build=%s
+
+item_info_name=swf
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.icaston.tv/embed.php?u=%s','.*SWFObject\(\'([^\']+)\'.*','http://www.icaston.tv/embed.php?u=%s')
+item_info_build=http://www.icaston.tv/%s
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_convert=getInfo('http://www.icaston.tv/embed.php?u=%s','.*streamer\',\s*\'([^\']+)\'.*','http://www.icaston.tv/embed.php?u=%s')
+item_info_build=%s
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.icaston.tv/embed.php?u=%s
+
+item_info_name=url
+item_info_from=rtmp + '/' + fileId + ' swfUrl=' + swf + ' pageUrl=' + pageUrl + ' live=true swfVfy=1'
+item_info_build=%s

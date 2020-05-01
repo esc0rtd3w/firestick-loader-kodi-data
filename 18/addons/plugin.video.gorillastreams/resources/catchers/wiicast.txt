@@ -1,0 +1,21 @@
+item_info_name=title
+item_info_from=@PARAM1@
+item_info_build=WiiCast - %s
+
+item_info_name=token
+item_info_build=#ed%h0#w@1
+
+item_info_name=pageUrl
+item_info_from=@PARAM1@
+item_info_build=http://www.wii-cast.tv/embed.php?channel=%s&vw=610&vh=360&domain=www.wii-cast.tv
+
+item_info_name=swf
+item_info_build=http://www.wii-cast.tv/player/wiicast.swf
+
+item_info_name=rtmp
+item_info_from=@PARAM1@
+item_info_build=rtmp://live.wii-cast.tv/pub playpath=%s
+
+item_info_name=url
+item_info_from=rtmp + ' swfUrl=' + swf + ' live=true token=' + token + ' pageUrl=' + pageUrl
+item_info_build=%s

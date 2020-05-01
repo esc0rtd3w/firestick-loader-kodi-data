@@ -1,0 +1,35 @@
+v2.0.0
+
+-addon  completely recoded
+-added autoplay
+-added my favourites
+-added metadata
+-added proxy settings to chhose the baseurl
+
+v1.1.3
+
+- Fixed resolver issues 
+- changed the main icon thanks to @Albertn198 for creating it for me
+
+v1.1.2
+
+- fixed resolver issues
+
+v1.1.1
+
+- Updated the tv show section you now have to activate it in settings
+- Added check for updates in settings
+
+v1.1.0q
+
+Special thanks to OpenELEQ for this update
+- Added iSearch-mode (9), which takes up to two arguments:
+    - query, will be parsed as searchterm, if blank or None, keyboard will popup
+    - type, can be tv/movie/all
+- iSearch entry:
+	<favourite name="123Movies All" thumb="special://home/addons/plugin.video.md123movies/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.md123movies/?description&amp;iconimage=&amp;mode=4&amp;name=[%SF%]&amp;url=url&amp;query=[%SF%]&amp;type=&quot;,return)</favourite>
+
+v1.0.0
+
+- Initial Release
+

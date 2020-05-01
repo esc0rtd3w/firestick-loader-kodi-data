@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.theyidrh" version="6.5.0" name="Release [COLOR powderblue][B]HUB[/B][/COLOR]" provider-name="@MrEntertainRepo">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.TheYid.common" version="0.1.1"/>
+        <import addon="script.module.urlresolver"  version="2.1.2"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="plugin.program.indigo" version="4.0.3"/>
+        <import addon="repository.xbmchub" version="3.0.0"/>
+        <import addon="repository.kodibae" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Release [B][I][COLOR powderblue]HUB[/COLOR][/B][/I]</summary>
+        <description>Release [B][I][COLOR powderblue]HUB[/COLOR][/B][/I] 30+ scene release sites all in one place.... [COLOR lime][B]SUPER ADDON[/B][/COLOR] [COLOR red][B][I]YOU will need a debrid premium account to get the best out of this addon. NOT FOR NOOBS[/B][/I][/COLOR] [COLOR mintcream][B][I]For more info go to @MrEntertainRepo[/B][/I][/COLOR] PLEASE REMOVE THIS ADDON FROM BEST OF YOUTUBE VIDEOS AND ADDON OF THE MONTH BALLSHIT BLOG POSTS - SHOW SOME RESPECT AND ASK THE ADDED DEV IF THEY WOULD LIKE THE ADDON TO BE IN VIDS OR BLOGS.</description>
+        <platform>all</platform>
+	 <forum> </forum>
+	 <website> </website>
+        <disclaimer lang="en">[COLOR red][B][I] Mr Entertainment. [/B][/I][/COLOR] [COLOR red][B][I]YOU will need a debrid premium account for this addon[/B][/I][/COLOR]</disclaimer>
+    </extension>
+</addon>
+

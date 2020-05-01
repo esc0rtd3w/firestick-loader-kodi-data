@@ -1,0 +1,23 @@
+{
+ "name"         : "USTVnow plus [COLOR FF0084FF]-[/COLOR] Browse Play ([COLOR FF0084FF]Q[/COLOR])",
+ "repository"   : "repository.xbmchub",
+ "plugin"       : "plugin.video.ustvnow.tva",
+ "priority"     : 800,
+ "id"           : "q.ustvnow.browse.play",
+ "filters"      : {},
+ "postprocess"  : "",
+ "movies"       : [],
+ "tvshows"      : [],
+ "live"         : [
+  [
+   {
+    "link": "plugin://plugin.video.ustvnow.tva",
+    "steps": [
+     ".*Live TV.*",
+     "{name}.*"
+     ],
+    "action"    : "PLAY"
+   }
+  ]
+ ]
+}

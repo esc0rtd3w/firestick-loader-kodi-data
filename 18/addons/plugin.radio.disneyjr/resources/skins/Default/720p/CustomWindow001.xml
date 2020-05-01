@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<controls>
+		<!-- ## \/ ##  Options that affect the whole window.  ## \/ ## -->
+		<defaultcontrol always="true">11</defaultcontrol>
+		<!--backgroundcolor>0x00000000</backgroundcolor-->
+		<posx>0</posx><posy>0</posy><width>1280</width><height>720</height>
+		<allowoverlay>yes</allowoverlay>
+		<!-- ## /\ ##  Options that affect the whole window.  ## /\ ## -->
+		
+		<!-- ## \/ ##  Background layers.  ## \/ ## -->
+		<control type="image" id="1">
+			<description>Background Layer 1 Bottom</description>
+			<posx>0</posx><posy>0</posy><width>1280</width><height>720</height>
+			<texture>black1.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<visible>true</visible>
+		</control>
+		<control type="image" id="2">
+			<description>Background Layer 2 Top</description>
+			<posx>0</posx><posy>0</posy><width>1280</width><height>720</height>
+			<texture>bg_disney002.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<visible>true</visible>
+			<animation type="WindowOpen">
+				<effect type="fade" time="6000" start="0" end="100" />
+				<effect type="slide" time="4000" start="0,-800" end="0,0" />
+			</animation>
+		</control>
+		<!-- ## /\ ##  Background layers.  ## /\ ## -->
+
+		<!-- ## \/ ##  Media layers.  ## \/ ## -->-+
+		<control type="visualisation" id="8">
+			<description>visualisation window</description>
+			<left>0</left><top>0</top><width>1280</width><height>720</height>
+			<visible>Player.HasAudio</visible>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="videowindow" id="9">
+			<description>video window</description>
+			<left>0</left><top>0</top><width>1280</width><height>720</height>
+			<visible>Player.HasVideo</visible>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<!-- ## /\ ##  Media layers.  ## /\ ## -->
+
+		<control type="image" id="3">
+			<description>Background Layer 3 Top Nav Bar For Style</description>
+			<posx>0</posx><posy>0</posy><width>1280</width><height>157</height>
+			<texture>topbg.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<visible>true</visible>
+		</control>
+		
+		
+		
+		<control type="image" id="5">
+			<description>Logo #2</description>
+			<left>308r</left><top>119r</top><width>288</width><height>99</height>
+			<texture flipX="false" flipY="false" colordiffuse="0x22FFFFFF">RadioDisneyJunior_Logo001.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<visible>true</visible>
+		</control>
+		<control type="image" id="4">
+			<description>Logo #1</description>
+			<left>540</left><top>5</top><width>200</width><height>67</height>
+			<texture flipx="false" flipy="false" colordiffuse="0xDDFFFFFF">RadioDisneyJunior_Logo002.png</texture>
+			<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+			<visible>true</visible>
+		</control>
+		
+		
+		
+		
+		
+		
+		<control type="button" id="14">
+			<description>Play Button</description>
+			<left>200</left><top>350</top><width>300</width><height>300</height>
+			<textoffsetx>108</textoffsetx><textoffsety>133</textoffsety>
+			<textcolor>FF000000</textcolor><focusedcolor>FF000000</focusedcolor>
+			<align>left</align><aligny>top</aligny>
+			<texturenofocus colordiffuse="BB00FF00" border="6,6,6,6">radio_play_bw.png</texturenofocus>
+			<texturefocus colordiffuse="FFFFFFFF" border="6,6,6,6">radio_play_bw.png</texturefocus>
+			<visible allowhiddenfocus="true">true</visible>
+			<onup>10</onup><ondown>10</ondown>
+			<onleft>13</onleft><onright>11</onright>
+			<label>[B]    MP3[/B]</label><font>font10</font>
+			<onclick>PlayMedia(http://playerservices.streamtheworld.com/pls/JUNIORWATCHMP3.pls)</onclick>
+		</control>
+		
+		<control type="button" id="11">
+			<description>Stop Buton</description>
+			<left>540</left><top>250</top><width>320</width><height>320</height>
+			<label>[B]Stop[/B]</label><font>font10</font>
+			<textoffsetx>143</textoffsetx><textoffsety>143</textoffsety>
+			<textcolor>FF000000</textcolor><focusedcolor>FF000000</focusedcolor>
+			<align>left</align><aligny>top</aligny>
+			<texturenofocus colordiffuse="BBAA0000" border="6,6,6,6">radio_stop_bw.png</texturenofocus>
+			<texturefocus colordiffuse="FFF1F1F1" border="6,6,6,6">radio_stop_bw.png</texturefocus>
+			<visible allowhiddenfocus="true">true</visible>
+			<onup>10</onup><ondown>10</ondown>
+			<onleft>14</onleft><onright>13</onright>
+			<onclick>PlayerControl(Stop)</onclick>
+		</control>
+		
+		<control type="button" id="13">
+			<description>Play Button #2</description>
+			<left>900</left><top>175</top><width>300</width><height>300</height>
+			<label>[B]ACC[/B]</label><font>font10</font>
+			<textoffsetx>123</textoffsetx><textoffsety>133</textoffsety>
+			<textcolor>FF000000</textcolor><focusedcolor>FF000000</focusedcolor>
+			<align>left</align><aligny>top</aligny>
+			<texturenofocus colordiffuse="BBA866DB" border="6,6,6,6">radio_play_bw.png</texturenofocus>
+			<texturefocus colordiffuse="FFFFFFFF" border="6,6,6,6">radio_play_bw.png</texturefocus>
+			<visible allowhiddenfocus="true">true</visible>
+			<onup>10</onup><ondown>10</ondown>
+			<onleft>11</onleft><onright>14</onright>
+			<onclick>PlayMedia(http://playerservices.streamtheworld.com/pls/JUNIORWATCHAAC.pls)</onclick>
+		</control>
+		
+		
+		
+		
+		
+		<control type="label" id="9">
+			<description>Logo Label</description>
+			<left>50</left>
+			<top>90r</top>
+			<width>500</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>bottom</aligny>
+			<font>font35_title</font>
+			<textcolor>22FFFFFF</textcolor>
+			<shadowcolor>33000000</shadowcolor>
+			<label>[B]Radio Disney Junior[/B]</label>
+			<!--
+			<colordiffuse>FF00FFFF</colordiffuse>
+			<animation type="WindowOpen">
+				<effect type="zoom" time="1" start="0" end="200" />
+				<effect type="fade" time="8000" start="0" end="100" />
+				<effect type="rotatey" start="-160" end="0" time="8000" />
+				
+			</animation>
+			-->
+		</control>
+		
+		
+		<!-- ## \/ ##  Weather.  ## \/ ## -->
+		<control type="group">
+			<left>20</left>
+			<top>0</top>
+			<visible>Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)</visible>
+			<include>Window_OpenClose_Animation</include>
+			<control type="image">
+				<description>Weather image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Weather.Conditions]</texture>
+			</control>
+			<control type="label">
+				<description>Location label</description>
+				<left>65</left>
+				<top>5</top>
+				<width>500</width>
+				<height>15</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>customcolor1</textcolor>
+				<shadowcolor>customcolor5</shadowcolor>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+			</control>
+			<control type="grouplist">
+				<left>65</left>
+				<top>20</top>
+				<width>1000</width>
+				<height>30</height>
+				<orientation>horizontal</orientation>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<control type="label">
+					<description>Temp label</description>
+					<width min="0" max="300">auto</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font28_title</font>
+					<textcolor>customcolor1</textcolor>
+					<shadowcolor>customcolor5</shadowcolor>
+					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+				</control>
+				<control type="label">
+					<description>Temp Units</description>
+					<width min="0" max="100">auto</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[System.TemperatureUnits]</label>
+					<textcolor>customcolor1</textcolor>
+					<shadowcolor>customcolor5</shadowcolor>
+					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+				</control>
+				<control type="label">
+					<description>Conditions Label</description>
+					<width>500</width>
+					<height>22</height>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+					<textcolor>customcolor3</textcolor>
+					<shadowcolor>customcolor5</shadowcolor>
+				</control>
+			</control>
+		</control>
+		
+		<!-- ## \/ ##  Time.  ## \/ ## -->
+		<include>Clock</include>
+		<!-- ## \/ ##  Date.  ## \/ ## -->
+		<control type="label">
+			<description>Date label</description>
+			<right>20</right>
+			<top>35</top>
+			<width>200</width>
+			<height>15</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>font10</font>
+			<textcolor>customcolor1</textcolor>
+			<shadowcolor>customcolor5</shadowcolor>
+			<label>$INFO[System.Date]</label>
+			<include>Window_OpenClose_Animation</include>
+			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+		</control>
+		
+		
+		
+		
+		
+		
+		<!-- ## \/ ##  Backup use for exiting.  ## \/ ## -->
+		<control type="button" id="10">
+			<description>Exit Button</description>
+			<left>0</left><top>0</top><width>14</width><height>18</height>
+			<!--
+			<left>18r</left><top>0</top><width>14</width><height>18</height>
+			-->
+			<!--onup>106</onup><ondown>106</ondown><onleft>109</onleft><onright>104</onright-->
+			<label>[B]x[/B]</label><font>font10</font>
+			<textoffsetx>3</textoffsetx><textoffsety>-3</textoffsety>
+			<textcolor>FFFFFFFF</textcolor><focusedcolor>FFFFFFFF</focusedcolor>
+			<align>left</align><aligny>top</aligny>
+			<texturenofocus colordiffuse="FF808080" border="6,6,6,6">white1.png</texturenofocus>
+			<texturefocus colordiffuse="FFAA0000" border="6,6,6,6">white1.png</texturefocus>
+			<visible allowhiddenfocus="true">true</visible>
+			<onup>11</onup><ondown>11</ondown>
+		</control>
+		<!-- ## /\ ##  Backup use for exiting.  ## /\ ## -->
+	</controls>
+</window>

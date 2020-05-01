@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.audio.podcastone.rayw1986" name="Podcast One" version="1.0.0" provider-name="RayW1986">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               	library="default.py">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Listen to the shows from Podcast One</summary>
+        <description lang="en">Browse and listen to the many podcasts available at Podcast One. 
+		
+[B]NOTE:[/B] This add-on does NOT support Premium accounts, currently.</description>
+		<disclaimer lang="en">The author is not affiliated with Podcast One</disclaimer>
+    </extension>
+	
+</addon>

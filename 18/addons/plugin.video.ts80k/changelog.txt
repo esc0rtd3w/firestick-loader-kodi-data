@@ -1,0 +1,28 @@
+[B]Version 0.2.0[/B]
+- bummped version, some pepole was having problems updating to 0.1.1
+
+[B]Version 0.1.1[/B]
+- changed site
+- added some new shows
+- had 2 removed some show as new sites dont have
+
+[B]Version 0.0.8[/B]
+- 
+
+[B]Version 0.0.7[/B]
+- 
+
+[B]Version 0.0.6[/B]
+- added mr t
+
+[B]Version 0.0.5[/B]
+- added The hitch hikers guide to the galaxy
+
+[B]Version 0.0.4[/B]
+- more shows added
+
+[B]Version 0.0.2[/B]
+- more shows added
+
+[B]Version 0.0.1[/B]
+- Initial version 

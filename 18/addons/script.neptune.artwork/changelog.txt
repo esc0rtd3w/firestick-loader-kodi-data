@@ -1,0 +1,16 @@
+[B]1.1.2[/B]
+- Changed Disclaimer
+- Changed License
+
+[B]1.1.1[/B]
+- Fixed icon transparency 
+
+[B]1.1.0[/B]
+- More Icons Changed.. (Credit to Team Jarvis)
+
+[B]1.0.9[/B]
+- Started the change for new icons
+
+[B]1.0.8[/B]
+- Initial version
+- Added New Fanart and icons

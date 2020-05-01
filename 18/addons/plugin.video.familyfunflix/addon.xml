@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.familyfunflix" version="2.1.0" name="FamilyFun Flix" provider-name="Blazetamer">
+<requires>
+<import addon="xbmc.python" version="2.1.0"/>
+<import addon="script.module.urlresolver"  version="2.1.2"/>
+<import addon="script.module.metahandler" version="2.3.1" />
+<import addon="script.common.plugin.cache" version="2.5.2"/>
+<import addon="script.module.addon.common" version="2.0.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="default.py">
+<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary>Free Family Fun Movies</summary>
+<description>From the Popular Website Family Fun Flix You may also download the streamfiles to your library. ***For Official support visit xbmchub.com*** Graphics by: Marquerite</description>
+<platform>all</platform>
+</extension>
+</addon>

@@ -1,0 +1,17 @@
+[B]SABnzbd 3.2.0[/B]
+- Enable https
+- Work as proper python module
+
+[B]SABnzbd 3.1.0[/B]
+- Restructure to support Helix
+- Stop import settings from Pneumatic
+- Lots of minor fixes
+
+[B]SABnzbd 3.0.2[/B]
+- Typo stopping propper settings import from Pneumatic
+
+[B]SABnzbd 3.0.1[/B]
+- Import settings from Pneumatic on first start.
+
+[B]SABnzbd 3.0.0[/B]
+- First commit for Frodo

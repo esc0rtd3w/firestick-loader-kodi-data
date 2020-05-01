@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -29,7 +30,6 @@ import urllib
 import urlparse
 
 from openscrapers.modules import cache
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -39,7 +39,7 @@ from openscrapers.modules import workers
 class source:
 	def __init__(self):
 		self.priority = 1
-		self.language = ['en', 'de', 'fr', 'ko', 'pl', 'pt', 'ru']
+		self.language = ['en']
 		self.domains = ['kickasshydra.net', 'kickasstrusty.com', 'kickassindia.com',
 			'kickassmovies.net', 'torrentskickass.org', 'kickasstorrents.li', 'kkat.net',
 			'kickassdb.com', 'kickassaustralia.com', 'kickasspk.com', 'kkickass.com',
@@ -48,7 +48,7 @@ class source:
 		self._base_link = None
 		self.search = '/usearch/{0}%20category:movies'
 		self.search2 = '/usearch/{0}%20category:tv'
-
+		self.min_seeders = 1
 
 	@property
 	def base_link(self):
@@ -152,27 +152,32 @@ class source:
 				link = urllib.unquote(ref).decode('utf8').replace('https://mylink.me.uk/?url=', '').replace('https://mylink.cx/?url=', '')
 
 				name = urllib.unquote_plus(re.search('dn=([^&]+)', link).groups()[0])
-
-				t = name.split(self.hdlr)[0].replace(self.year, '').replace('(', '').replace(')', '').replace('&', 'and')
-				if cleantitle.get(t) != cleantitle.get(self.title):
+				name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+				if source_utils.remove_lang(name):
 					continue
 
-				if self.hdlr not in name:
+				match = source_utils.check_title(self.title, name, self.hdlr, self.year)
+				if not match:
 					continue
 
 				try:
-					size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
-					div = 1 if size.endswith('GB') else 1024
-					size = float(re.sub('[^0-9|/.|/,]', '', size.replace(',', '.'))) / div
-					size = '%.2f GB' % size
+					seeders = int(re.findall('<td class="green center">([0-9]+|[0-9]+,[0-9]+)</td>', post, re.DOTALL)[0].replace(',', ''))
+					if self.min_seeders > seeders:
+						continue
 				except:
-					size = '0'
+					seeders = 0
 					pass
 
-				self.items.append((name, link, size))
+				try:
+					size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', post)[0]
+					dsize, isize = source_utils._size(size)
+				except:
+					isize = '0'
+					dsize = 0
+					pass
 
+				self.items.append((name, link, isize, dsize, seeders))
 			return self.items
-
 		except:
 			source_utils.scraper_error('KICKASS2')
 			return self.items
@@ -181,19 +186,20 @@ class source:
 	def _get_sources(self, item):
 		try:
 			name = item[0]
-			url = item[1]
+			url = urllib.unquote_plus(item[1]).replace('&amp;', '&').replace(' ', '.')
+			url = url.split('&tr')[0]
+			url = url.encode('ascii', errors='ignore').decode('ascii', errors='ignore')
 
-			if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
-				return
+			hash = re.compile('btih:(.*?)&').findall(url)[0]
 
 			quality, info = source_utils.get_release_quality(name, url)
 
-			info.append(item[2])  # if item[2] != '0'
+			if item[2] != '0':
+				info.insert(0, item[2])
 			info = ' | '.join(info)
 
-			self._sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-												'info': info, 'direct': False, 'debridonly': True})
-
+			self._sources.append({'source': 'torrent', 'seeders': item[4], 'hash': hash, 'name': name, 'quality': quality,
+											'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': item[3]})
 		except:
 			source_utils.scraper_error('KICKASS2')
 			pass
@@ -217,5 +223,3 @@ class source:
 		except:
 			pass
 		return fallback
-
-

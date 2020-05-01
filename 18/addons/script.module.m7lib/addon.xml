@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addon id="script.module.m7lib" name="m7lib" provider-name="mhancoc7" version="0.8.2">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0" />
+        <import addon="plugin.video.youtube" version="5.5.1" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <description lan="en">mhancoc7 Common Functions</description>
+        <summary lang="en">mhancoc7 Common Functions</summary>
+        <platform>all</platform>
+    </extension>
+</addon>

@@ -1,0 +1,13 @@
+[B]Version 0.0.2.4[/B]
+- new format
+- only skins as content for now
+[B]Version 0.0.2.2[/B]
+- Added krypton dir
+- Added forum info
+- Added email
+- Added source info
+[B]Version 0.0.2.1[/B]
+- Added jarvis dir
+- Edited main dir to show on Helix or up
+[B]Version 0.0.2.0[/B]
+- Changed versionnumbering to comply with nan

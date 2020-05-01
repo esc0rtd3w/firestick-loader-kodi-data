@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.gfservers" name="GFservers" version="1.0" provider-name="GF">
+	<extension point="xbmc.addon.repository" name="GFservers">
+		<info compressed="false">http://www.gfservers.com/plugins/addons.xml</info>
+		<checksum>http://www.gfservers.com/plugins/addons.xml.md5</checksum>
+		<datadir zip="true">http://www.gfservers.com/plugins</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>GFSERVERS</summary>
+		<description>The Best Live Tv and Movies addon</description>
+		<platform>all</platform>
+	</extension>
+</addon>

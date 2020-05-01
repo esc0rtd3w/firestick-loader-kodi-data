@@ -1,0 +1,7 @@
+﻿<settings>
+  <category label="General">
+    <setting id="save_location" type="folder"  label="Select a download location." default=""/>
+    <setting id="add_playlist" type="bool" label="Add items with multiple links as play lists" default="false"/>
+    <setting id="ask_playlist_items" type="bool" label="Ask playlist items to choose from dialog" default="false" />
+  </category>
+</settings>
