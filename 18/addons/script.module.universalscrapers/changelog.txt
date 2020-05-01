@@ -1,3 +1,25 @@
+03/04/2020 v1.2.3
+Quick fix to Kickass and twoddl
+
+
+29/03/2020 v1.2.2
+Removed:
+SeedHd
+
+Fixed:
+Pirate Bay (rd)
+moviejes
+1337X (rd)
+twoddl (rd)
+eztv (rd)
+
+Added
+moviejes (tv also)
+Zooqle (rd tv)
+Kickass (rd)
+
+
+
 05/11/2019 v1.2.1
 Removed:
 Ddown

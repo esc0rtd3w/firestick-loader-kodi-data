@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (updated 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -30,7 +31,6 @@ import time
 import urllib
 import urlparse
 
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -44,6 +44,7 @@ class source:
 		self.tvsearch = 'https://torrentapi.org/pubapi_v2.php?app_id=Torapi&token={0}&mode=search&search_string={1}&{2}'
 		self.msearch = 'https://torrentapi.org/pubapi_v2.php?app_id=Torapi&token={0}&mode=search&search_imdb={1}&{2}'
 		self.token = 'https://torrentapi.org/pubapi_v2.php?app_id=Torapi&get_token=get_token'
+		self.min_seeders = 1
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -78,9 +79,8 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		sources = []
 		try:
-			sources = []
-
 			if url is None:
 				return sources
 
@@ -102,13 +102,12 @@ class source:
 			token = json.loads(token)["token"]
 
 			if 'tvshowtitle' in data:
-				search_link = self.tvsearch.format(token, urllib.quote_plus(query), 'format=json_extended')
+				search_link = self.tvsearch.format(token, urllib.quote_plus(query), 'limit=100&format=json_extended')
 			else:
-				search_link = self.msearch.format(token, data['imdb'], 'format=json_extended')
+				search_link = self.msearch.format(token, data['imdb'], 'limit=100&format=json_extended')
 			# log_utils.log('search_link = %s' % search_link, log_utils.LOGDEBUG)
 
 			time.sleep(2)
-
 			rjson = client.request(search_link, error=True)
 			if 'No results found' in rjson:
 				return sources
@@ -118,29 +117,40 @@ class source:
 			for file in files:
 				url = file["download"]
 				url = url.split('&tr')[0]
-
-				if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
-					continue
+				hash = re.compile('btih:(.*?)&').findall(url)[0]
 
 				name = file["title"]
-
-				t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
-				if cleantitle.get(t) != cleantitle.get(title):
+				name = urllib.unquote_plus(name)
+				name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+				if source_utils.remove_lang(name):
 					continue
 
-				if hdlr not in name:
+				match = source_utils.check_title(title, name, hdlr, data['year'])
+				if not match:
 					continue
+
+				try:
+					seeders = int(file["seeders"])
+					if self.min_seeders > seeders: 
+						continue
+				except:
+					seeders = 0
+					pass
 
 				quality, info = source_utils.get_release_quality(name, name)
 
-				size = source_utils.convert_size(file["size"])
-				info.append(size)
+				try:
+					dsize, isize = source_utils.convert_size(file["size"], to='GB')
+					info.insert(0, isize)
+				except:
+					dsize = 0
+					pass
+
 				info = ' | '.join(info)
 
-				sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url,
-											'info': info, 'direct': False, 'debridonly': True})
+				sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+										'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 			return sources
-
 		except:
 			source_utils.scraper_error('TORRENTAPI')
 			return sources

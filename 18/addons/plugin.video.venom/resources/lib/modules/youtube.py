@@ -10,7 +10,7 @@ class youtube(object):
 	def __init__(self, key=''):
 		self.list = []
 		self.data = []
-		self.base_link = 'http://www.youtube.com'
+		self.base_link = 'https://www.youtube.com'
 		self.key_link = '&key=%s' % key
 		self.playlists_link = 'https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=%s'
 		self.playlist_link = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=%s'
@@ -65,21 +65,15 @@ class youtube(object):
 			try:
 				title = item['snippet']['title']
 				title = title.encode('utf-8')
-
 				url = item['id']
 				url = url.encode('utf-8')
-
 				image = item['snippet']['thumbnails']['high']['url']
-
 				if '/default.jpg' in image:
 					raise Exception()
-
 				image = image.encode('utf-8')
-
 				self.list.append({'title': title, 'url': url, 'image': image})
 			except:
 				pass
-
 		return self.list
 
 
@@ -90,7 +84,6 @@ class youtube(object):
 			items = result['items']
 		except:
 			pass
-
 		for i in range(1, 5):
 			try:
 				if pagination is True:
@@ -103,39 +96,31 @@ class youtube(object):
 				items += result['items']
 			except:
 				pass
-
 		try:
 			if pagination is False:
 				raise Exception()
 			next = cid + '&pageToken=' + result['nextPageToken']
 		except:
 			next = ''
-
 		for item in items: 
 			try:
 				title = item['snippet']['title']
 				title = title.encode('utf-8')
-
 				try:
 					url = item['snippet']['resourceId']['videoId']
 				except:
 					url = item['id']['videoId']
 				url = url.encode('utf-8')
-
 				image = item['snippet']['thumbnails']['high']['url']
 				if '/default.jpg' in image:
 					raise Exception()
 				image = image.encode('utf-8')
-
 				append = {'title': title, 'url': url, 'image': image}
-
 				if not next == '':
 					append['next'] = next
-
 				self.list.append(append)
 			except:
 				pass
-
 		try:
 			u = [range(0, len(self.list))[i:i+50] for i in range(len(range(0, len(self.list))))[::50]]
 			u = [','.join([self.list[x]['url'] for x in i]) for i in u]
@@ -157,13 +142,10 @@ class youtube(object):
 		for item in range(0, len(self.list)):
 			try:
 				vid = self.list[item]['url']
-
 				self.list[item]['url'] = self.play_link % vid
-
 				d = [(i['id'], i['contentDetails']) for i in items]
 				d = [i for i in d if i[0] == vid]
 				d = d[0][1]['duration']
-
 				duration = 0
 				try:
 					duration += 60 * 60 * int(re.findall('(\d*)H', d)[0])
@@ -178,11 +160,9 @@ class youtube(object):
 				except:
 					pass
 				duration = str(duration)
-
 				self.list[item]['duration'] = duration
 			except:
 				pass
-
 		return self.list
 
 

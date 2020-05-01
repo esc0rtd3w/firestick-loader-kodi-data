@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# created by Venom for Openscrapers (updated url 4-20-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -28,7 +29,6 @@ import re
 import urllib
 import urlparse
 
-from openscrapers.modules import cleantitle
 from openscrapers.modules import client
 from openscrapers.modules import debrid
 from openscrapers.modules import source_utils
@@ -40,7 +40,7 @@ class source:
 		self.language = ['en']
 		self.domains = ['topnow.se']
 		self.base_link = 'http://topnow.se'
-		self.search_link = '/search.php?dayq=%s'
+		self.search_link = '/index.php?search=%s'
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -103,9 +103,8 @@ class source:
 			if 'No results were found' in r:
 				return sources
 
-			r = client.parseDOM(r, 'table', attrs={'class': 'topic_table'})[0]
+			r = client.parseDOM(r, 'table', attrs={'class': 'each_card_table'})
 			r = client.parseDOM(r, 'a', ret='href')[0]
-
 			post = urlparse.urljoin(self.base_link, r)
 			r = client.request(post)
 
@@ -113,38 +112,37 @@ class source:
 
 			for link in links:
 				url = str(client.replaceHTMLCodes(link).split('&tr')[0])
-				url = urllib.unquote_plus(url)
-
-				if any(x in url.lower() for x in ['french', 'italian', 'spanish', 'truefrench', 'dublado', 'dubbed']):
-					continue
-
+				url = urllib.unquote_plus(url).replace(' ', '.')
 				if url in str(sources):
 					continue
+				hash = re.compile('btih:(.*?)&').findall(url)[0]
 
 				name = url.split('&dn=')[1]
-				t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
-				if cleantitle.get(t) != cleantitle.get(title):
+				name = re.sub('[^A-Za-z0-9]+', '.', name).lstrip('.')
+				if source_utils.remove_lang(name):
 					continue
 
-				if hdlr not in name:
+				match = source_utils.check_title(title, name, hdlr, data['year'])
+				if not match:
 					continue
 
-				quality, info = source_utils.get_release_quality(link, link)
+				seeders = 0 # seeders not available on topnow
+				# quality, info = source_utils.get_release_quality(link, link)
+				quality, info = source_utils.get_release_quality(name, url)
 
 				try:
 					size = re.findall('((?:\d+\.\d+|\d+\,\d+|\d+)\s*(?:GB|GiB|MB|MiB))', r)[-1]
-					div = 1 if size.endswith(('GB', 'GiB')) else 1024
-					size = float(re.sub('[^0-9|/.|/,]', '', size)) / div
-					size = '%.2f GB' % size
-					info.append(size)
+					dsize, isize = source_utils._size(size)
+					info.insert(0, isize)
 				except:
+					dsize = 0
 					pass
 
 				info = ' | '.join(info)
 
-				sources.append({'source': 'torrent', 'quality': quality, 'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True})
+				sources.append({'source': 'torrent', 'seeders': seeders, 'hash': hash, 'name': name, 'quality': quality,
+										'language': 'en', 'url': url, 'info': info, 'direct': False, 'debridonly': True, 'size': dsize})
 			return sources
-
 		except:
 			source_utils.scraper_error('TOPNOW')
 			return sources

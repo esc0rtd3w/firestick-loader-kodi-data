@@ -19,23 +19,23 @@ from resources.lib.modules import workers
 # import requests
 
 
-self.trakt_link = 'http://api.trakt.tv'
+self.trakt_link = 'https://api.trakt.tv'
 self.trakt_user = control.setting('trakt.user').strip()
 self.lang = control.apiLanguage()['trakt']
 
-self.traktlist_link = 'http://api.trakt.tv/users/%s/lists/%s/items'
-self.traktlists_link = 'http://api.trakt.tv/users/me/lists'
-self.traktlikedlists_link = 'http://api.trakt.tv/users/likes/lists?limit=1000000'
-self.traktcollection_link = 'http://api.trakt.tv/users/me/collection/movies'
-self.traktwatchlist_link = 'http://api.trakt.tv/users/me/watchlist/movies'
-self.trakthistory_link = 'http://api.trakt.tv/users/me/history/movies?limit=%d&page=1' % self.count
-self.traktunfinished_link = 'http://api.trakt.tv/sync/playback/movies'
+self.traktlist_link = 'https://api.trakt.tv/users/%s/lists/%s/items'
+self.traktlists_link = 'https://api.trakt.tv/users/me/lists'
+self.traktlikedlists_link = 'https://api.trakt.tv/users/likes/lists?limit=1000000'
+self.traktcollection_link = 'https://api.trakt.tv/users/me/collection/movies'
+self.traktwatchlist_link = 'https://api.trakt.tv/users/me/watchlist/movies'
+self.trakthistory_link = 'https://api.trakt.tv/users/me/history/movies?limit=%d&page=1' % self.count
+self.traktunfinished_link = 'https://api.trakt.tv/sync/playback/movies'
 
-self.traktanticipated_link = 'http://api.trakt.tv/movies/anticipated?limit=%d&page=1' % self.count
-self.traktrecommendations_link = 'http://api.trakt.tv/recommendations/movies?limit=%d' % self.count
-self.trakttrending_link = 'http://api.trakt.tv/movies/trending?limit=40&page=1'
-self.traktboxoffice_link = 'http://api.trakt.tv/movies/boxoffice?limit=40&page=1'
-self.traktpopular_link = 'http://api.trakt.tv/movies/popular?limit=40&page=1'
+self.traktanticipated_link = 'https://api.trakt.tv/movies/anticipated?limit=%d&page=1' % self.count
+self.traktrecommendations_link = 'https://api.trakt.tv/recommendations/movies?limit=%d' % self.count
+self.trakttrending_link = 'https://api.trakt.tv/movies/trending?limit=40&page=1'
+self.traktboxoffice_link = 'https://api.trakt.tv/movies/boxoffice?limit=40&page=1'
+self.traktpopular_link = 'https://api.trakt.tv/movies/popular?limit=40&page=1'
 
 # https://api.trakt.tv/users/id/collection/type
 

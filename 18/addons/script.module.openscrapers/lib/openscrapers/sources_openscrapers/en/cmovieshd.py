@@ -9,7 +9,6 @@
 #  ..#######.##.......#######.##....#..######..######.##.....#.##.....#.##.......#######.##.....#..######.
 
 '''
-    OpenScrapers Project
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -26,8 +25,8 @@
 
 import re
 
+from openscrapers.modules import cfscrape
 from openscrapers.modules import cleantitle
-from openscrapers.modules import client
 from openscrapers.modules import source_utils
 
 
@@ -35,52 +34,61 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['cmovieshd.net']
-		self.base_link = 'https://cmovieshd.net'
-		self.search_link = '/search/?q=%s'
+		self.domains = ['cmovies.tv', 'cmovies.video', 'cmovieshd.bz']
+		self.base_link = 'https://cmovies.tv'
+		self.search_link = '/film/%s/watching.html?ep=0'
+		self.scraper = cfscrape.create_scraper()
+
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
-			title = cleantitle.geturl(title).replace('-', '+')
-			u = self.base_link + self.search_link % title
-			u = client.request(u)
-			i = client.parseDOM(u, "div", attrs={"class": "movies-list"})
-			for r in i:
-				r = re.compile('<a href="(.+?)"').findall(r)
-				for url in r:
-					title = cleantitle.geturl(title).replace("+", "-")
-					if not title in url:
-						continue
-					return url
+			title = cleantitle.geturl(title).replace('--', '-')
+			url = self.base_link + self.search_link % title
+			return url
 		except:
 			return
 
+
 	def sources(self, url, hostDict, hostprDict):
+		sources = []
 		try:
-			sources = []
-			url = url + 'watch/'
-			r = client.request(url)
-			qual = re.compile('class="quality">(.+?)<').findall(r)
+			hostDict = hostDict + hostprDict
+
+			r = self.scraper.get(url).content
+
+			qual = re.compile('class="quality">(.+?)</span>').findall(r)
 			for i in qual:
-				quality, info = source_utils.get_release_quality(i, i)
-			r = client.parseDOM(r, "div", attrs={"id": "list-eps"})
-			for i in r:
-				t = re.compile('<a href="(.+?)"').findall(i)
-				for url in t:
-					t = client.request(url)
-					t = client.parseDOM(t, "div", attrs={"id": "content-embed"})
-					for u in t:
-						i = re.findall('src="(.+?)"', u)[0].replace('load_player.html?e=', 'episode/embed/')
-						i = client.request(i).replace("\\", "")
-						u = re.findall('"(https.+?)"', i)
-						for url in u:
-							valid, host = source_utils.is_host_valid(url, hostDict)
-							sources.append(
-								{'source': host, 'quality': quality, 'language': 'en', 'info': info, 'url': url,
-								 'direct': False, 'debridonly': False})
+				info = i
+				if '1080' in i:
+					quality = '1080p'
+				elif '720' in i:
+					quality = '720p'
+				else:
+					quality = 'SD'
+			u = re.compile('data-video="(.+?)"').findall(r)
+
+			for url in u:
+				if not url.startswith('http'):
+					url =  "https:" + url
+				if 'vidcloud' in url:
+					r = self.scraper.get(url).content
+					t = re.compile('data-video="(.+?)"').findall(r)
+					for url in t:
+						if not url.startswith('http'):
+							url =  "https:" + url
+						valid, host = source_utils.is_host_valid(url, hostDict)
+						if valid and 'vidcloud' not in url:
+							sources.append({'source': host, 'quality': quality, 'language': 'en', 'info': info, 'url': url, 'direct': False, 'debridonly': False})
+
+				valid, host = source_utils.is_host_valid(url, hostDict)
+
+				if valid and 'vidcloud' not in url:
+					sources.append({'source': host, 'quality': quality, 'language': 'en', 'info': info, 'url': url, 'direct': False, 'debridonly': False})
 			return sources
 		except:
+			source_utils.scraper_error('CMOVIESHD')
 			return sources
+
 
 	def resolve(self, url):
 		return url

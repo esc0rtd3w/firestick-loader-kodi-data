@@ -17,16 +17,11 @@ from resources.lib.modules import log_utils
 
 lang = control.apiLanguage()['tvdb']
 
-# api_key = control.setting('tvdb.user')
-# if api_key == '' or api_key is None:
-# api_key = '1D62F2F90030C444'
-api_key = 'MUQ2MkYyRjkwMDMwQzQ0NA=='
-
+self.tvdb_key = 'N1I4U1paWDkwVUE5WU1CVQ=='
 imdb_user = control.setting('imdb.user').replace('ur', '')
-
 user = str(imdb_user) + str(api_key)
 
-baseUrl = 'http://thetvdb.com'
+baseUrl = 'https://thetvdb.com'
 info_link = '%s/api/%s/series/%s/%s.xml' % (baseUrl, api_key.decode('base64'), '%s', '%s')
 zip_link = '%s/api/%s/series/%s/all/%s.zip' % (baseUrl, api_key.decode('base64'), '%s', '%s')
 by_imdb = '%s/api/GetSeriesByRemoteID.php?imdbid=%s' % (baseUrl, '%s')
@@ -36,13 +31,9 @@ imageUrl = '%s/banners/' % baseUrl
 
 def getZip(tvdb):
 	url = zip_link % (tvdb, lang)
-
 	try:
-		data = urllib2.urlopen(url, timeout=30).read()
+		data = requests.get(url).content
 		zip = zipfile.ZipFile(StringIO.StringIO(data))
-
-		if zip is None:
-			raise Exception()
 
 		result = zip.read('%s.xml' % lang)
 		artwork = zip.read('banners.xml')
@@ -50,10 +41,8 @@ def getZip(tvdb):
 		zip.close()
 
 		return (result, artwork, actors)
-
 	except:
 		return None
-
 
 
 def parseAll(tvdb):
@@ -65,7 +54,7 @@ def parseAll(tvdb):
 			tvdb = str(dupe[0]).encode('utf-8')
 
 			url = zip_link % (tvdb, 'en')
-			data = urllib2.urlopen(url, timeout=30).read()
+			data = requests.get(url).content
 			zip = zipfile.ZipFile(StringIO.StringIO(data))
 
 			result = zip.read('en.xml')
@@ -75,8 +64,9 @@ def parseAll(tvdb):
 
 		# if lang != 'en':
 			# url = zip_link % (tvdb, lang)
-			# data = urllib2.urlopen(url, timeout=30).read()
+			# data = requests.get(url).content
 			# zip = zipfile.ZipFile(StringIO.StringIO(data))
+
 			# result2 = zip.read('%s.xml' % lang)
 			# zip.close()
 		# else:
@@ -222,11 +212,8 @@ def parseAll(tvdb):
 		except:
 			mpaa = '0'
 
-
-
 		actors = getActors(tvdb)
-		castandart = parseActors(actors
-
+		castandart = parseActors(actors)
 
 
 
@@ -752,12 +739,10 @@ def getBanners(tvdb):
 		artwork = artwork.split('<Banner>')
 		artwork = [i for i in artwork if '<Language>en</Language>' in i and '<BannerType>season</BannerType>' in i]
 		artwork = [i for i in artwork if not 'seasonswide' in re.findall('<BannerPath>(.+?)</BannerPath>', i)[0]]
-
 		return artwork
 
 	except:
 		return None
-
 
 
 def parseBanners(artwork):
@@ -768,10 +753,8 @@ def getActors(tvdb):
 	url = info_link % (tvdb, 'actors')
 	try:
 		actors = client.request(url, timeout='10', error=True)
-
 		if actors is None:
 			raise Exception()
-
 		return actors
 	except:
 		return None
@@ -802,7 +785,7 @@ def parseActors(actors):
 					castandart.append({'name': name, 'role': role, 'thumbnail': ((imageUrl + image) if image is not None else '0')})
 			except:
 				castandart = []
-			if len(castandart) == 200: break
+			if len(castandart) == 150: break
 
 		return castandart
 
@@ -810,61 +793,53 @@ def parseActors(actors):
 		return None
 
 
-def GetSeriesByRemoteID(imdb):
-	url = by_imdb % imdb
-
+def getSeries_ByIMDB(title, year, imdb):
 	try:
-		result = client.request(url, timeout='10')
-
-		if result is None:
-			raise Exception()
-
-		try:
-			tvdb = client.parseDOM(result, 'seriesid')[0]
-		except:
-			tvdb = '0'
-
-		try:
-			name = client.parseDOM(result, 'SeriesName')[0]
-		except:
-			name = '0'
-
-		dupe = re.compile('[***]Duplicate (\d*)[***]').findall(name)
-		if len(dupe) > 0:
-			tvdb = str(dupe[0])
-
-		if tvdb == '':
-			tvdb = '0'
-
-		return (tvdb, name)
-
-	except:
-		None
-
-
-def getSeries_by_name(tvshowtitle, year):
-	years = [str(year), str(int(year)+1), str(int(year)-1)]
-	url = by_seriesname % (urllib.quote_plus(tvshowtitle))
-
-	try:
-		tvdb = client.request(url, timeout='10')
-
-		if tvdb is None:
-			raise Exception()
-
-		tvdb = re.sub(r'[^\x00-\x7F]+', '', tvdb)
-		tvdb = client.replaceHTMLCodes(tvdb)
-		tvdb = client.parseDOM(tvdb, 'Series')
-		tvdb = [(x, client.parseDOM(x, 'SeriesName'), client.parseDOM(x, 'FirstAired')) for x in tvdb]
-		tvdb = [(x, x[1][0], x[2][0]) for x in tvdb if len(x[1]) > 0 and len(x[2]) > 0]
-		tvdb = [x for x in tvdb if cleantitle.get(tvshowtitle) == cleantitle.get(x[1])]
-		tvdb = [x[0][0] for x in tvdb if any(y in x[2] for y in years)][0]
-		tvdb = client.parseDOM(tvdb, 'seriesid')[0]
-
-		if tvdb == '':
-			tvdb = '0'
-
+		url = by_imdb % imdb
+		result = requests.get(url).content
+		result = re.sub(r'[^\x00-\x7F]+', '', result)
+		result = client.replaceHTMLCodes(result)
+		result = client.parseDOM(result, 'Series')
+		result = [(client.parseDOM(x, 'SeriesName'), client.parseDOM(x, 'FirstAired'), client.parseDOM(x, 'seriesid'), client.parseDOM(x, 'AliasNames')) for x in result]
+		years = [str(year), str(int(year)+1), str(int(year)-1)]
+		item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0])) and any(y in str(x[1][0]) for y in years)]
+		if item == []:
+			item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[3][0]))]
+		if item == []:
+			item = [(x[0], x[1], x[2], x[3]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0]))]
+		if item == []:
+			return None
+		tvdb = item[0][2]
+		tvdb = tvdb[0] or '0'
 		return tvdb
-
 	except:
-		None
+		log_utils.error()
+		pass
+
+
+def getSeries_ByName(title, year):
+	try:
+		url = by_seriesname % (urllib.quote_plus(title))
+		result = requests.get(url).content
+		result = re.sub(r'[^\x00-\x7F]+', '', result)
+		result = client.replaceHTMLCodes(result)
+		result = client.parseDOM(result, 'Series')
+		result = [(client.parseDOM(x, 'SeriesName'), client.parseDOM(x, 'FirstAired'), client.parseDOM(x, 'seriesid'), client.parseDOM(x, 'IMDB_ID'), client.parseDOM(x, 'AliasNames')) for x in result]
+		years = [str(year), str(int(year)+1), str(int(year)-1)]
+		item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0])) and any(y in str(x[1][0]) for y in years)]
+		if item == []:
+			item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[4][0]))]
+		if item == []:
+			item = [(x[0], x[1], x[2], x[3], x[4]) for x in result if cleantitle.get(title) == cleantitle.get(str(x[0][0]))]
+		if item == []:
+			return None
+		if tvdb == '0':
+			tvdb = item[0][2]
+			tvdb = tvdb[0] or '0'
+		if imdb == '0':
+			imdb = item[0][3]
+			imdb = imdb[0] or '0'
+		return (tvdb, imdb)
+	except:
+		log_utils.error()
+		pass

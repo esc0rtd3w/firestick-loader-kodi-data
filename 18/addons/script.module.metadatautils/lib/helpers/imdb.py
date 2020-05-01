@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''
+"""
     script.module.metadatautils
     imdb.py
     Get metadata from imdb
-'''
+"""
 
 from utils import requests, try_parse_int
 import BeautifulSoup
@@ -13,10 +13,10 @@ from simplecache import use_cache
 
 
 class Imdb(object):
-    '''Info from IMDB (currently only top250)'''
+    """Info from IMDB (currently only top250)"""
 
     def __init__(self, simplecache=None, kodidb=None):
-        '''Initialize - optionaly provide simplecache object'''
+        """Initialize - optionaly provide simplecache object"""
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -30,15 +30,15 @@ class Imdb(object):
 
     @use_cache(2)
     def get_top250_rating(self, imdb_id):
-        '''get the top250 rating for the given imdbid'''
+        """get the top250 rating for the given imdbid"""
         return {"IMDB.Top250": self.get_top250_db().get(imdb_id, 0)}
 
     @use_cache(7)
     def get_top250_db(self):
-        '''
+        """
             get the top250 listing for both movies and tvshows as dict with imdbid as key
             uses 7 day cache to prevent overloading the server
-        '''
+        """
         results = {}
         for listing in [("top", "chttp_tt_"), ("toptv", "chttvtp_tt_")]:
             html = requests.get(
@@ -60,7 +60,7 @@ class Imdb(object):
         return results
 
     def write_kodidb(self, results):
-        '''store the top250 position in kodi database to access it with ListItem.Top250'''
+        """store the top250 position in kodi database to access it with ListItem.Top250"""
         for imdb_id in results:
             kodi_movie = self.kodidb.movie_by_imdbid(imdb_id)
             if kodi_movie:

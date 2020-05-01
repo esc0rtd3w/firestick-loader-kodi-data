@@ -1,3 +1,24 @@
+[B]3.5.2[/B]
+- Changed: API URLs api.tmdb.org
+
+[B]3.5.1[/B]
+- Added: option to exclude wide banners from thetvdb
+
+[B]3.5.0[/B]
+- Added: Year to search query
+- Added: Return results based on the "name" field as well as "original_name"
+- Added: Multiple episode thumbs
+- Changed: Artwork order, so tmdb artwork is first
+- Changed: Reduce the number of files requested from tmdb
+- Changed: Update URLs to https
+- Fixed: Fetch all series regular actors not just current season
+
+[B]3.4.2[/B]
+- Fixed: Unscraped episodes caused by Square brackets in plot (thanks scudlee)
+
+[B]3.4.1[/B]
+- Fixed: Scraping episodes when no Air Date exists
+
 [B]3.4.0[/B]
 - Added: option to select certification country
 

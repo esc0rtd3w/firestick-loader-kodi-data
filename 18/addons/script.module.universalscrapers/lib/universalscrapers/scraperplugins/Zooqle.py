@@ -36,10 +36,27 @@ class zooqle(Scraper):
             if dev_log == 'true':
                 error_log(self.name,argument)
             return self.sources
+
+    def scrape_episode(self, title, show_year, year, season, episode, imdb, tvdb, debrid=False):
+        try:
+            start_time = time.time()
+            if not debrid:
+                return self.sources
+            hdlr = 'S%02dE%02d' % (int(season), int(episode))
+            query = '%s+S%02dE%02d' % (urllib.quote_plus(title), int(season), int(episode))
+            query = query.replace('++','')
+            start_url='%ssearch?q=%s' %(self.base_link, query)
+            print start_url
+            self.get_source(start_url, title, show_year, season, episode, str(start_time))
+            return self.sources
+        except Exception, argument:
+            if dev_log == 'true':
+                error_log(self.name, argument)
+            return self.sources
             
     def get_source(self,start_url,title,year,season,episode,start_time):
         try:
-            #print 'URL PASSED OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK'+start_url
+            print 'URL PASSED OKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK'+start_url
             count = 0
             headers = {'User-Agent': client.agent()}
             r = client.request(start_url, headers=headers)

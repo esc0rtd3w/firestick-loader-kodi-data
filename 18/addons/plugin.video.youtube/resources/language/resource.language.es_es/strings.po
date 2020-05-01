@@ -1181,20 +1181,48 @@ msgstr "Para VODs mpeg-dash (ver Servidor HTTP)[CR]> 1080p y HDR requieren Input
 
 msgctxt "#30724"
 msgid "Limit to 30fps"
-msgstr ""
+msgstr "Limitar a 30fps"
 
 msgctxt "#30725"
 msgid "1440p (HD)"
-msgstr ""
+msgstr "1440p (HD)"
 
 msgctxt "#30726"
 msgid "Uploads"
-msgstr ""
+msgstr "Subidas"
 
 msgctxt "#30727"
 msgid "Adaptive (MP4/H264)"
-msgstr ""
+msgstr "Adaptativo (MP4/H264)"
 
 msgctxt "#30728"
 msgid "Adaptive (WEBM/VP9)"
-msgstr ""
+msgstr "Adaptativo (WEBM/VP9)"
+
+msgctxt "#30729"
+msgid "Remote friendly search"
+msgstr "Búsqueda remota"
+
+msgctxt "#30730"
+msgid "Play (Ask for quality)"
+msgstr "Reproducir (Seleccionar calidad)"
+
+msgctxt "#30731"
+msgid "The YouTube add-on now requires that you use your own API keys.[CR]For more information see the wiki: [B]https://ytaddon.page.link/keys[/B][CR][CR]Sorry for the inconvenience."
+msgstr "El complemento YouTube ahora requiere que use sus propias claves API.[CR]Para obtener más información, consulte la wiki: [B]https://ytaddon.page.link/keys[/B][CR][CR]Lo siento por las molestias."
+
+msgctxt "#30732"
+msgid "Comments"
+msgstr "Comentarios"
+
+msgctxt "#30733"
+msgid "Likes"
+msgstr "Me gusta"
+
+msgctxt "#30734"
+msgid "Replies"
+msgstr "Respuestas"
+
+msgctxt "#30735"
+msgid "Edited"
+msgstr "Editado"

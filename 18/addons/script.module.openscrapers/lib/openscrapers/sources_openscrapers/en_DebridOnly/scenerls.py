@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -41,9 +42,7 @@ class source:
 		self.language = ['en']
 		self.domains = ['scene-rls.com', 'scene-rls.net']
 		self.base_link = 'http://scene-rls.net'
-		# self.search_link = '/search/%s'
 		self.search_link = '/?s=%s'
-		self.scraper = cfscrape.create_scraper()
 
 
 	def movie(self, imdb, title, localtitle, aliases, year):
@@ -78,9 +77,9 @@ class source:
 
 
 	def sources(self, url, hostDict, hostprDict):
+		scraper = cfscrape.create_scraper()
+		sources = []
 		try:
-			sources = []
-
 			if url is None:
 				return sources
 
@@ -105,19 +104,18 @@ class source:
 				url = urlparse.urljoin(self.base_link, url)
 				# log_utils.log('url = %s' % url, log_utils.LOGDEBUG)
 
-				r = self.scraper.get(url).content
-
+				r = scraper.get(url).content
 				posts = client.parseDOM(r, 'div', attrs={'class': 'post'})
 
-				items = [];
+				items = []
 				dupes = []
-
 				for post in posts:
 					try:
-						u = client.parseDOM(post, "div", attrs={"class": "postContent"})
-						u = client.parseDOM(u, "h2")
+						content = client.parseDOM(post, "div", attrs={"class": "postContent"})
+						size = re.findall('((?:\d+\,\d+\.\d+|\d+\.\d+|\d+\,\d+|\d+)\s*(?:GiB|MiB|GB|MB))', content[0])[0]
+						u = client.parseDOM(content, "h2")
 						u = client.parseDOM(u, 'a', ret='href')
-						u = [(i.strip('/').split('/')[-1], i) for i in u]
+						u = [(i.strip('/').split('/')[-1], i, size) for i in u]
 						items += u
 					except:
 						source_utils.scraper_error('SCENERLS')
@@ -131,29 +129,43 @@ class source:
 				try:
 					name = item[0]
 					name = client.replaceHTMLCodes(name)
+					if source_utils.remove_lang(name):
+						return
 
 					t = name.split(hdlr)[0].replace(data['year'], '').replace('(', '').replace(')', '').replace('&', 'and')
 					if cleantitle.get(t) != cleantitle.get(title):
 						continue
 
-					tit = name.replace('.', ' ')
-
-					if hdlr not in tit:
+					if hdlr not in name:
 						continue
 
+					# check year for reboot/remake show issues if year is available-crap shoot
+					# if 'tvshowtitle' in data:
+						# if re.search(r'([1-3][0-9]{3})', name):
+							# if not any(value in name for value in [data['year'], str(int(data['year'])+1), str(int(data['year'])-1)]):
+								# continue
+
 					quality, info = source_utils.get_release_quality(name, item[1])
+
+					try:
+						dsize, isize = source_utils._size(item[2])
+						info.insert(0, isize)
+					except:
+						dsize = 0
+						pass
+
 					info = ' | '.join(info)
 
 					url = item[1]
-
-					if any(x in url for x in ['.rar', '.zip', '.iso']):
+					if any(x in url for x in ['.rar', '.zip', '.iso', '.sample.']):
 						continue
 
 					url = client.replaceHTMLCodes(url)
 					url = url.encode('utf-8')
+					if url in str(sources):
+						continue
 
 					host = re.findall('([\w]+[.][\w]+)$', urlparse.urlparse(url.strip().lower()).netloc)[0]
-
 					if not host in hostDict:
 						continue
 
@@ -161,7 +173,7 @@ class source:
 					host = host.encode('utf-8')
 
 					sources.append({'source': host, 'quality': quality, 'language': 'en', 'url': url, 'info': info,
-									'direct': False, 'debridonly': True})
+									'direct': False, 'debridonly': True, 'size': dsize})
 				except:
 					source_utils.scraper_error('SCENERLS')
 					pass

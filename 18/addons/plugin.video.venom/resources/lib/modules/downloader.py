@@ -8,20 +8,15 @@ import xbmc, xbmcvfs, xbmcgui
 def download(name, image, url):
 	if url is None:
 		return
-
 	from resources.lib.modules import control
-
 	try:
 		headers = dict(urlparse.parse_qsl(url.rsplit('|', 1)[1]))
 	except:
 		headers = dict('')
-
 	url = url.split('|')[0]
-
 	content = re.compile('(.+?)\sS(\d*)E\d*$').findall(name)
 	transname = name.translate(None, '\/:*?"<>|').strip('.')
 	levels =['../../../..', '../../..', '../..', '..']
-
 	if len(content) == 0:
 		dest = control.setting('movie.download.path')
 		dest = control.transPath(dest)
@@ -30,32 +25,26 @@ def download(name, image, url):
 				control.makeFile(os.path.abspath(os.path.join(dest, level)))
 			except:
 				pass
-
 		control.makeFile(dest)
 		dest = os.path.join(dest, transname)
 		control.makeFile(dest)
 	else:
 		dest = control.setting('tv.download.path')
 		dest = control.transPath(dest)
-
 		for level in levels:
 			try:
 				control.makeFile(os.path.abspath(os.path.join(dest, level)))
 			except:
 				pass
-
 		control.makeFile(dest)
 		transtvshowtitle = content[0][0].translate(None, '\/:*?"<>|').strip('.')
 		dest = os.path.join(dest, transtvshowtitle)
 		control.makeFile(dest)
 		dest = os.path.join(dest, 'Season %01d' % int(content[0][1]))
 		control.makeFile(dest)
-
 	ext = os.path.splitext(urlparse.urlparse(url).path)[1][1:]
-
 	if not ext in ['mp4', 'mkv', 'flv', 'avi', 'mpg']:
 		ext = 'mp4'
-
 	dest = os.path.join(dest, transname + '.' + ext)
 	sysheaders = urllib.quote_plus(json.dumps(headers))
 	sysurl = urllib.quote_plus(url)
@@ -82,17 +71,13 @@ def getResponse(url, headers, size):
 def done(title, dest, downloaded):
 	playing = xbmc.Player().isPlaying()
 	text = xbmcgui.Window(10000).getProperty('GEN-DOWNLOADED')
-
 	if len(text) > 0:
 		text += '[CR]'
-
 	if downloaded:
 		text += '%s : %s' % (dest.rsplit(os.sep)[-1], '[COLOR forestgreen]Download succeeded[/COLOR]')
 	else:
 		text += '%s : %s' % (dest.rsplit(os.sep)[-1], '[COLOR red]Download failed[/COLOR]')
-
 	xbmcgui.Window(10000).setProperty('GEN-DOWNLOADED', text)
-
 	if (not downloaded) or (not playing): 
 		xbmcgui.Dialog().ok(title, text)
 		xbmcgui.Window(10000).clearProperty('GEN-DOWNLOADED')
@@ -106,30 +91,22 @@ def doDownload(url, dest, title, image, headers):
 	dest = urllib.unquote_plus(dest)
 	file = dest.rsplit(os.sep, 1)[-1]
 	resp = getResponse(url, headers, 0)
-
 	if not resp:
 		xbmcgui.Dialog().ok(title, dest, 'Download failed', 'No response from server')
 		return
-
 	try:
 		content = int(resp.headers['Content-Length'])
 	except:
 		content = 0
-
 	try:
 		resumable = 'bytes' in resp.headers['Accept-Ranges'].lower()
 	except:
 		resumable = False
-
-	#print "Download Header"
-	#print resp.headers
 	if resumable:
 		print "Download is resumable"
-
 	if content < 1:
 		xbmcgui.Dialog().ok(title, file, 'Unknown filesize', 'Unable to download')
 		return
-
 	size = 1024 * 1024
 	mb   = content / (1024 * 1024)
 	if content < size:
@@ -140,7 +117,6 @@ def doDownload(url, dest, title, image, headers):
 	count   = 0
 	resume  = 0
 	sleep   = 0
-
 	if xbmcgui.Dialog().yesno(title + ' - Confirm Download', file, 'Complete file is %dMB' % mb, 'Continue with download?', 'Confirm',  'Cancel') == 1:
 		return
 	print 'Download File Size : %dMB %s ' % (mb, dest)
@@ -221,7 +197,6 @@ def doDownload(url, dest, title, image, headers):
 			else:
 				#use existing response
 				pass
-
 
 if __name__ == '__main__':
 	if 'downloader.py' in sys.argv[0]:

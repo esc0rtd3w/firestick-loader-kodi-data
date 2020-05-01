@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''Various generic helper methods'''
+"""Various generic helper methods"""
 
 import xbmcgui
 import xbmc
@@ -57,7 +57,7 @@ except Exception:
 
 
 def log_msg(msg, loglevel=xbmc.LOGDEBUG):
-    '''log message to kodi logfile'''
+    """log message to kodi logfile"""
     if isinstance(msg, unicode):
         msg = msg.encode('utf-8')
     if loglevel == xbmc.LOGDEBUG and FORCE_DEBUG_LOG:
@@ -66,13 +66,13 @@ def log_msg(msg, loglevel=xbmc.LOGDEBUG):
 
 
 def log_exception(modulename, exceptiondetails):
-    '''helper to properly log an exception'''
+    """helper to properly log an exception"""
     log_msg(format_exc(sys.exc_info()), xbmc.LOGWARNING)
     log_msg("ERROR in %s ! --> %s" % (modulename, exceptiondetails), xbmc.LOGERROR)
 
 
 def rate_limiter(rl_params):
-    ''' A very basic rate limiter which limits to 1 request per X seconds to the api'''
+    """ A very basic rate limiter which limits to 1 request per X seconds to the api"""
     # Please respect the parties providing these free api's to us and do not modify this code.
     # If I suspect any abuse I will revoke all api keys and require all users
     # to have a personal api key for all services.
@@ -105,7 +105,7 @@ def rate_limiter(rl_params):
 
 
 def get_json(url, params=None, retries=0, ratelimit=None):
-    '''get info from a rest api'''
+    """get info from a rest api"""
     result = {}
     if not params:
         params = {}
@@ -164,12 +164,11 @@ def get_xml(url, params=None, retries=0, ratelimit=None):
             del monitor
         else:
             log_exception(__name__, exc)
-    # return result
     return result
     
 
 def try_encode(text, encoding="utf-8"):
-    '''helper to encode a string to utf-8'''
+    """helper to encode a string to utf-8"""
     try:
         return text.encode(encoding, "ignore")
     except Exception:
@@ -177,7 +176,7 @@ def try_encode(text, encoding="utf-8"):
 
 
 def try_decode(text, encoding="utf-8"):
-    '''helper to decode a string to unicode'''
+    """helper to decode a string to unicode"""
     try:
         return text.decode(encoding, "ignore")
     except Exception:
@@ -185,14 +184,14 @@ def try_decode(text, encoding="utf-8"):
 
 
 def urlencode(text):
-    '''helper to properly urlencode a string'''
+    """helper to properly urlencode a string"""
     blah = urllib.urlencode({'blahblahblah': try_encode(text)})
     blah = blah[13:]
     return blah
 
 
 def formatted_number(number):
-    '''try to format a number to formatted string with thousands'''
+    """try to format a number to formatted string with thousands"""
     try:
         number = int(number)
         if number < 0:
@@ -207,7 +206,7 @@ def formatted_number(number):
 
 
 def process_method_on_list(method_to_run, items):
-    '''helper method that processes a method on each listitem with pooling if the system supports it'''
+    """helper method that processes a method on each listitem with pooling if the system supports it"""
     all_items = []
     if items is not None:
         if SUPPORTS_POOL:
@@ -225,13 +224,13 @@ def process_method_on_list(method_to_run, items):
                 all_items = [method_to_run(item) for item in list(items)]
             except Exception:
                 log_msg(format_exc(sys.exc_info()))
-                log_msg("Error in %s with %s" % method_to_run, items)
+            log_msg("Error while executing %s with %s" % (method_to_run, items))
         all_items = filter(None, all_items)
     return all_items
 
 
 def get_clean_image(image):
-    '''helper to strip all kodi tags/formatting of an image path/url'''
+    """helper to strip all kodi tags/formatting of an image path/url"""
     if not image:
         return ""
     if "music@" in image:
@@ -252,7 +251,7 @@ def get_clean_image(image):
 
 
 def get_duration(duration):
-    '''transform duration time in minutes to hours:minutes'''
+    """transform duration time in minutes to hours:minutes"""
     if not duration:
         return {}
     if isinstance(duration, (unicode, str)):
@@ -280,7 +279,7 @@ def get_duration(duration):
 
 
 def int_with_commas(number):
-    '''helper to pretty format a number'''
+    """helper to pretty format a number"""
     try:
         number = int(number)
         if number < 0:
@@ -295,7 +294,7 @@ def int_with_commas(number):
 
 
 def try_parse_int(string):
-    '''helper to parse int from string without erroring on empty or misformed string'''
+    """helper to parse int from string without erroring on empty or misformed string"""
     try:
         return int(string)
     except Exception:
@@ -303,8 +302,8 @@ def try_parse_int(string):
 
 
 def extend_dict(org_dict, new_dict, allow_overwrite=None):
-    '''Create a new dictionary with a's properties extended by b,
-    without overwriting existing values.'''
+    """Create a new dictionary with a's properties extended by b,
+    without overwriting existing values."""
     if not new_dict:
         return org_dict
     if not org_dict:
@@ -340,14 +339,14 @@ def extend_dict(org_dict, new_dict, allow_overwrite=None):
 
 
 def localdate_from_utc_string(timestring):
-    '''helper to convert internal utc time (used in pvr) to local timezone'''
+    """helper to convert internal utc time (used in pvr) to local timezone"""
     utc_datetime = arrow.get(timestring)
     local_datetime = utc_datetime.to('local')
     return local_datetime.format("YYYY-MM-DD HH:mm:ss")
 
 
 def localized_date_time(timestring):
-    '''returns localized version of the timestring (used in pvr)'''
+    """returns localized version of the timestring (used in pvr)"""
     date_time = arrow.get(timestring)
     local_date = date_time.strftime(xbmc.getRegion("dateshort"))
     local_time = date_time.strftime(xbmc.getRegion("time").replace(":%S", ""))
@@ -355,7 +354,7 @@ def localized_date_time(timestring):
 
 
 def normalize_string(text):
-    '''normalize string, strip all special chars'''
+    """normalize string, strip all special chars"""
     text = text.replace(":", "")
     text = text.replace("/", "-")
     text = text.replace("\\", "-")
@@ -374,7 +373,7 @@ def normalize_string(text):
 
 
 def get_compare_string(text):
-    '''strip all special chars in a string for better comparing of searchresults'''
+    """strip all special chars in a string for better comparing of searchresults"""
     if not isinstance(text, unicode):
         text.decode("utf-8")
     text = text.lower()
@@ -383,12 +382,12 @@ def get_compare_string(text):
 
 
 def strip_newlines(text):
-    '''strip any newlines from a string'''
+    """strip any newlines from a string"""
     return text.replace('\n', ' ').replace('\r', '').rstrip()
 
 
 def detect_plugin_content(plugin_path):
-    '''based on the properties of a vfspath we try to detect the content type'''
+    """based on the properties of a vfspath we try to detect the content type"""
     content_type = ""
     if not plugin_path:
         return ""
@@ -483,7 +482,7 @@ def detect_plugin_content(plugin_path):
 
 
 def download_artwork(folderpath, artwork):
-    '''download artwork to local folder'''
+    """download artwork to local folder"""
     efa_path = ""
     new_dict = {}
     if not xbmcvfs.exists(folderpath):
@@ -545,7 +544,7 @@ def download_artwork(folderpath, artwork):
 
 
 def download_image(filename, url):
-    '''download specific image to local folder'''
+    """download specific image to local folder"""
     if not url:
         return url
     refresh_needed = False
@@ -565,7 +564,7 @@ def download_image(filename, url):
 
 
 def refresh_image(imagepath):
-    '''tell kodi texture cache to refresh a particular image'''
+    """tell kodi texture cache to refresh a particular image"""
     import sqlite3
     dbpath = xbmc.translatePath("special://database/Textures13.db").decode('utf-8')
     connection = sqlite3.connect(dbpath, timeout=30, isolation_level=None)
@@ -585,7 +584,7 @@ def refresh_image(imagepath):
 
 
 def manual_set_artwork(artwork, mediatype, header=None):
-    '''Allow user to manually select the artwork with a select dialog'''
+    """Allow user to manually select the artwork with a select dialog"""
     changemade = False
     if mediatype == "artist":
         art_types = ["thumb", "poster", "fanart", "banner", "clearart", "clearlogo", "landscape"]
@@ -671,7 +670,7 @@ def manual_set_artwork(artwork, mediatype, header=None):
 
 
 class DialogSelect(xbmcgui.WindowXMLDialog):
-    '''wrapper around Kodi dialogselect to present a list of items'''
+    """wrapper around Kodi dialogselect to present a list of items"""
 
     list_control = None
 
@@ -682,7 +681,7 @@ class DialogSelect(xbmcgui.WindowXMLDialog):
         self.result = -1
 
     def onInit(self):
-        '''called when the dialog is drawn'''
+        """called when the dialog is drawn"""
         self.list_control = self.getControl(6)
         self.getControl(1).setLabel(self.window_title)
         self.getControl(3).setVisible(False)
@@ -698,13 +697,13 @@ class DialogSelect(xbmcgui.WindowXMLDialog):
         self.setFocus(self.list_control)
 
     def onAction(self, action):
-        '''On kodi action'''
+        """On kodi action"""
         if action.getId() in (9, 10, 92, 216, 247, 257, 275, 61467, 61448, ):
             self.result = -1
             self.close()
 
     def onClick(self, control_id):
-        '''Triggers if our dialog is clicked'''
+        """Triggers if our dialog is clicked"""
         if control_id in (6, 3,):
             num = self.list_control.getSelectedPosition()
             self.result = num

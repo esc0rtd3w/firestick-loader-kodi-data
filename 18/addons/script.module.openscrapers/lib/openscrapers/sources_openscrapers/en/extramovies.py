@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# modified by Venom for Openscrapers (4-3-2020)
 
 #  ..#######.########.#######.##....#..######..######.########....###...########.#######.########..######.
 #  .##.....#.##.....#.##......###...#.##....#.##....#.##.....#...##.##..##.....#.##......##.....#.##....##
@@ -32,6 +33,7 @@ import urlparse
 
 from openscrapers.modules import cfscrape
 from openscrapers.modules import cleantitle
+from openscrapers.modules import log_utils
 from openscrapers.modules import source_utils
 
 
@@ -39,11 +41,11 @@ class source:
 	def __init__(self):
 		self.priority = 1
 		self.language = ['en']
-		self.domains = ['extramovies.net.in', 'extramovies.trade', 'extramovies.guru',
-		                'extramovies.wiki']  # http://extramovies.ind.in/
-		self.base_link = 'http://extramovies.net.in'  # Dead  extramovies.host
+		self.domains = ['extramovies.wiki', 'extramovies.casa']
+		self.base_link = 'http://extramovies.wiki'
 		self.search_link = '/?s=%s'
 		self.scraper = cfscrape.create_scraper()
+
 
 	def movie(self, imdb, title, localtitle, aliases, year):
 		try:
@@ -56,6 +58,7 @@ class source:
 			log_utils.log('ExtraMovies - Exception: \n' + str(failure))
 			return
 
+
 	def tvshow(self, imdb, tvdb, tvshowtitle, localtvshowtitle, aliases, year):
 		try:
 			aliases.append({'country': 'us', 'title': tvshowtitle})
@@ -66,6 +69,7 @@ class source:
 			failure = traceback.format_exc()
 			log_utils.log('ExtraMovies - Exception: \n' + str(failure))
 			return
+
 
 	def episode(self, url, imdb, tvdb, title, premiered, season, episode):
 		try:
@@ -80,6 +84,7 @@ class source:
 			failure = traceback.format_exc()
 			log_utils.log('ExtraMovies - Exception: \n' + str(failure))
 			return
+
 
 	def sources(self, url, hostDict, hostprDict):
 		try:

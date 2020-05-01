@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-'''get images from google images'''
+"""get images from google images"""
 
 from utils import DialogSelect, requests, log_exception
 import BeautifulSoup
@@ -12,10 +12,10 @@ from simplecache import use_cache
 
 
 class GoogleImages(object):
-    '''get images from google images'''
+    """get images from google images"""
 
     def __init__(self, simplecache=None):
-        '''Initialize - optionaly provide simplecache object'''
+        """Initialize - optionaly provide simplecache object"""
         if not simplecache:
             from simplecache import SimpleCache
             self.cache = SimpleCache()
@@ -23,14 +23,14 @@ class GoogleImages(object):
             self.cache = simplecache
 
     def search_images(self, search_query):
-        '''search google images with the given query, returns list of all images found'''
+        """search google images with the given query, returns list of all images found"""
         return self.get_data(search_query)
 
     def search_image(self, search_query, manual_select=False):
-        '''
+        """
             search google images with the given query, returns first/best match
             optional parameter: manual_select (bool), will show selectdialog to allow manual select by user
-        '''
+        """
         image = ""
         images_list = []
         for img in self.get_data(search_query):
@@ -56,7 +56,7 @@ class GoogleImages(object):
 
     @use_cache(30)
     def get_data(self, search_query):
-        '''helper method to get data from google images by scraping and parsing'''
+        """helper method to get data from google images by scraping and parsing"""
         params = {"site": "imghp", "tbm": "isch", "tbs": "isz:l", "q": search_query}
         headers = {'User-agent': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.0; Trident/3.1; \
             IEMobile/7.0; LG; GW910)'}

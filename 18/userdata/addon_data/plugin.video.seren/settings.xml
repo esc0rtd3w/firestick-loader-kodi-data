@@ -32,7 +32,7 @@
     <setting id="general.disable3d">true</setting>
     <setting id="general.disablelowQuality" default="true">false</setting>
     <setting id="general.displayColor" default="true">None</setting>
-    <setting id="general.enablesizelimit" default="true">false</setting>
+    <setting id="general.enablesizelimit">false</setting>
     <setting id="general.fake" default="true"></setting>
     <setting id="general.flatten.episodes" default="true">false</setting>
     <setting id="general.hidesd" default="true">false</setting>
@@ -96,7 +96,7 @@
     <setting id="premiumize.torrents">true</setting>
     <setting id="premiumize.transcoded" default="true">false</setting>
     <setting id="premiumize.username" default="true"></setting>
-    <setting id="provider.updateCheckTimeStamp">1576803989.61</setting>
+    <setting id="provider.updateCheckTimeStamp">1588300599.43</setting>
     <setting id="providers.autoupdates">true</setting>
     <setting id="providers.checkupdates" default="true"></setting>
     <setting id="providers.manage" default="true"></setting>
@@ -150,8 +150,8 @@
     <setting id="traktdb.rebuild" default="true"></setting>
     <setting id="tv.artwork.advanced" default="true">false</setting>
     <setting id="tvdb.apikey" default="true"></setting>
-    <setting id="tvdb.expiry">1576827061.0</setting>
-    <setting id="tvdb.jw">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzczNDU0NjAsImlkIjoiIiwib3JpZ19pYXQiOjE1NzY3NDA2NjB9.fQaM2HeLnD8XSVKuySeL1Oe_zFidfswO8esISSe5NZVgnMBDQzey20NSOMvj8DkANGBd7vrlR4zv8hcjwaL_lZcIZK1n6V9H8RpZVj_F2YtqCZj_OaXYBnSzb_uYUbt-boVSfPYPn8El7kXCPek9mOWIbqOVNg-CD9UUFtYoG8kUDpWNenGTlGYsKikiTikrBybNeubPfItFmNn2uqcLxBPFcGtH1f9kM0_8NTj2ETG8ew2pgFAwVWH-U75TfweUflGu9l_Ky9fOpu3Lz6tySL-7n5_RT5R6pNqN1PJRHIUnwZYqbE4XcAguZp0Zu1oAGqQm9h11zvmIaz4FE7_Aug</setting>
+    <setting id="tvdb.expiry">1588386988.97</setting>
+    <setting id="tvdb.jw">eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODg5MDUzODgsImlkIjoiIiwib3JpZ19pYXQiOjE1ODgzMDA1ODh9.Cdf96mm15xhNjoQ-VntNvsHZBGPYZoh3uER6D6oSbFoOcXaTdJBKnQm6M4TPjQDjnkFSSsMQT38CGR3t9aKgPCUQdUBl31wutXCCt9MaAlcTdlfo0tjViCddXnbZMnkfZZOWDjbrGhi3-dngEM2In1tFE8RwBf8N68sQS-68-0x6YJeN6N1pZNXZxbaAbLBvvrPpJbZlrNH-7bCgRIPbQYiuT--KUBRcDlMEdvIMw2fx39zWgmGirWAUjFKxiCzHdKXXB0-iZT-yjlS4RLjrPOAztVVgaM7IeCRHLmpEGNa57MekZjWnl92_Avrf8jMlOUJ_zwRFrmBFJ-B-TABXlQ</setting>
     <setting id="tvshows.banner">true</setting>
     <setting id="tvshows.characterart_limit" default="true">0</setting>
     <setting id="tvshows.clearart">true</setting>

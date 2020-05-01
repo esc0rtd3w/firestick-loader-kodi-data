@@ -9,9 +9,6 @@ try:
 	debrid_resolvers = [resolver() for resolver in resolveurl.relevant_resolvers(order_matters=True) if resolver.isUniversal()]
 
 	if len(debrid_resolvers) == 0:
-		# Support Rapidgator accounts! Unfortunately, `sources.py` assumes that rapidgator.net is only ever
-		# accessed via a debrid service, so we add rapidgator as a debrid resolver and everything just works.
-		# As a bonus(?), rapidgator links will be highlighted just like actual debrid links
 		debrid_resolvers = [resolver() for resolver in resolveurl.relevant_resolvers(order_matters=True,include_universal=False) if 'rapidgator.net' in resolver.domains]
 except:
 	debrid_resolvers = []

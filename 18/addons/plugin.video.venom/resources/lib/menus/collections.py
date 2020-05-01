@@ -24,6 +24,7 @@ syshandle = int(sys.argv[1])
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?',''))) if len(sys.argv) > 1 else dict()
 action = params.get('action')
 notificationSound = False if control.setting('notification.sound') == 'false' else True
+is_widget = False if 'plugin' in control.infoLabel('Container.PluginName') else True
 
 
 class Collections:
@@ -32,7 +33,7 @@ class Collections:
 		self.disable_fanarttv = control.setting('disable.fanarttv')
 		self.datetime = (datetime.datetime.utcnow() - datetime.timedelta(hours = 5))
 		self.systime = (self.datetime).strftime('%Y%m%d%H%M%S%f')
-
+		self.today_date = (self.datetime).strftime('%Y-%m-%d')
 		self.lang = control.apiLanguage()['trakt']
 		self.traktCredentials = trakt.getTraktCredentialsInfo()
 
@@ -45,9 +46,12 @@ class Collections:
 		# self.user = str(self.imdb_user) + str(self.tmdb_key)
 		self.user = str(self.tmdb_key)
 
+		self.unairedcolor = control.setting('movie.unaired.identify')
+		self.unairedcolor = self.getUnairedColor(self.unairedcolor)
+
 		self.tmdb_link = 'https://api.themoviedb.org'
-		self.tmdb_poster = 'http://image.tmdb.org/t/p/w300'
-		self.tmdb_fanart = 'http://image.tmdb.org/t/p/w1280'
+		self.tmdb_poster = 'https://image.tmdb.org/t/p/w300'
+		self.tmdb_fanart = 'https://image.tmdb.org/t/p/w1280'
 		self.tmdb_api_link = 'https://api.themoviedb.org/4/list/%s?api_key=%s&sort_by=release_date.asc&page=1' % ('%s', self.tmdb_key)
 
 		self.imdb_link = 'https://www.imdb.com'
@@ -699,6 +703,28 @@ class Collections:
 		self.endDirectory()
 
 
+	def getUnairedColor(self, n):
+		if n == '0': n = 'blue'
+		elif n == '1': n = 'red'
+		elif n == '2': n = 'yellow'
+		elif n == '3': n = 'deeppink'
+		elif n == '4': n = 'cyan'
+		elif n == '5': n = 'lawngreen'
+		elif n == '6': n = 'gold'
+		elif n == '7': n = 'magenta'
+		elif n == '8': n = 'yellowgreen'
+		elif n == '9': n = 'skyblue'
+		elif n == '10': n = 'lime'
+		elif n == '11': n = 'limegreen'
+		elif n == '12': n = 'deepskyblue'
+		elif n == '13': n = 'white'
+		elif n == '14': n = 'whitesmoke'
+		elif n == '15': n = 'nocolor'
+		else: n == 'skyblue'
+		return n
+
+
+
 	def get(self, url, idx=True):
 		try:
 			try: url = getattr(self, url + '_link')
@@ -1010,12 +1036,13 @@ class Collections:
 
 # look into getting rid of this and replace with tmdb.Movies().get_details() to cut down from 2 api calls to 1
 # maybe issue with using tmdb_id vs. imdb as some list do not contain tmdb_id
-			# item = trakt.getMovieSummary(id=imdb)
 			item = trakt.getMovieSummary(id)
 
 			title = item.get('title')
-
 			originaltitle = title
+
+			try: trailer = control.trailer % item['trailer'].split('v=')[1]
+			except: trailer = ''
 
 			if 'year' not in self.list[i] or self.list[i]['year'] == '0':
 				year = str(item.get('year', '0'))
@@ -1095,7 +1122,7 @@ class Collections:
 							castandart.append({'name': person['name'], 'role': person['character'], 'thumbnail': ((self.tmdb_poster + person.get('profile_path')) if person.get('profile_path') is not None else '0')})
 					except:
 						castandart = []
-					if len(castandart) == 200: break
+					if len(castandart) == 150: break
 
 				for person in tmdb_Item['credits']['crew']:
 					if 'Director' in person['job']:
@@ -1113,7 +1140,6 @@ class Collections:
 				if self.lang == 'en' or self.lang not in item.get('available_translations', [self.lang]):
 					raise Exception()
 				trans_item = trakt.getMovieTranslation(imdb, self.lang, full = True)
-
 				title = trans_item.get('title') or title
 				tagline = trans_item.get('tagline') or tagline
 				plot = trans_item.get('overview') or plot
@@ -1125,7 +1151,7 @@ class Collections:
 						'genre': genre, 'duration': duration, 'rating': rating, 'votes': votes, 'mpaa': mpaa, 'director': director,
 						'writer': writer, 'castandart': castandart, 'plot': plot, 'tagline': tagline, 'poster2': '0', 'poster3': poster3,
 						'banner': '0', 'banner2': '0', 'fanart2': '0', 'fanart3': fanart3, 'clearlogo': '0', 'clearart': '0', 'landscape': '0',
-						'discart': '0', 'metacache': False}
+						'discart': '0', 'trailer': trailer, 'metacache': False}
 
 			meta = {'imdb': imdb, 'tmdb': tmdb, 'tvdb': '0', 'lang': self.lang, 'user': self.user, 'item': item}
 
@@ -1144,18 +1170,16 @@ class Collections:
 			self.list[i].update(item)
 			self.meta.append(meta)
 		except:
-			log_utils.error()
 			pass
 
 
 	def movieDirectory(self, items, next=True):
 		if items is None or len(items) == 0: 
-			control.idle()
+			control.hide()
 			control.notification(title = 32000, message = 33049, icon = 'INFO', sound=notificationSound)
 			sys.exit()
 
 		settingFanart = control.setting('fanart')
-
 		addonPoster = control.addonPoster()
 		addonFanart = control.addonFanart()
 		addonBanner = control.addonBanner()
@@ -1188,23 +1212,23 @@ class Collections:
 		for i in items:
 			try:
 				imdb, tmdb, title, year = i.get('imdb', '0'), i.get('tmdb', '0'), i['title'], i.get('year', '0')
-				# try:
-					# title = i['originaltitle']
-				# except:
-					# title = i['title']
-
+				trailer = i.get('trailer')
+				# try: title = i['originaltitle']
+				# except: title = i['title']
 				label = '%s (%s)' % (title, year)
+
+				if int(re.sub('[^0-9]', '', str(i['premiered']))) > int(re.sub('[^0-9]', '', str(self.today_date))):
+					label = '[COLOR %s][I]%s[/I][/COLOR]' % (self.unairedcolor, label)
 
 				sysname = urllib.quote_plus(label)
 				systitle = urllib.quote_plus(title)
 
-				meta = dict((k,v) for k, v in i.iteritems() if v != '0')
-				meta.update({'code': imdb, 'imdbnumber': imdb, 'imdb_id': imdb})
-				meta.update({'tmdb_id': tmdb})
+				meta = dict((k, v) for k, v in i.iteritems() if v != '0')
+				meta.update({'code': imdb, 'imdbnumber': imdb})
 				meta.update({'mediatype': 'movie'})
-				meta.update({'trailer': '%s?action=trailer&name=%s' % (sysaddon, sysname)})
+				meta.update({'tag': [imdb, tmdb]})
 
-				# Some descriptions have a link at the end that. Remove it.
+				# Some descriptions have a link at the end. Remove it.
 				try:
 					plot = meta['plot']
 					index = plot.rfind('See full summary')
@@ -1252,6 +1276,11 @@ class Collections:
 				art.update({'icon': icon, 'thumb': thumb, 'banner': banner, 'poster': poster, 'fanart': fanart,
 								'clearlogo': clearlogo, 'clearart': clearart, 'landscape': landscape, 'discart': discart})
 
+				remove_keys = ('poster1', 'poster2', 'poster3', 'fanart1', 'fanart2', 'fanart3', 'banner1', 'banner2', 'banner3', 'trailer')
+				for k in remove_keys:
+					meta.pop(k, None)
+				meta.update({'poster': poster, 'fanart': fanart, 'banner': banner})
+
 ####-Context Menu and Overlays-####
 				cm = []
 				if self.traktCredentials is True:
@@ -1262,12 +1291,12 @@ class Collections:
 					watched = (overlay == 7)
 
 					if watched:
-						cm.append((unwatchedMenu, 'RunPlugin(%s?action=moviePlaycount&imdb=%s&query=6)' % (sysaddon, imdb)))
+						cm.append((unwatchedMenu, 'RunPlugin(%s?action=moviePlaycount&name=%s&imdb=%s&query=6)' % (sysaddon, sysname, imdb)))
 						meta.update({'playcount': 1, 'overlay': 7})
 						# lastplayed = trakt.watchedMoviesTime(imdb)
 						# meta.update({'lastplayed': lastplayed})
 					else:
-						cm.append((watchedMenu, 'RunPlugin(%s?action=moviePlaycount&imdb=%s&query=7)' % (sysaddon, imdb)))
+						cm.append((watchedMenu, 'RunPlugin(%s?action=moviePlaycount&name=%s&imdb=%s&query=7)' % (sysaddon, sysname, imdb)))
 						meta.update({'playcount': 0, 'overlay': 6})
 				except:
 					pass
@@ -1288,19 +1317,34 @@ class Collections:
 				elif control.setting('hosts.mode') != '1':
 					cm.append(('Rescrape Item', 'PlayMedia(%s?action=reScrape&title=%s&year=%s&imdb=%s&meta=%s&t=%s)' % (sysaddon, systitle, year, imdb, sysmeta, self.systime)))
 
-				cm.append((addToLibrary, 'RunPlugin(%s?action=movieToLibrary&name=%s&title=%s&year=%s&imdb=%s&tmdb=%s)' % (sysaddon, sysname, systitle, year, imdb, tmdb)))
+				if control.setting('library.service.update') == 'true':
+					cm.append((addToLibrary, 'RunPlugin(%s?action=movieToLibrary&name=%s&title=%s&year=%s&imdb=%s&tmdb=%s)' % (sysaddon, sysname, systitle, year, imdb, tmdb)))
 				cm.append(('Find similar', 'ActivateWindow(10025,%s?action=movies&url=https://api.trakt.tv/movies/%s/related,return)' % (sysaddon, imdb)))
 				cm.append((control.lang(32610).encode('utf-8'), 'RunPlugin(%s?action=clearAllCache&opensettings=false)' % sysaddon))
 				cm.append(('[COLOR red]Venom Settings[/COLOR]', 'RunPlugin(%s?action=openSettings)' % sysaddon))
 ####################################
 
-				item = control.item(label=label)
+				if trailer != '' and trailer is not None:
+					meta.update({'trailer': trailer})
+				else:
+					meta.update({'trailer': '%s?action=trailer&type=%s&name=%s&year=%s&imdb=%s' % (sysaddon, 'movie', sysname, year, imdb)})
 
+				item = control.item(label=label)
 				if 'castandart' in i:
 					item.setCast(i['castandart'])
 
 				item.setArt(art)
 				item.setProperty('IsPlayable', isPlayable)
+				if is_widget:
+					item.setProperty('isVenom_widget', 'true')
+
+				from resources.lib.modules.player import Bookmarks
+				resumetime = Bookmarks().get(label, str(year), ck=True)
+				# item.setProperty('totaltime', str(meta['duration']))
+				item.setProperty('resumetime', str(resumetime))
+				# watched_percent = int(float(resumetime) / float(meta['duration']) * 100)
+				# item.setProperty('percentplayed', str(watched_percent))
+
 				item.setInfo(type='video', infoLabels=control.metadataClean(meta))
 				video_streaminfo = {'codec': 'h264'}
 				item.addStreamInfo('video', video_streaminfo)

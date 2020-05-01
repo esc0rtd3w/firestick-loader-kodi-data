@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import re, xbmc
-import urllib, urllib2
-import requests, json
+import re
+import urllib
+import requests
 
 from resources.lib.modules import control
-from resources.lib.modules import client
 from resources.lib.modules import log_utils
 
-# from resolveurl import common
-# from resolveurl.common import i18n
-# from resolveurl.resolver import ResolveUrl, ResolverError
 
 try:
 	from resolveurl.plugins.premiumize_me import PremiumizeMeResolver
@@ -35,7 +31,7 @@ TransferDelete = "%s/transfer/delete" % BaseUrl
 CacheCheck = '%s/cache/check' % BaseUrl
 
 
-class PremiumizeMe:
+class Premiumize:
 	def __init__(self):
 		self.hosts = []
 		self.patterns = []
@@ -48,7 +44,7 @@ class PremiumizeMe:
 		media_id_lc = media_id.lower()
 
 		if cached:
-			log_utils.log('Premiumize.me: %s is readily available to stream' % media_id, log_utils.LOGDEBUG)
+			log_utils.log('Premiumize.me: %s is readily available to stream' % media_id, __name__, log_utils.LOGDEBUG)
 			if media_id_lc.endswith('.torrent') or media_id_lc.startswith('magnet:'):
 				torrent = True
 		elif media_id_lc.endswith('.torrent') or media_id_lc.startswith('magnet:'):
@@ -56,14 +52,14 @@ class PremiumizeMe:
 				raise ResolverError('Premiumize.me: Cached torrents only allowed to be initiated')
 
 			torrent = True
-			log_utils.log('Premiumize.me: initiating transfer to cloud for %s' % media_id, log_utils.LOGDEBUG)
+			log_utils.log('Premiumize.me: initiating transfer to cloud for %s' % media_id, __name__, log_utils.LOGDEBUG)
 			self.__initiate_transfer(media_id)
 			self.__clear_finished()
 			# self.__delete_folder()
 
 		link = self.__direct_dl(media_id, torrent=torrent)
 		if link is not None:
-			log_utils.log('Premiumize.me: Resolved to %s' % link, log_utils.LOGDEBUG)
+			log_utils.log('Premiumize.me: Resolved to %s' % link, __name__, log_utils.LOGDEBUG)
 			return link + self.append_headers(self.headers)
 		raise ResolverError('Link Not Found')
 
@@ -83,8 +79,7 @@ class PremiumizeMe:
 	# @common.cache.cache_method(cache_limit=8)
 	def get_all_hosters(self):
 		try:
-			response = request.get(list_services_path, headers=self.headers)
-			result = json.loads(response)
+			result = request.get(list_services_path, headers=self.headers).json()
 			aliases = result.get('aliases', {})
 			patterns = result.get('regexpatterns', {})
 
@@ -100,13 +95,11 @@ class PremiumizeMe:
 					try:
 						regex_list.append(re.compile(regex))
 					except:
-						log_utils.log('Throwing out bad Premiumize regex: %s' % regex, log_utils.LOGDEBUG)
-
-			log_utils.log('Premiumize.me patterns: %s regex: (%d) hosts: %s' % (patterns, len(regex_list), tldlist), log_utils.LOGDEBUG)
-
+						log_utils.log('Throwing out bad Premiumize regex: %s' % regex, __name__, log_utils.LOGDEBUG)
+			log_utils.log('Premiumize.me patterns: %s regex: (%d) hosts: %s' % (patterns, len(regex_list), tldlist), __name__, log_utils.LOGDEBUG)
 			return tldlist, regex_list
 		except Exception as e:
-			log_utils.log('Error getting Premiumize hosts: %s' % e, log_utils.LOGDEBUG)
+			log_utils.log('Error getting Premiumize hosts: %s' % e, __name__, log_utils.LOGDEBUG)
 		return [], []
 
 
@@ -115,10 +108,8 @@ class PremiumizeMe:
 			url_lc = url.lower()
 			if url_lc.endswith('.torrent') or url_lc.startswith('magnet:'):
 				return True
-
 		if not self.patterns or not self.hosts:
 			self.hosts, self.patterns = self.get_all_hosters()
-
 		if url:
 			if not url.endswith('/'):
 				url += '/'
@@ -130,45 +121,53 @@ class PremiumizeMe:
 				host = host.replace('www.', '')
 			if any(host in item for item in self.hosts):
 				return True
-
 		return False
 
 
-	def check_cache(self, media_id):
+	def check_cache_item(self, media_id):
 		try:
+			media_id = media_id.encode('ascii', errors='ignore').decode('ascii', errors='ignore')
+			media_id = media_id.replace(' ', '')
 			url = '%s?items[]=%s' % (CacheCheck, media_id)
-			# result = self.net.http_GET(url, headers=self.headers).content
-			# result = requests.get(url, headers=self.headers)
-			result = client.request(url, headers=self.headers, error=True)
-			# log_utils.log('result = %s' % result, log_utils.LOGDEBUG)
-			# log_utils.log('result = %s' % result.txt, log_utils.LOGDEBUG)
-			result = json.loads(result)
-			# log_utils.log('result = %s' % result, log_utils.LOGDEBUG)
+			result = requests.get(url, headers=self.headers).json()
 			if 'status' in result:
 				if result.get('status') == 'success':
 					response = result.get('response', False)
-					log_utils.log('response = %s' % response, log_utils.LOGDEBUG)
-
+					# log_utils.log('response = %s' % response, __name__, log_utils.LOGDEBUG)
 					if isinstance(response, list):
 						return response[0]
 		except:
 			log_utils.error()
 			pass
-
 		return False
 
 
-	def __create_transfer(self, media_id):
+	def check_cache_list(self, hashList):
+		try:
+			url = '%s' % CacheCheck
+			postData = {'items[]': hashList}
+			result = requests.post(url, data=postData, headers=self.headers, timeout=10).json()
+			if 'status' in result:
+				if result.get('status') == 'success':
+					response = result.get('response', False)
+					# log_utils.log('response = %s' % response, __name__, log_utils.LOGDEBUG)
+					if isinstance(response, list):
+						return response
+		except:
+			log_utils.error()
+			pass
+		return False
+
+
+	def create_transfer(self, media_id):
 		folder_id = self.__create_folder()
 		if not folder_id == "":
 			try:
 				data = urllib.urlencode({'src': media_id, 'folder_id': folder_id})
-				# response = self.net.http_POST(create_transfer_path, form_data=data, headers=self.headers).content
-				response = request.post(TransferCreate, data=data, headers=self.headers).txt
-				result = json.loads(response)
+				result = request.post(TransferCreate, data=data, headers=self.headers).json()
 				if 'status' in result:
 					if result.get('status') == 'success':
-						log_utils.log('Transfer successfully started to the Premiumize.me cloud', log_utils.LOGDEBUG)
+						log_utils.log('Transfer successfully started to the Premiumize.me cloud', __name__, log_utils.LOGDEBUG)
 						return result.get('id', "")
 			except:
 				log_utils.error()

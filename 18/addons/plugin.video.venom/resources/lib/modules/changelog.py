@@ -13,7 +13,6 @@ def get():
 		xbmc.sleep(500)
 		win = xbmcgui.Window(id)
 		retry = 50
-
 		while (retry > 0):
 			try:
 				xbmc.sleep(10)

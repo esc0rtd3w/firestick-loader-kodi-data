@@ -31,16 +31,17 @@ import xbmcvfs
 integer = 1000
 
 addon = xbmcaddon.Addon
-AddonID = xbmcaddon.Addon().getAddonInfo('id')
-addonInfo = xbmcaddon.Addon().getAddonInfo
+addonObject = addon('script.module.openscrapers')
+AddonID = addonObject.getAddonInfo('id')
+addonInfo = addonObject.getAddonInfo
 addonName = addonInfo('name')
 addonVersion = addonInfo('version')
 
-lang = xbmcaddon.Addon().getLocalizedString
+lang = addonObject.getLocalizedString
 lang2 = xbmc.getLocalizedString
 
-setting = xbmcaddon.Addon().getSetting
-setSetting = xbmcaddon.Addon().setSetting
+setting = addonObject.getSetting
+setSetting = addonObject.setSetting
 
 addItem = xbmcplugin.addDirectoryItem
 item = xbmcgui.ListItem
@@ -75,9 +76,11 @@ skinPath = xbmc.translatePath('special://skin/')
 
 # addonPath = xbmc.translatePath(addonInfo('path'))
 try:
-	addonPath = xbmcaddon.Addon().getAddonInfo('path').decode('utf-8')
+	addonPath = addonObject.getAddonInfo('path').decode('utf-8')
 except:
-	addonPath = xbmcaddon.Addon().getAddonInfo('path')
+	addonPath = addonObject.getAddonInfo('path')
+
+SETTINGS_PATH = xbmc.translatePath(os.path.join(addonInfo('path'), 'resources', 'settings.xml'))
 
 # dataPath = xbmc.translatePath(addonInfo('profile')).decode('utf-8')
 try:
@@ -130,24 +133,34 @@ def version():
 	return int(num)
 
 
-try:
-	def openSettings(query=None, id=addonInfo('id')):
-		try:
-			idle()
-			execute('Addon.OpenSettings(%s)' % id)
-			if query is None:
-				raise Exception()
-			c, f = query.split('.')
-			if int(getKodiVersion()) >= 18:
-				execute('SetFocus(%i)' % (int(c) - 100))
-				execute('SetFocus(%i)' % (int(f) - 80))
-			else:
-				execute('SetFocus(%i)' % (int(c) + 100))
-				execute('SetFocus(%i)' % (int(f) + 200))
-		except:
-			return
-except:
-	pass
+def openSettings(query=None, id=addonInfo('id')):
+	try:
+		idle()
+		execute('Addon.OpenSettings(%s)' % id)
+		if query is None:
+			raise Exception()
+		c, f = query.split('.')
+		if int(getKodiVersion()) >= 18:
+			execute('SetFocus(%i)' % (int(c) - 100))
+			execute('SetFocus(%i)' % (int(f) - 80))
+		else:
+			execute('SetFocus(%i)' % (int(c) + 100))
+			execute('SetFocus(%i)' % (int(f) + 200))
+	except:
+		return
+
+
+def getSettingDefault(id):
+	import re
+	try:
+		settings = open(SETTINGS_PATH, 'r')
+		value = ' '.join(settings.readlines())
+		value.strip('\n')
+		settings.close()
+		value = re.findall(r'id=\"%s\".*?default=\"(.*?)\"' % (id), value)[0]
+		return value
+	except:
+		return None
 
 
 def getCurrentViewId():

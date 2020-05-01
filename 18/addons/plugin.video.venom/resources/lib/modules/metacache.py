@@ -6,7 +6,6 @@ try:
 	from sqlite3 import dbapi2 as database
 except:
 	from pysqlite2 import dbapi2 as database
-
 from resources.lib.modules import control
 from resources.lib.modules import log_utils
 
@@ -81,33 +80,20 @@ def insert(meta):
 		dbcur = dbcon.cursor()
 		dbcur.execute("CREATE TABLE IF NOT EXISTS meta (""imdb TEXT, ""tmdb TEXT, ""tvdb TEXT, ""lang TEXT, ""user TEXT, ""item TEXT, ""time TEXT, ""UNIQUE(imdb, tmdb, tvdb, lang, user)"");")
 		t = int(time.time())
-
 		for m in meta:
 			if "user" not in m:
 				m["user"] = ''
 			if "lang" not in m:
 				m["lang"] = 'en'
 			i = repr(m['item'])
-
-			# # Look for exact match to what is about to be written.
-			# try:
-				# dbcur.execute("SELECT * FROM meta WHERE (imdb = '%s' and tmdb = '%s' and tvdb = '%s' and lang = '%s' and user = '%s')" % (m.get('imdb', '0'), m.get('tmdb', '0'), m.get('tvdb', '0'), m['lang'], m['user'])).fetchone()[0] # Try to find entry.
-				# dbcur.execute("DELETE FROM meta WHERE (imdb = '%s' and tmdb = '%s' and tvdb = '%s' and lang = '%s' and user = '%s')" % (m.get('imdb', '0'), m.get('tmdb', '0'), m.get('tvdb', '0'), m['lang'], m['user']))
-			# except:
-				# pass
-
 			try:
-				# dbcur.execute("INSERT INTO meta Values (?, ?, ?, ?, ?, ?, ?)", (m.get('imdb', '0'), m.get('tmdb', '0'), m.get('tvdb', '0'), m['lang'], m['user'], i, t))
 				dbcur.execute("INSERT OR REPLACE INTO meta Values (?, ?, ?, ?, ?, ?, ?)", (m.get('imdb', '0'), m.get('tmdb', '0'), m.get('tvdb', '0'), m['lang'], m['user'], i, t))
-
 			except:
 				pass
-
 		dbcur.connection.commit()
 	except:
 		log_utils.error()
 		pass
-
 	try:
 		dbcon.close()
 	except:

@@ -1,6 +1,6 @@
 <settings version="2">
     <setting id="confirm_download_path">true</setting>
-    <setting id="core_version" default="true">2019.09.12.1</setting>
+    <setting id="core_version" default="true">2020.03.24</setting>
     <setting id="debug" default="true">false</setting>
     <setting id="disable_dash_video">true</setting>
     <setting id="last_download_path" default="true"></setting>

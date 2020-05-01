@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import time,datetime
+import time, datetime
 
 
 def iso_2_utc(iso_ts):
@@ -48,7 +48,4 @@ def iso_2_utc(iso_ts):
 		seconds = delta.total_seconds()  # works only on 2.7
 	except:
 		seconds = delta.seconds + delta.days * 24 * 3600  # close enough
-
 	return seconds
-
-
